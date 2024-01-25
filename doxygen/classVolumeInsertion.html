@@ -110,8 +110,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:aaf4af5592d861873cdf099add6dc65f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVolumeInsertion.html#aaf4af5592d861873cdf099add6dc65f7">create_random_number_container</a> (std::vector&lt; double &gt; &amp;random_container, const double random_number_range, const int random_number_seed)</td></tr>
-<tr class="separator:aaf4af5592d861873cdf099add6dc65f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add087bd0196cfa1292df1ae2fbce677b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVolumeInsertion.html#add087bd0196cfa1292df1ae2fbce677b">create_random_number_container</a> (std::vector&lt; double &gt; &amp;random_container, const double maximum_range, const int seed_for_insertion)</td></tr>
+<tr class="separator:add087bd0196cfa1292df1ae2fbce677b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29e8293e13581e498d781500e432daba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVolumeInsertion.html#a29e8293e13581e498d781500e432daba">find_insertion_location_volume</a> (Point&lt; dim &gt; &amp;insertion_location, const unsigned int id, const double random_number1, const double random_number2, const <a class="el" href="structParameters_1_1Lagrangian_1_1InsertionInfo.html">Parameters::Lagrangian::InsertionInfo</a> &amp;insertion_information)</td></tr>
 <tr class="separator:a29e8293e13581e498d781500e432daba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a709dd318960e959d262beec930400a49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVolumeInsertion.html#a709dd318960e959d262beec930400a49">find_insertion_location_volume</a> (Point&lt; 2 &gt; &amp;insertion_location, const unsigned int id, const double random_number1, const double random_number2, const <a class="el" href="structParameters_1_1Lagrangian_1_1InsertionInfo.html">Parameters::Lagrangian::InsertionInfo</a> &amp;insertion_information)</td></tr>
@@ -210,8 +210,8 @@ template&lt;int dim&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aaf4af5592d861873cdf099add6dc65f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf4af5592d861873cdf099add6dc65f7">&#9670;&nbsp;</a></span>create_random_number_container()</h2>
+<a id="add087bd0196cfa1292df1ae2fbce677b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add087bd0196cfa1292df1ae2fbce677b">&#9670;&nbsp;</a></span>create_random_number_container()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -231,13 +231,13 @@ template&lt;int dim&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>random_number_range</em>, </td>
+          <td class="paramname"><em>maximum_range</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>random_number_seed</em>&#160;</td>
+          <td class="paramname"><em>seed_for_insertion</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -255,8 +255,8 @@ template&lt;int dim&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">random_container</td><td>A vector of random numbers </td></tr>
-    <tr><td class="paramname">random_number_range</td><td>The range in which the random numbers will be generated </td></tr>
-    <tr><td class="paramname">random_number_seed</td><td>random number seed </td></tr>
+    <tr><td class="paramname">maximum_range</td><td>The range in which the random numbers will be generated </td></tr>
+    <tr><td class="paramname">seed_for_insertion</td><td>Prn seed for initial offset </td></tr>
   </table>
   </dd>
 </dl>
@@ -371,7 +371,7 @@ template&lt;int dim&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="volume__insertion_8cc_source.html#l00166">166</a> of file <a class="el" href="volume__insertion_8cc_source.html">volume_insertion.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="parameters__lagrangian_8h_source.html#l00180">Parameters::Lagrangian::InsertionInfo::axis_0</a>, <a class="el" href="parameters__lagrangian_8h_source.html#l00180">Parameters::Lagrangian::InsertionInfo::axis_1</a>, and <a class="el" href="parameters__lagrangian_8h_source.html#l00189">Parameters::Lagrangian::InsertionInfo::distance_threshold</a>.</p>
+<p class="reference">References <a class="el" href="parameters__lagrangian_8h_source.html#l00184">Parameters::Lagrangian::InsertionInfo::axis_0</a>, <a class="el" href="parameters__lagrangian_8h_source.html#l00184">Parameters::Lagrangian::InsertionInfo::axis_1</a>, and <a class="el" href="parameters__lagrangian_8h_source.html#l00193">Parameters::Lagrangian::InsertionInfo::distance_threshold</a>.</p>
 
 </div>
 </div>
@@ -429,7 +429,7 @@ template&lt;int dim&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="volume__insertion_8cc_source.html#l00201">201</a> of file <a class="el" href="volume__insertion_8cc_source.html">volume_insertion.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="parameters__lagrangian_8h_source.html#l00180">Parameters::Lagrangian::InsertionInfo::axis_0</a>, <a class="el" href="parameters__lagrangian_8h_source.html#l00180">Parameters::Lagrangian::InsertionInfo::axis_1</a>, <a class="el" href="parameters__lagrangian_8h_source.html#l00180">Parameters::Lagrangian::InsertionInfo::axis_2</a>, and <a class="el" href="parameters__lagrangian_8h_source.html#l00189">Parameters::Lagrangian::InsertionInfo::distance_threshold</a>.</p>
+<p class="reference">References <a class="el" href="parameters__lagrangian_8h_source.html#l00184">Parameters::Lagrangian::InsertionInfo::axis_0</a>, <a class="el" href="parameters__lagrangian_8h_source.html#l00184">Parameters::Lagrangian::InsertionInfo::axis_1</a>, <a class="el" href="parameters__lagrangian_8h_source.html#l00184">Parameters::Lagrangian::InsertionInfo::axis_2</a>, and <a class="el" href="parameters__lagrangian_8h_source.html#l00193">Parameters::Lagrangian::InsertionInfo::distance_threshold</a>.</p>
 
 </div>
 </div>
@@ -555,7 +555,7 @@ template&lt;int dim&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="volume__insertion_8cc_source.html#l00030">30</a> of file <a class="el" href="volume__insertion_8cc_source.html">volume_insertion.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="dem__solver__parameters_8h_source.html#l00042">DEMSolverParameters&lt; dim &gt;::insertion_info</a>, <a class="el" href="dem__solver__parameters_8h_source.html#l00041">DEMSolverParameters&lt; dim &gt;::lagrangian_physical_properties</a>, <a class="el" href="parameters__lagrangian_8h_source.html#l00087">Parameters::Lagrangian::LagrangianPhysicalProperties::number</a>, <a class="el" href="parameters__lagrangian_8h_source.html#l00066">Parameters::Lagrangian::LagrangianPhysicalProperties::particle_type_number</a>, <a class="el" href="parameters__lagrangian_8h_source.html#l00192">Parameters::Lagrangian::InsertionInfo::random_number_range</a>, and <a class="el" href="parameters__lagrangian_8h_source.html#l00195">Parameters::Lagrangian::InsertionInfo::random_number_seed</a>.</p>
+<p class="reference">References <a class="el" href="dem__solver__parameters_8h_source.html#l00042">DEMSolverParameters&lt; dim &gt;::insertion_info</a>, <a class="el" href="parameters__lagrangian_8h_source.html#l00196">Parameters::Lagrangian::InsertionInfo::insertion_maximum_offset</a>, <a class="el" href="dem__solver__parameters_8h_source.html#l00041">DEMSolverParameters&lt; dim &gt;::lagrangian_physical_properties</a>, <a class="el" href="parameters__lagrangian_8h_source.html#l00090">Parameters::Lagrangian::LagrangianPhysicalProperties::number</a>, <a class="el" href="parameters__lagrangian_8h_source.html#l00066">Parameters::Lagrangian::LagrangianPhysicalProperties::particle_type_number</a>, and <a class="el" href="parameters__lagrangian_8h_source.html#l00199">Parameters::Lagrangian::InsertionInfo::seed_for_insertion</a>.</p>
 
 </div>
 </div>
