@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Developer documentation for the Lethe open-source library: SRFPostprocessor&lt; dim &gt; Class Template Reference</title>
+<title>Lethe Open-Source Library: SRFPostprocessor&lt; dim &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,8 +30,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Developer documentation for the Lethe open-source library
+   <div id="projectname">Lethe Open-Source Library
    </div>
+   <div id="projectbrief">Developer Guide</div>
   </td>
  </tr>
  </tbody>
@@ -85,7 +86,7 @@ Inheritance diagram for SRFPostprocessor&lt; dim &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSRFPostprocessor__inherit__graph.png" border="0" usemap="#aSRFPostprocessor_3_01dim_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="aSRFPostprocessor_3_01dim_01_4_inherit__map" id="aSRFPostprocessor_3_01dim_01_4_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,95,199,121"/>
+<area shape="rect" title="Compute the velocity field in the Eulerian frame of reference for simulations carried out in a single..." alt="" coords="5,95,199,121"/>
 <area shape="rect" title=" " alt="" coords="9,5,195,47"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -110,8 +111,10 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><h3>template&lt;int dim&gt;<br />
 class SRFPostprocessor&lt; dim &gt;</h3>
 
+<p>Compute the velocity field in the Eulerian frame of reference for simulations carried out in a single rotating frame (SRF). </p>
+<p>The velocity in the Eulerian frame is \(\mathbf{u}_\mathrm{E} =\mathbf{u}_\mathrm{L}+ \mathbf{\Omega} \times \mathbf{R}\) where \(\mathbf{\Omega}\) is the velocity of the frame of reference and \(\mathbf{R}\) the position vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00157">157</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00207">207</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adb61a618cca2bc35b17aea9d80d4451f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adb61a618cca2bc35b17aea9d80d4451f">&#9670;&nbsp;</a></span>SRFPostprocessor()</h2>
@@ -155,7 +158,17 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00160">160</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p>Constructor of the single rotating frame SRF postprocessor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_omega_x</td><td>Value of the \(x\) component of the SRF's velocity.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_omega_y</td><td>Value of the \(y\) component of the SRF's velocity.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_omega_z</td><td>Value of the \(z\) component of the SRF's velocity. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00219">219</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
 </div>
 </div>
@@ -196,9 +209,19 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00168">168</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p>Compute the Eulerian velocity in a SRF at given evaluation points. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">inputs</td><td>Fluid dynamics velocity and pressure information.</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">computed_quantities</td><td>Computed Eulerian velocity vector at evaluation points.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd><code>input_data</code> contains both velocity and pressure data since fluid dynamics in Lethe is solved in a monolithic way, but only the velocity vector is used to compute the Eulerian velocity. </dd></dl>
 
-<p class="reference">References <a class="el" href="dem__properties_8h_source.html#l00045">DEM::omega_x</a>, <a class="el" href="dem__properties_8h_source.html#l00046">DEM::omega_y</a>, and <a class="el" href="dem__properties_8h_source.html#l00047">DEM::omega_z</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00240">240</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+
+<p class="reference">References <a class="el" href="dem__properties_8h_source.html#l00045">DEM::omega_x</a>, <a class="el" href="dem__properties_8h_source.html#l00046">DEM::omega_y</a>, <a class="el" href="dem__properties_8h_source.html#l00047">DEM::omega_z</a>, and <a class="el" href="multiphysics_8h.html#a2cbb04ef215561a69b48772159577fddaac1a453d0cdc1f19d9479ccfaa8b082c">velocity</a>.</p>
 
 </div>
 </div>
@@ -225,7 +248,9 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00202">202</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p>Value of the \(x\) component of the SRF's velocity. </p>
+
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00275">275</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
 </div>
 </div>
@@ -251,7 +276,9 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00203">203</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p>Value of the \(y\) component of the SRF's velocity. </p>
+
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00277">277</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
 </div>
 </div>
@@ -277,7 +304,9 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00204">204</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p>Value of the \(z\) component of the SRF's velocity. </p>
+
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00279">279</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
 </div>
 </div>

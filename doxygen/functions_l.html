@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Developer documentation for the Lethe open-source library: Class Members</title>
+<title>Lethe Open-Source Library: Class Members</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,8 +30,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Developer documentation for the Lethe open-source library
+   <div id="projectname">Lethe Open-Source Library
    </div>
+   <div id="projectbrief">Developer Guide</div>
   </td>
  </tr>
  </tbody>
@@ -135,7 +136,8 @@ $(function() {
 : <a class="el" href="classHeatTransferAssemblerFreeSurfaceRadiationVOF.html#abf36fe5ae26ed13d799f6d272c3667fc">HeatTransferAssemblerFreeSurfaceRadiationVOF&lt; dim &gt;</a>
 , <a class="el" href="classHeatTransferAssemblerLaserExponentialDecay.html#a0ebfc1da17aadcb817a162bcdfd7b38e">HeatTransferAssemblerLaserExponentialDecay&lt; dim &gt;</a>
 , <a class="el" href="classHeatTransferAssemblerLaserExponentialDecayVOF.html#a03f066fba0c032abe875cdb69f6928ac">HeatTransferAssemblerLaserExponentialDecayVOF&lt; dim &gt;</a>
-, <a class="el" href="classHeatTransferAssemblerLaserHeatFluxVOFInterface.html#a022f6354f9007acb3639a190e73f0155">HeatTransferAssemblerLaserHeatFluxVOFInterface&lt; dim &gt;</a>
+, <a class="el" href="classHeatTransferAssemblerLaserGaussianHeatFluxVOFInterface.html#a767ab68ce81e469e01f4254575d8b002">HeatTransferAssemblerLaserGaussianHeatFluxVOFInterface&lt; dim &gt;</a>
+, <a class="el" href="classHeatTransferAssemblerLaserUniformHeatFluxVOFInterface.html#a599bb0d2582a6cc82c544fb1ed0b57c2">HeatTransferAssemblerLaserUniformHeatFluxVOFInterface&lt; dim &gt;</a>
 , <a class="el" href="classSimulationParameters.html#a33e0088ac87e9a78b9612bd66bc73de4">SimulationParameters&lt; dim &gt;</a>
 </li>
 <li>laser_power
@@ -245,9 +247,6 @@ $(function() {
 <li>list_z
 : <a class="el" href="structParameters_1_1Lagrangian_1_1InsertionInfo.html#ac45582e3e28f7bbe98c65003108cbdf4">Parameters::Lagrangian::InsertionInfo</a>
 </li>
-<li>ListInsertion()
-: <a class="el" href="classListInsertion.html#a5bbb9691b36d2aa6dbc36e02b1e0cfed">ListInsertion&lt; dim &gt;</a>
-</li>
 <li>load_balance()
 : <a class="el" href="classCFDDEMSolver.html#a2891dbda975ae4c070cafc3a7cca99ce">CFDDEMSolver&lt; dim &gt;</a>
 , <a class="el" href="classDEMSolver.html#ad88b709143c5c7c2bbcda8cc55b054d9">DEMSolver&lt; dim &gt;</a>
@@ -305,25 +304,32 @@ $(function() {
 <li>local_contact_pair_periodic_candidates
 : <a class="el" href="classDEMContactManager.html#a6448bf0169c0db7bbd1d9708a5a6c44e">DEMContactManager&lt; dim &gt;</a>
 </li>
+<li>local_curvature_radius()
+: <a class="el" href="classShape.html#a5648e1ee0838d6d6edbc75b4c5548665">Shape&lt; dim &gt;</a>
+, <a class="el" href="classSphere.html#ac2ded1d768510df6814ddc537b2ee249">Sphere&lt; dim &gt;</a>
+</li>
+<li>local_curvature_radius_with_cell_guess()
+: <a class="el" href="classShape.html#acce50f6c4c00bc8feafc26c0df46353d">Shape&lt; dim &gt;</a>
+, <a class="el" href="classSphere.html#a2cfef064834d200cd5ef4e8b4ea2daab">Sphere&lt; dim &gt;</a>
+</li>
 <li>local_dof_indices
 : <a class="el" href="classCopyData.html#a06af128e31b41269629cf70fdc7955e4">CopyData</a>
 , <a class="el" href="classStabilizedMethodsCopyData.html#abffc12b70864be1bc7c3ee5b27c8aade">StabilizedMethodsCopyData</a>
 , <a class="el" href="classStabilizedMethodsTensorCopyData.html#abbe4449c37499382a08a5aca7110d700">StabilizedMethodsTensorCopyData&lt; dim &gt;</a>
 </li>
 <li>local_dof_overconstrained
-: <a class="el" href="classGLSSharpNavierStokesSolver.html#a060258a6cf6327fc6bbd0344bab4a12d">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classGLSSharpNavierStokesSolver.html#ac873a79172253a1d3863700f6747d96d">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
 </li>
 <li>local_evaluate_residual()
 : <a class="el" href="classNavierStokesOperatorBase.html#a1d289e3cf780010e8be1f75d4b027194">NavierStokesOperatorBase&lt; dim, number &gt;</a>
-, <a class="el" href="classNavierStokesSUPGPSPGOperator.html#aba61a24e728ace1ee42cb81e4a265c7c">NavierStokesSUPGPSPGOperator&lt; dim, number &gt;</a>
-, <a class="el" href="classNavierStokesTransientSUPGPSPGOperator.html#a6ee452e640e08545a8a679cdb99359f2">NavierStokesTransientSUPGPSPGOperator&lt; dim, number &gt;</a>
+, <a class="el" href="classNavierStokesStabilizedOperator.html#a4b093397b39e8740921fd31a2b48e342">NavierStokesStabilizedOperator&lt; dim, number &gt;</a>
 </li>
 <li>local_evaluation_point
-: <a class="el" href="classCahnHilliard.html#aac9c2a821bc321e9f27e6087a9a88404">CahnHilliard&lt; dim &gt;</a>
-, <a class="el" href="classHeatTransfer.html#a852a430c0dff22929704c5ea5c82c80f">HeatTransfer&lt; dim &gt;</a>
+: <a class="el" href="classCahnHilliard.html#a96849aa6c17cdc4701e9fe00b09c8b03">CahnHilliard&lt; dim &gt;</a>
+, <a class="el" href="classHeatTransfer.html#a13143936fd6cc916e67fab6a860c5b0f">HeatTransfer&lt; dim &gt;</a>
 , <a class="el" href="classNavierStokesBase.html#ab3683ab62a18aa913d3635f1e913462e">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
-, <a class="el" href="classTracer.html#a0040c9819276a32ad9656fc11263c925">Tracer&lt; dim &gt;</a>
-, <a class="el" href="classVolumeOfFluid.html#a6782a709552d0b472f5172a6eac93570">VolumeOfFluid&lt; dim &gt;</a>
+, <a class="el" href="classTracer.html#aacc7dd4e9e5ed4ffd086e741222d1683">Tracer&lt; dim &gt;</a>
+, <a class="el" href="classVolumeOfFluid.html#ab2a9a87b7fd6a11bdf8baba6667480c3">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>local_file_name
 : <a class="el" href="classOpenCascadeShape.html#a1d8831d252f2e5cf91bb56dabbe5bed8">OpenCascadeShape&lt; dim &gt;</a>
@@ -388,11 +394,17 @@ $(function() {
 <li>lowest_floating_wall_indices
 : <a class="el" href="classIBParticlesDEM.html#a893106eed57bce2dc8e7602cc58f3b56">IBParticlesDEM&lt; dim &gt;</a>
 </li>
+<li>ls_mg_interface_in
+: <a class="el" href="classMFNavierStokesPreconditionGMG.html#a9eb9a24267dc72685dcf7f9dc87c0a5b">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
+</li>
+<li>ls_mg_operators
+: <a class="el" href="classMFNavierStokesPreconditionGMG.html#a31d0198012cabc21f29e197d455a7b27">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
+</li>
 <li>ls_multigrid_preconditioner
-: <a class="el" href="classMFNavierStokesSolver.html#a1335e4874da4efff5dbdd3908239b5b7">MFNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classMFNavierStokesPreconditionGMG.html#aa1a58977a158ec19886c371c7c44c5bb">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
 </li>
 <li>LSTransferType
-: <a class="el" href="classMFNavierStokesSolver.html#a7590b310c9a4b2cb5ee8e5712dc84889">MFNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classMFNavierStokesPreconditionGMG.html#ae4f34cbd586410f20b188d2e77d791e5">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
 </li>
 <li>lubrication_range_max
 : <a class="el" href="classParameters_1_1IBParticles.html#afc6f7a153711c4df380e2286042a4e4e">Parameters::IBParticles&lt; dim &gt;</a>

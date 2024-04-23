@@ -176,6 +176,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/cfd/boundary_conditions_multiphysics.html">Boundary Conditions - Multiphysics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/cfd/box_refinement.html">Box Refinement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/cfd/cahn_hilliard.html">Cahn-Hilliard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../parameters/cfd/constrain_stasis.html">Constrain Stasis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/cfd/dimensionality.html">Dimensionality</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/cfd/dynamic_flow_control.html">Dynamic Flow Control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/cfd/fem.html">Finite Element Interpolation (FEM)</a></li>
@@ -195,6 +196,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/cfd/source_term.html">Source Term</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/cfd/stabilization.html">Stabilization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/cfd/timer.html">Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../parameters/cfd/tracer_drift_velocity.html">Tracer Drift Velocity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/cfd/velocity_source.html">Velocity Source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/cfd/volume_of_fluid.html">Volume of Fluid (Multiphase Flow)</a></li>
 </ul>
@@ -239,6 +241,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-naca0012-low-reynolds/2d-naca0012-low-reynolds.html">Flow around NACA0012 at Low Reynolds Number</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">Taylor-Couette Flow Using Nitsche Immersed Boundary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">Flow around a Sphere</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-taylor-green-vortex/3d-taylor-green-vortex.html">Taylor-Green Vortex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-turbulent-taylor-couette/3d-turbulent-taylor-couette.html">Turbulent Taylor-Couette Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-flow-over-periodic-hills/3d-flow-over-periodic-hills.html">Flow over Periodic Hills</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-mixer-using-single-rotating-frame/3d-mixer-using-single-rotating-frame.html">Ribbon Mixer Using a Single Rotating Reference Frame</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-nitsche-mixer-with-pbt-impeller/nitsche-mixer-with-pbt-impeller.html">Mixer with Pitched-Blade Turbine Impeller Using Nitsche Immersed Boundary</a></li>
@@ -347,6 +351,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tools/tools.html">Tools</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle navigation of Tools</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/updating-test-results.html">Updating Test Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/gmsh/gmsh.html">Introduction on How to Use GMSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pointwise/pointwise.html">Introduction on How to Use Pointwise</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/automatic_launch/automatic_launch.html">How to Automatically Create and Launch Lethe Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/postprocessing/postprocessing_paraview.html">Remote Data Visualization on ParaView</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/postprocessing/postprocessing_pyvista.html">Post-processing Lethe with PyVista</a></li>
@@ -411,12 +416,12 @@
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}\partial_l u_l &amp;= 0\\\partial_t u_k + u_l \partial_l u_k &amp;= -\frac{1}{\rho} \partial_k p^* + \nu \partial_l \partial_l u_k + f_k\end{aligned}\end{align} \]</div>
 </div>
-<p>In Lethe, instead of solving for pressure directly, we solve for a reduced pressure <span class="math notranslate nohighlight">\(p=\frac{p^*}{\rho}\)</span>. This has two advantages, first the scaling of the pressure is more adequate with respect to that of the velocity and, secondly, for single phase simulations, this means that we require a single physical property: the kinematic viscosity. Consequently, unless specified otherwise, you should assume that pressure actually refers to the reduced pressure <span class="math notranslate nohighlight">\(p\)</span>. Although it may seem confusing at first, this is standard in incompressible fluid dynamics.</p>
+<p>In Lethe, instead of solving for pressure directly, we solve for a kinematic pressure <span class="math notranslate nohighlight">\(p=\frac{p^*}{\rho}\)</span>. This has two advantages, first the scaling of the pressure is more adequate with respect to that of the velocity and, secondly, for single phase simulations, this means that we require a single physical property: the kinematic viscosity. Consequently, unless specified otherwise, you should assume that pressure actually refers to the kinematic pressure <span class="math notranslate nohighlight">\(p\)</span>. Although it may seem confusing at first, this is standard in incompressible fluid dynamics.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The choice to use <span class="math notranslate nohighlight">\(p^*\)</span> for the pressure and <span class="math notranslate nohighlight">\(p\)</span> for the reduced pressure was made to lighten the writing throughout the documentation.</p>
+<p>The choice to use <span class="math notranslate nohighlight">\(p^*\)</span> for the pressure and <span class="math notranslate nohighlight">\(p\)</span> for the kinematic pressure was made to lighten the writing throughout the documentation.</p>
 </div>
-<p>By default, Lethe does not use any units for Length (<span class="math notranslate nohighlight">\(L\)</span>), Time (<span class="math notranslate nohighlight">\(T\)</span>), Mass (<span class="math notranslate nohighlight">\(M\)</span>) and Temperature (<span class="math notranslate nohighlight">\(T\)</span>). Although this may seem confusing at first, this is relatively easy to work with. By default, most cases can be formulated using SI units (meters, seconds, kilograms and Celsius or Kelvin). However, in some cases, this may lead to a large imbalance in the scaling of different variables (e.g. the numerical value being 1000x that of the velocity). In these cases, the user must manually rescale the problem to a better balanced set of units (i.e. by using centimeter units instead of meters).</p>
+<p>By default, Lethe does not use any units for Length (<span class="math notranslate nohighlight">\(L\)</span>), Time (<span class="math notranslate nohighlight">\(T\)</span>), Mass (<span class="math notranslate nohighlight">\(M\)</span>) and Temperature (<span class="math notranslate nohighlight">\(\Theta\)</span>). Although this may seem confusing at first, this is relatively easy to work with. By default, most cases can be formulated using SI units (meters, seconds, kilograms and Celsius or Kelvin). However, in some cases, this may lead to a large imbalance in the scaling of different variables (e.g. the numerical value of pressure being 1000x that of the velocity). In these cases, the user must manually rescale the problem to a better balanced set of units (i.e. by using centimeter units instead of meters).</p>
 </section>
 
         </article>

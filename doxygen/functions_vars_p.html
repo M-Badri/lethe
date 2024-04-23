@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Developer documentation for the Lethe open-source library: Class Members - Variables</title>
+<title>Lethe Open-Source Library: Class Members - Variables</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,8 +30,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Developer documentation for the Lethe open-source library
+   <div id="projectname">Lethe Open-Source Library
    </div>
+   <div id="projectbrief">Developer Guide</div>
   </td>
  </tr>
  </tbody>
@@ -152,9 +153,6 @@ $(function() {
 <li>particle_mapping
 : <a class="el" href="classGLSVANSSolver.html#a4120487e8cf610886e6bcf6d2ca739c3">GLSVANSSolver&lt; dim &gt;</a>
 </li>
-<li>particle_nonlinear_tol
-: <a class="el" href="classParameters_1_1IBParticles.html#a1fdba9a263b49b50d1a9ceab191d7dbe">Parameters::IBParticles&lt; dim &gt;</a>
-</li>
 <li>particle_nonlinear_tolerance
 : <a class="el" href="classParameters_1_1IBParticles.html#afdadb62290b0a1be6dba2155281d26ca">Parameters::IBParticles&lt; dim &gt;</a>
 </li>
@@ -170,7 +168,6 @@ $(function() {
 <li>particle_particle_contact_force_object
 : <a class="el" href="classCFDDEMSolver.html#a73ec388bf7179ea9f9209e2c892425ad">CFDDEMSolver&lt; dim &gt;</a>
 , <a class="el" href="classDEMSolver.html#ad89432e169ff823d5819a9ba39f945d7">DEMSolver&lt; dim &gt;</a>
-, <a class="el" href="classIBParticlesDEM.html#a961c8566a43ea4d9210f3139c0218418">IBParticlesDEM&lt; dim &gt;</a>
 </li>
 <li>particle_particle_fine_search_object
 : <a class="el" href="classDEMContactManager.html#a3fdb7c2747b8641f2e0f88a99ad9e360">DEMContactManager&lt; dim &gt;</a>
@@ -244,7 +241,6 @@ $(function() {
 <li>particle_wall_contact_force_object
 : <a class="el" href="classCFDDEMSolver.html#abf4ce3d9caf342667945df7b7ad51f39">CFDDEMSolver&lt; dim &gt;</a>
 , <a class="el" href="classDEMSolver.html#a94e55668c428ec182f67afdbe528becd">DEMSolver&lt; dim &gt;</a>
-, <a class="el" href="classIBParticlesDEM.html#ac229f2564e3eb484acbb1f32770b35e1">IBParticlesDEM&lt; dim &gt;</a>
 </li>
 <li>particle_wall_fine_search_object
 : <a class="el" href="classDEMContactManager.html#afe898f4082ab8ec60e6fa18fbbf5ed49">DEMContactManager&lt; dim &gt;</a>
@@ -269,9 +265,9 @@ $(function() {
 : <a class="el" href="classDEMSolver.html#a71d5223db37684438a92fd1ac9a23f12">DEMSolver&lt; dim &gt;</a>
 </li>
 <li>particles_of_each_type_remaining
-: <a class="el" href="classPlaneInsertion.html#ab7b39b89ec2dc04642191d8a44d11c7d">PlaneInsertion&lt; dim &gt;</a>
+: <a class="el" href="classInsertionPlane.html#ab34b6dc1ac343979290015a4e5204a19">InsertionPlane&lt; dim &gt;</a>
+, <a class="el" href="classInsertionVolume.html#a19468227248f32a4373357f206b3dc1d">InsertionVolume&lt; dim &gt;</a>
 , <a class="el" href="classUniformInsertion.html#ad0d63a7f8defa32dffb4b94836e91b87">UniformInsertion&lt; dim &gt;</a>
-, <a class="el" href="classVolumeInsertion.html#a79af674cd02a54d6d916cf39597ca14d">VolumeInsertion&lt; dim &gt;</a>
 </li>
 <li>particles_pvdhandler
 : <a class="el" href="classCFDDEMSolver.html#abb4755c2a13951b307659b489e02f1a4">CFDDEMSolver&lt; dim &gt;</a>
@@ -335,6 +331,9 @@ $(function() {
 <li>periodic_id
 : <a class="el" href="classBoundaryConditions_1_1BoundaryConditions.html#ae292c7adc9ff6f9bc6bbf2aab46b514b">BoundaryConditions::BoundaryConditions&lt; dim &gt;</a>
 </li>
+<li>periodic_node_ids
+: <a class="el" href="classDisableContacts.html#a10da157daa3b15179d8cbda0cecc3962">DisableContacts&lt; dim &gt;</a>
+</li>
 <li>periodic_normal_vector
 : <a class="el" href="structperiodic__boundaries__cells__info__struct.html#a3ec60b7fd718d112963a035f8fd7820f">periodic_boundaries_cells_info_struct&lt; dim &gt;</a>
 </li>
@@ -368,6 +367,12 @@ $(function() {
 <li>phase_dirichlet_value
 : <a class="el" href="classBoundaryConditions_1_1CahnHilliardBoundaryConditions.html#a0466e90eb56e3083e2182a59e6ee936e">BoundaryConditions::CahnHilliardBoundaryConditions&lt; dim &gt;</a>
 </li>
+<li>phase_energy_output_name
+: <a class="el" href="structParameters_1_1PostProcessing.html#a07ba02698398022a08710f68df5585c3">Parameters::PostProcessing</a>
+</li>
+<li>phase_energy_table
+: <a class="el" href="classCahnHilliard.html#a88ff51d0c9c3f938fd190b667828fe38">CahnHilliard&lt; dim &gt;</a>
+</li>
 <li>phase_filter
 : <a class="el" href="structParameters_1_1VOF.html#ab9f9476aa7bde0fd085218c40c1990a6">Parameters::VOF</a>
 </li>
@@ -376,6 +381,9 @@ $(function() {
 </li>
 <li>phase_fraction_gradient_diffusion_factor
 : <a class="el" href="structParameters_1_1VOF__SurfaceTensionForce.html#aaf4640b6b6c93e746e57d0c113aa264c">Parameters::VOF_SurfaceTensionForce</a>
+</li>
+<li>phase_gradient_values
+: <a class="el" href="classNavierStokesScratchData.html#a402dc7a9c4c505cb09842b649fbf0c81">NavierStokesScratchData&lt; dim &gt;</a>
 </li>
 <li>phase_gradients
 : <a class="el" href="classVOFScratchData.html#ae2d42887b29a53a12e1a98654b9bac28">VOFScratchData&lt; dim &gt;</a>
@@ -448,31 +456,31 @@ $(function() {
 : <a class="el" href="classPhysicalPropertiesManager.html#ac8341ccb441707bd8d7efb0a1573570a">PhysicalPropertiesManager</a>
 </li>
 <li>physics
-: <a class="el" href="classMultiphysicsInterface.html#a5e3e2910420fb441d31cbd540eb863e1">MultiphysicsInterface&lt; dim &gt;</a>
+: <a class="el" href="classMultiphysicsInterface.html#a0f9da9403c8164b4f59e67bad6ef5d1a">MultiphysicsInterface&lt; dim &gt;</a>
 </li>
 <li>physics_dof_handler
 : <a class="el" href="classMultiphysicsInterface.html#a9a1fadb4782590fe0484a4b63ef63639">MultiphysicsInterface&lt; dim &gt;</a>
 </li>
 <li>physics_filtered_solutions
-: <a class="el" href="classMultiphysicsInterface.html#a989904c0fe52e6807b9386689656f114">MultiphysicsInterface&lt; dim &gt;</a>
+: <a class="el" href="classMultiphysicsInterface.html#a04e672903a4964df6e590d3572ada1bd">MultiphysicsInterface&lt; dim &gt;</a>
 </li>
 <li>physics_names
 : <a class="el" href="classSimulationParameters.html#a80b1bf4292014bf22e9b58b7ee723be0">SimulationParameters&lt; dim &gt;</a>
 </li>
 <li>physics_previous_solutions
-: <a class="el" href="classMultiphysicsInterface.html#a9cb9985ba620a7679d10bb78dd40390e">MultiphysicsInterface&lt; dim &gt;</a>
+: <a class="el" href="classMultiphysicsInterface.html#ae2bc1da31500c52f90cc89adf544ed8e">MultiphysicsInterface&lt; dim &gt;</a>
 </li>
 <li>physics_solutions
-: <a class="el" href="classMultiphysicsInterface.html#abb784f961bf7210d8635514691d56e8d">MultiphysicsInterface&lt; dim &gt;</a>
+: <a class="el" href="classMultiphysicsInterface.html#aa02da295791592960ed3e59b78fe7946">MultiphysicsInterface&lt; dim &gt;</a>
 </li>
 <li>physics_solutions_m1
-: <a class="el" href="classMultiphysicsInterface.html#a9dfa24da1b3a3ecb681fd53bd100a00e">MultiphysicsInterface&lt; dim &gt;</a>
+: <a class="el" href="classMultiphysicsInterface.html#aa3d5eacc84646adc0357fe17e75e6f72">MultiphysicsInterface&lt; dim &gt;</a>
 </li>
 <li>physics_solver
 : <a class="el" href="classNonLinearSolver.html#a576cc5a7bb280c055ac7b1d1a83a38c6">NonLinearSolver&lt; VectorType &gt;</a>
 </li>
 <li>physics_time_average_solutions
-: <a class="el" href="classMultiphysicsInterface.html#a467b474346a44c9ca6b95aee7b1caa6d">MultiphysicsInterface&lt; dim &gt;</a>
+: <a class="el" href="classMultiphysicsInterface.html#a6679a79c963fb98bec7b41d2ac057248">MultiphysicsInterface&lt; dim &gt;</a>
 </li>
 <li>pic
 : <a class="el" href="classNavierStokesScratchData.html#a9e58737ebcfc6340e1a42f53056c7a2d">NavierStokesScratchData&lt; dim &gt;</a>
@@ -481,7 +489,7 @@ $(function() {
 : <a class="el" href="classCylindricalHelix.html#a9e915209058f5c0823b1f882caab45cd">CylindricalHelix&lt; dim &gt;</a>
 </li>
 <li>plane_cells_for_insertion
-: <a class="el" href="classPlaneInsertion.html#aa1a5826a1127f975f7496f32bca9dc13">PlaneInsertion&lt; dim &gt;</a>
+: <a class="el" href="classInsertionPlane.html#ac91ddda282600f7cd44b67c0e5acda2f">InsertionPlane&lt; dim &gt;</a>
 </li>
 <li>pmass_preconditioner
 : <a class="el" href="classBlockSchurPreconditioner.html#ac49fb77cb8b93c901e85dc48c76c6479">BlockSchurPreconditioner&lt; BSPreconditioner &gt;</a>
@@ -545,11 +553,20 @@ $(function() {
 <li>potential_cahn_hilliard_order
 : <a class="el" href="structParameters_1_1FEM.html#ad455d960df990fb708a6e7a1d63cbc4a">Parameters::FEM</a>
 </li>
+<li>potential_smoothing_coefficient
+: <a class="el" href="structParameters_1_1CahnHilliard.html#a9a470cbe7f58b13fe0b5211d88665dea">Parameters::CahnHilliard</a>
+</li>
 <li>powerlaw_parameters
 : <a class="el" href="structParameters_1_1NonNewtonian.html#a40396ac89acdc7b56e94dec75ad11b0a">Parameters::NonNewtonian</a>
 </li>
 <li>pp_contact_map
-: <a class="el" href="classIBParticlesDEM.html#a2719e5fd7bd1e67f8ad7b365808fcd47">IBParticlesDEM&lt; dim &gt;</a>
+: <a class="el" href="classIBParticlesDEM.html#a71310bd230b6cc15d733f660f19f0b26">IBParticlesDEM&lt; dim &gt;</a>
+</li>
+<li>precondition_amg
+: <a class="el" href="classMFNavierStokesPreconditionGMG.html#a9e85053991cf83d82f86f82c162fd588">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
+</li>
+<li>precondition_ilu
+: <a class="el" href="classMFNavierStokesPreconditionGMG.html#ac39fb21d556db27aa85a3d6aaafe207f">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
 </li>
 <li>preconditioner
 : <a class="el" href="structParameters_1_1LinearSolver.html#a328641e34f1e113bb1dcaf7b2c74df51">Parameters::LinearSolver</a>
@@ -558,7 +575,7 @@ $(function() {
 : <a class="el" href="classGear3Integrator.html#ac40c9ddbcb44bc896e156284a8835465">Gear3Integrator&lt; dim &gt;</a>
 </li>
 <li>present_curvature_solution
-: <a class="el" href="classVolumeOfFluid.html#ac0705d5d1bf465d018016558be00cad7">VolumeOfFluid&lt; dim &gt;</a>
+: <a class="el" href="classVolumeOfFluid.html#a42932f1130431924ec5cc47bc7f6774e">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>present_face_temperature_values
 : <a class="el" href="classHeatTransferScratchData.html#ade619da01f88b550066ae2194d8ba8e0">HeatTransferScratchData&lt; dim &gt;</a>
@@ -567,14 +584,14 @@ $(function() {
 : <a class="el" href="classVOFScratchData.html#a17eba8e1acd046930dfecdff0eb03c5e">VOFScratchData&lt; dim &gt;</a>
 </li>
 <li>present_projected_phase_fraction_gradient_solution
-: <a class="el" href="classVolumeOfFluid.html#a809f513c8baa755a921ecda831efded2">VolumeOfFluid&lt; dim &gt;</a>
+: <a class="el" href="classVolumeOfFluid.html#a8489dd21878840aa1e66b41cf9a074e4">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>present_solution
-: <a class="el" href="classCahnHilliard.html#a272ad9da259d8fc3897c3634c76d0e7a">CahnHilliard&lt; dim &gt;</a>
-, <a class="el" href="classHeatTransfer.html#aed3e2b88a7e24f4c900e86d806f231b2">HeatTransfer&lt; dim &gt;</a>
+: <a class="el" href="classCahnHilliard.html#a0c8ed17d9d559c85118e868c9df326d5">CahnHilliard&lt; dim &gt;</a>
+, <a class="el" href="classHeatTransfer.html#aaa54c16dbfc94259d2a0bfb31f464647">HeatTransfer&lt; dim &gt;</a>
 , <a class="el" href="classNavierStokesBase.html#a8edd98ede87021114c54121916e27aec">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
-, <a class="el" href="classTracer.html#af6ab9d28efe08b97e45bb189fe747da0">Tracer&lt; dim &gt;</a>
-, <a class="el" href="classVolumeOfFluid.html#af6a196613026ea977921f3b2957d4312">VolumeOfFluid&lt; dim &gt;</a>
+, <a class="el" href="classTracer.html#ab159a633ebc8dddbbfe681388fa9a4db">Tracer&lt; dim &gt;</a>
+, <a class="el" href="classVolumeOfFluid.html#ab3543bb457a41602edbbcc97f79ffff2">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>present_temperature_laplacians
 : <a class="el" href="classHeatTransferScratchData.html#a94693b8e7f9c64f92b5c14b28a79f0a8">HeatTransferScratchData&lt; dim &gt;</a>
@@ -583,7 +600,8 @@ $(function() {
 : <a class="el" href="classHeatTransferScratchData.html#a51ecd083892161e315e2f62d34931cc8">HeatTransferScratchData&lt; dim &gt;</a>
 </li>
 <li>pressure
-: <a class="el" href="classNavierStokesScratchData.html#a5f0b2159838caaa058d098021f9e39ff">NavierStokesScratchData&lt; dim &gt;</a>
+: <a class="el" href="classHeatTransferScratchData.html#a0515a3830b452b6f3610f46cb773a477">HeatTransferScratchData&lt; dim &gt;</a>
+, <a class="el" href="classNavierStokesScratchData.html#a5f0b2159838caaa058d098021f9e39ff">NavierStokesScratchData&lt; dim &gt;</a>
 </li>
 <li>pressure_amg_preconditioner
 : <a class="el" href="classGDNavierStokesSolver.html#a2c110821cec49845711482c195967aa3">GDNavierStokesSolver&lt; dim &gt;</a>
@@ -624,16 +642,11 @@ $(function() {
 , <a class="el" href="structParameters_1_1Stabilization.html#a978f1c321f2edfd3601e5e235f89105e">Parameters::Stabilization</a>
 </li>
 <li>pressure_values
-: <a class="el" href="classNavierStokesScratchData.html#a0d32755f9533006a0c28c61b594f4b0f">NavierStokesScratchData&lt; dim &gt;</a>
+: <a class="el" href="classHeatTransferScratchData.html#a38b420ba64629f6332b9afc9e0cf4d8e">HeatTransferScratchData&lt; dim &gt;</a>
+, <a class="el" href="classNavierStokesScratchData.html#a0d32755f9533006a0c28c61b594f4b0f">NavierStokesScratchData&lt; dim &gt;</a>
 </li>
 <li>previous_chemical_potential_values
 : <a class="el" href="classCahnHilliardScratchData.html#ab8a0d9d630278caac43d40d27d694680">CahnHilliardScratchData&lt; dim &gt;</a>
-</li>
-<li>previous_d_omega
-: <a class="el" href="classIBParticle.html#a4b6ff57bbb58ad3fadeeecc3a1d268f3">IBParticle&lt; dim &gt;</a>
-</li>
-<li>previous_d_velocity
-: <a class="el" href="classIBParticle.html#ab23863d5985da2b0757896ba204fe958">IBParticle&lt; dim &gt;</a>
 </li>
 <li>previous_density
 : <a class="el" href="classNavierStokesScratchData.html#a5c0fe0240fc3541e95df2896b0231e84">NavierStokesScratchData&lt; dim &gt;</a>
@@ -665,8 +678,14 @@ $(function() {
 <li>previous_omega
 : <a class="el" href="classIBParticle.html#af7db7796dc2eb971cfa20b2761134066">IBParticle&lt; dim &gt;</a>
 </li>
+<li>previous_omega_residual
+: <a class="el" href="classIBParticle.html#ab62e515269a2cf6a6b07fa5b204759c0">IBParticle&lt; dim &gt;</a>
+</li>
 <li>previous_orientation
 : <a class="el" href="classIBParticle.html#a00bd1f663ff20dd664f07f5ee0f28b64">IBParticle&lt; dim &gt;</a>
+</li>
+<li>previous_particle_particle_contact_point
+: <a class="el" href="classIBParticlesDEM.html#a67db1f9118341d04081c9378f631accb">IBParticlesDEM&lt; dim &gt;</a>
 </li>
 <li>previous_phase_gradients
 : <a class="el" href="classVOFScratchData.html#a37d729c26dde4a3b53f3c2eab4f9b67c">VOFScratchData&lt; dim &gt;</a>
@@ -688,17 +707,17 @@ $(function() {
 : <a class="el" href="classNavierStokesScratchData.html#a425e384b23005541ab442a50b49560f4">NavierStokesScratchData&lt; dim &gt;</a>
 </li>
 <li>previous_solutions
-: <a class="el" href="classCahnHilliard.html#ad07d357edd47634824fbc8a9688631ec">CahnHilliard&lt; dim &gt;</a>
-, <a class="el" href="classHeatTransfer.html#a09285a8d9db7811fdf4c0e056faf79f9">HeatTransfer&lt; dim &gt;</a>
+: <a class="el" href="classCahnHilliard.html#ab72931bd5a919bd16c3c525b6855c906">CahnHilliard&lt; dim &gt;</a>
+, <a class="el" href="classHeatTransfer.html#abbdf8cc94e9565265c04bd5b5aea1cb7">HeatTransfer&lt; dim &gt;</a>
 , <a class="el" href="classNavierStokesBase.html#aaebb2c81bd4185fe345831f6eefe4f19">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
-, <a class="el" href="classTracer.html#a6c2b46c02839b8fc4c1d2f80cc973695">Tracer&lt; dim &gt;</a>
-, <a class="el" href="classVolumeOfFluid.html#aa1937744a022f957762e6aeb55b686b6">VolumeOfFluid&lt; dim &gt;</a>
+, <a class="el" href="classTracer.html#a75fd1aee2c087d6e114eb371d9823e6d">Tracer&lt; dim &gt;</a>
+, <a class="el" href="classVolumeOfFluid.html#ae25dbbca799125eb478e49f28b9b11e1">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>previous_solutions_transfer
-: <a class="el" href="classCahnHilliard.html#a6e251caee2a8bd8f11b6c5a7a5a39f58">CahnHilliard&lt; dim &gt;</a>
-, <a class="el" href="classHeatTransfer.html#af100aa8d3415aece64cafee71c7631c8">HeatTransfer&lt; dim &gt;</a>
-, <a class="el" href="classTracer.html#a253c3bd06f4802eaaee13dba87b62182">Tracer&lt; dim &gt;</a>
-, <a class="el" href="classVolumeOfFluid.html#af0285fba024e39e5ad342a49ec073da2">VolumeOfFluid&lt; dim &gt;</a>
+: <a class="el" href="classCahnHilliard.html#a0a7d587c0c53ee66a8405a1b617ee5b7">CahnHilliard&lt; dim &gt;</a>
+, <a class="el" href="classHeatTransfer.html#a753f11086b4af6c72bf432a2d528c450">HeatTransfer&lt; dim &gt;</a>
+, <a class="el" href="classTracer.html#a34ab23d0b82d282987614c96646dff24">Tracer&lt; dim &gt;</a>
+, <a class="el" href="classVolumeOfFluid.html#a4ff20fe0bbfcdb10e0e13fca7ce13695">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>previous_temperature_gradients
 : <a class="el" href="classHeatTransferScratchData.html#adfce9a7d60c93f9fbdbd45753ff4d936">HeatTransferScratchData&lt; dim &gt;</a>
@@ -717,16 +736,22 @@ $(function() {
 <li>previous_velocity
 : <a class="el" href="classIBParticle.html#affb7875bb991c38cc61f9d2c7b5359d3">IBParticle&lt; dim &gt;</a>
 </li>
+<li>previous_velocity_residual
+: <a class="el" href="classIBParticle.html#a200148850bb564c709cb5869113c98e8">IBParticle&lt; dim &gt;</a>
+</li>
 <li>previous_velocity_values
 : <a class="el" href="classCahnHilliardScratchData.html#a5cc3b9338eb0557f834ba4c9a08d58be">CahnHilliardScratchData&lt; dim &gt;</a>
 , <a class="el" href="classNavierStokesScratchData.html#a35e6cecb73b9e5a9d2576b8208c77da8">NavierStokesScratchData&lt; dim &gt;</a>
 , <a class="el" href="classVOFScratchData.html#a72ddd3f7bf9fd2b4e3193971d9d316fa">VOFScratchData&lt; dim &gt;</a>
 </li>
 <li>previous_void_fraction
-: <a class="el" href="classGLSVANSSolver.html#a6b1c722a7b39480eaf042a3093208028">GLSVANSSolver&lt; dim &gt;</a>
+: <a class="el" href="classGLSVANSSolver.html#a45976b8f40eda39667723a55bd461628">GLSVANSSolver&lt; dim &gt;</a>
 </li>
 <li>previous_void_fraction_values
 : <a class="el" href="classNavierStokesScratchData.html#aa48c218f4f67db5887e6036756508bbd">NavierStokesScratchData&lt; dim &gt;</a>
+</li>
+<li>previous_wall_contact_point
+: <a class="el" href="classIBParticlesDEM.html#a4ab78944a34b43434562208a26b38a6a">IBParticlesDEM&lt; dim &gt;</a>
 </li>
 <li>print_dem
 : <a class="el" href="classParameters_1_1IBParticles.html#a671e0fda70e68fa864689b89e70eafd0">Parameters::IBParticles&lt; dim &gt;</a>
@@ -782,7 +807,7 @@ $(function() {
 : <a class="el" href="classGLSNitscheNavierStokesSolver.html#af1f4c2ba10a9ba06f5c07c790e8e5906">GLSNitscheNavierStokesSolver&lt; dim, spacedim &gt;</a>
 </li>
 <li>pw_contact_map
-: <a class="el" href="classIBParticlesDEM.html#ab75ef12b958b9db1709927cd60978a24">IBParticlesDEM&lt; dim &gt;</a>
+: <a class="el" href="classIBParticlesDEM.html#af001b80b1fd8c576f9531f5cce01aaac">IBParticlesDEM&lt; dim &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->

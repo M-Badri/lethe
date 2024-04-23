@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Dimensionality" href="dimensionality.html" /><link rel="prev" title="Box Refinement" href="box_refinement.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Constrain Stasis" href="constrain_stasis.html" /><link rel="prev" title="Box Refinement" href="box_refinement.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>Cahn-Hilliard - Lethe documentation</title>
@@ -176,6 +176,7 @@
 <li class="toctree-l3"><a class="reference internal" href="boundary_conditions_multiphysics.html">Boundary Conditions - Multiphysics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="box_refinement.html">Box Refinement</a></li>
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Cahn-Hilliard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="constrain_stasis.html">Constrain Stasis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dimensionality.html">Dimensionality</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dynamic_flow_control.html">Dynamic Flow Control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fem.html">Finite Element Interpolation (FEM)</a></li>
@@ -195,6 +196,7 @@
 <li class="toctree-l3"><a class="reference internal" href="source_term.html">Source Term</a></li>
 <li class="toctree-l3"><a class="reference internal" href="stabilization.html">Stabilization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="timer.html">Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tracer_drift_velocity.html">Tracer Drift Velocity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="velocity_source.html">Velocity Source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="volume_of_fluid.html">Volume of Fluid (Multiphase Flow)</a></li>
 </ul>
@@ -239,6 +241,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-naca0012-low-reynolds/2d-naca0012-low-reynolds.html">Flow around NACA0012 at Low Reynolds Number</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">Taylor-Couette Flow Using Nitsche Immersed Boundary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">Flow around a Sphere</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-taylor-green-vortex/3d-taylor-green-vortex.html">Taylor-Green Vortex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-turbulent-taylor-couette/3d-turbulent-taylor-couette.html">Turbulent Taylor-Couette Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-flow-over-periodic-hills/3d-flow-over-periodic-hills.html">Flow over Periodic Hills</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-mixer-using-single-rotating-frame/3d-mixer-using-single-rotating-frame.html">Ribbon Mixer Using a Single Rotating Reference Frame</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-nitsche-mixer-with-pbt-impeller/nitsche-mixer-with-pbt-impeller.html">Mixer with Pitched-Blade Turbine Impeller Using Nitsche Immersed Boundary</a></li>
@@ -347,6 +351,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tools/tools.html">Tools</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle navigation of Tools</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/updating-test-results.html">Updating Test Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/gmsh/gmsh.html">Introduction on How to Use GMSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pointwise/pointwise.html">Introduction on How to Use Pointwise</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/automatic_launch/automatic_launch.html">How to Automatically Create and Launch Lethe Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/postprocessing/postprocessing_paraview.html">Remote Data Visualization on ParaView</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/postprocessing/postprocessing_pyvista.html">Post-processing Lethe with PyVista</a></li>
@@ -400,23 +405,24 @@
 <p>The equations solved are as follows:</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}\begin{split}\partial_t\phi + (\mathbf{a} \cdot \nabla) \phi - \nabla \cdot (M(\phi)\nabla \eta) = 0 \\\end{split}\\ \eta - 4W(\phi^3 - \phi) + \epsilon^2 \Delta \phi = 0\end{aligned}\end{align} \]</div>
+\[ \begin{align}\begin{aligned}\begin{split}\partial_t\phi + (\mathbf{a} \cdot \nabla) \phi - \nabla \cdot (M(\phi)\nabla \eta) = 0 \\\end{split}\\ \eta -  \frac{\lambda}{\epsilon^2}(\phi^3 - \phi) + \lambda \nabla^2 \phi + \xi h^2 \nabla^2 \eta  = 0\end{aligned}\end{align} \]</div>
 </div>
 <p>where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\mathbf{a}\)</span> corresponds to the velocity field; this vector field is used when the problem is driven by convection.</p></li>
 <li><p><span class="math notranslate nohighlight">\(M(\phi)\)</span> is the mobility function; two cases are considered: a constant mobility model, i.e, <span class="math notranslate nohighlight">\(M = D\)</span> with <span class="math notranslate nohighlight">\(D\)</span> the mobility constant, or a quartic mobility model with <span class="math notranslate nohighlight">\(M(\phi) = D(1-\phi^2)^2\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(W\)</span> is the potential well height.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\xi\)</span> is a smoothing coefficient for the chemical potential.</p></li>
+<li><p><span class="math notranslate nohighlight">\(h\)</span> is a local measure of the cell size. There may be different h in an adapted mesh.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\epsilon\)</span> is a parameter linked to the thickness of the interface.</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>At the moment, a maximum of two fluids is supported. By convention, air is usually the <code class="docutils literal notranslate"><span class="pre">fluid</span> <span class="pre">0</span></code> and the other fluid of interest is the <code class="docutils literal notranslate"><span class="pre">fluid</span> <span class="pre">1</span></code>.    See <a class="reference internal" href="initial_conditions.html"><span class="doc">Initial Conditions</span></a> for the definition of the Cahn-Hilliard initial conditions and <a class="reference internal" href="physical_properties.html#two-phase-simulations"><span class="std std-ref">Physical properties - Two phase simulations</span></a> for the definition of the physical properties of both fluids.  Do not forget to <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">cahn</span> <span class="pre">hilliard</span> <span class="pre">=</span> <span class="pre">true</span></code> in the <a class="reference internal" href="multiphysics.html"><span class="doc">Multiphysics</span></a> subsection of the <code class="docutils literal notranslate"><span class="pre">.prm</span></code> file.</p>
+<p>At the moment, a maximum of two fluids is supported. By convention, air is usually the <code class="docutils literal notranslate"><span class="pre">fluid</span> <span class="pre">0</span></code> and the other fluid of interest is the <code class="docutils literal notranslate"><span class="pre">fluid</span> <span class="pre">1</span></code>. The fluid 1 (0) corresponds to a value of <span class="math notranslate nohighlight">\(\phi = -1\)</span> (<span class="math notranslate nohighlight">\(\phi = 1\)</span>).    See <a class="reference internal" href="initial_conditions.html"><span class="doc">Initial Conditions</span></a> for the definition of the Cahn-Hilliard initial conditions and <a class="reference internal" href="physical_properties.html#two-phase-simulations"><span class="std std-ref">Physical properties - Two phase simulations</span></a> for the definition of the physical properties of both fluids.  Do not forget to <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">cahn</span> <span class="pre">hilliard</span> <span class="pre">=</span> <span class="pre">true</span></code> in the <a class="reference internal" href="multiphysics.html"><span class="doc">Multiphysics</span></a> subsection of the <code class="docutils literal notranslate"><span class="pre">.prm</span></code> file.</p>
 </div>
 <p>The default values of the Cahn-Hilliard parameters are given in the text box below:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection cahn hilliard
 
-  set well height = 1
+  set potential smoothing coefficient = 1
 
   subsection epsilon
     set method = automatic
@@ -426,8 +432,8 @@ end
 </pre></div>
 </div>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">well</span> <span class="pre">height</span></code>: defines the <span class="math notranslate nohighlight">\(W\)</span> parameter in the equations above. Its value should be increased if the solution is excessively diffused.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">epsilon</span></code>: defines the <span class="math notranslate nohighlight">\(\epsilon\)</span> parameter. It can either be user-defined or determined automatically for each cell. For the latter, epsilon is equal to two times the characteristic length of the cell. The choices are <code class="docutils literal notranslate"><span class="pre">automatic</span></code> (default) or <code class="docutils literal notranslate"><span class="pre">manual</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">potential</span> <span class="pre">smoothing</span> <span class="pre">coefficient</span></code>: defines the <span class="math notranslate nohighlight">\(\xi\)</span> parameter in the equations above. Its value should be increased if the potential presents excessive oscillations (in advective problems for instance).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">epsilon</span></code>: defines the <span class="math notranslate nohighlight">\(\epsilon\)</span> parameter. It can either be user-defined or determined automatically for each cell. For the latter, epsilon is equal to two times the characteristic length of the cell (<span class="math notranslate nohighlight">\(h\)</span>). The choices are <code class="docutils literal notranslate"><span class="pre">automatic</span></code> (default) or <code class="docutils literal notranslate"><span class="pre">manual</span></code>.</p></li>
 </ul>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
@@ -440,12 +446,12 @@ end
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="dimensionality.html">
+          <a class="next-page" href="constrain_stasis.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Dimensionality</div>
+                <div class="title">Constrain Stasis</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>

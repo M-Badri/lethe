@@ -176,6 +176,7 @@
 <li class="toctree-l3"><a class="reference internal" href="boundary_conditions_multiphysics.html">Boundary Conditions - Multiphysics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="box_refinement.html">Box Refinement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cahn_hilliard.html">Cahn-Hilliard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="constrain_stasis.html">Constrain Stasis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dimensionality.html">Dimensionality</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dynamic_flow_control.html">Dynamic Flow Control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fem.html">Finite Element Interpolation (FEM)</a></li>
@@ -195,6 +196,7 @@
 <li class="toctree-l3"><a class="reference internal" href="source_term.html">Source Term</a></li>
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Stabilization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="timer.html">Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tracer_drift_velocity.html">Tracer Drift Velocity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="velocity_source.html">Velocity Source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="volume_of_fluid.html">Volume of Fluid (Multiphase Flow)</a></li>
 </ul>
@@ -239,6 +241,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-naca0012-low-reynolds/2d-naca0012-low-reynolds.html">Flow around NACA0012 at Low Reynolds Number</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">Taylor-Couette Flow Using Nitsche Immersed Boundary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">Flow around a Sphere</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-taylor-green-vortex/3d-taylor-green-vortex.html">Taylor-Green Vortex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-turbulent-taylor-couette/3d-turbulent-taylor-couette.html">Turbulent Taylor-Couette Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-flow-over-periodic-hills/3d-flow-over-periodic-hills.html">Flow over Periodic Hills</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-mixer-using-single-rotating-frame/3d-mixer-using-single-rotating-frame.html">Ribbon Mixer Using a Single Rotating Reference Frame</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-nitsche-mixer-with-pbt-impeller/nitsche-mixer-with-pbt-impeller.html">Mixer with Pitched-Blade Turbine Impeller Using Nitsche Immersed Boundary</a></li>
@@ -347,6 +351,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tools/tools.html">Tools</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle navigation of Tools</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/updating-test-results.html">Updating Test Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/gmsh/gmsh.html">Introduction on How to Use GMSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pointwise/pointwise.html">Introduction on How to Use Pointwise</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/automatic_launch/automatic_launch.html">How to Automatically Create and Launch Lethe Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/postprocessing/postprocessing_paraview.html">Remote Data Visualization on ParaView</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/postprocessing/postprocessing_pyvista.html">Post-processing Lethe with PyVista</a></li>
@@ -405,9 +410,9 @@ end
 <p>The <code class="docutils literal notranslate"><span class="pre">use</span> <span class="pre">default</span> <span class="pre">stabilization</span></code> indicates that the solver should use the default stabilization strategy, which is generally the most adequate strategy. To use an alternative strategy, this parameter must be set to false and the strategy to be used must be manually specified using the <code class="docutils literal notranslate"><span class="pre">stabilization</span></code> parameter.</p>
 <p>There are three choices of stabilization strategy:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">stabilization=pspg-supg</span></code> assembles a PSPG/SUPG stabilization for the Navier-Stokes equations. This stabilization should only be used with the monolithic GLS solver.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">stabilization=gls</span></code> assembles a full GLS stabilization for the Navier-Stokes equations. This stabilization is similar to the <code class="docutils literal notranslate"><span class="pre">pspg-supg</span></code>, but adds the term <span class="math notranslate nohighlight">\(\nu \nabla^2 \mathbf{v}\)</span> to the test function. This stabilization should only be used with the monolithic GLS solver.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">stabilization=grad_div</span></code> assembles a grad-div penalization term in the momentum equation to ensure mass conservation. This is not a stabilization method per-say and should not be used with elements that are not LBB stable. This stabilization should only be used with the grad-div Navier-Stokes solver (<code class="docutils literal notranslate"><span class="pre">lethe-fluid-block</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stabilization=pspg-supg</span></code> assembles a PSPG/SUPG stabilization for the Navier-Stokes equations. This stabilization should only be used with the monolithic solver for the Navier-Stokes equations (<code class="docutils literal notranslate"><span class="pre">lethe-fluid</span></code> or <code class="docutils literal notranslate"><span class="pre">lethe-fluid-matrix-free</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stabilization=gls</span></code> assembles a full GLS stabilization for the Navier-Stokes equations which adds two Least-Squares terms (for more details see <a class="reference internal" href="../../theory/fluid_dynamics/stabilization.html"><span class="doc">On the Need for Stabilization</span></a>). This stabilization should only be used with the monolithic solver for the Navier-Stokes equations (<code class="docutils literal notranslate"><span class="pre">lethe-fluid</span></code> or <code class="docutils literal notranslate"><span class="pre">lethe-fluid-matrix-free</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stabilization=grad_div</span></code> assembles a grad-div penalization term in the momentum equation to ensure mass conservation. This is not a stabilization method per-say and should not be used with elements that are not LBB stable. This stabilization should only be used with the grad-div block Navier-Stokes solver (<code class="docutils literal notranslate"><span class="pre">lethe-fluid-block</span></code>).</p></li>
 </ul>
 <p>The <code class="docutils literal notranslate"><span class="pre">pressure</span> <span class="pre">scaling</span> <span class="pre">factor</span></code> parameter is used as a multiplier for the pressure in the momentum equation; the inverse of the factor is applied to the pressure after solving. It helps the convergence of the linear solver  by decreasing the condition number for cases where pressure and velocity have very different scales.</p>
 </section>
@@ -467,6 +472,5 @@ end
     <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=7cec7674"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </body>
 </html>

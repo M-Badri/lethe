@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Developer documentation for the Lethe open-source library: LevelsetGradientPostprocessor&lt; dim &gt; Class Template Reference</title>
+<title>Lethe Open-Source Library: LevelsetGradientPostprocessor&lt; dim &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,8 +30,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Developer documentation for the Lethe open-source library
+   <div id="projectname">Lethe Open-Source Library
    </div>
+   <div id="projectbrief">Developer Guide</div>
   </td>
  </tr>
  </tbody>
@@ -79,16 +80,13 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classPostprocessor.html">Postprocessor</a> for levelset gradient of a shape used to calculate the levelset gradient field for a given shape within the domain.  
- <a href="classLevelsetGradientPostprocessor.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for LevelsetGradientPostprocessor&lt; dim &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classLevelsetGradientPostprocessor__inherit__graph.png" border="0" usemap="#aLevelsetGradientPostprocessor_3_01dim_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="aLevelsetGradientPostprocessor_3_01dim_01_4_inherit__map" id="aLevelsetGradientPostprocessor_3_01dim_01_4_inherit__map">
-<area shape="rect" title="Postprocessor for levelset gradient of a shape used to calculate the levelset gradient field for a gi..." alt="" coords="5,95,229,136"/>
+<area shape="rect" title="Compute a levelset gradient vector field for a given shape within a domain." alt="" coords="5,95,229,136"/>
 <area shape="rect" title=" " alt="" coords="25,5,210,47"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -98,7 +96,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad61408e2bb1579494ef14d69986145b6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevelsetGradientPostprocessor.html#ad61408e2bb1579494ef14d69986145b6">LevelsetGradientPostprocessor</a> (const std::shared_ptr&lt; <a class="el" href="classShape.html">Shape</a>&lt; dim &gt;&gt; <a class="el" href="classLevelsetGradientPostprocessor.html#a5662a1d5231477492cd00c90c2c25a61">shape</a>)</td></tr>
 <tr class="separator:ad61408e2bb1579494ef14d69986145b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59026a134d7d6605817b2b186ea6474e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevelsetGradientPostprocessor.html#a59026a134d7d6605817b2b186ea6474e">evaluate_vector_field</a> (const DataPostprocessorInputs::Vector&lt; dim &gt; &amp;inputs, std::vector&lt; Vector&lt; double &gt;&gt; &amp;computed_quantities) const override</td></tr>
-<tr class="memdesc:a59026a134d7d6605817b2b186ea6474e"><td class="mdescLeft">&#160;</td><td class="mdescRight">function that computes the gradient at each point associated to the computed_quantities vector and fills that vector accordingly.  <a href="classLevelsetGradientPostprocessor.html#a59026a134d7d6605817b2b186ea6474e">More...</a><br /></td></tr>
 <tr class="separator:a59026a134d7d6605817b2b186ea6474e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -110,9 +107,9 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><h3>template&lt;int dim&gt;<br />
 class LevelsetGradientPostprocessor&lt; dim &gt;</h3>
 
-<p><a class="el" href="classPostprocessor.html">Postprocessor</a> for levelset gradient of a shape used to calculate the levelset gradient field for a given shape within the domain. </p>
+<p>Compute a levelset gradient vector field for a given shape within a domain. </p>
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00427">427</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00614">614</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad61408e2bb1579494ef14d69986145b6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad61408e2bb1579494ef14d69986145b6">&#9670;&nbsp;</a></span>LevelsetGradientPostprocessor()</h2>
@@ -139,14 +136,16 @@ template&lt;int dim&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Constructor for the postprocessor </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Constructor for the levelset gradient postprocessor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">shape</td><td>the shape for which the levelset gradient field will be computed </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">shape</td><td>Geometrical entity. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00435">435</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00622">622</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
 </div>
 </div>
@@ -187,16 +186,17 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>function that computes the gradient at each point associated to the computed_quantities vector and fills that vector accordingly. </p>
+<p>Compute signed distance gradient of evaluation points with respect to the specified shape. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">inputs</td><td>the arguments used as basis for the postprocessing </td></tr>
-    <tr><td class="paramname">computed_quantities</td><td>the variable to fill with levelset gradient information </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_data</td><td>Fluid dynamics velocity and pressure information.</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">computed_quantities</td><td>Computed signed distance value at evaluation points.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd><code>input_data</code> contains both velocity and pressure data since fluid dynamics in Lethe is solved in a monolithic way, but here only the positions of evaluation points are used. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00449">449</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00642">642</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
 </div>
 </div>
@@ -223,7 +223,9 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00470">470</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p>Geometrical entity. </p>
+
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00664">664</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
 </div>
 </div>

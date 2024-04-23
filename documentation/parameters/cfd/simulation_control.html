@@ -176,6 +176,7 @@
 <li class="toctree-l3"><a class="reference internal" href="boundary_conditions_multiphysics.html">Boundary Conditions - Multiphysics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="box_refinement.html">Box Refinement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cahn_hilliard.html">Cahn-Hilliard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="constrain_stasis.html">Constrain Stasis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dimensionality.html">Dimensionality</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dynamic_flow_control.html">Dynamic Flow Control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fem.html">Finite Element Interpolation (FEM)</a></li>
@@ -195,6 +196,7 @@
 <li class="toctree-l3"><a class="reference internal" href="source_term.html">Source Term</a></li>
 <li class="toctree-l3"><a class="reference internal" href="stabilization.html">Stabilization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="timer.html">Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tracer_drift_velocity.html">Tracer Drift Velocity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="velocity_source.html">Velocity Source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="volume_of_fluid.html">Volume of Fluid (Multiphase Flow)</a></li>
 </ul>
@@ -239,6 +241,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-naca0012-low-reynolds/2d-naca0012-low-reynolds.html">Flow around NACA0012 at Low Reynolds Number</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">Taylor-Couette Flow Using Nitsche Immersed Boundary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">Flow around a Sphere</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-taylor-green-vortex/3d-taylor-green-vortex.html">Taylor-Green Vortex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-turbulent-taylor-couette/3d-turbulent-taylor-couette.html">Turbulent Taylor-Couette Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-flow-over-periodic-hills/3d-flow-over-periodic-hills.html">Flow over Periodic Hills</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-mixer-using-single-rotating-frame/3d-mixer-using-single-rotating-frame.html">Ribbon Mixer Using a Single Rotating Reference Frame</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-nitsche-mixer-with-pbt-impeller/nitsche-mixer-with-pbt-impeller.html">Mixer with Pitched-Blade Turbine Impeller Using Nitsche Immersed Boundary</a></li>
@@ -347,6 +351,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tools/tools.html">Tools</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle navigation of Tools</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/updating-test-results.html">Updating Test Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/gmsh/gmsh.html">Introduction on How to Use GMSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pointwise/pointwise.html">Introduction on How to Use Pointwise</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/automatic_launch/automatic_launch.html">How to Automatically Create and Launch Lethe Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/postprocessing/postprocessing_paraview.html">Remote Data Visualization on ParaView</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/postprocessing/postprocessing_pyvista.html">Post-processing Lethe with PyVista</a></li>
@@ -437,6 +442,9 @@
   # Maximum CFL value
   set max cfl                      = 1
 
+  # Maximum time step value
+  set max time step                = 1e6
+
   # Adaptative time step scaling
   set adaptative time step scaling = 1.1
 
@@ -467,7 +475,7 @@
   # Output time
   set output time                  = 1
 
-  # Maximal number of vtu output files
+  # Maximum number of vtu output files
   set group files                  = 1
 
   # Output the boundaries of the domain along with their ID
@@ -510,7 +518,8 @@ end
 <li><p><code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">end</span></code>: value of the time to end the transient simulation</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">step</span></code>: value of the time step</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">adapt</span></code>: controls if adaptive time-stepping is enabled. If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the time-step will evolve to ensure that the <code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">cfl</span></code> value is reached.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">cfl</span></code>: maximal value of the <span class="math notranslate nohighlight">\(\text{CFL}\)</span> condition that can be reached during the simulation. This parameter is only used when <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">adapt</span> <span class="pre">=</span> <span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">cfl</span></code>: maximum value of the <span class="math notranslate nohighlight">\(\text{CFL}\)</span> condition that can be reached during the simulation. This parameter is only used when <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">adapt</span> <span class="pre">=</span> <span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">time</span> <span class="pre">step</span></code>: maximum time step value that can be reached during the simulation. This parameter is only used when <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">adapt</span> <span class="pre">=</span> <span class="pre">true</span></code>. It is useful when the problem of interest has an additional time step constraint such as the capillary time step limit described in <a class="reference internal" href="../../examples/multiphysics/capillary-wave/capillary-wave.html"><span class="doc">Capillary Wave</span></a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">adaptative</span> <span class="pre">time</span> <span class="pre">step</span> <span class="pre">scaling</span></code>: rate of increase of the time step value. The new time step value is fixed by <code class="docutils literal notranslate"><span class="pre">adaptative</span> <span class="pre">time</span> <span class="pre">step</span> <span class="pre">scaling</span></code> * <code class="docutils literal notranslate"><span class="pre">previous</span> <span class="pre">value</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">time</span> <span class="pre">step</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log</span> <span class="pre">frequency</span></code>: frequency at which information is written in terminal</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log</span> <span class="pre">precision</span></code>: number of significant digits used when writting in terminal</p></li>

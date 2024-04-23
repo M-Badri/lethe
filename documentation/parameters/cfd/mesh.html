@@ -176,6 +176,7 @@
 <li class="toctree-l3"><a class="reference internal" href="boundary_conditions_multiphysics.html">Boundary Conditions - Multiphysics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="box_refinement.html">Box Refinement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cahn_hilliard.html">Cahn-Hilliard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="constrain_stasis.html">Constrain Stasis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dimensionality.html">Dimensionality</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dynamic_flow_control.html">Dynamic Flow Control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fem.html">Finite Element Interpolation (FEM)</a></li>
@@ -195,6 +196,7 @@
 <li class="toctree-l3"><a class="reference internal" href="source_term.html">Source Term</a></li>
 <li class="toctree-l3"><a class="reference internal" href="stabilization.html">Stabilization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="timer.html">Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tracer_drift_velocity.html">Tracer Drift Velocity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="velocity_source.html">Velocity Source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="volume_of_fluid.html">Volume of Fluid (Multiphase Flow)</a></li>
 </ul>
@@ -239,6 +241,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-naca0012-low-reynolds/2d-naca0012-low-reynolds.html">Flow around NACA0012 at Low Reynolds Number</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">Taylor-Couette Flow Using Nitsche Immersed Boundary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">Flow around a Sphere</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-taylor-green-vortex/3d-taylor-green-vortex.html">Taylor-Green Vortex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-turbulent-taylor-couette/3d-turbulent-taylor-couette.html">Turbulent Taylor-Couette Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-flow-over-periodic-hills/3d-flow-over-periodic-hills.html">Flow over Periodic Hills</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-mixer-using-single-rotating-frame/3d-mixer-using-single-rotating-frame.html">Ribbon Mixer Using a Single Rotating Reference Frame</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-nitsche-mixer-with-pbt-impeller/nitsche-mixer-with-pbt-impeller.html">Mixer with Pitched-Blade Turbine Impeller Using Nitsche Immersed Boundary</a></li>
@@ -347,6 +351,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tools/tools.html">Tools</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle navigation of Tools</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/updating-test-results.html">Updating Test Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/gmsh/gmsh.html">Introduction on How to Use GMSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pointwise/pointwise.html">Introduction on How to Use Pointwise</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/automatic_launch/automatic_launch.html">How to Automatically Create and Launch Lethe Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/postprocessing/postprocessing_paraview.html">Remote Data Visualization on ParaView</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/postprocessing/postprocessing_pyvista.html">Post-processing Lethe with PyVista</a></li>
@@ -393,18 +398,24 @@
 <h1>Mesh<a class="headerlink" href="#mesh" title="Link to this heading">#</a></h1>
 <p>This subsection provides information of the simulation geometry and its mesh. The simulation geometry shape and size, number of refinements and other required information can be provided here. It should be mentioned that meshes from gmsh can also be defined in this section by setting <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">=</span> <span class="pre">gmsh</span></code>.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection mesh
-  # Type of mesh. Choices are &lt;gmsh|dealii|cylinder|periodic_hills&gt;
+  # Type of mesh. Choices are &lt;gmsh|dealii|cylinder|colorized_cylinder_shell|periodic_hills&gt;
   set type               = dealii
 
   # GMSH file name
   set file name          = none
 
-  # Grid arguments for dealii, cylinder and periodic_hills
+  # Grid arguments for dealii, cylinder, colorized_cylinder_shell and periodic_hills
   set grid type          = hyper_cube
   set grid arguments     = -1 : 1 : false
 
   # Initial refinement of the mesh
   set initial refinement = 0
+
+  # Initial refinement of the mesh near user-specified boundaries
+  set initial boundary refinement = 0
+
+  # Lists of boundaries next to which the mesh should be refined. The list must contain integers separated by commas.
+  set boundaries refined = 0, 1
 
   # Indicates that the mesh is a simplex mesh
   set simplex            = false
@@ -417,7 +428,8 @@ end
 <li><p><code class="docutils literal notranslate"><span class="pre">gmsh</span></code>: if this type is chosen, a <code class="docutils literal notranslate"><span class="pre">.msh</span></code> file generated from GMSH can be used. In this case, the grid file name must be specified in the <code class="docutils literal notranslate"><span class="pre">file</span> <span class="pre">name</span></code> variable.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dealii</span></code>: if this type is chosen, the deal.II grid generator class can be used. For additional documentation on these grids, you can consult the deal.II documentation for the <a class="reference external" href="https://www.dealii.org/current/doxygen/deal.II/namespaceGridGenerator.html">GridGenerator</a> . The type of grid is specified by the <code class="docutils literal notranslate"><span class="pre">grid</span> <span class="pre">type</span></code> parameter and the arguments used for grid generation by the <code class="docutils literal notranslate"><span class="pre">grid</span> <span class="pre">arguments</span></code> parameter.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">periodic_hills</span></code>: if this type is chosen a mesh for the periodic hills CFD benchmark is created. For more details on this type of mesh and its grid arguments refer to <a class="reference internal" href="../../examples/incompressible-flow/3d-flow-over-periodic-hills/3d-flow-over-periodic-hills.html"><span class="doc">Flow over Periodic Hills</span></a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cylinder</span></code>: if this type is chosen, the <code class="docutils literal notranslate"><span class="pre">grid</span> <span class="pre">type</span></code> must be chosen according to the following figure. The <code class="docutils literal notranslate"><span class="pre">classic</span></code> type is equivalent to a subdivided cylinder from Deal.II and <code class="docutils literal notranslate"><span class="pre">grid</span> <span class="pre">arguments</span></code> must follow their <a class="reference external" href="https://www.dealii.org/current/doxygen/deal.II/namespaceGridGenerator.html#a95f6e6a7ae2fe3a862df035dd2cb4467">related documentation</a> and this applies to all cylinder grid types.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">colorized_cylinder_shell</span></code>: if this type is chosen, the <code class="docutils literal notranslate"><span class="pre">grid</span> <span class="pre">arguments</span></code> must follow their <a class="reference external" href="https://www.dealii.org/current/doxygen/deal.II/namespaceGridGenerator.html#a760789a93b1e0fe7f5c2675c31b6f14f">related deal.II documentation for a cylinder shell</a>. The only difference is that this cylinder shell is colorized with boundary ids. Boundary 0 is the inner cylinder, boundary 1 is the outer cylinder, boundary 2 is the bottom surface (z=0) and boundary 3 is the top surface (z=length).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cylinder</span></code>: if this type is chosen, the <code class="docutils literal notranslate"><span class="pre">grid</span> <span class="pre">type</span></code> must be chosen according to the following figure. The <code class="docutils literal notranslate"><span class="pre">classic</span></code> type is equivalent to a subdivided cylinder from deal.II and <code class="docutils literal notranslate"><span class="pre">grid</span> <span class="pre">arguments</span></code> must follow their <a class="reference external" href="https://www.dealii.org/current/doxygen/deal.II/namespaceGridGenerator.html#a95f6e6a7ae2fe3a862df035dd2cb4467">related deal.II documentation for a cylinder</a> and this applies to all cylinder grid types.</p></li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -431,6 +443,7 @@ This type of mesh is available, but its usage is not recommended.</p>
 <a class="reference internal image-reference" href="../../_images/cylindrical_meshes.png"><img alt="../../_images/cylindrical_meshes.png" class="align-center" src="../../_images/cylindrical_meshes.png" style="width: 600px;" /></a>
 <ul class="simple">
 <li><p>The initial refinement number determines the number of refinements the grid will undergo in the simulation before the simulation is run. This allows one to refine a coarse grid automatically. By default, most deal.II grids will be as coarse as possible and need to be refined. This is a desirable behavior for parallel simulations, since for quad/hex meshes, the coarsest level of the grid is shared amongst all cores. Consequently, using a coarse grid with too many cells will lead to a prohibitive memory consumption.</p></li>
+<li><p>The initial boundary refinement determines the number of refinements the grid will undergo in the simulation in the vicinities of the boundary specified by the <code class="docutils literal notranslate"><span class="pre">boundaries</span> <span class="pre">refined</span></code> parameter.</p></li>
 <li><p><cite>simplex</cite>. If simplex is set to true, it indicates that the mesh being read is made of only simplex elements. If the mesh is of <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">=</span> <span class="pre">dealii</span></code> it will be converted from a quad/hex mesh to a simplex mesh. If the mesh is of <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">=</span> <span class="pre">gsmh</span></code>, it will be read from a file as long as it is only made of simplices.</p></li>
 </ul>
 </section>

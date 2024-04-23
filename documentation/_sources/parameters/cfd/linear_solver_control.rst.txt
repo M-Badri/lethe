@@ -76,6 +76,7 @@ In this subsection, the control options of the linear solvers are specified. The
 		-Tolerance of iterative solver is : 1e-13
 		-Iterative solver took : 0 steps 
 
+When set to ``extra verbose``, the residual at each iteration of the linear solver is printed.
 
 * The ``minimum residual`` for the linear solver.
 
@@ -198,7 +199,6 @@ Different parameters for the main components of the two geometric multigrid algo
     set mg smoother eig estimation = false #if set to true, previous parameter is not used
 
     # Eigenvalue estimation parameters
-    set eig estimation degree          = 3
     set eig estimation smoothing range = 10
     set eig estimation cg n iterations = 10
     set eig estimation verbosity       = quiet
@@ -219,9 +219,6 @@ Different parameters for the main components of the two geometric multigrid algo
     set amg w cycles                              = false
     set amg smoother sweeps                       = 2
     set amg smoother overlap                      = 1
-    set amg preconditioner ilu fill               = 0
-    set amg preconditioner ilu absolute tolerance = 1e-12
-    set amg preconditioner ilu relative tolerance = 1.00
 
     # Coarse-grid ILU preconditioner parameters
     set ilu preconditioner fill               = 1

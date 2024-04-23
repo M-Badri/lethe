@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Developer documentation for the Lethe open-source library: GridMotion&lt; dim, spacedim &gt; Class Template Reference</title>
+<title>Lethe Open-Source Library: GridMotion&lt; dim, spacedim &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,8 +30,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Developer documentation for the Lethe open-source library
+   <div id="projectname">Lethe Open-Source Library
    </div>
+   <div id="projectbrief">Developer Guide</div>
   </td>
  </tr>
  </tbody>
@@ -204,7 +205,7 @@ template&lt;int dim, int spacedim&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="grid__motion_8cc_source.html#l00011">11</a> of file <a class="el" href="grid__motion_8cc_source.html">grid_motion.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="parameters__lagrangian_8h_source.html#l00444">Parameters::Lagrangian::GridMotion&lt; dim &gt;::grid_rotational_axis</a>, <a class="el" href="parameters__lagrangian_8h_source.html#l00440">Parameters::Lagrangian::GridMotion&lt; dim &gt;::grid_rotational_speed</a>, <a class="el" href="parameters__lagrangian_8h_source.html#l00437">Parameters::Lagrangian::GridMotion&lt; dim &gt;::grid_translational_velocity</a>, and <a class="el" href="classParameters_1_1Lagrangian_1_1GridMotion.html#a6a652cd37c45ff9993cb39f37cab01cd">Parameters::Lagrangian::GridMotion&lt; dim &gt;::motion_type</a>.</p>
+<p class="reference">References <a class="el" href="parameters__lagrangian_8h_source.html#l00447">Parameters::Lagrangian::GridMotion&lt; dim &gt;::grid_rotational_axis</a>, <a class="el" href="parameters__lagrangian_8h_source.html#l00443">Parameters::Lagrangian::GridMotion&lt; dim &gt;::grid_rotational_speed</a>, <a class="el" href="parameters__lagrangian_8h_source.html#l00440">Parameters::Lagrangian::GridMotion&lt; dim &gt;::grid_translational_velocity</a>, and <a class="el" href="classParameters_1_1Lagrangian_1_1GridMotion.html#a6a652cd37c45ff9993cb39f37cab01cd">Parameters::Lagrangian::GridMotion&lt; dim &gt;::motion_type</a>.</p>
 
 </div>
 </div>
@@ -461,7 +462,7 @@ template&lt;int dim, int spacedim&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">particle_wall_pairs_in_contact</td><td>The particle-wall contact list container. We will update the positions of the boundary points and normal vectors directly in this container. </td></tr>
-    <tr><td class="paramname">updated_boundary_points_and_normal_vectors</td><td>A map that contains updated points on boundaries and normal vectors of the boundary faces. This container is used when the grid is moving. We use this vector to update the boundary points and normal vectors in particle-wall contact list. </td></tr>
+    <tr><td class="paramname">updated_boundary_points_and_normal_vectors</td><td>A map that contains updated points on boundaries and normal vectors of the boundary faces. <a class="el" href="classThis.html">This</a> container is used when the grid is moving. We use this vector to update the boundary points and normal vectors in particle-wall contact list. </td></tr>
   </table>
   </dd>
 </dl>

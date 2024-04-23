@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Developer documentation for the Lethe open-source library: GLSVansAssemblerPressureForce&lt; dim &gt; Class Template Reference</title>
+<title>Lethe Open-Source Library: GLSVansAssemblerPressureForce&lt; dim &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,8 +30,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Developer documentation for the Lethe open-source library
+   <div id="projectname">Lethe Open-Source Library
    </div>
+   <div id="projectbrief">Developer Guide</div>
   </td>
  </tr>
  </tbody>
@@ -79,9 +80,6 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Class that assembles the particle pressure force that will then be added to particle_fluid_interactions.  
- <a href="classGLSVansAssemblerPressureForce.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="vans__assemblers_8h_source.html">vans_assemblers.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for GLSVansAssemblerPressureForce&lt; dim &gt;:</div>
@@ -98,7 +96,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adf49b0572cb1be2b9870a383ff9ed5f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLSVansAssemblerPressureForce.html#adf49b0572cb1be2b9870a383ff9ed5f5">GLSVansAssemblerPressureForce</a> (<a class="el" href="structParameters_1_1CFDDEM.html">Parameters::CFDDEM</a> <a class="el" href="classGLSVansAssemblerPressureForce.html#a1b5b550b389b00dd26d6a49563b2f8b1">cfd_dem</a>)</td></tr>
 <tr class="separator:adf49b0572cb1be2b9870a383ff9ed5f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7161fc0fca19e9c690adecd1247b3511"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLSVansAssemblerPressureForce.html#a7161fc0fca19e9c690adecd1247b3511">calculate_particle_fluid_interactions</a> (<a class="el" href="classNavierStokesScratchData.html">NavierStokesScratchData</a>&lt; dim &gt; &amp;scratch_data) override</td></tr>
-<tr class="memdesc:a7161fc0fca19e9c690adecd1247b3511"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate_particle_fluid_interactions calculates the pressure force  <a href="classGLSVansAssemblerPressureForce.html#a7161fc0fca19e9c690adecd1247b3511">More...</a><br /></td></tr>
 <tr class="separator:a7161fc0fca19e9c690adecd1247b3511"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -188,9 +185,9 @@ template&lt;int dim&gt; </div>
 
 <p>Implements <a class="el" href="classParticleFluidAssemblerBase.html#a273a79d7265d8eaf8af65287186f4fea">ParticleFluidAssemblerBase&lt; dim &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="vans__assemblers_8cc_source.html#l01777">1777</a> of file <a class="el" href="vans__assemblers_8cc_source.html">vans_assemblers.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vans__assemblers_8cc_source.html#l01774">1774</a> of file <a class="el" href="vans__assemblers_8cc_source.html">vans_assemblers.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01150">NavierStokesScratchData&lt; dim &gt;::cell_volume</a>, <a class="el" href="physical__properties__manager_8h_source.html#l00271">PhysicalPropertiesManager::density_is_constant()</a>, <a class="el" href="dem__properties_8h_source.html#l00041">DEM::dp</a>, <a class="el" href="dem__properties_8h_source.html#l00048">DEM::fem_force_x</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01139">NavierStokesScratchData&lt; dim &gt;::fluid_pressure_gradients_at_particle_location</a>, <a class="el" href="physical__properties__manager_8h_source.html#l00246">PhysicalPropertiesManager::get_density_scale()</a>, <a class="el" href="namespaceParameters.html#a885ce66c74635a68dd078d94aedddac6ab35bb34924c70e61eec8a8bae8cac690">Parameters::modelB</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01149">NavierStokesScratchData&lt; dim &gt;::pic</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01022">NavierStokesScratchData&lt; dim &gt;::properties_manager</a>, and <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01152">NavierStokesScratchData&lt; dim &gt;::undisturbed_flow_force</a>.</p>
+<p class="reference">References <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01167">NavierStokesScratchData&lt; dim &gt;::cell_volume</a>, <a class="el" href="physical__properties__manager_8h_source.html#l00283">PhysicalPropertiesManager::density_is_constant()</a>, <a class="el" href="dem__properties_8h_source.html#l00041">DEM::dp</a>, <a class="el" href="dem__properties_8h_source.html#l00048">DEM::fem_force_x</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01156">NavierStokesScratchData&lt; dim &gt;::fluid_pressure_gradients_at_particle_location</a>, <a class="el" href="physical__properties__manager_8h_source.html#l00258">PhysicalPropertiesManager::get_density_scale()</a>, <a class="el" href="namespaceParameters.html#a885ce66c74635a68dd078d94aedddac6ab35bb34924c70e61eec8a8bae8cac690">Parameters::modelB</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01166">NavierStokesScratchData&lt; dim &gt;::pic</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01039">NavierStokesScratchData&lt; dim &gt;::properties_manager</a>, and <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01169">NavierStokesScratchData&lt; dim &gt;::undisturbed_flow_force</a>.</p>
 
 </div>
 </div>

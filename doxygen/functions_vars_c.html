@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Developer documentation for the Lethe open-source library: Class Members - Variables</title>
+<title>Lethe Open-Source Library: Class Members - Variables</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,8 +30,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Developer documentation for the Lethe open-source library
+   <div id="projectname">Lethe Open-Source Library
    </div>
+   <div id="projectbrief">Developer Guide</div>
   </td>
  </tr>
  </tbody>
@@ -81,10 +82,18 @@ $(function() {
 , <a class="el" href="classParameters_1_1InitialConditions.html#ad2d3549932fe9c51586b020dfc10e497">Parameters::InitialConditions&lt; dim &gt;</a>
 , <a class="el" href="structParameters_1_1Multiphysics.html#a80de6c7e5cf8089015762886c3a21e0b">Parameters::Multiphysics</a>
 </li>
+<li>cahn_hilliard_filter
+: <a class="el" href="classNavierStokesScratchData.html#a9a9121f92c46736d4be8b92933fb6874">NavierStokesScratchData&lt; dim &gt;</a>
+</li>
 <li>cahn_hilliard_parameters
-: <a class="el" href="classCahnHilliardAssemblerCore.html#a96c01fda2884c1c4d65a8ab073b7a286">CahnHilliardAssemblerCore&lt; dim &gt;</a>
+: <a class="el" href="classCahnHilliardAssemblerAngleOfContact.html#a7b5cc04381612e2085ce5889499b822f">CahnHilliardAssemblerAngleOfContact&lt; dim &gt;</a>
+, <a class="el" href="classCahnHilliardAssemblerCore.html#ac465c0bdbd9388632973687613ed44a5">CahnHilliardAssemblerCore&lt; dim &gt;</a>
+, <a class="el" href="classCahnHilliardAssemblerFreeAngle.html#aa4123c5c8c28315210ef47262cf8c657">CahnHilliardAssemblerFreeAngle&lt; dim &gt;</a>
 , <a class="el" href="classGLSNavierStokesCahnHilliardAssemblerCore.html#ac3b018475fce97ee5622a757bf776ef1">GLSNavierStokesCahnHilliardAssemblerCore&lt; dim &gt;</a>
 , <a class="el" href="structParameters_1_1Multiphysics.html#aab6b0ba47aa6708613083c9db2e5c36c">Parameters::Multiphysics</a>
+</li>
+<li>cahn_hilliard_phase_filter
+: <a class="el" href="structParameters_1_1CahnHilliard.html#acf5527fc030a7b7676ac498dd896698f">Parameters::CahnHilliard</a>
 </li>
 <li>cahn_hilliard_source
 : <a class="el" href="classSourceTerms_1_1SourceTerm.html#a2e8de0e3a9ed2d5fb0cca282e358cbb6">SourceTerms::SourceTerm&lt; dim &gt;</a>
@@ -128,6 +137,12 @@ $(function() {
 <li>calculate_liquid_fraction
 : <a class="el" href="structParameters_1_1PostProcessing.html#a284ac99ff4d672bf08c028b47e64836b">Parameters::PostProcessing</a>
 </li>
+<li>calculate_mass_conservation
+: <a class="el" href="structParameters_1_1PostProcessing.html#ab83726c87eb13972d2316a92bd8519b4">Parameters::PostProcessing</a>
+</li>
+<li>calculate_phase_energy
+: <a class="el" href="structParameters_1_1PostProcessing.html#adc51c86552db08a56db4874459bb1d25">Parameters::PostProcessing</a>
+</li>
 <li>calculate_phase_statistics
 : <a class="el" href="structParameters_1_1PostProcessing.html#a9ee465b7a58509c65d7a2b6b5ed393dc">Parameters::PostProcessing</a>
 </li>
@@ -135,7 +150,8 @@ $(function() {
 : <a class="el" href="structParameters_1_1PostProcessing.html#a01950cf092ed9d0a8c9d7ac77aabe6c8">Parameters::PostProcessing</a>
 </li>
 <li>calculate_rolling_resistance_torque
-: <a class="el" href="classParticleWallJKRForce.html#ad4a6d477e7e6fa2dd15ed792a3c2949b">ParticleWallJKRForce&lt; dim &gt;</a>
+: <a class="el" href="classParticleWallDMTForce.html#aeb17fa909edbd38adc6b77120df7dc31">ParticleWallDMTForce&lt; dim &gt;</a>
+, <a class="el" href="classParticleWallJKRForce.html#ad4a6d477e7e6fa2dd15ed792a3c2949b">ParticleWallJKRForce&lt; dim &gt;</a>
 , <a class="el" href="classParticleWallLinearForce.html#a1b0b8fd77abdb09c2707502da4b63d58">ParticleWallLinearForce&lt; dim &gt;</a>
 , <a class="el" href="classParticleWallNonLinearForce.html#ac1b6ca97736133deddd20b262ffc313b">ParticleWallNonLinearForce&lt; dim &gt;</a>
 </li>
@@ -203,7 +219,7 @@ $(function() {
 : <a class="el" href="classNavierStokesScratchData.html#a15f3549bb83f7157db104857b22f0a4a">NavierStokesScratchData&lt; dim &gt;</a>
 </li>
 <li>cells_centers
-: <a class="el" href="classPlaneInsertion.html#ae9aeeadbc38d1fe90bb7626a91cce6ba">PlaneInsertion&lt; dim &gt;</a>
+: <a class="el" href="classInsertionPlane.html#ad5fa37da99423f411bdbdaf2063c5ae4">InsertionPlane&lt; dim &gt;</a>
 </li>
 <li>cells_ghost_local_periodic_neighbor_list
 : <a class="el" href="classDEMContactManager.html#a06c81be88437a8bd21c4f16f6379b1a5">DEMContactManager&lt; dim &gt;</a>
@@ -267,7 +283,7 @@ $(function() {
 : <a class="el" href="classSimulationControl.html#a3b3cc016a68348146112de04c7820020">SimulationControl</a>
 </li>
 <li>change_to_triangulation
-: <a class="el" href="classPlaneInsertion.html#a945122532512257888ba51686d25527b">PlaneInsertion&lt; dim &gt;</a>
+: <a class="el" href="classInsertionPlane.html#acd4c9882eabd3d283be9f1d400b64800">InsertionPlane&lt; dim &gt;</a>
 </li>
 <li>check_contact_search_step
 : <a class="el" href="classCFDDEMSolver.html#a4526e90c02418e9f58f5de876a8a7f0a">CFDDEMSolver&lt; dim &gt;</a>
@@ -291,9 +307,6 @@ $(function() {
 : <a class="el" href="classCahnHilliardScratchData.html#ab380994e237140a284a253af988c1acc">CahnHilliardScratchData&lt; dim &gt;</a>
 , <a class="el" href="classNavierStokesScratchData.html#ab12122ce6e915131ae74691c0aaf8a11">NavierStokesScratchData&lt; dim &gt;</a>
 </li>
-<li>chemical_potential_cahn_hilliard_gradients
-: <a class="el" href="classNavierStokesScratchData.html#af0bca7103ab80cbdca106b1e28203392">NavierStokesScratchData&lt; dim &gt;</a>
-</li>
 <li>chemical_potential_cahn_hilliard_values
 : <a class="el" href="classNavierStokesScratchData.html#afcbbcbddf76fe8e5c18ee4f4549aee17">NavierStokesScratchData&lt; dim &gt;</a>
 </li>
@@ -309,6 +322,12 @@ $(function() {
 <li>closest_point_cache
 : <a class="el" href="classShape.html#aad72eb3feaa5852170232e3c19855330">Shape&lt; dim &gt;</a>
 </li>
+<li>coarse_grid_solver
+: <a class="el" href="classMFNavierStokesPreconditionGMG.html#a2f05558fcad2c3c0e60992f805bceaf9">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
+</li>
+<li>coarse_grid_solver_control
+: <a class="el" href="classMFNavierStokesPreconditionGMG.html#a065ce737ca3ddfd581b505c1cddeb0cc">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
+</li>
 <li>coarse_mesh_level
 : <a class="el" href="structParameters_1_1RPTReconstructionParameters.html#a2666226c0d45697de08f212c57401c8f">Parameters::RPTReconstructionParameters</a>
 </li>
@@ -322,13 +341,13 @@ $(function() {
 : <a class="el" href="classGLSVANSSolver.html#ab8726f66fc17be81ace02423b8cd4e51">GLSVANSSolver&lt; dim &gt;</a>
 </li>
 <li>complete_system_rhs_phase_fraction
-: <a class="el" href="classVolumeOfFluid.html#a7f0acb5affe87c704769dffd85afb318">VolumeOfFluid&lt; dim &gt;</a>
+: <a class="el" href="classVolumeOfFluid.html#abe22eb2c0af68e403b25ddcb960dc647">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>complete_system_rhs_void_fraction
-: <a class="el" href="classGLSVANSSolver.html#abe51097e9adfdd4ad5ed961d19d99392">GLSVANSSolver&lt; dim &gt;</a>
+: <a class="el" href="classGLSVANSSolver.html#a2ed768943e46ec9fed960a11a17dca64">GLSVANSSolver&lt; dim &gt;</a>
 </li>
 <li>completely_distributed_solution
-: <a class="el" href="classPostProcessorSmoothing.html#af3e435844a220ad3671c400a3d50ed8c">PostProcessorSmoothing&lt; dim, VectorType &gt;</a>
+: <a class="el" href="classPostProcessorSmoothing.html#a876bbc179f5f6327734b358276938c66">PostProcessorSmoothing&lt; dim, VectorType &gt;</a>
 </li>
 <li>components
 : <a class="el" href="classNavierStokesScratchData.html#a4b89c62b025b47447f51e9eea1bc2480">NavierStokesScratchData&lt; dim &gt;</a>
@@ -354,9 +373,6 @@ $(function() {
 <li>concentration_factor
 : <a class="el" href="classParameters_1_1Laser.html#aa3a27b20a2d468a4cdaa4255fdcf043e">Parameters::Laser&lt; dim &gt;</a>
 </li>
-<li>conservation
-: <a class="el" href="structParameters_1_1VOF.html#abea2e521eee5769a00e68b026e2c3f4b">Parameters::VOF</a>
-</li>
 <li>constant_density
 : <a class="el" href="classPhysicalPropertiesManager.html#ad9df317accd7d147c24d316cc04c5145">PhysicalPropertiesManager</a>
 </li>
@@ -371,6 +387,9 @@ $(function() {
 </li>
 <li>constituents
 : <a class="el" href="classCompositeShape.html#a7ef9aba32d53728f5df22f945611091d">CompositeShape&lt; dim &gt;</a>
+</li>
+<li>constrain_solid_domain
+: <a class="el" href="classSimulationParameters.html#a0ac39d453ad62ce2611f91ec95bec101">SimulationParameters&lt; dim &gt;</a>
 </li>
 <li>constrained_indices
 : <a class="el" href="classNavierStokesOperatorBase.html#a0f61a4f53daea8600b981c4ad6f4e528">NavierStokesOperatorBase&lt; dim, number &gt;</a>
@@ -408,6 +427,9 @@ $(function() {
 <li>contact_manager
 : <a class="el" href="classCFDDEMSolver.html#a3260d806724bd3bc6609b4dabbb84fec">CFDDEMSolver&lt; dim &gt;</a>
 , <a class="el" href="classDEMSolver.html#a82ca830b6cef58b1ad61170d189a52e6">DEMSolver&lt; dim &gt;</a>
+</li>
+<li>contact_point
+: <a class="el" href="structIBParticlesDEM_1_1ContactInfo.html#a970883a09c3d0cec92fb872e29dc163e">IBParticlesDEM&lt; dim &gt;::ContactInfo</a>
 </li>
 <li>contact_search_frequency
 : <a class="el" href="classParameters_1_1IBParticles.html#a20fa1d508e01ca1ef1b8bd0abbfc4498">Parameters::IBParticles&lt; dim &gt;</a>
@@ -448,10 +470,11 @@ $(function() {
 : <a class="el" href="classSerialSolid.html#a22c9b75a9202e5a920ab195c02bd5e4e">SerialSolid&lt; dim, spacedim &gt;</a>
 </li>
 <li>current_inserting_particle_type
-: <a class="el" href="classListInsertion.html#ae37e6ce07f8edc7439617d821c46024e">ListInsertion&lt; dim &gt;</a>
-, <a class="el" href="classPlaneInsertion.html#ad4f2527077ae0ca6d1483b9467e9ce4f">PlaneInsertion&lt; dim &gt;</a>
+: <a class="el" href="classInsertionFile.html#a4c62e2783a43c55e5bee06e519616273">InsertionFile&lt; dim &gt;</a>
+, <a class="el" href="classInsertionList.html#a53f63221e1c5b1580c4af354e240287b">InsertionList&lt; dim &gt;</a>
+, <a class="el" href="classInsertionPlane.html#a2cc419ac6fdf7d39cd098a53a6f4dbd2">InsertionPlane&lt; dim &gt;</a>
+, <a class="el" href="classInsertionVolume.html#a7e875ce68570ed72099eccc15b113ea3">InsertionVolume&lt; dim &gt;</a>
 , <a class="el" href="classUniformInsertion.html#a1f3a9e294e9c649187ebbbb1556cfaab">UniformInsertion&lt; dim &gt;</a>
-, <a class="el" href="classVolumeInsertion.html#a50467323b0201d9a26eb331455885a3a">VolumeInsertion&lt; dim &gt;</a>
 </li>
 <li>current_preconditioner_fill_level
 : <a class="el" href="classGLSNavierStokesSolver.html#a473f8103460c1c638d715ce560e84aaa">GLSNavierStokesSolver&lt; dim &gt;</a>
@@ -479,7 +502,7 @@ $(function() {
 , <a class="el" href="classVolumeOfFluid.html#adfba5b207f041e7d08d23d9655cbd6f9">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>cut_cells_map
-: <a class="el" href="classGLSSharpNavierStokesSolver.html#a5b9d1ad262c6064f74d769e4953455be">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classGLSSharpNavierStokesSolver.html#ac1c4677e85e42bdb9bf59e81f1613c13">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
 </li>
 <li>cut_depth
 : <a class="el" href="classCutHollowSphere.html#a66427a7b56e93cbd970377a9b3504c3d">CutHollowSphere&lt; dim &gt;</a>

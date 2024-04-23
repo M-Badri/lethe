@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Developer documentation for the Lethe open-source library: DensityPostprocessor&lt; dim &gt; Class Template Reference</title>
+<title>Lethe Open-Source Library: DensityPostprocessor&lt; dim &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,8 +30,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Developer documentation for the Lethe open-source library
+   <div id="projectname">Lethe Open-Source Library
    </div>
+   <div id="projectbrief">Developer Guide</div>
   </td>
  </tr>
  </tbody>
@@ -85,7 +86,7 @@ Inheritance diagram for DensityPostprocessor&lt; dim &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classDensityPostprocessor__inherit__graph.png" border="0" usemap="#aDensityPostprocessor_3_01dim_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="aDensityPostprocessor_3_01dim_01_4_inherit__map" id="aDensityPostprocessor_3_01dim_01_4_inherit__map">
-<area shape="rect" title=" " alt="" coords="16,95,179,136"/>
+<area shape="rect" title="Compute the density scalar field of a material within a domain." alt="" coords="16,95,179,136"/>
 <area shape="rect" title=" " alt="" coords="5,5,189,47"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -106,8 +107,11 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><h3>template&lt;int dim&gt;<br />
 class DensityPostprocessor&lt; dim &gt;</h3>
 
+<p>Compute the density scalar field of a material within a domain. </p>
+<p>The expression for the density depends on the density model of the material. See <a href="https://lethe-cfd.github.io/lethe/documentation/parameters/cfd/
+physical_properties.html#density-models" target="_blank">documentation on density models</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00481">481</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00677">677</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a81a2f7495e0a3c94caa240d0bdc42b42"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a81a2f7495e0a3c94caa240d0bdc42b42">&#9670;&nbsp;</a></span>DensityPostprocessor()</h2>
@@ -145,7 +149,16 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00484">484</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p>Constructor for the density postprocessor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_density_model</td><td>Density model of the material.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">material_id</td><td>Identifier corresponding to the material (fluid or solid). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00688">688</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
 </div>
 </div>
@@ -186,9 +199,18 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00492">492</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p>Compute the density of a material at given evaluation points. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">inputs</td><td>Fluid dynamics velocity and pressure information.</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">computed_quantities</td><td>Computed density value at evaluation points. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">References <a class="el" href="physical__property__model_8h_source.html#l00049">pressure</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00705">705</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+
+<p class="reference">References <a class="el" href="physical__property__model_8h_source.html#l00056">pressure</a>.</p>
 
 </div>
 </div>
@@ -215,7 +237,9 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00509">509</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p>Model describing the material's density. </p>
+
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00723">723</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
 </div>
 </div>

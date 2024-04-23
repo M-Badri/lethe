@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Developer documentation for the Lethe open-source library: /home/runner/work/lethe/lethe/include/solvers/gls_navier_stokes.h File Reference</title>
+<title>Lethe Open-Source Library: /home/runner/work/lethe/lethe/include/solvers/gls_navier_stokes.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,8 +30,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Developer documentation for the Lethe open-source library
+   <div id="projectname">Lethe Open-Source Library
    </div>
+   <div id="projectbrief">Developer Guide</div>
   </td>
  </tr>
  </tbody>
@@ -81,6 +82,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="exceptions_8h_source.html">core/exceptions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="vector_8h_source.html">core/vector.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="copy__data_8h_source.html">solvers/copy_data.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="navier__stokes__base_8h_source.html">solvers/navier_stokes_base.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="navier__stokes__scratch__data_8h_source.html">solvers/navier_stokes_scratch_data.h</a>&gt;</code><br />
@@ -94,56 +96,56 @@ Include dependency graph for gls_navier_stokes.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="gls__navier__stokes_8h__incl.png" border="0" usemap="#a_2home_2runner_2work_2lethe_2lethe_2include_2solvers_2gls__navier__stokes_8h" alt=""/></div>
 <map name="a_2home_2runner_2work_2lethe_2lethe_2include_2solvers_2gls__navier__stokes_8h" id="a_2home_2runner_2work_2lethe_2lethe_2include_2solvers_2gls__navier__stokes_8h">
-<area shape="rect" title=" " alt="" coords="1933,5,2115,61"/>
-<area shape="rect" href="exceptions_8h.html" title=" " alt="" coords="27,295,165,322"/>
-<area shape="rect" href="copy__data_8h.html" title=" " alt="" coords="240,295,392,322"/>
-<area shape="rect" href="navier__stokes__base_8h.html" title=" " alt="" coords="1943,109,2105,151"/>
-<area shape="rect" title=" " alt="" coords="569,288,703,329"/>
-<area shape="rect" href="navier__stokes__scratch__data_8h.html" title=" " alt="" coords="1884,288,2047,329"/>
-<area shape="rect" title=" " alt="" coords="2979,288,3114,329"/>
-<area shape="rect" title=" " alt="" coords="3138,288,3273,329"/>
-<area shape="rect" title=" " alt="" coords="3297,288,3431,329"/>
-<area shape="rect" title=" " alt="" coords="3317,109,3449,151"/>
+<area shape="rect" title=" " alt="" coords="2843,5,3026,61"/>
+<area shape="rect" href="exceptions_8h.html" title=" " alt="" coords="146,295,283,322"/>
+<area shape="rect" href="vector_8h.html" title=" " alt="" coords="511,295,617,322"/>
+<area shape="rect" title=" " alt="" coords="214,377,349,419"/>
+<area shape="rect" href="copy__data_8h.html" title=" " alt="" coords="1039,295,1191,322"/>
+<area shape="rect" href="navier__stokes__base_8h.html" title=" " alt="" coords="2319,109,2481,151"/>
+<area shape="rect" href="navier__stokes__scratch__data_8h.html" title=" " alt="" coords="3263,288,3425,329"/>
+<area shape="rect" title=" " alt="" coords="1782,288,1917,329"/>
+<area shape="rect" title=" " alt="" coords="1993,288,2127,329"/>
+<area shape="rect" title=" " alt="" coords="2339,288,2474,329"/>
+<area shape="rect" title=" " alt="" coords="3866,109,3998,151"/>
 <area shape="rect" title=" " alt="" coords="5,385,189,411"/>
-<area shape="rect" title=" " alt="" coords="567,385,753,411"/>
-<area shape="rect" title=" " alt="" coords="318,385,490,411"/>
-<area shape="rect" title=" " alt="" coords="463,795,604,821"/>
-<area shape="rect" title=" " alt="" coords="929,795,991,821"/>
-<area shape="rect" href="mesh__controller_8h.html" title=" " alt="" coords="2623,206,2793,233"/>
-<area shape="rect" href="parameters_8h.html" title=" " alt="" coords="1609,795,1751,821"/>
-<area shape="rect" title=" " alt="" coords="2589,869,2763,911"/>
-<area shape="rect" href="physics__solver_8h.html" title=" " alt="" coords="3422,206,3583,233"/>
-<area shape="rect" title=" " alt="" coords="3558,288,3685,329"/>
-<area shape="rect" href="pvd__handler_8h.html" title=" " alt="" coords="3069,549,3214,575"/>
-<area shape="rect" href="simulation__control_8h.html" title=" " alt="" coords="780,631,967,657"/>
-<area shape="rect" href="flow__control_8h.html" title=" " alt="" coords="830,295,994,322"/>
-<area shape="rect" href="multiphysics__interface_8h.html" title=" " alt="" coords="354,199,510,240"/>
-<area shape="rect" href="simulation__parameters_8h.html" title=" " alt="" coords="2463,288,2606,329"/>
-<area shape="rect" href="navier__stokes__assemblers_8h.html" title=" " alt="" coords="940,199,1103,240"/>
-<area shape="rect" title=" " alt="" coords="2541,385,2704,411"/>
-<area shape="rect" href="postprocessing__velocities_8h.html" title=" " alt="" coords="636,199,807,240"/>
-<area shape="rect" href="postprocessors_8h.html" title=" " alt="" coords="1033,385,1215,411"/>
-<area shape="rect" href="postprocessors__smoothing_8h.html" title=" " alt="" coords="2868,199,3039,240"/>
-<area shape="rect" title=" " alt="" coords="2783,295,2955,322"/>
-<area shape="rect" title=" " alt="" coords="1279,199,1463,240"/>
-<area shape="rect" title=" " alt="" coords="1487,206,1654,233"/>
-<area shape="rect" title=" " alt="" coords="1678,199,1850,240"/>
-<area shape="rect" title=" " alt="" coords="1874,199,2009,240"/>
-<area shape="rect" title=" " alt="" coords="2033,206,2180,233"/>
-<area shape="rect" title=" " alt="" coords="2204,206,2364,233"/>
-<area shape="rect" title=" " alt="" coords="2389,199,2547,240"/>
-<area shape="rect" href="bdf_8h.html" title=" " alt="" coords="830,713,917,739"/>
-<area shape="rect" href="physical__properties__manager_8h.html" title=" " alt="" coords="2216,377,2416,419"/>
-<area shape="rect" href="density__model_8h.html" title=" " alt="" coords="1704,467,1867,493"/>
-<area shape="rect" href="rheological__model_8h.html" title=" " alt="" coords="1493,467,1680,493"/>
-<area shape="rect" href="physical__property__model_8h.html" title=" " alt="" coords="1472,541,1643,583"/>
-<area shape="rect" href="dem__properties_8h.html" title=" " alt="" coords="1149,631,1317,657"/>
-<area shape="rect" href="time__integration__utilities_8h.html" title=" " alt="" coords="2011,705,2173,747"/>
-<area shape="rect" href="vof__filter_8h.html" title=" " alt="" coords="1998,385,2141,411"/>
-<area shape="rect" title=" " alt="" coords="1544,385,1728,411"/>
-<area shape="rect" title=" " alt="" coords="1752,385,1973,411"/>
-<area shape="rect" title=" " alt="" coords="2779,385,2949,411"/>
-<area shape="rect" title=" " alt="" coords="2973,385,3096,411"/>
+<area shape="rect" title=" " alt="" coords="373,377,531,419"/>
+<area shape="rect" title=" " alt="" coords="555,377,712,419"/>
+<area shape="rect" title=" " alt="" coords="736,377,915,419"/>
+<area shape="rect" title=" " alt="" coords="1389,385,1576,411"/>
+<area shape="rect" title=" " alt="" coords="1193,385,1365,411"/>
+<area shape="rect" title=" " alt="" coords="1093,720,1235,747"/>
+<area shape="rect" title=" " alt="" coords="1369,720,1431,747"/>
+<area shape="rect" href="mesh__controller_8h.html" title=" " alt="" coords="3129,206,3300,233"/>
+<area shape="rect" href="parameters_8h.html" title=" " alt="" coords="3032,720,3173,747"/>
+<area shape="rect" title=" " alt="" coords="3507,795,3680,836"/>
+<area shape="rect" href="physics__solver_8h.html" title=" " alt="" coords="3917,206,4078,233"/>
+<area shape="rect" title=" " alt="" coords="3823,288,3950,329"/>
+<area shape="rect" href="pvd__handler_8h.html" title=" " alt="" coords="3737,474,3882,501"/>
+<area shape="rect" href="simulation__control_8h.html" title=" " alt="" coords="2585,556,2772,583"/>
+<area shape="rect" href="flow__control_8h.html" title=" " alt="" coords="2151,295,2315,322"/>
+<area shape="rect" href="multiphysics__interface_8h.html" title=" " alt="" coords="602,199,758,240"/>
+<area shape="rect" href="simulation__parameters_8h.html" title=" " alt="" coords="1367,288,1510,329"/>
+<area shape="rect" href="navier__stokes__assemblers_8h.html" title=" " alt="" coords="3577,199,3740,240"/>
+<area shape="rect" title=" " alt="" coords="1651,385,1813,411"/>
+<area shape="rect" href="postprocessing__velocities_8h.html" title=" " alt="" coords="692,288,863,329"/>
+<area shape="rect" href="postprocessors_8h.html" title=" " alt="" coords="2498,295,2681,322"/>
+<area shape="rect" href="postprocessors__smoothing_8h.html" title=" " alt="" coords="1207,199,1377,240"/>
+<area shape="rect" title=" " alt="" coords="1586,295,1758,322"/>
+<area shape="rect" title=" " alt="" coords="1655,199,1839,240"/>
+<area shape="rect" title=" " alt="" coords="1863,206,2030,233"/>
+<area shape="rect" title=" " alt="" coords="2054,199,2226,240"/>
+<area shape="rect" title=" " alt="" coords="2250,199,2385,240"/>
+<area shape="rect" title=" " alt="" coords="2409,206,2556,233"/>
+<area shape="rect" title=" " alt="" coords="2581,199,2737,240"/>
+<area shape="rect" title=" " alt="" coords="2761,206,2921,233"/>
+<area shape="rect" title=" " alt="" coords="2946,199,3105,240"/>
+<area shape="rect" href="bdf_8h.html" title=" " alt="" coords="1438,638,1525,665"/>
+<area shape="rect" href="rheological__model_8h.html" title=" " alt="" coords="3001,385,3188,411"/>
+<area shape="rect" href="physical__property__model_8h.html" title=" " alt="" coords="3140,467,3311,508"/>
+<area shape="rect" href="dem__properties_8h.html" title=" " alt="" coords="2897,556,3065,583"/>
+<area shape="rect" href="density__model_8h.html" title=" " alt="" coords="3263,385,3425,411"/>
+<area shape="rect" href="time__integration__utilities_8h.html" title=" " alt="" coords="3613,631,3776,672"/>
+<area shape="rect" href="cahn__hilliard__filter_8h.html" title=" " alt="" coords="3450,377,3606,419"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -169,7 +171,6 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLSNavierStokesSolver.html">GLSNavierStokesSolver&lt; dim &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A solver class for the Navier-Stokes equation using GLS stabilization.  <a href="classGLSNavierStokesSolver.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

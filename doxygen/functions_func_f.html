@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Developer documentation for the Lethe open-source library: Class Members - Functions</title>
+<title>Lethe Open-Source Library: Class Members - Functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,8 +30,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Developer documentation for the Lethe open-source library
+   <div id="projectname">Lethe Open-Source Library
    </div>
+   <div id="projectbrief">Developer Guide</div>
   </td>
  </tr>
  </tbody>
@@ -77,7 +78,11 @@ $(function() {
 : <a class="el" href="classPhysicalPropertiesManager.html#a2ddd12520cee83206f9bfecdca05cb19">PhysicalPropertiesManager</a>
 </li>
 <li>filter_phase()
-: <a class="el" href="classVolumeOfFluidFilterBase.html#af1568c1acd6c380e70c704b6825cb03e">VolumeOfFluidFilterBase</a>
+: <a class="el" href="classCahnHilliardClipFilter.html#a858f9b26e701e3d222815bba4779f06c">CahnHilliardClipFilter</a>
+, <a class="el" href="classCahnHilliardFilterBase.html#a1f54247e036dc7c33e3ff08cf411a11a">CahnHilliardFilterBase</a>
+, <a class="el" href="classCahnHilliardNoFilter.html#a9c3ff62c7b4fc63d85a1493a010bb101">CahnHilliardNoFilter</a>
+, <a class="el" href="classCahnHilliardTanhFilter.html#aee65f1104c1fd3e795d54c000dab8958">CahnHilliardTanhFilter</a>
+, <a class="el" href="classVolumeOfFluidFilterBase.html#af1568c1acd6c380e70c704b6825cb03e">VolumeOfFluidFilterBase</a>
 , <a class="el" href="classVolumeOfFluidNoFilter.html#a0490ea8bca9180f2629fa9855b4230e2">VolumeOfFluidNoFilter</a>
 , <a class="el" href="classVolumeOfFluidTanhFilter.html#a75c6d88403324724d5145ce27fa31755">VolumeOfFluidTanhFilter</a>
 </li>
@@ -103,7 +108,7 @@ $(function() {
 : <a class="el" href="classRPTCellReconstruction.html#aa06480e9ca4c1ef2184412f98abb004f">RPTCellReconstruction&lt; dim &gt;</a>
 </li>
 <li>find_centers_of_inplane_cells()
-: <a class="el" href="classPlaneInsertion.html#a34f3c20ea9c101dd23ff233f23e36bca">PlaneInsertion&lt; dim &gt;</a>
+: <a class="el" href="classInsertionPlane.html#ab51ef9de86c2953ffc13ae392df956a5">InsertionPlane&lt; dim &gt;</a>
 </li>
 <li>find_effective_radius_and_mass()
 : <a class="el" href="classParticleParticleContactForce.html#a2cd1eddf92d4898dc5cd97bcc92b55ef">ParticleParticleContactForce&lt; dim, force_model, rolling_friction_model &gt;</a>
@@ -115,13 +120,13 @@ $(function() {
 : <a class="el" href="classBoundaryCellsInformation.html#a0a7151f99dfd117d110b62741a30f52b">BoundaryCellsInformation&lt; dim &gt;</a>
 </li>
 <li>find_inplane_cells()
-: <a class="el" href="classPlaneInsertion.html#ad8389381870749888719c7ab3af81b09">PlaneInsertion&lt; dim &gt;</a>
+: <a class="el" href="classInsertionPlane.html#a3e685d240dde0d706d602ecd8f7cb117">InsertionPlane&lt; dim &gt;</a>
 </li>
 <li>find_insertion_location_uniform()
 : <a class="el" href="classUniformInsertion.html#adb43fd9076ae1c14aa5d82f11a523bff">UniformInsertion&lt; dim &gt;</a>
 </li>
 <li>find_insertion_location_volume()
-: <a class="el" href="classVolumeInsertion.html#a29e8293e13581e498d781500e432daba">VolumeInsertion&lt; dim &gt;</a>
+: <a class="el" href="classInsertionVolume.html#a760196b2e3df1434cd580dd5aec6a5f7">InsertionVolume&lt; dim &gt;</a>
 </li>
 <li>find_max_diameter()
 : <a class="el" href="classCustomDistribution.html#a7f2ccb37c2d63e03a92ab1cfc441a300">CustomDistribution</a>
@@ -142,7 +147,7 @@ $(function() {
 : <a class="el" href="classParticlePointLineBroadSearch.html#a57a3c6ad024fb20782cbd0088edaf6a4">ParticlePointLineBroadSearch&lt; dim &gt;</a>
 </li>
 <li>find_particle_particle_contact_pairs()
-: <a class="el" href="classParticleParticleBroadSearch.html#ad3a85da7b90551d2fd72ef6d82608813">ParticleParticleBroadSearch&lt; dim &gt;</a>
+: <a class="el" href="classParticleParticleBroadSearch.html#a467f2fc50b1fdd7f7cafbf45b0c0499e">ParticleParticleBroadSearch&lt; dim &gt;</a>
 </li>
 <li>find_particle_particle_periodic_contact_pairs()
 : <a class="el" href="classParticleParticleBroadSearch.html#acd718b0211e68b8ec117948332d82f70">ParticleParticleBroadSearch&lt; dim &gt;</a>
@@ -208,6 +213,12 @@ $(function() {
 </li>
 <li>finish_time_step_particles()
 : <a class="el" href="classGLSSharpNavierStokesSolver.html#a0e7555d3864e2910e180fa1f53d503b0">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
+</li>
+<li>flag_dofs_connected_to_fluid()
+: <a class="el" href="classNavierStokesBase.html#a625f286aafd1c4ff0ec6f796985fa316">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
+</li>
+<li>flag_dofs_in_solid()
+: <a class="el" href="classNavierStokesBase.html#a2f7b7ef6ab458e9e0febbd9dba6a2ea0">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
 </li>
 <li>FlowControl()
 : <a class="el" href="classFlowControl.html#aeab13df0da2212c7c37408b69e131f30">FlowControl&lt; dim &gt;</a>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Developer documentation for the Lethe open-source library: DensityModel Class Reference</title>
+<title>Lethe Open-Source Library: DensityModel Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,8 +30,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Developer documentation for the Lethe open-source library
+   <div id="projectname">Lethe Open-Source Library
    </div>
+   <div id="projectbrief">Developer Guide</div>
   </td>
  </tr>
  </tbody>
@@ -80,17 +81,14 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Abstract class that allows to calculate the density.  
- <a href="classDensityModel.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="density__model_8h_source.html">density_model.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for DensityModel:</div>
 <div class="dyncontent">
 <div class="center"><img src="classDensityModel__inherit__graph.png" border="0" usemap="#aDensityModel_inherit__map" alt="Inheritance graph"/></div>
 <map name="aDensityModel_inherit__map" id="aDensityModel_inherit__map">
-<area shape="rect" title="Abstract class that allows to calculate the density." alt="" coords="109,80,221,107"/>
-<area shape="rect" href="classDensityConstant.html" title="Constant density." alt="" coords="5,155,136,181"/>
+<area shape="rect" title="Abstract class for calculating the density of materials." alt="" coords="109,80,221,107"/>
+<area shape="rect" href="classDensityConstant.html" title="Constant density model." alt="" coords="5,155,136,181"/>
 <area shape="rect" href="classDensityIsothermalIdealGas.html" title="Isothermal ideal gas density." alt="" coords="161,155,359,181"/>
 <area shape="rect" href="classPhysicalPropertyModel.html" title="Abstract class that defines the interface for a physical property model Physical property model provi..." alt="" coords="80,5,251,32"/>
 </map>
@@ -99,47 +97,34 @@ Inheritance diagram for DensityModel:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8c2d5a30784dfbd1f8f0e0166510e2d3"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDensityModel.html#a8c2d5a30784dfbd1f8f0e0166510e2d3">get_psi</a> () const =0</td></tr>
-<tr class="memdesc:a8c2d5a30784dfbd1f8f0e0166510e2d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">get_psi Returns the value of the compressibility factor used in the density model.  <a href="classDensityModel.html#a8c2d5a30784dfbd1f8f0e0166510e2d3">More...</a><br /></td></tr>
 <tr class="separator:a8c2d5a30784dfbd1f8f0e0166510e2d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a845641eca7b01b68c5973e61d558eeba"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDensityModel.html#a845641eca7b01b68c5973e61d558eeba">get_density_ref</a> () const =0</td></tr>
-<tr class="memdesc:a845641eca7b01b68c5973e61d558eeba"><td class="mdescLeft">&#160;</td><td class="mdescRight">get_density_ref Returns the value of the reference state density used in the density model.  <a href="classDensityModel.html#a845641eca7b01b68c5973e61d558eeba">More...</a><br /></td></tr>
 <tr class="separator:a845641eca7b01b68c5973e61d558eeba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a017b43e273de5fb394cb4584ca891364"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDensityModel.html#a017b43e273de5fb394cb4584ca891364">is_constant_density_model</a> () const</td></tr>
-<tr class="memdesc:a017b43e273de5fb394cb4584ca891364"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_constant_density_model Returns a boolean indicating if the model is a constant density model.  <a href="classDensityModel.html#a017b43e273de5fb394cb4584ca891364">More...</a><br /></td></tr>
 <tr class="separator:a017b43e273de5fb394cb4584ca891364"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classPhysicalPropertyModel"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classPhysicalPropertyModel')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classPhysicalPropertyModel.html">PhysicalPropertyModel</a></td></tr>
 <tr class="memitem:a790b73800189af9ff8d80f1e6f8c9306 inherit pub_methods_classPhysicalPropertyModel"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicalPropertyModel.html#a790b73800189af9ff8d80f1e6f8c9306">PhysicalPropertyModel</a> ()</td></tr>
-<tr class="memdesc:a790b73800189af9ff8d80f1e6f8c9306 inherit pub_methods_classPhysicalPropertyModel"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPhysicalPropertyModel.html" title="Abstract class that defines the interface for a physical property model Physical property model provi...">PhysicalPropertyModel</a> Default constructor. Set the model_depends_on to false for all variables.  <a href="classPhysicalPropertyModel.html#a790b73800189af9ff8d80f1e6f8c9306">More...</a><br /></td></tr>
 <tr class="separator:a790b73800189af9ff8d80f1e6f8c9306 inherit pub_methods_classPhysicalPropertyModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8211e3c849e87d2efa5c732e8a4678b inherit pub_methods_classPhysicalPropertyModel"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicalPropertyModel.html#af8211e3c849e87d2efa5c732e8a4678b">depends_on</a> (const <a class="el" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a> &amp;id)</td></tr>
-<tr class="memdesc:af8211e3c849e87d2efa5c732e8a4678b inherit pub_methods_classPhysicalPropertyModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the <a class="el" href="classPhysicalPropertyModel.html" title="Abstract class that defines the interface for a physical property model Physical property model provi...">PhysicalPropertyModel</a> depends on a field, false if not.  <a href="classPhysicalPropertyModel.html#af8211e3c849e87d2efa5c732e8a4678b">More...</a><br /></td></tr>
 <tr class="separator:af8211e3c849e87d2efa5c732e8a4678b inherit pub_methods_classPhysicalPropertyModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23d2b90f4f05ee9de4be96f6f9989a37 inherit pub_methods_classPhysicalPropertyModel"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicalPropertyModel.html#a23d2b90f4f05ee9de4be96f6f9989a37">value</a> (const std::map&lt; <a class="el" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a>, double &gt; &amp;fields_value)=0</td></tr>
-<tr class="memdesc:a23d2b90f4f05ee9de4be96f6f9989a37 inherit pub_methods_classPhysicalPropertyModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">value <a class="el" href="classCalculates.html">Calculates</a> the value of a physical property.  <a href="classPhysicalPropertyModel.html#a23d2b90f4f05ee9de4be96f6f9989a37">More...</a><br /></td></tr>
 <tr class="separator:a23d2b90f4f05ee9de4be96f6f9989a37 inherit pub_methods_classPhysicalPropertyModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93dd785206d0e4e6659ca03f7f10ddec inherit pub_methods_classPhysicalPropertyModel"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicalPropertyModel.html#a93dd785206d0e4e6659ca03f7f10ddec">vector_value</a> (const std::map&lt; <a class="el" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a>, std::vector&lt; double &gt;&gt; &amp;field_vectors, std::vector&lt; double &gt; &amp;property_vector)=0</td></tr>
-<tr class="memdesc:a93dd785206d0e4e6659ca03f7f10ddec inherit pub_methods_classPhysicalPropertyModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector_value <a class="el" href="classCalculates.html">Calculates</a> the values of a physical property for multiple points  <a href="classPhysicalPropertyModel.html#a93dd785206d0e4e6659ca03f7f10ddec">More...</a><br /></td></tr>
 <tr class="separator:a93dd785206d0e4e6659ca03f7f10ddec inherit pub_methods_classPhysicalPropertyModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fc51243a48832ed3c6e3b4ee797c6b2 inherit pub_methods_classPhysicalPropertyModel"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicalPropertyModel.html#a3fc51243a48832ed3c6e3b4ee797c6b2">jacobian</a> (const std::map&lt; <a class="el" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a>, double &gt; &amp;field_values, const <a class="el" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a> id)=0</td></tr>
-<tr class="memdesc:a3fc51243a48832ed3c6e3b4ee797c6b2 inherit pub_methods_classPhysicalPropertyModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">jacobian Calcualtes the jacobian (the partial derivative) of the physical property with respect to a field  <a href="classPhysicalPropertyModel.html#a3fc51243a48832ed3c6e3b4ee797c6b2">More...</a><br /></td></tr>
 <tr class="separator:a3fc51243a48832ed3c6e3b4ee797c6b2 inherit pub_methods_classPhysicalPropertyModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae71d2dd28b12d69622987bced8c0c661 inherit pub_methods_classPhysicalPropertyModel"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicalPropertyModel.html#ae71d2dd28b12d69622987bced8c0c661">vector_jacobian</a> (const std::map&lt; <a class="el" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a>, std::vector&lt; double &gt;&gt; &amp;field_vectors, const <a class="el" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a> id, std::vector&lt; double &gt; &amp;jacobian_vector)=0</td></tr>
-<tr class="memdesc:ae71d2dd28b12d69622987bced8c0c661 inherit pub_methods_classPhysicalPropertyModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector_jacobian Calculate the derivative of the property with respect to a field  <a href="classPhysicalPropertyModel.html#ae71d2dd28b12d69622987bced8c0c661">More...</a><br /></td></tr>
 <tr class="separator:ae71d2dd28b12d69622987bced8c0c661 inherit pub_methods_classPhysicalPropertyModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5498f882d9e5425f853d6457667b7035 inherit pub_methods_classPhysicalPropertyModel"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicalPropertyModel.html#a5498f882d9e5425f853d6457667b7035">provide_simulation_control</a> (std::shared_ptr&lt; <a class="el" href="classSimulationControl.html">SimulationControl</a> &gt; &amp;p_simulation_control)</td></tr>
-<tr class="memdesc:a5498f882d9e5425f853d6457667b7035 inherit pub_methods_classPhysicalPropertyModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the physical property with the simulation control object ensuring that the <a class="el" href="classPhysicalPropertyModel.html" title="Abstract class that defines the interface for a physical property model Physical property model provi...">PhysicalPropertyModel</a> can calculate physical properties that depend on time or time-history.  <a href="classPhysicalPropertyModel.html#a5498f882d9e5425f853d6457667b7035">More...</a><br /></td></tr>
 <tr class="separator:a5498f882d9e5425f853d6457667b7035 inherit pub_methods_classPhysicalPropertyModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6be82a7f56166add6af232ac511194d4 inherit pub_methods_classPhysicalPropertyModel"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicalPropertyModel.html#a6be82a7f56166add6af232ac511194d4">numerical_jacobian</a> (const std::map&lt; <a class="el" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a>, double &gt; &amp;field_values, const <a class="el" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a> id)</td></tr>
-<tr class="memdesc:a6be82a7f56166add6af232ac511194d4 inherit pub_methods_classPhysicalPropertyModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">numerical_jacobian <a class="el" href="classCalculates.html">Calculates</a> the jacobian through a forward finite difference (Euler) approximation. This approach, although not preferable, is meant as a fall-back when calculating the jacobian manually is too difficult.  <a href="classPhysicalPropertyModel.html#a6be82a7f56166add6af232ac511194d4">More...</a><br /></td></tr>
 <tr class="separator:a6be82a7f56166add6af232ac511194d4 inherit pub_methods_classPhysicalPropertyModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa00493b8b62339bafc115cd298e01868 inherit pub_methods_classPhysicalPropertyModel"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicalPropertyModel.html#aa00493b8b62339bafc115cd298e01868">vector_numerical_jacobian</a> (const std::map&lt; <a class="el" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a>, std::vector&lt; double &gt;&gt; &amp;field_vectors, const <a class="el" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a> id, std::vector&lt; double &gt; &amp;jacobian_vector)</td></tr>
-<tr class="memdesc:aa00493b8b62339bafc115cd298e01868 inherit pub_methods_classPhysicalPropertyModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector_numerical_jacobian <a class="el" href="classCalculates.html">Calculates</a> the vector of jacobian through forward finite difference (Euler) approximation. This approach, although not preferable, is meant as a fall-back when calculating the jacobian manually is too difficult.  <a href="classPhysicalPropertyModel.html#aa00493b8b62339bafc115cd298e01868">More...</a><br /></td></tr>
 <tr class="separator:aa00493b8b62339bafc115cd298e01868 inherit pub_methods_classPhysicalPropertyModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a678019a0aa3a358b943c1221834ae4d8"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classDensityModel.html">DensityModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDensityModel.html#a678019a0aa3a358b943c1221834ae4d8">model_cast</a> (const <a class="el" href="classParameters_1_1Material.html">Parameters::Material</a> &amp;material_properties)</td></tr>
-<tr class="memdesc:a678019a0aa3a358b943c1221834ae4d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiates and returns a pointer to a <a class="el" href="classDensityModel.html" title="Abstract class that allows to calculate the density.">DensityModel</a> object by casting it to the proper child class.  <a href="classDensityModel.html#a678019a0aa3a358b943c1221834ae4d8">More...</a><br /></td></tr>
 <tr class="separator:a678019a0aa3a358b943c1221834ae4d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -157,9 +142,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a69c285f5da81c733652a5a082d13cd44 inherit pro_methods_classPhysicalPropertyModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Abstract class that allows to calculate the density. </p>
+<div class="textblock"><p>Abstract class for calculating the density of materials. </p>
 
-<p class="definition">Definition at line <a class="el" href="density__model_8h_source.html#l00026">26</a> of file <a class="el" href="density__model_8h_source.html">density_model.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="density__model_8h_source.html#l00025">25</a> of file <a class="el" href="density__model_8h_source.html">density_model.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a845641eca7b01b68c5973e61d558eeba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a845641eca7b01b68c5973e61d558eeba">&#9670;&nbsp;</a></span>get_density_ref()</h2>
@@ -184,8 +169,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>get_density_ref Returns the value of the reference state density used in the density model. </p>
-<dl class="section return"><dt>Returns</dt><dd>Reference state density </dd></dl>
+<p>Get the value of the reference state density used in the density model. </p>
+<dl class="section return"><dt>Returns</dt><dd>Value of the reference state density. </dd></dl>
 
 <p>Implemented in <a class="el" href="classDensityIsothermalIdealGas.html#acb46736c74a5b54a27ac25dc34421db5">DensityIsothermalIdealGas</a>, and <a class="el" href="classDensityConstant.html#ace38eb4f4b05c660ae28e01b299cd620">DensityConstant</a>.</p>
 
@@ -214,8 +199,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>get_psi Returns the value of the compressibility factor used in the density model. </p>
-<dl class="section return"><dt>Returns</dt><dd>Compressibility factor </dd></dl>
+<p>Get the value of the compressibility factor used in the density model. </p>
+<dl class="section return"><dt>Returns</dt><dd>Value of the compressibility factor. </dd></dl>
 
 <p>Implemented in <a class="el" href="classDensityIsothermalIdealGas.html#a9dbea2076d516c3eda32249ba44da956">DensityIsothermalIdealGas</a>, and <a class="el" href="classDensityConstant.html#a7a0e0a9cc67796ad1dff84cc5d8fd72e">DensityConstant</a>.</p>
 
@@ -244,12 +229,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>is_constant_density_model Returns a boolean indicating if the model is a constant density model. </p>
-<dl class="section return"><dt>Returns</dt><dd>Boolean value of if the model corresponds to a constant density model. </dd></dl>
+<p>Check if the model is a constant density model. </p>
+<dl class="section return"><dt>Returns</dt><dd>Boolean indicating if the model corresponds to a constant density model. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="density__model_8h_source.html#l00062">62</a> of file <a class="el" href="density__model_8h_source.html">density_model.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="density__model_8h_source.html#l00066">66</a> of file <a class="el" href="density__model_8h_source.html">density_model.h</a>.</p>
 
-<p class="reference">References <a class="el" href="density__model_8h_source.html#l00068">constant_density_model</a>.</p>
+<p class="reference">References <a class="el" href="density__model_8h_source.html#l00073">constant_density_model</a>.</p>
 
 </div>
 </div>
@@ -277,17 +262,18 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Instantiates and returns a pointer to a <a class="el" href="classDensityModel.html" title="Abstract class that allows to calculate the density.">DensityModel</a> object by casting it to the proper child class. </p>
+<p>Instantiate and return a pointer to a <a class="el" href="classDensityModel.html" title="Abstract class for calculating the density of materials.">DensityModel</a> object by casting it to the proper child class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">material_properties</td><td><a class="el" href="namespaceParameters.html">Parameters</a> for a single fluid </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">material_properties</td><td>Property parameters of a material (fluid or solid).</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Casted <a class="el" href="classDensityModel.html" title="Abstract class for calculating the density of materials.">DensityModel</a> object. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="density__model_8cc_source.html#l00020">20</a> of file <a class="el" href="density__model_8cc_source.html">density_model.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="parameters_8h_source.html#l00379">Parameters::Material::density</a>, <a class="el" href="classParameters_1_1Material.html#a2607c68b29e7059fae4ecbef7b65d742">Parameters::Material::density_model</a>, <a class="el" href="parameters_8h_source.html#l00300">Parameters::IsothermalIdealGasDensityParameters::density_ref</a>, <a class="el" href="classParameters_1_1Material.html#a1cfc779217cd4a46b803d142be3dcad0af56942eecd31415147f110ceeb2eb980">Parameters::Material::isothermal_ideal_gas</a>, <a class="el" href="parameters_8h_source.html#l00407">Parameters::Material::isothermal_ideal_gas_density_parameters</a>, <a class="el" href="parameters_8h_source.html#l00302">Parameters::IsothermalIdealGasDensityParameters::R</a>, and <a class="el" href="parameters_8h_source.html#l00304">Parameters::IsothermalIdealGasDensityParameters::T</a>.</p>
+<p class="reference">References <a class="el" href="parameters_8h_source.html#l00382">Parameters::Material::density</a>, <a class="el" href="classParameters_1_1Material.html#a2607c68b29e7059fae4ecbef7b65d742">Parameters::Material::density_model</a>, <a class="el" href="parameters_8h_source.html#l00303">Parameters::IsothermalIdealGasDensityParameters::density_ref</a>, <a class="el" href="classParameters_1_1Material.html#a1cfc779217cd4a46b803d142be3dcad0af56942eecd31415147f110ceeb2eb980">Parameters::Material::isothermal_ideal_gas</a>, <a class="el" href="parameters_8h_source.html#l00410">Parameters::Material::isothermal_ideal_gas_density_parameters</a>, <a class="el" href="parameters_8h_source.html#l00305">Parameters::IsothermalIdealGasDensityParameters::R</a>, and <a class="el" href="parameters_8h_source.html#l00307">Parameters::IsothermalIdealGasDensityParameters::T</a>.</p>
 
 </div>
 </div>
@@ -312,7 +298,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="density__model_8h_source.html#l00068">68</a> of file <a class="el" href="density__model_8h_source.html">density_model.h</a>.</p>
+<p>Boolean indicating if the model corresponds to a constant density model. </p>
+
+<p class="definition">Definition at line <a class="el" href="density__model_8h_source.html#l00073">73</a> of file <a class="el" href="density__model_8h_source.html">density_model.h</a>.</p>
 
 </div>
 </div>

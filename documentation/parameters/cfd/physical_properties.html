@@ -176,6 +176,7 @@
 <li class="toctree-l3"><a class="reference internal" href="boundary_conditions_multiphysics.html">Boundary Conditions - Multiphysics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="box_refinement.html">Box Refinement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cahn_hilliard.html">Cahn-Hilliard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="constrain_stasis.html">Constrain Stasis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dimensionality.html">Dimensionality</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dynamic_flow_control.html">Dynamic Flow Control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fem.html">Finite Element Interpolation (FEM)</a></li>
@@ -195,6 +196,7 @@
 <li class="toctree-l3"><a class="reference internal" href="source_term.html">Source Term</a></li>
 <li class="toctree-l3"><a class="reference internal" href="stabilization.html">Stabilization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="timer.html">Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tracer_drift_velocity.html">Tracer Drift Velocity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="velocity_source.html">Velocity Source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="volume_of_fluid.html">Volume of Fluid (Multiphase Flow)</a></li>
 </ul>
@@ -239,6 +241,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-naca0012-low-reynolds/2d-naca0012-low-reynolds.html">Flow around NACA0012 at Low Reynolds Number</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">Taylor-Couette Flow Using Nitsche Immersed Boundary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">Flow around a Sphere</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-taylor-green-vortex/3d-taylor-green-vortex.html">Taylor-Green Vortex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-turbulent-taylor-couette/3d-turbulent-taylor-couette.html">Turbulent Taylor-Couette Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-flow-over-periodic-hills/3d-flow-over-periodic-hills.html">Flow over Periodic Hills</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-mixer-using-single-rotating-frame/3d-mixer-using-single-rotating-frame.html">Ribbon Mixer Using a Single Rotating Reference Frame</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-nitsche-mixer-with-pbt-impeller/nitsche-mixer-with-pbt-impeller.html">Mixer with Pitched-Blade Turbine Impeller Using Nitsche Immersed Boundary</a></li>
@@ -347,6 +351,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tools/tools.html">Tools</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle navigation of Tools</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/updating-test-results.html">Updating Test Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/gmsh/gmsh.html">Introduction on How to Use GMSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pointwise/pointwise.html">Introduction on How to Use Pointwise</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/automatic_launch/automatic_launch.html">How to Automatically Create and Launch Lethe Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/postprocessing/postprocessing_paraview.html">Remote Data Visualization on ParaView</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/postprocessing/postprocessing_pyvista.html">Post-processing Lethe with PyVista</a></li>
@@ -443,7 +448,7 @@
 
       # Mobility Cahn-Hilliard
       set cahn hilliard mobility model    = constant
-      set cahn hilliard mobility constant = 1
+      set cahn hilliard mobility constant = 1e-7
     end
 
     # if fluid-solid interaction
@@ -475,7 +480,7 @@ end
 <li><p>The <code class="docutils literal notranslate"><span class="pre">specific</span> <span class="pre">heat</span></code> parameter is the constant specific heat of the fluid in units of <span class="math notranslate nohighlight">\(\text{Energy} \cdot \text{Temperature}^{-1} \cdot \text{Mass}^{-1}\)</span> .</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">thermal</span> <span class="pre">conductivity</span> <span class="pre">model</span></code> specifies the model used to calculate the thermal conductivity. At the moment, <code class="docutils literal notranslate"><span class="pre">constant</span></code> and <code class="docutils literal notranslate"><span class="pre">linear</span></code> thermal conductivity are available. For more details on the thermal conductivity models, see <a class="reference internal" href="#id5">Thermal Conductivity Models</a>.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">thermal</span> <span class="pre">conductivity</span></code> parameter is the thermal conductivity coefficient of the fluid with units of <span class="math notranslate nohighlight">\(\text{Power} \cdot \text{Temperature}^{-1} \cdot \text{Length}^{-1}\)</span>.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">thermal</span> <span class="pre">expansion</span> <span class="pre">model</span></code> specifies the model used to calculate the thermal expansion coefficient. At the moment, <code class="docutils literal notranslate"><span class="pre">constant</span></code> and <code class="docutils literal notranslate"><span class="pre">phase</span> <span class="pre">change</span></code> thermal expansion are supported. For more details on the thermal expansion models, see <a class="reference internal" href="#thermal-expansion-models">Thermal Expansion Models</a>.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">thermal</span> <span class="pre">expansion</span> <span class="pre">model</span></code> specifies the model used to calculate the thermal expansion coefficient. At the moment, <code class="docutils literal notranslate"><span class="pre">constant</span></code> and <code class="docutils literal notranslate"><span class="pre">phase_change</span></code> thermal expansion are supported. For more details on the thermal expansion models, see <a class="reference internal" href="#thermal-expansion-models">Thermal Expansion Models</a>.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">thermal</span> <span class="pre">expansion</span></code> parameter is the thermal expansion coefficient of the fluid with dimension of <span class="math notranslate nohighlight">\(\text{Temperature}^{-1}\)</span>. It is used to define the buoyancy-driven flow (natural convection) using the Boussinesq approximation, which leads to the definition of the following source term that is added to the Navier-Stokes equation:</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
@@ -500,7 +505,7 @@ end
 <p>The <code class="docutils literal notranslate"><span class="pre">second</span> <span class="pre">fluid</span> <span class="pre">id</span></code> should be greater than the <code class="docutils literal notranslate"><span class="pre">first</span> <span class="pre">fluid</span> <span class="pre">id</span></code>.</p>
 </div>
 </li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">surface</span> <span class="pre">tension</span> <span class="pre">model</span></code> specifies the model used to calculate the surface tension coefficient of the fluid-fluid pair. At the moment, <code class="docutils literal notranslate"><span class="pre">constant</span></code>, <code class="docutils literal notranslate"><span class="pre">linear</span></code>, and <code class="docutils literal notranslate"><span class="pre">phase</span> <span class="pre">change</span></code> models are supported. For more details on the surface tension models, see <a class="reference internal" href="#id7">Surface Tension Models</a>.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">surface</span> <span class="pre">tension</span> <span class="pre">model</span></code> specifies the model used to calculate the surface tension coefficient of the fluid-fluid pair. At the moment, <code class="docutils literal notranslate"><span class="pre">constant</span></code>, <code class="docutils literal notranslate"><span class="pre">linear</span></code>, and <code class="docutils literal notranslate"><span class="pre">phase_change</span></code> models are supported. For more details on the surface tension models, see <a class="reference internal" href="#id7">Surface Tension Models</a>.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">surface</span> <span class="pre">tension</span> <span class="pre">coefficient</span></code> parameter is a constant surface tension coefficient of the two interacting fluids in units of <span class="math notranslate nohighlight">\(\text{Mass} \cdot \text{Time}^{-2}\)</span>. In SI, this is <span class="math notranslate nohighlight">\(\text{N} \cdot \text{m}^{-1}\)</span>. The surface tension coefficient is used as defined in the Weber number (<span class="math notranslate nohighlight">\(We\)</span>):</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
@@ -510,7 +515,7 @@ end
 </li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">reference</span> <span class="pre">state</span> <span class="pre">temperature</span></code> parameter is the temperature of the reference state at which the <code class="docutils literal notranslate"><span class="pre">surface</span> <span class="pre">tension</span> <span class="pre">coefficient</span></code> is evaluated. This parameter is used in the calculation of the surface tension using the <code class="docutils literal notranslate"><span class="pre">linear</span></code> surface tension model (see <a class="reference internal" href="#id7">Surface Tension Models</a>).</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">temperature-driven</span> <span class="pre">surface</span> <span class="pre">tension</span> <span class="pre">gradient</span></code> parameter is the surface tension gradient with respect to the temperature of the two interacting fluids in units of <span class="math notranslate nohighlight">\(\text{Mass} \cdot \text{Time}^{-2} \cdot \text{Temperature}^{-1}\)</span>. In SI, this is <span class="math notranslate nohighlight">\(\text{N} \cdot \text{m}^{-1} \cdot \text{K}^{-1}\)</span>. This parameter is used in the calculation of the surface tension using the <code class="docutils literal notranslate"><span class="pre">linear</span></code> surface tension model (see <a class="reference internal" href="#id7">Surface Tension Models</a>).</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">solidus</span> <span class="pre">temperature</span></code> and <code class="docutils literal notranslate"><span class="pre">liquidus</span> <span class="pre">temperature</span></code> parameters are used in the calculation of the surface tension using the <code class="docutils literal notranslate"><span class="pre">phase</span> <span class="pre">change</span></code> surface tension model (see <a class="reference internal" href="#id7">Surface Tension Models</a>).</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">solidus</span> <span class="pre">temperature</span></code> and <code class="docutils literal notranslate"><span class="pre">liquidus</span> <span class="pre">temperature</span></code> parameters are used in the calculation of the surface tension using the <code class="docutils literal notranslate"><span class="pre">phase_change</span></code> surface tension model (see <a class="reference internal" href="#id7">Surface Tension Models</a>).</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">cahn</span> <span class="pre">hilliard</span> <span class="pre">mobility</span> <span class="pre">model</span></code> specifies the model used to calculate the mobility used in the Cahn-Hilliard equations for the pair of fluid. Two models are available: a <code class="docutils literal notranslate"><span class="pre">constant</span></code> mobility and a <code class="docutils literal notranslate"><span class="pre">quartic</span></code> mobility. The reader is refered to <a class="reference internal" href="cahn_hilliard.html"><span class="doc">Cahn-Hilliard</span></a> for more details.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">cahn</span> <span class="pre">hilliard</span> <span class="pre">mobility</span> <span class="pre">coefficient</span></code> parameter is the constant mobility coefficient of the two interacting fluids used in the Cahn-Hilliard equations. Its units are <span class="math notranslate nohighlight">\(\text{Length}^{2} \cdot \text{Time}^{-1}\)</span>.</p></li>
 </ul>
@@ -880,7 +885,7 @@ end
 </section>
 <section id="phase-change">
 <h3>Phase Change<a class="headerlink" href="#phase-change" title="Link to this heading">#</a></h3>
-<p>The current section recapitulates the <cite>phase change</cite> subsection.
+<p>The current section recapitulates the <code class="docutils literal notranslate"><span class="pre">phase</span> <span class="pre">change</span></code> subsection.
 Snippets of this subsection can be found across the different physical property models’ descriptions.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection phase change
   set liquidus temperature = 1
@@ -949,13 +954,13 @@ end
 <h2>Interface Physical Property Models<a class="headerlink" href="#interface-physical-property-models" title="Link to this heading">#</a></h2>
 <section id="surface-tension-models">
 <span id="id7"></span><h3>Surface Tension Models<a class="headerlink" href="#surface-tension-models" title="Link to this heading">#</a></h3>
-<p>Lethe supports three types of surface tension models: <code class="docutils literal notranslate"><span class="pre">constant</span></code>, <code class="docutils literal notranslate"><span class="pre">linear</span></code>, and <code class="docutils literal notranslate"><span class="pre">phase</span> <span class="pre">change</span></code>. A <code class="docutils literal notranslate"><span class="pre">constant</span></code> surface tension model assumes a constant value of surface tension, while a <code class="docutils literal notranslate"><span class="pre">linear</span></code> surface tension assumes that the surface tension evolves linearly with the temperature:</p>
+<p>Lethe supports three types of surface tension models: <code class="docutils literal notranslate"><span class="pre">constant</span></code>, <code class="docutils literal notranslate"><span class="pre">linear</span></code>, and <code class="docutils literal notranslate"><span class="pre">phase_change</span></code>. A <code class="docutils literal notranslate"><span class="pre">constant</span></code> surface tension model assumes a constant value of surface tension, while a <code class="docutils literal notranslate"><span class="pre">linear</span></code> surface tension assumes that the surface tension evolves linearly with the temperature:</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
 \[\sigma(T) = \sigma_0 + \frac{d\sigma}{dT} (T-T_0)\]</div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(\sigma_0\)</span> is the <code class="docutils literal notranslate"><span class="pre">surface</span> <span class="pre">tension</span> <span class="pre">coefficient</span></code> evaluated at <code class="docutils literal notranslate"><span class="pre">reference</span> <span class="pre">state</span> <span class="pre">temperature</span></code> <span class="math notranslate nohighlight">\(T_0\)</span> and <span class="math notranslate nohighlight">\(\frac{d\sigma}{dT}\)</span> is the <code class="docutils literal notranslate"><span class="pre">surface</span> <span class="pre">tension</span> <span class="pre">gradient</span></code> with respect to the temperature <span class="math notranslate nohighlight">\(T\)</span>.</p>
-<p>For problems treating solid-liquid phase change, the <code class="docutils literal notranslate"><span class="pre">phase</span> <span class="pre">change</span></code> model is intended to apply the surface tension force only when the fluid is liquid such that:</p>
+<p>For problems treating solid-liquid phase change, the <code class="docutils literal notranslate"><span class="pre">phase_change</span></code> model is intended to apply the surface tension force only when the fluid is liquid such that:</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
 \[\begin{split}\sigma(T) =
@@ -977,7 +982,7 @@ end
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>In Lethe, the <code class="docutils literal notranslate"><span class="pre">linear</span></code> and <code class="docutils literal notranslate"><span class="pre">phase</span> <span class="pre">change</span></code> surface tension models are only used to account for the thermocapillary effect known as the Marangoni effect. Therefore, to enable the Marangoni effect, the surface tension model must be set to <code class="docutils literal notranslate"><span class="pre">linear</span></code> or <code class="docutils literal notranslate"><span class="pre">phase</span> <span class="pre">change</span></code> and a <code class="docutils literal notranslate"><span class="pre">surface</span> <span class="pre">tension</span> <span class="pre">gradient</span></code> different from zero <span class="math notranslate nohighlight">\((\frac{d\sigma}{dT} \neq 0)\)</span> must be specified.</p>
+<p>In Lethe, the <code class="docutils literal notranslate"><span class="pre">linear</span></code> and <code class="docutils literal notranslate"><span class="pre">phase_change</span></code> surface tension models are only used to account for the thermocapillary effect known as the Marangoni effect. Therefore, to enable the Marangoni effect, the surface tension model must be set to <code class="docutils literal notranslate"><span class="pre">linear</span></code> or <code class="docutils literal notranslate"><span class="pre">phase_change</span></code> and a <code class="docutils literal notranslate"><span class="pre">surface</span> <span class="pre">tension</span> <span class="pre">gradient</span></code> different from zero <span class="math notranslate nohighlight">\((\frac{d\sigma}{dT} \neq 0)\)</span> must be specified.</p>
 </div>
 </section>
 <section id="cahn-hilliard-mobility-models">
@@ -987,7 +992,7 @@ end
 <div class="math notranslate nohighlight">
 \[M(\phi) = D(1-\phi^2)^2\]</div>
 </div>
-<p>with <span class="math notranslate nohighlight">\(D\)</span> the value set for <code class="docutils literal notranslate"><span class="pre">cahn</span> <span class="pre">hilliard</span> <span class="pre">mobility</span> <span class="pre">constant</span></code>. A quartic mobility is required to recover a correct velocity according to Bretin <em>et al.</em> <a class="reference external" href="https://doi.org/10.48550/arXiv.2105.09627">[2]</a> Therefore, it is preferable to use it when solving the coupled Cahn-Hilliard and Navier-Stokes equations.</p>
+<p>with <span class="math notranslate nohighlight">\(D\)</span> the value set for <code class="docutils literal notranslate"><span class="pre">cahn</span> <span class="pre">hilliard</span> <span class="pre">mobility</span> <span class="pre">constant</span></code>. A quartic mobility is required to recover a correct velocity according to Bretin <em>et al.</em> <a class="reference external" href="https://doi.org/10.48550/arXiv.2105.09627">[2]</a> Therefore, it is preferable to use it when solving the coupled Cahn-Hilliard and Navier-Stokes equations. A good rule of thumb for setting the mobility constant is to have it proportionnal to the square of the minimum cell size. This rule may depend on the duration of the simulation, so a finer tuning may be necessary.</p>
 </section>
 </section>
 <section id="references">

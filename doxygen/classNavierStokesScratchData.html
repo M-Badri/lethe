@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Developer documentation for the Lethe open-source library: NavierStokesScratchData&lt; dim &gt; Class Template Reference</title>
+<title>Lethe Open-Source Library: NavierStokesScratchData&lt; dim &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,8 +30,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Developer documentation for the Lethe open-source library
+   <div id="projectname">Lethe Open-Source Library
    </div>
+   <div id="projectbrief">Developer Guide</div>
   </td>
  </tr>
  </tbody>
@@ -79,31 +80,22 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Class that stores the information required by the assembly procedure for a Navier-Stokes equation. Consequently, this class calculates the velocity (values, gradients, laplacians) and the shape function (values, gradients, laplacians) at all the gauss points for all degrees of freedom and stores it into arrays. Additionally, the use can request that this class gathers additional fields for physics which are coupled to the Navier-Stokes equation, such as the VOF. This class serves as a separation between the evaluation at the gauss point of the variables of interest and their use in the assembly, which is carried out by the assembler functions. For more information on this design, the reader can consult deal.II step-9 "https://www.dealii.org/current/doxygen/deal.II/step_9.html". In this latter example, the scratch is a struct instead of a templated class because of the simplicity of step-9.  
- <a href="classNavierStokesScratchData.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a170bd84860356dfd01caf5fc3287eec8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a170bd84860356dfd01caf5fc3287eec8">NavierStokesScratchData</a> (const std::shared_ptr&lt; <a class="el" href="classSimulationControl.html">SimulationControl</a> &gt; &amp;<a class="el" href="classNavierStokesScratchData.html#ad1fc7d24a864a2e16f6e116cf1e9753d">simulation_control</a>, const <a class="el" href="classPhysicalPropertiesManager.html">PhysicalPropertiesManager</a> &amp;<a class="el" href="classNavierStokesScratchData.html#af919f875b3c240401eb20d9a84b4a19c">properties_manager</a>, const FESystem&lt; dim &gt; &amp;fe, const Quadrature&lt; dim &gt; &amp;quadrature, const Mapping&lt; dim &gt; &amp;mapping, const Quadrature&lt; dim - 1 &gt; &amp;face_quadrature)</td></tr>
-<tr class="memdesc:a170bd84860356dfd01caf5fc3287eec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. The constructor creates the fe_values that will be used to fill the member variables of the scratch. It also allocated the necessary memory for all member variables. However, it does not do any evaluation, since this needs to be done at the cell level.  <a href="classNavierStokesScratchData.html#a170bd84860356dfd01caf5fc3287eec8">More...</a><br /></td></tr>
 <tr class="separator:a170bd84860356dfd01caf5fc3287eec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05a68c1d47ea11eeea610580e93f1d0e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a05a68c1d47ea11eeea610580e93f1d0e">NavierStokesScratchData</a> (const <a class="el" href="classNavierStokesScratchData.html">NavierStokesScratchData</a>&lt; dim &gt; &amp;sd)</td></tr>
-<tr class="memdesc:a05a68c1d47ea11eeea610580e93f1d0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy Constructor. Same as the main constructor. This constructor only uses the other scratch to build the FeValues, it does not copy the content of the other scratch into itself since, by definition of the WorkStream mechanism it is assumed that the content of the scratch will be reset on a cell basis.  <a href="classNavierStokesScratchData.html#a05a68c1d47ea11eeea610580e93f1d0e">More...</a><br /></td></tr>
 <tr class="separator:a05a68c1d47ea11eeea610580e93f1d0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c05cfb25102aa25b0914bf968480f19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a6c05cfb25102aa25b0914bf968480f19">allocate</a> ()</td></tr>
-<tr class="memdesc:a6c05cfb25102aa25b0914bf968480f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates the memory for the scratch.  <a href="classNavierStokesScratchData.html#a6c05cfb25102aa25b0914bf968480f19">More...</a><br /></td></tr>
 <tr class="separator:a6c05cfb25102aa25b0914bf968480f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb5c55b6d522bcf6970eb0f2becb3c3c"><td class="memTemplParams" colspan="2">template&lt;typename VectorType &gt; </td></tr>
 <tr class="memitem:abb5c55b6d522bcf6970eb0f2becb3c3c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#abb5c55b6d522bcf6970eb0f2becb3c3c">reinit</a> (const typename DoFHandler&lt; dim &gt;::active_cell_iterator &amp;cell, const VectorType &amp;current_solution, const std::vector&lt; VectorType &gt; &amp;previous_solutions, std::shared_ptr&lt; Function&lt; dim &gt;&gt; forcing_function, Tensor&lt; 1, dim &gt; <a class="el" href="classNavierStokesScratchData.html#aefffdd294c642100ea21ba30aea5d185">beta_force</a>, const double <a class="el" href="classNavierStokesScratchData.html#a24846172d49e366a6d0fed30df1213fd">pressure_scaling_factor</a>)</td></tr>
-<tr class="memdesc:abb5c55b6d522bcf6970eb0f2becb3c3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reinitialize the content of the scratch.  <a href="classNavierStokesScratchData.html#abb5c55b6d522bcf6970eb0f2becb3c3c">More...</a><br /></td></tr>
 <tr class="separator:abb5c55b6d522bcf6970eb0f2becb3c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3ac2a1e98dd07b62ee49f808642ce09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#aa3ac2a1e98dd07b62ee49f808642ce09">enable_vof</a> (const FiniteElement&lt; dim &gt; &amp;fe, const Quadrature&lt; dim &gt; &amp;quadrature, const Mapping&lt; dim &gt; &amp;mapping, const <a class="el" href="structParameters_1_1VOF__PhaseFilter.html">Parameters::VOF_PhaseFilter</a> &amp;phase_filter_parameters)</td></tr>
-<tr class="memdesc:aa3ac2a1e98dd07b62ee49f808642ce09"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable_vof Enables the collection of the VOF data by the scratch  <a href="classNavierStokesScratchData.html#aa3ac2a1e98dd07b62ee49f808642ce09">More...</a><br /></td></tr>
 <tr class="separator:aa3ac2a1e98dd07b62ee49f808642ce09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92fe89f9886104997f908b82f4b1ea2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a92fe89f9886104997f908b82f4b1ea2d">enable_vof</a> (const FiniteElement&lt; dim &gt; &amp;fe, const Quadrature&lt; dim &gt; &amp;quadrature, const Mapping&lt; dim &gt; &amp;mapping, const std::shared_ptr&lt; <a class="el" href="classVolumeOfFluidFilterBase.html">VolumeOfFluidFilterBase</a> &gt; &amp;<a class="el" href="classNavierStokesScratchData.html#a49f74b732d4b2321493338e2d84a9911">filter</a>)</td></tr>
-<tr class="memdesc:a92fe89f9886104997f908b82f4b1ea2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable_vof Enables the collection of the VOF data by the scratch - function overload used in the copy constructor of <a class="el" href="classNavierStokesScratchData.html" title="Class that stores the information required by the assembly procedure for a Navier-Stokes equation....">NavierStokesScratchData</a>  <a href="classNavierStokesScratchData.html#a92fe89f9886104997f908b82f4b1ea2d">More...</a><br /></td></tr>
 <tr class="separator:a92fe89f9886104997f908b82f4b1ea2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6937a49938e44bf91ff473c99e176561"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a6937a49938e44bf91ff473c99e176561">enable_projected_phase_fraction_gradient</a> (const FiniteElement&lt; dim &gt; &amp;fe_projected_phase_fraction_gradient, const Quadrature&lt; dim &gt; &amp;quadrature, const Mapping&lt; dim &gt; &amp;mapping)</td></tr>
 <tr class="separator:a6937a49938e44bf91ff473c99e176561"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,7 +103,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9f3a9b09303fb38071eba70e6392dc0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae83e521a115865e9bec668fc26be1e49"><td class="memTemplParams" colspan="2">template&lt;typename VectorType &gt; </td></tr>
 <tr class="memitem:ae83e521a115865e9bec668fc26be1e49"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#ae83e521a115865e9bec668fc26be1e49">reinit_vof</a> (const typename DoFHandler&lt; dim &gt;::active_cell_iterator &amp;cell, const VectorType &amp;current_solution, const VectorType &amp;current_filtered_solution, const std::vector&lt; VectorType &gt; &amp;previous_solutions)</td></tr>
-<tr class="memdesc:ae83e521a115865e9bec668fc26be1e49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reinitialize the content of the scratch for the vof.  <a href="classNavierStokesScratchData.html#ae83e521a115865e9bec668fc26be1e49">More...</a><br /></td></tr>
 <tr class="separator:ae83e521a115865e9bec668fc26be1e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e506238dac667b6c23647eb1b237120"><td class="memTemplParams" colspan="2">template&lt;typename VectorType &gt; </td></tr>
 <tr class="memitem:a0e506238dac667b6c23647eb1b237120"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a0e506238dac667b6c23647eb1b237120">reinit_projected_phase_fraction_gradient</a> (const typename DoFHandler&lt; dim &gt;::active_cell_iterator &amp;projected_phase_fraction_gradient_cell, const VectorType &amp;current_projected_phase_fraction_gradient_solution)</td></tr>
@@ -120,35 +111,28 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ada4d466d38ae48bee70c5b562e4a74af"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#ada4d466d38ae48bee70c5b562e4a74af">reinit_curvature</a> (const typename DoFHandler&lt; dim &gt;::active_cell_iterator &amp;curvature_cell, const VectorType &amp;current_curvature_solution)</td></tr>
 <tr class="separator:ada4d466d38ae48bee70c5b562e4a74af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c271b97942ba7a74d7f4e9e0c545b6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a2c271b97942ba7a74d7f4e9e0c545b6b">enable_void_fraction</a> (const FiniteElement&lt; dim &gt; &amp;fe, const Quadrature&lt; dim &gt; &amp;quadrature, const Mapping&lt; dim &gt; &amp;mapping)</td></tr>
-<tr class="memdesc:a2c271b97942ba7a74d7f4e9e0c545b6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable_void_fraction Enables the collection of the void fraction data by the scratch  <a href="classNavierStokesScratchData.html#a2c271b97942ba7a74d7f4e9e0c545b6b">More...</a><br /></td></tr>
 <tr class="separator:a2c271b97942ba7a74d7f4e9e0c545b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59cf6c71f993b535281774fb63838cbd"><td class="memTemplParams" colspan="2">template&lt;typename VectorType &gt; </td></tr>
 <tr class="memitem:a59cf6c71f993b535281774fb63838cbd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a59cf6c71f993b535281774fb63838cbd">reinit_void_fraction</a> (const typename DoFHandler&lt; dim &gt;::active_cell_iterator &amp;cell, const VectorType &amp;current_solution, const std::vector&lt; VectorType &gt; &amp;previous_solutions)</td></tr>
-<tr class="memdesc:a59cf6c71f993b535281774fb63838cbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reinitialize the content of the scratch for the void fraction.  <a href="classNavierStokesScratchData.html#a59cf6c71f993b535281774fb63838cbd">More...</a><br /></td></tr>
 <tr class="separator:a59cf6c71f993b535281774fb63838cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a661e62ccc078b9798322641b2c56655c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a661e62ccc078b9798322641b2c56655c">enable_particle_fluid_interactions</a> (const unsigned int n_global_max_particles_per_cell, const bool enable_void_fraction_interpolation)</td></tr>
-<tr class="memdesc:a661e62ccc078b9798322641b2c56655c"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable_particle_fluid_interactions Enables the calculation of the drag force by the scratch  <a href="classNavierStokesScratchData.html#a661e62ccc078b9798322641b2c56655c">More...</a><br /></td></tr>
 <tr class="separator:a661e62ccc078b9798322641b2c56655c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85cb204d38edb677b3ce55658adc82d9"><td class="memTemplParams" colspan="2">template&lt;typename VectorType &gt; </td></tr>
 <tr class="memitem:a85cb204d38edb677b3ce55658adc82d9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a85cb204d38edb677b3ce55658adc82d9">reinit_particle_fluid_interactions</a> (const typename DoFHandler&lt; dim &gt;::active_cell_iterator &amp;cell, const VectorType, const VectorType previous_solution, const VectorType void_fraction_solution, const Particles::ParticleHandler&lt; dim &gt; &amp;particle_handler, DoFHandler&lt; dim &gt; &amp;dof_handler, DoFHandler&lt; dim &gt; &amp;void_fraction_dof_handler)</td></tr>
-<tr class="memdesc:a85cb204d38edb677b3ce55658adc82d9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classCalculates.html">Calculates</a> the content of the scratch for the particle fluid interactions.  <a href="classNavierStokesScratchData.html#a85cb204d38edb677b3ce55658adc82d9">More...</a><br /></td></tr>
 <tr class="separator:a85cb204d38edb677b3ce55658adc82d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59bab3e52c8e29cf84473965f49baefe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a59bab3e52c8e29cf84473965f49baefe">enable_heat_transfer</a> (const FiniteElement&lt; dim &gt; &amp;fe, const Quadrature&lt; dim &gt; &amp;quadrature, const Mapping&lt; dim &gt; &amp;mapping)</td></tr>
-<tr class="memdesc:a59bab3e52c8e29cf84473965f49baefe"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable_heat_transfer Enables the collection of the heat transfer data (Temperature field) by the scratch  <a href="classNavierStokesScratchData.html#a59bab3e52c8e29cf84473965f49baefe">More...</a><br /></td></tr>
 <tr class="separator:a59bab3e52c8e29cf84473965f49baefe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c148603b147b2f0e746395d8756ab52"><td class="memTemplParams" colspan="2">template&lt;typename VectorType &gt; </td></tr>
 <tr class="memitem:a3c148603b147b2f0e746395d8756ab52"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a3c148603b147b2f0e746395d8756ab52">reinit_heat_transfer</a> (const typename DoFHandler&lt; dim &gt;::active_cell_iterator &amp;cell, const VectorType &amp;current_solution, const std::vector&lt; VectorType &gt; &amp;previous_solutions)</td></tr>
-<tr class="memdesc:a3c148603b147b2f0e746395d8756ab52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reinitialize the content of the scratch for the heat transfer auxiliary physic.  <a href="classNavierStokesScratchData.html#a3c148603b147b2f0e746395d8756ab52">More...</a><br /></td></tr>
 <tr class="separator:a3c148603b147b2f0e746395d8756ab52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a787c2622880bee639fc846d14d333269"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a787c2622880bee639fc846d14d333269">enable_cahn_hilliard</a> (const FiniteElement&lt; dim &gt; &amp;fe, const Quadrature&lt; dim &gt; &amp;quadrature, const Mapping&lt; dim &gt; &amp;mapping)</td></tr>
-<tr class="memdesc:a787c2622880bee639fc846d14d333269"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable_cahn_hilliard Enables the collection of the <a class="el" href="classCahnHilliard.html">CahnHilliard</a> data by the scratch  <a href="classNavierStokesScratchData.html#a787c2622880bee639fc846d14d333269">More...</a><br /></td></tr>
-<tr class="separator:a787c2622880bee639fc846d14d333269"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a077a7071ff2d141744f72e3e1ef3a50c"><td class="memTemplParams" colspan="2">template&lt;typename VectorType &gt; </td></tr>
-<tr class="memitem:a077a7071ff2d141744f72e3e1ef3a50c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a077a7071ff2d141744f72e3e1ef3a50c">reinit_cahn_hilliard</a> (const typename DoFHandler&lt; dim &gt;::active_cell_iterator &amp;cell, const VectorType &amp;current_solution, <a class="el" href="structParameters_1_1CahnHilliard.html">Parameters::CahnHilliard</a> cahn_hilliard_parameters)</td></tr>
-<tr class="memdesc:a077a7071ff2d141744f72e3e1ef3a50c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reinitialize the content of the scratch for CH.  <a href="classNavierStokesScratchData.html#a077a7071ff2d141744f72e3e1ef3a50c">More...</a><br /></td></tr>
-<tr class="separator:a077a7071ff2d141744f72e3e1ef3a50c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a126d7e05decf1cd0ab526d786a86e1af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a126d7e05decf1cd0ab526d786a86e1af">enable_cahn_hilliard</a> (const FiniteElement&lt; dim &gt; &amp;fe, const Quadrature&lt; dim &gt; &amp;quadrature, const Mapping&lt; dim &gt; &amp;mapping, const <a class="el" href="structParameters_1_1CahnHilliard.html">Parameters::CahnHilliard</a> &amp;cahn_hilliard_parameters)</td></tr>
+<tr class="separator:a126d7e05decf1cd0ab526d786a86e1af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73f68215f2c16e0e5a4ef75350ebf1bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a73f68215f2c16e0e5a4ef75350ebf1bd">enable_cahn_hilliard</a> (const FiniteElement&lt; dim &gt; &amp;fe, const Quadrature&lt; dim &gt; &amp;quadrature, const Mapping&lt; dim &gt; &amp;mapping, const std::shared_ptr&lt; <a class="el" href="classCahnHilliardFilterBase.html">CahnHilliardFilterBase</a> &gt; &amp;<a class="el" href="classNavierStokesScratchData.html#a9a9121f92c46736d4be8b92933fb6874">cahn_hilliard_filter</a>)</td></tr>
+<tr class="separator:a73f68215f2c16e0e5a4ef75350ebf1bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89be382ee756efb20600f131017a5d33"><td class="memTemplParams" colspan="2">template&lt;typename VectorType &gt; </td></tr>
+<tr class="memitem:a89be382ee756efb20600f131017a5d33"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a89be382ee756efb20600f131017a5d33">reinit_cahn_hilliard</a> (const typename DoFHandler&lt; dim &gt;::active_cell_iterator &amp;cell, const VectorType &amp;current_solution, const VectorType &amp;current_filtered_solution)</td></tr>
+<tr class="separator:a89be382ee756efb20600f131017a5d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30ca912e22e35000f7109061ad47726b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a30ca912e22e35000f7109061ad47726b">calculate_physical_properties</a> ()</td></tr>
-<tr class="memdesc:a30ca912e22e35000f7109061ad47726b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classCalculates.html">Calculates</a> the physical properties. This function calculates the physical properties that may be required by the fluid dynamics problem. Namely the kinematic viscosity and, when required, the density.  <a href="classNavierStokesScratchData.html#a30ca912e22e35000f7109061ad47726b">More...</a><br /></td></tr>
 <tr class="separator:a30ca912e22e35000f7109061ad47726b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -209,8 +193,6 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a5f65155a6dcfa12516d5357049ecba5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a578dfea0694f03cf3ab93953bbf37d91"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a578dfea0694f03cf3ab93953bbf37d91">surface_tension_gradient</a></td></tr>
 <tr class="separator:a578dfea0694f03cf3ab93953bbf37d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6c2b6a2d02e6661ecb1dbc4e0458320"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#ab6c2b6a2d02e6661ecb1dbc4e0458320">mobility_cahn_hilliard</a></td></tr>
-<tr class="separator:ab6c2b6a2d02e6661ecb1dbc4e0458320"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64034d9ed0a70afc50b0c275ea59d62f"><td class="memItemLeft" align="right" valign="top">FEValues&lt; dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a64034d9ed0a70afc50b0c275ea59d62f">fe_values</a></td></tr>
 <tr class="separator:a64034d9ed0a70afc50b0c275ea59d62f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54dd04719414e07ae63dc85c9845d1f8"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a54dd04719414e07ae63dc85c9845d1f8">n_dofs</a></td></tr>
@@ -283,6 +265,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a077315d33bded4ae3e9f13b1541bbe3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab42fb46ce7737929c7b76f6faa1a8a86"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Tensor&lt; 1, dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#ab42fb46ce7737929c7b76f6faa1a8a86">filtered_phase_gradient_values</a></td></tr>
 <tr class="separator:ab42fb46ce7737929c7b76f6faa1a8a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a402dc7a9c4c505cb09842b649fbf0c81"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Tensor&lt; 1, dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a402dc7a9c4c505cb09842b649fbf0c81">phase_gradient_values</a></td></tr>
+<tr class="separator:a402dc7a9c4c505cb09842b649fbf0c81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b0d67e46df8e9870fb9174d496701e9"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; FEValues&lt; dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a0b0d67e46df8e9870fb9174d496701e9">fe_values_vof</a></td></tr>
 <tr class="separator:a0b0d67e46df8e9870fb9174d496701e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49f74b732d4b2321493338e2d84a9911"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classVolumeOfFluidFilterBase.html">VolumeOfFluidFilterBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a49f74b732d4b2321493338e2d84a9911">filter</a></td></tr>
@@ -367,24 +351,20 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a457d2cc982eb13afbfa39427f6c68807"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b3fe310d5cc130bb0ce50c44d7d78df"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; FEValues&lt; dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a8b3fe310d5cc130bb0ce50c44d7d78df">fe_values_temperature</a></td></tr>
 <tr class="separator:a8b3fe310d5cc130bb0ce50c44d7d78df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7e4e265c5c1b11835e73cab803047b4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#aa7e4e265c5c1b11835e73cab803047b4">epsilon</a></td></tr>
-<tr class="separator:aa7e4e265c5c1b11835e73cab803047b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b4d6ad70870c9091bfc9b06c92389f2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a9b4d6ad70870c9091bfc9b06c92389f2">well_height</a></td></tr>
-<tr class="separator:a9b4d6ad70870c9091bfc9b06c92389f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1874b67c500171e778d864e1ad7368be"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a1874b67c500171e778d864e1ad7368be">density_diff</a></td></tr>
-<tr class="separator:a1874b67c500171e778d864e1ad7368be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80675043762c14c602da2c651248d2c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a80675043762c14c602da2c651248d2c6">gather_cahn_hilliard</a></td></tr>
 <tr class="separator:a80675043762c14c602da2c651248d2c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4a64740ac957fea527533e95b5ca233"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#aa4a64740ac957fea527533e95b5ca233">n_dofs_cahn_hilliard</a></td></tr>
 <tr class="separator:aa4a64740ac957fea527533e95b5ca233"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf28c142ac8fd80e605d236c5770f11f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#aaf28c142ac8fd80e605d236c5770f11f">phase_order_cahn_hilliard_values</a></td></tr>
 <tr class="separator:aaf28c142ac8fd80e605d236c5770f11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1ed3d09a7c260547245c035a1641d03"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#af1ed3d09a7c260547245c035a1641d03">filtered_phase_order_cahn_hilliard_values</a></td></tr>
+<tr class="separator:af1ed3d09a7c260547245c035a1641d03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39ac4958d1c97b955d55874904644a01"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Tensor&lt; 1, dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a39ac4958d1c97b955d55874904644a01">phase_order_cahn_hilliard_gradients</a></td></tr>
 <tr class="separator:a39ac4958d1c97b955d55874904644a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcbbcbddf76fe8e5c18ee4f4549aee17"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#afcbbcbddf76fe8e5c18ee4f4549aee17">chemical_potential_cahn_hilliard_values</a></td></tr>
 <tr class="separator:afcbbcbddf76fe8e5c18ee4f4549aee17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0bca7103ab80cbdca106b1e28203392"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Tensor&lt; 1, dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#af0bca7103ab80cbdca106b1e28203392">chemical_potential_cahn_hilliard_gradients</a></td></tr>
-<tr class="separator:af0bca7103ab80cbdca106b1e28203392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a9121f92c46736d4be8b92933fb6874"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classCahnHilliardFilterBase.html">CahnHilliardFilterBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a9a9121f92c46736d4be8b92933fb6874">cahn_hilliard_filter</a></td></tr>
+<tr class="separator:a9a9121f92c46736d4be8b92933fb6874"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a340f24792940c9a3f8fbd42e36fa0972"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; FEValues&lt; dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a340f24792940c9a3f8fbd42e36fa0972">fe_values_cahn_hilliard</a></td></tr>
 <tr class="separator:a340f24792940c9a3f8fbd42e36fa0972"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a450633f51bba8ae38aacb114003daf82"><td class="memItemLeft" align="right" valign="top">FEValuesExtractors::Scalar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesScratchData.html#a450633f51bba8ae38aacb114003daf82">phase_order</a></td></tr>
@@ -444,7 +424,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><h3>template&lt;int dim&gt;<br />
 class NavierStokesScratchData&lt; dim &gt;</h3>
 
-<p>Class that stores the information required by the assembly procedure for a Navier-Stokes equation. Consequently, this class calculates the velocity (values, gradients, laplacians) and the shape function (values, gradients, laplacians) at all the gauss points for all degrees of freedom and stores it into arrays. Additionally, the use can request that this class gathers additional fields for physics which are coupled to the Navier-Stokes equation, such as the VOF. This class serves as a separation between the evaluation at the gauss point of the variables of interest and their use in the assembly, which is carried out by the assembler functions. For more information on this design, the reader can consult deal.II step-9 "https://www.dealii.org/current/doxygen/deal.II/step_9.html". In this latter example, the scratch is a struct instead of a templated class because of the simplicity of step-9. </p>
+<p>Class that stores the information required by the assembly procedure for a Navier-Stokes equation. Consequently, this class calculates the velocity (values, gradients, laplacians) and the shape function (values, gradients, laplacians) at all the gauss points for all degrees of freedom and stores it into arrays. Additionally, the use can request that this class gathers additional fields for physics which are coupled to the Navier-Stokes equation, such as the VOF. <a class="el" href="classThis.html">This</a> class serves as a separation between the evaluation at the gauss point of the variables of interest and their use in the assembly, which is carried out by the assembler functions. For more information on this design, the reader can consult deal.II step-9 "https://www.dealii.org/current/doxygen/deal.II/step_9.html". In this latter example, the scratch is a struct instead of a templated class because of the simplicity of step-9. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">dim</td><td>An integer that denotes the dimension of the space in which the flow is solved </td></tr>
@@ -452,7 +432,7 @@ class NavierStokesScratchData&lt; dim &gt;</h3>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00071">71</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00072">72</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a170bd84860356dfd01caf5fc3287eec8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a170bd84860356dfd01caf5fc3287eec8">&#9670;&nbsp;</a></span>NavierStokesScratchData() <span class="overload">[1/2]</span></h2>
@@ -517,7 +497,7 @@ template&lt;int dim&gt; </div>
 <p>Constructor. The constructor creates the fe_values that will be used to fill the member variables of the scratch. It also allocated the necessary memory for all member variables. However, it does not do any evaluation, since this needs to be done at the cell level. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">simulation_control</td><td>The <a class="el" href="classSimulationControl.html" title="The SimulationControl class is responsible for the control of steady-state and transient simulations ...">SimulationControl</a> object that holds information related to the control of the steady-state or transient simulation. This is used to extrapolate auxiliary physics solutions in time for transient simulation.</td></tr>
+    <tr><td class="paramname">simulation_control</td><td>The <a class="el" href="classSimulationControl.html" title="The SimulationControl class is responsible for the control of steady-state and transient simulations ...">SimulationControl</a> object that holds information related to the control of the steady-state or transient simulation. <a class="el" href="classThis.html">This</a> is used to extrapolate auxiliary physics solutions in time for transient simulation.</td></tr>
     <tr><td class="paramname">properties_manager</td><td>The <a class="el" href="classPhysicalPropertiesManager.html" title="Class that manages the physical properties model which are required to calculate the various physical...">PhysicalPropertiesManager</a> object that stores physical property models.</td></tr>
     <tr><td class="paramname">fe</td><td>The FESystem used to solve the Navier-Stokes equations</td></tr>
     <tr><td class="paramname">quadrature</td><td>The quadrature to use for the assembly</td></tr>
@@ -526,9 +506,9 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00096">96</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00097">97</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
-<p class="reference">References <a class="el" href="physical__properties__manager_8h_source.html#l00259">PhysicalPropertiesManager::is_non_newtonian()</a>.</p>
+<p class="reference">References <a class="el" href="physical__properties__manager_8h_source.html#l00271">PhysicalPropertiesManager::is_non_newtonian()</a>.</p>
 
 </div>
 </div>
@@ -558,7 +538,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Copy Constructor. Same as the main constructor. This constructor only uses the other scratch to build the FeValues, it does not copy the content of the other scratch into itself since, by definition of the WorkStream mechanism it is assumed that the content of the scratch will be reset on a cell basis. </p>
+<p>Copy Constructor. Same as the main constructor. <a class="el" href="classThis.html">This</a> constructor only uses the other scratch to build the FeValues, it does not copy the content of the other scratch into itself since, by definition of the WorkStream mechanism it is assumed that the content of the scratch will be reset on a cell basis. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sd</td><td>The scratch data to be copied </td></tr>
@@ -566,9 +546,9 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00140">140</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00141">141</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
-<p class="reference">References <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01179">NavierStokesScratchData&lt; dim &gt;::fe_values_cahn_hilliard</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01113">NavierStokesScratchData&lt; dim &gt;::fe_values_curvature</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01112">NavierStokesScratchData&lt; dim &gt;::fe_values_projected_phase_fraction_gradient</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01164">NavierStokesScratchData&lt; dim &gt;::fe_values_temperature</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01107">NavierStokesScratchData&lt; dim &gt;::fe_values_vof</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01126">NavierStokesScratchData&lt; dim &gt;::fe_values_void_fraction</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01108">NavierStokesScratchData&lt; dim &gt;::filter</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01172">NavierStokesScratchData&lt; dim &gt;::gather_cahn_hilliard</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01111">NavierStokesScratchData&lt; dim &gt;::gather_curvature</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01189">NavierStokesScratchData&lt; dim &gt;::gather_hessian</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01131">NavierStokesScratchData&lt; dim &gt;::gather_particles_information</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01110">NavierStokesScratchData&lt; dim &gt;::gather_projected_phase_fraction_gradient</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01157">NavierStokesScratchData&lt; dim &gt;::gather_temperature</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01100">NavierStokesScratchData&lt; dim &gt;::gather_vof</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01120">NavierStokesScratchData&lt; dim &gt;::gather_void_fraction</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01132">NavierStokesScratchData&lt; dim &gt;::interpolated_void_fraction</a>, and <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01147">NavierStokesScratchData&lt; dim &gt;::max_number_of_particles_per_cell</a>.</p>
+<p class="reference">References <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01194">NavierStokesScratchData&lt; dim &gt;::cahn_hilliard_filter</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01197">NavierStokesScratchData&lt; dim &gt;::fe_values_cahn_hilliard</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01130">NavierStokesScratchData&lt; dim &gt;::fe_values_curvature</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01129">NavierStokesScratchData&lt; dim &gt;::fe_values_projected_phase_fraction_gradient</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01181">NavierStokesScratchData&lt; dim &gt;::fe_values_temperature</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01124">NavierStokesScratchData&lt; dim &gt;::fe_values_vof</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01143">NavierStokesScratchData&lt; dim &gt;::fe_values_void_fraction</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01125">NavierStokesScratchData&lt; dim &gt;::filter</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01186">NavierStokesScratchData&lt; dim &gt;::gather_cahn_hilliard</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01128">NavierStokesScratchData&lt; dim &gt;::gather_curvature</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01207">NavierStokesScratchData&lt; dim &gt;::gather_hessian</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01148">NavierStokesScratchData&lt; dim &gt;::gather_particles_information</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01127">NavierStokesScratchData&lt; dim &gt;::gather_projected_phase_fraction_gradient</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01174">NavierStokesScratchData&lt; dim &gt;::gather_temperature</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01116">NavierStokesScratchData&lt; dim &gt;::gather_vof</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01137">NavierStokesScratchData&lt; dim &gt;::gather_void_fraction</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01149">NavierStokesScratchData&lt; dim &gt;::interpolated_void_fraction</a>, and <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01164">NavierStokesScratchData&lt; dim &gt;::max_number_of_particles_per_cell</a>.</p>
 
 </div>
 </div>
@@ -588,11 +568,11 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 
 <p>Allocates the memory for the scratch. </p>
-<p>This function allocates the necessary memory for all members of the scratch </p>
+<p><a class="el" href="classThis.html">This</a> function allocates the necessary memory for all members of the scratch </p>
 
 <p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00009">9</a> of file <a class="el" href="navier__stokes__scratch__data_8cc_source.html">navier_stokes_scratch_data.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="bdf_8h_source.html#l00096">maximum_number_of_previous_solutions()</a>, <a class="el" href="physical__property__model_8h_source.html#l00049">pressure</a>, and <a class="el" href="physical__property__model_8h_source.html#l00045">shear_rate</a>.</p>
+<p class="reference">References <a class="el" href="bdf_8h_source.html#l00102">maximum_number_of_previous_solutions()</a>, <a class="el" href="physical__property__model_8h_source.html#l00056">pressure</a>, and <a class="el" href="physical__property__model_8h_source.html#l00052">shear_rate</a>.</p>
 
 </div>
 </div>
@@ -610,16 +590,16 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classCalculates.html">Calculates</a> the physical properties. This function calculates the physical properties that may be required by the fluid dynamics problem. Namely the kinematic viscosity and, when required, the density. </p>
+<p>Calculates the physical properties. <a class="el" href="classThis.html">This</a> function calculates the physical properties that may be required by the fluid dynamics problem. Namely the kinematic viscosity and, when required, the density. </p>
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00309">309</a> of file <a class="el" href="navier__stokes__scratch__data_8cc_source.html">navier_stokes_scratch_data.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00365">365</a> of file <a class="el" href="navier__stokes__scratch__data_8cc_source.html">navier_stokes_scratch_data.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="utilities_8h_source.html#l00174">calculate_point_property()</a>, <a class="el" href="utilities_8h_source.html#l00220">calculate_point_property_cahn_hilliard()</a>, <a class="el" href="rheological__model_8h_source.html#l00615">calculate_shear_rate_magnitude()</a>, <a class="el" href="physical__properties__manager_8h_source.html#l00053">fluid_fluid</a>, <a class="el" href="physical__property__model_8h_source.html#l00049">pressure</a>, <a class="el" href="physical__property__model_8h_source.html#l00054">set_field_vector()</a>, <a class="el" href="physical__property__model_8h_source.html#l00045">shear_rate</a>, and <a class="el" href="physical__property__model_8h_source.html#l00046">temperature</a>.</p>
+<p class="reference">References <a class="el" href="utilities_8h_source.html#l00273">calculate_point_property()</a>, <a class="el" href="utilities_8h_source.html#l00336">calculate_point_property_cahn_hilliard()</a>, <a class="el" href="rheological__model_8h_source.html#l00623">calculate_shear_rate_magnitude()</a>, <a class="el" href="physical__properties__manager_8h_source.html#l00053">fluid_fluid</a>, <a class="el" href="physical__property__model_8h_source.html#l00056">pressure</a>, <a class="el" href="physical__property__model_8h_source.html#l00062">set_field_vector()</a>, <a class="el" href="physical__property__model_8h_source.html#l00052">shear_rate</a>, and <a class="el" href="physical__property__model_8h_source.html#l00053">temperature</a>.</p>
 
 </div>
 </div>
-<a id="a787c2622880bee639fc846d14d333269"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a787c2622880bee639fc846d14d333269">&#9670;&nbsp;</a></span>enable_cahn_hilliard()</h2>
+<a id="a126d7e05decf1cd0ab526d786a86e1af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a126d7e05decf1cd0ab526d786a86e1af">&#9670;&nbsp;</a></span>enable_cahn_hilliard() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -642,7 +622,13 @@ template&lt;int dim&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const Mapping&lt; dim &gt; &amp;&#160;</td>
-          <td class="paramname"><em>mapping</em>&#160;</td>
+          <td class="paramname"><em>mapping</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structParameters_1_1CahnHilliard.html">Parameters::CahnHilliard</a> &amp;&#160;</td>
+          <td class="paramname"><em>cahn_hilliard_parameters</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -662,9 +648,65 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00168">168</a> of file <a class="el" href="navier__stokes__scratch__data_8cc_source.html">navier_stokes_scratch_data.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00170">170</a> of file <a class="el" href="navier__stokes__scratch__data_8cc_source.html">navier_stokes_scratch_data.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="physical__property__model_8h_source.html#l00050">phase_order_cahn_hilliard</a>.</p>
+<p class="reference">References <a class="el" href="cahn__hilliard__filter_8cc_source.html#l00020">CahnHilliardFilterBase::model_cast()</a>, <a class="el" href="physical__property__model_8h_source.html#l00057">phase_order_cahn_hilliard</a>, and <a class="el" href="physical__property__model_8h_source.html#l00058">phase_order_cahn_hilliard_filtered</a>.</p>
+
+</div>
+</div>
+<a id="a73f68215f2c16e0e5a4ef75350ebf1bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73f68215f2c16e0e5a4ef75350ebf1bd">&#9670;&nbsp;</a></span>enable_cahn_hilliard() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classNavierStokesScratchData.html">NavierStokesScratchData</a>&lt; dim &gt;::enable_cahn_hilliard </td>
+          <td>(</td>
+          <td class="paramtype">const FiniteElement&lt; dim &gt; &amp;&#160;</td>
+          <td class="paramname"><em>fe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Quadrature&lt; dim &gt; &amp;&#160;</td>
+          <td class="paramname"><em>quadrature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Mapping&lt; dim &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mapping</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classCahnHilliardFilterBase.html">CahnHilliardFilterBase</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cahn_hilliard_filter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enables the collection of the <a class="el" href="classCahnHilliard.html">CahnHilliard</a> data by the scratch. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fe</td><td>FiniteElement associated with the <a class="el" href="classCahnHilliard.html">CahnHilliard</a> physics</td></tr>
+    <tr><td class="paramname">quadrature</td><td>Quadrature rule of the Navier-Stokes problem assembly</td></tr>
+    <tr><td class="paramname">mapping</td><td>Mapping used for the Navier-Stokes problem assembly </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00216">216</a> of file <a class="el" href="navier__stokes__scratch__data_8cc_source.html">navier_stokes_scratch_data.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="physical__property__model_8h_source.html#l00057">phase_order_cahn_hilliard</a>, and <a class="el" href="physical__property__model_8h_source.html#l00058">phase_order_cahn_hilliard_filtered</a>.</p>
 
 </div>
 </div>
@@ -702,7 +744,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00227">227</a> of file <a class="el" href="navier__stokes__scratch__data_8cc_source.html">navier_stokes_scratch_data.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00283">283</a> of file <a class="el" href="navier__stokes__scratch__data_8cc_source.html">navier_stokes_scratch_data.cc</a>.</p>
 
 </div>
 </div>
@@ -750,9 +792,9 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00285">285</a> of file <a class="el" href="navier__stokes__scratch__data_8cc_source.html">navier_stokes_scratch_data.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00341">341</a> of file <a class="el" href="navier__stokes__scratch__data_8cc_source.html">navier_stokes_scratch_data.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="bdf_8h_source.html#l00096">maximum_number_of_previous_solutions()</a>, and <a class="el" href="physical__property__model_8h_source.html#l00046">temperature</a>.</p>
+<p class="reference">References <a class="el" href="bdf_8h_source.html#l00102">maximum_number_of_previous_solutions()</a>, and <a class="el" href="physical__property__model_8h_source.html#l00053">temperature</a>.</p>
 
 </div>
 </div>
@@ -794,7 +836,7 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00263">263</a> of file <a class="el" href="navier__stokes__scratch__data_8cc_source.html">navier_stokes_scratch_data.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00319">319</a> of file <a class="el" href="navier__stokes__scratch__data_8cc_source.html">navier_stokes_scratch_data.cc</a>.</p>
 
 </div>
 </div>
@@ -832,7 +874,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00207">207</a> of file <a class="el" href="navier__stokes__scratch__data_8cc_source.html">navier_stokes_scratch_data.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00263">263</a> of file <a class="el" href="navier__stokes__scratch__data_8cc_source.html">navier_stokes_scratch_data.cc</a>.</p>
 
 </div>
 </div>
@@ -889,7 +931,7 @@ template&lt;int dim&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00092">92</a> of file <a class="el" href="navier__stokes__scratch__data_8cc_source.html">navier_stokes_scratch_data.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="bdf_8h_source.html#l00096">maximum_number_of_previous_solutions()</a>, and <a class="el" href="vof__filter_8cc_source.html#l00020">VolumeOfFluidFilterBase::model_cast()</a>.</p>
+<p class="reference">References <a class="el" href="bdf_8h_source.html#l00102">maximum_number_of_previous_solutions()</a>, and <a class="el" href="vof__filter_8cc_source.html#l00020">VolumeOfFluidFilterBase::model_cast()</a>.</p>
 
 </div>
 </div>
@@ -944,9 +986,9 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00130">130</a> of file <a class="el" href="navier__stokes__scratch__data_8cc_source.html">navier_stokes_scratch_data.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00131">131</a> of file <a class="el" href="navier__stokes__scratch__data_8cc_source.html">navier_stokes_scratch_data.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="bdf_8h_source.html#l00096">maximum_number_of_previous_solutions()</a>.</p>
+<p class="reference">References <a class="el" href="bdf_8h_source.html#l00102">maximum_number_of_previous_solutions()</a>.</p>
 
 </div>
 </div>
@@ -994,9 +1036,9 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00243">243</a> of file <a class="el" href="navier__stokes__scratch__data_8cc_source.html">navier_stokes_scratch_data.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00299">299</a> of file <a class="el" href="navier__stokes__scratch__data_8cc_source.html">navier_stokes_scratch_data.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="bdf_8h_source.html#l00096">maximum_number_of_previous_solutions()</a>.</p>
+<p class="reference">References <a class="el" href="bdf_8h_source.html#l00102">maximum_number_of_previous_solutions()</a>.</p>
 
 </div>
 </div>
@@ -1066,7 +1108,7 @@ template&lt;typename VectorType &gt; </div>
 <p>Using the FeValues and the content of the solutions and previous solutions, fills all of the class member of the scratch</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cell</td><td>The cell over which the assembly is being carried. This cell must be compatible with the fe which is used to fill the FeValues</td></tr>
+    <tr><td class="paramname">cell</td><td>The cell over which the assembly is being carried. <a class="el" href="classThis.html">This</a> cell must be compatible with the fe which is used to fill the FeValues</td></tr>
     <tr><td class="paramname">current_solution</td><td>The present value of the solution for [u,p]</td></tr>
     <tr><td class="paramname">previous_solutions</td><td>The solutions at the previous time steps</td></tr>
     <tr><td class="paramname">forcing_function</td><td>The function describing the momentum/mass source term</td></tr>
@@ -1075,14 +1117,14 @@ template&lt;typename VectorType &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00234">234</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00236">236</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
-<p class="reference">References <a class="el" href="physical__property__model_8h_source.html#l00049">pressure</a>.</p>
+<p class="reference">References <a class="el" href="multiphysics_8h.html#a2cbb04ef215561a69b48772159577fddad99fad96a5d0a7cb2eb41341ea556093">pressure</a>.</p>
 
 </div>
 </div>
-<a id="a077a7071ff2d141744f72e3e1ef3a50c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a077a7071ff2d141744f72e3e1ef3a50c">&#9670;&nbsp;</a></span>reinit_cahn_hilliard()</h2>
+<a id="a89be382ee756efb20600f131017a5d33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89be382ee756efb20600f131017a5d33">&#9670;&nbsp;</a></span>reinit_cahn_hilliard()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1109,8 +1151,8 @@ template&lt;typename VectorType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structParameters_1_1CahnHilliard.html">Parameters::CahnHilliard</a>&#160;</td>
-          <td class="paramname"><em>cahn_hilliard_parameters</em>&#160;</td>
+          <td class="paramtype">const VectorType &amp;&#160;</td>
+          <td class="paramname"><em>current_filtered_solution</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1128,15 +1170,13 @@ template&lt;typename VectorType &gt; </div>
 <p>Reinitialize the content of the scratch for CH. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cell</td><td>The cell over which the assembly is being carried. This cell must be compatible with the CH FE and not the Navier-Stokes FE</td></tr>
+    <tr><td class="paramname">cell</td><td>The cell over which the assembly is being carried. <a class="el" href="classThis.html">This</a> cell must be compatible with the CH FE and not the Navier-Stokes FE</td></tr>
     <tr><td class="paramname">current_solution</td><td>The present value of the solution for [phi] </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00979">979</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
-
-<p class="reference">References <a class="el" href="parameters__multiphysics_8h_source.html#l00206">Parameters::CahnHilliard::epsilon</a>, <a class="el" href="parameters__multiphysics_8h_source.html#l00203">Parameters::CahnHilliard::epsilon_set_method</a>, <a class="el" href="namespaceParameters.html#a2f4421761ead0a91af8b120a8d77de16a3c78b35502b2693fefdfc51cba3a53a5">Parameters::manual</a>, and <a class="el" href="parameters__multiphysics_8h_source.html#l00200">Parameters::CahnHilliard::well_height</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01001">1001</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1178,7 +1218,7 @@ template&lt;typename VectorType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00579">579</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00583">583</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1229,16 +1269,16 @@ template&lt;typename VectorType &gt; </div>
 <p>Reinitialize the content of the scratch for the heat transfer auxiliary physic. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cell</td><td>The cell over which the assembly is being carried. This cell must be compatible with the heat transfer FE and not the Navier-Stokes FE</td></tr>
+    <tr><td class="paramname">cell</td><td>The cell over which the assembly is being carried. <a class="el" href="classThis.html">This</a> cell must be compatible with the heat transfer FE and not the Navier-Stokes FE</td></tr>
     <tr><td class="paramname">current_solution</td><td>The present value of the solution for temperature</td></tr>
     <tr><td class="paramname">previous_solutions</td><td>Vector of \(n\) <code>VectorType</code> containers of previous temperature solutions. \(n\) depends on the BDF scheme selected for time-stepping. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00910">910</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00914">914</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
-<p class="reference">References <a class="el" href="bdf_8h_source.html#l00132">bdf_extrapolate()</a>, <a class="el" href="time__integration__utilities_8h_source.html#l00037">is_bdf()</a>, and <a class="el" href="bdf_8h_source.html#l00106">number_of_previous_solutions()</a>.</p>
+<p class="reference">References <a class="el" href="bdf_8h_source.html#l00151">bdf_extrapolate()</a>, <a class="el" href="time__integration__utilities_8h_source.html#l00037">is_bdf()</a>, and <a class="el" href="bdf_8h_source.html#l00115">number_of_previous_solutions()</a>.</p>
 
 </div>
 </div>
@@ -1310,19 +1350,19 @@ template&lt;typename VectorType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classCalculates.html">Calculates</a> the content of the scratch for the particle fluid interactions. </p>
+<p>Calculates the content of the scratch for the particle fluid interactions. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cell</td><td>The cell over which the assembly is being carried. This cell must be compatible with the void fraction FE and not the Navier-Stokes FE</td></tr>
+    <tr><td class="paramname">cell</td><td>The cell over which the assembly is being carried. <a class="el" href="classThis.html">This</a> cell must be compatible with the void fraction FE and not the Navier-Stokes FE</td></tr>
     <tr><td class="paramname">current_solution</td><td>The present value of the solution for [epsilon]</td></tr>
     <tr><td class="paramname">previous_solutions</td><td>The solutions at the previous time steps for [epsilon] </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00672">672</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00676">676</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
-<p class="reference">References <a class="el" href="dem__properties_8h_source.html#l00041">DEM::dp</a>, <a class="el" href="dem__properties_8h_source.html#l00048">DEM::fem_force_x</a>, <a class="el" href="dem__properties_8h_source.html#l00051">DEM::fem_torque_x</a>, <a class="el" href="physical__property__model_8h_source.html#l00049">pressure</a>, <a class="el" href="dem__properties_8h_source.html#l00042">DEM::v_x</a>, <a class="el" href="dem__properties_8h_source.html#l00043">DEM::v_y</a>, and <a class="el" href="dem__properties_8h_source.html#l00044">DEM::v_z</a>.</p>
+<p class="reference">References <a class="el" href="dem__properties_8h_source.html#l00041">DEM::dp</a>, <a class="el" href="dem__properties_8h_source.html#l00048">DEM::fem_force_x</a>, <a class="el" href="dem__properties_8h_source.html#l00051">DEM::fem_torque_x</a>, <a class="el" href="multiphysics_8h.html#a2cbb04ef215561a69b48772159577fddad99fad96a5d0a7cb2eb41341ea556093">pressure</a>, <a class="el" href="dem__properties_8h_source.html#l00042">DEM::v_x</a>, <a class="el" href="dem__properties_8h_source.html#l00043">DEM::v_y</a>, and <a class="el" href="dem__properties_8h_source.html#l00044">DEM::v_z</a>.</p>
 
 </div>
 </div>
@@ -1364,7 +1404,7 @@ template&lt;typename VectorType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00562">562</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00566">566</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1421,7 +1461,7 @@ template&lt;typename VectorType &gt; </div>
 <p>Reinitialize the content of the scratch for the vof. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cell</td><td>The cell over which the assembly is being carried. This cell must be compatible with the VOF FE and not the Navier-Stokes FE</td></tr>
+    <tr><td class="paramname">cell</td><td>The cell over which the assembly is being carried. <a class="el" href="classThis.html">This</a> cell must be compatible with the VOF FE and not the Navier-Stokes FE</td></tr>
     <tr><td class="paramname">current_solution</td><td>The present value of the solution for [alpha]</td></tr>
     <tr><td class="paramname">current_filtered_solution</td><td>The present value of the solution for [alpha]_filtered</td></tr>
     <tr><td class="paramname">previous_solutions</td><td>The solutions at the previous time steps for [alpha] </td></tr>
@@ -1429,7 +1469,7 @@ template&lt;typename VectorType &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00538">538</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00540">540</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1480,14 +1520,14 @@ template&lt;typename VectorType &gt; </div>
 <p>Reinitialize the content of the scratch for the void fraction. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cell</td><td>The cell over which the assembly is being carried. This cell must be compatible with the void fraction FE and not the Navier-Stokes FE</td></tr>
+    <tr><td class="paramname">cell</td><td>The cell over which the assembly is being carried. <a class="el" href="classThis.html">This</a> cell must be compatible with the void fraction FE and not the Navier-Stokes FE</td></tr>
     <tr><td class="paramname">current_solution</td><td>The present value of the solution for [epsilon]</td></tr>
     <tr><td class="paramname">previous_solutions</td><td>The solutions at the previous time steps for [epsilon] </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00620">620</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00624">624</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1506,7 +1546,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01138">1138</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01155">1155</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1524,7 +1564,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01134">1134</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01151">1151</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1542,7 +1582,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01151">1151</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01168">1168</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1560,7 +1600,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01065">1065</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01081">1081</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1578,7 +1618,25 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01199">1199</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01217">1217</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+
+</div>
+</div>
+<a id="a9a9121f92c46736d4be8b92933fb6874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a9121f92c46736d4be8b92933fb6874">&#9670;&nbsp;</a></span>cahn_hilliard_filter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classCahnHilliardFilterBase.html">CahnHilliardFilterBase</a>&gt; <a class="el" href="classNavierStokesScratchData.html">NavierStokesScratchData</a>&lt; dim &gt;::cahn_hilliard_filter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01194">1194</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1596,7 +1654,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01060">1060</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01076">1076</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1614,7 +1672,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01145">1145</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01162">1162</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1632,7 +1690,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01150">1150</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01167">1167</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1650,25 +1708,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01181">1181</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
-
-</div>
-</div>
-<a id="af0bca7103ab80cbdca106b1e28203392"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0bca7103ab80cbdca106b1e28203392">&#9670;&nbsp;</a></span>chemical_potential_cahn_hilliard_gradients</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int dim&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;Tensor&lt;1, dim&gt; &gt; <a class="el" href="classNavierStokesScratchData.html">NavierStokesScratchData</a>&lt; dim &gt;::chemical_potential_cahn_hilliard_gradients</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01177">1177</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01199">1199</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1686,7 +1726,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01176">1176</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01191">1191</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1704,7 +1744,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01074">1074</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01090">1090</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1722,7 +1762,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01045">1045</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01062">1062</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1740,7 +1780,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01115">1115</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01132">1132</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1758,7 +1798,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01024">1024</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01041">1041</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1776,7 +1816,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01039">1039</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01056">1056</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1794,25 +1834,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01040">1040</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
-
-</div>
-</div>
-<a id="a1874b67c500171e778d864e1ad7368be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1874b67c500171e778d864e1ad7368be">&#9670;&nbsp;</a></span>density_diff</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int dim&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="classNavierStokesScratchData.html">NavierStokesScratchData</a>&lt; dim &gt;::density_diff</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01171">1171</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01057">1057</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1830,7 +1852,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01026">1026</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01043">1043</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1848,7 +1870,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01043">1043</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01060">1060</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1866,7 +1888,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01044">1044</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01061">1061</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1884,7 +1906,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01025">1025</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01042">1042</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1902,7 +1924,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01041">1041</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01058">1058</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1920,7 +1942,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01042">1042</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01059">1059</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1938,7 +1960,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01089">1089</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01105">1105</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1956,7 +1978,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01027">1027</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01044">1044</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1974,7 +1996,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01046">1046</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01063">1063</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -1992,26 +2014,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01047">1047</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
-
-</div>
-</div>
-<a id="aa7e4e265c5c1b11835e73cab803047b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7e4e265c5c1b11835e73cab803047b4">&#9670;&nbsp;</a></span>epsilon</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int dim&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="classNavierStokesScratchData.html">NavierStokesScratchData</a>&lt; dim &gt;::epsilon</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Scratch component for the <a class="el" href="classCahnHilliard.html">CahnHilliard</a> auxiliary physics </p>
-
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01169">1169</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01064">1064</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2029,7 +2032,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01219">1219</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01235">1235</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2047,7 +2050,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01225">1225</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01241">1241</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2065,7 +2068,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01223">1223</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01239">1239</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2083,7 +2086,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01221">1221</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01237">1237</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2101,7 +2104,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01203">1203</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01220">1220</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2119,7 +2122,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01222">1222</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01238">1238</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2137,7 +2140,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01195">1195</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01213">1213</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2155,7 +2158,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01205">1205</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01222">1222</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2173,7 +2176,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01224">1224</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01240">1240</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2191,7 +2194,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01220">1220</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01236">1236</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2209,7 +2212,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01214">1214</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01231">1231</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2227,7 +2230,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01213">1213</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01230">1230</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2245,7 +2248,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01204">1204</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01221">1221</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2263,7 +2266,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01210">1210</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01227">1227</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2281,7 +2284,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01211">1211</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01228">1228</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2299,7 +2302,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01212">1212</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01229">1229</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2317,7 +2320,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01209">1209</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01226">1226</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2335,7 +2338,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01191">1191</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01209">1209</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2353,7 +2356,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01057">1057</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01073">1073</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2371,7 +2374,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01179">1179</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01197">1197</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2389,7 +2392,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01113">1113</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01130">1130</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2407,7 +2410,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01112">1112</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01129">1129</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2425,7 +2428,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01164">1164</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01181">1181</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2443,7 +2446,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01107">1107</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01124">1124</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2461,7 +2464,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01126">1126</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01143">1143</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2479,7 +2482,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01023">1023</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01040">1040</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2497,7 +2500,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01108">1108</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01125">1125</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2515,7 +2518,25 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01105">1105</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01121">1121</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+
+</div>
+</div>
+<a id="af1ed3d09a7c260547245c035a1641d03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1ed3d09a7c260547245c035a1641d03">&#9670;&nbsp;</a></span>filtered_phase_order_cahn_hilliard_values</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; <a class="el" href="classNavierStokesScratchData.html">NavierStokesScratchData</a>&lt; dim &gt;::filtered_phase_order_cahn_hilliard_values</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01189">1189</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2533,7 +2554,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01103">1103</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01119">1119</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2551,7 +2572,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01137">1137</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01154">1154</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2569,7 +2590,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01139">1139</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01156">1156</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2587,7 +2608,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01135">1135</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01152">1152</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2605,7 +2626,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01141">1141</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01158">1158</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2623,7 +2644,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01142">1142</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01159">1159</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2641,7 +2662,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01140">1140</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01157">1157</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2659,7 +2680,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01066">1066</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01082">1082</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2676,8 +2697,9 @@ template&lt;int dim&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Scratch component for the <a class="el" href="classCahnHilliard.html">CahnHilliard</a> auxiliary physics </p>
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01172">1172</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01186">1186</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2695,7 +2717,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01111">1111</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01128">1128</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2713,7 +2735,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01189">1189</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01207">1207</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2732,7 +2754,7 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 <p>Scratch component for the particle fluid interaction auxiliary physics </p>
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01131">1131</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01148">1148</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2750,7 +2772,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01110">1110</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01127">1127</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2769,7 +2791,7 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 <p>Scratch component for the heat transfer </p>
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01157">1157</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01174">1174</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2788,7 +2810,7 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 <p>Scratch component for the VOF auxiliary physics </p>
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01100">1100</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01116">1116</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2807,7 +2829,7 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 <p>Scratch component for the void fraction auxiliary physics </p>
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01120">1120</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01137">1137</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2825,7 +2847,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01031">1031</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01048">1048</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2843,7 +2865,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01095">1095</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01111">1111</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2861,7 +2883,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01093">1093</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01109">1109</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2879,7 +2901,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01091">1091</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01107">1107</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2897,7 +2919,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01132">1132</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01149">1149</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2916,7 +2938,7 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 <p>Is boundary cell indicator </p>
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01186">1186</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01204">1204</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2934,7 +2956,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01198">1198</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01216">1216</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2952,7 +2974,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01070">1070</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01086">1086</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2970,7 +2992,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01028">1028</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01045">1045</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -2988,7 +3010,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01048">1048</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01065">1065</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3006,7 +3028,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01049">1049</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01066">1066</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3024,7 +3046,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01029">1029</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01046">1046</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3042,7 +3064,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01092">1092</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01108">1108</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3060,7 +3082,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01067">1067</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01083">1083</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3078,25 +3100,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01147">1147</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
-
-</div>
-</div>
-<a id="ab6c2b6a2d02e6661ecb1dbc4e0458320"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6c2b6a2d02e6661ecb1dbc4e0458320">&#9670;&nbsp;</a></span>mobility_cahn_hilliard</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int dim&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;double&gt; <a class="el" href="classNavierStokesScratchData.html">NavierStokesScratchData</a>&lt; dim &gt;::mobility_cahn_hilliard</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01054">1054</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01164">1164</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3114,7 +3118,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01058">1058</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01074">1074</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3132,7 +3136,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01173">1173</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01187">1187</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3150,7 +3154,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01158">1158</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01175">1175</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3168,7 +3172,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01101">1101</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01117">1117</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3186,7 +3190,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01121">1121</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01138">1138</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3204,7 +3208,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01193">1193</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01211">1211</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3222,7 +3226,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01194">1194</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01212">1212</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3240,7 +3244,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01059">1059</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01075">1075</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3258,7 +3262,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01148">1148</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01165">1165</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3276,7 +3280,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01143">1143</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01160">1160</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3294,7 +3298,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01133">1133</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01150">1150</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3312,7 +3316,25 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01144">1144</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01161">1161</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+
+</div>
+</div>
+<a id="a402dc7a9c4c505cb09842b649fbf0c81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a402dc7a9c4c505cb09842b649fbf0c81">&#9670;&nbsp;</a></span>phase_gradient_values</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;Tensor&lt;1, dim&gt; &gt; <a class="el" href="classNavierStokesScratchData.html">NavierStokesScratchData</a>&lt; dim &gt;::phase_gradient_values</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01122">1122</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3330,7 +3352,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01180">1180</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01198">1198</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3348,7 +3370,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01175">1175</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01190">1190</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3366,7 +3388,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01174">1174</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01188">1188</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3384,7 +3406,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01102">1102</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01118">1118</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3402,7 +3424,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01094">1094</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01110">1110</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3420,7 +3442,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01090">1090</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01106">1106</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3438,7 +3460,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01149">1149</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01166">1166</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3456,7 +3478,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01062">1062</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01078">1078</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3474,7 +3496,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01084">1084</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01100">1100</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3492,7 +3514,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01036">1036</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01053">1053</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3510,7 +3532,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01083">1083</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01099">1099</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3528,7 +3550,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01032">1032</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01049">1049</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3546,7 +3568,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01104">1104</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01120">1120</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3564,7 +3586,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01085">1085</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01101">1101</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3582,7 +3604,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01162">1162</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01179">1179</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3600,7 +3622,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01160">1160</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01177">1177</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3618,7 +3640,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01086">1086</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01102">1102</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3636,7 +3658,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01123">1123</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01140">1140</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3654,7 +3676,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01114">1114</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01131">1131</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3672,7 +3694,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01022">1022</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01039">1039</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3690,7 +3712,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01071">1071</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01087">1087</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3708,7 +3730,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01146">1146</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01163">1163</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3726,7 +3748,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01064">1064</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01080">1080</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3744,7 +3766,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01082">1082</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01098">1098</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3762,7 +3784,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01019">1019</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01036">1036</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3780,7 +3802,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01052">1052</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01069">1069</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3798,7 +3820,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01053">1053</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01070">1070</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3816,7 +3838,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01161">1161</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01178">1178</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3834,7 +3856,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01159">1159</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01176">1176</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3852,7 +3874,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01030">1030</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01047">1047</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3870,7 +3892,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01050">1050</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01067">1067</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3888,7 +3910,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01051">1051</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01068">1068</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3906,7 +3928,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01152">1152</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01169">1169</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3924,7 +3946,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01061">1061</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01077">1077</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3942,7 +3964,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01078">1078</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01094">1094</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3960,7 +3982,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01079">1079</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01095">1095</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3978,7 +4000,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01081">1081</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01097">1097</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -3996,7 +4018,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01080">1080</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01096">1096</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -4014,7 +4036,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01077">1077</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01093">1093</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -4032,7 +4054,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01124">1124</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01141">1141</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -4050,25 +4072,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01122">1122</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
-
-</div>
-</div>
-<a id="a9b4d6ad70870c9091bfc9b06c92389f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b4d6ad70870c9091bfc9b06c92389f2">&#9670;&nbsp;</a></span>well_height</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int dim&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="classNavierStokesScratchData.html">NavierStokesScratchData</a>&lt; dim &gt;::well_height</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01170">1170</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01139">1139</a> of file <a class="el" href="navier__stokes__scratch__data_8h_source.html">navier_stokes_scratch_data.h</a>.</p>
 
 </div>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Developer documentation for the Lethe open-source library: /home/runner/work/lethe/lethe/include/dem/update_fine_search_candidates.h File Reference</title>
+<title>Lethe Open-Source Library: /home/runner/work/lethe/lethe/include/dem/update_fine_search_candidates.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,8 +30,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Developer documentation for the Lethe open-source library
+   <div id="projectname">Lethe Open-Source Library
    </div>
+   <div id="projectbrief">Developer Guide</div>
   </td>
  </tr>
  </tbody>
@@ -173,7 +174,7 @@ template&lt;int dim, typename pairs_structure , typename candidates_structure , 
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Manages removing repetitions and adding new contact pairs to the contact containers when particles are exchanged between processors. If the contact pair (in adjacent particles containers) does not exist in the output of the new (current step) broad search, it is removed from the contact pair (adjacent containers), since it means that the contact is being handled by another processor. If the pair exists in the output of the new broad search, it is removed from the output of the broad search, as the contact is already being processed. This process is performed for many types of particle-object pairs : local-local particle-particle pairs, local-ghost particle-particle pairs and particle-wall pairs, particle-floating wall pairs and particle-floating mesh contacts pairs. Note : contact_type is important for local or ghost particle-particle contact only</p>
+<p>Manages removing repetitions and adding new contact pairs to the contact containers when particles are exchanged between processors. If the contact pair (in adjacent particles containers) does not exist in the output of the new (current step) broad search, it is removed from the contact pair (adjacent containers), since it means that the contact is being handled by another processor. If the pair exists in the output of the new broad search, it is removed from the output of the broad search, as the contact is already being processed. <a class="el" href="classThis.html">This</a> process is performed for many types of particle-object pairs : local-local particle-particle pairs, local-ghost particle-particle pairs and particle-wall pairs, particle-floating wall pairs and particle-floating mesh contacts pairs. Note : contact_type is important for local or ghost particle-particle contact only</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pairs_in_contact</td><td>adjacent particle-object pairs from fine search at last time step </td></tr>

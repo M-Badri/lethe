@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Developer documentation for the Lethe open-source library: Class Members - Functions</title>
+<title>Lethe Open-Source Library: Class Members - Functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,8 +30,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Developer documentation for the Lethe open-source library
+   <div id="projectname">Lethe Open-Source Library
    </div>
+   <div id="projectbrief">Developer Guide</div>
   </td>
  </tr>
  </tbody>
@@ -120,18 +121,21 @@ $(function() {
 : <a class="el" href="classGLSSharpNavierStokesSolver.html#a47c51b4414261c62a252eefca723432e">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
 </li>
 <li>reinit()
-: <a class="el" href="classCahnHilliardScratchData.html#aa35d5bf2d216c5aba85c67a1b59d7f80">CahnHilliardScratchData&lt; dim &gt;</a>
-, <a class="el" href="classHeatTransferScratchData.html#ac5aaf5b552ad06705dd19f4c21d763aa">HeatTransferScratchData&lt; dim &gt;</a>
-, <a class="el" href="classNavierStokesOperatorBase.html#a2a42be5b78ecee77e813da05d13e6a49">NavierStokesOperatorBase&lt; dim, number &gt;</a>
+: <a class="el" href="classCahnHilliardScratchData.html#aee2615c17b9b368cce9a152a16e31dee">CahnHilliardScratchData&lt; dim &gt;</a>
+, <a class="el" href="classHeatTransferScratchData.html#ae9c04687dab523855f69361986866a2f">HeatTransferScratchData&lt; dim &gt;</a>
+, <a class="el" href="classNavierStokesOperatorBase.html#ae083a4141bf4f0f162990960aa66ea9f">NavierStokesOperatorBase&lt; dim, number &gt;</a>
 , <a class="el" href="classNavierStokesScratchData.html#abb5c55b6d522bcf6970eb0f2becb3c3c">NavierStokesScratchData&lt; dim &gt;</a>
 , <a class="el" href="classTracerScratchData.html#afbb390b1da5251012af56a9d81fa7ad9">TracerScratchData&lt; dim &gt;</a>
 , <a class="el" href="classVOFScratchData.html#a4c7a04cc24d358123c2ce8183f2fedbc">VOFScratchData&lt; dim &gt;</a>
 </li>
 <li>reinit_cahn_hilliard()
-: <a class="el" href="classNavierStokesScratchData.html#a077a7071ff2d141744f72e3e1ef3a50c">NavierStokesScratchData&lt; dim &gt;</a>
+: <a class="el" href="classNavierStokesScratchData.html#a89be382ee756efb20600f131017a5d33">NavierStokesScratchData&lt; dim &gt;</a>
 </li>
 <li>reinit_curvature()
 : <a class="el" href="classNavierStokesScratchData.html#ada4d466d38ae48bee70c5b562e4a74af">NavierStokesScratchData&lt; dim &gt;</a>
+</li>
+<li>reinit_fluid_dynamics()
+: <a class="el" href="classHeatTransferScratchData.html#a31b9944e07f9916921feab53f6d292b6">HeatTransferScratchData&lt; dim &gt;</a>
 </li>
 <li>reinit_heat_transfer()
 : <a class="el" href="classNavierStokesScratchData.html#a3c148603b147b2f0e746395d8756ab52">NavierStokesScratchData&lt; dim &gt;</a>
@@ -144,8 +148,7 @@ $(function() {
 </li>
 <li>reinit_velocity()
 : <a class="el" href="classCahnHilliardScratchData.html#ac92fa3d3c4689333ec4d840a444e67cc">CahnHilliardScratchData&lt; dim &gt;</a>
-, <a class="el" href="classHeatTransferScratchData.html#a3a97488b9bdfdb83449001b9531369ad">HeatTransferScratchData&lt; dim &gt;</a>
-, <a class="el" href="classTracerScratchData.html#aae90bb4cc60f1a4d5a1a75b6aca90612">TracerScratchData&lt; dim &gt;</a>
+, <a class="el" href="classTracerScratchData.html#a350ac8f9bc2980389705ecc7e1b81347">TracerScratchData&lt; dim &gt;</a>
 , <a class="el" href="classVOFScratchData.html#a0125d9d9ed2713c0705bc8013d42381b">VOFScratchData&lt; dim &gt;</a>
 </li>
 <li>reinit_velocity_gradient()
@@ -188,10 +191,13 @@ $(function() {
 </li>
 <li>rotate_grid()
 : <a class="el" href="classSerialSolid.html#aacd53d2b3425e246f90c148f678fa1de">SerialSolid&lt; dim, spacedim &gt;</a>
-, <a class="el" href="classSolidBase.html#a0b95212a394ee6cb44e4142cd9b7a3e0">SolidBase&lt; dim, spacedim &gt;</a>
+, <a class="el" href="classSolidBase.html#a74e83d98f02c979151c56429d8eee162">SolidBase&lt; dim, spacedim &gt;</a>
 </li>
 <li>rotate_nodes()
 : <a class="el" href="classRBFShape.html#a37e04469a136df013e5c01044e2a4e73">RBFShape&lt; dim &gt;</a>
+</li>
+<li>rotation_matrix_to_xyz_angles()
+: <a class="el" href="classShape.html#a256348a6ee866fb1064738a35b529428">Shape&lt; dim &gt;</a>
 </li>
 <li>RPT()
 : <a class="el" href="classRPT.html#a1c65316533eea65bd4b50e9a4b950bfd">RPT&lt; dim &gt;</a>

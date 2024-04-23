@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Developer documentation for the Lethe open-source library: Class Members - Variables</title>
+<title>Lethe Open-Source Library: Class Members - Variables</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,8 +30,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Developer documentation for the Lethe open-source library
+   <div id="projectname">Lethe Open-Source Library
    </div>
+   <div id="projectbrief">Developer Guide</div>
   </td>
  </tr>
  </tbody>
@@ -132,7 +133,7 @@ $(function() {
 </li>
 <li>simulation_control
 : <a class="el" href="classCahnHilliard.html#a69e5392abafa510ed860a999dca2909d">CahnHilliard&lt; dim &gt;</a>
-, <a class="el" href="classCahnHilliardAssemblerBase.html#a964229755d03f0276ea8e22946291179">CahnHilliardAssemblerBase&lt; dim &gt;</a>
+, <a class="el" href="classCahnHilliardAssemblerBase.html#a4f7e1fe2d9841ec7587df8593079daae">CahnHilliardAssemblerBase&lt; dim &gt;</a>
 , <a class="el" href="classDEMSolver.html#ac836168708f527e44cc562de07f4ffae">DEMSolver&lt; dim &gt;</a>
 , <a class="el" href="classDEMSolverParameters.html#abe03b7dc0f361ad437aa5a4bca2ed7f2">DEMSolverParameters&lt; dim &gt;</a>
 , <a class="el" href="classGLSIsothermalCompressibleNavierStokesAssemblerBDF.html#a1fe689c5a119a90bf9056d0223322fa7">GLSIsothermalCompressibleNavierStokesAssemblerBDF&lt; dim &gt;</a>
@@ -245,13 +246,13 @@ $(function() {
 : <a class="el" href="classRPTL2Projection.html#a41a78e250247d6ca36ac3370f267f565">RPTL2Projection&lt; dim &gt;</a>
 </li>
 <li>solution_pw
-: <a class="el" href="classVolumeOfFluid.html#a7f05fe1696a61adec48d46fa68e015c4">VolumeOfFluid&lt; dim &gt;</a>
+: <a class="el" href="classVolumeOfFluid.html#acb35d5198ab5a51c56ce474d78a0a539">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>solution_transfer
-: <a class="el" href="classCahnHilliard.html#afbf48ad000f57d8c2e0dd5c69c41e6cb">CahnHilliard&lt; dim &gt;</a>
-, <a class="el" href="classHeatTransfer.html#ab31fd65f8cd6653965369135fa4d06ab">HeatTransfer&lt; dim &gt;</a>
-, <a class="el" href="classTracer.html#a689b9237232d457365226e78a651bc9c">Tracer&lt; dim &gt;</a>
-, <a class="el" href="classVolumeOfFluid.html#aa02e2518fcf42dbdc137c4fbbab26b84">VolumeOfFluid&lt; dim &gt;</a>
+: <a class="el" href="classCahnHilliard.html#a804ea4b0af726e98b5f73e8ba7280ab2">CahnHilliard&lt; dim &gt;</a>
+, <a class="el" href="classHeatTransfer.html#a7b1e554759228af06cd50a6a57829ac2">HeatTransfer&lt; dim &gt;</a>
+, <a class="el" href="classTracer.html#a89734ddcac50d0b6ce3a264c3944a704">Tracer&lt; dim &gt;</a>
+, <a class="el" href="classVolumeOfFluid.html#a0c8d98d776987ecf030b22253fe45863">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>solution_transfer_sum_reynolds_normal_stress_dt
 : <a class="el" href="classAverageVelocities.html#aeefda4c8b5f35ec0acf99dc16f279ddf">AverageVelocities&lt; dim, VectorType, DofsType &gt;</a>
@@ -319,7 +320,8 @@ $(function() {
 : <a class="el" href="classDeathStar.html#ab5ee866340ad03baff8f4ec808faad4a">DeathStar&lt; dim &gt;</a>
 </li>
 <li>stabilization
-: <a class="el" href="structParameters_1_1Stabilization.html#ae7aa4d80ac010b83de1242172de802ef">Parameters::Stabilization</a>
+: <a class="el" href="classNavierStokesOperatorBase.html#ab9efff8facaebd37096ecd6c38288ef7">NavierStokesOperatorBase&lt; dim, number &gt;</a>
+, <a class="el" href="structParameters_1_1Stabilization.html#ae7aa4d80ac010b83de1242172de802ef">Parameters::Stabilization</a>
 , <a class="el" href="classSimulationParameters.html#a4b697f9306ced1d13f9c4f82e94c8d52">SimulationParameters&lt; dim &gt;</a>
 </li>
 <li>standard_deviation
@@ -331,6 +333,9 @@ $(function() {
 <li>startup_timestep_scaling
 : <a class="el" href="structParameters_1_1SimulationControl.html#ac3c1dc6922d18efe28d3c7cbd35676cd">Parameters::SimulationControl</a>
 , <a class="el" href="classSimulationControl.html#a099661c9b1f07453cef87bf845b7b464">SimulationControl</a>
+</li>
+<li>stasis_constraint_structs
+: <a class="el" href="classNavierStokesBase.html#a0116182fcb14803f673fb2fe05ef21b5">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
 </li>
 <li>statistics_table
 : <a class="el" href="classCahnHilliard.html#af01b17b6808415804c7fdd8c1e500257">CahnHilliard&lt; dim &gt;</a>
@@ -413,7 +418,8 @@ $(function() {
 : <a class="el" href="structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#a7729d212b91be75a6000e17f5f9c9645">Parameters::Lagrangian::LagrangianPhysicalProperties</a>
 </li>
 <li>surface_tension
-: <a class="el" href="classNavierStokesScratchData.html#a5f65155a6dcfa12516d5357049ecba5b">NavierStokesScratchData&lt; dim &gt;</a>
+: <a class="el" href="classCahnHilliardScratchData.html#a2771e27f3c7af6320aa2ae8025f8393f">CahnHilliardScratchData&lt; dim &gt;</a>
+, <a class="el" href="classNavierStokesScratchData.html#a5f65155a6dcfa12516d5357049ecba5b">NavierStokesScratchData&lt; dim &gt;</a>
 , <a class="el" href="classPhysicalPropertiesManager.html#aae8f7fb989f6044bd75c64ecbfd0b665">PhysicalPropertiesManager</a>
 </li>
 <li>surface_tension_coefficient
@@ -471,25 +477,25 @@ $(function() {
 : <a class="el" href="classMFNavierStokesSolver.html#ab4ba4ab507512c88af8dd28705ca8323">MFNavierStokesSolver&lt; dim &gt;</a>
 </li>
 <li>system_rhs
-: <a class="el" href="classCahnHilliard.html#ae94aa8f9502f163f63b01aa391e1a478">CahnHilliard&lt; dim &gt;</a>
-, <a class="el" href="classHeatTransfer.html#a849b3f3e2968f703dc0754cdaedbf4e6">HeatTransfer&lt; dim &gt;</a>
+: <a class="el" href="classCahnHilliard.html#a73e777904b4098cbb986800eb53cb381">CahnHilliard&lt; dim &gt;</a>
+, <a class="el" href="classHeatTransfer.html#ae9d7fdd9e1b9fbc20a244f569d5a6cd0">HeatTransfer&lt; dim &gt;</a>
 , <a class="el" href="classNavierStokesBase.html#a516374d9b3217c9ed5679577fa483172">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
-, <a class="el" href="classPostProcessorSmoothing.html#ae33a548e199791c72e66a1ef2a3a2ea4">PostProcessorSmoothing&lt; dim, VectorType &gt;</a>
+, <a class="el" href="classPostProcessorSmoothing.html#afe4e8bdc02c1096e6670506236d84b28">PostProcessorSmoothing&lt; dim, VectorType &gt;</a>
 , <a class="el" href="classRPTL2Projection.html#a3187dd00ab4ee1ddd8ad58db12e8625e">RPTL2Projection&lt; dim &gt;</a>
-, <a class="el" href="classTracer.html#a6032cabc1550e059a5cbd53a0b30f487">Tracer&lt; dim &gt;</a>
-, <a class="el" href="classVolumeOfFluid.html#a9bb477241dc6b036bcefb836abac92c4">VolumeOfFluid&lt; dim &gt;</a>
+, <a class="el" href="classTracer.html#a18360e3f93bb043f5e82720fdc6a5212">Tracer&lt; dim &gt;</a>
+, <a class="el" href="classVolumeOfFluid.html#ad2e963b7c5ef2f8d5af493e9e2fd4ffa">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>system_rhs_curvature
-: <a class="el" href="classVolumeOfFluid.html#aa88a334859ba288d670fcabcccc1434a">VolumeOfFluid&lt; dim &gt;</a>
+: <a class="el" href="classVolumeOfFluid.html#affe16076792248e83d262c53f40f3b14">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>system_rhs_phase_fraction
-: <a class="el" href="classVolumeOfFluid.html#a8c5b9bff1d183b5303816447d728a0ae">VolumeOfFluid&lt; dim &gt;</a>
+: <a class="el" href="classVolumeOfFluid.html#adc7861e4b7d433ba5c50d3748c4509e1">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>system_rhs_projected_phase_fraction_gradient
-: <a class="el" href="classVolumeOfFluid.html#aa792460ad6e86ba6472d3eb650468510">VolumeOfFluid&lt; dim &gt;</a>
+: <a class="el" href="classVolumeOfFluid.html#a6bde71216bc420b5b240eab5745c7a50">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>system_rhs_void_fraction
-: <a class="el" href="classGLSVANSSolver.html#ad35b1d2baa18f42edbfe0e180c2ce6c4">GLSVANSSolver&lt; dim &gt;</a>
+: <a class="el" href="classGLSVANSSolver.html#a1e21e32a3dbeae5eee8d44748e759213">GLSVANSSolver&lt; dim &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->
