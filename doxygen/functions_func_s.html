@@ -121,6 +121,9 @@ $(function() {
 <li>set_coarse_mesh_counts()
 : <a class="el" href="classRPTCellReconstruction.html#ae58ecc40dd71090123eb622c810c19a6">RPTCellReconstruction&lt; dim &gt;</a>
 </li>
+<li>set_contact_search_iteration_function()
+: <a class="el" href="classDEMSolver.html#a7b19502daa68dda43e4433a0410d4d95">DEMSolver&lt; dim &gt;</a>
+</li>
 <li>set_current_time_step()
 : <a class="el" href="classSimulationControl.html#aa0eca88ca928d9f463b2051c394ad0c2">SimulationControl</a>
 </li>
@@ -173,6 +176,9 @@ $(function() {
 , <a class="el" href="classIBParticle.html#aa6f51ae5c5232f784ca2b6bac7e8ab7d">IBParticle&lt; dim &gt;</a>
 , <a class="el" href="classShape.html#a4012470e896cf61c53ad611eb1a26e06">Shape&lt; dim &gt;</a>
 </li>
+<li>set_load_balance_iteration_check_function()
+: <a class="el" href="classDEMSolver.html#a31c9e5e4fcf5b292e76ea454bb6eaa31">DEMSolver&lt; dim &gt;</a>
+</li>
 <li>set_n()
 : <a class="el" href="classCarreau.html#a90505f365d8fa846133219b4c4837b6b">Carreau</a>
 , <a class="el" href="classPowerLaw.html#ab01838c8f270558ac46334ceeecd75fe">PowerLaw</a>
@@ -184,6 +190,9 @@ $(function() {
 <li>set_orientation()
 : <a class="el" href="classIBParticle.html#ad19ebdd1188adb181af979666037a7b5">IBParticle&lt; dim &gt;</a>
 , <a class="el" href="classShape.html#ad51d60bc8a3d9711293b931981c433ca">Shape&lt; dim &gt;</a>
+</li>
+<li>set_parameters()
+: <a class="el" href="classAdaptiveSparseContacts.html#a4f401c39f568e1b38b9a6bc9a6af32a9">AdaptiveSparseContacts&lt; dim &gt;</a>
 </li>
 <li>set_part_of_a_composite()
 : <a class="el" href="classShape.html#acc115201008418068265ed7fd5f092ae">Shape&lt; dim &gt;</a>
@@ -232,15 +241,13 @@ $(function() {
 <li>set_suggested_time_step()
 : <a class="el" href="classSimulationControl.html#aa6a38ec53bec29f7d4a57142988c981d">SimulationControl</a>
 </li>
-<li>set_threshold_values()
-: <a class="el" href="classDisableContacts.html#ad36a9809f7e46e4c0ae7cc22a1050523">DisableContacts&lt; dim &gt;</a>
-</li>
 <li>set_time_average_solution()
 : <a class="el" href="classMultiphysicsInterface.html#a791f019b8c5706bfe27dd903813e7f6d">MultiphysicsInterface&lt; dim &gt;</a>
 </li>
 <li>setup_AMG()
 : <a class="el" href="classGDNavierStokesSolver.html#a0bb4509808b91adfb85c2ff74c482c70">GDNavierStokesSolver&lt; dim &gt;</a>
 , <a class="el" href="classGLSNavierStokesSolver.html#aaa2c7b20b39211a58417e57d38bb3dd0">GLSNavierStokesSolver&lt; dim &gt;</a>
+, <a class="el" href="classMFNavierStokesPreconditionGMG.html#acbe0cd58f06b468af51b5df022527552">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
 </li>
 <li>setup_and_calculate()
 : <a class="el" href="classRPT.html#a36bbffc3e27f53c9740e34c67d13a1b7">RPT&lt; dim &gt;</a>
@@ -286,6 +293,7 @@ $(function() {
 <li>setup_ILU()
 : <a class="el" href="classGDNavierStokesSolver.html#a383d2276dddc25795bdb333ff3939f24">GDNavierStokesSolver&lt; dim &gt;</a>
 , <a class="el" href="classGLSNavierStokesSolver.html#ad5f4d7b4e5330e9837d08ccb57b4523e">GLSNavierStokesSolver&lt; dim &gt;</a>
+, <a class="el" href="classMFNavierStokesPreconditionGMG.html#a2d8a2e84e7c9e890168af384c7e53784">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
 , <a class="el" href="classMFNavierStokesSolver.html#a66a607f5ebe35f21a9a4f26763fdbb81">MFNavierStokesSolver&lt; dim &gt;</a>
 </li>
 <li>setup_particles()
@@ -295,8 +303,11 @@ $(function() {
 : <a class="el" href="classSolidBase.html#af1f24708bcc550b4dda791eefdd913c6">SolidBase&lt; dim, spacedim &gt;</a>
 </li>
 <li>setup_preconditioner()
-: <a class="el" href="classGLSNavierStokesSolver.html#a4b531d1c4e60595b81cd15b7f3297e98">GLSNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classMFNavierStokesSolver.html#a960c01e99247ec9143d7246268e4b1f4">MFNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classAuxiliaryPhysics.html#a664990d705edc069f7676ac5e575e3c8">AuxiliaryPhysics&lt; dim, VectorType &gt;</a>
+, <a class="el" href="classGDNavierStokesSolver.html#a55a5a1a553063e05169c1f28b5290895">GDNavierStokesSolver&lt; dim &gt;</a>
+, <a class="el" href="classGLSNavierStokesSolver.html#ac4ce5a5f0d3b09bc6953f39a60d4ad51">GLSNavierStokesSolver&lt; dim &gt;</a>
+, <a class="el" href="classMFNavierStokesSolver.html#ac496af2ecb449cca0e888ac82aac1ec2">MFNavierStokesSolver&lt; dim &gt;</a>
+, <a class="el" href="classPhysicsSolver.html#a566177a0569619dcf0c3a5f2fb1cdf4d">PhysicsSolver&lt; VectorType &gt;</a>
 </li>
 <li>setup_system()
 : <a class="el" href="classRPTL2Projection.html#a66232600a29707d4b81a13b84c70af73">RPTL2Projection&lt; dim &gt;</a>
@@ -460,13 +471,14 @@ $(function() {
 : <a class="el" href="classstatistics.html#a31d6750c3251c979f5c2d013984e1162">statistics</a>
 </li>
 <li>store_candidates()
-: <a class="el" href="classParticleParticleBroadSearch.html#a7c478182a57b725dfa9ca95757d68b6e">ParticleParticleBroadSearch&lt; dim &gt;</a>
-</li>
-<li>superquadric()
-: <a class="el" href="classSuperquadric.html#ac9e380308c0e0904223379f562686a9b">Superquadric&lt; dim &gt;</a>
+: <a class="el" href="classParticleParticleBroadSearch.html#a344c2c3221f5406b75f47840cfbe96ba">ParticleParticleBroadSearch&lt; dim &gt;</a>
+, <a class="el" href="classParticleWallBroadSearch.html#a98de1d7162aa686d05b59a07742122c6">ParticleWallBroadSearch&lt; dim &gt;</a>
 </li>
 <li>Superquadric()
 : <a class="el" href="classSuperquadric.html#a8dbeda02755251660381a8ed0d870d24">Superquadric&lt; dim &gt;</a>
+</li>
+<li>superquadric()
+: <a class="el" href="classSuperquadric.html#ac9e380308c0e0904223379f562686a9b">Superquadric&lt; dim &gt;</a>
 </li>
 <li>superquadric_gradient()
 : <a class="el" href="classSuperquadric.html#adc590f1b05a81a68c794ec7dbc41103d">Superquadric&lt; dim &gt;</a>

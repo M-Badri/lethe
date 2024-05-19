@@ -148,6 +148,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5559d192bb50405effa6e5ef52ca3a1e inherit pub_methods_classAuxiliaryPhysics"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace42d65b732019925cb4824e9af89f52 inherit pub_methods_classAuxiliaryPhysics"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuxiliaryPhysics.html#ace42d65b732019925cb4824e9af89f52">modify_solution</a> ()</td></tr>
 <tr class="separator:ace42d65b732019925cb4824e9af89f52 inherit pub_methods_classAuxiliaryPhysics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a664990d705edc069f7676ac5e575e3c8 inherit pub_methods_classAuxiliaryPhysics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuxiliaryPhysics.html#a664990d705edc069f7676ac5e575e3c8">setup_preconditioner</a> () override</td></tr>
+<tr class="separator:a664990d705edc069f7676ac5e575e3c8 inherit pub_methods_classAuxiliaryPhysics"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classPhysicsSolver"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classPhysicsSolver')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classPhysicsSolver.html">PhysicsSolver&lt; VectorType &gt;</a></td></tr>
 <tr class="memitem:a1b5dd7b4e42a885ef133816445eb3a15 inherit pub_methods_classPhysicsSolver"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicsSolver.html#a1b5dd7b4e42a885ef133816445eb3a15">PhysicsSolver</a> (const <a class="el" href="structParameters_1_1NonLinearSolver.html">Parameters::NonLinearSolver</a> non_linear_solver_parameters)</td></tr>
 <tr class="separator:a1b5dd7b4e42a885ef133816445eb3a15 inherit pub_methods_classPhysicsSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -995,7 +997,7 @@ template&lt;int dim&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="tracer_8h_source.html#l00280">280</a> of file <a class="el" href="tracer_8h_source.html">tracer.h</a>.</p>
 
-<p class="reference">References <a class="el" href="tracer_8h_source.html#l00405">Tracer&lt; dim &gt;::newton_update</a>, and <a class="el" href="physics__solver_8h_source.html#l00137">PhysicsSolver&lt; VectorType &gt;::pcout</a>.</p>
+<p class="reference">References <a class="el" href="tracer_8h_source.html#l00405">Tracer&lt; dim &gt;::newton_update</a>, and <a class="el" href="physics__solver_8h_source.html#l00143">PhysicsSolver&lt; VectorType &gt;::pcout</a>.</p>
 
 </div>
 </div>
@@ -1055,7 +1057,7 @@ template&lt;int dim&gt; </div>
 
 <p>Implements <a class="el" href="classAuxiliaryPhysics.html#a3870a0c5dc427098c9bec1afc9a668c0">AuxiliaryPhysics&lt; dim, GlobalVectorType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="tracer_8cc_source.html#l00539">539</a> of file <a class="el" href="tracer_8cc_source.html">tracer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tracer_8cc_source.html#l00554">554</a> of file <a class="el" href="tracer_8cc_source.html">tracer.cc</a>.</p>
 
 </div>
 </div>
@@ -1121,7 +1123,7 @@ template&lt;int dim&gt; </div>
 
 <p>Implements <a class="el" href="classAuxiliaryPhysics.html#ae80e26995eb53ee0ea0239a2390d082f">AuxiliaryPhysics&lt; dim, GlobalVectorType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="tracer_8cc_source.html#l00526">526</a> of file <a class="el" href="tracer_8cc_source.html">tracer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tracer_8cc_source.html#l00541">541</a> of file <a class="el" href="tracer_8cc_source.html">tracer.cc</a>.</p>
 
 </div>
 </div>
@@ -1151,7 +1153,7 @@ template&lt;int dim&gt; </div>
 
 <p>Implements <a class="el" href="classAuxiliaryPhysics.html#ab68fa8d211549189803ddd8ba1fcc4ff">AuxiliaryPhysics&lt; dim, GlobalVectorType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="tracer_8cc_source.html#l00601">601</a> of file <a class="el" href="tracer_8cc_source.html">tracer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tracer_8cc_source.html#l00616">616</a> of file <a class="el" href="tracer_8cc_source.html">tracer.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="utilities_8h_source.html#l00450">deserialize_table()</a>.</p>
 
@@ -1183,7 +1185,7 @@ template&lt;int dim&gt; </div>
 
 <p>Implements <a class="el" href="classAuxiliaryPhysics.html#aeecb470de43133aa878a5e9499509b31">AuxiliaryPhysics&lt; dim, GlobalVectorType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="tracer_8cc_source.html#l00788">788</a> of file <a class="el" href="tracer_8cc_source.html">tracer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tracer_8cc_source.html#l00803">803</a> of file <a class="el" href="tracer_8cc_source.html">tracer.cc</a>.</p>
 
 </div>
 </div>
@@ -1243,7 +1245,7 @@ template&lt;int dim&gt; </div>
 
 <p>Implements <a class="el" href="classAuxiliaryPhysics.html#a3d0c0d037152ce2e8552227c3dda383e">AuxiliaryPhysics&lt; dim, GlobalVectorType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="tracer_8cc_source.html#l00647">647</a> of file <a class="el" href="tracer_8cc_source.html">tracer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tracer_8cc_source.html#l00662">662</a> of file <a class="el" href="tracer_8cc_source.html">tracer.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="multiphysics_8h_source.html#l00033">tracer</a>, and <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8a73b05af1b2487b24f8027cf106e0651f">BoundaryConditions::tracer_dirichlet</a>.</p>
 
@@ -1296,7 +1298,7 @@ template&lt;int dim&gt; </div>
 
 <p>Implements <a class="el" href="classPhysicsSolver.html#a210eb1a42329bbc5b66e0d449bd815b1">PhysicsSolver&lt; VectorType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="tracer_8cc_source.html#l00801">801</a> of file <a class="el" href="tracer_8cc_source.html">tracer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tracer_8cc_source.html#l00816">816</a> of file <a class="el" href="tracer_8cc_source.html">tracer.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="namespaceParameters.html#ad408350a21239600add83c5e91fcfa26a556966c7830465dc4623d62e32cec31d">Parameters::quiet</a>, and <a class="el" href="multiphysics_8h_source.html#l00033">tracer</a>.</p>
 
@@ -1328,7 +1330,7 @@ template&lt;int dim&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classAuxiliaryPhysics.html#aa4eb967dee8229dc43ff95182df011fe">AuxiliaryPhysics&lt; dim, GlobalVectorType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="tracer_8cc_source.html#l00752">752</a> of file <a class="el" href="tracer_8cc_source.html">tracer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tracer_8cc_source.html#l00767">767</a> of file <a class="el" href="tracer_8cc_source.html">tracer.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8a73b05af1b2487b24f8027cf106e0651f">BoundaryConditions::tracer_dirichlet</a>.</p>
 
@@ -1360,7 +1362,7 @@ template&lt;int dim&gt; </div>
 
 <p>Implements <a class="el" href="classAuxiliaryPhysics.html#aac6b380b7f28d81bef3a7d33eb13ec34">AuxiliaryPhysics&lt; dim, GlobalVectorType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="tracer_8cc_source.html#l00568">568</a> of file <a class="el" href="tracer_8cc_source.html">tracer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tracer_8cc_source.html#l00583">583</a> of file <a class="el" href="tracer_8cc_source.html">tracer.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="utilities_8h_source.html#l00435">serialize_table()</a>.</p>
 
@@ -1390,7 +1392,7 @@ template&lt;int dim&gt; </div>
 
 <p>Writes the tracer statistics to an output file. </p>
 
-<p class="definition">Definition at line <a class="el" href="tracer_8cc_source.html#l00509">509</a> of file <a class="el" href="tracer_8cc_source.html">tracer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tracer_8cc_source.html#l00523">523</a> of file <a class="el" href="tracer_8cc_source.html">tracer.cc</a>.</p>
 
 </div>
 </div>

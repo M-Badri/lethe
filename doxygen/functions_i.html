@@ -100,7 +100,7 @@ $(function() {
 , <a class="el" href="classSerialSolid.html#a108709db5f2eca7699fc3b51d60f0f70">SerialSolid&lt; dim, spacedim &gt;</a>
 </li>
 <li>identify_mobility_status()
-: <a class="el" href="classDisableContacts.html#aa1b7dfee81da1ae8a4d3aec86092f883">DisableContacts&lt; dim &gt;</a>
+: <a class="el" href="classAdaptiveSparseContacts.html#a1d8b13037356224f5087345dd515bd2b">AdaptiveSparseContacts&lt; dim &gt;</a>
 </li>
 <li>ilu_precond_atol
 : <a class="el" href="structParameters_1_1LinearSolver.html#aca9ca8ba0eff28b3fffe294e2a4fa988">Parameters::LinearSolver</a>
@@ -127,7 +127,7 @@ $(function() {
 : <a class="el" href="classIBParticle.html#adf8301c20e687e124d5ec8fbe2e65637">IBParticle&lt; dim &gt;</a>
 </li>
 <li>inactive
-: <a class="el" href="classDisableContacts.html#a6a5eede6395adcd9f9b0c06e3905ab81ae94519a7191fcc98769dc95a1b84aa47">DisableContacts&lt; dim &gt;</a>
+: <a class="el" href="classAdaptiveSparseContacts.html#a9cf65bd3e1a790313fcf3f6b708ab230a4b50b82660d2e04bbb57702a817e7c57">AdaptiveSparseContacts&lt; dim &gt;</a>
 </li>
 <li>inactive_load_balancing_factor
 : <a class="el" href="structParameters_1_1Lagrangian_1_1ModelParameters.html#a7c6be250d44ec70918dc7e5c17fea2c8">Parameters::Lagrangian::ModelParameters</a>
@@ -179,7 +179,9 @@ $(function() {
 : <a class="el" href="classParameters_1_1InitialConditions.html#ae3b50407178541902f1c59a089c9322e">Parameters::InitialConditions&lt; dim &gt;</a>
 </li>
 <li>initialize()
-: <a class="el" href="classIBParticlesDEM.html#a873aba46d57c5317f4ee5841c7c5fdfd">IBParticlesDEM&lt; dim &gt;</a>
+: <a class="el" href="classdealii_1_1MGCoarseGridApplyPreconditioner.html#ac4b86a2d236dd2ab41e74e131f8db1cf">dealii::MGCoarseGridApplyPreconditioner&lt; VectorType, PreconditionerType &gt;</a>
+, <a class="el" href="classIBParticlesDEM.html#a873aba46d57c5317f4ee5841c7c5fdfd">IBParticlesDEM&lt; dim &gt;</a>
+, <a class="el" href="classMFNavierStokesPreconditionGMG.html#a308ee5666a8bfdd6bcccd51291f3be72">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
 , <a class="el" href="classParticleWallContactForce.html#a7a9e41f14cd2f099d09f58f0c9114e87">ParticleWallContactForce&lt; dim &gt;</a>
 , <a class="el" href="classPhysicalPropertiesManager.html#a8ff075795ba8a60c71e5163d8566993d">PhysicalPropertiesManager</a>
 </li>
@@ -193,7 +195,7 @@ $(function() {
 : <a class="el" href="classAverageVelocities.html#a5d817d7214a729a1151b91759a4fbc4e">AverageVelocities&lt; dim, VectorType, DofsType &gt;</a>
 </li>
 <li>initialize_containers()
-: <a class="el" href="structParameters_1_1Lagrangian_1_1BCDEM.html#ab3bfa4732a528f9ebb85a0f5f1c09cf7">Parameters::Lagrangian::BCDEM</a>
+: <a class="el" href="structParameters_1_1Lagrangian_1_1BCDEM.html#a23f37478b43e4b0657acc87899310589">Parameters::Lagrangian::BCDEM</a>
 , <a class="el" href="structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#abc760706aab0fa5df7a692428e8eab73">Parameters::Lagrangian::LagrangianPhysicalProperties</a>
 </li>
 <li>initialize_dem_parameters()
@@ -201,12 +203,6 @@ $(function() {
 </li>
 <li>initialize_dof_vector()
 : <a class="el" href="classNavierStokesOperatorBase.html#ac8897ffe280ad2d9c7fc0193191e1219">NavierStokesOperatorBase&lt; dim, number &gt;</a>
-</li>
-<li>initialize_gc()
-: <a class="el" href="classMFNavierStokesPreconditionGMG.html#aeb312838606b4167e3269cc608f7c9bb">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
-</li>
-<li>initialize_ls()
-: <a class="el" href="classMFNavierStokesPreconditionGMG.html#a787ce8ab232ad2ca249c5f7571a4b26c">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
 </li>
 <li>initialize_previous_solution()
 : <a class="el" href="classIBParticle.html#a9a552b1c7085a2ec4ff00f87fe17e517">IBParticle&lt; dim &gt;</a>
@@ -302,8 +298,8 @@ $(function() {
 </li>
 <li>integrate()
 : <a class="el" href="classExplicitEulerIntegrator.html#af70d4321118e5a2eeabb44dd6f8308a1">ExplicitEulerIntegrator&lt; dim &gt;</a>
-, <a class="el" href="classGear3Integrator.html#a95aa9857bf1108b7228664d140aaaff6">Gear3Integrator&lt; dim &gt;</a>
-, <a class="el" href="classIntegrator.html#af7af884ab1e634617b29bd1b5ac2ff42">Integrator&lt; dim &gt;</a>
+, <a class="el" href="classGear3Integrator.html#a8ca97fdf5868263f2d0acc8734c090de">Gear3Integrator&lt; dim &gt;</a>
+, <a class="el" href="classIntegrator.html#a5aa155c06f617a4b17258017c0366615">Integrator&lt; dim &gt;</a>
 , <a class="el" href="classSimulationControl.html#a67aa726e7105dd0af92f47dac688e001">SimulationControl</a>
 , <a class="el" href="classSimulationControlSteady.html#a1a841b038955ea6ba6b6d8a938d442f9">SimulationControlSteady</a>
 , <a class="el" href="classSimulationControlTransient.html#a9323f75f9c5d9ab8463f1340c83fa539">SimulationControlTransient</a>
@@ -326,6 +322,9 @@ $(function() {
 </li>
 <li>integrate_velocity()
 : <a class="el" href="classSolidBase.html#af5eaf06fd116ba6d89bf04661e6e1289">SolidBase&lt; dim, spacedim &gt;</a>
+</li>
+<li>integrate_with_advected_particles()
+: <a class="el" href="classVelocityVerletIntegrator.html#aa15c34f8872043d2863d183181fb0c8f">VelocityVerletIntegrator&lt; dim &gt;</a>
 </li>
 <li>integration_method
 : <a class="el" href="structParameters_1_1Lagrangian_1_1ModelParameters.html#a73b2cc121fcc1c29c3c15347c331b136">Parameters::Lagrangian::ModelParameters</a>
@@ -412,6 +411,9 @@ $(function() {
 <li>is_output_iteration()
 : <a class="el" href="classSimulationControl.html#a037f676d4e45242bb481e0a4a71e2dc9">SimulationControl</a>
 , <a class="el" href="classSimulationControlTransientDynamicOutput.html#ae5e027b141859911a3fce4f5565077fd">SimulationControlTransientDynamicOutput</a>
+</li>
+<li>is_phase_change_rheological_model()
+: <a class="el" href="classRheologicalModel.html#a26fb2b35a4e972c3400adb684a242590">RheologicalModel</a>
 </li>
 <li>is_steady()
 : <a class="el" href="classSimulationControl.html#aa84426cbfcb0ba22e12e6f79e6c3ccc4">SimulationControl</a>

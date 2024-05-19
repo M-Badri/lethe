@@ -164,12 +164,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a5436a88e96be02f684fccb77a94e7778 inherit pro_methods_classGLSNavierStokesSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0713e51aed5a8c0e6c4c44f0fdda6530 inherit pro_methods_classGLSNavierStokesSolver"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLSNavierStokesSolver.html#a0713e51aed5a8c0e6c4c44f0fdda6530">set_initial_condition_fd</a> (<a class="el" href="namespaceParameters.html#a86eaa101a59015fa52c81783382dd525">Parameters::InitialConditionType</a> initial_condition_type, bool restart=false) override</td></tr>
 <tr class="separator:a0713e51aed5a8c0e6c4c44f0fdda6530 inherit pro_methods_classGLSNavierStokesSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeabf0ae5e276ad9cf4cd9e62455fe905 inherit pro_methods_classGLSNavierStokesSolver"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLSNavierStokesSolver.html#aeabf0ae5e276ad9cf4cd9e62455fe905">assemble_system_matrix_without_preconditioner</a> ()</td></tr>
-<tr class="separator:aeabf0ae5e276ad9cf4cd9e62455fe905 inherit pro_methods_classGLSNavierStokesSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0f1c98ac40ac82307f28b45d200ddc5 inherit pro_methods_classGLSNavierStokesSolver"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLSNavierStokesSolver.html#ac0f1c98ac40ac82307f28b45d200ddc5">update_multiphysics_time_average_solution</a> () override</td></tr>
 <tr class="separator:ac0f1c98ac40ac82307f28b45d200ddc5 inherit pro_methods_classGLSNavierStokesSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b531d1c4e60595b81cd15b7f3297e98 inherit pro_methods_classGLSNavierStokesSolver"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLSNavierStokesSolver.html#a4b531d1c4e60595b81cd15b7f3297e98">setup_preconditioner</a> ()</td></tr>
-<tr class="separator:a4b531d1c4e60595b81cd15b7f3297e98 inherit pro_methods_classGLSNavierStokesSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4ce5a5f0d3b09bc6953f39a60d4ad51 inherit pro_methods_classGLSNavierStokesSolver"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLSNavierStokesSolver.html#ac4ce5a5f0d3b09bc6953f39a60d4ad51">setup_preconditioner</a> () override</td></tr>
+<tr class="separator:ac4ce5a5f0d3b09bc6953f39a60d4ad51 inherit pro_methods_classGLSNavierStokesSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab20a1ccb538de83f0185cb413a8b93f5 inherit pro_methods_classGLSNavierStokesSolver"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLSNavierStokesSolver.html#ab20a1ccb538de83f0185cb413a8b93f5">define_non_zero_constraints</a> ()</td></tr>
 <tr class="separator:ab20a1ccb538de83f0185cb413a8b93f5 inherit pro_methods_classGLSNavierStokesSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac59661e99b54af30b1cb5c599857bf59 inherit pro_methods_classGLSNavierStokesSolver"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLSNavierStokesSolver.html#ac59661e99b54af30b1cb5c599857bf59">define_zero_constraints</a> ()</td></tr>
@@ -473,7 +471,7 @@ class GLSVANSSolver&lt; dim &gt;</h3>
 </dl>
 <dl class="section author"><dt>Author</dt><dd>Toni EL Geitani, 2020 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00119">119</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00115">115</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1afd71d6e1376ec854fade4ba6d44a08"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1afd71d6e1376ec854fade4ba6d44a08">&#9670;&nbsp;</a></span>GLSVANSSolver()</h2>
@@ -495,7 +493,7 @@ template&lt;int dim&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l00013">13</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="gls__vans_8h_source.html#l00331">GLSVANSSolver&lt; dim &gt;::cfd_dem_simulation_parameters</a>, <a class="el" href="gls__vans_8h_source.html#l00367">GLSVANSSolver&lt; dim &gt;::has_periodic_boundaries</a>, <a class="el" href="bdf_8h_source.html#l00102">maximum_number_of_previous_solutions()</a>, <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8ae6ffdec5e14fce371eb7ae99edebbbee">BoundaryConditions::periodic</a>, and <a class="el" href="gls__vans_8h_source.html#l00342">GLSVANSSolver&lt; dim &gt;::previous_void_fraction</a>.</p>
+<p class="reference">References <a class="el" href="gls__vans_8h_source.html#l00327">GLSVANSSolver&lt; dim &gt;::cfd_dem_simulation_parameters</a>, <a class="el" href="gls__vans_8h_source.html#l00363">GLSVANSSolver&lt; dim &gt;::has_periodic_boundaries</a>, <a class="el" href="bdf_8h_source.html#l00102">maximum_number_of_previous_solutions()</a>, <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8ae6ffdec5e14fce371eb7ae99edebbbee">BoundaryConditions::periodic</a>, and <a class="el" href="gls__vans_8h_source.html#l00338">GLSVANSSolver&lt; dim &gt;::previous_void_fraction</a>.</p>
 
 </div>
 </div>
@@ -573,9 +571,9 @@ template&lt;int dim&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classGLSNavierStokesSolver.html#ac2c126900448ce8b14051d5adffffba3">GLSNavierStokesSolver&lt; dim &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01589">1589</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01617">1617</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00365">NavierStokesScratchData&lt; dim &gt;::calculate_physical_properties()</a>, <a class="el" href="copy__data_8h_source.html#l00193">StabilizedMethodsTensorCopyData&lt; dim &gt;::cell_is_local</a>, <a class="el" href="copy__data_8h_source.html#l00185">StabilizedMethodsTensorCopyData&lt; dim &gt;::local_dof_indices</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00236">NavierStokesScratchData&lt; dim &gt;::reinit()</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00676">NavierStokesScratchData&lt; dim &gt;::reinit_particle_fluid_interactions()</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00624">NavierStokesScratchData&lt; dim &gt;::reinit_void_fraction()</a>, and <a class="el" href="copy__data_8h_source.html#l00169">StabilizedMethodsTensorCopyData&lt; dim &gt;::reset()</a>.</p>
+<p class="reference">References <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00375">NavierStokesScratchData&lt; dim &gt;::calculate_physical_properties()</a>, <a class="el" href="copy__data_8h_source.html#l00193">StabilizedMethodsTensorCopyData&lt; dim &gt;::cell_is_local</a>, <a class="el" href="copy__data_8h_source.html#l00185">StabilizedMethodsTensorCopyData&lt; dim &gt;::local_dof_indices</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00236">NavierStokesScratchData&lt; dim &gt;::reinit()</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00676">NavierStokesScratchData&lt; dim &gt;::reinit_particle_fluid_interactions()</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00624">NavierStokesScratchData&lt; dim &gt;::reinit_void_fraction()</a>, and <a class="el" href="copy__data_8h_source.html#l00169">StabilizedMethodsTensorCopyData&lt; dim &gt;::reset()</a>.</p>
 
 </div>
 </div>
@@ -633,9 +631,9 @@ template&lt;int dim&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classGLSNavierStokesSolver.html#ae59ef66f7b2e6201684e737cd4ac1d5d">GLSNavierStokesSolver&lt; dim &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01697">1697</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01725">1725</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00365">NavierStokesScratchData&lt; dim &gt;::calculate_physical_properties()</a>, <a class="el" href="copy__data_8h_source.html#l00193">StabilizedMethodsTensorCopyData&lt; dim &gt;::cell_is_local</a>, <a class="el" href="copy__data_8h_source.html#l00185">StabilizedMethodsTensorCopyData&lt; dim &gt;::local_dof_indices</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00236">NavierStokesScratchData&lt; dim &gt;::reinit()</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00676">NavierStokesScratchData&lt; dim &gt;::reinit_particle_fluid_interactions()</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00624">NavierStokesScratchData&lt; dim &gt;::reinit_void_fraction()</a>, and <a class="el" href="copy__data_8h_source.html#l00169">StabilizedMethodsTensorCopyData&lt; dim &gt;::reset()</a>.</p>
+<p class="reference">References <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00375">NavierStokesScratchData&lt; dim &gt;::calculate_physical_properties()</a>, <a class="el" href="copy__data_8h_source.html#l00193">StabilizedMethodsTensorCopyData&lt; dim &gt;::cell_is_local</a>, <a class="el" href="copy__data_8h_source.html#l00185">StabilizedMethodsTensorCopyData&lt; dim &gt;::local_dof_indices</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00236">NavierStokesScratchData&lt; dim &gt;::reinit()</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00676">NavierStokesScratchData&lt; dim &gt;::reinit_particle_fluid_interactions()</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00624">NavierStokesScratchData&lt; dim &gt;::reinit_void_fraction()</a>, and <a class="el" href="copy__data_8h_source.html#l00169">StabilizedMethodsTensorCopyData&lt; dim &gt;::reset()</a>.</p>
 
 </div>
 </div>
@@ -695,9 +693,9 @@ template&lt;int dim&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classGLSNavierStokesSolver.html#ab5be2c153e6a0158ad52cb45b19f4ee8">GLSNavierStokesSolver&lt; dim &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01549">1549</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01578">1578</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="gls__vans_8cc_source.html#l01589">GLSVANSSolver&lt; dim &gt;::assemble_local_system_matrix()</a>, and <a class="el" href="gls__vans_8cc_source.html#l01641">GLSVANSSolver&lt; dim &gt;::copy_local_matrix_to_global_matrix()</a>.</p>
+<p class="reference">References <a class="el" href="gls__vans_8cc_source.html#l01617">GLSVANSSolver&lt; dim &gt;::assemble_local_system_matrix()</a>, and <a class="el" href="gls__vans_8cc_source.html#l01669">GLSVANSSolver&lt; dim &gt;::copy_local_matrix_to_global_matrix()</a>.</p>
 
 </div>
 </div>
@@ -727,9 +725,9 @@ template&lt;int dim&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classGLSNavierStokesSolver.html#a77a043e1f19097afeca90c1abaa1b60a">GLSNavierStokesSolver&lt; dim &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01655">1655</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01683">1683</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="gls__vans_8cc_source.html#l01697">GLSVANSSolver&lt; dim &gt;::assemble_local_system_rhs()</a>, and <a class="el" href="gls__vans_8cc_source.html#l01750">GLSVANSSolver&lt; dim &gt;::copy_local_rhs_to_global_rhs()</a>.</p>
+<p class="reference">References <a class="el" href="gls__vans_8cc_source.html#l01725">GLSVANSSolver&lt; dim &gt;::assemble_local_system_rhs()</a>, and <a class="el" href="gls__vans_8cc_source.html#l01778">GLSVANSSolver&lt; dim &gt;::copy_local_rhs_to_global_rhs()</a>.</p>
 
 </div>
 </div>
@@ -805,7 +803,7 @@ template&lt;int dim&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classGLSNavierStokesSolver.html#aa1266bef5027374a8ddecc9a4eb080d3">GLSNavierStokesSolver&lt; dim &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01641">1641</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01669">1669</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="copy__data_8h_source.html#l00193">StabilizedMethodsTensorCopyData&lt; dim &gt;::cell_is_local</a>, <a class="el" href="copy__data_8h_source.html#l00185">StabilizedMethodsTensorCopyData&lt; dim &gt;::local_dof_indices</a>, and <a class="el" href="copy__data_8h_source.html#l00183">StabilizedMethodsTensorCopyData&lt; dim &gt;::local_matrix</a>.</p>
 
@@ -841,7 +839,7 @@ template&lt;int dim&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classGLSNavierStokesSolver.html#a173f622ae3b3bfa73f68d2d17081ad7d">GLSNavierStokesSolver&lt; dim &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01750">1750</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01778">1778</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="copy__data_8h_source.html#l00193">StabilizedMethodsTensorCopyData&lt; dim &gt;::cell_is_local</a>, <a class="el" href="copy__data_8h_source.html#l00185">StabilizedMethodsTensorCopyData&lt; dim &gt;::local_dof_indices</a>, and <a class="el" href="copy__data_8h_source.html#l00184">StabilizedMethodsTensorCopyData&lt; dim &gt;::local_rhs</a>.</p>
 
@@ -912,7 +910,7 @@ template&lt;int dim&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The periodic offset distance </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00163">163</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00159">159</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -968,9 +966,9 @@ template&lt;int dim&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classNavierStokesBase.html#a98a7f846709b83df0ea64c361fee192c">NavierStokesBase&lt; dim, GlobalVectorType, IndexSet &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01366">1366</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01395">1395</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="utilities_8h_source.html#l00418">announce_string()</a>, and <a class="el" href="physics__solver_8h_source.html#l00171">PhysicsSolver&lt; VectorType &gt;::solve_non_linear_system()</a>.</p>
+<p class="reference">References <a class="el" href="utilities_8h_source.html#l00418">announce_string()</a>, and <a class="el" href="physics__solver_8h_source.html#l00177">PhysicsSolver&lt; VectorType &gt;::solve_non_linear_system()</a>.</p>
 
 </div>
 </div>
@@ -996,7 +994,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01773">1773</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01801">1801</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="structParameters_1_1SimulationControl.html#a75b33ae454da14bc72dbe078c121d7e9a0267dc6b1db4ed7cf48c60fa776c8843">Parameters::SimulationControl::bdf1</a>, <a class="el" href="structParameters_1_1SimulationControl.html#a75b33ae454da14bc72dbe078c121d7e9a7e23e875a6c062a276f90cb43a6280c0">Parameters::SimulationControl::bdf2</a>, <a class="el" href="structParameters_1_1SimulationControl.html#a75b33ae454da14bc72dbe078c121d7e9a62fd133dd9c35c94e867fc65606aeffe">Parameters::SimulationControl::bdf3</a>, and <a class="el" href="structParameters_1_1SimulationControl.html#a75b33ae454da14bc72dbe078c121d7e9a4f997f546b68779b58e9f6f19dc2b9e5">Parameters::SimulationControl::steady</a>.</p>
 
@@ -1032,7 +1030,7 @@ template&lt;int dim&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classNavierStokesBase.html#a964e80e99870334447ac9859c4f1980d">NavierStokesBase&lt; dim, GlobalVectorType, IndexSet &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01764">1764</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01792">1792</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
 
 </div>
 </div>
@@ -1058,7 +1056,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l00417">417</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l00446">446</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="dem__properties_8h_source.html#l00041">DEM::dp</a>.</p>
 
@@ -1116,9 +1114,9 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l00510">510</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l00539">539</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="dem__properties_8h_source.html#l00041">DEM::dp</a>, <a class="el" href="gls__vans_8h_source.html#l00062">particle_circle_intersection_2d()</a>, <a class="el" href="gls__vans_8h_source.html#l00092">particle_sphere_intersection_3d()</a>, and <a class="el" href="dem__properties_8h_source.html#l00055">DEM::volumetric_contribution</a>.</p>
+<p class="reference">References <a class="el" href="dem__properties_8h_source.html#l00041">DEM::dp</a>, <a class="el" href="gls__vans_8h_source.html#l00058">particle_circle_intersection_2d()</a>, <a class="el" href="gls__vans_8h_source.html#l00088">particle_sphere_intersection_3d()</a>, and <a class="el" href="dem__properties_8h_source.html#l00055">DEM::volumetric_contribution</a>.</p>
 
 </div>
 </div>
@@ -1170,7 +1168,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01052">1052</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01081">1081</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="dem__properties_8h_source.html#l00041">DEM::dp</a>.</p>
 
@@ -1202,7 +1200,7 @@ template&lt;int dim&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classGLSNavierStokesSolver.html#ac8fb59a2a39f6b2680a5fb50762a1737">GLSNavierStokesSolver&lt; dim &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01380">1380</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01409">1409</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="namespaceParameters.html#a8b408c8f42632c3dd96b69b720ace6f6a8efa8d4f5786679eabd0fdb325bad76b">Parameters::beetstra</a>, <a class="el" href="namespaceParameters.html#a8b408c8f42632c3dd96b69b720ace6f6a0d3593f2d6bf48e3e2700f0bc2a1e970">Parameters::dallavalle</a>, <a class="el" href="namespaceParameters.html#a8b408c8f42632c3dd96b69b720ace6f6ab1f1e7a3c1ddcf75366181531f51873a">Parameters::difelice</a>, <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8add95ffdcea64b1eaaa9244611678ed38">BoundaryConditions::function_weak</a>, <a class="el" href="namespaceParameters.html#a8b408c8f42632c3dd96b69b720ace6f6a5b11eff46b4ff2d0e186789cb3a402ed">Parameters::gidaspow</a>, <a class="el" href="time__integration__utilities_8h_source.html#l00037">is_bdf()</a>, <a class="el" href="namespaceParameters.html#a8b408c8f42632c3dd96b69b720ace6f6a9e42d27391c1851954ee4d7795d713cf">Parameters::kochhill</a>, <a class="el" href="namespaceParameters.html#a885ce66c74635a68dd078d94aedddac6aaab653aeeee220006e2b9f692569492c">Parameters::modelA</a>, <a class="el" href="namespaceParameters.html#a885ce66c74635a68dd078d94aedddac6ab35bb34924c70e61eec8a8bae8cac690">Parameters::modelB</a>, <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8ab0ba1623558e169131cb513037504286">BoundaryConditions::outlet</a>, <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8ac6bda74f8a2d6e410535eaa3dca28e9d">BoundaryConditions::partial_slip</a>, <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8ad99fad96a5d0a7cb2eb41341ea556093">BoundaryConditions::pressure</a>, and <a class="el" href="namespaceParameters.html#a8b408c8f42632c3dd96b69b720ace6f6a08279be0e2c1aba70f92cd04058b995a">Parameters::rong</a>.</p>
 
@@ -1269,7 +1267,7 @@ template&lt;int dim&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classCFDDEMSolver.html#aaebd11ac00952aaaa99ebd66c43f7d87">CFDDEMSolver&lt; dim &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01943">1943</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01971">1971</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="structParameters_1_1MeshAdaptation.html#a20a32a04c8c684495ff2d3c7be73c5a2a334c4a4c42fdb79d7ebc3e73b517e6f8">Parameters::MeshAdaptation::none</a>, <a class="el" href="grids_8cc_source.html#l00413">read_mesh_and_manifolds()</a>, <a class="el" href="navier__stokes__base_8cc_source.html#l00668">NavierStokesBase&lt; dim, VectorType, DofsType &gt;::refine_mesh()</a>, and <a class="el" href="lethe__grid__tools_8cc_source.html#l00016">LetheGridTools::vertices_cell_mapping()</a>.</p>
 
@@ -1297,7 +1295,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01291">1291</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l01320">1320</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="multiphysics_8h_source.html#l00031">fluid_dynamics</a>, and <a class="el" href="namespaceParameters.html#ad408350a21239600add83c5e91fcfa26a556966c7830465dc4623d62e32cec31d">Parameters::quiet</a>.</p>
 
@@ -1327,6 +1325,8 @@ template&lt;int dim&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l00317">317</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
 
+<p class="reference">References <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8ae6ffdec5e14fce371eb7ae99edebbbee">BoundaryConditions::periodic</a>, <a class="el" href="namespaceParameters.html#a59bccd897a552f378b3da967e9fa803fa68bf09624358e484ec7c4880e70a8ba1">Parameters::qcm</a>, and <a class="el" href="namespaceParameters.html#a59bccd897a552f378b3da967e9fa803fa51762626b4f785729159fd35eea74deb">Parameters::spm</a>.</p>
+
 </div>
 </div>
 <a id="a2ac275e569bb1fe63a8ffa744f247030"></a>
@@ -1351,7 +1351,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l00402">402</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8cc_source.html#l00431">431</a> of file <a class="el" href="gls__vans_8cc_source.html">gls_vans.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="lethe__grid__tools_8cc_source.html#l00016">LetheGridTools::vertices_cell_mapping()</a>, and <a class="el" href="lethe__grid__tools_8cc_source.html#l00047">LetheGridTools::vertices_cell_mapping_with_periodic_boundaries()</a>.</p>
 
@@ -1380,7 +1380,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00357">357</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00353">353</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1407,7 +1407,7 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 <p>Member Variables </p>
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00331">331</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00327">327</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1433,7 +1433,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00353">353</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00349">349</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1459,7 +1459,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00354">354</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00350">350</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1485,7 +1485,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00356">356</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00352">352</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1511,7 +1511,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00334">334</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00330">330</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1537,7 +1537,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00364">364</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00360">360</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1563,7 +1563,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00367">367</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00363">363</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1589,7 +1589,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00359">359</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00355">355</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1615,7 +1615,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00338">338</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00334">334</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1641,7 +1641,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00339">339</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00335">335</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1667,7 +1667,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00355">355</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00351">351</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1693,7 +1693,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00345">345</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00341">341</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1719,7 +1719,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00344">344</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00340">340</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1745,7 +1745,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00349">349</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00345">345</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1771,7 +1771,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00379">379</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00375">375</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1797,7 +1797,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00336">336</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00332">332</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1823,7 +1823,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00369">369</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00365">365</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1849,7 +1849,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00368">368</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00364">364</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1875,7 +1875,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00365">365</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00361">361</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1901,7 +1901,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00342">342</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00338">338</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1927,7 +1927,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00362">362</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00358">358</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1953,7 +1953,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00363">363</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00359">359</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1979,7 +1979,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00351">351</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00347">347</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -2005,7 +2005,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00352">352</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00348">348</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -2031,7 +2031,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00373">373</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00369">369</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -2057,7 +2057,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00376">376</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00372">372</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -2083,7 +2083,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00360">360</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00356">356</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>
@@ -2109,7 +2109,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00333">333</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gls__vans_8h_source.html#l00329">329</a> of file <a class="el" href="gls__vans_8h_source.html">gls_vans.h</a>.</p>
 
 </div>
 </div>

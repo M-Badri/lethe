@@ -227,12 +227,15 @@ $(function() {
 <li>particle_custom_probability
 : <a class="el" href="structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#ae4a6b201cbd1f0de7f172896879a165f">Parameters::Lagrangian::LagrangianPhysicalProperties</a>
 </li>
+<li>particle_displaced_in_pbc
+: <a class="el" href="classCFDDEMSolver.html#a339937cca7f5664a97b64c2b4cd6cda5">CFDDEMSolver&lt; dim &gt;</a>
+</li>
 <li>particle_floating_mesh_candidates
 : <a class="el" href="structDEM_1_1dem__data__structures.html#a34d9555cd6c00d064a4de21b3bd004b2">DEM::dem_data_structures&lt; dim &gt;</a>
 , <a class="el" href="classDEMContactManager.html#aa994740e8fa68486fe09a716c9d87d1d">DEMContactManager&lt; dim &gt;</a>
 </li>
 <li>particle_floating_mesh_contact_search()
-: <a class="el" href="classParticleWallBroadSearch.html#aa9035cc69a422faf7901e61fc1e9ace7">ParticleWallBroadSearch&lt; dim &gt;</a>
+: <a class="el" href="classParticleWallBroadSearch.html#aaee1e0cda7afa070bb3eeac62dd45ea2">ParticleWallBroadSearch&lt; dim &gt;</a>
 </li>
 <li>particle_floating_mesh_fine_search()
 : <a class="el" href="classParticleWallFineSearch.html#a5c0e6009769175e1117b9546e8a7f45a">ParticleWallFineSearch&lt; dim &gt;</a>
@@ -307,7 +310,7 @@ $(function() {
 : <a class="el" href="classparticle__particle__contact__info.html#ab0d63d63dfc4e45fa4009edc21a6f888">particle_particle_contact_info&lt; dim &gt;</a>
 </li>
 <li>particle_particle_fine_search()
-: <a class="el" href="classParticleParticleFineSearch.html#a1a50478042e2489659be1a1e603d1c22">ParticleParticleFineSearch&lt; dim &gt;</a>
+: <a class="el" href="classParticleParticleFineSearch.html#afbb7699afea58a18565db2292b4b4423">ParticleParticleFineSearch&lt; dim &gt;</a>
 </li>
 <li>particle_particle_fine_search_object
 : <a class="el" href="classDEMContactManager.html#a3fdb7c2747b8641f2e0f88a99ad9e360">DEMContactManager&lt; dim &gt;</a>
@@ -499,7 +502,9 @@ $(function() {
 </li>
 <li>pcout
 : <a class="el" href="classDEMSolver.html#a9a864fcbde0718cd071ad32a84a082e7">DEMSolver&lt; dim &gt;</a>
+, <a class="el" href="classMFNavierStokesPreconditionGMG.html#af51c319da31e7599ac678e959463ee3d">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
 , <a class="el" href="classMultiphysicsInterface.html#a15df5d739b55edf36d6fbd8687e72a72">MultiphysicsInterface&lt; dim &gt;</a>
+, <a class="el" href="classNavierStokesOperatorBase.html#a5f5067e56ce2479bd58d7922f7279a0c">NavierStokesOperatorBase&lt; dim, number &gt;</a>
 , <a class="el" href="classPhysicsSolver.html#a438c5dbf8b3a750d042d56ffc3285f1f">PhysicsSolver&lt; VectorType &gt;</a>
 , <a class="el" href="classRPTL2Projection.html#a58f232f151ac6c2a7b1c0785ab091347">RPTL2Projection&lt; dim &gt;</a>
 </li>
@@ -563,7 +568,7 @@ $(function() {
 : <a class="el" href="classBoundaryConditions_1_1BoundaryConditions.html#ae292c7adc9ff6f9bc6bbf2aab46b514b">BoundaryConditions::BoundaryConditions&lt; dim &gt;</a>
 </li>
 <li>periodic_node_ids
-: <a class="el" href="classDisableContacts.html#a10da157daa3b15179d8cbda0cecc3962">DisableContacts&lt; dim &gt;</a>
+: <a class="el" href="classAdaptiveSparseContacts.html#a5e726032e761f8d4b26d79ce5ce88ed4">AdaptiveSparseContacts&lt; dim &gt;</a>
 </li>
 <li>periodic_normal_vector
 : <a class="el" href="structperiodic__boundaries__cells__info__struct.html#a3ec60b7fd718d112963a035f8fd7820f">periodic_boundaries_cells_info_struct&lt; dim &gt;</a>
@@ -606,6 +611,9 @@ $(function() {
 </li>
 <li>phase_change_parameters_vector
 : <a class="el" href="classPhaseChangeDarcyVOFAssembler.html#afcd64b20c2dfb837744092918e2ff82d">PhaseChangeDarcyVOFAssembler&lt; dim &gt;</a>
+</li>
+<li>phase_change_rheological_model
+: <a class="el" href="classRheologicalModel.html#a4018525e6143a8ed311e638336af7d47">RheologicalModel</a>
 </li>
 <li>phase_dirichlet_value
 : <a class="el" href="classBoundaryConditions_1_1CahnHilliardBoundaryConditions.html#a0466e90eb56e3083e2182a59e6ee936e">BoundaryConditions::CahnHilliardBoundaryConditions&lt; dim &gt;</a>
@@ -711,7 +719,7 @@ $(function() {
 : <a class="el" href="classParameters_1_1PhysicalProperties.html#a2ea322566ae890e8095d016527caa6b8">Parameters::PhysicalProperties</a>
 </li>
 <li>PhysicalPropertiesManager()
-: <a class="el" href="classPhysicalPropertiesManager.html#a82b25d27baf2cf7804c6ddaa5c552f3d">PhysicalPropertiesManager</a>
+: <a class="el" href="classPhysicalPropertiesManager.html#a48c33f808f3f49aca4ef87db6ff1d652">PhysicalPropertiesManager</a>
 </li>
 <li>PhysicalPropertyModel()
 : <a class="el" href="classPhysicalPropertyModel.html#a790b73800189af9ff8d80f1e6f8c9306">PhysicalPropertyModel</a>
@@ -905,13 +913,17 @@ $(function() {
 , <a class="el" href="classVolumeOfFluid.html#adac10018ee53525cce69597ea7778a04">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>precondition_amg
-: <a class="el" href="classMFNavierStokesPreconditionGMG.html#a9e85053991cf83d82f86f82c162fd588">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
+: <a class="el" href="classMFNavierStokesPreconditionGMG.html#abb0ad05f883eaf60451d289800bb646e">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
+</li>
+<li>precondition_direct
+: <a class="el" href="classMFNavierStokesPreconditionGMG.html#ac4ea47b3e7d7ff1be985c5ad3b43b41c">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
 </li>
 <li>precondition_ilu
-: <a class="el" href="classMFNavierStokesPreconditionGMG.html#ac39fb21d556db27aa85a3d6aaafe207f">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
+: <a class="el" href="classMFNavierStokesPreconditionGMG.html#a9ae1ea62e1991626d85021afa8b2bd9d">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
 </li>
 <li>preconditioner
-: <a class="el" href="structParameters_1_1LinearSolver.html#a328641e34f1e113bb1dcaf7b2c74df51">Parameters::LinearSolver</a>
+: <a class="el" href="classdealii_1_1MGCoarseGridApplyPreconditioner.html#a00bdd340c5e4f6277e5e561d3ed5450e">dealii::MGCoarseGridApplyPreconditioner&lt; VectorType, PreconditionerType &gt;</a>
+, <a class="el" href="structParameters_1_1LinearSolver.html#a328641e34f1e113bb1dcaf7b2c74df51">Parameters::LinearSolver</a>
 </li>
 <li>PreconditionerType
 : <a class="el" href="structParameters_1_1LinearSolver.html#a704cb5844fa228c463633aafdc87a482">Parameters::LinearSolver</a>
@@ -1117,6 +1129,9 @@ $(function() {
 <li>print_intermediate_format()
 : <a class="el" href="classVisualization.html#a982404bc0b8da4ea205cd1a38aaafbf0">Visualization&lt; dim &gt;</a>
 </li>
+<li>print_mg_setup_times()
+: <a class="el" href="classMFNavierStokesSolver.html#a9f0682c31b6d5ae4cfa0f5f68a38d520">MFNavierStokesSolver&lt; dim &gt;</a>
+</li>
 <li>print_particle_positions()
 : <a class="el" href="classSolidBase.html#af6a7c8178927f2581d5530856a1d0c0b">SolidBase&lt; dim, spacedim &gt;</a>
 </li>
@@ -1129,6 +1144,9 @@ $(function() {
 , <a class="el" href="classSimulationControlSteady.html#af5cd362a775a8101ddc3ac7fe55376f8">SimulationControlSteady</a>
 , <a class="el" href="classSimulationControlTransient.html#a6d580ae3849859e91e7ab43c2e7c08d9">SimulationControlTransient</a>
 , <a class="el" href="classSimulationControlTransientDEM.html#a6760db7b27f43507bc6727a855beb4a3">SimulationControlTransientDEM</a>
+</li>
+<li>print_relevant_info()
+: <a class="el" href="classMFNavierStokesPreconditionGMG.html#ace5cde80ed915aaf32296a4ab1f17f44">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
 </li>
 <li>print_xyz()
 : <a class="el" href="classVisualization.html#a73b7b12059473fb07b02231f630d0229">Visualization&lt; dim &gt;</a>
