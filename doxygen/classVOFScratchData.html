@@ -152,7 +152,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><h3>template&lt;int dim&gt;<br />
 class VOFScratchData&lt; dim &gt;</h3>
 
-<p>Class that stores the information required by the assembly procedure for a VOF free surface equation. Consequently, this class calculates the phase values (values, gradients, laplacians) and the shape method (values, gradients, laplacians) at all the gauss points for all degrees of freedom and stores it into arrays. <a class="el" href="classThis.html">This</a> class serves as a separation between the evaluation at the gauss point of the variables of interest and their use in the assembly, which is carried out by the assembler methods. </p>
+<p>Class that stores the information required by the assembly procedure for a VOF free surface equation. Consequently, this class calculates the phase values (values, gradients, laplacians) and the shape method (values, gradients, laplacians) at all the gauss points for all degrees of freedom and stores it into arrays. This class serves as a separation between the evaluation at the gauss point of the variables of interest and their use in the assembly, which is carried out by the assembler methods. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">dim</td><td>An integer that denotes the dimension of the space in which the flow is solved </td></tr>
@@ -160,7 +160,7 @@ class VOFScratchData&lt; dim &gt;</h3>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00058">58</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00060">60</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab928fd8cbae1c8954cc81d8a6c33fa7b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab928fd8cbae1c8954cc81d8a6c33fa7b">&#9670;&nbsp;</a></span>VOFScratchData() <span class="overload">[1/2]</span></h2>
@@ -225,7 +225,7 @@ template&lt;int dim&gt; </div>
 <p>Constructor. The constructor creates the fe_values that will be used to fill the member variables of the scratch. It also allocated the necessary memory for all member variables. However, it does not do any evaluation, since this needs to be done at the cell level. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">simulation_control</td><td>The <a class="el" href="classSimulationControl.html" title="The SimulationControl class is responsible for the control of steady-state and transient simulations ...">SimulationControl</a> object that holds information related to the control of the steady-state or transient simulation. <a class="el" href="classThis.html">This</a> is used to extrapolate velocity solutions in time for transient simulation.</td></tr>
+    <tr><td class="paramname">simulation_control</td><td>The <a class="el" href="classSimulationControl.html" title="The SimulationControl class is responsible for the control of steady-state and transient simulations ...">SimulationControl</a> object that holds information related to the control of the steady-state or transient simulation. This is used to extrapolate velocity solutions in time for transient simulation.</td></tr>
     <tr><td class="paramname">fe_vof</td><td>The FESystem used to solve the VOF equations</td></tr>
     <tr><td class="paramname">quadrature</td><td>The quadrature to use for the assembly</td></tr>
     <tr><td class="paramname">mapping</td><td>The mapping of the domain in which the Navier-Stokes equations are solved</td></tr>
@@ -234,7 +234,7 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00082">82</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00084">84</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -264,7 +264,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Copy Constructor. Same as the main constructor. <a class="el" href="classThis.html">This</a> constructor only uses the other scratch to build the FeValues, it does not copy the content of the other scratch into itself since, by definition of the WorkStream mechanism it is assumed that the content of the scratch will be reset on a cell basis. </p>
+<p>Copy Constructor. Same as the main constructor. This constructor only uses the other scratch to build the FeValues, it does not copy the content of the other scratch into itself since, by definition of the WorkStream mechanism it is assumed that the content of the scratch will be reset on a cell basis. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sd</td><td>The scratch data to be copied </td></tr>
@@ -272,7 +272,7 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00110">110</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00112">112</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -292,11 +292,11 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 
 <p>Allocates the memory for the scratch. </p>
-<p><a class="el" href="classThis.html">This</a> method allocates the necessary memory for all members of the scratch </p>
+<p>This method allocates the necessary memory for all members of the scratch </p>
 
 <p class="definition">Definition at line <a class="el" href="vof__scratch__data_8cc_source.html#l00007">7</a> of file <a class="el" href="vof__scratch__data_8cc_source.html">vof_scratch_data.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="bdf_8h_source.html#l00102">maximum_number_of_previous_solutions()</a>.</p>
+<p class="reference">References <a class="el" href="bdf_8h_source.html#l00099">maximum_number_of_previous_solutions()</a>.</p>
 
 </div>
 </div>
@@ -354,14 +354,14 @@ template&lt;typename VectorType &gt; </div>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cell</td><td>The cell over which the assembly is being carried. <a class="el" href="classThis.html">This</a> cell must be compatible with the fe which is used to fill the FeValues</td></tr>
+    <tr><td class="paramname">cell</td><td>The cell over which the assembly is being carried. This cell must be compatible with the fe which is used to fill the FeValues</td></tr>
     <tr><td class="paramname">current_solution</td><td>The present value of the solution for the VOF</td></tr>
     <tr><td class="paramname">previous_solutions</td><td>The solutions at the previous time steps </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00154">154</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00156">156</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -424,7 +424,7 @@ template&lt;typename VectorType &gt; </div>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cell</td><td>The cell for which the velocity is reinitialized <a class="el" href="classThis.html">This</a> cell must be compatible with the Fluid Dynamics FE</td></tr>
+    <tr><td class="paramname">cell</td><td>The cell for which the velocity is reinitialized This cell must be compatible with the Fluid Dynamics FE</td></tr>
     <tr><td class="paramname">current_solution</td><td>The present value of the solution for \([u,p]\)</td></tr>
     <tr><td class="paramname">previous_solutions</td><td>Vector of \(n\) <code>VectorType</code> containers of previous fluid dynamic solutions ( \([u,p]\)). \(n\) depends on the BDF scheme selected for time-stepping.</td></tr>
     <tr><td class="paramname">ale</td><td>ALE parameters </td></tr>
@@ -432,9 +432,9 @@ template&lt;typename VectorType &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00220">220</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00222">222</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
-<p class="reference">References <a class="el" href="bdf_8h_source.html#l00151">bdf_extrapolate()</a>, <a class="el" href="ale_8h_source.html#l00078">Parameters::ALE&lt; dim &gt;::enabled()</a>, <a class="el" href="time__integration__utilities_8h_source.html#l00037">is_bdf()</a>, <a class="el" href="bdf_8h_source.html#l00115">number_of_previous_solutions()</a>, and <a class="el" href="ale_8h_source.html#l00070">Parameters::ALE&lt; dim &gt;::velocity</a>.</p>
+<p class="reference">References <a class="el" href="bdf_8h_source.html#l00148">bdf_extrapolate()</a>, <a class="el" href="ale_8h_source.html#l00078">Parameters::ALE&lt; dim &gt;::enabled()</a>, <a class="el" href="time__integration__utilities_8h_source.html#l00037">is_bdf()</a>, <a class="el" href="bdf_8h_source.html#l00112">number_of_previous_solutions()</a>, and <a class="el" href="ale_8h_source.html#l00070">Parameters::ALE&lt; dim &gt;::velocity</a>.</p>
 
 </div>
 </div>
@@ -453,7 +453,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00296">296</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00298">298</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -472,7 +472,7 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 <p>Scratch component for the Navier-Stokes component </p>
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00320">320</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00322">322</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -490,7 +490,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00293">293</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00295">295</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -508,7 +508,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00290">290</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00292">292</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -526,7 +526,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00312">312</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00314">314</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -544,7 +544,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00313">313</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00315">315</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -562,7 +562,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00299">299</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00301">301</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -580,7 +580,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00314">314</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00316">316</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -598,7 +598,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00294">294</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00296">296</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -616,7 +616,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00295">295</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00297">297</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -634,7 +634,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00304">304</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00306">306</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -652,7 +652,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00307">307</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00309">309</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -670,7 +670,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00311">311</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00313">313</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -688,7 +688,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00303">303</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00305">305</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -706,7 +706,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00305">305</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00307">307</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -724,7 +724,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00308">308</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00310">310</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -742,7 +742,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00325">325</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00327">327</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -760,7 +760,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00289">289</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00291">291</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -778,7 +778,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00300">300</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00302">302</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -796,7 +796,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00286">286</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00288">288</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -814,7 +814,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00322">322</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00324">324</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -832,7 +832,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00327">327</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00329">329</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -850,7 +850,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00326">326</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00328">328</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>
@@ -868,7 +868,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00324">324</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vof__scratch__data_8h_source.html#l00326">326</a> of file <a class="el" href="vof__scratch__data_8h_source.html">vof_scratch_data.h</a>.</p>
 
 </div>
 </div>

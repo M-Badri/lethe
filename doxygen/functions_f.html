@@ -138,6 +138,7 @@ $(function() {
 : <a class="el" href="classCahnHilliard.html#a28555a88e99c84c241bc288222119c9c">CahnHilliard&lt; dim &gt;</a>
 , <a class="el" href="classHeatTransfer.html#a659773a55d9feb9540e96f7fb88a380e">HeatTransfer&lt; dim &gt;</a>
 , <a class="el" href="classNavierStokesBase.html#a490b6390dbe8b3ad9b045f6127e5406e">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
+, <a class="el" href="classTracer.html#af8f67d14d8923c165486d18ee19ae662">Tracer&lt; dim &gt;</a>
 , <a class="el" href="classVolumeOfFluid.html#a0dac83267362fc0cdb3026485885a195">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>face_quadrature_points
@@ -226,7 +227,7 @@ $(function() {
 : <a class="el" href="classNavierStokesScratchData.html#a48de4521a4a6296ef1fdfaa90d123427">NavierStokesScratchData&lt; dim &gt;</a>
 </li>
 <li>fe_void_fraction
-: <a class="el" href="classGLSVANSSolver.html#a54f3215c1d38214595c2ced3e4389e16">GLSVANSSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsVANS.html#adf8ed03aa836b620d07b60b6d221a9c4">FluidDynamicsVANS&lt; dim &gt;</a>
 </li>
 <li>FECellIntegrator
 : <a class="el" href="classNavierStokesOperatorBase.html#a9b317eea5e2ce56464fb7dd2ec7b403e">NavierStokesOperatorBase&lt; dim, number &gt;</a>
@@ -266,8 +267,7 @@ $(function() {
 , <a class="el" href="classVOFScratchData.html#a762990ac9c107e5fc571733734540f36">VOFScratchData&lt; dim &gt;</a>
 </li>
 <li>file_name
-: <a class="el" href="classInsertionFile.html#a1d8bf2be9b33a646329334d5ba5ea48e">InsertionFile&lt; dim &gt;</a>
-, <a class="el" href="structParameters_1_1Mesh.html#ab688782f810105ada6dd69937e0bbc30">Parameters::Mesh</a>
+: <a class="el" href="structParameters_1_1Mesh.html#ab688782f810105ada6dd69937e0bbc30">Parameters::Mesh</a>
 </li>
 <li>filename
 : <a class="el" href="classAnalyticalSolutions_1_1AnalyticalSolution.html#a96b10c2bc9cdeae76f91734929ed90d2">AnalyticalSolutions::AnalyticalSolution&lt; dim &gt;</a>
@@ -290,7 +290,7 @@ $(function() {
 , <a class="el" href="classVolumeOfFluidTanhFilter.html#a75c6d88403324724d5145ce27fa31755">VolumeOfFluidTanhFilter</a>
 </li>
 <li>filtered_phase_fraction_tolerance
-: <a class="el" href="structParameters_1_1ConstrainSolidDomain.html#aaabfdd036856cb57a86babc2c2cf0b40">Parameters::ConstrainSolidDomain</a>
+: <a class="el" href="structParameters_1_1ConstrainSolidDomain.html#aa00421a78541fe16cee5efd052e4d53b">Parameters::ConstrainSolidDomain&lt; dim &gt;</a>
 , <a class="el" href="structStasisConstraintWithTemperature.html#a507e8c8177ba8faf74124870a8dcb1f4">StasisConstraintWithTemperature</a>
 </li>
 <li>filtered_phase_gradient_values
@@ -323,14 +323,11 @@ $(function() {
 <li>find_boundary_cells_information()
 : <a class="el" href="classBoundaryCellsInformation.html#ad7442913dd7e4d39ab8b5cec383ee6b9">BoundaryCellsInformation&lt; dim &gt;</a>
 </li>
-<li>find_cell_neighbors()
-: <a class="el" href="classFindCellNeighbors.html#a8c6568ad14815794636715a834599def">FindCellNeighbors&lt; dim &gt;</a>
-</li>
-<li>find_cell_periodic_neighbors()
-: <a class="el" href="classFindCellNeighbors.html#a478a3d5f0ef2fd9804610a2a34e19732">FindCellNeighbors&lt; dim &gt;</a>
-</li>
 <li>find_cells()
 : <a class="el" href="classRPTCellReconstruction.html#aa06480e9ca4c1ef2184412f98abb004f">RPTCellReconstruction&lt; dim &gt;</a>
+</li>
+<li>find_cells_in_removing_box()
+: <a class="el" href="classInsertion.html#a1eeb88ad7f23bc50e0587fee37258bb3">Insertion&lt; dim &gt;</a>
 </li>
 <li>find_centers_of_inplane_cells()
 : <a class="el" href="classInsertionPlane.html#ab51ef9de86c2953ffc13ae392df956a5">InsertionPlane&lt; dim &gt;</a>
@@ -338,20 +335,14 @@ $(function() {
 <li>find_effective_radius_and_mass()
 : <a class="el" href="classParticleParticleContactForce.html#a2cd1eddf92d4898dc5cd97bcc92b55ef">ParticleParticleContactForce&lt; dim, force_model, rolling_friction_model &gt;</a>
 </li>
-<li>find_full_cell_neighbors()
-: <a class="el" href="classFindCellNeighbors.html#a797a7daf8c996f6879cf21adfe4ddc3b">FindCellNeighbors&lt; dim &gt;</a>
-</li>
 <li>find_global_boundary_cells_with_faces()
 : <a class="el" href="classBoundaryCellsInformation.html#a0a7151f99dfd117d110b62741a30f52b">BoundaryCellsInformation&lt; dim &gt;</a>
 </li>
 <li>find_inplane_cells()
 : <a class="el" href="classInsertionPlane.html#a3e685d240dde0d706d602ecd8f7cb117">InsertionPlane&lt; dim &gt;</a>
 </li>
-<li>find_insertion_location_uniform()
-: <a class="el" href="classUniformInsertion.html#adb43fd9076ae1c14aa5d82f11a523bff">UniformInsertion&lt; dim &gt;</a>
-</li>
 <li>find_insertion_location_volume()
-: <a class="el" href="classInsertionVolume.html#a760196b2e3df1434cd580dd5aec6a5f7">InsertionVolume&lt; dim &gt;</a>
+: <a class="el" href="classInsertionVolume.html#a56e2aefb9fe87b3633f466fe5a133047">InsertionVolume&lt; dim &gt;</a>
 </li>
 <li>find_max_diameter()
 : <a class="el" href="classCustomDistribution.html#a7f2ccb37c2d63e03a92ab1cfc441a300">CustomDistribution</a>
@@ -365,26 +356,8 @@ $(function() {
 , <a class="el" href="classNormalDistribution.html#a4d2a8ffa6859412a765d4157b7011cff">NormalDistribution</a>
 , <a class="el" href="classUniformDistribution.html#a6520888190ecba8ce6b7ba6d4dec98d0">UniformDistribution</a>
 </li>
-<li>find_particle_floating_wall_contact_pairs()
-: <a class="el" href="classParticleWallBroadSearch.html#a77c5b5a80e6688353023173d24afc74e">ParticleWallBroadSearch&lt; dim &gt;</a>
-</li>
-<li>find_particle_line_contact_pairs()
-: <a class="el" href="classParticlePointLineBroadSearch.html#a57a3c6ad024fb20782cbd0088edaf6a4">ParticlePointLineBroadSearch&lt; dim &gt;</a>
-</li>
-<li>find_particle_particle_contact_pairs()
-: <a class="el" href="classParticleParticleBroadSearch.html#a467f2fc50b1fdd7f7cafbf45b0c0499e">ParticleParticleBroadSearch&lt; dim &gt;</a>
-</li>
-<li>find_particle_particle_periodic_contact_pairs()
-: <a class="el" href="classParticleParticleBroadSearch.html#acd718b0211e68b8ec117948332d82f70">ParticleParticleBroadSearch&lt; dim &gt;</a>
-</li>
 <li>find_particle_point_and_line_contact_cells()
 : <a class="el" href="classBoundaryCellsInformation.html#acc4927b9a2d88f40e3a95e9da96ae553">BoundaryCellsInformation&lt; dim &gt;</a>
-</li>
-<li>find_particle_point_contact_pairs()
-: <a class="el" href="classParticlePointLineBroadSearch.html#ab7b3385e30fe0e36464abd7f9c742870">ParticlePointLineBroadSearch&lt; dim &gt;</a>
-</li>
-<li>find_particle_wall_contact_pairs()
-: <a class="el" href="classParticleWallBroadSearch.html#a74943df34f254fef4074af224cfa7f5f">ParticleWallBroadSearch&lt; dim &gt;</a>
 </li>
 <li>find_position_global_search()
 : <a class="el" href="classRPTFEMReconstruction.html#ac947f049656b55297a91f0892abbf329">RPTFEMReconstruction&lt; dim &gt;</a>
@@ -402,8 +375,7 @@ $(function() {
 : <a class="el" href="classParticleWallContactForce.html#afd17e17a1fc45374e0fa95074fe6ddc5">ParticleWallContactForce&lt; dim &gt;</a>
 </li>
 <li>find_projection_point()
-: <a class="el" href="classParticlePointLineFineSearch.html#a6a4b414401e3ba7db12ba5ec1043a574">ParticlePointLineFineSearch&lt; dim &gt;</a>
-, <a class="el" href="classParticlePointLineForce.html#a62134145464bcf262c151a24f8162d3b">ParticlePointLineForce&lt; dim &gt;</a>
+: <a class="el" href="classParticlePointLineForce.html#a62134145464bcf262c151a24f8162d3b">ParticlePointLineForce&lt; dim &gt;</a>
 </li>
 <li>find_sharpening_threshold()
 : <a class="el" href="classVolumeOfFluid.html#a4af1c21c11af2d148e1f0b8ddf9cc8cf">VolumeOfFluid&lt; dim &gt;</a>
@@ -413,9 +385,6 @@ $(function() {
 </li>
 <li>find_vertices_positions()
 : <a class="el" href="classRPTCellReconstruction.html#a32c9e3384f2595fcb6949d92511cbda6">RPTCellReconstruction&lt; dim &gt;</a>
-</li>
-<li>FindCellNeighbors()
-: <a class="el" href="classFindCellNeighbors.html#a925aa84e12f4ff25f6feef0881ea4276">FindCellNeighbors&lt; dim &gt;</a>
 </li>
 <li>finish_simulation()
 : <a class="el" href="classAuxiliaryPhysics.html#aa917fdacf48dbefe7657aa7978edd53a">AuxiliaryPhysics&lt; dim, VectorType &gt;</a>
@@ -434,13 +403,16 @@ $(function() {
 : <a class="el" href="classNavierStokesBase.html#a66e07e67baaf085649cea34a8aec24a3">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
 </li>
 <li>finish_time_step_fd()
-: <a class="el" href="classGLSVANSSolver.html#a2153ae63cb73dfcc0d31be4963288ad7">GLSVANSSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsVANS.html#ad14a6b5f4d1f15511516d3dae8ea20b3">FluidDynamicsVANS&lt; dim &gt;</a>
 </li>
 <li>finish_time_step_particles()
-: <a class="el" href="classGLSSharpNavierStokesSolver.html#a0e7555d3864e2910e180fa1f53d503b0">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsSharp.html#a912bf3f7d5a150eaa358804d5503b220">FluidDynamicsSharp&lt; dim &gt;</a>
 </li>
 <li>first_assembly
 : <a class="el" href="classSimulationControl.html#ad268d2371b110c1f754a35578d16522b">SimulationControl</a>
+</li>
+<li>first_dem_of_cfddem_iteration_step()
+: <a class="el" href="classDEMActionManager.html#a369b92e230920fcaff1f79c102e7bb72">DEMActionManager</a>
 </li>
 <li>fix_pressure_constant
 : <a class="el" href="classBoundaryConditions_1_1NSBoundaryConditions.html#aa09ad70979369794f0928490d1cc6964">BoundaryConditions::NSBoundaryConditions&lt; dim &gt;</a>
@@ -453,13 +425,6 @@ $(function() {
 </li>
 <li>floating_grid
 : <a class="el" href="classDEMSolverParameters.html#ab27d6d626f95107e6075bc8dc60f898f">DEMSolverParameters&lt; dim &gt;</a>
-</li>
-<li>floating_mesh_info
-: <a class="el" href="classCFDDEMSolver.html#a23462293a329b3d3bf84f193439f5f51">CFDDEMSolver&lt; dim &gt;</a>
-, <a class="el" href="classDEMSolver.html#af5be04cf19ee665d6acfc455d616735b">DEMSolver&lt; dim &gt;</a>
-</li>
-<li>floating_mesh_information
-: <a class="el" href="structDEM_1_1dem__data__structures.html#aefb7f17e5fdd7999939d1486e05cca37">DEM::dem_data_structures&lt; dim &gt;</a>
 </li>
 <li>floating_walls
 : <a class="el" href="classDEMSolverParameters.html#a95bc55e508a79c152b69eb05ae0bb8dd">DEMSolverParameters&lt; dim &gt;</a>
@@ -510,7 +475,7 @@ $(function() {
 : <a class="el" href="structStasisConstraintWithTemperature.html#acd205778a1c9239d6c1f54948a33b53e">StasisConstraintWithTemperature</a>
 </li>
 <li>fluid_ids
-: <a class="el" href="structParameters_1_1ConstrainSolidDomain.html#ad25ceb0deef67670801448bc3132b732">Parameters::ConstrainSolidDomain</a>
+: <a class="el" href="structParameters_1_1ConstrainSolidDomain.html#a0a7b502d35060c5678182722ded9a554">Parameters::ConstrainSolidDomain&lt; dim &gt;</a>
 </li>
 <li>fluid_mapping
 : <a class="el" href="classSolidBase.html#a8854df1daf4ffc7765b14b7172a5872b">SolidBase&lt; dim, spacedim &gt;</a>
@@ -552,6 +517,24 @@ $(function() {
 <li>fluid_viscous_forces
 : <a class="el" href="classIBParticle.html#a0a1b393d196c6a14d0df204387feb964">IBParticle&lt; dim &gt;</a>
 </li>
+<li>FluidDynamicsBlock()
+: <a class="el" href="classFluidDynamicsBlock.html#ac275fbd2123664063cdb2852fd2b0dff">FluidDynamicsBlock&lt; dim &gt;</a>
+</li>
+<li>FluidDynamicsMatrixBased()
+: <a class="el" href="classFluidDynamicsMatrixBased.html#a2dd97c9cad33e27640d58531f635e5a1">FluidDynamicsMatrixBased&lt; dim &gt;</a>
+</li>
+<li>FluidDynamicsMatrixFree()
+: <a class="el" href="classFluidDynamicsMatrixFree.html#a9bec5747e8d454c16fbbc9dd675a95c7">FluidDynamicsMatrixFree&lt; dim &gt;</a>
+</li>
+<li>FluidDynamicsNitsche()
+: <a class="el" href="classFluidDynamicsNitsche.html#a009bf21e725298f066f01dcdc60c13f5">FluidDynamicsNitsche&lt; dim, spacedim &gt;</a>
+</li>
+<li>FluidDynamicsSharp()
+: <a class="el" href="classFluidDynamicsSharp.html#a1798e445492649245f350a4625ce98d1">FluidDynamicsSharp&lt; dim &gt;</a>
+</li>
+<li>FluidDynamicsVANS()
+: <a class="el" href="classFluidDynamicsVANS.html#a8d3a93bf74d6adb68024be2143e97d18">FluidDynamicsVANS&lt; dim &gt;</a>
+</li>
 <li>fluids
 : <a class="el" href="classParameters_1_1PhysicalProperties.html#ad226b6ba846b4b697406938720a20b9c">Parameters::PhysicalProperties</a>
 </li>
@@ -560,11 +543,17 @@ $(function() {
 , <a class="el" href="classDEMSolver.html#a25945e51cd08ab3e99da76f44622d2c5">DEMSolver&lt; dim &gt;</a>
 , <a class="el" href="classNavierStokesScratchData.html#a132a5f0c61439d03594e00c5052b27fe">NavierStokesScratchData&lt; dim &gt;</a>
 </li>
+<li>force_chains
+: <a class="el" href="structParameters_1_1Lagrangian_1_1LagrangianPostProcessing.html#ab71c7b44d79914157d26b84dac34f651">Parameters::Lagrangian::LagrangianPostProcessing</a>
+</li>
 <li>force_linear_solver_continuation
 : <a class="el" href="structParameters_1_1LinearSolver.html#aec93efee4ac53b8b20e052d4fa66ca41">Parameters::LinearSolver</a>
 </li>
+<li>force_normal
+: <a class="el" href="classParticlesForceChains.html#a73f0977a5193266518968e69eac2bcec">ParticlesForceChains&lt; dim, force_model, rolling_friction_model &gt;</a>
+</li>
 <li>force_on_ib()
-: <a class="el" href="classGLSSharpNavierStokesSolver.html#ab49fd6706ed08d6851c320897fb74fa7">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsSharp.html#a34503d6490dd6d9af1440243176d8f1f">FluidDynamicsSharp&lt; dim &gt;</a>
 </li>
 <li>force_on_walls
 : <a class="el" href="classParticleWallContactForce.html#a86b0fd2f27fc8fc0d8432720f0cc0776">ParticleWallContactForce&lt; dim &gt;</a>
@@ -626,8 +615,7 @@ $(function() {
 : <a class="el" href="structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#a8e52ef4d0c19d1101e46ce6ab872d74b">Parameters::Lagrangian::LagrangianPhysicalProperties</a>
 </li>
 <li>FuncPtrType
-: <a class="el" href="classCFDDEMSolver.html#a751894c5e6af76324430e101c7551dd8">CFDDEMSolver&lt; dim &gt;</a>
-, <a class="el" href="classGridMotion.html#af227c03280158d4ce32cd8524e4d62d0">GridMotion&lt; dim, spacedim &gt;</a>
+: <a class="el" href="classGridMotion.html#af227c03280158d4ce32cd8524e4d62d0">GridMotion&lt; dim, spacedim &gt;</a>
 , <a class="el" href="classParticleWallDMTForce.html#a2b15a234d3cd7b4bf8eea3cf3fedfbb4">ParticleWallDMTForce&lt; dim &gt;</a>
 , <a class="el" href="classParticleWallJKRForce.html#a4f73f77225ee8d44360f7f4f5a9c9fbb">ParticleWallJKRForce&lt; dim &gt;</a>
 , <a class="el" href="classParticleWallLinearForce.html#ac6bb4e7fa4e9c1acfaa103f38913dc03">ParticleWallLinearForce&lt; dim &gt;</a>

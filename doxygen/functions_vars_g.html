@@ -81,7 +81,7 @@ $(function() {
 </li>
 <li>gamma
 : <a class="el" href="classBlockSchurPreconditioner.html#af4f1abb540d57aa7e33f076f99e1c7ac">BlockSchurPreconditioner&lt; BSPreconditioner &gt;</a>
-, <a class="el" href="classGDNavierStokesSolver.html#a6413246081ae342dfb764599f950b747">GDNavierStokesSolver&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsBlock.html#a19f99172c895f6b8feceb0e28c4d55ab">FluidDynamicsBlock&lt; dim &gt;</a>
 </li>
 <li>gamma_rays_emitted
 : <a class="el" href="structParameters_1_1RPTParameters.html#a81f5f7f07cb966bc17910397c8446807">Parameters::RPTParameters</a>
@@ -113,6 +113,9 @@ $(function() {
 </li>
 <li>gc_multigrid_preconditioner
 : <a class="el" href="classMFNavierStokesPreconditionGMG.html#a14ab427891e9a2c77a271ef567c37870">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
+</li>
+<li>gc_multigrid_preconditioner_intermediate
+: <a class="el" href="classMFNavierStokesPreconditionGMG.html#a84ca0d6ee25b2af4610f046c537dcc92">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
 </li>
 <li>gen
 : <a class="el" href="classCustomDistribution.html#a5d849699f8136a27020a24abe129b883">CustomDistribution</a>
@@ -158,14 +161,17 @@ $(function() {
 <li>global_boundary_cells_with_faces
 : <a class="el" href="classBoundaryCellsInformation.html#a7a0063e1483d2fcb4400cd78fe8f74a8">BoundaryCellsInformation&lt; dim &gt;</a>
 </li>
+<li>global_delta_T_ref
+: <a class="el" href="classHeatTransferScratchData.html#ab0d218b2b86e54557b8538333a1f8c09">HeatTransferScratchData&lt; dim &gt;</a>
+</li>
 <li>global_face_id
 : <a class="el" href="structboundary__cells__info__struct.html#a5c41ae88327dcdcc1493e1a8f6ca681e">boundary_cells_info_struct&lt; dim &gt;</a>
 </li>
 <li>GLS_u_scale
-: <a class="el" href="classGLSVANSSolver.html#a28bbd9bd31761645423e7cc2f99af1e4">GLSVANSSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsVANS.html#aa17ba0f5277a91b19a4b066e5312ea8f">FluidDynamicsVANS&lt; dim &gt;</a>
 </li>
 <li>gmg_preconditioner
-: <a class="el" href="classMFNavierStokesSolver.html#a391912025bd3ec5d3c3db4fb84950862">MFNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsMatrixFree.html#af14c2460441eec912ad9f1c183564586">FluidDynamicsMatrixFree&lt; dim &gt;</a>
 </li>
 <li>grad_div
 : <a class="el" href="structParameters_1_1CFDDEM.html#a00b7fa0994c5cf465b5ba9fc3dec9f83">Parameters::CFDDEM</a>
@@ -207,9 +213,6 @@ $(function() {
 <li>gradient_cache
 : <a class="el" href="classShape.html#a5664837a7d944d1ef2334245a6943fb1">Shape&lt; dim &gt;</a>
 </li>
-<li>granular_temperature_average
-: <a class="el" href="classLagrangianPostProcessing.html#a98447c343014d8b2c17967e5b2c016b1">LagrangianPostProcessing&lt; dim &gt;</a>
-</li>
 <li>granular_temperature_threshold
 : <a class="el" href="classAdaptiveSparseContacts.html#a0b5a343c374c4e49b0a2a6778d34e408">AdaptiveSparseContacts&lt; dim &gt;</a>
 , <a class="el" href="structParameters_1_1Lagrangian_1_1ModelParameters.html#aad59ad2c1005b5fe9bfb66a13c215f10">Parameters::Lagrangian::ModelParameters</a>
@@ -221,6 +224,9 @@ $(function() {
 <li>grid_motion
 : <a class="el" href="classDEMSolverParameters.html#a941be40f6a4b11025ed8423e01505f02">DEMSolverParameters&lt; dim &gt;</a>
 , <a class="el" href="classGridMotion.html#a1745560a13aac56edf35999822d085ca">GridMotion&lt; dim, spacedim &gt;</a>
+</li>
+<li>grid_motion_enabled
+: <a class="el" href="classDEMActionManager.html#a1720b5e9b311b454b1b6a0fab3b64378">DEMActionManager</a>
 </li>
 <li>grid_motion_object
 : <a class="el" href="classDEMSolver.html#a2e9d84ea2f5acde291a757ec7252ba63">DEMSolver&lt; dim &gt;</a>

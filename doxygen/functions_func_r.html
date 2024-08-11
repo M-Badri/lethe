@@ -90,8 +90,8 @@ $(function() {
 : <a class="el" href="classAuxiliaryPhysics.html#ab68fa8d211549189803ddd8ba1fcc4ff">AuxiliaryPhysics&lt; dim, VectorType &gt;</a>
 , <a class="el" href="classCahnHilliard.html#aa96108c743c84c51fb532dc02c45fb92">CahnHilliard&lt; dim &gt;</a>
 , <a class="el" href="classCFDDEMSolver.html#a8e1bf1e148eb7c08ddc4da5d1b1f2304">CFDDEMSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSNitscheNavierStokesSolver.html#a23b4d411a6d70f502972e800e857bf80">GLSNitscheNavierStokesSolver&lt; dim, spacedim &gt;</a>
-, <a class="el" href="classGLSSharpNavierStokesSolver.html#a288ccb40a043df27c99caad27f04166a">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsNitsche.html#a88be8f986d3c498385efe4595c152bd4">FluidDynamicsNitsche&lt; dim, spacedim &gt;</a>
+, <a class="el" href="classFluidDynamicsSharp.html#a0cf0af6991bf6050350de577b2ecd668">FluidDynamicsSharp&lt; dim &gt;</a>
 , <a class="el" href="classHeatTransfer.html#a8e4d76beacb77c787c9079c5a0ca7c55">HeatTransfer&lt; dim &gt;</a>
 , <a class="el" href="classMultiphysicsInterface.html#a0b4dd5b2f0f09b10a3ba4893872d9553">MultiphysicsInterface&lt; dim &gt;</a>
 , <a class="el" href="classNavierStokesBase.html#a582b5a5fd99b3e8e1c2b21c17bb1b21a">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
@@ -102,13 +102,13 @@ $(function() {
 </li>
 <li>read_dem()
 : <a class="el" href="classCFDDEMSolver.html#a49eace16077d20cb12722c0fa49aed14">CFDDEMSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSVANSSolver.html#a3387b1fef3acdab998e9ab23b2fce54b">GLSVANSSolver&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsVANS.html#a9ebb387a23a295e689d0ef9c6d428321">FluidDynamicsVANS&lt; dim &gt;</a>
 </li>
 <li>refine_ib()
-: <a class="el" href="classGLSSharpNavierStokesSolver.html#a23507b1f257ef838fc67e787041a84f7">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsSharp.html#af2fa59fec17cbf9f0fee2e922c550010">FluidDynamicsSharp&lt; dim &gt;</a>
 </li>
 <li>refine_mesh()
-: <a class="el" href="classGLSNitscheNavierStokesSolver.html#ad5914ec8d0ee28e0bb57c5098e6ae587">GLSNitscheNavierStokesSolver&lt; dim, spacedim &gt;</a>
+: <a class="el" href="classFluidDynamicsNitsche.html#abe7213b302258dcf1f654597d971a745">FluidDynamicsNitsche&lt; dim, spacedim &gt;</a>
 , <a class="el" href="classNavierStokesBase.html#a57ffa198f9fabb15e3af4c9fa2921e18">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
 </li>
 <li>refine_mesh_kelly()
@@ -118,14 +118,14 @@ $(function() {
 : <a class="el" href="classNavierStokesBase.html#ac8a90a05bdef648307a900513585bd86">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
 </li>
 <li>refinement_control()
-: <a class="el" href="classGLSSharpNavierStokesSolver.html#a47c51b4414261c62a252eefca723432e">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsSharp.html#a8fdb2b2a4ce648466388f06d721d87b9">FluidDynamicsSharp&lt; dim &gt;</a>
 </li>
 <li>reinit()
 : <a class="el" href="classCahnHilliardScratchData.html#aee2615c17b9b368cce9a152a16e31dee">CahnHilliardScratchData&lt; dim &gt;</a>
 , <a class="el" href="classHeatTransferScratchData.html#ae9c04687dab523855f69361986866a2f">HeatTransferScratchData&lt; dim &gt;</a>
 , <a class="el" href="classNavierStokesOperatorBase.html#a83af091877c3d27ca442515c96818c4f">NavierStokesOperatorBase&lt; dim, number &gt;</a>
 , <a class="el" href="classNavierStokesScratchData.html#abb5c55b6d522bcf6970eb0f2becb3c3c">NavierStokesScratchData&lt; dim &gt;</a>
-, <a class="el" href="classTracerScratchData.html#afbb390b1da5251012af56a9d81fa7ad9">TracerScratchData&lt; dim &gt;</a>
+, <a class="el" href="classTracerScratchData.html#ac990f900cc3c4b05660ccef982632852">TracerScratchData&lt; dim &gt;</a>
 , <a class="el" href="classVOFScratchData.html#a4c7a04cc24d358123c2ce8183f2fedbc">VOFScratchData&lt; dim &gt;</a>
 </li>
 <li>reinit_cahn_hilliard()
@@ -161,10 +161,16 @@ $(function() {
 <li>reinit_void_fraction()
 : <a class="el" href="classNavierStokesScratchData.html#a59cf6c71f993b535281774fb63838cbd">NavierStokesScratchData&lt; dim &gt;</a>
 </li>
+<li>remove_particles_in_box()
+: <a class="el" href="classInsertion.html#a8843f788eeac3ede326d7ee3138e031c">Insertion&lt; dim &gt;</a>
+</li>
 <li>remove_superfluous_data()
 : <a class="el" href="classCompositeShape.html#a48be7f23c3dc3dfe11a9880bd9b25b18">CompositeShape&lt; dim &gt;</a>
 , <a class="el" href="classIBParticle.html#a6f8122e0e1a3746c7cffd6951654c910">IBParticle&lt; dim &gt;</a>
 , <a class="el" href="classRBFShape.html#a02d165a5215eb4e8f45bbd82515551e1">RBFShape&lt; dim &gt;</a>
+</li>
+<li>report_particle_statistics()
+: <a class="el" href="classCFDDEMSolver.html#aa5fa6cfecbeeaa157714025bd4193a10">CFDDEMSolver&lt; dim &gt;</a>
 </li>
 <li>report_statistics()
 : <a class="el" href="classDEMSolver.html#af20b64f0bf9369e3dfcc95ded99f5cac">DEMSolver&lt; dim &gt;</a>
@@ -180,6 +186,12 @@ $(function() {
 <li>reset_displacement_monitoring()
 : <a class="el" href="classSerialSolid.html#a641d4246069103564995b55b8d630de8">SerialSolid&lt; dim, spacedim &gt;</a>
 </li>
+<li>reset_triggers()
+: <a class="el" href="classDEMActionManager.html#a6d8298be5f1ccb753c268c369e3bc2a4">DEMActionManager</a>
+</li>
+<li>restart_simulation()
+: <a class="el" href="classDEMActionManager.html#ab5b7176a22504228bfa4328f1d7604ff">DEMActionManager</a>
+</li>
 <li>reverse_align_and_center()
 : <a class="el" href="classShape.html#a8fb04c9145a69a03028d3cecf2cd9338">Shape&lt; dim &gt;</a>
 </li>
@@ -191,7 +203,7 @@ $(function() {
 </li>
 <li>rotate_grid()
 : <a class="el" href="classSerialSolid.html#aacd53d2b3425e246f90c148f678fa1de">SerialSolid&lt; dim, spacedim &gt;</a>
-, <a class="el" href="classSolidBase.html#a74e83d98f02c979151c56429d8eee162">SolidBase&lt; dim, spacedim &gt;</a>
+, <a class="el" href="classSolidBase.html#a3eab605dbf4cf8434a757c9aed83011e">SolidBase&lt; dim, spacedim &gt;</a>
 </li>
 <li>rotate_nodes()
 : <a class="el" href="classRBFShape.html#a37e04469a136df013e5c01044e2a4e73">RBFShape&lt; dim &gt;</a>

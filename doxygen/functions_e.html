@@ -83,6 +83,9 @@ $(function() {
 <li>edge_constrained_values
 : <a class="el" href="classNavierStokesOperatorBase.html#a90f09ebc4431f3b1dc4f0ae65ee5abcf">NavierStokesOperatorBase&lt; dim, number &gt;</a>
 </li>
+<li>edge_of_removal_box
+: <a class="el" href="classInsertion.html#a36c8de12aef711e1cb2cc95c8f1fd3e8">Insertion&lt; dim &gt;</a>
+</li>
 <li>effective_coefficient_of_friction
 : <a class="el" href="classParticleParticleContactForce.html#a46d8b57928d3f8f1c5d680bf2ea8430e">ParticleParticleContactForce&lt; dim, force_model, rolling_friction_model &gt;</a>
 , <a class="el" href="classParticleWallContactForce.html#a5055c048b67ebee083cd2f36abc81381">ParticleWallContactForce&lt; dim &gt;</a>
@@ -95,9 +98,12 @@ $(function() {
 : <a class="el" href="classParticleParticleContactForce.html#ae99b78e33f52abbc16cabe3e3589a754">ParticleParticleContactForce&lt; dim, force_model, rolling_friction_model &gt;</a>
 , <a class="el" href="classParticleWallContactForce.html#ac22878bad2f720af79e7eb6a88a41dfb">ParticleWallContactForce&lt; dim &gt;</a>
 </li>
+<li>effective_hamaker_constant
+: <a class="el" href="classParticleParticleContactForce.html#a2c7b3f2001ba5018377cf38093715fc5">ParticleParticleContactForce&lt; dim, force_model, rolling_friction_model &gt;</a>
+, <a class="el" href="classParticleWallContactForce.html#a5073adf5231ac0cf06260b12c46c0155">ParticleWallContactForce&lt; dim &gt;</a>
+</li>
 <li>effective_mass
 : <a class="el" href="classParticleParticleContactForce.html#a7d2508a3ac0c99eae8c613a08520b47a">ParticleParticleContactForce&lt; dim, force_model, rolling_friction_model &gt;</a>
-, <a class="el" href="classParticleWallContactForce.html#a2c570ea02dddbbb30ded348d0622ec94">ParticleWallContactForce&lt; dim &gt;</a>
 </li>
 <li>effective_radius
 : <a class="el" href="classParticleParticleContactForce.html#afedd02af18aca36a28f019ce8742be07">ParticleParticleContactForce&lt; dim, force_model, rolling_friction_model &gt;</a>
@@ -123,7 +129,7 @@ $(function() {
 : <a class="el" href="structParameters_1_1LinearSolver.html#a503f3f5d96b73b407b5293a949b3dfb7">Parameters::LinearSolver</a>
 </li>
 <li>eig_estimation_smoothing_range
-: <a class="el" href="structParameters_1_1LinearSolver.html#a6a6cf3548cb2937c29c04c4d58fe021b">Parameters::LinearSolver</a>
+: <a class="el" href="structParameters_1_1LinearSolver.html#aa1ed3b0c9a4cc04968728391591c8243">Parameters::LinearSolver</a>
 </li>
 <li>eig_estimation_verbose
 : <a class="el" href="structParameters_1_1LinearSolver.html#af0e28141f596fde7667b800aaae50058">Parameters::LinearSolver</a>
@@ -153,7 +159,7 @@ $(function() {
 <li>enable
 : <a class="el" href="classAnalyticalSolutions_1_1AnalyticalSolution.html#af9215a7772b163c607e0380b79f20744">AnalyticalSolutions::AnalyticalSolution&lt; dim &gt;</a>
 , <a class="el" href="classParameters_1_1ALE.html#a2e865c516276b818c8d038a91402e780">Parameters::ALE&lt; dim &gt;</a>
-, <a class="el" href="structParameters_1_1ConstrainSolidDomain.html#aee033a59dba7bc58b712352956e73d97">Parameters::ConstrainSolidDomain</a>
+, <a class="el" href="structParameters_1_1ConstrainSolidDomain.html#ad704ac84e28fe7df473af4c745cc60f2">Parameters::ConstrainSolidDomain&lt; dim &gt;</a>
 , <a class="el" href="structParameters_1_1VOF__InterfaceSharpening.html#a871e32290d676a16864bfcb64914807d">Parameters::VOF_InterfaceSharpening</a>
 , <a class="el" href="structParameters_1_1VOF__SurfaceTensionForce.html#a1dc4d5fd932045f4125e11bff3793bc7">Parameters::VOF_SurfaceTensionForce</a>
 , <a class="el" href="classSourceTerms_1_1SourceTerm.html#a4d99dba0421b80c9bb29b10cef2f8218">SourceTerms::SourceTerm&lt; dim &gt;</a>
@@ -166,6 +172,9 @@ $(function() {
 </li>
 <li>enable_curvature()
 : <a class="el" href="classNavierStokesScratchData.html#a9f3a9b09303fb38071eba70e6392dc0c">NavierStokesScratchData&lt; dim &gt;</a>
+</li>
+<li>enable_domain_restriction_with_plane
+: <a class="el" href="structParameters_1_1ConstrainSolidDomain.html#a559edda60af9e3f280520d17428c6a98">Parameters::ConstrainSolidDomain&lt; dim &gt;</a>
 </li>
 <li>enable_dynamic_zero_constraints_fd()
 : <a class="el" href="classNavierStokesBase.html#a5cb26099e84a166b982c052ffa9c43a8">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
@@ -347,22 +356,22 @@ $(function() {
 : <a class="el" href="classNavierStokesBase.html#a0f6d10b72ef159c5e5602331567eea09">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
 </li>
 <li>execute_cell_neighbors_search()
-: <a class="el" href="classDEMContactManager.html#afac6797f57fd9c3dca66f650b25d77d0">DEMContactManager&lt; dim &gt;</a>
+: <a class="el" href="classDEMContactManager.html#a4ffac92c694e849e3ba521f93404cc52">DEMContactManager&lt; dim &gt;</a>
 </li>
 <li>execute_cell_reconstruction()
 : <a class="el" href="classRPTCellReconstruction.html#afe9f86ffe7ebcab6c8abe746ee561080">RPTCellReconstruction&lt; dim &gt;</a>
 </li>
 <li>execute_particle_particle_broad_search()
-: <a class="el" href="classDEMContactManager.html#a2826508b4e77362e1c47bc3f21ea4b09">DEMContactManager&lt; dim &gt;</a>
+: <a class="el" href="classDEMContactManager.html#a2306e86d107360833796aaba1af13414">DEMContactManager&lt; dim &gt;</a>
 </li>
 <li>execute_particle_particle_fine_search()
-: <a class="el" href="classDEMContactManager.html#ab16dee556cdd33cd8307ee63cd9bb82f">DEMContactManager&lt; dim &gt;</a>
+: <a class="el" href="classDEMContactManager.html#a4c908c0f795921cdabce2cb016f99bc9">DEMContactManager&lt; dim &gt;</a>
 </li>
 <li>execute_particle_wall_broad_search()
-: <a class="el" href="classDEMContactManager.html#ab89bc870e9adbde380738c2f9b52ca08">DEMContactManager&lt; dim &gt;</a>
+: <a class="el" href="classDEMContactManager.html#a40afc913290019f98f681c2442511ad7">DEMContactManager&lt; dim &gt;</a>
 </li>
 <li>execute_particle_wall_fine_search()
-: <a class="el" href="classDEMContactManager.html#acb698d9ff443e1ca02793b449da55fe7">DEMContactManager&lt; dim &gt;</a>
+: <a class="el" href="classDEMContactManager.html#af9f1cce05ced72b9a7023f8f01e15b3f">DEMContactManager&lt; dim &gt;</a>
 </li>
 <li>execute_particles_displacement()
 : <a class="el" href="classPeriodicBoundariesManipulator.html#ae0a3b491c630334dd56e173e79a2811c">PeriodicBoundariesManipulator&lt; dim &gt;</a>
@@ -405,6 +414,12 @@ $(function() {
 </li>
 <li>export_positions_file
 : <a class="el" href="structParameters_1_1RPTFEMReconstructionParameters.html#ab8a93a14c66ca50d4f239fdf5f11f03a">Parameters::RPTFEMReconstructionParameters</a>
+</li>
+<li>expression
+: <a class="el" href="classParsedFunctionCustom.html#a8942edaa3d8de97090da50bd9d4b317a">ParsedFunctionCustom&lt; n_components &gt;</a>
+</li>
+<li>expressions
+: <a class="el" href="classinternalFunctionParserCustom_1_1ParserImplementation.html#a666c8d3bdf19d3bf79e4aa78cba50779">internalFunctionParserCustom::ParserImplementation&lt; n_components &gt;</a>
 </li>
 <li>extrapolation_tolerance
 : <a class="el" href="structParameters_1_1RPTFEMReconstructionParameters.html#aa0c092e8c94de07b1d4ac699d75bc446">Parameters::RPTFEMReconstructionParameters</a>

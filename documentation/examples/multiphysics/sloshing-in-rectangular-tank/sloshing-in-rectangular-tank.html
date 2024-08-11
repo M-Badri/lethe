@@ -184,6 +184,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/initial_conditions.html">Initial Conditions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/laser_heat_source.html">Laser Heat Source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/linear_solver_control.html">Linear Solver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/manifolds.html">Manifolds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/mesh.html">Mesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/mesh_adaptation_control.html">Mesh Adaptation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/multiphysics.html">Multiphysics</a></li>
@@ -203,7 +204,6 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../parameters/dem/dem.html">Discrete Element Method (DEM)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Discrete Element Method (DEM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/boundary_conditions.html">Boundary Conditions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/floating_mesh.html">Floating Mesh (Solid Objects)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/floating_wall.html">Floating Wall</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/insertion_info.html">Insertion Info</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/lagrangian_physical_properties.html">Lagrangian Physical Properties</a></li>
@@ -211,6 +211,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/model_parameters.html">Model Parameters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/post-processing.html">Post-processing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/simulation_control.html">Simulation Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/solid_objects.html">Solid Objects</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/test.html">Test</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/timer.html">Timer</a></li>
 </ul>
@@ -232,7 +233,7 @@
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../../examples.html">Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../incompressible-flow/incompressible-flow.html">Incompressible Flow</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Incompressible Flow</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-lid%E2%80%90driven-cavity-flow/lid%E2%80%90driven-cavity-flow.html">Lid-Driven Cavity Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-lid-driven-cavity-flow/lid-driven-cavity-flow.html">Lid-Driven Cavity Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-flow-around-cylinder/2d-flow-around-cylinder.html">Flow around a Cylinder</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-taylor-couette-flow/2d-taylor-couette-flow.html">Taylor-Couette Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-backward-facing-step/2d-backward-facing-step.html">Flow past a Backward-Facing Step</a></li>
@@ -256,6 +257,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../rising-bubble/rising-bubble.html">Rising Bubble</a></li>
 <li class="toctree-l4 current current-page"><a class="current reference internal" href="#">Sloshing in a Rectangular Tank</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../capillary-wave/capillary-wave.html">Capillary Wave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rayleigh-plateau-instability/rayleigh-plateau-instability.html">Rayleigh-Plateau Instability</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../3d-dam-break/3d-dam-break.html">3D Dam-Break with an Obstacle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../water-injection-in-a-closed-cell/water-injection-in-a-closed-cell.html">Water Injection in a Closed Cell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../air-bubble-compression/air-bubble-compression.html">Air Bubble Compression</a></li>
@@ -290,8 +292,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../../dem/silo/silo.html">Silo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../dem/rectangular-hopper/rectangular-hopper.html">Rectangular Hopper</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../dem/granular-dam-break/granular-dam-break.html">Granular Dam-Break</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dem/plate-discharge/plate-discharge.html">Plate Discharge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../dem/bunny-drill/bunny-drill.html">Bunny Drill</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../dem/granular-mixer/granular-mixer.html">Granular Mixer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dem/granuheap/granuheap.html">Granuheap</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -301,6 +305,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/liquid-solid-fluidized-bed/liquid-solid-fluidized-bed.html">Liquid-Solid Fluidized Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/boycott-effect/boycott-effect.html">Boycott Effect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/gas-solid-spouted-cylinder-bed/gas-solid-spouted-cylinder-bed.html">Gas-Solid Spouted Cylinder Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/dense-pneumatic-conveying/dense-pneumatic-conveying.html">Dense Pneumatic Conveying</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../sharp-immersed-boundary/sharp-immersed-boundary.html">Sharp Immersed Boundary Solver</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Sharp Immersed Boundary Solver</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -344,6 +349,8 @@
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../../theory/multiphysics/heat_transfer/heat_transfer.html">Heat Transfer</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle navigation of Heat Transfer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphysics/heat_transfer/heat_equation.html">Heat Transfer Equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphysics/heat_transfer/heat_equation.html#finite-element-formulation">Finite Element Formulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphysics/heat_transfer/heat_equation.html#stabilization-techniques">Stabilization Techniques</a></li>
 </ul>
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../../theory/multiphysics/passive_tracer/passive_tracer.html">Passive Tracer</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle navigation of Passive Tracer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -352,6 +359,7 @@
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../../theory/multiphysics/electromagnetism/electromagnetism.html">Electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle navigation of Electromagnetism</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphysics/electromagnetism/time_harmonic.html">Time Harmonic Maxwell’s Equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphysics/electromagnetism/time_harmonic_weak_form.html">Finite Element Method for Time-Harmonic Maxwell’s Equations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphysics/electromagnetism/magnetohydrodynamics.html">Magnetohydrodynamics Equations</a></li>
 </ul>
 </li>
@@ -421,7 +429,7 @@
         <article role="main">
           <section id="sloshing-in-a-rectangular-tank">
 <h1>Sloshing in a Rectangular Tank<a class="headerlink" href="#sloshing-in-a-rectangular-tank" title="Link to this heading">#</a></h1>
-<p>This example simulates the damping of a small amplitude wave for Reynolds number of (<span class="math notranslate nohighlight">\(2\)</span>, <span class="math notranslate nohighlight">\(20\)</span>, <span class="math notranslate nohighlight">\(200\)</span> and <span class="math notranslate nohighlight">\(2000\)</span>). The problem is inspired by the test case of Carrica <em>et al.</em> <a class="reference external" href="https://onlinelibrary.wiley.com/doi/abs/10.1002/fld.1279">[1]</a></p>
+<p>This example simulates the damping of a small amplitude wave for Reynolds number of (<span class="math notranslate nohighlight">\(2\)</span>, <span class="math notranslate nohighlight">\(20\)</span>, <span class="math notranslate nohighlight">\(200\)</span> and <span class="math notranslate nohighlight">\(2000\)</span>). The problem is inspired by the test case of Carrica <em>et al.</em> <a class="footnote-reference brackets" href="#carrica2007" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <section id="features">
 <h2>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h2>
 <ul class="simple">
@@ -571,7 +579,7 @@ run in parallel using mpirun. This simulation takes
 </section>
 <section id="results">
 <h2>Results<a class="headerlink" href="#results" title="Link to this heading">#</a></h2>
-<p>We compare the relative height of the free surface at <span class="math notranslate nohighlight">\(x=0\)</span> with an analytical solution proposed by Wu <em>et al.</em> <a class="reference external" href="https://link.springer.com/article/10.1023/A:1017558826258">[2]</a> For the Reynolds number of <span class="math notranslate nohighlight">\(2\)</span>, <span class="math notranslate nohighlight">\(20\)</span> and <span class="math notranslate nohighlight">\(200\)</span>, data were directly extracted from Carrica <em>et al.</em> <a class="reference external" href="https://onlinelibrary.wiley.com/doi/abs/10.1002/fld.1279">[1]</a>, whereas for the Reynolds of <span class="math notranslate nohighlight">\(2000\)</span>, the simplified analytical expression of Wu <em>et al.</em> <a class="reference external" href="https://link.springer.com/article/10.1023/A:1017558826258">[2]</a> is used. The results for Reynolds number of <span class="math notranslate nohighlight">\(2\)</span>, <span class="math notranslate nohighlight">\(20\)</span>, <span class="math notranslate nohighlight">\(200\)</span> and <span class="math notranslate nohighlight">\(2000\)</span> can be post-processed by invoking the following command from the folder of the Reynolds number of interest (<span class="math notranslate nohighlight">\(Re=20\)</span> in the example below):</p>
+<p>We compare the relative height of the free surface at <span class="math notranslate nohighlight">\(x=0\)</span> with an analytical solution proposed by Wu <em>et al.</em> <a class="footnote-reference brackets" href="#wu2001" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> For the Reynolds number of <span class="math notranslate nohighlight">\(2\)</span>, <span class="math notranslate nohighlight">\(20\)</span> and <span class="math notranslate nohighlight">\(200\)</span>, data were directly extracted from Carrica <em>et al.</em> <a class="footnote-reference brackets" href="#carrica2007" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, whereas for the Reynolds of <span class="math notranslate nohighlight">\(2000\)</span>, the simplified analytical expression of Wu <em>et al.</em> <a class="footnote-reference brackets" href="#wu2001" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> is used. The results for Reynolds number of <span class="math notranslate nohighlight">\(2\)</span>, <span class="math notranslate nohighlight">\(20\)</span>, <span class="math notranslate nohighlight">\(200\)</span> and <span class="math notranslate nohighlight">\(2000\)</span> can be post-processed by invoking the following command from the folder of the Reynolds number of interest (<span class="math notranslate nohighlight">\(Re=20\)</span> in the example below):</p>
 <div class="copy-button highlight-text notranslate"><div class="highlight"><pre><span></span>python3 ../sloshing_postprocessing.py . sloshing-in-rectangular-tank_Re0020.prm
 </pre></div>
 </div>
@@ -610,8 +618,18 @@ run in parallel using mpirun. This simulation takes
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://onlinelibrary.wiley.com/doi/abs/10.1002/fld.1279">[1]</a> P. M. Carrica, R. V. Wilson, and F. Stern, “An unsteady single-phase level set method for viscous free surface flows,” <em>Int. J. Numer. Methods Fluids</em>, vol. 53, no. 2, pp. 229–256, 2007, doi: 10.1002/fld.1279.</p>
-<p><a class="reference external" href="https://link.springer.com/article/10.1023/A:1017558826258">[2]</a> G. X. Wu, R. Eatock Taylor, and D. M. Greaves, “The effect of viscosity on the transient free-surface waves in a two-dimensional tank,” <em>J. Eng. Math.</em>, vol. 40, no. 1, pp. 77–90, May 2001, doi: 10.1023/A:1017558826258.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="carrica2007" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id4">2</a>)</span>
+<p>P. M. Carrica, R. V. Wilson, and F. Stern, “An unsteady single-phase level set method for viscous free surface flows,” <em>Int. J. Numer. Methods Fluids</em>, vol. 53, no. 2, pp. 229–256, 2007, doi: <a class="reference external" href="https://onlinelibrary.wiley.com/doi/abs/10.1002/fld.1279">10.1002/fld.1279</a>.</p>
+</aside>
+<aside class="footnote brackets" id="wu2001" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id3">1</a>,<a role="doc-backlink" href="#id5">2</a>)</span>
+<p>G. X. Wu, R. Eatock Taylor, and D. M. Greaves, “The effect of viscosity on the transient free-surface waves in a two-dimensional tank,” <em>J. Eng. Math.</em>, vol. 40, no. 1, pp. 77–90, May 2001, doi: <a class="reference external" href="https://link.springer.com/article/10.1023/A:1017558826258">10.1023/A:1017558826258</a>.</p>
+</aside>
+</aside>
 </section>
 </section>
 

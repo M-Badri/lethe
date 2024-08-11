@@ -120,7 +120,7 @@ class HeatFluxPostprocessor&lt; dim &gt;</h3>
 <p>Compute the local heat flux vector field within a domain. </p>
 <p>The local heat flux is defined as \(\mathbf{q} = -k \nabla T\) where \(k\) is the thermal conductivity of the material and \(\nabla T\) the temperature gradient. </p>
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00736">736</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00751">751</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a741e8d98fa8231e8d79eebc4581f4c31"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a741e8d98fa8231e8d79eebc4581f4c31">&#9670;&nbsp;</a></span>HeatFluxPostprocessor()</h2>
@@ -182,13 +182,13 @@ template&lt;int dim&gt; </div>
     <tr><td class="paramdir">[in]</td><td class="paramname">p_thermal_conductivity_model</td><td>Thermal conductivity model of the material</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">p_material_string</td><td>Type of material: "f" (fluid) or "s" (solid)</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">p_id</td><td>Either fluid ID or solid ID (as initialized in the physical properties). It is used to name the postprocessed variable vector.</td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">p_mesh_material_id</td><td>Identifier corresponding to the material as identified in the mesh. By convention, fluids are given the material_id 0 and solids follow with ids 1, 2, etc. <a class="el" href="classThis.html">This</a> is used to identify which cell lies in which material.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_mesh_material_id</td><td>Identifier corresponding to the material as identified in the mesh. By convention, fluids are given the material_id 0 and solids follow with ids 1, 2, etc. This is used to identify which cell lies in which material.</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">p_solid_phase_present</td><td>Boolean indicating if the simulation has solids. If there is no solid, the <code>material_id</code> of cells is not checked. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00758">758</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00773">773</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
 </div>
 </div>
@@ -239,7 +239,7 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00830">830</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00845">845</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
 <p class="reference">References <a class="el" href="physical__property__model_8h_source.html#l00053">temperature</a>.</p>
 
@@ -290,7 +290,7 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00782">782</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00797">797</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
 </div>
 </div>
@@ -319,7 +319,7 @@ template&lt;int dim&gt; </div>
 
 <p>Identifier corresponding to the material as identified in the mesh. </p>
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00851">851</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00866">866</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
 </div>
 </div>
@@ -347,7 +347,7 @@ template&lt;int dim&gt; </div>
 
 <p>Boolean indicating if the simulation has solids. </p>
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00853">853</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00868">868</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
 </div>
 </div>
@@ -375,7 +375,7 @@ template&lt;int dim&gt; </div>
 
 <p>Model describing of thermal conductivity of the material. </p>
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00849">849</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00864">864</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
 </div>
 </div>

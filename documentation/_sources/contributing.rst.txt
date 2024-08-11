@@ -11,7 +11,8 @@ Pull Requests
 Title
 -----
 
-Each pull request should only either fix an issue, add a single feature or restructure the code for one aspect, plus a test, if needed, to certify it. If there are many aspects to change, it is better to create multiples branches and create multiple pull requests. The title should start with an action verb and only contain one idea.
+Each pull request should only either fix an issue, add a single feature or restructure the code for one aspect, plus a test, if needed, to certify it.
+If there are many aspects to change, it is better to create multiple branches and create multiple pull requests. The title should start with an action verb and only contain one idea.
 
 Format
 ------
@@ -24,7 +25,7 @@ Review Process
 
 * At least 2 reviewers for minor changes, like a bug fix or a small feature
 * At least 3 reviewers for bigger changes like bigger features and architectural reconfiguration.
-* The reviewer should be notified before opening the pull request. The reviewers should be selected from already existing contributor to the code. (See section: Insights\Contributors).
+* The reviewer should be notified before opening the pull request. The reviewers should be selected from already existing contributor to the code. (See the README file).
 
 Reviewers Responsibility
 ------------------------
@@ -33,6 +34,14 @@ Reviewers Responsibility
 * Give a review on the code description and comments.
 * Verify that the pull request meets the requirement described above regarding testing and the format of the pull request.
 * Give the review in a timely manner.
+
+Description
+-----------
+
+Without explicit request to the person responsible for merging the PR, all commits will be squashed when merging. The pull request description will be the only remaining description of the changes left in the code history.
+The description must therefore be filled in correctly using the template.
+Depending on the type of changes, not all sections need to be filled in, but the contributor is expected to fill in the description as completely as possible.
+This helps reviewers to understand what has been changed and facilitates future debugging.
 
 Documentation
 =============
@@ -145,17 +154,23 @@ Throughout the documentation, you may notice that the different pages follow a c
 
       - In-text citation:
 
-        The *Lethe: An open-source parallel high-order adaptative CFD solver for incompressible flows* article by Blais *et al.* `[1] <https://doi.org/10.1016/j.softx.2020.100579>`_ is used as an example.
+        The *Lethe: An open-source parallel high-order adaptative CFD solver for incompressible flows* article by Blais *et al.* [#blais2020]_ is used as an example.
 
       - The ``References`` list:
 
-        `[1] <https://doi.org/10.1016/j.softx.2020.100579>`_ B. Blais *et al.*, “Lethe: An open-source parallel high-order adaptative CFD solver for incompressible flows,” *SoftwareX*, vol. 12, p. 100579, Jul. 2020, doi: 10.1016/j.softx.2020.100579.
+        .. [#blais2020] \B. Blais *et al.* “Lethe: An open-source parallel high-order adaptative CFD solver for incompressible flows,” *SoftwareX*, vol. 12, pp. 100579, Jul. 2020, doi: `10.1016/j.softx.2020.100579 <https://doi.org/10.1016/j.softx.2020.100579>`_.\
 
         Following the format:
 
         .. container::
 
-          [#] A. A. Author, "Name of the paper," *Abbreviated Title of the Journal*, vol. x, no. x, pp. xxx-xxx, Abbreviated month, year, doi: xxx.
+          [#AuthorYear] A. A. Author, "Name of the paper," *Abbreviated Title of the Journal*, vol. x, no. x, pp. xxx-xxx, Abbreviated month, year, doi: xxx.
+
+        The code in the documentation should be formatted as follows:
+
+        .. code-block:: RST
+
+           .. [#blais2020] \B. Blais *et al.* “Lethe: An open-source parallel high-order adaptative CFD solver for incompressible flows,” *SoftwareX*, vol. 12, pp. 100579, Jul. 2020, doi: `10.1016/j.softx.2020.100579 <https://doi.org/10.1016/j.softx.2020.100579>`_.\"""
 
         .. Important::
 

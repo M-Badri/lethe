@@ -184,6 +184,7 @@
 <li class="toctree-l3"><a class="reference internal" href="initial_conditions.html">Initial Conditions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="laser_heat_source.html">Laser Heat Source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="linear_solver_control.html">Linear Solver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manifolds.html">Manifolds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mesh.html">Mesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mesh_adaptation_control.html">Mesh Adaptation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="multiphysics.html">Multiphysics</a></li>
@@ -203,7 +204,6 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../dem/dem.html">Discrete Element Method (DEM)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Discrete Element Method (DEM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../dem/boundary_conditions.html">Boundary Conditions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../dem/floating_mesh.html">Floating Mesh (Solid Objects)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/floating_wall.html">Floating Wall</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/insertion_info.html">Insertion Info</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/lagrangian_physical_properties.html">Lagrangian Physical Properties</a></li>
@@ -211,6 +211,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../dem/model_parameters.html">Model Parameters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/post-processing.html">Post-processing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/simulation_control.html">Simulation Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dem/solid_objects.html">Solid Objects</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/test.html">Test</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/timer.html">Timer</a></li>
 </ul>
@@ -232,7 +233,7 @@
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../examples/examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/incompressible-flow/incompressible-flow.html">Incompressible Flow</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Incompressible Flow</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-lid%E2%80%90driven-cavity-flow/lid%E2%80%90driven-cavity-flow.html">Lid-Driven Cavity Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-lid-driven-cavity-flow/lid-driven-cavity-flow.html">Lid-Driven Cavity Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-flow-around-cylinder/2d-flow-around-cylinder.html">Flow around a Cylinder</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-taylor-couette-flow/2d-taylor-couette-flow.html">Taylor-Couette Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-backward-facing-step/2d-backward-facing-step.html">Flow past a Backward-Facing Step</a></li>
@@ -256,6 +257,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/rising-bubble/rising-bubble.html">Rising Bubble</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/sloshing-in-rectangular-tank/sloshing-in-rectangular-tank.html">Sloshing in a Rectangular Tank</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/capillary-wave/capillary-wave.html">Capillary Wave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/rayleigh-plateau-instability/rayleigh-plateau-instability.html">Rayleigh-Plateau Instability</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/3d-dam-break/3d-dam-break.html">3D Dam-Break with an Obstacle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/water-injection-in-a-closed-cell/water-injection-in-a-closed-cell.html">Water Injection in a Closed Cell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/air-bubble-compression/air-bubble-compression.html">Air Bubble Compression</a></li>
@@ -290,8 +292,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/silo/silo.html">Silo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/rectangular-hopper/rectangular-hopper.html">Rectangular Hopper</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/granular-dam-break/granular-dam-break.html">Granular Dam-Break</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/plate-discharge/plate-discharge.html">Plate Discharge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/bunny-drill/bunny-drill.html">Bunny Drill</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/granular-mixer/granular-mixer.html">Granular Mixer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/granuheap/granuheap.html">Granuheap</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -301,6 +305,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/liquid-solid-fluidized-bed/liquid-solid-fluidized-bed.html">Liquid-Solid Fluidized Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/boycott-effect/boycott-effect.html">Boycott Effect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-spouted-cylinder-bed/gas-solid-spouted-cylinder-bed.html">Gas-Solid Spouted Cylinder Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/dense-pneumatic-conveying/dense-pneumatic-conveying.html">Dense Pneumatic Conveying</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/sharp-immersed-boundary/sharp-immersed-boundary.html">Sharp Immersed Boundary Solver</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Sharp Immersed Boundary Solver</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -344,6 +349,8 @@
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../theory/multiphysics/heat_transfer/heat_transfer.html">Heat Transfer</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle navigation of Heat Transfer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../theory/multiphysics/heat_transfer/heat_equation.html">Heat Transfer Equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../theory/multiphysics/heat_transfer/heat_equation.html#finite-element-formulation">Finite Element Formulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../theory/multiphysics/heat_transfer/heat_equation.html#stabilization-techniques">Stabilization Techniques</a></li>
 </ul>
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../theory/multiphysics/passive_tracer/passive_tracer.html">Passive Tracer</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle navigation of Passive Tracer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -352,6 +359,7 @@
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../theory/multiphysics/electromagnetism/electromagnetism.html">Electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle navigation of Electromagnetism</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../theory/multiphysics/electromagnetism/time_harmonic.html">Time Harmonic Maxwell’s Equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../theory/multiphysics/electromagnetism/time_harmonic_weak_form.html">Finite Element Method for Time-Harmonic Maxwell’s Equations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../theory/multiphysics/electromagnetism/magnetohydrodynamics.html">Magnetohydrodynamics Equations</a></li>
 </ul>
 </li>
@@ -426,22 +434,21 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">none</span></code> boundary condition (default).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noslip</span></code> boundary conditions strongly impose the velocity on a boundary to be <span class="math notranslate nohighlight">\(\mathbf{u}=[0,0]^T\)</span> and <span class="math notranslate nohighlight">\(\mathbf{u}=[0,0,0]^T\)</span> in 2D and 3D respectively.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">slip</span></code> boundary conditions impose <span class="math notranslate nohighlight">\(\mathbf{u} \cdot \mathbf{n}=0\)</span>, with <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> the normal vector of the boundary. Imposing slip boundary conditions strongly is not trivial in FEM. We refer the reader to the deal.II <a class="reference external" href="https://www.dealii.org/current/doxygen/deal.II/group__constraints.html">documentation</a> for explanations on how this is achieved.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">partial</span> <span class="pre">slip</span></code> boundary condition simulates an intermediary between <code class="docutils literal notranslate"><span class="pre">slip</span></code> and <code class="docutils literal notranslate"><span class="pre">noslip</span></code> boundary conditions, in which the fluid feels an attenuated stress due to the walls. The attenuation is controlled by the  boundary layer thickness (m).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">partial</span> <span class="pre">slip</span></code> boundary condition introduces the “penalization factor” <code class="docutils literal notranslate"><span class="pre">beta</span></code> to the <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> normal vector of the boundary, and the <code class="docutils literal notranslate"><span class="pre">boundary</span> <span class="pre">layer</span> <span class="pre">thickness</span></code> (m) as a parameter to calculate the shear stress at the boundaries.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">partial</span> <span class="pre">slip</span></code> boundary condition simulates an intermediary between <code class="docutils literal notranslate"><span class="pre">slip</span></code> and <code class="docutils literal notranslate"><span class="pre">noslip</span></code> boundary conditions, in which the fluid feels an attenuated stress due to the walls. The attenuation is controlled by the  boundary layer thickness (m). The <code class="docutils literal notranslate"><span class="pre">partial</span> <span class="pre">slip</span></code> boundary condition introduces the “penalization factor” <code class="docutils literal notranslate"><span class="pre">beta</span></code> to the <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> normal vector of the boundary, and the <code class="docutils literal notranslate"><span class="pre">boundary</span> <span class="pre">layer</span> <span class="pre">thickness</span></code> (m) as a parameter to calculate the shear stress at the boundaries.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">periodic</span></code> boundary conditions, in which fluid exiting the domain will reenter on the opposite side.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">function</span></code> where a Dirichlet boundary condition is set from an arbitrary function. These functions can be used to define all sorts of steady-state and transient velocity boundary conditions such as rotating walls. It is also possible to weakly impose a Dirichlet boundary condition. In this case, the type should be set to <code class="docutils literal notranslate"><span class="pre">function</span> <span class="pre">weak</span></code>. This will result in Nitsche method being used to weakly impose the boundary condition instead of it being strongly imposed by overwriting the values of the degrees of freedom. The <code class="docutils literal notranslate"><span class="pre">function</span> <span class="pre">weak</span></code> boundary type should only be used in very specific cases where the problem is very stiff, for example when it is fully enclosed and a non-trivial velocity profile is imposed. It can also be used to impose an outbound dirichlet boundary condition.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">outlet</span></code> where a <em>do nothing</em> boundary condition, which is a zero traction, is imposed when the fluid is leaving the domain (<span class="math notranslate nohighlight">\(\mathbf{u} \cdot \mathbf{n}&gt;0\)</span>) and a penalization is imposed when the fluid is inbound. This is useful when turbulent structures or vortices are leaving the domain and prevents flow re-entry. The actual boundary condition imposed is thus:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outlet</span></code> where a <em>do nothing</em> boundary condition, which is a zero traction, is imposed when the fluid is leaving the domain (<span class="math notranslate nohighlight">\(\mathbf{u} \cdot \mathbf{n}&gt;0\)</span>) and a penalization is imposed when the fluid is inbound. This is useful when turbulent structures or vortices are leaving the domain since it prevents the re-entry of the fluid. The boundary condition imposed is thus:</p></li>
 </ul>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
 \[\nu \nabla \mathbf{u} \cdot \mathbf{n} - p \mathcal{I} \cdot \mathbf{n} - \beta (\mathbf{u}\cdot n)_{-} \mathbf{u} = 0\]</div>
 </div>
-<p>or in Einstein notation :</p>
+<p>or in Einstein notation:</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
 \[\nu \partial_i u_j n_j  - p n_i - \beta ( u_k n_k)_{-} u_i = 0\]</div>
 </div>
-<p>where <cite>beta</cite> is a constant and  <span class="math notranslate nohighlight">\((\mathbf{u}\cdot n)_{-}\)</span> is <span class="math notranslate nohighlight">\(min (0,\mathbf{u}\cdot n)\)</span>. We refer the reader to the work of <a class="reference external" href="https://www.mathsim.eu/~darndt/files/ENUMATH_2015.pdf">Arndt et al 2015</a>  for more detail.</p>
+<p>where <span class="math notranslate nohighlight">\(\beta\)</span> is a constant  and <span class="math notranslate nohighlight">\((\mathbf{u}\cdot n)_{-}\)</span> is <span class="math notranslate nohighlight">\(min (0,\mathbf{u}\cdot n)\)</span>. We refer the reader to the work of <a class="reference external" href="https://www.mathsim.eu/~darndt/files/ENUMATH_2015.pdf">Arndt et al 2015</a>  for more detail.</p>
 <ul class="simple">
 <li><p>Finally, Lethe also supports not imposing a boundary condition on an ID. Not imposing a boundary condition is equivalent to the <em>do nothing</em> boundary condition (<code class="docutils literal notranslate"><span class="pre">none</span></code>), which results in a zero net traction on a boundary. This, in fact, imposes <span class="math notranslate nohighlight">\(\int_{\Gamma}(-p\mathcal{I} + \mathbf{\tau}) \cdot \mathbf{n}=0\)</span> where <span class="math notranslate nohighlight">\(p\)</span> is the pressure, <span class="math notranslate nohighlight">\(\mathcal{I}\)</span> is the identity tensor, <span class="math notranslate nohighlight">\(\mathbf{\tau}\)</span> is the deviatoric stress tensor  and <span class="math notranslate nohighlight">\(\Gamma\)</span> is the boundary.</p></li>
 </ul>

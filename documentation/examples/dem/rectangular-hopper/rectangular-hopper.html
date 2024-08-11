@@ -184,6 +184,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/initial_conditions.html">Initial Conditions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/laser_heat_source.html">Laser Heat Source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/linear_solver_control.html">Linear Solver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/manifolds.html">Manifolds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/mesh.html">Mesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/mesh_adaptation_control.html">Mesh Adaptation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/multiphysics.html">Multiphysics</a></li>
@@ -203,7 +204,6 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../parameters/dem/dem.html">Discrete Element Method (DEM)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Discrete Element Method (DEM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/boundary_conditions.html">Boundary Conditions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/floating_mesh.html">Floating Mesh (Solid Objects)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/floating_wall.html">Floating Wall</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/insertion_info.html">Insertion Info</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/lagrangian_physical_properties.html">Lagrangian Physical Properties</a></li>
@@ -211,6 +211,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/model_parameters.html">Model Parameters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/post-processing.html">Post-processing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/simulation_control.html">Simulation Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/solid_objects.html">Solid Objects</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/test.html">Test</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/timer.html">Timer</a></li>
 </ul>
@@ -232,7 +233,7 @@
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../../examples.html">Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../incompressible-flow/incompressible-flow.html">Incompressible Flow</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Incompressible Flow</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-lid%E2%80%90driven-cavity-flow/lid%E2%80%90driven-cavity-flow.html">Lid-Driven Cavity Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-lid-driven-cavity-flow/lid-driven-cavity-flow.html">Lid-Driven Cavity Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-flow-around-cylinder/2d-flow-around-cylinder.html">Flow around a Cylinder</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-taylor-couette-flow/2d-taylor-couette-flow.html">Taylor-Couette Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-backward-facing-step/2d-backward-facing-step.html">Flow past a Backward-Facing Step</a></li>
@@ -256,6 +257,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../multiphysics/rising-bubble/rising-bubble.html">Rising Bubble</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../multiphysics/sloshing-in-rectangular-tank/sloshing-in-rectangular-tank.html">Sloshing in a Rectangular Tank</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../multiphysics/capillary-wave/capillary-wave.html">Capillary Wave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../multiphysics/rayleigh-plateau-instability/rayleigh-plateau-instability.html">Rayleigh-Plateau Instability</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../multiphysics/3d-dam-break/3d-dam-break.html">3D Dam-Break with an Obstacle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../multiphysics/water-injection-in-a-closed-cell/water-injection-in-a-closed-cell.html">Water Injection in a Closed Cell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../multiphysics/air-bubble-compression/air-bubble-compression.html">Air Bubble Compression</a></li>
@@ -290,8 +292,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../silo/silo.html">Silo</a></li>
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Rectangular Hopper</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../granular-dam-break/granular-dam-break.html">Granular Dam-Break</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../plate-discharge/plate-discharge.html">Plate Discharge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../bunny-drill/bunny-drill.html">Bunny Drill</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../granular-mixer/granular-mixer.html">Granular Mixer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../granuheap/granuheap.html">Granuheap</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -301,6 +305,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/liquid-solid-fluidized-bed/liquid-solid-fluidized-bed.html">Liquid-Solid Fluidized Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/boycott-effect/boycott-effect.html">Boycott Effect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/gas-solid-spouted-cylinder-bed/gas-solid-spouted-cylinder-bed.html">Gas-Solid Spouted Cylinder Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/dense-pneumatic-conveying/dense-pneumatic-conveying.html">Dense Pneumatic Conveying</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../sharp-immersed-boundary/sharp-immersed-boundary.html">Sharp Immersed Boundary Solver</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Sharp Immersed Boundary Solver</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -344,6 +349,8 @@
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../../theory/multiphysics/heat_transfer/heat_transfer.html">Heat Transfer</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle navigation of Heat Transfer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphysics/heat_transfer/heat_equation.html">Heat Transfer Equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphysics/heat_transfer/heat_equation.html#finite-element-formulation">Finite Element Formulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphysics/heat_transfer/heat_equation.html#stabilization-techniques">Stabilization Techniques</a></li>
 </ul>
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../../theory/multiphysics/passive_tracer/passive_tracer.html">Passive Tracer</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle navigation of Passive Tracer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -352,6 +359,7 @@
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../../theory/multiphysics/electromagnetism/electromagnetism.html">Electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle navigation of Electromagnetism</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphysics/electromagnetism/time_harmonic.html">Time Harmonic Maxwell’s Equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphysics/electromagnetism/time_harmonic_weak_form.html">Finite Element Method for Time-Harmonic Maxwell’s Equations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphysics/electromagnetism/magnetohydrodynamics.html">Magnetohydrodynamics Equations</a></li>
 </ul>
 </li>
@@ -422,7 +430,7 @@
           <section id="rectangular-hopper">
 <h1>Rectangular Hopper<a class="headerlink" href="#rectangular-hopper" title="Link to this heading">#</a></h1>
 <p>This example simulates the filling and discharging of particles in a rectangular hopper.
-We set up this simulation based on the simulation of Anand <em>et al.</em> <a class="reference external" href="https://doi.org/10.1016/j.ces.2008.08.015">[1]</a> It is recommended to visit <a class="reference external" href="../../../parameters/dem/dem.html">DEM parameters</a> for more detailed information on the concepts and physical meanings of the parameters in Lethe-DEM.
+We set up this simulation based on the simulation of Anand <em>et al.</em> <a class="footnote-reference brackets" href="#anand2008" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> It is recommended to visit <a class="reference external" href="../../../parameters/dem/dem.html">DEM parameters</a> for more detailed information on the concepts and physical meanings of the parameters in Lethe-DEM.
 The main example does not use periodic boundary conditions in the depth of the hopper like article, but an extended case, presented at the end, does.</p>
 <section id="features">
 <h2>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h2>
@@ -442,7 +450,7 @@ The main example does not use periodic boundary conditions in the depth of the h
 </section>
 <section id="description-of-the-case">
 <h2>Description of the Case<a class="headerlink" href="#description-of-the-case" title="Link to this heading">#</a></h2>
-<p>This simulation consists of two stages: filling (0-4 s) and discharge (4-7.5 s) of particles. Anand et al. uses periodic boundaries in the z axis allowing to use a thin width for simulation.
+<p>This simulation consists of two stages: filling (0-4 s) and discharge (4-7.5 s) of particles. Anand <em>et al.</em> uses periodic boundaries in the z axis allowing to use a thin width for simulation.
 In the main example, we do not consider periodic boundaries. To minimize the impact of collision of particle with walls along the z axis, the width and the number of particle were multiplied by 6 (40740 particles instead of 6790). This corresponds to a width of 15 times the particle diameter.</p>
 </section>
 <section id="parameter-file">
@@ -450,7 +458,7 @@ In the main example, we do not consider periodic boundaries. To minimize the imp
 <section id="mesh">
 <h3>Mesh<a class="headerlink" href="#mesh" title="Link to this heading">#</a></h3>
 <p>The mesh is a hopper with 90° angle generated with GMSH having a top part for the filling and a bottom part which acts as a collector of the particle.
-The geometry follow the Anand <em>et al.</em> <a class="reference external" href="https://doi.org/10.1016/j.ces.2008.08.015">[1]</a> base case and was handled in order to generate a structured mesh.</p>
+The geometry follow the Anand <em>et al.</em> <a class="footnote-reference brackets" href="#anand2008" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> base case and was handled in order to generate a structured mesh.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection mesh
   set type                                = gmsh
   set file name                           = hopper_structured.msh
@@ -463,17 +471,17 @@ end
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
-<tr class="row-odd"><td><figure class="align-center" id="id11">
+<tr class="row-odd"><td><figure class="align-center" id="id10">
 <a class="reference internal image-reference" href="../../../_images/packed_hopper_2d.png"><img alt="Mesh" src="../../../_images/packed_hopper_2d.png" style="width: 300px;" /></a>
 <figcaption>
-<p><span class="caption-text">Rectangular hopper packed with particle before the discharge with a 2d view.</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
+<p><span class="caption-text">Rectangular hopper packed with particle before the discharge with a 2d view.</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </td>
-<td><figure class="align-center" id="id12">
+<td><figure class="align-center" id="id11">
 <a class="reference internal image-reference" href="../../../_images/packed_hopper_3d.png"><img alt="Mesh" src="../../../_images/packed_hopper_3d.png" style="width: 300px;" /></a>
 <figcaption>
-<p><span class="caption-text">Rectangular hopper packed with particle before the discharge with a 3d view.</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
+<p><span class="caption-text">Rectangular hopper packed with particle before the discharge with a 3d view.</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </td>
@@ -515,9 +523,7 @@ end
 <li><p>Friction coefficient of particle-particle (0.2)</p></li>
 </ul>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection lagrangian physical properties
-  set gx                       = 0.0
-  set gy                       = -9.81
-  set gz                       = 0.0
+  set g                        = 0.0, -9.81, 0.0
   set number of particle types = 1
   subsection particle type 0
     set size distribution type            = uniform
@@ -621,10 +627,10 @@ end
 <section id="results-post-processing">
 <h2>Results Post-processing<a class="headerlink" href="#results-post-processing" title="Link to this heading">#</a></h2>
 <p>Mass flow rate results after post-processing and comparison with the results of Anand <em>et al.</em> <a class="reference external" href="https://doi.org/10.1016/j.ces.2008.08.015">[1]</a> for the base case of the hooper with a 90° angle.</p>
-<figure class="align-center" id="id13">
+<figure class="align-center" id="id12">
 <a class="reference internal image-reference" href="../../../_images/figure_hopper.png"><img alt="Results of mass discharge." src="../../../_images/figure_hopper.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-text">Mass discharge results.</span><a class="headerlink" href="#id13" title="Link to this image">#</a></p>
+<p><span class="caption-text">Mass discharge results.</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -633,10 +639,10 @@ end
 <p>As seen in the following figure, the simulation was not run until all the particles are discharged in the bottom part.
 Since the mass flow rate is constant during the discharge, simulating the very end is not necessary.
 The simulated mass discharging rate is 84.94 g/s.</p>
-<figure class="align-center" id="id14">
+<figure class="align-center" id="id13">
 <a class="reference internal image-reference" href="../../../_images/simulation_end.png"><img alt="Mesh" src="../../../_images/simulation_end.png" style="width: 300px;" /></a>
 <figcaption>
-<p><span class="caption-text">Rectangular hopper at the end of the simulation.</span><a class="headerlink" href="#id14" title="Link to this image">#</a></p>
+<p><span class="caption-text">Rectangular hopper at the end of the simulation.</span><a class="headerlink" href="#id13" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -656,10 +662,10 @@ The modifications on the parameters of the previous example is the mesh thicknes
 end
 </pre></div>
 </div>
-<figure class="align-center" id="id15">
+<figure class="align-center" id="id14">
 <a class="reference internal image-reference" href="../../../_images/packed_hopper_periodic_3d.png"><img alt="Mesh" src="../../../_images/packed_hopper_periodic_3d.png" style="width: 300px;" /></a>
 <figcaption>
-<p><span class="caption-text">Rectangular periodic hopper packed with particle before the discharge with a 3d view.</span><a class="headerlink" href="#id15" title="Link to this image">#</a></p>
+<p><span class="caption-text">Rectangular periodic hopper packed with particle before the discharge with a 3d view.</span><a class="headerlink" href="#id14" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -685,9 +691,7 @@ end
 <h3>Lagrangian Physical Properties<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <p>The total number of particles of this simulation is 6790: 6 times less than the previous example.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection lagrangian physical properties
-    set gx                       = 0.0
-    set gy                       = -9.81
-    set gz                       = 0.0
+    set g                        = 0.0, -9.81, 0.0
     set number of particle types = 1
     subsection particle type 0
         set size distribution type            = uniform
@@ -728,17 +732,23 @@ end
 <h3>Results Comparison<a class="headerlink" href="#results-comparison" title="Link to this heading">#</a></h3>
 <p>Here is the comparison of the results from the original simulation with Lethe DEM, the simulation with periodic boundary conditions with Lethe and the results from Anand et al. paper.
 The simulated mass discharging rate is 85.09 g/s from the original simulation and 91.73 g/s with PBC. Also, the run time of the simulation goes from about 1 hours and 30 minutes to 10 minutes on 8 cores with an Intel i7-11700K.</p>
-<figure class="align-center" id="id16">
+<figure class="align-center" id="id15">
 <a class="reference internal image-reference" href="../../../_images/figure_hopper_comparison.png"><img alt="Comparison" src="../../../_images/figure_hopper_comparison.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-text">Comparison of mass discharge results from the 2 simulations and the journal article.</span><a class="headerlink" href="#id16" title="Link to this image">#</a></p>
+<p><span class="caption-text">Comparison of mass discharge results from the 2 simulations and the journal article.</span><a class="headerlink" href="#id15" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 <section id="reference">
 <h2>Reference<a class="headerlink" href="#reference" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://doi.org/10.1016/j.ces.2008.08.015">[1]</a> A. Anand, J. S. Curtis, C. R. Wassgren, B. C. Hancock, and W. R. Ketterhagen, “Predicting discharge dynamics from a rectangular hopper using the discrete element method (DEM),” <em>Chem. Eng. Sci.</em>, vol. 63, no. 24, pp. 5821–5830, Dec. 2008, doi: 10.1016/j.ces.2008.08.015.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="anand2008" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>)</span>
+<p>A. Anand, J. S. Curtis, C. R. Wassgren, B. C. Hancock, and W. R. Ketterhagen, “Predicting discharge dynamics from a rectangular hopper using the discrete element method (DEM),” <em>Chem. Eng. Sci.</em>, vol. 63, no. 24, pp. 5821–5830, Dec. 2008, doi: <a class="reference external" href="https://doi.org/10.1016/j.ces.2008.08.015">10.1016/j.ces.2008.08.015</a>.</p>
+</aside>
+</aside>
 </section>
 </section>
 

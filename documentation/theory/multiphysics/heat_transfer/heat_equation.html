@@ -184,6 +184,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/initial_conditions.html">Initial Conditions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/laser_heat_source.html">Laser Heat Source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/linear_solver_control.html">Linear Solver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/manifolds.html">Manifolds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/mesh.html">Mesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/mesh_adaptation_control.html">Mesh Adaptation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/multiphysics.html">Multiphysics</a></li>
@@ -203,7 +204,6 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../parameters/dem/dem.html">Discrete Element Method (DEM)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Discrete Element Method (DEM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/boundary_conditions.html">Boundary Conditions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/floating_mesh.html">Floating Mesh (Solid Objects)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/floating_wall.html">Floating Wall</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/insertion_info.html">Insertion Info</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/lagrangian_physical_properties.html">Lagrangian Physical Properties</a></li>
@@ -211,6 +211,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/model_parameters.html">Model Parameters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/post-processing.html">Post-processing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/simulation_control.html">Simulation Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/solid_objects.html">Solid Objects</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/test.html">Test</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/timer.html">Timer</a></li>
 </ul>
@@ -232,7 +233,7 @@
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../examples/examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../examples/incompressible-flow/incompressible-flow.html">Incompressible Flow</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Incompressible Flow</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/2d-lid%E2%80%90driven-cavity-flow/lid%E2%80%90driven-cavity-flow.html">Lid-Driven Cavity Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/2d-lid-driven-cavity-flow/lid-driven-cavity-flow.html">Lid-Driven Cavity Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/2d-flow-around-cylinder/2d-flow-around-cylinder.html">Flow around a Cylinder</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/2d-taylor-couette-flow/2d-taylor-couette-flow.html">Taylor-Couette Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/2d-backward-facing-step/2d-backward-facing-step.html">Flow past a Backward-Facing Step</a></li>
@@ -256,6 +257,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/rising-bubble/rising-bubble.html">Rising Bubble</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/sloshing-in-rectangular-tank/sloshing-in-rectangular-tank.html">Sloshing in a Rectangular Tank</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/capillary-wave/capillary-wave.html">Capillary Wave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/rayleigh-plateau-instability/rayleigh-plateau-instability.html">Rayleigh-Plateau Instability</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/3d-dam-break/3d-dam-break.html">3D Dam-Break with an Obstacle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/water-injection-in-a-closed-cell/water-injection-in-a-closed-cell.html">Water Injection in a Closed Cell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/air-bubble-compression/air-bubble-compression.html">Air Bubble Compression</a></li>
@@ -290,8 +292,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/silo/silo.html">Silo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/rectangular-hopper/rectangular-hopper.html">Rectangular Hopper</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/granular-dam-break/granular-dam-break.html">Granular Dam-Break</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/plate-discharge/plate-discharge.html">Plate Discharge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/bunny-drill/bunny-drill.html">Bunny Drill</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/granular-mixer/granular-mixer.html">Granular Mixer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/granuheap/granuheap.html">Granuheap</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../examples/unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -301,6 +305,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../examples/unresolved-cfd-dem/liquid-solid-fluidized-bed/liquid-solid-fluidized-bed.html">Liquid-Solid Fluidized Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../examples/unresolved-cfd-dem/boycott-effect/boycott-effect.html">Boycott Effect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../examples/unresolved-cfd-dem/gas-solid-spouted-cylinder-bed/gas-solid-spouted-cylinder-bed.html">Gas-Solid Spouted Cylinder Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/unresolved-cfd-dem/dense-pneumatic-conveying/dense-pneumatic-conveying.html">Dense Pneumatic Conveying</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../examples/sharp-immersed-boundary/sharp-immersed-boundary.html">Sharp Immersed Boundary Solver</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Sharp Immersed Boundary Solver</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -344,6 +349,8 @@
 </li>
 <li class="toctree-l3 current has-children"><a class="reference internal" href="heat_transfer.html">Heat Transfer</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle navigation of Heat Transfer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l4 current current-page"><a class="current reference internal" href="#">Heat Transfer Equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#finite-element-formulation">Finite Element Formulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stabilization-techniques">Stabilization Techniques</a></li>
 </ul>
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../passive_tracer/passive_tracer.html">Passive Tracer</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle navigation of Passive Tracer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -352,6 +359,7 @@
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../electromagnetism/electromagnetism.html">Electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle navigation of Electromagnetism</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../electromagnetism/time_harmonic.html">Time Harmonic Maxwell’s Equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../electromagnetism/time_harmonic_weak_form.html">Finite Element Method for Time-Harmonic Maxwell’s Equations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../electromagnetism/magnetohydrodynamics.html">Magnetohydrodynamics Equations</a></li>
 </ul>
 </li>
@@ -421,6 +429,42 @@
         <article role="main">
           <section id="heat-transfer-equations">
 <h1>Heat Transfer Equations<a class="headerlink" href="#heat-transfer-equations" title="Link to this heading">#</a></h1>
+<p>In Lethe, it is possible to solve the heat transfer in various loading conditions. The main equation is derived from the energy equation in incompressible flows. Assuming a constant heat capacity <span class="math notranslate nohighlight">\(C_p\)</span> and dynamic viscosity <span class="math notranslate nohighlight">\(\mu\)</span>, the equation takes the following form:</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\rho C_p \frac{\partial T}{\partial t} + \rho C_p (\mathbf{u} \cdot \nabla)T - \nabla \cdot (k \nabla T) = - \phi + Q\]</div>
+</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(T\)</span> is the temperature;</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{u}\)</span> is the velocity of the fluid;</p></li>
+<li><p><span class="math notranslate nohighlight">\(\nabla\)</span> is the <a class="reference external" href="https://en.wikipedia.org/wiki/Del">del operator</a>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho\)</span> is the density;</p></li>
+<li><p><span class="math notranslate nohighlight">\(C_p\)</span> is the isobaric heat capacity;</p></li>
+<li><p><span class="math notranslate nohighlight">\(k\)</span> is the thermal conductivity;</p></li>
+<li><p><span class="math notranslate nohighlight">\(Q\)</span> is the energy source term or heat generation;</p></li>
+<li><p><span class="math notranslate nohighlight">\(\phi\)</span> is the viscous dissipation term. For an incompressible fluid it takes the following form: <span class="math notranslate nohighlight">\(\phi = \mu (\nabla \mathbf{u} + \nabla \mathbf{u}^T):\nabla \mathbf{u}\)</span>, where <span class="math notranslate nohighlight">\(\mu\)</span> is the <a class="reference external" href="https://en.wikipedia.org/wiki/Viscosity">dynamic viscosity</a>;</p></li>
+</ul>
+<p>Depending on the physics involved, the terms <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> can be included or excluded and can take various definitions.</p>
+</section>
+<section id="finite-element-formulation">
+<h1>Finite Element Formulation<a class="headerlink" href="#finite-element-formulation" title="Link to this heading">#</a></h1>
+<p>For the finite element formulation, we start from the strong form of the equation as shown above. We consider a domain <span class="math notranslate nohighlight">\(\Omega\)</span> with boundary <span class="math notranslate nohighlight">\(\Gamma\)</span>. The applied boundary condition can vary depending on the problem being solved, but the main ones are the following:</p>
+<ul class="simple">
+<li><p>Dirichlet boundary condition: <span class="math notranslate nohighlight">\(T = T_0\)</span> on <span class="math notranslate nohighlight">\(\Gamma_D\)</span>;</p></li>
+<li><p>Neumann boundary condition: <span class="math notranslate nohighlight">\(\mathbf{n} \cdot \nabla T = q\)</span> on <span class="math notranslate nohighlight">\(\Gamma_N\)</span>;</p></li>
+<li><p>Robin boundary condition: <span class="math notranslate nohighlight">\(\mathbf{n} \cdot \nabla T + h(T - T_{\infty}) = 0\)</span> on <span class="math notranslate nohighlight">\(\Gamma_R\)</span>;</p></li>
+</ul>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> is the normal vector to the boundary, <span class="math notranslate nohighlight">\(q\)</span> is the heat flux, <span class="math notranslate nohighlight">\(h\)</span> is the heat transfer coefficient, and <span class="math notranslate nohighlight">\(T_{\infty}\)</span> is the ambient temperature.</p>
+<p>The weak form of the heat equation is obtained by multiplying the strong form by a test function <span class="math notranslate nohighlight">\(v\)</span> and integrating over the domain <span class="math notranslate nohighlight">\(\Omega\)</span>. After applying the integration by part and the Gauss-Ostrogradsky theorem, the weak form of the heat equation is given by the following equation:</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\int_{\Omega} \left[ v \rho C_p \frac{\partial T}{\partial t} + v \rho C_p (\mathbf{u} \cdot \nabla)T + k (\nabla v \cdot \nabla T) \right] \;d\Omega - \int_{\Gamma} v k (\nabla T \cdot \mathbf{n}) \;d\Gamma = - \int_{\Omega} v \left[ \phi - Q \right] \;d\Omega\]</div>
+</div>
+<p>Note that this formulation treats the thermal conductivity <span class="math notranslate nohighlight">\(k\)</span> as a constant.</p>
+</section>
+<section id="stabilization-techniques">
+<h1>Stabilization Techniques<a class="headerlink" href="#stabilization-techniques" title="Link to this heading">#</a></h1>
 <p><strong>Under construction</strong></p>
 </section>
 
@@ -479,5 +523,6 @@
     <script src="../../../_static/scripts/furo.js?v=32e29ea5"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=7cec7674"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </body>
 </html>

@@ -82,61 +82,64 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="write__checkpoint_8h_source.html">dem/write_checkpoint.h</a>&gt;</code><br />
+<code>#include &lt;boost/archive/text_oarchive.hpp&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for write_checkpoint.cc:</div>
 <div class="dyncontent">
 <div class="center"><img src="write__checkpoint_8cc__incl.png" border="0" usemap="#a_2home_2runner_2work_2lethe_2lethe_2source_2dem_2write__checkpoint_8cc" alt=""/></div>
 <map name="a_2home_2runner_2work_2lethe_2lethe_2source_2dem_2write__checkpoint_8cc" id="a_2home_2runner_2work_2lethe_2lethe_2source_2dem_2write__checkpoint_8cc">
-<area shape="rect" title=" " alt="" coords="2477,5,2659,61"/>
-<area shape="rect" href="write__checkpoint_8h.html" title=" " alt="" coords="2479,109,2657,136"/>
-<area shape="rect" href="pvd__handler_8h.html" title=" " alt="" coords="1773,355,1918,382"/>
-<area shape="rect" title=" " alt="" coords="4767,780,4847,807"/>
-<area shape="rect" title=" " alt="" coords="2447,691,2587,732"/>
-<area shape="rect" title=" " alt="" coords="2611,691,2751,732"/>
-<area shape="rect" href="serial__solid_8h.html" title=" " alt="" coords="1174,266,1314,293"/>
-<area shape="rect" title=" " alt="" coords="1942,348,2117,389"/>
-<area shape="rect" href="dem__solver__parameters_8h.html" title=" " alt="" coords="2255,266,2481,293"/>
-<area shape="rect" href="insertion_8h.html" title=" " alt="" coords="3910,184,4034,211"/>
-<area shape="rect" title=" " alt="" coords="4881,355,4954,382"/>
-<area shape="rect" title=" " alt="" coords="4920,259,5056,300"/>
-<area shape="rect" title=" " alt="" coords="5181,184,5328,211"/>
-<area shape="rect" href="parameters_8h.html" title=" " alt="" coords="1832,534,1973,561"/>
-<area shape="rect" href="dimensionality_8h.html" title=" " alt="" coords="2021,616,2182,643"/>
-<area shape="rect" title=" " alt="" coords="1690,691,1859,732"/>
-<area shape="rect" href="ib__particle_8h.html" title=" " alt="" coords="1485,616,1619,643"/>
-<area shape="rect" title=" " alt="" coords="1479,691,1625,732"/>
-<area shape="rect" href="multiphysics_8h.html" title=" " alt="" coords="1847,616,1996,643"/>
-<area shape="rect" href="utilities_8h.html" title=" " alt="" coords="2257,616,2372,643"/>
-<area shape="rect" title=" " alt="" coords="2184,691,2357,732"/>
-<area shape="rect" href="dem__properties_8h.html" title=" " alt="" coords="4493,698,4661,725"/>
-<area shape="rect" title=" " alt="" coords="740,698,887,725"/>
-<area shape="rect" title=" " alt="" coords="4488,780,4547,807"/>
-<area shape="rect" title=" " alt="" coords="1944,698,2131,725"/>
-<area shape="rect" href="simulation__control_8h.html" title=" " alt="" coords="2192,355,2379,382"/>
-<area shape="rect" href="solid__objects__parameters_8h.html" title=" " alt="" coords="1559,437,1697,479"/>
-<area shape="rect" href="tensors__and__points__dimension__manipulation_8h.html" title=" " alt="" coords="5,527,208,568"/>
-<area shape="rect" title=" " alt="" coords="1334,355,1501,382"/>
-<area shape="rect" title=" " alt="" coords="1525,348,1697,389"/>
-<area shape="rect" title=" " alt="" coords="195,348,331,389"/>
-<area shape="rect" title=" " alt="" coords="355,355,549,382"/>
-<area shape="rect" title=" " alt="" coords="573,355,696,382"/>
-<area shape="rect" title=" " alt="" coords="721,355,903,382"/>
-<area shape="rect" title=" " alt="" coords="927,355,1099,382"/>
-<area shape="rect" title=" " alt="" coords="1123,348,1258,389"/>
-<area shape="rect" href="bdf_8h.html" title=" " alt="" coords="2067,445,2154,471"/>
-<area shape="rect" href="parameters__lagrangian_8h.html" title=" " alt="" coords="2262,445,2479,471"/>
-<area shape="rect" href="distributions_8h.html" title=" " alt="" coords="4697,266,4845,293"/>
-<area shape="rect" title=" " alt="" coords="4595,355,4658,382"/>
-<area shape="rect" title=" " alt="" coords="4683,355,4755,382"/>
-<area shape="rect" title=" " alt="" coords="2657,259,2791,300"/>
-<area shape="rect" title=" " alt="" coords="2815,259,2974,300"/>
-<area shape="rect" title=" " alt="" coords="2998,266,3165,293"/>
-<area shape="rect" title=" " alt="" coords="3189,259,3331,300"/>
-<area shape="rect" title=" " alt="" coords="3355,266,3557,293"/>
-<area shape="rect" title=" " alt="" coords="3581,266,3752,293"/>
-<area shape="rect" title=" " alt="" coords="3776,266,3963,293"/>
-<area shape="rect" title=" " alt="" coords="3987,259,4162,300"/>
-<area shape="rect" title=" " alt="" coords="4187,259,4368,300"/>
+<area shape="rect" title=" " alt="" coords="1810,5,1993,61"/>
+<area shape="rect" href="write__checkpoint_8h.html" title=" " alt="" coords="2120,109,2299,136"/>
+<area shape="rect" title=" " alt="" coords="4412,691,4552,732"/>
+<area shape="rect" title=" " alt="" coords="1250,355,1324,382"/>
+<area shape="rect" title=" " alt="" coords="162,355,242,382"/>
+<area shape="rect" href="pvd__handler_8h.html" title=" " alt="" coords="2132,355,2277,382"/>
+<area shape="rect" href="serial__solid_8h.html" title=" " alt="" coords="3196,266,3336,293"/>
+<area shape="rect" title=" " alt="" coords="4520,348,4694,389"/>
+<area shape="rect" href="dem__solver__parameters_8h.html" title=" " alt="" coords="2554,266,2780,293"/>
+<area shape="rect" href="insertion_8h.html" title=" " alt="" coords="1669,184,1793,211"/>
+<area shape="rect" title=" " alt="" coords="28,259,164,300"/>
+<area shape="rect" title=" " alt="" coords="1498,184,1644,211"/>
+<area shape="rect" href="parameters_8h.html" title=" " alt="" coords="2394,527,2535,553"/>
+<area shape="rect" href="dimensionality_8h.html" title=" " alt="" coords="2597,609,2758,635"/>
+<area shape="rect" title=" " alt="" coords="2593,691,2762,732"/>
+<area shape="rect" href="ib__particle_8h.html" title=" " alt="" coords="1870,609,2005,635"/>
+<area shape="rect" title=" " alt="" coords="2012,691,2157,732"/>
+<area shape="rect" href="multiphysics_8h.html" title=" " alt="" coords="2182,609,2331,635"/>
+<area shape="rect" href="utilities_8h.html" title=" " alt="" coords="2986,609,3100,635"/>
+<area shape="rect" title=" " alt="" coords="2954,691,3127,732"/>
+<area shape="rect" title=" " alt="" coords="2356,601,2573,643"/>
+<area shape="rect" href="dem__properties_8h.html" title=" " alt="" coords="1819,698,1987,725"/>
+<area shape="rect" title=" " alt="" coords="1727,780,1786,807"/>
+<area shape="rect" title=" " alt="" coords="3676,698,3863,725"/>
+<area shape="rect" title=" " alt="" coords="2788,691,2928,732"/>
+<area shape="rect" href="simulation__control_8h.html" title=" " alt="" coords="2352,355,2539,382"/>
+<area shape="rect" href="solid__objects__parameters_8h.html" title=" " alt="" coords="2614,437,2752,479"/>
+<area shape="rect" href="tensors__and__points__dimension__manipulation_8h.html" title=" " alt="" coords="4191,348,4394,389"/>
+<area shape="rect" title=" " alt="" coords="2716,355,2882,382"/>
+<area shape="rect" title=" " alt="" coords="2906,348,3078,389"/>
+<area shape="rect" title=" " alt="" coords="3103,348,3239,389"/>
+<area shape="rect" title=" " alt="" coords="3263,355,3458,382"/>
+<area shape="rect" title=" " alt="" coords="3482,355,3604,382"/>
+<area shape="rect" title=" " alt="" coords="3629,355,3812,382"/>
+<area shape="rect" title=" " alt="" coords="3836,355,4008,382"/>
+<area shape="rect" title=" " alt="" coords="4032,348,4166,389"/>
+<area shape="rect" href="bdf_8h.html" title=" " alt="" coords="2377,445,2464,471"/>
+<area shape="rect" href="parameters__lagrangian_8h.html" title=" " alt="" coords="1985,445,2202,471"/>
+<area shape="rect" href="distributions_8h.html" title=" " alt="" coords="1101,266,1249,293"/>
+<area shape="rect" title=" " alt="" coords="1053,355,1116,382"/>
+<area shape="rect" title=" " alt="" coords="1486,355,1558,382"/>
+<area shape="rect" title=" " alt="" coords="1376,259,1510,300"/>
+<area shape="rect" title=" " alt="" coords="1534,259,1693,300"/>
+<area shape="rect" title=" " alt="" coords="1921,266,2088,293"/>
+<area shape="rect" title=" " alt="" coords="2112,259,2254,300"/>
+<area shape="rect" title=" " alt="" coords="2278,266,2480,293"/>
+<area shape="rect" title=" " alt="" coords="239,266,410,293"/>
+<area shape="rect" title=" " alt="" coords="434,266,620,293"/>
+<area shape="rect" title=" " alt="" coords="645,259,820,300"/>
+<area shape="rect" title=" " alt="" coords="844,259,1026,300"/>
 </map>
 </div>
 </div>
@@ -399,27 +402,27 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Write_checkpoint Write a <a class="el" href="namespaceDEM.html">DEM</a> simulation checkpointing to allow for <a class="el" href="namespaceDEM.html">DEM</a> simulation restart. </p>
+<p>Write_checkpoint Write a <a class="el" href="namespaceDEM.html" title="This namespace defines all the data containers and required operations on these containers for the DE...">DEM</a> simulation checkpointing to allow for <a class="el" href="namespaceDEM.html" title="This namespace defines all the data containers and required operations on these containers for the DE...">DEM</a> simulation restart. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">computing_timer</td><td>Dem timer </td></tr>
-    <tr><td class="paramname">parameters</td><td>Input <a class="el" href="namespaceDEM.html">DEM</a> parameters in the parameter handler file </td></tr>
+    <tr><td class="paramname">parameters</td><td>Input <a class="el" href="namespaceDEM.html" title="This namespace defines all the data containers and required operations on these containers for the DE...">DEM</a> parameters in the parameter handler file </td></tr>
     <tr><td class="paramname">simulation_control</td><td>Simulation control </td></tr>
     <tr><td class="paramname">particles_pvdhandler</td><td>PVD handler </td></tr>
     <tr><td class="paramname">grid_pvdhandler</td><td>PVD handler for post-processing </td></tr>
     <tr><td class="paramname">triangulation</td><td>Triangulation </td></tr>
     <tr><td class="paramname">particle_handler</td><td>Particle handler </td></tr>
-    <tr><td class="paramname">insertion_object</td><td><a class="el" href="classInsertion.html">Insertion</a> object </td></tr>
-    <tr><td class="paramname">solid_objects</td><td>Vector of solids objects used in <a class="el" href="namespaceDEM.html">DEM</a> simulations </td></tr>
+    <tr><td class="paramname">insertion_object</td><td><a class="el" href="classInsertion.html" title="Base interface for classes that carry out the insertion of particles in the system.">Insertion</a> object </td></tr>
+    <tr><td class="paramname">solid_objects</td><td>Vector of solids objects used in <a class="el" href="namespaceDEM.html" title="This namespace defines all the data containers and required operations on these containers for the DE...">DEM</a> simulations </td></tr>
     <tr><td class="paramname">pcout</td><td>Printing in parallel </td></tr>
     <tr><td class="paramname">mpi_communicator</td><td></td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="write__checkpoint_8cc_source.html#l00007">7</a> of file <a class="el" href="write__checkpoint_8cc_source.html">write_checkpoint.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="write__checkpoint_8cc_source.html#l00012">12</a> of file <a class="el" href="write__checkpoint_8cc_source.html">write_checkpoint.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="parameters_8h_source.html#l01369">Parameters::Restart::filename</a>, <a class="el" href="parameters__lagrangian_8h_source.html#l00469">Parameters::Lagrangian::LagrangianPostProcessing::Lagrangian_post_processing</a>, <a class="el" href="dem__solver__parameters_8h_source.html#l00047">DEMSolverParameters&lt; dim &gt;::post_processing</a>, <a class="el" href="dem__solver__parameters_8h_source.html#l00035">DEMSolverParameters&lt; dim &gt;::restart</a>, and <a class="el" href="pvd__handler_8cc_source.html#l00009">PVDHandler::save()</a>.</p>
+<p class="reference">References <a class="el" href="parameters_8h_source.html#l01459">Parameters::Restart::filename</a>, <a class="el" href="parameters__lagrangian_8h_source.html#l00485">Parameters::Lagrangian::LagrangianPostProcessing::Lagrangian_post_processing</a>, <a class="el" href="dem__solver__parameters_8h_source.html#l00046">DEMSolverParameters&lt; dim &gt;::post_processing</a>, <a class="el" href="dem__solver__parameters_8h_source.html#l00034">DEMSolverParameters&lt; dim &gt;::restart</a>, and <a class="el" href="pvd__handler_8cc_source.html#l00009">PVDHandler::save()</a>.</p>
 
 </div>
 </div>

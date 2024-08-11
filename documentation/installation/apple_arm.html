@@ -184,6 +184,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../parameters/cfd/initial_conditions.html">Initial Conditions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../parameters/cfd/laser_heat_source.html">Laser Heat Source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../parameters/cfd/linear_solver_control.html">Linear Solver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../parameters/cfd/manifolds.html">Manifolds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../parameters/cfd/mesh.html">Mesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../parameters/cfd/mesh_adaptation_control.html">Mesh Adaptation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../parameters/cfd/multiphysics.html">Multiphysics</a></li>
@@ -203,7 +204,6 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../parameters/dem/dem.html">Discrete Element Method (DEM)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Discrete Element Method (DEM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../parameters/dem/boundary_conditions.html">Boundary Conditions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../parameters/dem/floating_mesh.html">Floating Mesh (Solid Objects)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../parameters/dem/floating_wall.html">Floating Wall</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../parameters/dem/insertion_info.html">Insertion Info</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../parameters/dem/lagrangian_physical_properties.html">Lagrangian Physical Properties</a></li>
@@ -211,6 +211,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../parameters/dem/model_parameters.html">Model Parameters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../parameters/dem/post-processing.html">Post-processing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../parameters/dem/simulation_control.html">Simulation Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../parameters/dem/solid_objects.html">Solid Objects</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../parameters/dem/test.html">Test</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../parameters/dem/timer.html">Timer</a></li>
 </ul>
@@ -232,7 +233,7 @@
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../examples/examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../examples/incompressible-flow/incompressible-flow.html">Incompressible Flow</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Incompressible Flow</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../examples/incompressible-flow/2d-lid%E2%80%90driven-cavity-flow/lid%E2%80%90driven-cavity-flow.html">Lid-Driven Cavity Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/incompressible-flow/2d-lid-driven-cavity-flow/lid-driven-cavity-flow.html">Lid-Driven Cavity Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/incompressible-flow/2d-flow-around-cylinder/2d-flow-around-cylinder.html">Flow around a Cylinder</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/incompressible-flow/2d-taylor-couette-flow/2d-taylor-couette-flow.html">Taylor-Couette Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/incompressible-flow/2d-backward-facing-step/2d-backward-facing-step.html">Flow past a Backward-Facing Step</a></li>
@@ -256,6 +257,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../examples/multiphysics/rising-bubble/rising-bubble.html">Rising Bubble</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../examples/multiphysics/sloshing-in-rectangular-tank/sloshing-in-rectangular-tank.html">Sloshing in a Rectangular Tank</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../examples/multiphysics/capillary-wave/capillary-wave.html">Capillary Wave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/multiphysics/rayleigh-plateau-instability/rayleigh-plateau-instability.html">Rayleigh-Plateau Instability</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../examples/multiphysics/3d-dam-break/3d-dam-break.html">3D Dam-Break with an Obstacle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../examples/multiphysics/water-injection-in-a-closed-cell/water-injection-in-a-closed-cell.html">Water Injection in a Closed Cell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../examples/multiphysics/air-bubble-compression/air-bubble-compression.html">Air Bubble Compression</a></li>
@@ -290,8 +292,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../examples/dem/silo/silo.html">Silo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/dem/rectangular-hopper/rectangular-hopper.html">Rectangular Hopper</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/dem/granular-dam-break/granular-dam-break.html">Granular Dam-Break</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/dem/plate-discharge/plate-discharge.html">Plate Discharge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/dem/bunny-drill/bunny-drill.html">Bunny Drill</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/dem/granular-mixer/granular-mixer.html">Granular Mixer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/dem/granuheap/granuheap.html">Granuheap</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../examples/unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -301,6 +305,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../examples/unresolved-cfd-dem/liquid-solid-fluidized-bed/liquid-solid-fluidized-bed.html">Liquid-Solid Fluidized Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/unresolved-cfd-dem/boycott-effect/boycott-effect.html">Boycott Effect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/unresolved-cfd-dem/gas-solid-spouted-cylinder-bed/gas-solid-spouted-cylinder-bed.html">Gas-Solid Spouted Cylinder Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/unresolved-cfd-dem/dense-pneumatic-conveying/dense-pneumatic-conveying.html">Dense Pneumatic Conveying</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../examples/sharp-immersed-boundary/sharp-immersed-boundary.html">Sharp Immersed Boundary Solver</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Sharp Immersed Boundary Solver</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -344,6 +349,8 @@
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../theory/multiphysics/heat_transfer/heat_transfer.html">Heat Transfer</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle navigation of Heat Transfer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../theory/multiphysics/heat_transfer/heat_equation.html">Heat Transfer Equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../theory/multiphysics/heat_transfer/heat_equation.html#finite-element-formulation">Finite Element Formulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../theory/multiphysics/heat_transfer/heat_equation.html#stabilization-techniques">Stabilization Techniques</a></li>
 </ul>
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../theory/multiphysics/passive_tracer/passive_tracer.html">Passive Tracer</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle navigation of Passive Tracer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -352,6 +359,7 @@
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../theory/multiphysics/electromagnetism/electromagnetism.html">Electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle navigation of Electromagnetism</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../theory/multiphysics/electromagnetism/time_harmonic.html">Time Harmonic Maxwell’s Equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../theory/multiphysics/electromagnetism/time_harmonic_weak_form.html">Finite Element Method for Time-Harmonic Maxwell’s Equations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../theory/multiphysics/electromagnetism/magnetohydrodynamics.html">Magnetohydrodynamics Equations</a></li>
 </ul>
 </li>
@@ -431,8 +439,48 @@
 <p>The easiest way to install deal.II and its dependencies under Mac OS is through the Candi toolset. Consequently, this is the only procedure which is explained here. Even under these condition, we will see that the procedure is shaky at best.</p>
 <section id="installing-deal-ii-using-candi-step-1">
 <h2>Installing deal.II Using Candi (Step #1)<a class="headerlink" href="#installing-deal-ii-using-candi-step-1" title="Link to this heading">#</a></h2>
-<p>To install the dependencies (mpi, p4est, trilinos and METIS) all together using Candi, the following <a class="reference external" href="https://github.com/dealii/dealii/wiki/Apple-ARM-M1-OSX">procedure</a> on the deal.II wiki can be followed.</p>
-<p>Clone the candi git repository in a folder of your choice  (e.g. <code class="docutils literal notranslate"><span class="pre">$HOME/sofware/</span></code>). You can edit the <code class="docutils literal notranslate"><span class="pre">candi.cfg</span></code> file if you want to force the installation of the deal.II master version instead of the current stable version by setting the <code class="docutils literal notranslate"><span class="pre">STABLE_BUILD=false</span></code>. Under Apple ARM, we only recommend the installation of the required libraries, namely parmetis, trilinos and p4est.</p>
+<p>To install the dependencies (mpi, p4est, trilinos and METIS) all together using Candi, the following <a class="reference external" href="https://github.com/dealii/dealii/wiki/Apple-ARM-M1-OSX">procedure</a> on the deal.II wiki can be followed. You also need to ensure that muParser is installed:</p>
+<div class="copy-button highlight-text notranslate"><div class="highlight"><pre><span></span>sudo apt-get install libmuparser-dev
+</pre></div>
+</div>
+<p>Clone the candi git repository in a folder of your choice  (e.g. <code class="docutils literal notranslate"><span class="pre">$HOME/software/</span></code>). You can edit the <code class="docutils literal notranslate"><span class="pre">candi.cfg</span></code> file if you want to force the installation of the deal.II master version instead of the current stable version by setting <code class="docutils literal notranslate"><span class="pre">DEAL_II_VERSION=master</span></code> on line 97. Under Apple ARM, we only recommend the installation of the required libraries, namely parmetis, trilinos and p4est.</p>
+<p>To ensure that the Lethe test suite works, deal.II must be configured with p4est version 2.3.6. In the subfolder <code class="docutils literal notranslate"><span class="pre">deal.II-toolchain/packages/</span></code>, open the <code class="docutils literal notranslate"><span class="pre">p4est.package</span></code> file with a text editor and change the following lines:</p>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>line #</p></th>
+<th class="head"><p>initial line</p></th>
+<th class="head"><p>changed line</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>9</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">VERSION=2.3.2</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#VERSION=2.3.2</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">CHECKSUM=076df9e...</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#CHECKSUM=076df9e...</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">CHECKSUM=&quot;${CHECKSUM}</span> <span class="pre">b41c8ef29ca...</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#CHECKSUM=&quot;${CHECKSUM}</span> <span class="pre">b41c8ef29ca...</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">CHECKSUM=&quot;${CHECKSUM}</span> <span class="pre">0ea6e4806b6...</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#CHECKSUM=&quot;${CHECKSUM}</span> <span class="pre">0ea6e4806b6...</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td></td>
+<td><div class="copy-button highlight-text notranslate"><div class="highlight"><pre><span></span>VERSION=2.3.6
+CHECKSUM=4b35d9cc374e3b05cd29c552070940124f04af8f8e5e01ff046e39833de5e153
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>From the candi folder, the installation of candi can be launched using:</p>
 <div class="copy-button highlight-text notranslate"><div class="highlight"><pre><span></span>./candi.sh -j $num_proc --prefix=$path --packages=&quot;parmetis p4est trilinos dealii&quot;
 </pre></div>
@@ -444,14 +492,14 @@
 </div>
 <section id="setting-the-library-and-include-paths">
 <h3>Setting the Library and Include Paths<a class="headerlink" href="#setting-the-library-and-include-paths" title="Link to this heading">#</a></h3>
-<p>The deal.II installation procedure might not set the correct path for the libraries agaisnt which it needs to link. These include parmetis, p4est and trilinos. To fix this issue, the include and library path must be manually added by appending the following lines to the <code class="docutils literal notranslate"><span class="pre">~/.zshrc</span></code> file.</p>
+<p>The deal.II installation procedure might not set the correct path for the libraries towards which it needs to link. These include parmetis, p4est and trilinos. To fix this issue, the include and library path must be manually added by appending the following lines to the <code class="docutils literal notranslate"><span class="pre">~/.zshrc</span></code> file.</p>
 <div class="copy-button highlight-default notranslate"><div class="highlight"><pre><span></span>export PATH=/opt/homebrew/bin:$PATH
 export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:path/to/candi/install/trilinos-release-12-18-1/lib/
-export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:path/to/candi/install/p4est-2.3.2/FAST/lib
-export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:path/to/candi/install/p4est-2.3.2/DEBUG/lib
+export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:path/to/candi/install/p4est-2.3.6/FAST/lib
+export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:path/to/candi/install/p4est-2.3.6/DEBUG/lib
 export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:path/to/candi/install//parmetis-4.0.3/lib
 export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:path/to/candi/install/trilinos-release-12-18-1/include/
-export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:path/to/candi/install/p4est-2.3.2/FAST/include/
+export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:path/to/candi/install/p4est-2.3.6/FAST/include/
 export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:path/to/candi/install/parmetis-4.0.3/lib/
 </pre></div>
 </div>

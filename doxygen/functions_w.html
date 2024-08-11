@@ -99,8 +99,15 @@ $(function() {
 <li>weighting_factor_theta
 : <a class="el" href="classParticleDetectorInteractions.html#a116925df5f72c4f1d065a5a4250325b4">ParticleDetectorInteractions&lt; dim &gt;</a>
 </li>
+<li>weighting_type
+: <a class="el" href="classPreconditionASM.html#a8d85fcf5a96522fc5c8361b980f2d5f4">PreconditionASM&lt; VectorType &gt;</a>
+</li>
+<li>WeightingType
+: <a class="el" href="classPreconditionASM.html#a4241842da7c0d26bd9a041745f2ea36f">PreconditionASM&lt; VectorType &gt;</a>
+</li>
 <li>weights
-: <a class="el" href="classRBFShape.html#a8cc4d4b1396d905f163cfa5851c27e48">RBFShape&lt; dim &gt;</a>
+: <a class="el" href="classPreconditionASM.html#abefaf957da70a206468f2ded86e84a7d">PreconditionASM&lt; VectorType &gt;</a>
+, <a class="el" href="classRBFShape.html#a8cc4d4b1396d905f163cfa5851c27e48">RBFShape&lt; dim &gt;</a>
 </li>
 <li>wendlandc2()
 : <a class="el" href="classRBFShape.html#ac4f98e19cc9b04913df4704f64c8c040">RBFShape&lt; dim &gt;</a>
@@ -112,8 +119,8 @@ $(function() {
 : <a class="el" href="classAuxiliaryPhysics.html#aac6b380b7f28d81bef3a7d33eb13ec34">AuxiliaryPhysics&lt; dim, VectorType &gt;</a>
 , <a class="el" href="classCahnHilliard.html#aadf3482b407082b319fbfeb31bbc99ad">CahnHilliard&lt; dim &gt;</a>
 , <a class="el" href="classCFDDEMSolver.html#af85e466d9fa806d09e531d1e9203c53a">CFDDEMSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSNitscheNavierStokesSolver.html#ac4cf9f18a4ab157c0005bb743682c0e2">GLSNitscheNavierStokesSolver&lt; dim, spacedim &gt;</a>
-, <a class="el" href="classGLSSharpNavierStokesSolver.html#a76da870c0d01761ae939f83fc7d9a8ad">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsNitsche.html#ae1d624e0643d99abd921cf3306df2f74">FluidDynamicsNitsche&lt; dim, spacedim &gt;</a>
+, <a class="el" href="classFluidDynamicsSharp.html#a2114b03f4318546330da75b20dd566b3">FluidDynamicsSharp&lt; dim &gt;</a>
 , <a class="el" href="classHeatTransfer.html#a57220cba37f8342ad6941e3188ff8971">HeatTransfer&lt; dim &gt;</a>
 , <a class="el" href="classMultiphysicsInterface.html#aea4b7d6af2a1da9e935a4e40e524ab8e">MultiphysicsInterface&lt; dim &gt;</a>
 , <a class="el" href="classNavierStokesBase.html#af311920c0b819b973d410db4fa5e8924">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
@@ -122,11 +129,15 @@ $(function() {
 , <a class="el" href="classTracer.html#a18399604e964cdbaecf39baef51c4d61">Tracer&lt; dim &gt;</a>
 , <a class="el" href="classVolumeOfFluid.html#ae4e1fd51b66f71b532cc5d5db30788f9">VolumeOfFluid&lt; dim &gt;</a>
 </li>
-<li>write_DEM_output_results()
-: <a class="el" href="classCFDDEMSolver.html#a514dbc48c98ab2157b21ccb79ac41d45">CFDDEMSolver&lt; dim &gt;</a>
+<li>write_dem_output_results()
+: <a class="el" href="classCFDDEMSolver.html#ab01c69ff80e4fbd52759db99d1c5caf3">CFDDEMSolver&lt; dim &gt;</a>
+</li>
+<li>write_force_chains()
+: <a class="el" href="classParticlesForceChains.html#af2be0d10775607b8f739fa47ff6b1047">ParticlesForceChains&lt; dim, force_model, rolling_friction_model &gt;</a>
+, <a class="el" href="classParticlesForceChainsBase.html#a8318981c0dadb97256317a3bf4273ddd">ParticlesForceChainsBase&lt; dim &gt;</a>
 </li>
 <li>write_force_ib()
-: <a class="el" href="classGLSSharpNavierStokesSolver.html#a240776f376f306aa901ac8a516834056">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsSharp.html#a988104f0544bf430711e97e229015458">FluidDynamicsSharp&lt; dim &gt;</a>
 </li>
 <li>write_heat_flux()
 : <a class="el" href="classHeatTransfer.html#a9ea757a6ef815943cde9807f01679023">HeatTransfer&lt; dim &gt;</a>
@@ -151,14 +162,14 @@ $(function() {
 <li>write_phase_statistics()
 : <a class="el" href="classCahnHilliard.html#a77e1079efb4a15271a5bd238b1fe4a0f">CahnHilliard&lt; dim &gt;</a>
 </li>
-<li>write_post_processing_results()
-: <a class="el" href="classLagrangianPostProcessing.html#ab08613045953e5237bf6fc36de5609cf">LagrangianPostProcessing&lt; dim &gt;</a>
-</li>
 <li>write_temperature_statistics()
 : <a class="el" href="classHeatTransfer.html#a4291be2acfe02bc1db7b2ae3ef404491">HeatTransfer&lt; dim &gt;</a>
 </li>
 <li>write_time_in_error_table
 : <a class="el" href="structParameters_1_1Timer.html#a9dd988af6e082f56fe0fbce35a09addf">Parameters::Timer</a>
+</li>
+<li>write_tracer_flow_rates()
+: <a class="el" href="classTracer.html#a5f49e6b33fdf22db932e15356b6e2c26">Tracer&lt; dim &gt;</a>
 </li>
 <li>write_tracer_statistics()
 : <a class="el" href="classTracer.html#a9965b466837ae2879ee0763ec928ec8e">Tracer&lt; dim &gt;</a>

@@ -87,11 +87,8 @@ $(function() {
 <li>abort_at_convergence_failure
 : <a class="el" href="structParameters_1_1NonLinearSolver.html#a491f1c3c8f1c66e2ee84e42fd23be06e">Parameters::NonLinearSolver</a>
 </li>
-<li>acceleration
-: <a class="el" href="classExplicitEulerIntegrator.html#afe24dfc93226575b0e3ac7d0c43d2a3d">ExplicitEulerIntegrator&lt; dim &gt;</a>
-</li>
-<li>acceleration_deviation
-: <a class="el" href="classGear3Integrator.html#a1b6a927ad8cb10c77ccbecf45033727e">Gear3Integrator&lt; dim &gt;</a>
+<li>action_manager
+: <a class="el" href="classDEMSolver.html#a3374a865120e25a97f25335c152e043e">DEMSolver&lt; dim &gt;</a>
 </li>
 <li>activate_laser
 : <a class="el" href="classParameters_1_1Laser.html#a4318207e68f24b1b9089c75b5b170260">Parameters::Laser&lt; dim &gt;</a>
@@ -103,7 +100,10 @@ $(function() {
 : <a class="el" href="classMultiphysicsInterface.html#a14dce6e8da33be1ccb85f215c6df0634">MultiphysicsInterface&lt; dim &gt;</a>
 </li>
 <li>active_set
-: <a class="el" href="classGLSVANSSolver.html#a0cf6fbedfb65dc9d4ae48e693dcd4dbf">GLSVANSSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsVANS.html#a204d88e10ebedc841694bf529bc4c53c">FluidDynamicsVANS&lt; dim &gt;</a>
+</li>
+<li>active_status_factor
+: <a class="el" href="classLagrangianLoadBalancing.html#a0e75af594e71c988a505f881429c308a">LagrangianLoadBalancing&lt; dim &gt;</a>
 </li>
 <li>activity
 : <a class="el" href="classDetector.html#a19b7521cccb38aa7bec48fe81037cddc">Detector&lt; dim &gt;</a>
@@ -118,6 +118,9 @@ $(function() {
 : <a class="el" href="structParameters_1_1SimulationControl.html#a1c26877cf190cb29f0bf9b126673a045">Parameters::SimulationControl</a>
 , <a class="el" href="classSimulationControlTransient.html#ae5618d27fcd5e0eef634469aa6e42751">SimulationControlTransient</a>
 </li>
+<li>adaptive_sparse_contacts
+: <a class="el" href="classLagrangianLoadBalancing.html#a9ad9cad6318916aea8ccc510bbd1ab2b">LagrangianLoadBalancing&lt; dim &gt;</a>
+</li>
 <li>AdaptiveSparseContacts()
 : <a class="el" href="classAdaptiveSparseContacts.html#aea66c3424f12839402b46fb19f4cb01c">AdaptiveSparseContacts&lt; dim &gt;</a>
 </li>
@@ -126,9 +129,6 @@ $(function() {
 </li>
 <li>add_cells_with_boundary_lines_to_boundary_cells()
 : <a class="el" href="classBoundaryCellsInformation.html#aaf2746e96686caa199508cdfac6ead17">BoundaryCellsInformation&lt; dim &gt;</a>
-</li>
-<li>add_flags_and_constrain_velocity()
-: <a class="el" href="classNavierStokesBase.html#a26a4bb5e00a8f35c3040e0688ec45e1a">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
 </li>
 <li>add_fluid_particle_interaction_force()
 : <a class="el" href="classCFDDEMSolver.html#a7f3c153d5873a0d09a1ec66cbf14e0e9">CFDDEMSolver&lt; dim &gt;</a>
@@ -167,7 +167,7 @@ $(function() {
 : <a class="el" href="classShape.html#ad60cd0c45095c2a4a0fa39d504dc4f39">Shape&lt; dim &gt;</a>
 </li>
 <li>all_spheres
-: <a class="el" href="classGLSSharpNavierStokesSolver.html#a671669e8757b60ed7a8cf243c401729d">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsSharp.html#a3e736f6e5bda01cb8163a91fb60d7f3c">FluidDynamicsSharp&lt; dim &gt;</a>
 </li>
 <li>allocate()
 : <a class="el" href="classCahnHilliardScratchData.html#a75faf2e0facd94fa79d52d0f26489e61">CahnHilliardScratchData&lt; dim &gt;</a>
@@ -218,7 +218,7 @@ $(function() {
 : <a class="el" href="structParameters_1_1LinearSolver.html#a0893a9bc9ef15dc7703d39e309e59dfd">Parameters::LinearSolver</a>
 </li>
 <li>amg_preconditioner
-: <a class="el" href="classGLSNavierStokesSolver.html#a0eeeafea11bc120e74c9c5739a85f9b2">GLSNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsMatrixBased.html#a476d1d3416d3012852293a9ebf041fb4">FluidDynamicsMatrixBased&lt; dim &gt;</a>
 </li>
 <li>amg_smoother_overlap
 : <a class="el" href="structParameters_1_1LinearSolver.html#a6ebd5c5e15c7f66bd0c9a023701b2f77">Parameters::LinearSolver</a>
@@ -245,8 +245,8 @@ $(function() {
 : <a class="el" href="classInsertionList.html#ad65f2e8510e293f9a8521b0e9d511feb">InsertionList&lt; dim &gt;</a>
 </li>
 <li>angular_velocity
-: <a class="el" href="classParameters_1_1RigidSolidObject.html#a92f71551b82f13f1868f2bcf722b39dd">Parameters::RigidSolidObject&lt; dim &gt;</a>
-, <a class="el" href="classSerialSolid.html#a7d56356be08d0fbb317b34817a14c31f">SerialSolid&lt; dim, spacedim &gt;</a>
+: <a class="el" href="classParameters_1_1RigidSolidObject.html#a6f3a925025e5e8597f9f225ef19a7831">Parameters::RigidSolidObject&lt; dim &gt;</a>
+, <a class="el" href="classSerialSolid.html#a003ffc90baf84fd9cf292f0824d4a0c0">SerialSolid&lt; dim, spacedim &gt;</a>
 </li>
 <li>announce_physics()
 : <a class="el" href="classMultiphysicsInterface.html#a883dff2ef4631a5342cbe80d63eb3ab4">MultiphysicsInterface&lt; dim &gt;</a>
@@ -282,51 +282,33 @@ $(function() {
 <li>approximate_radius_for_contact
 : <a class="el" href="classParameters_1_1IBParticles.html#adc1e711b31c842ef7e07b83d80eed132">Parameters::IBParticles&lt; dim &gt;</a>
 </li>
-<li>arg1
-: <a class="el" href="classParameters_1_1Manifolds.html#a548e3e5ed4676dc52c1a638cb3633de4">Parameters::Manifolds</a>
-</li>
-<li>arg2
-: <a class="el" href="classParameters_1_1Manifolds.html#add82cc1759e96d6853d808d10e975810">Parameters::Manifolds</a>
-</li>
-<li>arg3
-: <a class="el" href="classParameters_1_1Manifolds.html#a4005704ea5c5cdf98e44f09a76b0483b">Parameters::Manifolds</a>
-</li>
-<li>arg4
-: <a class="el" href="classParameters_1_1Manifolds.html#afc0ee3fb1b701dd832ecdbe100e11964">Parameters::Manifolds</a>
-</li>
-<li>arg5
-: <a class="el" href="classParameters_1_1Manifolds.html#a4b0044018262475043df09723d287d29">Parameters::Manifolds</a>
-</li>
-<li>arg6
-: <a class="el" href="classParameters_1_1Manifolds.html#ad6db793f885d45b8d80e746d8d8f996b">Parameters::Manifolds</a>
-</li>
 <li>assemble_curvature_matrix_and_rhs()
 : <a class="el" href="classVolumeOfFluid.html#a30d04424f1f871915efeade37213b8d6">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>assemble_L2_projection()
-: <a class="el" href="classGDNavierStokesSolver.html#addb1a9bc4a42014f59294884e2a8b7c1">GDNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSNavierStokesSolver.html#a51152837b6c2fb2801e69276495a17a6">GLSNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classMFNavierStokesSolver.html#a65880d1eefb2ddd76b9786fe21155370">MFNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsBlock.html#a2fe4c2649b7889a5034f63ff4206e719">FluidDynamicsBlock&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixBased.html#a251b333eed9118309f7150a18437a2ec">FluidDynamicsMatrixBased&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixFree.html#af41a7d07d34617b68441b39bd4ba71ec">FluidDynamicsMatrixFree&lt; dim &gt;</a>
 </li>
 <li>assemble_L2_projection_interface_sharpening()
 : <a class="el" href="classVolumeOfFluid.html#a141e819be043c1c8b25684f242aaf41d">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>assemble_local_system_matrix()
 : <a class="el" href="classCahnHilliard.html#af4a9d35de8e0fbbb2386fbbbd986b0c6">CahnHilliard&lt; dim &gt;</a>
-, <a class="el" href="classGDNavierStokesSolver.html#a5cc5a941920d1a65e9fa601f78877008">GDNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSNavierStokesSolver.html#ac2c126900448ce8b14051d5adffffba3">GLSNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSSharpNavierStokesSolver.html#a4e091421604ec020c69c7ad92c844b46">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSVANSSolver.html#ada835d24411685c11b63bd747e46652f">GLSVANSSolver&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsBlock.html#a65477ec89d99356036d5bfa369079544">FluidDynamicsBlock&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixBased.html#af16a439b2d5157717df92d004d1b41c8">FluidDynamicsMatrixBased&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsSharp.html#a6cb7a142c0bb353ff6f7585137121067">FluidDynamicsSharp&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsVANS.html#a8f0eb6bffd1babd88e68edf389e82a34">FluidDynamicsVANS&lt; dim &gt;</a>
 , <a class="el" href="classHeatTransfer.html#a690a8c744e24846ba38e898af1c1e116">HeatTransfer&lt; dim &gt;</a>
 , <a class="el" href="classTracer.html#a491e4202d0eae76c48c4c1f6cf6abe0f">Tracer&lt; dim &gt;</a>
 , <a class="el" href="classVolumeOfFluid.html#a2ec626b1351a0818a19e320fa906244b">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>assemble_local_system_rhs()
 : <a class="el" href="classCahnHilliard.html#ac739e11f42f0041c17b33ee9e4b177ba">CahnHilliard&lt; dim &gt;</a>
-, <a class="el" href="classGDNavierStokesSolver.html#a7d1a6f4d7c56ea835515e98a3ba5468b">GDNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSNavierStokesSolver.html#ae59ef66f7b2e6201684e737cd4ac1d5d">GLSNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSSharpNavierStokesSolver.html#a4066d5bb5c04b3c40e36fecb5de0b20a">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSVANSSolver.html#add754da7bbd3e5ce3a107d9aeb695778">GLSVANSSolver&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsBlock.html#af8ad6e59da07809f05d5a583a371cab2">FluidDynamicsBlock&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixBased.html#a7241a134f0e9ec373c83b5f68469926a">FluidDynamicsMatrixBased&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsSharp.html#af2c82cdc5015dc864f2e566210919468">FluidDynamicsSharp&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsVANS.html#a1485f7837b618176a6079ce8bdd7c3fb">FluidDynamicsVANS&lt; dim &gt;</a>
 , <a class="el" href="classHeatTransfer.html#a54519227d0192b935c712285671c10e2">HeatTransfer&lt; dim &gt;</a>
 , <a class="el" href="classTracer.html#a96d3194cc9e920c50b639a13be7ceb65">Tracer&lt; dim &gt;</a>
 , <a class="el" href="classVolumeOfFluid.html#af7c3bcab6d5fe05a6655846acbb13ae1">VolumeOfFluid&lt; dim &gt;</a>
@@ -335,7 +317,7 @@ $(function() {
 : <a class="el" href="classVolumeOfFluid.html#a590a772689cf38ae61314168fa6656e2">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>assemble_mass_matrix_diagonal()
-: <a class="el" href="classGLSVANSSolver.html#a430de5ab418aa54fa9d5fd99c56f90ec">GLSVANSSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsVANS.html#a6cad37a42da47ba33ff03456b8bae53e">FluidDynamicsVANS&lt; dim &gt;</a>
 </li>
 <li>assemble_matrix()
 : <a class="el" href="classCahnHilliardAssemblerAngleOfContact.html#aa2525b14e7508e07ec38fb722bb83505">CahnHilliardAssemblerAngleOfContact&lt; dim &gt;</a>
@@ -357,10 +339,6 @@ $(function() {
 , <a class="el" href="classGLSNavierStokesVOFAssemblerMarangoni.html#a1e65c3b948db09855c959f903db7a7ab">GLSNavierStokesVOFAssemblerMarangoni&lt; dim &gt;</a>
 , <a class="el" href="classGLSNavierStokesVOFAssemblerNonNewtonianCore.html#a498f6cf2972e5e226060ab7119c9f003">GLSNavierStokesVOFAssemblerNonNewtonianCore&lt; dim &gt;</a>
 , <a class="el" href="classGLSNavierStokesVOFAssemblerSTF.html#a1ced684f6390b9c4ada98f42f13beedd">GLSNavierStokesVOFAssemblerSTF&lt; dim &gt;</a>
-, <a class="el" href="classGLSVansAssemblerBDF.html#a6bc83f7cae122d07ce446cc8e9d6cbe7">GLSVansAssemblerBDF&lt; dim &gt;</a>
-, <a class="el" href="classGLSVansAssemblerCoreModelA.html#a25d93f8a245b0c17665dab527403b9f0">GLSVansAssemblerCoreModelA&lt; dim &gt;</a>
-, <a class="el" href="classGLSVansAssemblerCoreModelB.html#a6b25ee38528708536a62980d85003462">GLSVansAssemblerCoreModelB&lt; dim &gt;</a>
-, <a class="el" href="classGLSVansAssemblerFPI.html#ac3e08acf0b9a444ffb53efbe951e49d3">GLSVansAssemblerFPI&lt; dim &gt;</a>
 , <a class="el" href="classHeatTransferAssemblerBase.html#ac067a9adcc88c041628e140ade841644">HeatTransferAssemblerBase&lt; dim &gt;</a>
 , <a class="el" href="classHeatTransferAssemblerBDF.html#a15d64262839c748518efaaedcfdadea3">HeatTransferAssemblerBDF&lt; dim &gt;</a>
 , <a class="el" href="classHeatTransferAssemblerCore.html#af9d5881a9cffb3939bb3e248a6ea0e51">HeatTransferAssemblerCore&lt; dim &gt;</a>
@@ -380,13 +358,17 @@ $(function() {
 , <a class="el" href="classTracerAssemblerBase.html#a0e42efcb2771db6c684e82c164f6e558">TracerAssemblerBase&lt; dim &gt;</a>
 , <a class="el" href="classTracerAssemblerBDF.html#a081cecb481bc5d2673032db17503f0b1">TracerAssemblerBDF&lt; dim &gt;</a>
 , <a class="el" href="classTracerAssemblerCore.html#ad4a1d66fd7a6b909f29d92400a94b57d">TracerAssemblerCore&lt; dim &gt;</a>
+, <a class="el" href="classVANSAssemblerBDF.html#ad9cf94e061baf7cb770345a97b33d715">VANSAssemblerBDF&lt; dim &gt;</a>
+, <a class="el" href="classVANSAssemblerCoreModelA.html#a74df8c7cf956a408062527134847cf42">VANSAssemblerCoreModelA&lt; dim &gt;</a>
+, <a class="el" href="classVANSAssemblerCoreModelB.html#af8accc57935455bbbd098ad3258c7cc0">VANSAssemblerCoreModelB&lt; dim &gt;</a>
+, <a class="el" href="classVANSAssemblerFPI.html#a91fce6185fd97f0e7e055799e30880ae">VANSAssemblerFPI&lt; dim &gt;</a>
 , <a class="el" href="classVOFAssemblerBase.html#a2e4f8664dc1e78389f475ad69ddcd54f">VOFAssemblerBase&lt; dim &gt;</a>
 , <a class="el" href="classVOFAssemblerBDF.html#abb31504dee264b6f7beb2dcc8a952bcd">VOFAssemblerBDF&lt; dim &gt;</a>
 , <a class="el" href="classVOFAssemblerCore.html#ade84531434d78a40d7554a1ee383fea3">VOFAssemblerCore&lt; dim &gt;</a>
 </li>
 <li>assemble_matrix_and_rhs()
-: <a class="el" href="classGLSNitscheNavierStokesSolver.html#a26c636d0a5eada524d9167e2c2fa6a78">GLSNitscheNavierStokesSolver&lt; dim, spacedim &gt;</a>
-, <a class="el" href="classGLSSharpNavierStokesSolver.html#a3f9eae1fb740a2b58e2c7cb0e1097d98">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsNitsche.html#aaa20d7828d4b09a84fefb655b514a1ce">FluidDynamicsNitsche&lt; dim, spacedim &gt;</a>
+, <a class="el" href="classFluidDynamicsSharp.html#a7944447a486cd5bb31efe856d6cfa152">FluidDynamicsSharp&lt; dim &gt;</a>
 , <a class="el" href="classHeatTransfer.html#ae9604a96e042f07d3f9aeb41a60da33c">HeatTransfer&lt; dim &gt;</a>
 , <a class="el" href="classVolumeOfFluid.html#ab48f139a9522db4b87fcd89c7af31900">VolumeOfFluid&lt; dim &gt;</a>
 </li>
@@ -397,7 +379,7 @@ $(function() {
 : <a class="el" href="classHeatTransfer.html#a108b901abfa86278bc44606211be2abc">HeatTransfer&lt; dim &gt;</a>
 </li>
 <li>assemble_nitsche_restriction()
-: <a class="el" href="classGLSNitscheNavierStokesSolver.html#aa9d21bc45894c10eefe3b6e46df3bb42">GLSNitscheNavierStokesSolver&lt; dim, spacedim &gt;</a>
+: <a class="el" href="classFluidDynamicsNitsche.html#a5d142e2faaa64289b81d7317688d1030">FluidDynamicsNitsche&lt; dim, spacedim &gt;</a>
 </li>
 <li>assemble_projected_phase_fraction_gradient_matrix_and_rhs()
 : <a class="el" href="classVolumeOfFluid.html#adf73f0429aa72469f1721fe4a30cd32b">VolumeOfFluid&lt; dim &gt;</a>
@@ -411,6 +393,8 @@ $(function() {
 , <a class="el" href="classCahnHilliardAssemblerBDF.html#abce171d46f13f137ecc1d988ad9f94da">CahnHilliardAssemblerBDF&lt; dim &gt;</a>
 , <a class="el" href="classCahnHilliardAssemblerCore.html#a3fdf1e007564b1ec839bf0d6817be937">CahnHilliardAssemblerCore&lt; dim &gt;</a>
 , <a class="el" href="classCahnHilliardAssemblerFreeAngle.html#a4d9c0e2743865f38302376344a7ee6c3">CahnHilliardAssemblerFreeAngle&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsNitsche.html#af77760b8062ddb48c82954afd33b26fa">FluidDynamicsNitsche&lt; dim, spacedim &gt;</a>
+, <a class="el" href="classFluidDynamicsSharp.html#a8cfb8717757cedb29c3de3c64a60d996">FluidDynamicsSharp&lt; dim &gt;</a>
 , <a class="el" href="classGLSIsothermalCompressibleNavierStokesAssemblerBDF.html#a46db20acbbddff2d3ac9e35059295380">GLSIsothermalCompressibleNavierStokesAssemblerBDF&lt; dim &gt;</a>
 , <a class="el" href="classGLSIsothermalCompressibleNavierStokesAssemblerCore.html#adabf1992039c1d0008e300d24e9704e8">GLSIsothermalCompressibleNavierStokesAssemblerCore&lt; dim &gt;</a>
 , <a class="el" href="classGLSIsothermalCompressibleNavierStokesVOFAssemblerBDF.html#a92a6584cd9d39c06fb6c0839448c7ca4">GLSIsothermalCompressibleNavierStokesVOFAssemblerBDF&lt; dim &gt;</a>
@@ -425,12 +409,6 @@ $(function() {
 , <a class="el" href="classGLSNavierStokesVOFAssemblerMarangoni.html#a8d63fe783e889c4ee2745a6e3a4c9876">GLSNavierStokesVOFAssemblerMarangoni&lt; dim &gt;</a>
 , <a class="el" href="classGLSNavierStokesVOFAssemblerNonNewtonianCore.html#ad50ee7290c4dbfc1dcaa3fa6b35a0ff9">GLSNavierStokesVOFAssemblerNonNewtonianCore&lt; dim &gt;</a>
 , <a class="el" href="classGLSNavierStokesVOFAssemblerSTF.html#a32c91588cc6edb25a68113baabf074ed">GLSNavierStokesVOFAssemblerSTF&lt; dim &gt;</a>
-, <a class="el" href="classGLSNitscheNavierStokesSolver.html#a0cc7684ac78fd0260ffd6a3cdda99d62">GLSNitscheNavierStokesSolver&lt; dim, spacedim &gt;</a>
-, <a class="el" href="classGLSSharpNavierStokesSolver.html#a9d6e1b8cb15d54963eeba70aa4fcb100">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSVansAssemblerBDF.html#a0ddd6e306fc88b24b186d8c9758351f3">GLSVansAssemblerBDF&lt; dim &gt;</a>
-, <a class="el" href="classGLSVansAssemblerCoreModelA.html#ad868727f6d29ec1969294685f84213e1">GLSVansAssemblerCoreModelA&lt; dim &gt;</a>
-, <a class="el" href="classGLSVansAssemblerCoreModelB.html#a7a77db4fa64192ef6d8992de9b0e4cc9">GLSVansAssemblerCoreModelB&lt; dim &gt;</a>
-, <a class="el" href="classGLSVansAssemblerFPI.html#ac82510604c93674e6e3f62ad3a7328be">GLSVansAssemblerFPI&lt; dim &gt;</a>
 , <a class="el" href="classHeatTransfer.html#a8c6326ec43216315de0b0a66078b9631">HeatTransfer&lt; dim &gt;</a>
 , <a class="el" href="classHeatTransferAssemblerBase.html#af4e0bdb812c41fe7da9ed94df3ec9e61">HeatTransferAssemblerBase&lt; dim &gt;</a>
 , <a class="el" href="classHeatTransferAssemblerBDF.html#a2cf67a98ccdc12631f8b30cfd535364c">HeatTransferAssemblerBDF&lt; dim &gt;</a>
@@ -451,6 +429,10 @@ $(function() {
 , <a class="el" href="classTracerAssemblerBase.html#a3887acc3eada0197563f686e36c74fbf">TracerAssemblerBase&lt; dim &gt;</a>
 , <a class="el" href="classTracerAssemblerBDF.html#abf3b0c5663db2179f97149d89f32eebe">TracerAssemblerBDF&lt; dim &gt;</a>
 , <a class="el" href="classTracerAssemblerCore.html#aa2360a305ff08f21fc403b0d9a142c69">TracerAssemblerCore&lt; dim &gt;</a>
+, <a class="el" href="classVANSAssemblerBDF.html#a64058e82847debc4a6d0478cce80289f">VANSAssemblerBDF&lt; dim &gt;</a>
+, <a class="el" href="classVANSAssemblerCoreModelA.html#ae40849aa078ab9cd935132bfbc93289e">VANSAssemblerCoreModelA&lt; dim &gt;</a>
+, <a class="el" href="classVANSAssemblerCoreModelB.html#a6bef1ac9d1d923fe3cebc261079438cf">VANSAssemblerCoreModelB&lt; dim &gt;</a>
+, <a class="el" href="classVANSAssemblerFPI.html#aeb63625ae9f0033a02dde5a5e8cc81c6">VANSAssemblerFPI&lt; dim &gt;</a>
 , <a class="el" href="classVOFAssemblerBase.html#aa6216f5521fedba88a0b43859c71a56c">VOFAssemblerBase&lt; dim &gt;</a>
 , <a class="el" href="classVOFAssemblerBDF.html#a213bafd94c5199426a0f39b23f7af8f5">VOFAssemblerBDF&lt; dim &gt;</a>
 , <a class="el" href="classVOFAssemblerCore.html#a9e0eaa8178f1d0e57df80c0dec131d62">VOFAssemblerCore&lt; dim &gt;</a>
@@ -461,32 +443,32 @@ $(function() {
 </li>
 <li>assemble_system_matrix()
 : <a class="el" href="classCahnHilliard.html#a6500525903349398640b028bba2d6437">CahnHilliard&lt; dim &gt;</a>
-, <a class="el" href="classGDNavierStokesSolver.html#a68f9030f29f7c3e3297d402ef056d960">GDNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSNavierStokesSolver.html#ab5be2c153e6a0158ad52cb45b19f4ee8">GLSNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSNitscheNavierStokesSolver.html#acd0e5d1440fce356191c71832a2e90f3">GLSNitscheNavierStokesSolver&lt; dim, spacedim &gt;</a>
-, <a class="el" href="classGLSSharpNavierStokesSolver.html#a974ecf952de2c591b36555d005cf57e6">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSVANSSolver.html#a2f2f0f5f6d13c4534ff75c971d3fe493">GLSVANSSolver&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsBlock.html#ae1b44b54aa3e2630217d8e6a9c6a767b">FluidDynamicsBlock&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixBased.html#a8e89abd997c09d50fad2eb8e2e092443">FluidDynamicsMatrixBased&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixFree.html#ae1ce4a6097c6d9e696e4f3c559d47a2c">FluidDynamicsMatrixFree&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsNitsche.html#aaafba3f2cf1bb7a7774638360cbc8972">FluidDynamicsNitsche&lt; dim, spacedim &gt;</a>
+, <a class="el" href="classFluidDynamicsSharp.html#a28e8d65fe3624e6070e80829558d7134">FluidDynamicsSharp&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsVANS.html#acfd25108dae4492000ed0216e934a8da">FluidDynamicsVANS&lt; dim &gt;</a>
 , <a class="el" href="classHeatTransfer.html#ac1df90eac6ba3018476e093af21e3899">HeatTransfer&lt; dim &gt;</a>
-, <a class="el" href="classMFNavierStokesSolver.html#a45124230d0118b793fb32e6f868b1f96">MFNavierStokesSolver&lt; dim &gt;</a>
 , <a class="el" href="classPhysicsSolver.html#a73215f315918e22864cf04248c583045">PhysicsSolver&lt; VectorType &gt;</a>
 , <a class="el" href="classTracer.html#a6c10ff5606b5cf3ba53ab44bd1e8a076">Tracer&lt; dim &gt;</a>
 , <a class="el" href="classVolumeOfFluid.html#a8db592cde33c435214ee106048e27aa0">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>assemble_system_rhs()
 : <a class="el" href="classCahnHilliard.html#aafcec0aa61b2e3a963457ab1360cf72a">CahnHilliard&lt; dim &gt;</a>
-, <a class="el" href="classGDNavierStokesSolver.html#ae96572ea4bf07ad5658c37ff23fd0af7">GDNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSNavierStokesSolver.html#a77a043e1f19097afeca90c1abaa1b60a">GLSNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSNitscheNavierStokesSolver.html#adc2f133cbe8624efa07b77cacc9d41ae">GLSNitscheNavierStokesSolver&lt; dim, spacedim &gt;</a>
-, <a class="el" href="classGLSSharpNavierStokesSolver.html#a9b222ec9a849417ff21f0555ee578921">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSVANSSolver.html#aea4c6b244e80c3240524b10a0a5e20bd">GLSVANSSolver&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsBlock.html#a996a4a5506a53b025dae696bd9c2c6e7">FluidDynamicsBlock&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixBased.html#ae20a8b3537aef54c5c53f26688c6667a">FluidDynamicsMatrixBased&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixFree.html#a839bbea86a96cd0863792f58b6c5aeeb">FluidDynamicsMatrixFree&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsNitsche.html#ad2a2b2ff2fb0386faac1e3499e52eca7">FluidDynamicsNitsche&lt; dim, spacedim &gt;</a>
+, <a class="el" href="classFluidDynamicsSharp.html#a18d94faa17dda7c4111534a12c198bd1">FluidDynamicsSharp&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsVANS.html#a3c3dfff46c060f2d01d5cf241745755b">FluidDynamicsVANS&lt; dim &gt;</a>
 , <a class="el" href="classHeatTransfer.html#ac6daf4b154211a7ba283dc66c3380d51">HeatTransfer&lt; dim &gt;</a>
-, <a class="el" href="classMFNavierStokesSolver.html#aa3205570022a7b4155cc04feb4490821">MFNavierStokesSolver&lt; dim &gt;</a>
 , <a class="el" href="classPhysicsSolver.html#a74110493860247f4ed2da56ef3050f08">PhysicsSolver&lt; VectorType &gt;</a>
 , <a class="el" href="classTracer.html#ad8ca9f8d848ec5159227bd766471f5c6">Tracer&lt; dim &gt;</a>
 , <a class="el" href="classVolumeOfFluid.html#aa4652c5727f3b4e7fe98ee8c6c5d7672">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>assembleGD()
-: <a class="el" href="classGDNavierStokesSolver.html#adcef1bff406106b532f6330447cda9ed">GDNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsBlock.html#a26822ce138787617f99acde82fc05f1c">FluidDynamicsBlock&lt; dim &gt;</a>
 </li>
 <li>assemblers
 : <a class="el" href="classCahnHilliard.html#a3f10bd232c9b5997e7fbe4c7c04a2daa">CahnHilliard&lt; dim &gt;</a>
@@ -496,13 +478,13 @@ $(function() {
 , <a class="el" href="classVolumeOfFluid.html#a21bbc6cd577604cf5f9e4adb4b13bc0e">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>assemblers_inside_ib
-: <a class="el" href="classGLSSharpNavierStokesSolver.html#a542d884c4ecbab34ab53ef36d3fb997d">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsSharp.html#aef21bd5d4911c27668c3ebe91afe5652">FluidDynamicsSharp&lt; dim &gt;</a>
 </li>
 <li>assembly_method
 : <a class="el" href="classSimulationControl.html#afcef58567807100d062bceb13c9540a5">SimulationControl</a>
 </li>
 <li>assign_mobility_status()
-: <a class="el" href="classAdaptiveSparseContacts.html#a04e34c241b1583be2a809e352858d2df">AdaptiveSparseContacts&lt; dim &gt;</a>
+: <a class="el" href="classAdaptiveSparseContacts.html#a0f8a16ece3fb1c044b7d8c97c01cc4c8">AdaptiveSparseContacts&lt; dim &gt;</a>
 </li>
 <li>assign_particle_properties()
 : <a class="el" href="classInsertion.html#a8f00edf71c52d94b944fac4a35f32647">Insertion&lt; dim &gt;</a>
@@ -557,6 +539,12 @@ $(function() {
 </li>
 <li>average_velocity_1n
 : <a class="el" href="classFlowControl.html#a8ae774535e50107219c481d41488953b">FlowControl&lt; dim &gt;</a>
+</li>
+<li>average_velocity_file_name
+: <a class="el" href="classParameters_1_1InitialConditions.html#a8153d8e4aede20142fd8dd9d725095e9">Parameters::InitialConditions&lt; dim &gt;</a>
+</li>
+<li>average_velocity_folder
+: <a class="el" href="classParameters_1_1InitialConditions.html#ad7057047793622a590cab56728a37853">Parameters::InitialConditions&lt; dim &gt;</a>
 </li>
 <li>AverageVelocities()
 : <a class="el" href="classAverageVelocities.html#ae46cc1b344953c98e55fd58add46d360">AverageVelocities&lt; dim, VectorType, DofsType &gt;</a>

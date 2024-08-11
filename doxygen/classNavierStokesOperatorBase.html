@@ -84,7 +84,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for NavierStokesOperatorBase&lt; dim, number &gt;:</div>
 <div class="dyncontent">
@@ -137,6 +137,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a522730c76d0dfab780aa483e52d07ccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeeacf3bcb0b3c7b30eb6556b6997e6fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#aeeacf3bcb0b3c7b30eb6556b6997e6fc">vmult_interface_up</a> (<a class="el" href="classNavierStokesOperatorBase.html#af38ac45042fda00de01ec4f576b62eeb">VectorType</a> &amp;dst, <a class="el" href="classNavierStokesOperatorBase.html#af38ac45042fda00de01ec4f576b62eeb">VectorType</a> const &amp;src) const</td></tr>
 <tr class="separator:aeeacf3bcb0b3c7b30eb6556b6997e6fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22ccab315aecbbb361d04428b4099885"><td class="memItemLeft" align="right" valign="top">const DynamicSparsityPattern &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#a22ccab315aecbbb361d04428b4099885">get_sparsity_pattern</a> () const</td></tr>
+<tr class="separator:a22ccab315aecbbb361d04428b4099885"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8897d3ddc186e91096ca3e3f9f893dd"><td class="memItemLeft" align="right" valign="top">const TrilinosWrappers::SparseMatrix &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#af8897d3ddc186e91096ca3e3f9f893dd">get_system_matrix</a> () const</td></tr>
 <tr class="separator:af8897d3ddc186e91096ca3e3f9f893dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2988887b018d153e04d4395d126993d"><td class="memItemLeft" align="right" valign="top">const MatrixFree&lt; dim, number &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#ad2988887b018d153e04d4395d126993d">get_system_matrix_free</a> () const</td></tr>
@@ -176,6 +178,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:affbf806be564c4ec70c6d71a28026e91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e23aa3b87f060442c860397c6bfad00"><td class="memItemLeft" align="right" valign="top">AffineConstraints&lt; number &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#a4e23aa3b87f060442c860397c6bfad00">constraints</a></td></tr>
 <tr class="separator:a4e23aa3b87f060442c860397c6bfad00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af233425a166a39d36a115f2926fe47ed"><td class="memItemLeft" align="right" valign="top">DynamicSparsityPattern&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#af233425a166a39d36a115f2926fe47ed">dsp</a></td></tr>
+<tr class="separator:af233425a166a39d36a115f2926fe47ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0aefcc268a75374e93683037bf409a5f"><td class="memItemLeft" align="right" valign="top">TrilinosWrappers::SparseMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#a0aefcc268a75374e93683037bf409a5f">system_matrix</a></td></tr>
 <tr class="separator:a0aefcc268a75374e93683037bf409a5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8eaefbeb15982fab2dfbf8ceb540baf4"><td class="memItemLeft" align="right" valign="top">AlignedVector&lt; VectorizedArray&lt; number &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#a8eaefbeb15982fab2dfbf8ceb540baf4">element_size</a></td></tr>
@@ -243,7 +247,7 @@ class NavierStokesOperatorBase&lt; dim, number &gt;</h3>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00048">48</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00048">48</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a9b317eea5e2ce56464fb7dd2ec7b403e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9b317eea5e2ce56464fb7dd2ec7b403e">&#9670;&nbsp;</a></span>FECellIntegrator</h2>
@@ -259,7 +263,7 @@ template&lt;int dim, typename number &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00051">51</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00051">51</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -277,7 +281,7 @@ template&lt;int dim, typename number &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00054">54</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00054">54</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -295,7 +299,7 @@ template&lt;int dim, typename number &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00055">55</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00055">55</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -313,7 +317,7 @@ template&lt;int dim, typename number &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00053">53</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00053">53</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -331,7 +335,7 @@ template&lt;int dim, typename number &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00052">52</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00052">52</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -352,7 +356,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Default constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00132">132</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00132">132</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
 </div>
 </div>
@@ -456,9 +460,9 @@ template&lt;int dim, typename number &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00138">138</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00138">138</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00373">NavierStokesOperatorBase&lt; dim, number &gt;::constraints</a>, <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00429">NavierStokesOperatorBase&lt; dim, number &gt;::enable_hessians_jacobian</a>, <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00435">NavierStokesOperatorBase&lt; dim, number &gt;::enable_hessians_residual</a>, <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00398">NavierStokesOperatorBase&lt; dim, number &gt;::forcing_function</a>, <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00410">NavierStokesOperatorBase&lt; dim, number &gt;::kinematic_viscosity</a>, <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00168">NavierStokesOperatorBase&lt; dim, number &gt;::reinit()</a>, <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00423">NavierStokesOperatorBase&lt; dim, number &gt;::simulation_control</a>, and <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00417">NavierStokesOperatorBase&lt; dim, number &gt;::stabilization</a>.</p>
+<p class="reference">References <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00382">NavierStokesOperatorBase&lt; dim, number &gt;::constraints</a>, <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00444">NavierStokesOperatorBase&lt; dim, number &gt;::enable_hessians_jacobian</a>, <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00450">NavierStokesOperatorBase&lt; dim, number &gt;::enable_hessians_residual</a>, <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00413">NavierStokesOperatorBase&lt; dim, number &gt;::forcing_function</a>, <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00425">NavierStokesOperatorBase&lt; dim, number &gt;::kinematic_viscosity</a>, <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00168">NavierStokesOperatorBase&lt; dim, number &gt;::reinit()</a>, <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00438">NavierStokesOperatorBase&lt; dim, number &gt;::simulation_control</a>, and <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00432">NavierStokesOperatorBase&lt; dim, number &gt;::stabilization</a>.</p>
 
 </div>
 </div>
@@ -479,7 +483,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Clear the matrix-free object. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00346">346</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00346">346</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
 </div>
 </div>
@@ -499,7 +503,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Compute the element size h of the cells required to calculate stabilization parameters. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00301">301</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00301">301</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
 </div>
 </div>
@@ -529,7 +533,7 @@ template&lt;int dim, typename number &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00730">730</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00763">763</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="classNavierStokesOperatorBase.html#a9f3bb8de4716c95844cbdf35272b30a6">NavierStokesOperatorBase&lt; dim, number &gt;::do_cell_integral_local()</a>.</p>
 
@@ -632,7 +636,7 @@ template&lt;int dim, typename number &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00753">753</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00786">786</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
 </div>
 </div>
@@ -674,7 +678,7 @@ template&lt;int dim, typename number &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>number </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00338">338</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00338">338</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
 </div>
 </div>
@@ -704,7 +708,7 @@ template&lt;int dim, typename number &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00602">602</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00635">635</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="time__integration__utilities_8h_source.html#l00037">is_bdf()</a>.</p>
 
@@ -747,7 +751,7 @@ template&lt;int dim, typename number &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00717">717</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00750">750</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="classNavierStokesOperatorBase.html#a1d289e3cf780010e8be1f75d4b027194">NavierStokesOperatorBase&lt; dim, number &gt;::local_evaluate_residual()</a>.</p>
 
@@ -779,7 +783,7 @@ template&lt;int dim, typename number &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00678">678</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00711">711</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
 </div>
 </div>
@@ -800,7 +804,7 @@ template&lt;int dim, typename number &gt; </div>
 <p>Get the element size object. </p>
 <dl class="section return"><dt>Returns</dt><dd>Aligned vector with the size of all elements. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00595">595</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00628">628</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
 </div>
 </div>
@@ -839,7 +843,28 @@ template&lt;int dim, typename number &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Set containing the indices of the refinement edges. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00775">775</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00808">808</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
+
+</div>
+</div>
+<a id="a22ccab315aecbbb361d04428b4099885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22ccab315aecbbb361d04428b4099885">&#9670;&nbsp;</a></span>get_sparsity_pattern()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename number &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const DynamicSparsityPattern &amp; <a class="el" href="classNavierStokesOperatorBase.html">NavierStokesOperatorBase</a>&lt; dim, number &gt;::get_sparsity_pattern</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return sparsity pattern used to set up the sparse matrix by <a class="el" href="classNavierStokesOperatorBase.html#af8897d3ddc186e91096ca3e3f9f893dd" title="Calculate matrix if needed, e.g., by coarse-grid solver when a multigrid algorithm is used.">get_system_matrix()</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>Sparsity pattern. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00468">468</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
 </div>
 </div>
@@ -860,7 +885,7 @@ template&lt;int dim, typename number &gt; </div>
 <p>Calculate matrix if needed, e.g., by coarse-grid solver when a multigrid algorithm is used. </p>
 <dl class="section return"><dt>Returns</dt><dd>Trilinos sparse matrix. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00465">465</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00477">477</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
 </div>
 </div>
@@ -881,7 +906,7 @@ template&lt;int dim, typename number &gt; </div>
 <p>Get the system matrix free object. </p>
 <dl class="section return"><dt>Returns</dt><dd>Matrix free object. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00588">588</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00621">621</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
 </div>
 </div>
@@ -902,7 +927,7 @@ template&lt;int dim, typename number &gt; </div>
 <p>Get the vector partitioner object required for local smoothing multigrid preconditioner. </p>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to vector partitioner. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00361">361</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00361">361</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
 </div>
 </div>
@@ -932,7 +957,7 @@ template&lt;int dim, typename number &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00353">353</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00353">353</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
 </div>
 </div>
@@ -1016,7 +1041,7 @@ template&lt;int dim, typename number &gt; </div>
 <p>Get the total number of DoFs. </p>
 <dl class="section return"><dt>Returns</dt><dd>Total number of degrees of freedom. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00327">327</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00327">327</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
 </div>
 </div>
@@ -1120,9 +1145,9 @@ template&lt;int dim, typename number &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00168">168</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00168">168</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00032">create_bool_dof_mask()</a>, <a class="el" href="structParameters_1_1Stabilization.html#aa349ab6e7ab2df88077df91d4707a4baaca6efd547a7b6d9885402b9544f941d5">Parameters::Stabilization::gls</a>, and <a class="el" href="structParameters_1_1Stabilization.html#aa349ab6e7ab2df88077df91d4707a4baaae21e5838883a96aab921c84e14383bb">Parameters::Stabilization::pspg_supg</a>.</p>
+<p class="reference">References <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00032">create_bool_dof_mask()</a>, <a class="el" href="structParameters_1_1Stabilization.html#aa349ab6e7ab2df88077df91d4707a4baaca6efd547a7b6d9885402b9544f941d5">Parameters::Stabilization::gls</a>, and <a class="el" href="structParameters_1_1Stabilization.html#aa349ab6e7ab2df88077df91d4707a4baaae21e5838883a96aab921c84e14383bb">Parameters::Stabilization::pspg_supg</a>.</p>
 
 </div>
 </div>
@@ -1160,7 +1185,7 @@ template&lt;int dim, typename number &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00296">296</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00305">305</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -1201,7 +1226,7 @@ template&lt;int dim, typename number &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00406">406</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00408">408</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
 </div>
 </div>
@@ -1231,7 +1256,7 @@ template&lt;int dim, typename number &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00705">705</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00738">738</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
 </div>
 </div>
@@ -1272,9 +1297,9 @@ template&lt;int dim, typename number &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00368">368</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00368">368</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00753">NavierStokesOperatorBase&lt; dim, number &gt;::do_cell_integral_range()</a>.</p>
+<p class="reference">References <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00786">NavierStokesOperatorBase&lt; dim, number &gt;::do_cell_integral_range()</a>.</p>
 
 </div>
 </div>
@@ -1315,9 +1340,9 @@ template&lt;int dim, typename number &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00414">414</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00416">416</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00753">NavierStokesOperatorBase&lt; dim, number &gt;::do_cell_integral_range()</a>.</p>
+<p class="reference">References <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00786">NavierStokesOperatorBase&lt; dim, number &gt;::do_cell_integral_range()</a>.</p>
 
 </div>
 </div>
@@ -1358,9 +1383,9 @@ template&lt;int dim, typename number &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00429">429</a> of file <a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00431">431</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="mf__navier__stokes__operators_8cc_source.html#l00753">NavierStokesOperatorBase&lt; dim, number &gt;::do_cell_integral_range()</a>.</p>
+<p class="reference">References <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00786">NavierStokesOperatorBase&lt; dim, number &gt;::do_cell_integral_range()</a>.</p>
 
 </div>
 </div>
@@ -1389,7 +1414,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Additional source term in the case of dynamic flow control. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00404">404</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00419">419</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -1417,7 +1442,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>DoF mask object needed for the sparsity pattern and computation of the system matrix of the coarse level in case FE_Q_iso_Q1 elements are used. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00527">527</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00542">542</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -1445,7 +1470,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Vector with the constrained indices used for the local smoothing approach. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00487">487</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00502">502</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -1473,7 +1498,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Vector with the constrained values used for the local smoothing approach. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00493">493</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00508">508</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -1501,7 +1526,35 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Object that stores constraints for the matrix free implementation. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00373">373</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00382">382</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
+
+</div>
+</div>
+<a id="af233425a166a39d36a115f2926fe47ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af233425a166a39d36a115f2926fe47ed">&#9670;&nbsp;</a></span>dsp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename number &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DynamicSparsityPattern <a class="el" href="classNavierStokesOperatorBase.html">NavierStokesOperatorBase</a>&lt; dim, number &gt;::dsp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sparsity pattern used when the matrix of certain level is computed and stored. </p>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00388">388</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -1529,7 +1582,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Vector used to mark edge constrained cells in order to verify constrained indices for the local smoothing approach. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00520">520</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00535">535</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -1557,7 +1610,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Vector with the constrained edge indices for the local smoothing approach. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00499">499</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00514">514</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -1585,7 +1638,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Vector with edge constrained values used for the local smoothing approach. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00512">512</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00527">527</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -1613,7 +1666,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Aligned vector to store the element size of all the elements. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00386">386</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00401">401</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -1641,7 +1694,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Flag to turn hessian terms from jacobian on or off. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00429">429</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00444">444</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -1669,7 +1722,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Flag to turn hessian terms from residual on or off. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00435">435</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00450">450</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -1697,7 +1750,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Finite element degree for the operator. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00392">392</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00407">407</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -1725,7 +1778,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Force function or source function for the Navier-Stokes equations. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00398">398</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00413">413</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -1753,7 +1806,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Variable to identify whether there are edge constrained indices for the local smoothing approach. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00506">506</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00521">521</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -1781,7 +1834,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Kinematic viscosity needed for the operator. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00410">410</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00425">425</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -1809,7 +1862,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Object storing all the relevant data needed for the matrix free implementation. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00367">367</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00376">376</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -1837,7 +1890,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Table with correct alignment for vectorization to store the gradients of the previous newton step. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00451">451</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00466">466</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -1865,7 +1918,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Table with correct alignment for vectorization to store the hessian diagonal of the previous newton step. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00459">459</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00474">474</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -1893,7 +1946,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Table with correct alignment for vectorization to store the values of the previous newton step. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00443">443</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00458">458</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -1921,7 +1974,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Conditional OStream for parallel output. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00533">533</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00548">548</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -1949,7 +2002,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Object storing the information regarding the time stepping method. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00423">423</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00438">438</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -1977,7 +2030,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Stabilization type needed to add or remove terms from operator. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00417">417</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00432">432</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -2005,7 +2058,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Table with correct alignment for vectorization to store the values of the stabilization parameter tau. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00474">474</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00489">489</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -2033,7 +2086,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Table with correct alignment for vectorization to store the values of the stabilization parameter tau lsic. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00481">481</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00496">496</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -2061,7 +2114,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Sparse trilinos matrix used when the matrix of certain level is computed and stored. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00380">380</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00395">395</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -2089,7 +2142,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Table with correct alignment for vectorization to store the time derivatives of previous solutions. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00467">467</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00482">482</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -2117,13 +2170,13 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Timer for internal operator calls. </p>
 
-<p class="definition">Definition at line <a class="el" href="mf__navier__stokes__operators_8h_source.html#l00540">540</a> of file <a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html#l00555">555</a> of file <a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/runner/work/lethe/lethe/include/solvers/<a class="el" href="mf__navier__stokes__operators_8h_source.html">mf_navier_stokes_operators.h</a></li>
-<li>/home/runner/work/lethe/lethe/source/solvers/<a class="el" href="mf__navier__stokes__operators_8cc_source.html">mf_navier_stokes_operators.cc</a></li>
+<li>/home/runner/work/lethe/lethe/include/solvers/<a class="el" href="fluid__dynamics__matrix__free__operators_8h_source.html">fluid_dynamics_matrix_free_operators.h</a></li>
+<li>/home/runner/work/lethe/lethe/source/solvers/<a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html">fluid_dynamics_matrix_free_operators.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -89,19 +89,21 @@ $(function() {
 Public Types</h2></td></tr>
 <tr class="memitem:aabe47013c692c38e2901a7aeca47aa43"><td class="memItemLeft" align="right" valign="top">typedef ankerl::unordered_dense::map&lt; types::particle_index, Particles::ParticleIterator&lt; dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDEM_1_1dem__data__structures.html#aabe47013c692c38e2901a7aeca47aa43">particle_index_iterator_map</a></td></tr>
 <tr class="separator:aabe47013c692c38e2901a7aeca47aa43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cd7497267a420d8b6117fc55de60d8a"><td class="memItemLeft" align="right" valign="top">typedef std::unordered_map&lt; types::particle_index, <a class="el" href="structparticle__point__line__contact__info__struct.html">particle_point_line_contact_info_struct</a>&lt; dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDEM_1_1dem__data__structures.html#a3cd7497267a420d8b6117fc55de60d8a">particle_point_line_contact_info</a></td></tr>
-<tr class="separator:a3cd7497267a420d8b6117fc55de60d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf20b9ce8824900801f73ae3f057f8cb"><td class="memItemLeft" align="right" valign="top">typedef std::unordered_map&lt; types::particle_index, std::tuple&lt; Particles::ParticleIterator&lt; dim &gt;, Point&lt; dim &gt;, Point&lt; dim &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDEM_1_1dem__data__structures.html#adf20b9ce8824900801f73ae3f057f8cb">particle_line_candidates</a></td></tr>
-<tr class="separator:adf20b9ce8824900801f73ae3f057f8cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49fe3b00c50665cd2b81c8be795f4f56"><td class="memItemLeft" align="right" valign="top">typedef std::unordered_map&lt; types::particle_index, std::pair&lt; Particles::ParticleIterator&lt; dim &gt;, Point&lt; dim &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDEM_1_1dem__data__structures.html#a49fe3b00c50665cd2b81c8be795f4f56">particle_point_candidates</a></td></tr>
-<tr class="separator:a49fe3b00c50665cd2b81c8be795f4f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f82e8ce820f779b060311067e77e9b3"><td class="memItemLeft" align="right" valign="top">typedef std::unordered_map&lt; types::particle_index, <a class="el" href="structparticle__line__contact__info.html">particle_line_contact_info</a>&lt; dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDEM_1_1dem__data__structures.html#a0f82e8ce820f779b060311067e77e9b3">particle_line_in_contact</a></td></tr>
+<tr class="separator:a0f82e8ce820f779b060311067e77e9b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ce727ced98c9d77bb92949cd6b8bfdd"><td class="memItemLeft" align="right" valign="top">typedef std::unordered_map&lt; types::particle_index, <a class="el" href="structparticle__point__contact__info.html">particle_point_contact_info</a>&lt; dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDEM_1_1dem__data__structures.html#a4ce727ced98c9d77bb92949cd6b8bfdd">particle_point_in_contact</a></td></tr>
+<tr class="separator:a4ce727ced98c9d77bb92949cd6b8bfdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad06a4c2faa5184c1779b7589d78604a9"><td class="memItemLeft" align="right" valign="top">typedef std::unordered_map&lt; types::particle_index, <a class="el" href="structparticle__line__contact__info.html">particle_line_contact_info</a>&lt; dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDEM_1_1dem__data__structures.html#ad06a4c2faa5184c1779b7589d78604a9">particle_line_candidates</a></td></tr>
+<tr class="separator:ad06a4c2faa5184c1779b7589d78604a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91aead48ba36b75a0fbf5360918becc5"><td class="memItemLeft" align="right" valign="top">typedef std::unordered_map&lt; types::particle_index, <a class="el" href="structparticle__point__contact__info.html">particle_point_contact_info</a>&lt; dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDEM_1_1dem__data__structures.html#a91aead48ba36b75a0fbf5360918becc5">particle_point_candidates</a></td></tr>
+<tr class="separator:a91aead48ba36b75a0fbf5360918becc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f112827a26379fc4d558b41c39d2c94"><td class="memItemLeft" align="right" valign="top">typedef ankerl::unordered_dense::map&lt; types::particle_index, std::unordered_map&lt; <a class="el" href="namespaceDEM.html#aef67e3518b42018c6fb5db80f6a9c4f7">global_face_id</a>, Particles::ParticleIterator&lt; dim &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDEM_1_1dem__data__structures.html#a1f112827a26379fc4d558b41c39d2c94">particle_floating_wall_candidates</a></td></tr>
 <tr class="separator:a1f112827a26379fc4d558b41c39d2c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6ee0ba8f43d17a376fa64027f3ab1fc"><td class="memItemLeft" align="right" valign="top">typedef ankerl::unordered_dense::map&lt; types::particle_index, ankerl::unordered_dense::map&lt; <a class="el" href="namespaceDEM.html#aef67e3518b42018c6fb5db80f6a9c4f7">global_face_id</a>, std::tuple&lt; Particles::ParticleIterator&lt; dim &gt;, Tensor&lt; 1, dim &gt;, Point&lt; dim &gt;, <a class="el" href="namespaceDEM.html#aef67e3518b42018c6fb5db80f6a9c4f7">global_face_id</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDEM_1_1dem__data__structures.html#aa6ee0ba8f43d17a376fa64027f3ab1fc">particle_wall_candidates</a></td></tr>
 <tr class="separator:aa6ee0ba8f43d17a376fa64027f3ab1fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a192e455bef047459cba3816cd0c4874b"><td class="memItemLeft" align="right" valign="top">typedef ankerl::unordered_dense::map&lt; types::particle_index, ankerl::unordered_dense::map&lt; <a class="el" href="namespaceDEM.html#aef67e3518b42018c6fb5db80f6a9c4f7">global_face_id</a>, <a class="el" href="classparticle__wall__contact__info.html">particle_wall_contact_info</a>&lt; dim &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDEM_1_1dem__data__structures.html#a192e455bef047459cba3816cd0c4874b">particle_wall_in_contact</a></td></tr>
 <tr class="separator:a192e455bef047459cba3816cd0c4874b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a401f88b28f64a3ca48c19e15ac57efdf"><td class="memItemLeft" align="right" valign="top">typedef ankerl::unordered_dense::map&lt; types::particle_index, ankerl::unordered_dense::map&lt; types::particle_index, <a class="el" href="classparticle__particle__contact__info.html">particle_particle_contact_info</a>&lt; dim &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDEM_1_1dem__data__structures.html#a401f88b28f64a3ca48c19e15ac57efdf">adjacent_particle_pairs</a></td></tr>
+<tr class="memitem:a401f88b28f64a3ca48c19e15ac57efdf"><td class="memItemLeft" align="right" valign="top">typedef ankerl::unordered_dense::map&lt; types::particle_index, ankerl::unordered_dense::map&lt; types::particle_index, <a class="el" href="structparticle__particle__contact__info.html">particle_particle_contact_info</a>&lt; dim &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDEM_1_1dem__data__structures.html#a401f88b28f64a3ca48c19e15ac57efdf">adjacent_particle_pairs</a></td></tr>
 <tr class="separator:a401f88b28f64a3ca48c19e15ac57efdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef2684a971ef5a14e91c2c4bd28e2261"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; typename Triangulation&lt; dim - 1, dim &gt;::active_cell_iterator, std::unordered_map&lt; types::particle_index, Particles::ParticleIterator&lt; dim &gt; &gt;, <a class="el" href="structDEM_1_1cut__cell__comparison.html">cut_cell_comparison</a>&lt; dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDEM_1_1dem__data__structures.html#aef2684a971ef5a14e91c2c4bd28e2261">particle_floating_wall_from_mesh_candidates</a></td></tr>
 <tr class="separator:aef2684a971ef5a14e91c2c4bd28e2261"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,8 +117,10 @@ Public Types</h2></td></tr>
 <tr class="separator:a719904c6b3202732c1ba0d40b949b7ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadf0ac9e3930878734ec7aa6996e7a14"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; std::vector&lt; typename Triangulation&lt; dim &gt;::active_cell_iterator &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDEM_1_1dem__data__structures.html#aadf0ac9e3930878734ec7aa6996e7a14">cells_neighbor_list</a></td></tr>
 <tr class="separator:aadf0ac9e3930878734ec7aa6996e7a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefb7f17e5fdd7999939d1486e05cca37"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; std::vector&lt; std::pair&lt; typename Triangulation&lt; dim &gt;::active_cell_iterator, typename Triangulation&lt; dim - 1, dim &gt;::active_cell_iterator &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDEM_1_1dem__data__structures.html#aefb7f17e5fdd7999939d1486e05cca37">floating_mesh_information</a></td></tr>
-<tr class="separator:aefb7f17e5fdd7999939d1486e05cca37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0e5f4a3e12f7e96a0cf8d36824a89c8"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; std::vector&lt; std::pair&lt; typename Triangulation&lt; dim &gt;::active_cell_iterator, typename Triangulation&lt; dim - 1, dim &gt;::active_cell_iterator &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDEM_1_1dem__data__structures.html#ac0e5f4a3e12f7e96a0cf8d36824a89c8">solid_surfaces_mesh_information</a></td></tr>
+<tr class="separator:ac0e5f4a3e12f7e96a0cf8d36824a89c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace3b7a91352a2ee5ba5281193647a245"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; std::vector&lt; std::pair&lt; typename Triangulation&lt; dim &gt;::active_cell_iterator, typename Triangulation&lt; dim, dim &gt;::active_cell_iterator &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDEM_1_1dem__data__structures.html#ace3b7a91352a2ee5ba5281193647a245">solid_volumes_mesh_info</a></td></tr>
+<tr class="separator:ace3b7a91352a2ee5ba5281193647a245"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ca31764301c3fb1880d0a3d90840804"><td class="memItemLeft" align="right" valign="top">typedef ankerl::unordered_dense::map&lt; types::global_cell_index, std::vector&lt; typename Triangulation&lt; dim &gt;::active_cell_iterator &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDEM_1_1dem__data__structures.html#a1ca31764301c3fb1880d0a3d90840804">cells_total_neighbor_list</a></td></tr>
 <tr class="separator:a1ca31764301c3fb1880d0a3d90840804"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a192fca7d4e3b2efa39a7e32600d2f0e6"><td class="memItemLeft" align="right" valign="top">typedef ankerl::unordered_dense::map&lt; <a class="el" href="namespaceDEM.html#aef67e3518b42018c6fb5db80f6a9c4f7">global_face_id</a>, std::pair&lt; Tensor&lt; 1, 3 &gt;, Point&lt; 3 &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDEM_1_1dem__data__structures.html#a192fca7d4e3b2efa39a7e32600d2f0e6">boundary_points_and_normal_vectors</a></td></tr>
@@ -136,8 +140,9 @@ Public Types</h2></td></tr>
 <div class="textblock"><h3>template&lt;int dim&gt;<br />
 struct DEM::dem_data_structures&lt; dim &gt;</h3>
 
+<p><a class="el" href="namespaceDEM.html" title="This namespace defines all the data containers and required operations on these containers for the DE...">DEM</a> data structure containers To improve readability of containers, there's a simple description above all declarations which follow these representation : &lt;&gt; : map or unordered map () : tuple or pair [] : vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00117">117</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00115">115</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a401f88b28f64a3ca48c19e15ac57efdf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a401f88b28f64a3ca48c19e15ac57efdf">&#9670;&nbsp;</a></span>adjacent_particle_pairs</h2>
@@ -148,12 +153,12 @@ struct DEM::dem_data_structures&lt; dim &gt;</h3>
 template&lt;int dim&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef ankerl::unordered_dense::map&lt; types::particle_index, ankerl::unordered_dense::map&lt;types::particle_index, <a class="el" href="classparticle__particle__contact__info.html">particle_particle_contact_info</a>&lt;dim&gt; &gt; &gt; <a class="el" href="structDEM_1_1dem__data__structures.html">DEM::dem_data_structures</a>&lt; dim &gt;::<a class="el" href="structDEM_1_1dem__data__structures.html#a401f88b28f64a3ca48c19e15ac57efdf">adjacent_particle_pairs</a></td>
+          <td class="memname">typedef ankerl::unordered_dense::map&lt; types::particle_index, ankerl::unordered_dense::map&lt;types::particle_index, <a class="el" href="structparticle__particle__contact__info.html">particle_particle_contact_info</a>&lt;dim&gt; &gt; &gt; <a class="el" href="structDEM_1_1dem__data__structures.html">DEM::dem_data_structures</a>&lt; dim &gt;::<a class="el" href="structDEM_1_1dem__data__structures.html#a401f88b28f64a3ca48c19e15ac57efdf">adjacent_particle_pairs</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00170">170</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00171">171</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
 
 </div>
 </div>
@@ -171,7 +176,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00219">219</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00226">226</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
 
 </div>
 </div>
@@ -189,7 +194,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00241">241</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00248">248</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
 
 </div>
 </div>
@@ -207,7 +212,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00232">232</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00239">239</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
 
 </div>
 </div>
@@ -225,7 +230,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00228">228</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00235">235</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
 
 </div>
 </div>
@@ -243,7 +248,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00202">202</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00203">203</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
 
 </div>
 </div>
@@ -261,25 +266,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00214">214</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
-
-</div>
-</div>
-<a id="aefb7f17e5fdd7999939d1486e05cca37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefb7f17e5fdd7999939d1486e05cca37">&#9670;&nbsp;</a></span>floating_mesh_information</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int dim&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::vector&lt;std::vector&lt; std::pair&lt;typename Triangulation&lt;dim&gt;::active_cell_iterator, typename Triangulation&lt;dim - 1, dim&gt;::active_cell_iterator&gt; &gt; &gt; <a class="el" href="structDEM_1_1dem__data__structures.html">DEM::dem_data_structures</a>&lt; dim &gt;::<a class="el" href="structDEM_1_1dem__data__structures.html#aefb7f17e5fdd7999939d1486e05cca37">floating_mesh_information</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00208">208</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00221">221</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
 
 </div>
 </div>
@@ -297,7 +284,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00188">188</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00189">189</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
 
 </div>
 </div>
@@ -315,7 +302,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00192">192</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00193">193</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
 
 </div>
 </div>
@@ -333,7 +320,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00145">145</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00146">146</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
 
 </div>
 </div>
@@ -351,7 +338,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00177">177</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00178">178</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
 
 </div>
 </div>
@@ -369,7 +356,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00184">184</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00185">185</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
 
 </div>
 </div>
@@ -387,12 +374,12 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00122">122</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00120">120</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
 
 </div>
 </div>
-<a id="adf20b9ce8824900801f73ae3f057f8cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf20b9ce8824900801f73ae3f057f8cb">&#9670;&nbsp;</a></span>particle_line_candidates</h2>
+<a id="ad06a4c2faa5184c1779b7589d78604a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad06a4c2faa5184c1779b7589d78604a9">&#9670;&nbsp;</a></span>particle_line_candidates</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -400,12 +387,30 @@ template&lt;int dim&gt; </div>
 template&lt;int dim&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::unordered_map&lt; types::particle_index, std::tuple&lt;Particles::ParticleIterator&lt;dim&gt;, Point&lt;dim&gt;, Point&lt;dim&gt; &gt; &gt; <a class="el" href="structDEM_1_1dem__data__structures.html">DEM::dem_data_structures</a>&lt; dim &gt;::<a class="el" href="structDEM_1_1dem__data__structures.html#adf20b9ce8824900801f73ae3f057f8cb">particle_line_candidates</a></td>
+          <td class="memname">typedef std::unordered_map&lt;types::particle_index, <a class="el" href="structparticle__line__contact__info.html">particle_line_contact_info</a>&lt;dim&gt; &gt; <a class="el" href="structDEM_1_1dem__data__structures.html">DEM::dem_data_structures</a>&lt; dim &gt;::<a class="el" href="structDEM_1_1dem__data__structures.html#ad06a4c2faa5184c1779b7589d78604a9">particle_line_candidates</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00133">133</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00135">135</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+
+</div>
+</div>
+<a id="a0f82e8ce820f779b060311067e77e9b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f82e8ce820f779b060311067e77e9b3">&#9670;&nbsp;</a></span>particle_line_in_contact</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::unordered_map&lt;types::particle_index, <a class="el" href="structparticle__line__contact__info.html">particle_line_contact_info</a>&lt;dim&gt; &gt; <a class="el" href="structDEM_1_1dem__data__structures.html">DEM::dem_data_structures</a>&lt; dim &gt;::<a class="el" href="structDEM_1_1dem__data__structures.html#a0f82e8ce820f779b060311067e77e9b3">particle_line_in_contact</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00125">125</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
 
 </div>
 </div>
@@ -423,12 +428,12 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00197">197</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00198">198</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
 
 </div>
 </div>
-<a id="a49fe3b00c50665cd2b81c8be795f4f56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49fe3b00c50665cd2b81c8be795f4f56">&#9670;&nbsp;</a></span>particle_point_candidates</h2>
+<a id="a91aead48ba36b75a0fbf5360918becc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91aead48ba36b75a0fbf5360918becc5">&#9670;&nbsp;</a></span>particle_point_candidates</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -436,17 +441,17 @@ template&lt;int dim&gt; </div>
 template&lt;int dim&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::unordered_map&lt; types::particle_index, std::pair&lt;Particles::ParticleIterator&lt;dim&gt;, Point&lt;dim&gt; &gt; &gt; <a class="el" href="structDEM_1_1dem__data__structures.html">DEM::dem_data_structures</a>&lt; dim &gt;::<a class="el" href="structDEM_1_1dem__data__structures.html#a49fe3b00c50665cd2b81c8be795f4f56">particle_point_candidates</a></td>
+          <td class="memname">typedef std::unordered_map&lt;types::particle_index, <a class="el" href="structparticle__point__contact__info.html">particle_point_contact_info</a>&lt;dim&gt; &gt; <a class="el" href="structDEM_1_1dem__data__structures.html">DEM::dem_data_structures</a>&lt; dim &gt;::<a class="el" href="structDEM_1_1dem__data__structures.html#a91aead48ba36b75a0fbf5360918becc5">particle_point_candidates</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00139">139</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00140">140</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
 
 </div>
 </div>
-<a id="a3cd7497267a420d8b6117fc55de60d8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3cd7497267a420d8b6117fc55de60d8a">&#9670;&nbsp;</a></span>particle_point_line_contact_info</h2>
+<a id="a4ce727ced98c9d77bb92949cd6b8bfdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ce727ced98c9d77bb92949cd6b8bfdd">&#9670;&nbsp;</a></span>particle_point_in_contact</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -454,12 +459,12 @@ template&lt;int dim&gt; </div>
 template&lt;int dim&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::unordered_map&lt;types::particle_index, <a class="el" href="structparticle__point__line__contact__info__struct.html">particle_point_line_contact_info_struct</a>&lt;dim&gt; &gt; <a class="el" href="structDEM_1_1dem__data__structures.html">DEM::dem_data_structures</a>&lt; dim &gt;::<a class="el" href="structDEM_1_1dem__data__structures.html#a3cd7497267a420d8b6117fc55de60d8a">particle_point_line_contact_info</a></td>
+          <td class="memname">typedef std::unordered_map&lt;types::particle_index, <a class="el" href="structparticle__point__contact__info.html">particle_point_contact_info</a>&lt;dim&gt; &gt; <a class="el" href="structDEM_1_1dem__data__structures.html">DEM::dem_data_structures</a>&lt; dim &gt;::<a class="el" href="structDEM_1_1dem__data__structures.html#a4ce727ced98c9d77bb92949cd6b8bfdd">particle_point_in_contact</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00127">127</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00130">130</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
 
 </div>
 </div>
@@ -477,7 +482,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00156">156</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00157">157</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
 
 </div>
 </div>
@@ -495,7 +500,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00163">163</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00164">164</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
 
 </div>
 </div>
@@ -513,7 +518,43 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00237">237</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00244">244</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+
+</div>
+</div>
+<a id="ac0e5f4a3e12f7e96a0cf8d36824a89c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0e5f4a3e12f7e96a0cf8d36824a89c8">&#9670;&nbsp;</a></span>solid_surfaces_mesh_information</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::vector&lt;std::vector&lt; std::pair&lt;typename Triangulation&lt;dim&gt;::active_cell_iterator, typename Triangulation&lt;dim - 1, dim&gt;::active_cell_iterator&gt; &gt; &gt; <a class="el" href="structDEM_1_1dem__data__structures.html">DEM::dem_data_structures</a>&lt; dim &gt;::<a class="el" href="structDEM_1_1dem__data__structures.html#ac0e5f4a3e12f7e96a0cf8d36824a89c8">solid_surfaces_mesh_information</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00209">209</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+
+</div>
+</div>
+<a id="ace3b7a91352a2ee5ba5281193647a245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace3b7a91352a2ee5ba5281193647a245">&#9670;&nbsp;</a></span>solid_volumes_mesh_info</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::vector&lt;std::vector&lt; std::pair&lt;typename Triangulation&lt;dim&gt;::active_cell_iterator, typename Triangulation&lt;dim, dim&gt;::active_cell_iterator&gt; &gt; &gt; <a class="el" href="structDEM_1_1dem__data__structures.html">DEM::dem_data_structures</a>&lt; dim &gt;::<a class="el" href="structDEM_1_1dem__data__structures.html#ace3b7a91352a2ee5ba5281193647a245">solid_volumes_mesh_info</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00215">215</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
 
 </div>
 </div>
@@ -531,7 +572,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00224">224</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__containers_8h_source.html#l00231">231</a> of file <a class="el" href="data__containers_8h_source.html">data_containers.h</a>.</p>
 
 </div>
 </div>

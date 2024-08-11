@@ -106,6 +106,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParameters_1_1NonNewtonian.html">NonNewtonian</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParameters_1_1ImmersedSolidTanhParameters.html">ImmersedSolidTanhParameters</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParameters_1_1IsothermalIdealGasDensityParameters.html">IsothermalIdealGasDensityParameters</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParameters_1_1SurfaceTensionParameters.html">SurfaceTensionParameters</a></td></tr>
@@ -258,6 +260,7 @@ Enumerations</h2></td></tr>
 , <a class="el" href="namespaceParameters.html#a86eaa101a59015fa52c81783382dd525a2e69977b7c3df8d5c77016255b4006f2">nodal</a>
 , <br />
 &#160;&#160;<a class="el" href="namespaceParameters.html#a86eaa101a59015fa52c81783382dd525a93939238f5427e2d2d2b1365d18483f9">ramp</a>
+, <a class="el" href="namespaceParameters.html#a86eaa101a59015fa52c81783382dd525a322f09c14d8c26231fdc7ee2a82f1427">average_velocity_profile</a>
 <br />
  }</td></tr>
 <tr class="separator:a86eaa101a59015fa52c81783382dd525"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -266,14 +269,12 @@ Enumerations</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:abf9a3d883f67a19bea80ba4d93ad1c1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structParameters_1_1SizeOfSubsections.html">SizeOfSubsections</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceParameters.html#abf9a3d883f67a19bea80ba4d93ad1c1c">get_size_of_subsections</a> (const std::string &amp;file_name)</td></tr>
 <tr class="separator:abf9a3d883f67a19bea80ba4d93ad1c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae131fa9ac73a7013e3b40ec3cae4f447"><td class="memItemLeft" align="right" valign="top">Tensor&lt; 1, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceParameters.html#ae131fa9ac73a7013e3b40ec3cae4f447">entry_string_to_tensor3</a> (ParameterHandler &amp;prm, const std::string &amp;entry_string)</td></tr>
-<tr class="separator:ae131fa9ac73a7013e3b40ec3cae4f447"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1528b636b8f324833068b9739e93f0b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ae1528b636b8f324833068b9739e93f0b"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceParameters.html#ae1528b636b8f324833068b9739e93f0b">convert_string_to_vector</a> (ParameterHandler &amp;prm, const std::string &amp;entry_string)</td></tr>
 <tr class="separator:ae1528b636b8f324833068b9739e93f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The analytical solution class provides an interface for all common elementS required for the calculation of analytical solution All equation-specific analytical solution should derive from the base class but also call it's declare_parameters and parse_parameters routine. <a class="el" href="classThis.html">This</a> allows specialize class to focus on their specificity and forget about other non-specific elements that are generic to the calculation of analytical solutions</p>
+<div class="textblock"><p>The analytical solution class provides an interface for all common elementS required for the calculation of analytical solution All equation-specific analytical solution should derive from the base class but also call it's declare_parameters and parse_parameters routine. This allows specialize class to focus on their specificity and forget about other non-specific elements that are generic to the calculation of analytical solutions</p>
 <p>Drift velocity that is added to the tracer velocity to account for simplified multiphase simulations using drift-flux modeling. </p>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a8b408c8f42632c3dd96b69b720ace6f6"></a>
@@ -332,7 +333,7 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="ae03f477a858859a4711ef40159b5912aa3c78b35502b2693fefdfc51cba3a53a5"></a>manual&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="parameters__multiphysics_8h_source.html#l00062">62</a> of file <a class="el" href="parameters__multiphysics_8h_source.html">parameters_multiphysics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters__multiphysics_8h_source.html#l00060">60</a> of file <a class="el" href="parameters__multiphysics_8h_source.html">parameters_multiphysics.h</a>.</p>
 
 </div>
 </div>
@@ -359,7 +360,7 @@ Functions</h2></td></tr>
 <p>Class to account for different phase fraction filtering types: </p>
 <ul>
 <li>none: no filter wil be applied on the calculated phase fraction</li>
-<li>tanh: the tanh filter function will be applied to the phase fraction, a $$\beta$$ parameter influencing the interface definition must be defined </li>
+<li>tanh: the tanh filter function will be applied to the phase fraction, a \(\beta\) parameter influencing the interface definition must be defined </li>
 </ul>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a35f23be89bc6cc4d28f9c1b10519e9b8a334c4a4c42fdb79d7ebc3e73b517e6f8"></a>none&#160;</td><td class="fielddoc"></td></tr>
@@ -367,7 +368,7 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a35f23be89bc6cc4d28f9c1b10519e9b8a5c0dbba3a6ee4ac0eb26cfee75ccb8b4"></a>tanh&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="parameters__multiphysics_8h_source.html#l00055">55</a> of file <a class="el" href="parameters__multiphysics_8h_source.html">parameters_multiphysics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters__multiphysics_8h_source.html#l00053">53</a> of file <a class="el" href="parameters__multiphysics_8h_source.html">parameters_multiphysics.h</a>.</p>
 
 </div>
 </div>
@@ -395,7 +396,7 @@ Functions</h2></td></tr>
 <ul>
 <li>fluid0: fluid 0 only,</li>
 <li>fluid1: fluid 1 only,</li>
-<li>both: both fluids <a class="el" href="classThis.html">This</a> is used for multiphase simulations, in <a class="el" href="structParameters_1_1PostProcessing.html" title="Postprocessing - Defines the parameters for the post-processing. In Lethe, post-processing implies th...">PostProcessing</a> and in <a class="el" href="structParameters_1_1VOF.html" title="VOF - Defines the parameters for free surface simulations using the VOF method. Has to be declared be...">VOF</a> (see parameter_multiphysics.h) </li>
+<li>both: both fluids This is used for multiphase simulations, in <a class="el" href="structParameters_1_1PostProcessing.html" title="Postprocessing - Defines the parameters for the post-processing. In Lethe, post-processing implies th...">PostProcessing</a> and in <a class="el" href="structParameters_1_1VOF.html" title="VOF - Defines the parameters for free surface simulations using the VOF method. Has to be declared be...">VOF</a> (see parameter_multiphysics.h) </li>
 </ul>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a978815f8cf26f3c77304639e1786aec1a1e86df18a83727e4a5dc8dc2859a097c"></a>fluid0&#160;</td><td class="fielddoc"></td></tr>
@@ -403,7 +404,7 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a978815f8cf26f3c77304639e1786aec1af6cb3e816496528d4187db53bc66567f"></a>both&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l00074">74</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l00073">73</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
 
 </div>
 </div>
@@ -432,9 +433,10 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a86eaa101a59015fa52c81783382dd525a2ac1ff5ff990bc0a4b3afa2286b9e55f"></a>viscous&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a86eaa101a59015fa52c81783382dd525a2e69977b7c3df8d5c77016255b4006f2"></a>nodal&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a86eaa101a59015fa52c81783382dd525a93939238f5427e2d2d2b1365d18483f9"></a>ramp&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a86eaa101a59015fa52c81783382dd525a322f09c14d8c26231fdc7ee2a82f1427"></a>average_velocity_profile&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="initial__conditions_8h_source.html#l00034">34</a> of file <a class="el" href="initial__conditions_8h_source.html">initial_conditions.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="initial__conditions_8h_source.html#l00031">31</a> of file <a class="el" href="initial__conditions_8h_source.html">initial_conditions.h</a>.</p>
 
 </div>
 </div>
@@ -468,7 +470,7 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="afaf982762668ab166df8919c45a58ee1a8cb043b2dace9afc0680e6bae5cd316f"></a>adaptive&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="parameters__multiphysics_8h_source.html#l00044">44</a> of file <a class="el" href="parameters__multiphysics_8h_source.html">parameters_multiphysics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters__multiphysics_8h_source.html#l00041">41</a> of file <a class="el" href="parameters__multiphysics_8h_source.html">parameters_multiphysics.h</a>.</p>
 
 </div>
 </div>
@@ -525,7 +527,7 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="ad408350a21239600add83c5e91fcfa26ae5cbb8171b496f26a4488b9e15a0fe52"></a>extra_verbose&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l00060">60</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l00059">59</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
 
 </div>
 </div>
@@ -604,47 +606,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A std::vector&lt;double&gt; corresponding to the entry_string in the prm file. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01631">1631</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
-
-</div>
-</div>
-<a id="ae131fa9ac73a7013e3b40ec3cae4f447"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae131fa9ac73a7013e3b40ec3cae4f447">&#9670;&nbsp;</a></span>entry_string_to_tensor3()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Tensor&lt; 1, 3 &gt; Parameters::entry_string_to_tensor3 </td>
-          <td>(</td>
-          <td class="paramtype">ParameterHandler &amp;&#160;</td>
-          <td class="paramname"><em>prm</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>entry_string</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return the tensor of entry <code>entry_string</code>. If the entry is specified in the parameter file, then the changed value is returned, otherwise the default value is returned. If the entry is not equivalent to a Tensor&lt;1,3&gt;, an error will be thrown. <a class="el" href="classThis.html">This</a> function can be use for Point&lt;3&gt; variables. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">prm</td><td>A parameter handler which is currently used to parse the simulation information </td></tr>
-    <tr><td class="paramname">entry_string</td><td>A declare string in the parameter file.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A tensor&lt;1,3&gt; corresponding to the entry_string in the prm file. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="parameters_8cc_source.html#l03720">3720</a> of file <a class="el" href="parameters_8cc_source.html">parameters.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01705">1705</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
 
 </div>
 </div>
@@ -674,7 +636,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="parameters_8cc_source.html#l00063">63</a> of file <a class="el" href="parameters_8cc_source.html">parameters.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="parameters_8h_source.html#l00048">Parameters::SizeOfSubsections::boundary_conditions</a>, and <a class="el" href="utilities_8cc_source.html#l00697">get_max_number_of_boundary_conditions()</a>.</p>
+<p class="reference">References <a class="el" href="parameters_8h_source.html#l00047">Parameters::SizeOfSubsections::boundary_conditions</a>, and <a class="el" href="utilities_8cc_source.html#l00697">get_max_number_of_boundary_conditions()</a>.</p>
 
 </div>
 </div>

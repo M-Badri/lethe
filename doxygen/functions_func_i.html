@@ -77,11 +77,17 @@ $(function() {
 <li>ib_velocity()
 : <a class="el" href="classIBStencil.html#aede5a0adadb55c7342aa8c7fb171aaa1">IBStencil&lt; dim &gt;</a>
 </li>
+<li>identify_cell_and_constrain_velocity()
+: <a class="el" href="classNavierStokesBase.html#ae7e650e71ee42e4afc19a6c3de676d47">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
+</li>
 <li>identify_mobility_status()
-: <a class="el" href="classAdaptiveSparseContacts.html#afc5a36db8430eb8d9da49ca07db4a108">AdaptiveSparseContacts&lt; dim &gt;</a>
+: <a class="el" href="classAdaptiveSparseContacts.html#a1d8b13037356224f5087345dd515bd2b">AdaptiveSparseContacts&lt; dim &gt;</a>
 </li>
 <li>InexactNewtonNonLinearSolver()
 : <a class="el" href="classInexactNewtonNonLinearSolver.html#a6ffed3df0985d28a1eed051c982e0727">InexactNewtonNonLinearSolver&lt; VectorType &gt;</a>
+</li>
+<li>init_muparser()
+: <a class="el" href="classinternalFunctionParserCustom_1_1ParserImplementation.html#a20c410686379a5f962cd47ae74dff43b">internalFunctionParserCustom::ParserImplementation&lt; n_components &gt;</a>
 </li>
 <li>init_temporary_vector()
 : <a class="el" href="classNavierStokesBase.html#aafccb927a868ab52abb8411752067137">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
@@ -96,9 +102,12 @@ $(function() {
 <li>initialize()
 : <a class="el" href="classdealii_1_1MGCoarseGridApplyPreconditioner.html#ac4b86a2d236dd2ab41e74e131f8db1cf">dealii::MGCoarseGridApplyPreconditioner&lt; VectorType, PreconditionerType &gt;</a>
 , <a class="el" href="classIBParticlesDEM.html#a873aba46d57c5317f4ee5841c7c5fdfd">IBParticlesDEM&lt; dim &gt;</a>
+, <a class="el" href="classinternalFunctionParserCustom_1_1ParserImplementation.html#a1594e0ce505325285bd3fbefc576eae5">internalFunctionParserCustom::ParserImplementation&lt; n_components &gt;</a>
 , <a class="el" href="classMFNavierStokesPreconditionGMG.html#a308ee5666a8bfdd6bcccd51291f3be72">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
+, <a class="el" href="classParsedFunctionCustom.html#a01bc900ee32bfc2c90aadefadb1d390d">ParsedFunctionCustom&lt; n_components &gt;</a>
 , <a class="el" href="classParticleWallContactForce.html#a7a9e41f14cd2f099d09f58f0c9114e87">ParticleWallContactForce&lt; dim &gt;</a>
 , <a class="el" href="classPhysicalPropertiesManager.html#a8ff075795ba8a60c71e5163d8566993d">PhysicalPropertiesManager</a>
+, <a class="el" href="classPreconditionASM.html#aaff83551b86af0d8db76db7834a1c6c0">PreconditionASM&lt; VectorType &gt;</a>
 </li>
 <li>initialize_all()
 : <a class="el" href="classIBParticle.html#a8e24bfa945f64bf499bfbde33f5391b0">IBParticle&lt; dim &gt;</a>
@@ -111,13 +120,16 @@ $(function() {
 </li>
 <li>initialize_containers()
 : <a class="el" href="structParameters_1_1Lagrangian_1_1BCDEM.html#a23f37478b43e4b0657acc87899310589">Parameters::Lagrangian::BCDEM</a>
-, <a class="el" href="structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#abc760706aab0fa5df7a692428e8eab73">Parameters::Lagrangian::LagrangianPhysicalProperties</a>
+, <a class="el" href="structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#a621140b179c5baad7debe2a39facb32f">Parameters::Lagrangian::LagrangianPhysicalProperties</a>
 </li>
 <li>initialize_dem_parameters()
 : <a class="el" href="classCFDDEMSolver.html#adcdc56eef545bb81d6359211782fd85b">CFDDEMSolver&lt; dim &gt;</a>
 </li>
 <li>initialize_dof_vector()
 : <a class="el" href="classNavierStokesOperatorBase.html#ac8897ffe280ad2d9c7fc0193191e1219">NavierStokesOperatorBase&lt; dim, number &gt;</a>
+</li>
+<li>initialize_particle_wall_properties()
+: <a class="el" href="classParticleWallDMTForce.html#a11491d023d28734653c957c8e50d5cf7">ParticleWallDMTForce&lt; dim &gt;</a>
 </li>
 <li>initialize_previous_solution()
 : <a class="el" href="classIBParticle.html#a9a552b1c7085a2ec4ff00f87fe17e517">IBParticle&lt; dim &gt;</a>
@@ -129,7 +141,7 @@ $(function() {
 : <a class="el" href="classAverageVelocities.html#a915abd4f4b0a5206367825a4c3d0a9b8">AverageVelocities&lt; dim, VectorType, DofsType &gt;</a>
 </li>
 <li>initialize_void_fraction()
-: <a class="el" href="classGLSVANSSolver.html#ad108e4258cf5f59b6faa07759bf08724">GLSVANSSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsVANS.html#a221784cc8e9917269b0439fbc5f61ff8">FluidDynamicsVANS&lt; dim &gt;</a>
 </li>
 <li>insert()
 : <a class="el" href="classInsertion.html#ab7b6cf7393246d7d5b3ffeec6d721a14">Insertion&lt; dim &gt;</a>
@@ -137,46 +149,43 @@ $(function() {
 , <a class="el" href="classInsertionList.html#a36b866905735b1f91ddc22588c6b9060">InsertionList&lt; dim &gt;</a>
 , <a class="el" href="classInsertionPlane.html#a31847734f191ef6ee9fb9f7ff87372bf">InsertionPlane&lt; dim &gt;</a>
 , <a class="el" href="classInsertionVolume.html#a1c0ceac469413e5268938c4dc970cd37">InsertionVolume&lt; dim &gt;</a>
-, <a class="el" href="classUniformInsertion.html#a75418effee6613b56b6525aff50654b9">UniformInsertion&lt; dim &gt;</a>
 </li>
 <li>insert_particles()
-: <a class="el" href="classDEMSolver.html#a6432e29ba0169734e27eb9060dc7ed9c">DEMSolver&lt; dim &gt;</a>
+: <a class="el" href="classDEMSolver.html#a2c1b42c2e8cdcf1b670e25cfd40288de">DEMSolver&lt; dim &gt;</a>
 </li>
 <li>Insertion()
-: <a class="el" href="classInsertion.html#aa6720a7d2e690697207ae122d69f7320">Insertion&lt; dim &gt;</a>
+: <a class="el" href="classInsertion.html#a2aad2604d3e0edbc5600115af1c8d846">Insertion&lt; dim &gt;</a>
 </li>
 <li>InsertionFile()
-: <a class="el" href="classInsertionFile.html#a836238d370caa49d402ea9d8659196bf">InsertionFile&lt; dim &gt;</a>
+: <a class="el" href="classInsertionFile.html#a2ec56ff1a99de909557c7483a02f4de4">InsertionFile&lt; dim &gt;</a>
 </li>
 <li>InsertionList()
-: <a class="el" href="classInsertionList.html#a266ea86cdad03dae2da5d35ce47dd764">InsertionList&lt; dim &gt;</a>
+: <a class="el" href="classInsertionList.html#a4a533c4122858e39161e749e222046c2">InsertionList&lt; dim &gt;</a>
 </li>
 <li>InsertionPlane()
-: <a class="el" href="classInsertionPlane.html#a606c2a206d00ffee8b8a498028e04da6">InsertionPlane&lt; dim &gt;</a>
+: <a class="el" href="classInsertionPlane.html#ad06119c1925f28033d7ece2575969edb">InsertionPlane&lt; dim &gt;</a>
 </li>
 <li>InsertionVolume()
-: <a class="el" href="classInsertionVolume.html#ae8a4631e64dbe1f2c6438985882af6dd">InsertionVolume&lt; dim &gt;</a>
+: <a class="el" href="classInsertionVolume.html#a578575596925a3cd489b987746a62b19">InsertionVolume&lt; dim &gt;</a>
 </li>
 <li>inspect_multiphysics_models_dependencies()
 : <a class="el" href="classMultiphysicsInterface.html#aaada3e3716bfe0c453d4f1e101b3bd60">MultiphysicsInterface&lt; dim &gt;</a>
 </li>
 <li>integrate()
 : <a class="el" href="classExplicitEulerIntegrator.html#af70d4321118e5a2eeabb44dd6f8308a1">ExplicitEulerIntegrator&lt; dim &gt;</a>
-, <a class="el" href="classGear3Integrator.html#ad0c4bf9ca6d4fe9aadfec79247347bcf">Gear3Integrator&lt; dim &gt;</a>
 , <a class="el" href="classIntegrator.html#ace36cb39c30e1b7268e60fe4fdd7047c">Integrator&lt; dim &gt;</a>
 , <a class="el" href="classSimulationControl.html#a67aa726e7105dd0af92f47dac688e001">SimulationControl</a>
 , <a class="el" href="classSimulationControlSteady.html#a1a841b038955ea6ba6b6d8a938d442f9">SimulationControlSteady</a>
 , <a class="el" href="classSimulationControlTransient.html#a9323f75f9c5d9ab8463f1340c83fa539">SimulationControlTransient</a>
-, <a class="el" href="classVelocityVerletIntegrator.html#afc08c17ba9a38a62723e896ceefe43a6">VelocityVerletIntegrator&lt; dim &gt;</a>
+, <a class="el" href="classVelocityVerletIntegrator.html#a7dbefbe8afffd94cfbbb9f20d5cf643b">VelocityVerletIntegrator&lt; dim &gt;</a>
 </li>
 <li>integrate_half_step_location()
 : <a class="el" href="classExplicitEulerIntegrator.html#ab2d67dd0acdeb58b06de7835887c7b63">ExplicitEulerIntegrator&lt; dim &gt;</a>
-, <a class="el" href="classGear3Integrator.html#afadf36da9cc5cf5222790549f7863d8a">Gear3Integrator&lt; dim &gt;</a>
 , <a class="el" href="classIntegrator.html#a96653fa0a2b7d6b892eeb3ff86eaa398">Integrator&lt; dim &gt;</a>
 , <a class="el" href="classVelocityVerletIntegrator.html#abe2aaed38fbf001db9f7479fd409905c">VelocityVerletIntegrator&lt; dim &gt;</a>
 </li>
 <li>integrate_particles()
-: <a class="el" href="classGLSSharpNavierStokesSolver.html#a6a417ce9d99e367d9c28278f46ae3cfb">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsSharp.html#a64ead6ec2ef4177f4f352c079833ddca">FluidDynamicsSharp&lt; dim &gt;</a>
 </li>
 <li>integrate_particles_motion()
 : <a class="el" href="classIBParticlesDEM.html#ae3ea098fee4287bd0b878b32fbf311a0">IBParticlesDEM&lt; dim &gt;</a>
@@ -216,7 +225,7 @@ $(function() {
 : <a class="el" href="classSimulationControl.html#a1db26e3807f434640a574d8d164fb276">SimulationControl</a>
 </li>
 <li>is_inside_crown()
-: <a class="el" href="classIBParticle.html#a344004d747375230e0d6b10ca98fbe50">IBParticle&lt; dim &gt;</a>
+: <a class="el" href="classIBParticle.html#af287c94d6ba6527c7115cea356142065">IBParticle&lt; dim &gt;</a>
 </li>
 <li>is_non_newtonian()
 : <a class="el" href="classPhysicalPropertiesManager.html#a62c83e5e2c38c581718752435b46e0f1">PhysicalPropertiesManager</a>
@@ -238,7 +247,7 @@ $(function() {
 : <a class="el" href="classSimulationControl.html#a0d7540a21443e8833003fb39da2a2f4d">SimulationControl</a>
 </li>
 <li>iterate()
-: <a class="el" href="classGLSVANSSolver.html#a7f6446688b144c442c4085569f97470d">GLSVANSSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsVANS.html#af5702dddac75fa2e12d67391c95b0ccd">FluidDynamicsVANS&lt; dim &gt;</a>
 , <a class="el" href="classNavierStokesBase.html#a98a7f846709b83df0ea64c361fee192c">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
 </li>
 </ul>

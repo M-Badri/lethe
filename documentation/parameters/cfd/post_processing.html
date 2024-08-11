@@ -184,6 +184,7 @@
 <li class="toctree-l3"><a class="reference internal" href="initial_conditions.html">Initial Conditions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="laser_heat_source.html">Laser Heat Source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="linear_solver_control.html">Linear Solver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manifolds.html">Manifolds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mesh.html">Mesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mesh_adaptation_control.html">Mesh Adaptation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="multiphysics.html">Multiphysics</a></li>
@@ -203,7 +204,6 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../dem/dem.html">Discrete Element Method (DEM)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Discrete Element Method (DEM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../dem/boundary_conditions.html">Boundary Conditions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../dem/floating_mesh.html">Floating Mesh (Solid Objects)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/floating_wall.html">Floating Wall</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/insertion_info.html">Insertion Info</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/lagrangian_physical_properties.html">Lagrangian Physical Properties</a></li>
@@ -211,6 +211,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../dem/model_parameters.html">Model Parameters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/post-processing.html">Post-processing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/simulation_control.html">Simulation Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dem/solid_objects.html">Solid Objects</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/test.html">Test</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/timer.html">Timer</a></li>
 </ul>
@@ -232,7 +233,7 @@
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../examples/examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/incompressible-flow/incompressible-flow.html">Incompressible Flow</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Incompressible Flow</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-lid%E2%80%90driven-cavity-flow/lid%E2%80%90driven-cavity-flow.html">Lid-Driven Cavity Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-lid-driven-cavity-flow/lid-driven-cavity-flow.html">Lid-Driven Cavity Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-flow-around-cylinder/2d-flow-around-cylinder.html">Flow around a Cylinder</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-taylor-couette-flow/2d-taylor-couette-flow.html">Taylor-Couette Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-backward-facing-step/2d-backward-facing-step.html">Flow past a Backward-Facing Step</a></li>
@@ -256,6 +257,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/rising-bubble/rising-bubble.html">Rising Bubble</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/sloshing-in-rectangular-tank/sloshing-in-rectangular-tank.html">Sloshing in a Rectangular Tank</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/capillary-wave/capillary-wave.html">Capillary Wave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/rayleigh-plateau-instability/rayleigh-plateau-instability.html">Rayleigh-Plateau Instability</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/3d-dam-break/3d-dam-break.html">3D Dam-Break with an Obstacle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/water-injection-in-a-closed-cell/water-injection-in-a-closed-cell.html">Water Injection in a Closed Cell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/air-bubble-compression/air-bubble-compression.html">Air Bubble Compression</a></li>
@@ -290,8 +292,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/silo/silo.html">Silo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/rectangular-hopper/rectangular-hopper.html">Rectangular Hopper</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/granular-dam-break/granular-dam-break.html">Granular Dam-Break</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/plate-discharge/plate-discharge.html">Plate Discharge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/bunny-drill/bunny-drill.html">Bunny Drill</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/granular-mixer/granular-mixer.html">Granular Mixer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/granuheap/granuheap.html">Granuheap</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -301,6 +305,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/liquid-solid-fluidized-bed/liquid-solid-fluidized-bed.html">Liquid-Solid Fluidized Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/boycott-effect/boycott-effect.html">Boycott Effect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-spouted-cylinder-bed/gas-solid-spouted-cylinder-bed.html">Gas-Solid Spouted Cylinder Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/dense-pneumatic-conveying/dense-pneumatic-conveying.html">Dense Pneumatic Conveying</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/sharp-immersed-boundary/sharp-immersed-boundary.html">Sharp Immersed Boundary Solver</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Sharp Immersed Boundary Solver</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -344,6 +349,8 @@
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../theory/multiphysics/heat_transfer/heat_transfer.html">Heat Transfer</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle navigation of Heat Transfer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../theory/multiphysics/heat_transfer/heat_equation.html">Heat Transfer Equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../theory/multiphysics/heat_transfer/heat_equation.html#finite-element-formulation">Finite Element Formulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../theory/multiphysics/heat_transfer/heat_equation.html#stabilization-techniques">Stabilization Techniques</a></li>
 </ul>
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../theory/multiphysics/passive_tracer/passive_tracer.html">Passive Tracer</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle navigation of Passive Tracer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -352,6 +359,7 @@
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../theory/multiphysics/electromagnetism/electromagnetism.html">Electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle navigation of Electromagnetism</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../theory/multiphysics/electromagnetism/time_harmonic.html">Time Harmonic Maxwell’s Equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../theory/multiphysics/electromagnetism/time_harmonic_weak_form.html">Finite Element Method for Time-Harmonic Maxwell’s Equations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../theory/multiphysics/electromagnetism/magnetohydrodynamics.html">Magnetohydrodynamics Equations</a></li>
 </ul>
 </li>
@@ -451,6 +459,14 @@
   set calculate enstrophy              = false
   set enstrophy name                   = enstrophy
 
+  # Viscous dissipation
+  set calculate viscous dissipation    = false
+  set viscous dissipation name         = viscous_dissipation
+
+  # Pressure power
+  set calculate pressure power         = false
+  set pressure power name              = pressure_power
+
   # Others
   set smoothed output fields           = false
 
@@ -463,9 +479,11 @@
   #---------------------------------------------------
   # Multiphysics post-processing
   #---------------------------------------------------
-  # Tracer statistics
+  # Tracer postprocessing
   set calculate tracer statistics      = false
   set tracer statistics name           = tracer_statistics
+  set calculate tracer flow rate       = false
+  set tracer flow rate name            = tracer_flow_rate
 
   # Thermal postprocessing
   set postprocessed fluid              = both
@@ -485,6 +503,13 @@
   set phase statistics name            = phase_statistics
   set calculate phase energy           = false
   set phase energy name                = phase_energy
+
+  #---------------------------------------------------
+  # Multiphase post-processing
+  #---------------------------------------------------
+  # CFD-DEM postprocessing
+  set calculate volume phases          = false
+  set phase volumes name               = phase_volumes
 
 end
 </pre></div>
@@ -516,17 +541,17 @@ end
 <dt><code class="docutils literal notranslate"><span class="pre">calculate</span> <span class="pre">pressure</span> <span class="pre">drop</span></code>: controls if calculation of the pressure drop from the inlet boundary to the outlet boundary is enabled.</dt><dd><ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">inlet</span> <span class="pre">boundary</span> <span class="pre">id</span></code> and <code class="docutils literal notranslate"><span class="pre">outlet</span> <span class="pre">boundary</span> <span class="pre">id</span></code>: define the IDs for inlet and outlet boundaries, respectively.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pressure</span> <span class="pre">drop</span> <span class="pre">name</span></code>: output filename for pressure drop calculations.</p></li>
-<li><p>The pressure drop <span class="math notranslate nohighlight">\(\Delta P\)</span> and total pressure drop <span class="math notranslate nohighlight">\(\Delta P_\text{total}\)</span> are calculated as:</p></li>
+<li><p>The pressure drop <span class="math notranslate nohighlight">\(\Delta p\)</span> and total pressure drop <span class="math notranslate nohighlight">\(\Delta p_\text{total}\)</span> are calculated as:</p></li>
 </ul>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
-\[\Delta P =  \frac{ \int_{\Gamma_\text{inlet}} P \mathrm{d} \Gamma}{\int_{\Gamma_\text{inlet}} 1 \mathrm{d} \Gamma} - \frac{ \int_{\Gamma_\text{outlet}} P \mathrm{d} \Gamma}{\int_{\Gamma_\text{outlet}} 1 \mathrm{d} \Gamma}\]</div>
+\[\Delta p =  \frac{ \int_{\Gamma_\text{inlet}} p \mathrm{d} \Gamma}{\int_{\Gamma_\text{inlet}} 1 \mathrm{d} \Gamma} - \frac{ \int_{\Gamma_\text{outlet}} p \mathrm{d} \Gamma}{\int_{\Gamma_\text{outlet}} 1 \mathrm{d} \Gamma}\]</div>
 </div>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
-\[\Delta P_\text{total} =  \frac{ \int_{\Gamma_\text{inlet}} (P + \frac{1}{2} \mathbf{u} \cdot \mathbf{u}) \mathrm{d} \Gamma}{\int_{\Gamma_\text{inlet}} \mathrm{d} \Gamma} - \frac{ \int_{\Gamma_\text{outlet}} (P + \frac{1}{2} \mathbf{u} \cdot \mathbf{u}) \mathrm{d} \Gamma}{\int_{\Gamma_\text{outlet}} \mathrm{d} \Gamma}\]</div>
+\[\Delta p_\text{total} =  \frac{ \int_{\Gamma_\text{inlet}} (p + \frac{1}{2} \mathbf{u} \cdot \mathbf{u}) \mathrm{d} \Gamma}{\int_{\Gamma_\text{inlet}} \mathrm{d} \Gamma} - \frac{ \int_{\Gamma_\text{outlet}} (p + \frac{1}{2} \mathbf{u} \cdot \mathbf{u}) \mathrm{d} \Gamma}{\int_{\Gamma_\text{outlet}} \mathrm{d} \Gamma}\]</div>
 </div>
-<p>with <span class="math notranslate nohighlight">\(\Gamma\)</span> representing the boundary, <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> the velocity  and <span class="math notranslate nohighlight">\(P\)</span> the pressure.</p>
+<p>with <span class="math notranslate nohighlight">\(\Gamma\)</span> representing the boundary, <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> the velocity  and <span class="math notranslate nohighlight">\(p\)</span> the pressure.</p>
 </dd>
 </dl>
 </li>
@@ -554,6 +579,32 @@ end
 \[\mathcal{E} =  \frac{1}{2 \Omega} \int_{\Omega} \mathbf{\omega} \cdot \mathbf{\omega} \mathrm{d} \Omega\]</div>
 </div>
 <p>with <span class="math notranslate nohighlight">\(\Omega\)</span> representing the volume of the domain and <span class="math notranslate nohighlight">\(\mathbf{\omega}\)</span> the vorticity.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">calculate</span> <span class="pre">viscous</span> <span class="pre">dissipation</span></code>: controls if the viscous dissipation is calculated.</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">viscous</span> <span class="pre">dissipation</span> <span class="pre">name</span></code>: output filename for the viscous dissipation calculations.</p></li>
+<li><p>The viscous dissipation is calculated as</p></li>
+</ul>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\frac{1}{\Omega} \int_{\Omega} \mathbf{\tau} : \nabla\mathbf{u} \mathrm{d} \Omega\]</div>
+</div>
+<p>with <span class="math notranslate nohighlight">\(\Omega\)</span> representing the volume of the domain and <span class="math notranslate nohighlight">\(\mathbf{\tau}\)</span> the deviatoric stress tensor.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">calculate</span> <span class="pre">pressure</span> <span class="pre">power</span></code>: controls if the pressure power is calculated.</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pressure</span> <span class="pre">power</span> <span class="pre">name</span></code>: output filename for the pressure power calculations.</p></li>
+<li><p>The pressure power is calculated as</p></li>
+</ul>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\frac{1}{\Omega} \int_{\Omega}  \nabla p \cdot \mathbf{u} \mathrm{d} \Omega\]</div>
+</div>
+<p>with <span class="math notranslate nohighlight">\(\Omega\)</span> representing the volume of the domain, <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> the velocity  and <span class="math notranslate nohighlight">\(p\)</span> the pressure.</p>
 </dd>
 </dl>
 </li>
@@ -693,6 +744,22 @@ end
 </div>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">phase</span> <span class="pre">energy</span> <span class="pre">name</span></code>: name of the output file containing phase energies from Cahn-Hilliard simulations. The default file name is <code class="docutils literal notranslate"><span class="pre">phase_energy</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">calculate</span> <span class="pre">phase</span> <span class="pre">volumes</span></code>: outputs total volume of fluid phase and total volume of solid phase in CFD-DEM simulation. These volumes are computed as follow:</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[V_{fluid} = \int_{\Omega} \varepsilon_f \mathrm{d}\Omega\]</div>
+</div>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[V_{solid} = \int_{\Omega} (1 - \varepsilon_f) \mathrm{d}\Omega\]</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(\varepsilon\)</span> is the void fraction.  This is a convenient way to check if the volume of each phase is conserved.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code class="docutils literal notranslate"><span class="pre">calculate</span> <span class="pre">phase</span> <span class="pre">volumes</span> <span class="pre">=</span> <span class="pre">true</span></code> only works with the <code class="docutils literal notranslate"><span class="pre">lethe-fluid-particle</span></code> solver.</p>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">phase</span> <span class="pre">volumes</span> <span class="pre">name</span></code>: name of the output file containing phase energies from Cahn-Hilliard simulations. The default file name is <code class="docutils literal notranslate"><span class="pre">phase_volumes</span></code>.</p></li>
 </ul>
 </section>
 

@@ -36,7 +36,7 @@ Parameter File
 Mesh
 ~~~~~
 
-The background mesh (mixer body) is created using dealii ``subdivided_cylinder``.
+The background mesh (mixer body) is created using deal.II ``subdivided_cylinder``.
 
 .. code-block:: text
 
@@ -55,9 +55,7 @@ As mentioned earlier, there are two types of particles with the same size and pr
 .. code-block:: text
 
     subsection lagrangian physical properties
-      set gx                                  = -9.81
-      set gy                                  = 0.0
-      set gz                                  = 0.0
+      set g                                   = -9.81, 0.0, 0.0
       set number of particle types            = 2
       subsection particle type 0
         set size distribution type              = uniform
@@ -89,34 +87,28 @@ As mentioned earlier, there are two types of particles with the same size and pr
 Solid Objects
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In this subsection, the floating meshes are defined. We can use dealii or gmsh to create the floating meshes. At the moment, solid objects (floating meshes) in Lethe have to be defined using triangular (simplex) meshes. Only triangular 2D meshes of 3D surfaces in the ``lethe-particles`` solver are presently supported. Quadrilateral 2D meshes of 3D surfaces and 1D mesh of 2D surfaces are not supported at the moment. For each floating mesh, we need to specify a ``translational velocity``, an ``angular velocity``, and a ``center of rotation``. In this example, we only need an angular motion of the impeller. Note that the ``center of rotation`` of the impeller is at 0, 0, 0.
+In this subsection, the floating meshes are defined. We can use deal.II or Gmsh to create the floating meshes. At the moment, solid objects in Lethe have to be defined using triangular (simplex) meshes. Only triangular 2D meshes of 3D surfaces in the ``lethe-particles`` solver are presently supported. Quadrilateral 2D meshes of 3D surfaces and 1D mesh of 2D surfaces are not supported at the moment. For each floating mesh, we need to specify a ``translational velocity``, an ``angular velocity``, and a ``center of rotation``. In this example, we only need an angular motion of the impeller. Note that the ``center of rotation`` of the impeller is at 0, 0, 0.
 
 .. code-block:: text
 
     subsection solid objects
-      set number of solids = 1
-      subsection solid object 0
-        subsection mesh
-          set type               = gmsh
-          set file name          = pitched-blade-impeller.msh
-          set simplex            = true
-          set initial refinement = 0
-        end
+      subsection solid surfaces
+        set number of solids = 1
+        subsection solid object 0
+          subsection mesh
+            set type               = gmsh
+            set file name          = pitched-blade-impeller.msh
+            set simplex            = true
+            set initial refinement = 0
+          end
     
-        subsection translational velocity
-          set Function expression = 0 ; 0 ; 0
-        end
-        subsection angular velocity
-          set Function expression = if(t>0.5,6,0) ; 0 ; 0
-        end
-    
-        subsection center of rotation
-          # X COR
-          set x = 0
-          # Y COR
-          set y = 0
-          # Z COR
-          set z = 0
+          subsection translational velocity
+            set Function expression = 0 ; 0 ; 0
+          end
+          subsection angular velocity
+            set Function expression = if(t>0.5,6,0) ; 0 ; 0
+          end
+          set center of rotation = 0, 0, 0
         end
       end
     end

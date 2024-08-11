@@ -184,6 +184,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/initial_conditions.html">Initial Conditions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/laser_heat_source.html">Laser Heat Source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/linear_solver_control.html">Linear Solver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/manifolds.html">Manifolds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/mesh.html">Mesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/mesh_adaptation_control.html">Mesh Adaptation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/multiphysics.html">Multiphysics</a></li>
@@ -203,7 +204,6 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../parameters/dem/dem.html">Discrete Element Method (DEM)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Discrete Element Method (DEM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/boundary_conditions.html">Boundary Conditions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/floating_mesh.html">Floating Mesh (Solid Objects)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/floating_wall.html">Floating Wall</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/insertion_info.html">Insertion Info</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/lagrangian_physical_properties.html">Lagrangian Physical Properties</a></li>
@@ -211,6 +211,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/model_parameters.html">Model Parameters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/post-processing.html">Post-processing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/simulation_control.html">Simulation Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/solid_objects.html">Solid Objects</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/test.html">Test</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/timer.html">Timer</a></li>
 </ul>
@@ -232,7 +233,7 @@
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../../examples.html">Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 current has-children"><a class="reference internal" href="../incompressible-flow.html">Incompressible Flow</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Incompressible Flow</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../2d-lid%E2%80%90driven-cavity-flow/lid%E2%80%90driven-cavity-flow.html">Lid-Driven Cavity Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../2d-lid-driven-cavity-flow/lid-driven-cavity-flow.html">Lid-Driven Cavity Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../2d-flow-around-cylinder/2d-flow-around-cylinder.html">Flow around a Cylinder</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../2d-taylor-couette-flow/2d-taylor-couette-flow.html">Taylor-Couette Flow</a></li>
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Flow past a Backward-Facing Step</a></li>
@@ -256,6 +257,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../multiphysics/rising-bubble/rising-bubble.html">Rising Bubble</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../multiphysics/sloshing-in-rectangular-tank/sloshing-in-rectangular-tank.html">Sloshing in a Rectangular Tank</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../multiphysics/capillary-wave/capillary-wave.html">Capillary Wave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../multiphysics/rayleigh-plateau-instability/rayleigh-plateau-instability.html">Rayleigh-Plateau Instability</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../multiphysics/3d-dam-break/3d-dam-break.html">3D Dam-Break with an Obstacle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../multiphysics/water-injection-in-a-closed-cell/water-injection-in-a-closed-cell.html">Water Injection in a Closed Cell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../multiphysics/air-bubble-compression/air-bubble-compression.html">Air Bubble Compression</a></li>
@@ -290,8 +292,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../../dem/silo/silo.html">Silo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../dem/rectangular-hopper/rectangular-hopper.html">Rectangular Hopper</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../dem/granular-dam-break/granular-dam-break.html">Granular Dam-Break</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dem/plate-discharge/plate-discharge.html">Plate Discharge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../dem/bunny-drill/bunny-drill.html">Bunny Drill</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../dem/granular-mixer/granular-mixer.html">Granular Mixer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dem/granuheap/granuheap.html">Granuheap</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -301,6 +305,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/liquid-solid-fluidized-bed/liquid-solid-fluidized-bed.html">Liquid-Solid Fluidized Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/boycott-effect/boycott-effect.html">Boycott Effect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/gas-solid-spouted-cylinder-bed/gas-solid-spouted-cylinder-bed.html">Gas-Solid Spouted Cylinder Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/dense-pneumatic-conveying/dense-pneumatic-conveying.html">Dense Pneumatic Conveying</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../sharp-immersed-boundary/sharp-immersed-boundary.html">Sharp Immersed Boundary Solver</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Sharp Immersed Boundary Solver</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -344,6 +349,8 @@
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../../theory/multiphysics/heat_transfer/heat_transfer.html">Heat Transfer</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle navigation of Heat Transfer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphysics/heat_transfer/heat_equation.html">Heat Transfer Equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphysics/heat_transfer/heat_equation.html#finite-element-formulation">Finite Element Formulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphysics/heat_transfer/heat_equation.html#stabilization-techniques">Stabilization Techniques</a></li>
 </ul>
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../../theory/multiphysics/passive_tracer/passive_tracer.html">Passive Tracer</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle navigation of Passive Tracer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -352,6 +359,7 @@
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../../theory/multiphysics/electromagnetism/electromagnetism.html">Electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle navigation of Electromagnetism</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphysics/electromagnetism/time_harmonic.html">Time Harmonic Maxwell’s Equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphysics/electromagnetism/time_harmonic_weak_form.html">Finite Element Method for Time-Harmonic Maxwell’s Equations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphysics/electromagnetism/magnetohydrodynamics.html">Magnetohydrodynamics Equations</a></li>
 </ul>
 </li>
@@ -658,7 +666,7 @@ end
 <img alt="../../../_images/Reynolds100-mesh-refinement.png" src="../../../_images/Reynolds100-mesh-refinement.png" />
 <p>where the final value of <span class="math notranslate nohighlight">\(x_r\)</span> is <span class="math notranslate nohighlight">\(2.893\)</span>. We notice from the graph that convergence is obtained quite quickly. In addition, the following figure illustrates the evolution of the relative error as the number of elements increases.</p>
 <img alt="../../../_images/Reynolds100-error-analysis.png" src="../../../_images/Reynolds100-error-analysis.png" />
-<p>The reference value used in the error analysis is taken from Erturk (2008) <a class="reference external" href="https://doi.org/10.1016/j.compfluid.2007.09.003">[1]</a>.</p>
+<p>The reference value used in the error analysis is taken from Erturk (2008) <a class="footnote-reference brackets" href="#erturk2008" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
 </section>
 <section id="higher-reynolds-number-re-1000">
 <h3>Higher Reynolds Number (<span class="math notranslate nohighlight">\(Re=1000\)</span>)<a class="headerlink" href="#higher-reynolds-number-re-1000" title="Link to this heading">#</a></h3>
@@ -673,9 +681,9 @@ end
 <h2>Validation and Comparison<a class="headerlink" href="#validation-and-comparison" title="Link to this heading">#</a></h2>
 <section id="reattachment-length">
 <h3>Reattachment Length<a class="headerlink" href="#reattachment-length" title="Link to this heading">#</a></h3>
-<p>In this section, the solutions obtained with Lethe are compared with data that can be found in the scientific literature (Erturk (2008) <a class="reference external" href="https://doi.org/10.1016/j.compfluid.2007.09.003">[1]</a>, Armaly and al. (1983) <a class="reference external" href="https://doi.org/10.1017/S0022112083002839">[2]</a> and Velivelli and Bryden (2015) <a class="reference external" href="https://doi.org/10.1016/j.advengsoft.2014.11.006">[3]</a>). Several studies include datasets of <span class="math notranslate nohighlight">\(x_r/h = f(Re)\)</span> (reattachment length) either experimentally or numerically. The next figure illustrates some of them in comparison with <em>Lethe</em>.</p>
+<p>In this section, the solutions obtained with Lethe are compared with data that can be found in the scientific literature (Erturk (2008) <a class="footnote-reference brackets" href="#erturk2008" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, Armaly and al. (1983) <a class="footnote-reference brackets" href="#armaly1983" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> and Velivelli and Bryden (2015) <a class="footnote-reference brackets" href="#velivelli2015" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>). Several studies include datasets of <span class="math notranslate nohighlight">\(x_r/h = f(Re)\)</span> (reattachment length) either experimentally or numerically. The next figure illustrates some of them in comparison with <em>Lethe</em>.</p>
 <img alt="../../../_images/xr-comparison.png" src="../../../_images/xr-comparison.png" />
-<p>First, the results provided by Lethe are identical or so to all of the three selected studies for low Reynolds numbers (<span class="math notranslate nohighlight">\(Re \leq 400\)</span>). After that point, both results form <em>Lethe</em> and from Erturk (2008) <a class="reference external" href="https://doi.org/10.1016/j.compfluid.2007.09.003">[1]</a> diverge from the experimental data of Armaly and al. (1983) <a class="reference external" href="https://doi.org/10.1017/S0022112083002839">[2]</a>. According to <a class="reference external" href="https://doi.org/10.1016/j.compfluid.2007.09.003">[1]</a>, this error is due to 3D effects that are more potent as the flow becomes more and more turbulent. Furthermore, there is also a less significant but clearly noticeable error between <em>Lethe</em> and Erturk (2008) <a class="reference external" href="https://doi.org/10.1016/j.compfluid.2007.09.003">[1]</a>: the fact that certain tolerances have been set higher for higher Reynolds number cases might have underestimated the reattachment length. Also, first order elements have been used throughout the whole simulation process. Using second order elements for velocity, for instance, could yield better results for higher Reynolds numbers, however, at a higher computational cost. The following table illustrates the error at <span class="math notranslate nohighlight">\(Re = 600\)</span> for first and second order velocity elements.</p>
+<p>First, the results provided by Lethe are identical or so to all of the three selected studies for low Reynolds numbers (<span class="math notranslate nohighlight">\(Re \leq 400\)</span>). After that point, both results form <em>Lethe</em> and from Erturk (2008) <a class="footnote-reference brackets" href="#erturk2008" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> diverge from the experimental data of Armaly and al. (1983) <a class="footnote-reference brackets" href="#armaly1983" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. According to <a class="footnote-reference brackets" href="#erturk2008" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, this error is due to 3D effects that are more potent as the flow becomes more and more turbulent. Furthermore, there is also a less significant but clearly noticeable error between <em>Lethe</em> and Erturk (2008) <a class="footnote-reference brackets" href="#erturk2008" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>: the fact that certain tolerances have been set higher for higher Reynolds number cases might have underestimated the reattachment length. Also, first order elements have been used throughout the whole simulation process. Using second order elements for velocity, for instance, could yield better results for higher Reynolds numbers, however, at a higher computational cost. The following table illustrates the error at <span class="math notranslate nohighlight">\(Re = 600\)</span> for first and second order velocity elements.</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <thead>
@@ -721,9 +729,22 @@ end
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://doi.org/10.1016/j.compfluid.2007.09.003">[1]</a> E. Erturk, “Numerical solutions of 2-D steady incompressible flow over a backward-facing step, Part I: High Reynolds number solutions,” <em>Comput. Fluids</em>, vol. 37, no. 6, pp. 633–655, Jul. 2008, doi: 10.1016/j.compfluid.2007.09.003.</p>
-<p><a class="reference external" href="https://doi.org/10.1017/S0022112083002839">[2]</a> B. F. Armaly, F. Durst, J. C. F. Pereira, and B. Schönung, “Experimental and theoretical investigation of backward-facing step flow,” <em>J. Fluid Mech.</em>, vol. 127, pp. 473–496, Feb. 1983, doi: 10.1017/S0022112083002839.</p>
-<p><a class="reference external" href="https://doi.org/10.1016/j.advengsoft.2014.11.006">[3]</a> A. C. Velivelli and K. M. Bryden, “Domain decomposition based coupling between the lattice Boltzmann method and traditional CFD methods – Part II: Numerical solution to the backward facing step flow,” <em>Adv. Eng. Softw.</em>, vol. 82, pp. 65–74, Apr. 2015, doi: 10.1016/j.advengsoft.2014.11.006.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="erturk2008" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>,<a role="doc-backlink" href="#id5">3</a>,<a role="doc-backlink" href="#id7">4</a>,<a role="doc-backlink" href="#id8">5</a>)</span>
+<p>E. Erturk, “Numerical solutions of 2-D steady incompressible flow over a backward-facing step, Part I: High Reynolds number solutions,” <em>Comput. Fluids</em>, vol. 37, no. 6, pp. 633–655, Jul. 2008, doi: <a class="reference external" href="https://doi.org/10.1016/j.compfluid.2007.09.003">10.1016/j.compfluid.2007.09.003</a>.</p>
+</aside>
+<aside class="footnote brackets" id="armaly1983" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id3">1</a>,<a role="doc-backlink" href="#id6">2</a>)</span>
+<p>B. F. Armaly, F. Durst, J. C. F. Pereira, and B. Schönung, “Experimental and theoretical investigation of backward-facing step flow,” <em>J. Fluid Mech.</em>, vol. 127, pp. 473–496, Feb. 1983, doi: <a class="reference external" href="https://doi.org/10.1017/S0022112083002839">10.1017/S0022112083002839</a>.</p>
+</aside>
+<aside class="footnote brackets" id="velivelli2015" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
+<p>A. C. Velivelli and K. M. Bryden, “Domain decomposition based coupling between the lattice Boltzmann method and traditional CFD methods – Part II: Numerical solution to the backward facing step flow,” <em>Adv. Eng. Softw.</em>, vol. 82, pp. 65–74, Apr. 2015, doi: <a class="reference external" href="https://doi.org/10.1016/j.advengsoft.2014.11.006">10.1016/j.advengsoft.2014.11.006</a>.</p>
+</aside>
+</aside>
 </section>
 </section>
 

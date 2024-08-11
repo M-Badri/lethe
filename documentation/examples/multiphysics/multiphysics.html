@@ -184,6 +184,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/cfd/initial_conditions.html">Initial Conditions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/cfd/laser_heat_source.html">Laser Heat Source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/cfd/linear_solver_control.html">Linear Solver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../parameters/cfd/manifolds.html">Manifolds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/cfd/mesh.html">Mesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/cfd/mesh_adaptation_control.html">Mesh Adaptation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/cfd/multiphysics.html">Multiphysics</a></li>
@@ -203,7 +204,6 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../parameters/dem/dem.html">Discrete Element Method (DEM)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Discrete Element Method (DEM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/dem/boundary_conditions.html">Boundary Conditions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../parameters/dem/floating_mesh.html">Floating Mesh (Solid Objects)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/dem/floating_wall.html">Floating Wall</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/dem/insertion_info.html">Insertion Info</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/dem/lagrangian_physical_properties.html">Lagrangian Physical Properties</a></li>
@@ -211,6 +211,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/dem/model_parameters.html">Model Parameters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/dem/post-processing.html">Post-processing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/dem/simulation_control.html">Simulation Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../parameters/dem/solid_objects.html">Solid Objects</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/dem/test.html">Test</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../parameters/dem/timer.html">Timer</a></li>
 </ul>
@@ -232,7 +233,7 @@
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../examples.html">Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="../incompressible-flow/incompressible-flow.html">Incompressible Flow</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Incompressible Flow</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../incompressible-flow/2d-lid%E2%80%90driven-cavity-flow/lid%E2%80%90driven-cavity-flow.html">Lid-Driven Cavity Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../incompressible-flow/2d-lid-driven-cavity-flow/lid-driven-cavity-flow.html">Lid-Driven Cavity Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../incompressible-flow/2d-flow-around-cylinder/2d-flow-around-cylinder.html">Flow around a Cylinder</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../incompressible-flow/2d-taylor-couette-flow/2d-taylor-couette-flow.html">Taylor-Couette Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../incompressible-flow/2d-backward-facing-step/2d-backward-facing-step.html">Flow past a Backward-Facing Step</a></li>
@@ -256,6 +257,7 @@
 <li class="toctree-l4"><a class="reference internal" href="rising-bubble/rising-bubble.html">Rising Bubble</a></li>
 <li class="toctree-l4"><a class="reference internal" href="sloshing-in-rectangular-tank/sloshing-in-rectangular-tank.html">Sloshing in a Rectangular Tank</a></li>
 <li class="toctree-l4"><a class="reference internal" href="capillary-wave/capillary-wave.html">Capillary Wave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rayleigh-plateau-instability/rayleigh-plateau-instability.html">Rayleigh-Plateau Instability</a></li>
 <li class="toctree-l4"><a class="reference internal" href="3d-dam-break/3d-dam-break.html">3D Dam-Break with an Obstacle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="water-injection-in-a-closed-cell/water-injection-in-a-closed-cell.html">Water Injection in a Closed Cell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="air-bubble-compression/air-bubble-compression.html">Air Bubble Compression</a></li>
@@ -290,8 +292,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../dem/silo/silo.html">Silo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/rectangular-hopper/rectangular-hopper.html">Rectangular Hopper</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/granular-dam-break/granular-dam-break.html">Granular Dam-Break</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dem/plate-discharge/plate-discharge.html">Plate Discharge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/bunny-drill/bunny-drill.html">Bunny Drill</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/granular-mixer/granular-mixer.html">Granular Mixer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dem/granuheap/granuheap.html">Granuheap</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -301,6 +305,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../unresolved-cfd-dem/liquid-solid-fluidized-bed/liquid-solid-fluidized-bed.html">Liquid-Solid Fluidized Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../unresolved-cfd-dem/boycott-effect/boycott-effect.html">Boycott Effect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../unresolved-cfd-dem/gas-solid-spouted-cylinder-bed/gas-solid-spouted-cylinder-bed.html">Gas-Solid Spouted Cylinder Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../unresolved-cfd-dem/dense-pneumatic-conveying/dense-pneumatic-conveying.html">Dense Pneumatic Conveying</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../sharp-immersed-boundary/sharp-immersed-boundary.html">Sharp Immersed Boundary Solver</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Sharp Immersed Boundary Solver</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -344,6 +349,8 @@
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../theory/multiphysics/heat_transfer/heat_transfer.html">Heat Transfer</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle navigation of Heat Transfer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../theory/multiphysics/heat_transfer/heat_equation.html">Heat Transfer Equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../theory/multiphysics/heat_transfer/heat_equation.html#finite-element-formulation">Finite Element Formulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../theory/multiphysics/heat_transfer/heat_equation.html#stabilization-techniques">Stabilization Techniques</a></li>
 </ul>
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../theory/multiphysics/passive_tracer/passive_tracer.html">Passive Tracer</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle navigation of Passive Tracer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -352,6 +359,7 @@
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../theory/multiphysics/electromagnetism/electromagnetism.html">Electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle navigation of Electromagnetism</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../theory/multiphysics/electromagnetism/time_harmonic.html">Time Harmonic Maxwell’s Equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../theory/multiphysics/electromagnetism/time_harmonic_weak_form.html">Finite Element Method for Time-Harmonic Maxwell’s Equations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../theory/multiphysics/electromagnetism/magnetohydrodynamics.html">Magnetohydrodynamics Equations</a></li>
 </ul>
 </li>
@@ -423,7 +431,7 @@
 <h1>Multiphysics<a class="headerlink" href="#multiphysics" title="Link to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="graphviz"><img src="../../_images/graphviz-fb7e9f6f1d14668082335f85bac92ee256ad6878.png" alt="digraph multiphysics_diagram {
+<div class="graphviz"><img src="../../_images/graphviz-42c968ea91b89a95898003c40fad35659fb2da73.png" alt="digraph multiphysics_diagram {
   graph [bgcolor=&quot;transparent&quot;, align=true, ranksep=1.5];
   node [fontname=Arial, fontsize=20, shape=box, fontcolor=royalblue, color=royalblue, height=1];
   edge [color=royalblue];
@@ -446,11 +454,13 @@
 
   multiphysics_1_6 [label=&quot;Capillary Wave&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/capillary-wave/capillary-wave.html&quot;];
 
-  multiphysics_1_7 [label=&quot;3D Dam-Break with an Obstacle&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/3d-dam-break/3d-dam-break.html&quot;];
+  multiphysics_1_7 [label=&quot;Rayleigh-Plateau Instability&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/rayleigh-plateau-instability/rayleigh-plateau-instability.html&quot;];
 
-  multiphysics_1_8 [label=&quot;Water Injection in a Closed Cell&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/water-injection-in-a-closed-cell/water-injection-in-a-closed-cell.html&quot;];
+  multiphysics_1_8 [label=&quot;3D Dam-Break with an Obstacle&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/3d-dam-break/3d-dam-break.html&quot;];
 
-  multiphysics_1_9 [label=&quot;Air Bubble Compression&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/air-bubble-compression/air-bubble-compression.html&quot;];
+  multiphysics_1_9 [label=&quot;Water Injection in a Closed Cell&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/water-injection-in-a-closed-cell/water-injection-in-a-closed-cell.html&quot;];
+
+  multiphysics_1_10 [label=&quot;Air Bubble Compression&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/air-bubble-compression/air-bubble-compression.html&quot;];
 
   multiphysics_2 [label=&quot;Heat Transfer&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/heat-transfer.html&quot;];
 
@@ -485,6 +495,7 @@
   multiphysics_1 -&gt; multiphysics_1_7:w;
   multiphysics_1 -&gt; multiphysics_1_8:w;
   multiphysics_1 -&gt; multiphysics_1_9:w;
+  multiphysics_1 -&gt; multiphysics_1_10:w;
 
   multiphysics_2 -&gt; multiphysics_2_1:w;
   multiphysics_2 -&gt; multiphysics_2_2:w;
@@ -497,27 +508,28 @@
   multiphysics_3 -&gt; multiphysics_3_1:w;
 }" usemap="#multiphysics_diagram" class="graphviz" /></div>
 <map id="multiphysics_diagram" name="multiphysics_diagram">
-<area shape="rect" id="node1" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/multiphysics.html" title="Multiphysics" alt="" coords="2,616,73,657"/>
-<area shape="rect" id="node2" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/vof.html" title="VOF" alt="" coords="157,232,190,273"/>
-<area shape="rect" id="node12" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/heat-transfer.html" title="Heat Transfer" alt="" coords="135,616,213,657"/>
-<area shape="rect" id="node20" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/tracer.html" title="Tracer" alt="" coords="153,744,195,785"/>
-<area shape="rect" id="node3" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/dam-break/dam-break.html" title="Dam&#45;Break" alt="" coords="346,2,413,43"/>
-<area shape="rect" id="node4" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/rayleigh-taylor-instability/rayleigh-taylor-instability.html" title="Rayleigh&#45;Taylor Instability" alt="" coords="311,53,448,94"/>
-<area shape="rect" id="node5" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/static-bubble/static-bubble.html" title="Static Bubble" alt="" coords="341,105,418,146"/>
-<area shape="rect" id="node6" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/rising-bubble/rising-bubble.html" title="Rising Bubble" alt="" coords="340,156,419,197"/>
-<area shape="rect" id="node7" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/sloshing-in-rectangular-tank/sloshing-in-rectangular-tank.html" title="Sloshing in a Rectangular Tank" alt="" coords="296,207,462,248"/>
-<area shape="rect" id="node8" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/capillary-wave/capillary-wave.html" title="Capillary Wave" alt="" coords="337,258,422,299"/>
-<area shape="rect" id="node9" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/3d-dam-break/3d-dam-break.html" title="3D Dam&#45;Break with an Obstacle" alt="" coords="294,309,465,350"/>
-<area shape="rect" id="node10" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/water-injection-in-a-closed-cell/water-injection-in-a-closed-cell.html" title="Water Injection in a Closed Cell" alt="" coords="296,360,463,401"/>
-<area shape="rect" id="node11" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/air-bubble-compression/air-bubble-compression.html" title="Air Bubble Compression" alt="" coords="313,412,446,452"/>
-<area shape="rect" id="node13" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/rayleigh-benard-convection/rayleigh-benard-convection.html" title="Rayleigh&#45;Bénard Convection" alt="" coords="302,463,457,504"/>
-<area shape="rect" id="node14" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/stefan-problem/stefan-problem.html" title="Stefan Problem: Melting of a Solid" alt="" coords="289,514,470,555"/>
-<area shape="rect" id="node15" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/warming-up-a-viscous-fluid/warming-up-a-viscous-fluid.html" title="Warming up a Viscous Fluid" alt="" coords="305,565,454,606"/>
-<area shape="rect" id="node16" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/melting-cavity/melting-cavity.html" title="Melting Cavity" alt="" coords="339,616,419,657"/>
-<area shape="rect" id="node17" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/laser-heating/laser-heating.html" title="Laser Heating" alt="" coords="339,667,419,708"/>
-<area shape="rect" id="node18" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/laser-melt-pool/laser-melt-pool.html" title="Laser Melt Pool" alt="" coords="335,718,423,759"/>
-<area shape="rect" id="node19" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/concentric-heat-exchanger/concentric-heat-exchanger.html" title="Concentric Heat Exchanger" alt="" coords="306,770,453,811"/>
-<area shape="rect" id="node21" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/tracer-through-cad-junction/tracer-through-cad-junction.html" title="Tracer through CAD Junction in Simplex" alt="" coords="274,821,485,862"/>
+<area shape="rect" id="node1" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/multiphysics.html" title="Multiphysics" alt="" coords="2,630,69,669"/>
+<area shape="rect" id="node2" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/vof.html" title="VOF" alt="" coords="148,244,180,282"/>
+<area shape="rect" id="node13" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/heat-transfer.html" title="Heat Transfer" alt="" coords="127,630,201,669"/>
+<area shape="rect" id="node21" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/tracer.html" title="Tracer" alt="" coords="144,751,184,789"/>
+<area shape="rect" id="node3" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/dam-break/dam-break.html" title="Dam&#45;Break" alt="" coords="327,2,390,41"/>
+<area shape="rect" id="node4" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/rayleigh-taylor-instability/rayleigh-taylor-instability.html" title="Rayleigh&#45;Taylor Instability" alt="" coords="293,50,423,89"/>
+<area shape="rect" id="node5" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/static-bubble/static-bubble.html" title="Static Bubble" alt="" coords="322,99,394,137"/>
+<area shape="rect" id="node6" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/rising-bubble/rising-bubble.html" title="Rising Bubble" alt="" coords="321,147,396,186"/>
+<area shape="rect" id="node7" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/sloshing-in-rectangular-tank/sloshing-in-rectangular-tank.html" title="Sloshing in a Rectangular Tank" alt="" coords="280,195,437,234"/>
+<area shape="rect" id="node8" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/capillary-wave/capillary-wave.html" title="Capillary Wave" alt="" coords="318,244,398,282"/>
+<area shape="rect" id="node9" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/rayleigh-plateau-instability/rayleigh-plateau-instability.html" title="Rayleigh&#45;Plateau Instability" alt="" coords="289,292,427,331"/>
+<area shape="rect" id="node10" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/3d-dam-break/3d-dam-break.html" title="3D Dam&#45;Break with an Obstacle" alt="" coords="277,340,439,379"/>
+<area shape="rect" id="node11" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/water-injection-in-a-closed-cell/water-injection-in-a-closed-cell.html" title="Water Injection in a Closed Cell" alt="" coords="280,389,437,427"/>
+<area shape="rect" id="node12" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/air-bubble-compression/air-bubble-compression.html" title="Air Bubble Compression" alt="" coords="296,437,421,475"/>
+<area shape="rect" id="node14" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/rayleigh-benard-convection/rayleigh-benard-convection.html" title="Rayleigh&#45;Bénard Convection" alt="" coords="285,485,431,524"/>
+<area shape="rect" id="node15" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/stefan-problem/stefan-problem.html" title="Stefan Problem: Melting of a Solid" alt="" coords="273,533,444,572"/>
+<area shape="rect" id="node16" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/warming-up-a-viscous-fluid/warming-up-a-viscous-fluid.html" title="Warming up a Viscous Fluid" alt="" coords="288,582,429,620"/>
+<area shape="rect" id="node17" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/melting-cavity/melting-cavity.html" title="Melting Cavity" alt="" coords="320,630,396,669"/>
+<area shape="rect" id="node18" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/laser-heating/laser-heating.html" title="Laser Heating" alt="" coords="320,678,396,717"/>
+<area shape="rect" id="node19" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/laser-melt-pool/laser-melt-pool.html" title="Laser Melt Pool" alt="" coords="317,727,400,765"/>
+<area shape="rect" id="node20" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/concentric-heat-exchanger/concentric-heat-exchanger.html" title="Concentric Heat Exchanger" alt="" coords="288,775,428,814"/>
+<area shape="rect" id="node22" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/tracer-through-cad-junction/tracer-through-cad-junction.html" title="Tracer through CAD Junction in Simplex" alt="" coords="259,823,458,862"/>
 </map></section>
 
         </article>

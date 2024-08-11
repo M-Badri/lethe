@@ -86,8 +86,11 @@ $(function() {
 <li>make_grid()
 : <a class="el" href="classPeriodicHillsGrid.html#ab4b24f516396fc735795fabc8eee7ddd">PeriodicHillsGrid&lt; dim, spacedim &gt;</a>
 </li>
-<li>manage_triangulation_connections()
-: <a class="el" href="classCFDDEMSolver.html#a78cef1193d760c8f2846631d49bbcc9e">CFDDEMSolver&lt; dim &gt;</a>
+<li>manifold_direction
+: <a class="el" href="classParameters_1_1Manifolds.html#aa8c8dfe40c1ee91cbb42dfbd3964ffab">Parameters::Manifolds</a>
+</li>
+<li>manifold_point
+: <a class="el" href="classParameters_1_1Manifolds.html#ac35e5eed60aaa8a3249fb814e5f2ffb9">Parameters::Manifolds</a>
 </li>
 <li>manifolds_parameters
 : <a class="el" href="classSimulationParameters.html#a91f695ec75b6126601567ff0683318e2">SimulationParameters&lt; dim &gt;</a>
@@ -119,7 +122,7 @@ $(function() {
 , <a class="el" href="classVolumeOfFluid.html#a165bca056ccf5303c14d13de3363777e">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>mark_for_update
-: <a class="el" href="classInsertionPlane.html#a3789d3aaa040905600a526827baef71d">InsertionPlane&lt; dim &gt;</a>
+: <a class="el" href="classInsertion.html#a33a9fc9ad41c10f94f38120424bad454">Insertion&lt; dim &gt;</a>
 </li>
 <li>mass
 : <a class="el" href="classIBParticle.html#a36b11f7e0f92fabaacc3652424dc514f">IBParticle&lt; dim &gt;</a>
@@ -134,10 +137,10 @@ $(function() {
 <li>mass_flux()
 : <a class="el" href="classEvaporationModel.html#a160196770f256f261bd931fca4015033">EvaporationModel</a>
 , <a class="el" href="classEvaporationModelConstant.html#a10e193fa9f226c23481d47a2813045fd">EvaporationModelConstant</a>
-, <a class="el" href="classEvaporationModelTemperature.html#a379a35bfc98a45e24f35d0f363cca9e6">EvaporationModelTemperature</a>
+, <a class="el" href="classEvaporationModelTemperature.html#a37c9f7c294520efcf0f482d77e8e3097">EvaporationModelTemperature</a>
 </li>
 <li>mass_matrix
-: <a class="el" href="classGLSVANSSolver.html#a07d25809ab96f1504f9a09d5f1201587">GLSVANSSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsVANS.html#a62f22a6e03dba5482191eaf2eb8b8edc">FluidDynamicsVANS&lt; dim &gt;</a>
 </li>
 <li>mass_matrix_phase_fraction
 : <a class="el" href="classVolumeOfFluid.html#a0b38a24f2c67e260b0ba8468646a1b41">VolumeOfFluid&lt; dim &gt;</a>
@@ -291,9 +294,6 @@ $(function() {
 <li>MFNavierStokesPreconditionGMG()
 : <a class="el" href="classMFNavierStokesPreconditionGMG.html#afcc8eabaa392f0c92cdabfff639ae0b1">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
 </li>
-<li>MFNavierStokesSolver()
-: <a class="el" href="classMFNavierStokesSolver.html#a969b7f3f6eaafd22e3b990da526f0335">MFNavierStokesSolver&lt; dim &gt;</a>
-</li>
 <li>mg
 : <a class="el" href="classMFNavierStokesPreconditionGMG.html#a79aa7c1e07b4d544ed28fc4a2ddac61b">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
 </li>
@@ -305,6 +305,12 @@ $(function() {
 </li>
 <li>mg_coarse_grid_solver
 : <a class="el" href="structParameters_1_1LinearSolver.html#a2411ba9c00201e98db5885cc6ef33e94">Parameters::LinearSolver</a>
+</li>
+<li>mg_coarse_intermediate
+: <a class="el" href="classMFNavierStokesPreconditionGMG.html#a8dec77d36627246d25d592b7c77d4ceb">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
+</li>
+<li>mg_coarsening_type
+: <a class="el" href="structParameters_1_1LinearSolver.html#a017da38bfbce00f19477eca21d454ffc">Parameters::LinearSolver</a>
 </li>
 <li>mg_constrained_dofs
 : <a class="el" href="classMFNavierStokesPreconditionGMG.html#a42307cfe03acebbbcc278a3cacdf5752">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
@@ -327,8 +333,14 @@ $(function() {
 <li>mg_gmres_tolerance
 : <a class="el" href="structParameters_1_1LinearSolver.html#a14b27690eab0253b98ef58a2f3783240">Parameters::LinearSolver</a>
 </li>
+<li>mg_int_level
+: <a class="el" href="structParameters_1_1LinearSolver.html#a98aabc1fe3768bb3b6f552e4e00f61c9">Parameters::LinearSolver</a>
+</li>
 <li>mg_interface_matrix_in
 : <a class="el" href="classMFNavierStokesPreconditionGMG.html#ab61a5944f360b4c6f483186499da7e24">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
+</li>
+<li>mg_intermediate
+: <a class="el" href="classMFNavierStokesPreconditionGMG.html#a13a4b84590b927231505bedd48a9f5ce">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
 </li>
 <li>mg_level_min_cells
 : <a class="el" href="structParameters_1_1LinearSolver.html#acd323cc9488321478ea39637b7c8fd36">Parameters::LinearSolver</a>
@@ -342,6 +354,9 @@ $(function() {
 <li>mg_operators
 : <a class="el" href="classMFNavierStokesPreconditionGMG.html#a9e61fb2a067ceaeb197b2b98cdcfd0f7">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
 </li>
+<li>mg_p_coarsening_type
+: <a class="el" href="structParameters_1_1LinearSolver.html#a28caf32808e5e49ab4cc3759f9f8e0e3">Parameters::LinearSolver</a>
+</li>
 <li>mg_setup_timer
 : <a class="el" href="classMFNavierStokesPreconditionGMG.html#a1197c661054bb120e972040910dfdcde">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
 </li>
@@ -353,6 +368,9 @@ $(function() {
 </li>
 <li>mg_smoother_iterations
 : <a class="el" href="structParameters_1_1LinearSolver.html#aed6e4bc7952e6b92e35ccdd678ac8c04">Parameters::LinearSolver</a>
+</li>
+<li>mg_smoother_preconditioner_type
+: <a class="el" href="structParameters_1_1LinearSolver.html#a7f521c5871ff6c175134f0e1016f43c3">Parameters::LinearSolver</a>
 </li>
 <li>mg_smoother_relaxation
 : <a class="el" href="structParameters_1_1LinearSolver.html#a365e7de6e12b57797205625df7795edc">Parameters::LinearSolver</a>
@@ -420,6 +438,9 @@ $(function() {
 <li>mobility_status
 : <a class="el" href="classAdaptiveSparseContacts.html#a9cf65bd3e1a790313fcf3f6b708ab230">AdaptiveSparseContacts&lt; dim &gt;</a>
 </li>
+<li>mobility_status_reset_trigger
+: <a class="el" href="classDEMActionManager.html#a2f3d42b17e5316fb4bcad740dd1d54f0">DEMActionManager</a>
+</li>
 <li>MobilityCahnHilliardModel
 : <a class="el" href="classParameters_1_1MaterialInteractions.html#a326cf56607ca00ad1bd29008ffae5cb8">Parameters::MaterialInteractions</a>
 </li>
@@ -471,17 +492,17 @@ $(function() {
 , <a class="el" href="structParameters_1_1Evaporation.html#aabbeda39bfc01880beca1475b0be9fec">Parameters::Evaporation</a>
 </li>
 <li>momentum_flux()
-: <a class="el" href="classEvaporationModel.html#a47be0272cdef51c598387125bc4d8071">EvaporationModel</a>
-, <a class="el" href="classEvaporationModelConstant.html#a368945d4af48897e655faacf3ffc0ab9">EvaporationModelConstant</a>
+: <a class="el" href="classEvaporationModel.html#a5abb4c748700b76eeca288f3e9009e16">EvaporationModel</a>
+, <a class="el" href="classEvaporationModelConstant.html#a6b5c0f8bd60056b225f4da5f94493ff2">EvaporationModelConstant</a>
 , <a class="el" href="classEvaporationModelTemperature.html#a73a548a9bd637c3a03aeb122ae686237">EvaporationModelTemperature</a>
 </li>
 <li>momentum_flux_jacobian()
 : <a class="el" href="classEvaporationModel.html#a6d108efeb02e7c59d9e4d104f0ae1a32">EvaporationModel</a>
-, <a class="el" href="classEvaporationModelConstant.html#aa065a00b56bf26b2fdcc3f9630575fed">EvaporationModelConstant</a>
+, <a class="el" href="classEvaporationModelConstant.html#a111e6af8e0229f91e7bd2bd8c42621bb">EvaporationModelConstant</a>
 , <a class="el" href="classEvaporationModelTemperature.html#a5b83af69b6cf65c934c5f58ae85628b4">EvaporationModelTemperature</a>
 </li>
 <li>monitor_mass_conservation()
-: <a class="el" href="classGLSVANSSolver.html#a938ebc83377361602c801822e567616d">GLSVANSSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsVANS.html#a6bc8c5994e39df48932dc40084900b8f">FluidDynamicsVANS&lt; dim &gt;</a>
 </li>
 <li>monitored_fluid
 : <a class="el" href="structParameters_1_1VOF__InterfaceSharpening.html#a1cbd53547173d4de562e9de43ee0efb6">Parameters::VOF_InterfaceSharpening</a>
@@ -502,10 +523,13 @@ $(function() {
 : <a class="el" href="classGridMotion.html#a265718c0e236abfc51bdcfda1ae8c18e">GridMotion&lt; dim, spacedim &gt;</a>
 </li>
 <li>move_grid_rotational()
-: <a class="el" href="classGridMotion.html#a3a2a2192b5a326fe83827e63a87dab78">GridMotion&lt; dim, spacedim &gt;</a>
+: <a class="el" href="classGridMotion.html#a9d47495e887736911334770f006891c1">GridMotion&lt; dim, spacedim &gt;</a>
 </li>
 <li>move_grid_translational()
 : <a class="el" href="classGridMotion.html#a29e96f413052a3c7d952f23056359427">GridMotion&lt; dim, spacedim &gt;</a>
+</li>
+<li>move_solid_objects()
+: <a class="el" href="classDEMSolver.html#aa926d38a6be29061a9258ff09de6ec1f">DEMSolver&lt; dim &gt;</a>
 </li>
 <li>move_solid_triangulation()
 : <a class="el" href="classSerialSolid.html#a61418fd2272a22899c3fc0bfbe948cd0">SerialSolid&lt; dim, spacedim &gt;</a>
@@ -521,6 +545,7 @@ $(function() {
 <li>mpi_communicator
 : <a class="el" href="classDEMSolver.html#a3fa780f51fdf8533fccb617131260161">DEMSolver&lt; dim &gt;</a>
 , <a class="el" href="classIBParticlesDEM.html#af15966bd42a420d254b0c41c4a74ca9d">IBParticlesDEM&lt; dim &gt;</a>
+, <a class="el" href="classLagrangianLoadBalancing.html#ace8d5aea56f58d6221cdb0043f49cfae">LagrangianLoadBalancing&lt; dim &gt;</a>
 , <a class="el" href="classNavierStokesBase.html#a23006cbe78a59bb413fef8d767ed3219">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
 , <a class="el" href="classPostProcessorSmoothing.html#ad032efdad66457f7e71d00807aaefdf4">PostProcessorSmoothing&lt; dim, VectorType &gt;</a>
 , <a class="el" href="classRPTL2Projection.html#ac64b24d4d535780d11d7bfc76bb16b38">RPTL2Projection&lt; dim &gt;</a>
@@ -529,6 +554,15 @@ $(function() {
 </li>
 <li>mpi_correction_over_calculation_of_forces_and_torques()
 : <a class="el" href="classParticleWallContactForce.html#a60403c52eea612533c8b82b6a223055b">ParticleWallContactForce&lt; dim &gt;</a>
+</li>
+<li>multi_general_cell()
+: <a class="el" href="classParticlesForceChains.html#a349d303fe2e101b9cf0073c5987e18b3">ParticlesForceChains&lt; dim, force_model, rolling_friction_model &gt;</a>
+</li>
+<li>MultigridCoarseningSequenceType
+: <a class="el" href="structParameters_1_1LinearSolver.html#a4e1400efdb5848b055b7b17bbe6ddced">Parameters::LinearSolver</a>
+</li>
+<li>MultigridSmootherPreconditionerType
+: <a class="el" href="structParameters_1_1LinearSolver.html#ac30e985421f44a248aff19aa1e5b4269">Parameters::LinearSolver</a>
 </li>
 <li>multiphysics
 : <a class="el" href="classCahnHilliard.html#a8ff818ef8ba8f941b7c83816978acddb">CahnHilliard&lt; dim &gt;</a>
@@ -539,19 +573,22 @@ $(function() {
 , <a class="el" href="classVolumeOfFluid.html#a5648aae68429f09e3143b6f25f3a595b">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>multiphysics_average_velocities
-: <a class="el" href="classMFNavierStokesSolver.html#afd252398d270b167428e91f0cdcc82b6">MFNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsMatrixFree.html#a138b3a4fc0132e9b953b9687158fb419">FluidDynamicsMatrixFree&lt; dim &gt;</a>
 </li>
 <li>multiphysics_parameters
 : <a class="el" href="classMultiphysicsInterface.html#a77e4650e2e491558b5eace431a2bf365">MultiphysicsInterface&lt; dim &gt;</a>
 </li>
 <li>multiphysics_present_solution
-: <a class="el" href="classMFNavierStokesSolver.html#a1132d44bff360683798ad6d4c3b071d1">MFNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsMatrixFree.html#a8b4aafafb3e9fb7597f03e1b2180d01a">FluidDynamicsMatrixFree&lt; dim &gt;</a>
 </li>
 <li>multiphysics_previous_solutions
-: <a class="el" href="classMFNavierStokesSolver.html#a85ad9215a6d2f4f13de7d4096dcd9e8b">MFNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsMatrixFree.html#a6dafa12fe242eed650a907649f970d16">FluidDynamicsMatrixFree&lt; dim &gt;</a>
 </li>
 <li>MultiphysicsInterface()
 : <a class="el" href="classMultiphysicsInterface.html#a00901e6d74f9972c1a90399721c1d62e">MultiphysicsInterface&lt; dim &gt;</a>
+</li>
+<li>MyDiagonalMatrix()
+: <a class="el" href="classMyDiagonalMatrix.html#aedcc09c95544f02717ea78c9314363df">MyDiagonalMatrix&lt; VectorType &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->

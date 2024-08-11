@@ -75,7 +75,7 @@ $(function() {
 
 <h3><a id="index_s"></a>- s -</h3><ul>
 <li>satellite_point_method()
-: <a class="el" href="classGLSVANSSolver.html#a1b3466835ead53afcc01af15ead6685d">GLSVANSSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsVANS.html#aa2a4263e68ce2fe337a13e78b23abe78">FluidDynamicsVANS&lt; dim &gt;</a>
 </li>
 <li>saturation_pressure()
 : <a class="el" href="classEvaporationModelTemperature.html#ae7a8d0da5f49f30dc3635946ab5688bc">EvaporationModelTemperature</a>
@@ -122,10 +122,13 @@ $(function() {
 : <a class="el" href="classRPTCellReconstruction.html#ae58ecc40dd71090123eb622c810c19a6">RPTCellReconstruction&lt; dim &gt;</a>
 </li>
 <li>set_contact_search_iteration_function()
-: <a class="el" href="classDEMSolver.html#a7b19502daa68dda43e4433a0410d4d95">DEMSolver&lt; dim &gt;</a>
+: <a class="el" href="classDEMSolver.html#ac1c46dcbd6f5eb33214f196055dd3c7a">DEMSolver&lt; dim &gt;</a>
 </li>
 <li>set_current_time_step()
 : <a class="el" href="classSimulationControl.html#aa0eca88ca928d9f463b2051c394ad0c2">SimulationControl</a>
+</li>
+<li>set_dmt_cut_off_distance()
+: <a class="el" href="classParticleWallDMTForce.html#ae40a27b8697acd00d17049a36a9cc6d5">ParticleWallDMTForce&lt; dim &gt;</a>
 </li>
 <li>set_dof_handler()
 : <a class="el" href="classMultiphysicsInterface.html#aa1c6b6666b773be05fe6027c5dcbe353">MultiphysicsInterface&lt; dim &gt;</a>
@@ -134,19 +137,31 @@ $(function() {
 : <a class="el" href="classNewtonian.html#a692a984e7cd5e0b92949e7dacd58da4f">Newtonian</a>
 , <a class="el" href="classRheologicalModel.html#a40cd0180f9b08be2629d3b2ec24f7be6">RheologicalModel</a>
 </li>
+<li>set_effective_properties()
+: <a class="el" href="classParticleParticleContactForce.html#ab329d1e45995f66a5eaa553197c29546">ParticleParticleContactForce&lt; dim, force_model, rolling_friction_model &gt;</a>
+</li>
 <li>set_enable()
 : <a class="el" href="classAnalyticalSolutions_1_1AnalyticalSolution.html#a346d45102e39e357280fa8283c79d61e">AnalyticalSolutions::AnalyticalSolution&lt; dim &gt;</a>
 </li>
 <li>set_filtered_solution()
 : <a class="el" href="classMultiphysicsInterface.html#a9416751da885340423298ad0fcca72c6">MultiphysicsInterface&lt; dim &gt;</a>
 </li>
+<li>set_force_calculation_threshold_distance()
+: <a class="el" href="classParticleParticleContactForce.html#a2510250b54d7c7f04d84d728f4b56d8d">ParticleParticleContactForce&lt; dim, force_model, rolling_friction_model &gt;</a>
+</li>
+<li>set_grid_motion_enabled()
+: <a class="el" href="classDEMActionManager.html#aab60e3e85d49fc69e0b76968daf0e63e">DEMActionManager</a>
+</li>
+<li>set_immersed_solid_signed_distance_function()
+: <a class="el" href="classMultiphysicsInterface.html#a8485e3cc587fef0aae4d789f32a761b4">MultiphysicsInterface&lt; dim &gt;</a>
+</li>
 <li>set_initial_condition()
 : <a class="el" href="classNavierStokesBase.html#adb76636e0a657ae4abc07d996dc4f8d5">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
 </li>
 <li>set_initial_condition_fd()
-: <a class="el" href="classGDNavierStokesSolver.html#aabf4b9b863529a6de958c9ca60fb5419">GDNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSNavierStokesSolver.html#a0713e51aed5a8c0e6c4c44f0fdda6530">GLSNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classMFNavierStokesSolver.html#a27d01dc2a0d3ab3b3acaa7e9adbc341b">MFNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsBlock.html#a6a11868d99fdfb3f84743024da87286e">FluidDynamicsBlock&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixBased.html#aaeef7d17885e16b56c5c0e4a4403c0c7">FluidDynamicsMatrixBased&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixFree.html#af4c473c5b2e510a2def0612a650b6e0a">FluidDynamicsMatrixFree&lt; dim &gt;</a>
 , <a class="el" href="classNavierStokesBase.html#a8a98e105ef265cdb3e16fd6778ef2a0a">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
 </li>
 <li>set_initial_conditions()
@@ -158,11 +173,14 @@ $(function() {
 , <a class="el" href="classVolumeOfFluid.html#af6671ae1cb1643f4dadb1194bd577450">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>set_insertion_type()
-: <a class="el" href="classDEMSolver.html#a25412c4515484ed11e960bf90c7cc87d">DEMSolver&lt; dim &gt;</a>
+: <a class="el" href="classDEMSolver.html#ab34526bbb2ef2aeffc0fbf004c6a09e0">DEMSolver&lt; dim &gt;</a>
 </li>
 <li>set_integrator_type()
 : <a class="el" href="classCFDDEMSolver.html#a6b3ff772c8839a0e3cda8f9e3570244a">CFDDEMSolver&lt; dim &gt;</a>
-, <a class="el" href="classDEMSolver.html#a5733f8e12554eb8651085adb8370ed11">DEMSolver&lt; dim &gt;</a>
+, <a class="el" href="classDEMSolver.html#aab99d30e873335754972bd547aaeaa5d">DEMSolver&lt; dim &gt;</a>
+</li>
+<li>set_iteration_check_function()
+: <a class="el" href="classLagrangianLoadBalancing.html#a31c2a698cfeb236fd68ced77179d4c90">LagrangianLoadBalancing&lt; dim &gt;</a>
 </li>
 <li>set_kinematic_viscosity()
 : <a class="el" href="classCarreau.html#a78c8590574d172714e92ca75ff8e3801">Carreau</a>
@@ -175,9 +193,6 @@ $(function() {
 : <a class="el" href="classCompositeShape.html#aa01c6ca901fc3e2762b0baf686b9d33b">CompositeShape&lt; dim &gt;</a>
 , <a class="el" href="classIBParticle.html#aa6f51ae5c5232f784ca2b6bac7e8ab7d">IBParticle&lt; dim &gt;</a>
 , <a class="el" href="classShape.html#a4012470e896cf61c53ad611eb1a26e06">Shape&lt; dim &gt;</a>
-</li>
-<li>set_load_balance_iteration_check_function()
-: <a class="el" href="classDEMSolver.html#a31c9e5e4fcf5b292e76ea454bb6eaa31">DEMSolver&lt; dim &gt;</a>
 </li>
 <li>set_n()
 : <a class="el" href="classCarreau.html#a90505f365d8fa846133219b4c4837b6b">Carreau</a>
@@ -193,20 +208,16 @@ $(function() {
 </li>
 <li>set_parameters()
 : <a class="el" href="classAdaptiveSparseContacts.html#a4f401c39f568e1b38b9a6bc9a6af32a9">AdaptiveSparseContacts&lt; dim &gt;</a>
+, <a class="el" href="classLagrangianLoadBalancing.html#a3c29f7ee76a8967586b69624584f9821">LagrangianLoadBalancing&lt; dim &gt;</a>
 </li>
 <li>set_part_of_a_composite()
 : <a class="el" href="classShape.html#acc115201008418068265ed7fd5f092ae">Shape&lt; dim &gt;</a>
 </li>
-<li>set_particle_particle_contact_force()
-: <a class="el" href="classCFDDEMSolver.html#ab4f50550d8617490244ee80c9b2f227c">CFDDEMSolver&lt; dim &gt;</a>
-, <a class="el" href="classDEMSolver.html#ac40d057d64f99fe5a877d5cc28572327">DEMSolver&lt; dim &gt;</a>
-</li>
-<li>set_particle_wall_contact_force()
-: <a class="el" href="classCFDDEMSolver.html#a630872ba8555ea0cfa09c95bcea5d3a7">CFDDEMSolver&lt; dim &gt;</a>
-, <a class="el" href="classDEMSolver.html#ad452023734ba49d802b6405ef7a922be">DEMSolver&lt; dim &gt;</a>
+<li>set_periodic_boundaries_enabled()
+: <a class="el" href="classDEMActionManager.html#aabc812aa959238fb3463303573ae2a9a">DEMActionManager</a>
 </li>
 <li>set_periodic_boundaries_information()
-: <a class="el" href="classPeriodicBoundariesManipulator.html#a4bb01e3789834388ab0745d2575248ab">PeriodicBoundariesManipulator&lt; dim &gt;</a>
+: <a class="el" href="classPeriodicBoundariesManipulator.html#a2e5957327cd067b68e0f104ad49073aa">PeriodicBoundariesManipulator&lt; dim &gt;</a>
 </li>
 <li>set_phase_coefficient()
 : <a class="el" href="classHeatTransfer.html#af942f57eb949d35aadc77d28a84adebe">HeatTransfer&lt; dim &gt;</a>
@@ -232,21 +243,33 @@ $(function() {
 <li>set_solid()
 : <a class="el" href="classMultiphysicsInterface.html#a55ff9a6ec97cd2d80d3ae6c1a195aa77">MultiphysicsInterface&lt; dim &gt;</a>
 </li>
+<li>set_solid_objects_enabled()
+: <a class="el" href="classDEMActionManager.html#a8bb02151cdca968312dc2f520a05492a">DEMActionManager</a>
+</li>
 <li>set_solution()
 : <a class="el" href="classMultiphysicsInterface.html#a24c4630b62ccf275391781c0138d2ff5">MultiphysicsInterface&lt; dim &gt;</a>
 </li>
+<li>set_solution_from_checkpoint()
+: <a class="el" href="classNavierStokesBase.html#a7a64d8857a628657805e1dda3508865c">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
+</li>
 <li>set_solution_vector()
-: <a class="el" href="classGDNavierStokesSolver.html#a820274d170f00036a43f316d3a00bdee">GDNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsBlock.html#a157cfee598607fe73fa317c9485fc69d">FluidDynamicsBlock&lt; dim &gt;</a>
+</li>
+<li>set_sparse_contacts_enabled()
+: <a class="el" href="classDEMActionManager.html#aa137d3e58cff897aedf7b4d64f321f23">DEMActionManager</a>
 </li>
 <li>set_suggested_time_step()
 : <a class="el" href="classSimulationControl.html#aa6a38ec53bec29f7d4a57142988c981d">SimulationControl</a>
+</li>
+<li>set_time()
+: <a class="el" href="classParsedFunctionCustom.html#af67ba2b73832032702c62ea5ccc7132f">ParsedFunctionCustom&lt; n_components &gt;</a>
 </li>
 <li>set_time_average_solution()
 : <a class="el" href="classMultiphysicsInterface.html#a791f019b8c5706bfe27dd903813e7f6d">MultiphysicsInterface&lt; dim &gt;</a>
 </li>
 <li>setup_AMG()
-: <a class="el" href="classGDNavierStokesSolver.html#a0bb4509808b91adfb85c2ff74c482c70">GDNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSNavierStokesSolver.html#aaa2c7b20b39211a58417e57d38bb3dd0">GLSNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsBlock.html#a59e8e66446052e42ebcab065c6c8fb15">FluidDynamicsBlock&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixBased.html#a51cacc5e8ff5fb865a37412b924ce101">FluidDynamicsMatrixBased&lt; dim &gt;</a>
 , <a class="el" href="classMFNavierStokesPreconditionGMG.html#acbe0cd58f06b468af51b5df022527552">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
 </li>
 <li>setup_and_calculate()
@@ -254,10 +277,10 @@ $(function() {
 </li>
 <li>setup_assemblers()
 : <a class="el" href="classCahnHilliard.html#a06f41b5561e4017c381bbb27217f0b2f">CahnHilliard&lt; dim &gt;</a>
-, <a class="el" href="classGDNavierStokesSolver.html#af7884e211c0a16a5e9063cb2533ee84c">GDNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSNavierStokesSolver.html#ac8fb59a2a39f6b2680a5fb50762a1737">GLSNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSSharpNavierStokesSolver.html#a6c0a5c3dcfbc9e79e54359e53131afc4">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSVANSSolver.html#a6109b3ee8f15dd62364109e82d7ac2ca">GLSVANSSolver&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsBlock.html#aaf4ee836bfc3b98cf0c70af384740564">FluidDynamicsBlock&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixBased.html#a53dc7e7aba58ac071e69f49b445d6169">FluidDynamicsMatrixBased&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsSharp.html#ac2c7ee915baac82ee04b896128b1e22d">FluidDynamicsSharp&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsVANS.html#a379c6cf37f33d8695641ff58eb1446f7">FluidDynamicsVANS&lt; dim &gt;</a>
 , <a class="el" href="classHeatTransfer.html#a6159956fd7e5d29c40eb5ba1e3d73c07">HeatTransfer&lt; dim &gt;</a>
 , <a class="el" href="classTracer.html#aa2505b526801876bb0e18dd02d6e7c73">Tracer&lt; dim &gt;</a>
 , <a class="el" href="classVolumeOfFluid.html#aaffb57c09215a873a29af17be0fa3b56">VolumeOfFluid&lt; dim &gt;</a>
@@ -268,13 +291,17 @@ $(function() {
 <li>setup_displacement()
 : <a class="el" href="classSolidBase.html#ac8bd2ffa327601876162a5d44d0b4d5b">SolidBase&lt; dim, spacedim &gt;</a>
 </li>
+<li>setup_distribution_type()
+: <a class="el" href="classCFDDEMSolver.html#a63137bf05ff3f846437641ac99147aba">CFDDEMSolver&lt; dim &gt;</a>
+, <a class="el" href="classDEMSolver.html#a8cd252994d88459ae17ac8e29fedb702">DEMSolver&lt; dim &gt;</a>
+</li>
 <li>setup_dof_handler()
 : <a class="el" href="classSerialSolid.html#a2e1e63989dd2a3a462f58972ff096f55">SerialSolid&lt; dim, spacedim &gt;</a>
 </li>
 <li>setup_dofs()
 : <a class="el" href="classAuxiliaryPhysics.html#a3d0c0d037152ce2e8552227c3dda383e">AuxiliaryPhysics&lt; dim, VectorType &gt;</a>
 , <a class="el" href="classCahnHilliard.html#a5e73668b024d2697820f386fdbebccd6">CahnHilliard&lt; dim &gt;</a>
-, <a class="el" href="classGLSVANSSolver.html#aa011a457a638b2a147d6d6921c2a3bef">GLSVANSSolver&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsVANS.html#a8b4d9d45b4f0e1fe9e3cb5d6c127c2fa">FluidDynamicsVANS&lt; dim &gt;</a>
 , <a class="el" href="classHeatTransfer.html#aca8c8523ca5b4d9df7c1ed977ed7d113">HeatTransfer&lt; dim &gt;</a>
 , <a class="el" href="classMultiphysicsInterface.html#a672f12b72244d326a8c07109e105468a">MultiphysicsInterface&lt; dim &gt;</a>
 , <a class="el" href="classNavierStokesBase.html#adf2f852055a04e76674325e408807a74">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
@@ -282,19 +309,25 @@ $(function() {
 , <a class="el" href="classVolumeOfFluid.html#a2f6f5ee7b4e9fcdd1fcdaacd0c4bc17d">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>setup_dofs_fd()
-: <a class="el" href="classGDNavierStokesSolver.html#a0d47dfecce6f2ed268aaee1b518a09ca">GDNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSNavierStokesSolver.html#a142dfa519254ad9e67c46cc1eafe2bf5">GLSNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classMFNavierStokesSolver.html#a8ee03cdf7aa3477bbbf0fc53a22c39a3">MFNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsBlock.html#ae814ce1c86c38dd9ae107fa03bcfd2f3">FluidDynamicsBlock&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixBased.html#ac035aa99d51ac1f199c37de0d96a8afc">FluidDynamicsMatrixBased&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixFree.html#ae0e681f512e30857d4e7de8d2ec62393">FluidDynamicsMatrixFree&lt; dim &gt;</a>
 , <a class="el" href="classNavierStokesBase.html#a34c629a49de72b06c8ff30192dd843af">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
 </li>
+<li>setup_functions_and_pointers()
+: <a class="el" href="classDEMSolver.html#aded92a6a08115c715411a6a90a6bc4c5">DEMSolver&lt; dim &gt;</a>
+</li>
 <li>setup_GMG()
-: <a class="el" href="classMFNavierStokesSolver.html#acb99476f14a59c1b475c0377ec04c73b">MFNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsMatrixFree.html#ab8a9b8cb5c2a7243f4189251743ecf3d">FluidDynamicsMatrixFree&lt; dim &gt;</a>
 </li>
 <li>setup_ILU()
-: <a class="el" href="classGDNavierStokesSolver.html#a383d2276dddc25795bdb333ff3939f24">GDNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSNavierStokesSolver.html#ad5f4d7b4e5330e9837d08ccb57b4523e">GLSNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsBlock.html#ac3f989e70d156fc33c9c1feef0bfcf34">FluidDynamicsBlock&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixBased.html#ab1ad01a4903849bde2cd19c36322e812">FluidDynamicsMatrixBased&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixFree.html#a2782cf405aded96b58eb98eddf087c1f">FluidDynamicsMatrixFree&lt; dim &gt;</a>
 , <a class="el" href="classMFNavierStokesPreconditionGMG.html#a2d8a2e84e7c9e890168af384c7e53784">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
-, <a class="el" href="classMFNavierStokesSolver.html#a66a607f5ebe35f21a9a4f26763fdbb81">MFNavierStokesSolver&lt; dim &gt;</a>
+</li>
+<li>setup_parameters()
+: <a class="el" href="classDEMSolver.html#a0ac63ef26bffad4bbf18c6ced323488a">DEMSolver&lt; dim &gt;</a>
 </li>
 <li>setup_particles()
 : <a class="el" href="classSolidBase.html#aea5ba1e94c9d54c1f7d0c7dd81dd1dd0">SolidBase&lt; dim, spacedim &gt;</a>
@@ -304,10 +337,13 @@ $(function() {
 </li>
 <li>setup_preconditioner()
 : <a class="el" href="classAuxiliaryPhysics.html#a664990d705edc069f7676ac5e575e3c8">AuxiliaryPhysics&lt; dim, VectorType &gt;</a>
-, <a class="el" href="classGDNavierStokesSolver.html#a55a5a1a553063e05169c1f28b5290895">GDNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSNavierStokesSolver.html#ac4ce5a5f0d3b09bc6953f39a60d4ad51">GLSNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classMFNavierStokesSolver.html#ac496af2ecb449cca0e888ac82aac1ec2">MFNavierStokesSolver&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsBlock.html#ac81dc5ad62d0961c27e8d8a09c5493fc">FluidDynamicsBlock&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixBased.html#aa9d4082f8100a4be7481c4a7b80121a7">FluidDynamicsMatrixBased&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixFree.html#a568a965e3a3f1522b15bc517730a64a6">FluidDynamicsMatrixFree&lt; dim &gt;</a>
 , <a class="el" href="classPhysicsSolver.html#a566177a0569619dcf0c3a5f2fb1cdf4d">PhysicsSolver&lt; VectorType &gt;</a>
+</li>
+<li>setup_solid_objects()
+: <a class="el" href="classDEMSolver.html#a46460ab641c53332c1030976e657507d">DEMSolver&lt; dim &gt;</a>
 </li>
 <li>setup_system()
 : <a class="el" href="classRPTL2Projection.html#a66232600a29707d4b81a13b84c70af73">RPTL2Projection&lt; dim &gt;</a>
@@ -318,11 +354,14 @@ $(function() {
 , <a class="el" href="classSerialSolid.html#aeea81ad3be95913c3112f40291761a53">SerialSolid&lt; dim, spacedim &gt;</a>
 , <a class="el" href="classSolidBase.html#a7f7dc77812dcd58d7e749b48b29516c4">SolidBase&lt; dim, spacedim &gt;</a>
 </li>
+<li>setup_triangulation_dependent_parameters()
+: <a class="el" href="classDEMSolver.html#acda15ec14dca93c8a0681c97f5fb183d">DEMSolver&lt; dim &gt;</a>
+</li>
 <li>Shape()
 : <a class="el" href="classShape.html#afe1e03ec9d78e28f160d88380ffd0a35">Shape&lt; dim &gt;</a>
 </li>
 <li>sharp_edge()
-: <a class="el" href="classGLSSharpNavierStokesSolver.html#a0c68a6279501530e6456e6ac4e5faaf6">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsSharp.html#a9dbc88f8ef0862757198f24bfd440f5c">FluidDynamicsSharp&lt; dim &gt;</a>
 </li>
 <li>sharpen_interface()
 : <a class="el" href="classVolumeOfFluid.html#acd5df94d457deefd7dcbf8a5fe360bf1">VolumeOfFluid&lt; dim &gt;</a>
@@ -357,20 +396,23 @@ $(function() {
 <li>smooth_phase_fraction()
 : <a class="el" href="classVolumeOfFluid.html#a31a63b403298bb51892a368eb48c5b8b">VolumeOfFluid&lt; dim &gt;</a>
 </li>
+<li>solid_objects_search_step()
+: <a class="el" href="classDEMActionManager.html#ab0fc704f087aeb3f9ef957872d93ebb7">DEMActionManager</a>
+</li>
 <li>SolidBase()
 : <a class="el" href="classSolidBase.html#a9f4dc8deca9f9a243067db8dd4f0492a">SolidBase&lt; dim, spacedim &gt;</a>
 </li>
 <li>solve()
 : <a class="el" href="classCFDDEMSolver.html#aaebd11ac00952aaaa99ebd66c43f7d87">CFDDEMSolver&lt; dim &gt;</a>
 , <a class="el" href="classDEMSolver.html#a11c71bdd8cbe5501c14faa7f348a5fb9">DEMSolver&lt; dim &gt;</a>
-, <a class="el" href="classGDNavierStokesSolver.html#ac67092a87cc168a564ad5a23e4f76955">GDNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSNavierStokesSolver.html#ab0b0983381a34bf2fa122936db0ebf47">GLSNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSNitscheNavierStokesSolver.html#a70f7a56a430f8a306fddee4404b81d9a">GLSNitscheNavierStokesSolver&lt; dim, spacedim &gt;</a>
-, <a class="el" href="classGLSSharpNavierStokesSolver.html#ae34cb3b31e3196c91b2840505440a3db">GLSSharpNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSVANSSolver.html#ad653b63b635c56db2ddfa51522d2ef32">GLSVANSSolver&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsBlock.html#a67ac89e0fd99460d82f1c2485ef0c79b">FluidDynamicsBlock&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixBased.html#a0851f8761d15071cf776a0467b339eaa">FluidDynamicsMatrixBased&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixFree.html#a112c8d96533da22791584cda7e730257">FluidDynamicsMatrixFree&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsNitsche.html#ab4ab3f511025e1c27b9957d38c9229c3">FluidDynamicsNitsche&lt; dim, spacedim &gt;</a>
+, <a class="el" href="classFluidDynamicsSharp.html#adb9ae8f22af839da06f5dc67994e9ff2">FluidDynamicsSharp&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsVANS.html#a473773b3e74c60de99b47ee5a707016d">FluidDynamicsVANS&lt; dim &gt;</a>
 , <a class="el" href="classInexactNewtonNonLinearSolver.html#a60831c74a53644aaae2d2fc55482e851">InexactNewtonNonLinearSolver&lt; VectorType &gt;</a>
 , <a class="el" href="classKinsolNewtonNonLinearSolver.html#a062f5a79d615d143ff6db81575584f11">KinsolNewtonNonLinearSolver&lt; VectorType &gt;</a>
-, <a class="el" href="classMFNavierStokesSolver.html#a55acf78ca6480efcbc6bcc259b451d7b">MFNavierStokesSolver&lt; dim &gt;</a>
 , <a class="el" href="classMultiphysicsInterface.html#a426a10cb2fe1a841c8cf792ec1072586">MultiphysicsInterface&lt; dim &gt;</a>
 , <a class="el" href="classNewtonNonLinearSolver.html#a55484f9456e1ea16e9b5c2f0c0e0ea56">NewtonNonLinearSolver&lt; VectorType &gt;</a>
 , <a class="el" href="classNonLinearSolver.html#abb030d08140fe6f2ecd6d8b73491bac7">NonLinearSolver&lt; VectorType &gt;</a>
@@ -388,17 +430,17 @@ $(function() {
 : <a class="el" href="classPostProcessorSmoothing.html#aef38dde9b3f7a208b052e96dca7c36ea">PostProcessorSmoothing&lt; dim, VectorType &gt;</a>
 </li>
 <li>solve_L2_system()
-: <a class="el" href="classGDNavierStokesSolver.html#a1537e085ebbd0086c010f4169a273b1e">GDNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsBlock.html#a0ebccf5930b1b638105a8d802febbb54">FluidDynamicsBlock&lt; dim &gt;</a>
 </li>
 <li>solve_L2_system_void_fraction()
-: <a class="el" href="classGLSVANSSolver.html#aaa984dc1dbc6e6ce934b5864d0f05098">GLSVANSSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsVANS.html#a0a6521ae5208632762859867ec8d28af">FluidDynamicsVANS&lt; dim &gt;</a>
 </li>
 <li>solve_linear_system()
 : <a class="el" href="classCahnHilliard.html#a6c3a985a76bf5b8443e6e7210a0f2b59">CahnHilliard&lt; dim &gt;</a>
-, <a class="el" href="classGDNavierStokesSolver.html#a93ce260445fbb01dcc30f6f4e87a8c70">GDNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSNavierStokesSolver.html#a95c4de6f06f3f48c7062b3ad568ff67b">GLSNavierStokesSolver&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsBlock.html#a2806f303696df61a7d5cddd518647727">FluidDynamicsBlock&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixBased.html#a2336f352ca23bd4532ceeffae3ea2890">FluidDynamicsMatrixBased&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixFree.html#a6e307657735f182fffb0ecc29a54668a">FluidDynamicsMatrixFree&lt; dim &gt;</a>
 , <a class="el" href="classHeatTransfer.html#ad6a1aed6cb61b0fe2e259f1fe25580ed">HeatTransfer&lt; dim &gt;</a>
-, <a class="el" href="classMFNavierStokesSolver.html#aaa38bbad875b3be70f5b17b085423335">MFNavierStokesSolver&lt; dim &gt;</a>
 , <a class="el" href="classMultiphysicsInterface.html#aa724939466b41f83ac1030ab9ff2d087">MultiphysicsInterface&lt; dim &gt;</a>
 , <a class="el" href="classPhysicsSolver.html#a210eb1a42329bbc5b66e0d449bd815b1">PhysicsSolver&lt; VectorType &gt;</a>
 , <a class="el" href="classRPTL2Projection.html#a2c1daf71fda03c4499943e2f147d01a8">RPTL2Projection&lt; dim &gt;</a>
@@ -418,18 +460,22 @@ $(function() {
 : <a class="el" href="classVolumeOfFluid.html#abe866945dc1c812517efe8058b7923a9">VolumeOfFluid&lt; dim &gt;</a>
 </li>
 <li>solve_system_BiCGStab()
-: <a class="el" href="classGLSNavierStokesSolver.html#afd0db1dcf099ad51d5990cbf1b1ee4cb">GLSNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsMatrixBased.html#a9087151e1f1ec0d29b67d88ddcda7887">FluidDynamicsMatrixBased&lt; dim &gt;</a>
 </li>
 <li>solve_system_direct()
-: <a class="el" href="classGLSNavierStokesSolver.html#aeb8bfb55924dec2cc14b3a9282e21078">GLSNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsMatrixBased.html#a96de3c8049456586c32acf2993d2aba9">FluidDynamicsMatrixBased&lt; dim &gt;</a>
 </li>
 <li>solve_system_GMRES()
-: <a class="el" href="classGDNavierStokesSolver.html#ae3a439c99c4bace713cfe748c1e003ff">GDNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classGLSNavierStokesSolver.html#a6dc692aa97572fc2fafde4a657230213">GLSNavierStokesSolver&lt; dim &gt;</a>
-, <a class="el" href="classMFNavierStokesSolver.html#a0230071d873c750a689746b9ac776166">MFNavierStokesSolver&lt; dim &gt;</a>
+: <a class="el" href="classFluidDynamicsBlock.html#a34973960e4d56a9882cb7d9d63065753">FluidDynamicsBlock&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixBased.html#a7ee5cdb5854d425ed7afd027861a4840">FluidDynamicsMatrixBased&lt; dim &gt;</a>
+, <a class="el" href="classFluidDynamicsMatrixFree.html#ab44aa15dc02cad3cbf5b813787cd10aa">FluidDynamicsMatrixFree&lt; dim &gt;</a>
 </li>
 <li>solve_t()
 : <a class="el" href="classParticleDetectorInteractions.html#ab54b281427a30e0468ac6f088aee87d0">ParticleDetectorInteractions&lt; dim &gt;</a>
+</li>
+<li>sort_particles_into_subdomains_and_cells()
+: <a class="el" href="classCFDDEMSolver.html#a1ceafcd5709812c9d1699d1c7b11d2b3">CFDDEMSolver&lt; dim &gt;</a>
+, <a class="el" href="classDEMSolver.html#a164711f92929c395ed44717adffebe88">DEMSolver&lt; dim &gt;</a>
 </li>
 <li>SourceTerm()
 : <a class="el" href="classSourceTerms_1_1SourceTerm.html#a10abb4a2696758535587e6906e748c5c">SourceTerms::SourceTerm&lt; dim &gt;</a>
@@ -470,15 +516,11 @@ $(function() {
 <li>statistics()
 : <a class="el" href="classstatistics.html#a31d6750c3251c979f5c2d013984e1162">statistics</a>
 </li>
-<li>store_candidates()
-: <a class="el" href="classParticleParticleBroadSearch.html#a344c2c3221f5406b75f47840cfbe96ba">ParticleParticleBroadSearch&lt; dim &gt;</a>
-, <a class="el" href="classParticleWallBroadSearch.html#a98de1d7162aa686d05b59a07742122c6">ParticleWallBroadSearch&lt; dim &gt;</a>
+<li>superquadric()
+: <a class="el" href="classSuperquadric.html#ac9e380308c0e0904223379f562686a9b">Superquadric&lt; dim &gt;</a>
 </li>
 <li>Superquadric()
 : <a class="el" href="classSuperquadric.html#a8dbeda02755251660381a8ed0d870d24">Superquadric&lt; dim &gt;</a>
-</li>
-<li>superquadric()
-: <a class="el" href="classSuperquadric.html#ac9e380308c0e0904223379f562686a9b">Superquadric&lt; dim &gt;</a>
 </li>
 <li>superquadric_gradient()
 : <a class="el" href="classSuperquadric.html#adc590f1b05a81a68c794ec7dbc41103d">Superquadric&lt; dim &gt;</a>
