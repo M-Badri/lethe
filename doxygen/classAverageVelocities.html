@@ -106,10 +106,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac09cf8c896ed215b16e9003888515c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fe9a62adc5db14fad5de50a654f1d3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAverageVelocities.html#a5fe9a62adc5db14fad5de50a654f1d3e">post_mesh_adaptation</a> ()</td></tr>
 <tr class="separator:a5fe9a62adc5db14fad5de50a654f1d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a461642c7851d1c8081d622ddd79b198c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const VectorType * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAverageVelocities.html#a461642c7851d1c8081d622ddd79b198c">save</a> (std::string prefix)</td></tr>
-<tr class="separator:a461642c7851d1c8081d622ddd79b198c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82921467923dedab21a555aeac18dd37"><td class="memItemLeft" align="right" valign="top">std::vector&lt; VectorType * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAverageVelocities.html#a82921467923dedab21a555aeac18dd37">read</a> (std::string prefix)</td></tr>
-<tr class="separator:a82921467923dedab21a555aeac18dd37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bd6d1e85efbdb6d0af1dfc43b0f8bb7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const VectorType * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAverageVelocities.html#a2bd6d1e85efbdb6d0af1dfc43b0f8bb7">save</a> (const std::string &amp;prefix)</td></tr>
+<tr class="separator:a2bd6d1e85efbdb6d0af1dfc43b0f8bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad018b134f104e2aa574f7d329f5f1a5e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; VectorType * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAverageVelocities.html#ad018b134f104e2aa574f7d329f5f1a5e">read</a> (const std::string &amp;prefix)</td></tr>
+<tr class="separator:ad018b134f104e2aa574f7d329f5f1a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -537,8 +537,8 @@ template&lt;int dim, typename VectorType , typename DofsType &gt; </div>
 
 </div>
 </div>
-<a id="a82921467923dedab21a555aeac18dd37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82921467923dedab21a555aeac18dd37">&#9670;&nbsp;</a></span>read()</h2>
+<a id="ad018b134f104e2aa574f7d329f5f1a5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad018b134f104e2aa574f7d329f5f1a5e">&#9670;&nbsp;</a></span>read()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -548,7 +548,7 @@ template&lt;int dim, typename VectorType , typename DofsType &gt; </div>
         <tr>
           <td class="memname">std::vector&lt; VectorType * &gt; <a class="el" href="classAverageVelocities.html">AverageVelocities</a>&lt; dim, VectorType, DofsType &gt;::read </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>prefix</em></td><td>)</td>
           <td></td>
         </tr>
@@ -568,8 +568,8 @@ template&lt;int dim, typename VectorType , typename DofsType &gt; </div>
 
 </div>
 </div>
-<a id="a461642c7851d1c8081d622ddd79b198c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a461642c7851d1c8081d622ddd79b198c">&#9670;&nbsp;</a></span>save()</h2>
+<a id="a2bd6d1e85efbdb6d0af1dfc43b0f8bb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bd6d1e85efbdb6d0af1dfc43b0f8bb7">&#9670;&nbsp;</a></span>save()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -579,7 +579,7 @@ template&lt;int dim, typename VectorType , typename DofsType &gt; </div>
         <tr>
           <td class="memname">std::vector&lt; const VectorType * &gt; <a class="el" href="classAverageVelocities.html">AverageVelocities</a>&lt; dim, VectorType, DofsType &gt;::save </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>prefix</em></td><td>)</td>
           <td></td>
         </tr>

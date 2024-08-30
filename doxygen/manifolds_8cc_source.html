@@ -227,7 +227,7 @@ $(function() {
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        }</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (manifolds.<a class="code" href="classParameters_1_1Manifolds.html#a940da259fab3a068ec18e1c9fa343147">types</a>[i] == <a class="code" href="classParameters_1_1Manifolds.html#a104ef04cd60eac47ebd1636a0a9fe68aa9d16c7d43a5788b728d840cbef6983bf">Parameters::Manifolds::ManifoldType::iges</a>)</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        {</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;          <a class="code" href="manifolds_8cc.html#a3ec31b71d7021a6572999050ce87cb76">attach_cad_to_manifold</a>(triangulation,</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;          <a class="code" href="manifolds_8cc.html#acf3cc9c0fa83515d767d0f7cb4882344">attach_cad_to_manifold</a>(triangulation,</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                                 manifolds.<a class="code" href="classParameters_1_1Manifolds.html#a6ef402c1be961cf1ca1dd38d44915dbd">cad_files</a>[i],</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                                 manifolds.<a class="code" href="classParameters_1_1Manifolds.html#aad5dff23944c7397f36556c781992e05">id</a>[i]);</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        }</div>
@@ -240,26 +240,26 @@ $(function() {
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="manifolds_8h.html#a92f5f220c4b61859f1d6686b5421ffe5">  162</a></span>&#160;<a class="code" href="manifolds_8cc.html#a3ec31b71d7021a6572999050ce87cb76">attach_cad_to_manifold</a>(parallel::DistributedTriangulationBase&lt;2&gt; &amp;,</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                       std::string,</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                       <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)</div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="manifolds_8h.html#a3480a099a06add9277e1226e8f916a1f">  162</a></span>&#160;<a class="code" href="manifolds_8cc.html#acf3cc9c0fa83515d767d0f7cb4882344">attach_cad_to_manifold</a>(parallel::DistributedTriangulationBase&lt;2&gt; &amp;,</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                       <span class="keyword">const</span> std::string &amp;,</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                       <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;{</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;IGES manifolds are not supported in 2D&quot;</span>);</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="manifolds_8h.html#a4e5d58167bf285ec3e5c19346634c856">  170</a></span>&#160;<a class="code" href="manifolds_8cc.html#a3ec31b71d7021a6572999050ce87cb76">attach_cad_to_manifold</a>(parallel::DistributedTriangulationBase&lt;2, 3&gt; &amp;,</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                       std::string,</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                       <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="manifolds_8h.html#adfb92b7b876a8528f8ac31455976d7ff">  170</a></span>&#160;<a class="code" href="manifolds_8cc.html#acf3cc9c0fa83515d767d0f7cb4882344">attach_cad_to_manifold</a>(parallel::DistributedTriangulationBase&lt;2, 3&gt; &amp;,</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                       <span class="keyword">const</span> std::string &amp;,</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                       <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;{</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;IGES manifolds are not supported in 2D/3D&quot;</span>);</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="preprocessor">#ifdef DEAL_II_WITH_OPENCASCADE</span></div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<a class="code" href="manifolds_8cc.html#a3ec31b71d7021a6572999050ce87cb76">attach_cad_to_manifold</a>(parallel::DistributedTriangulationBase&lt;3&gt; &amp;triangulation,</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                       std::string                                cad_name,</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                       <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>                               manifold_id)</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<a class="code" href="manifolds_8cc.html#acf3cc9c0fa83515d767d0f7cb4882344">attach_cad_to_manifold</a>(parallel::DistributedTriangulationBase&lt;3&gt; &amp;triangulation,</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                       <span class="keyword">const</span> std::string                         &amp;cad_name,</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                       <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>                         manifold_id)</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;{</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  TopoDS_Shape cad_surface = OpenCASCADE::read_IGES(cad_name, 1e-3);</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
@@ -287,9 +287,9 @@ $(function() {
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="manifolds_8h.html#ad04572fd19cd8452afdbfc1b5a0c2392">  209</a></span>&#160;<a class="code" href="manifolds_8cc.html#a3ec31b71d7021a6572999050ce87cb76">attach_cad_to_manifold</a>(parallel::DistributedTriangulationBase&lt;3&gt; &amp;,</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                       std::string,</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                       <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)</div>
+<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="manifolds_8h.html#a653a1d6299f7f51059226cf48293f0cb">  209</a></span>&#160;<a class="code" href="manifolds_8cc.html#acf3cc9c0fa83515d767d0f7cb4882344">attach_cad_to_manifold</a>(parallel::DistributedTriangulationBase&lt;3&gt; &amp;,</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                       <span class="keyword">const</span> std::string &amp;,</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                       <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;{</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="keywordflow">throw</span> std::runtime_error(</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="stringliteral">&quot;IGES manifolds require DEAL_II to be compiled with OPENCASCADE&quot;</span>);</div>
@@ -327,8 +327,8 @@ $(function() {
 <div class="ttc" id="aclassParameters_1_1Manifolds_html_ac35e5eed60aaa8a3249fb814e5f2ffb9"><div class="ttname"><a href="classParameters_1_1Manifolds.html#ac35e5eed60aaa8a3249fb814e5f2ffb9">Parameters::Manifolds::manifold_point</a></div><div class="ttdeci">std::vector&lt; std::string &gt; manifold_point</div><div class="ttdef"><b>Definition:</b> <a href="manifolds_8h_source.html#l00059">manifolds.h:59</a></div></div>
 <div class="ttc" id="aclassParameters_1_1Manifolds_html_af5f51c682b9b64847bf2879e02413aec"><div class="ttname"><a href="classParameters_1_1Manifolds.html#af5f51c682b9b64847bf2879e02413aec">Parameters::Manifolds::declare_parameters</a></div><div class="ttdeci">void declare_parameters(ParameterHandler &amp;prm)</div><div class="ttdef"><b>Definition:</b> <a href="manifolds_8cc_source.html#l00062">manifolds.cc:62</a></div></div>
 <div class="ttc" id="aclassParameters_1_1Manifolds_html_aff5b5b48fcdf7115a3a74d3c2a22dbe4"><div class="ttname"><a href="classParameters_1_1Manifolds.html#aff5b5b48fcdf7115a3a74d3c2a22dbe4">Parameters::Manifolds::parse_parameters</a></div><div class="ttdeci">void parse_parameters(ParameterHandler &amp;prm)</div><div class="ttdef"><b>Definition:</b> <a href="manifolds_8cc_source.html#l00088">manifolds.cc:88</a></div></div>
-<div class="ttc" id="amanifolds_8cc_html_a3ec31b71d7021a6572999050ce87cb76"><div class="ttname"><a href="manifolds_8cc.html#a3ec31b71d7021a6572999050ce87cb76">attach_cad_to_manifold</a></div><div class="ttdeci">void attach_cad_to_manifold(parallel::DistributedTriangulationBase&lt; 2 &gt; &amp;, std::string, unsigned int)</div><div class="ttdoc">Attaches CAD manifolds using IGES files to boundaries of the triangulation This function attaches a C...</div><div class="ttdef"><b>Definition:</b> <a href="manifolds_8cc_source.html#l00162">manifolds.cc:162</a></div></div>
 <div class="ttc" id="amanifolds_8cc_html_a665658dbe45c11149a27c1fae4ab4320"><div class="ttname"><a href="manifolds_8cc.html#a665658dbe45c11149a27c1fae4ab4320">attach_manifolds_to_triangulation</a></div><div class="ttdeci">void attach_manifolds_to_triangulation(parallel::DistributedTriangulationBase&lt; dim, spacedim &gt; &amp;triangulation, Parameters::Manifolds manifolds)</div><div class="ttdoc">Attaches manifold to boundaries of the triangulation.</div><div class="ttdef"><b>Definition:</b> <a href="manifolds_8cc_source.html#l00108">manifolds.cc:108</a></div></div>
+<div class="ttc" id="amanifolds_8cc_html_acf3cc9c0fa83515d767d0f7cb4882344"><div class="ttname"><a href="manifolds_8cc.html#acf3cc9c0fa83515d767d0f7cb4882344">attach_cad_to_manifold</a></div><div class="ttdeci">void attach_cad_to_manifold(parallel::DistributedTriangulationBase&lt; 2 &gt; &amp;, const std::string &amp;, const unsigned int)</div><div class="ttdoc">Attaches CAD manifolds using IGES files to boundaries of the triangulation This function attaches a C...</div><div class="ttdef"><b>Definition:</b> <a href="manifolds_8cc_source.html#l00162">manifolds.cc:162</a></div></div>
 <div class="ttc" id="amanifolds_8h_html"><div class="ttname"><a href="manifolds_8h.html">manifolds.h</a></div></div>
 <div class="ttc" id="anamespaceParameters_html"><div class="ttname"><a href="namespaceParameters.html">Parameters</a></div><div class="ttdef"><b>Definition:</b> <a href="ale_8h_source.html#l00027">ale.h:28</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

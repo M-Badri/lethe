@@ -118,12 +118,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a59617a85886a95bd730ceb30a3f3373c"><td class="memTemplParams" colspan="2">template&lt;int dim&gt; </td></tr>
 <tr class="memitem:a59617a85886a95bd730ceb30a3f3373c"><td class="memTemplItemLeft" align="right" valign="top">TableHandler&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="utilities_8cc.html#a59617a85886a95bd730ceb30a3f3373c">make_table_tensors_scalars</a> (const std::vector&lt; Tensor&lt; 1, dim &gt;&gt; &amp;independent_vector, const std::vector&lt; std::string &gt; &amp;independent_column_names, const std::vector&lt; double &gt; &amp;dependent_vector, const std::string &amp;dependent_column_name, const unsigned int display_precision, const bool display_scientific_notation)</td></tr>
 <tr class="separator:a59617a85886a95bd730ceb30a3f3373c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae868ae9711fd3f001c6a2eca6ab7ce6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utilities_8cc.html#ae868ae9711fd3f001c6a2eca6ab7ce6e">fill_table_from_file</a> (TableHandler &amp;table, const std::string file_name, const std::string delimiter)</td></tr>
-<tr class="separator:ae868ae9711fd3f001c6a2eca6ab7ce6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8be4ba61245379ba9fff94953aef6fa7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utilities_8cc.html#a8be4ba61245379ba9fff94953aef6fa7">fill_vectors_from_file</a> (std::map&lt; std::string, std::vector&lt; double &gt;&gt; &amp;map, std::string file, const std::string delimiter)</td></tr>
-<tr class="separator:a8be4ba61245379ba9fff94953aef6fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae622cf202f387075d097d58f6770d4d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utilities_8cc.html#ae622cf202f387075d097d58f6770d4d2">fill_string_vectors_from_file</a> (std::map&lt; std::string, std::vector&lt; std::string &gt;&gt; &amp;map, std::string file, const std::string delimiter)</td></tr>
-<tr class="separator:ae622cf202f387075d097d58f6770d4d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a15c94c7b62291bc0451cfa1cb05449"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utilities_8cc.html#a4a15c94c7b62291bc0451cfa1cb05449">fill_table_from_file</a> (TableHandler &amp;table, const std::string &amp;file_name, const std::string &amp;delimiter)</td></tr>
+<tr class="separator:a4a15c94c7b62291bc0451cfa1cb05449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae107a9d0a517d598e98c156e84b0cb89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utilities_8cc.html#ae107a9d0a517d598e98c156e84b0cb89">fill_vectors_from_file</a> (std::map&lt; std::string, std::vector&lt; double &gt;&gt; &amp;map, const std::string &amp;file, const std::string &amp;delimiter)</td></tr>
+<tr class="separator:ae107a9d0a517d598e98c156e84b0cb89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7d71f44dadedbbb652ae95df4887f9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utilities_8cc.html#ad7d71f44dadedbbb652ae95df4887f9d">fill_string_vectors_from_file</a> (std::map&lt; std::string, std::vector&lt; std::string &gt;&gt; &amp;map, const std::string &amp;file, const std::string &amp;delimiter)</td></tr>
+<tr class="separator:ad7d71f44dadedbbb652ae95df4887f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b182f49ed10ffa3d2d50a9a309cd2f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utilities_8cc.html#a4b182f49ed10ffa3d2d50a9a309cd2f0">create_output_folder</a> (const std::string &amp;dirname)</td></tr>
 <tr class="separator:a4b182f49ed10ffa3d2d50a9a309cd2f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a89abf0bc456675f8fef37a870c0bd6"><td class="memItemLeft" align="right" valign="top">template TableHandler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utilities_8cc.html#a0a89abf0bc456675f8fef37a870c0bd6">make_table_scalars_vectors</a> (const std::vector&lt; double &gt; &amp;independent_values, const std::string &amp;independent_column_name, const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;dependent_vector, const std::vector&lt; std::string &gt; &amp;dependent_column_names, const unsigned int display_precision, const bool display_scientific_notation)</td></tr>
@@ -198,12 +198,12 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="utilities_8cc_source.html#l00365">365</a> of file <a class="el" href="utilities_8cc_source.html">utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="utilities_8cc_source.html#l00363">363</a> of file <a class="el" href="utilities_8cc_source.html">utilities.cc</a>.</p>
 
 </div>
 </div>
-<a id="ae622cf202f387075d097d58f6770d4d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae622cf202f387075d097d58f6770d4d2">&#9670;&nbsp;</a></span>fill_string_vectors_from_file()</h2>
+<a id="ad7d71f44dadedbbb652ae95df4887f9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7d71f44dadedbbb652ae95df4887f9d">&#9670;&nbsp;</a></span>fill_string_vectors_from_file()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -217,13 +217,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>file_name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>delimiter</em> = <code>&quot;&#160;&quot;</code>&#160;</td>
         </tr>
         <tr>
@@ -248,8 +248,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae868ae9711fd3f001c6a2eca6ab7ce6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae868ae9711fd3f001c6a2eca6ab7ce6e">&#9670;&nbsp;</a></span>fill_table_from_file()</h2>
+<a id="a4a15c94c7b62291bc0451cfa1cb05449"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a15c94c7b62291bc0451cfa1cb05449">&#9670;&nbsp;</a></span>fill_table_from_file()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -263,13 +263,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>file_name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>delimiter</em> = <code>&quot;&#160;&quot;</code>&#160;</td>
         </tr>
         <tr>
@@ -294,8 +294,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8be4ba61245379ba9fff94953aef6fa7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8be4ba61245379ba9fff94953aef6fa7">&#9670;&nbsp;</a></span>fill_vectors_from_file()</h2>
+<a id="ae107a9d0a517d598e98c156e84b0cb89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae107a9d0a517d598e98c156e84b0cb89">&#9670;&nbsp;</a></span>fill_vectors_from_file()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -309,13 +309,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>file_name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>delimiter</em> = <code>&quot;&#160;&quot;</code>&#160;</td>
         </tr>
         <tr>
@@ -364,9 +364,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="utilities_8cc_source.html#l00631">631</a> of file <a class="el" href="utilities_8cc_source.html">utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="utilities_8cc_source.html#l00629">629</a> of file <a class="el" href="utilities_8cc_source.html">utilities.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="utilities_8cc_source.html#l00547">get_last_value_of_parameter()</a>.</p>
+<p class="reference">References <a class="el" href="utilities_8cc_source.html#l00545">get_last_value_of_parameter()</a>.</p>
 
 </div>
 </div>
@@ -405,7 +405,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="utilities_8cc_source.html#l00547">547</a> of file <a class="el" href="utilities_8cc_source.html">utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="utilities_8cc_source.html#l00545">545</a> of file <a class="el" href="utilities_8cc_source.html">utilities.cc</a>.</p>
 
 </div>
 </div>
@@ -433,9 +433,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="utilities_8cc_source.html#l00697">697</a> of file <a class="el" href="utilities_8cc_source.html">utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="utilities_8cc_source.html#l00695">695</a> of file <a class="el" href="utilities_8cc_source.html">utilities.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="utilities_8cc_source.html#l00587">get_max_value_of_parameter()</a>.</p>
+<p class="reference">References <a class="el" href="utilities_8cc_source.html#l00585">get_max_value_of_parameter()</a>.</p>
 
 </div>
 </div>
@@ -465,7 +465,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="utilities_8cc_source.html#l00587">587</a> of file <a class="el" href="utilities_8cc_source.html">utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="utilities_8cc_source.html#l00585">585</a> of file <a class="el" href="utilities_8cc_source.html">utilities.cc</a>.</p>
 
 </div>
 </div>

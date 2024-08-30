@@ -224,7 +224,7 @@ $(function() {
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keyword">const</span> parallel::distributed::Triangulation&lt;dim&gt; &amp;triangulation,</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <a class="code" href="classAdaptiveSparseContacts.html">AdaptiveSparseContacts&lt;dim&gt;</a>                     &amp;sparse_contacts_object)</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;{</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keyword">auto</span> action_manager = <a class="code" href="classDEMActionManager.html#a4b4056b87d7e85d3832581f90a4daa53">DEMActionManager::get_action_manager</a>();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keyword">auto</span> *action_manager = <a class="code" href="classDEMActionManager.html#a4b4056b87d7e85d3832581f90a4daa53">DEMActionManager::get_action_manager</a>();</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keywordtype">bool</span> use_default_function =</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    !action_manager-&gt;check_sparse_contacts_enabled() ||</div>

@@ -185,16 +185,16 @@ Functions</h2></td></tr>
 <tr class="memitem:a6cf3a8fabce0608b5487c5c517fbd1d8"><td class="memTemplParams" colspan="2">template&lt;int dim, int spacedim = dim&gt; </td></tr>
 <tr class="memitem:a6cf3a8fabce0608b5487c5c517fbd1d8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="manifolds_8h.html#a6cf3a8fabce0608b5487c5c517fbd1d8">attach_manifolds_to_triangulation</a> (parallel::DistributedTriangulationBase&lt; dim, spacedim &gt; &amp;triangulation, const <a class="el" href="classParameters_1_1Manifolds.html">Parameters::Manifolds</a> manifolds)</td></tr>
 <tr class="separator:a6cf3a8fabce0608b5487c5c517fbd1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92f5f220c4b61859f1d6686b5421ffe5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manifolds_8h.html#a92f5f220c4b61859f1d6686b5421ffe5">attach_cad_to_manifold</a> (parallel::DistributedTriangulationBase&lt; 2 &gt; &amp;triangulation, std::string cad_name, unsigned int manifold_id)</td></tr>
-<tr class="separator:a92f5f220c4b61859f1d6686b5421ffe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e5d58167bf285ec3e5c19346634c856"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manifolds_8h.html#a4e5d58167bf285ec3e5c19346634c856">attach_cad_to_manifold</a> (parallel::DistributedTriangulationBase&lt; 2, 3 &gt; &amp;triangulation, std::string cad_name, unsigned int manifold_id)</td></tr>
-<tr class="separator:a4e5d58167bf285ec3e5c19346634c856"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad04572fd19cd8452afdbfc1b5a0c2392"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manifolds_8h.html#ad04572fd19cd8452afdbfc1b5a0c2392">attach_cad_to_manifold</a> (parallel::DistributedTriangulationBase&lt; 3 &gt; &amp;triangulation, std::string cad_name, unsigned int manifold_id)</td></tr>
-<tr class="separator:ad04572fd19cd8452afdbfc1b5a0c2392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3480a099a06add9277e1226e8f916a1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manifolds_8h.html#a3480a099a06add9277e1226e8f916a1f">attach_cad_to_manifold</a> (parallel::DistributedTriangulationBase&lt; 2 &gt; &amp;triangulation, const std::string &amp;cad_name, const unsigned int manifold_id)</td></tr>
+<tr class="separator:a3480a099a06add9277e1226e8f916a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfb92b7b876a8528f8ac31455976d7ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manifolds_8h.html#adfb92b7b876a8528f8ac31455976d7ff">attach_cad_to_manifold</a> (parallel::DistributedTriangulationBase&lt; 2, 3 &gt; &amp;triangulation, const std::string &amp;cad_name, const unsigned int manifold_id)</td></tr>
+<tr class="separator:adfb92b7b876a8528f8ac31455976d7ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a653a1d6299f7f51059226cf48293f0cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manifolds_8h.html#a653a1d6299f7f51059226cf48293f0cb">attach_cad_to_manifold</a> (parallel::DistributedTriangulationBase&lt; 3 &gt; &amp;triangulation, const std::string &amp;cad_name, const unsigned int manifold_id)</td></tr>
+<tr class="separator:a653a1d6299f7f51059226cf48293f0cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a92f5f220c4b61859f1d6686b5421ffe5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92f5f220c4b61859f1d6686b5421ffe5">&#9670;&nbsp;</a></span>attach_cad_to_manifold() <span class="overload">[1/3]</span></h2>
+<a id="a3480a099a06add9277e1226e8f916a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3480a099a06add9277e1226e8f916a1f">&#9670;&nbsp;</a></span>attach_cad_to_manifold() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -208,13 +208,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>cad_name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramtype">const unsigned int&#160;</td>
           <td class="paramname"><em>manifold_id</em>&#160;</td>
         </tr>
         <tr>
@@ -239,8 +239,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4e5d58167bf285ec3e5c19346634c856"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e5d58167bf285ec3e5c19346634c856">&#9670;&nbsp;</a></span>attach_cad_to_manifold() <span class="overload">[2/3]</span></h2>
+<a id="adfb92b7b876a8528f8ac31455976d7ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfb92b7b876a8528f8ac31455976d7ff">&#9670;&nbsp;</a></span>attach_cad_to_manifold() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -254,13 +254,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>cad_name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramtype">const unsigned int&#160;</td>
           <td class="paramname"><em>manifold_id</em>&#160;</td>
         </tr>
         <tr>
@@ -275,8 +275,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad04572fd19cd8452afdbfc1b5a0c2392"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad04572fd19cd8452afdbfc1b5a0c2392">&#9670;&nbsp;</a></span>attach_cad_to_manifold() <span class="overload">[3/3]</span></h2>
+<a id="a653a1d6299f7f51059226cf48293f0cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a653a1d6299f7f51059226cf48293f0cb">&#9670;&nbsp;</a></span>attach_cad_to_manifold() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -290,13 +290,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>cad_name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramtype">const unsigned int&#160;</td>
           <td class="paramname"><em>manifold_id</em>&#160;</td>
         </tr>
         <tr>

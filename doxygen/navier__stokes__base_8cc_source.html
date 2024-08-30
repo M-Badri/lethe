@@ -363,18 +363,18 @@ $(function() {
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;      std::string independent_column_names = <span class="stringliteral">&quot;Boundary ID&quot;</span>;</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;      std::vector&lt;std::string&gt; dependent_column_names;</div>
-<div class="line"><a name="l00285"></a><span class="lineno"><a class="line" href="classNavierStokesBase.html#aa5e0b2804ae3afe6bb89e0a25fc26ed2">  285</a></span>&#160;      dependent_column_names.push_back(<span class="stringliteral">&quot;f_x&quot;</span>);</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;      dependent_column_names.push_back(<span class="stringliteral">&quot;f_y&quot;</span>);</div>
+<div class="line"><a name="l00285"></a><span class="lineno"><a class="line" href="classNavierStokesBase.html#aa5e0b2804ae3afe6bb89e0a25fc26ed2">  285</a></span>&#160;      dependent_column_names.emplace_back(<span class="stringliteral">&quot;f_x&quot;</span>);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;      dependent_column_names.emplace_back(<span class="stringliteral">&quot;f_y&quot;</span>);</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      <span class="keywordflow">if</span> (dim == 3)</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        dependent_column_names.push_back(<span class="stringliteral">&quot;f_z&quot;</span>);</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;      dependent_column_names.push_back(<span class="stringliteral">&quot;f_xv&quot;</span>);</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      dependent_column_names.push_back(<span class="stringliteral">&quot;f_yv&quot;</span>);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        dependent_column_names.emplace_back(<span class="stringliteral">&quot;f_z&quot;</span>);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;      dependent_column_names.emplace_back(<span class="stringliteral">&quot;f_xv&quot;</span>);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      dependent_column_names.emplace_back(<span class="stringliteral">&quot;f_yv&quot;</span>);</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;      <span class="keywordflow">if</span> (dim == 3)</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        dependent_column_names.push_back(<span class="stringliteral">&quot;f_zv&quot;</span>);</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      dependent_column_names.push_back(<span class="stringliteral">&quot;f_xp&quot;</span>);</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      dependent_column_names.push_back(<span class="stringliteral">&quot;f_yp&quot;</span>);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        dependent_column_names.emplace_back(<span class="stringliteral">&quot;f_zv&quot;</span>);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      dependent_column_names.emplace_back(<span class="stringliteral">&quot;f_xp&quot;</span>);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      dependent_column_names.emplace_back(<span class="stringliteral">&quot;f_yp&quot;</span>);</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;      <span class="keywordflow">if</span> (dim == 3)</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        dependent_column_names.push_back(<span class="stringliteral">&quot;f_zp&quot;</span>);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        dependent_column_names.emplace_back(<span class="stringliteral">&quot;f_zp&quot;</span>);</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;      TableHandler table = <a class="code" href="utilities_8h.html#a7d7935807703948c95807db1f02eca18">make_table_scalars_tensors</a>(</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        simulation_parameters.boundary_conditions.id,</div>
@@ -484,9 +484,9 @@ $(function() {
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;      std::string independent_column_names = <span class="stringliteral">&quot;Boundary ID&quot;</span>;</div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160; </div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;      std::vector&lt;std::string&gt; dependent_column_names;</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;      dependent_column_names.push_back(<span class="stringliteral">&quot;T_x&quot;</span>);</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;      dependent_column_names.push_back(<span class="stringliteral">&quot;T_y&quot;</span>);</div>
-<div class="line"><a name="l00408"></a><span class="lineno"><a class="line" href="classNavierStokesBase.html#a117c51c5894f115d42bdbd6e4ae78320">  408</a></span>&#160;      dependent_column_names.push_back(<span class="stringliteral">&quot;T_z&quot;</span>);</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;      dependent_column_names.emplace_back(<span class="stringliteral">&quot;T_x&quot;</span>);</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;      dependent_column_names.emplace_back(<span class="stringliteral">&quot;T_y&quot;</span>);</div>
+<div class="line"><a name="l00408"></a><span class="lineno"><a class="line" href="classNavierStokesBase.html#a117c51c5894f115d42bdbd6e4ae78320">  408</a></span>&#160;      dependent_column_names.emplace_back(<span class="stringliteral">&quot;T_z&quot;</span>);</div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160; </div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;      TableHandler table = <a class="code" href="utilities_8h.html#a7d7935807703948c95807db1f02eca18">make_table_scalars_tensors</a>(</div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        simulation_parameters.boundary_conditions.id,</div>
@@ -568,9 +568,9 @@ $(function() {
 <div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;          <span class="keywordflow">if</span> (simulation_parameters.simulation_control.method ==</div>
 <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;              <a class="code" href="structParameters_1_1SimulationControl.html#a75b33ae454da14bc72dbe078c121d7e9a4f997f546b68779b58e9f6f19dc2b9e5">Parameters::SimulationControl::TimeSteppingMethod::steady</a>)</div>
 <div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;            {</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;              sub_columns.push_back(<span class="stringliteral">&quot;cells&quot;</span>);</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;              sub_columns.push_back(<span class="stringliteral">&quot;error_velocity&quot;</span>);</div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;              sub_columns.push_back(<span class="stringliteral">&quot;error_pressure&quot;</span>);</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;              sub_columns.emplace_back(<span class="stringliteral">&quot;cells&quot;</span>);</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;              sub_columns.emplace_back(<span class="stringliteral">&quot;error_velocity&quot;</span>);</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;              sub_columns.emplace_back(<span class="stringliteral">&quot;error_pressure&quot;</span>);</div>
 <div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;              error_table.set_precision(</div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;                <span class="stringliteral">&quot;error_pressure&quot;</span>, simulation_control-&gt;get_log_precision());</div>
 <div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;              error_table.set_column_order(sub_columns);</div>
@@ -722,7 +722,7 @@ $(function() {
 <div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;          .temperature_max_values[c_id],</div>
 <div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;        this-&gt;simulation_parameters.constrain_solid_domain</div>
 <div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;          .filtered_phase_fraction_tolerance[c_id]);</div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;      this-&gt;stasis_constraint_structs.push_back(stasis_constraint_struct);</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;      this-&gt;stasis_constraint_structs.emplace_back(stasis_constraint_struct);</div>
 <div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;    }</div>
 <div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160; </div>
 <div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;  <span class="comment">// For temperature-dependent constraints</span></div>
@@ -803,7 +803,7 @@ $(function() {
 <div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160; </div>
 <div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160; </div>
 <div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;          <span class="keyword">auto</span> construction_data = TriangulationDescription::Utilities::</div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;            create_description_from_triangulation(basetria, 0);</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;            create_description_from_triangulation(basetria, <span class="keyword">nullptr</span>);</div>
 <div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160; </div>
 <div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;          triangulation-&gt;create_triangulation(construction_data);</div>
 <div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;        }</div>
@@ -853,7 +853,7 @@ $(function() {
 <div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;          <span class="keyword">auto</span> construction_data = TriangulationDescription::Utilities::</div>
 <div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;            create_description_from_triangulation(</div>
 <div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;              temporary_tri_triangulation,</div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;              0,</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;              <span class="keyword">nullptr</span>,</div>
 <div class="line"><a name="l00776"></a><span class="lineno"><a class="line" href="classNavierStokesBase.html#a4e9feead6145031632d44698801fb644">  776</a></span>&#160;              TriangulationDescription::Settings::</div>
 <div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;                construct_multigrid_hierarchy);</div>
 <div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;          box_to_refine.create_triangulation(construction_data);</div>
@@ -928,7 +928,7 @@ $(function() {
 <div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;      previous_solutions_transfer.reserve(previous_solutions.size());</div>
 <div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; previous_solutions.size(); ++i)</div>
 <div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;        {</div>
-<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;          previous_solutions_transfer.push_back(</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;          previous_solutions_transfer.emplace_back(</div>
 <div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;            parallel::distributed::SolutionTransfer&lt;dim, VectorType&gt;(</div>
 <div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;              this-&gt;dof_handler));</div>
 <div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;          <span class="keywordflow">if</span> constexpr (std::is_same_v&lt;</div>
@@ -1158,7 +1158,7 @@ $(function() {
 <div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;  previous_solutions_transfer.reserve(previous_solutions.size());</div>
 <div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; previous_solutions.size(); ++i)</div>
 <div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;    {</div>
-<div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;      previous_solutions_transfer.push_back(</div>
+<div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;      previous_solutions_transfer.emplace_back(</div>
 <div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;        parallel::distributed::SolutionTransfer&lt;dim, VectorType&gt;(</div>
 <div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;          this-&gt;dof_handler));</div>
 <div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;      <span class="keywordflow">if</span> constexpr (std::is_same_v&lt;VectorType,</div>
@@ -2247,11 +2247,11 @@ $(function() {
 <div class="line"><a name="l02166"></a><span class="lineno"> 2166</span>&#160;  <span class="comment">// Add the interpretation of the solution. The dim first components are the</span></div>
 <div class="line"><a name="l02167"></a><span class="lineno"> 2167</span>&#160;  <span class="comment">// velocity vectors and the following one is the pressure.</span></div>
 <div class="line"><a name="l02168"></a><span class="lineno"> 2168</span>&#160;  std::vector&lt;std::string&gt; solution_names(dim, <span class="stringliteral">&quot;velocity&quot;</span>);</div>
-<div class="line"><a name="l02169"></a><span class="lineno"> 2169</span>&#160;  solution_names.push_back(<span class="stringliteral">&quot;pressure&quot;</span>);</div>
+<div class="line"><a name="l02169"></a><span class="lineno"> 2169</span>&#160;  solution_names.emplace_back(<span class="stringliteral">&quot;pressure&quot;</span>);</div>
 <div class="line"><a name="l02170"></a><span class="lineno"> 2170</span>&#160;  std::vector&lt;DataComponentInterpretation::DataComponentInterpretation&gt;</div>
 <div class="line"><a name="l02171"></a><span class="lineno"> 2171</span>&#160;    data_component_interpretation(</div>
 <div class="line"><a name="l02172"></a><span class="lineno"> 2172</span>&#160;      dim, DataComponentInterpretation::component_is_part_of_vector);</div>
-<div class="line"><a name="l02173"></a><span class="lineno"> 2173</span>&#160;  data_component_interpretation.push_back(</div>
+<div class="line"><a name="l02173"></a><span class="lineno"> 2173</span>&#160;  data_component_interpretation.emplace_back(</div>
 <div class="line"><a name="l02174"></a><span class="lineno"> 2174</span>&#160;    DataComponentInterpretation::component_is_scalar);</div>
 <div class="line"><a name="l02175"></a><span class="lineno"> 2175</span>&#160; </div>
 <div class="line"><a name="l02176"></a><span class="lineno"> 2176</span>&#160;  DataOut&lt;dim&gt; data_out;</div>
@@ -2278,12 +2278,12 @@ $(function() {
 <div class="line"><a name="l02197"></a><span class="lineno"> 2197</span>&#160;      <span class="comment">// components are the average velocity vectors and the following one is</span></div>
 <div class="line"><a name="l02198"></a><span class="lineno"> 2198</span>&#160;      <span class="comment">// the average pressure. (&lt;u&gt;, &lt;v&gt;, &lt;w&gt;, &lt;p&gt;)</span></div>
 <div class="line"><a name="l02199"></a><span class="lineno"> 2199</span>&#160;      std::vector&lt;std::string&gt; average_solution_names(dim, <span class="stringliteral">&quot;average_velocity&quot;</span>);</div>
-<div class="line"><a name="l02200"></a><span class="lineno"> 2200</span>&#160;      average_solution_names.push_back(<span class="stringliteral">&quot;average_pressure&quot;</span>);</div>
+<div class="line"><a name="l02200"></a><span class="lineno"> 2200</span>&#160;      average_solution_names.emplace_back(<span class="stringliteral">&quot;average_pressure&quot;</span>);</div>
 <div class="line"><a name="l02201"></a><span class="lineno"> 2201</span>&#160; </div>
 <div class="line"><a name="l02202"></a><span class="lineno"> 2202</span>&#160;      std::vector&lt;DataComponentInterpretation::DataComponentInterpretation&gt;</div>
 <div class="line"><a name="l02203"></a><span class="lineno"> 2203</span>&#160;        average_data_component_interpretation(</div>
 <div class="line"><a name="l02204"></a><span class="lineno"> 2204</span>&#160;          dim, DataComponentInterpretation::component_is_part_of_vector);</div>
-<div class="line"><a name="l02205"></a><span class="lineno"> 2205</span>&#160;      average_data_component_interpretation.push_back(</div>
+<div class="line"><a name="l02205"></a><span class="lineno"> 2205</span>&#160;      average_data_component_interpretation.emplace_back(</div>
 <div class="line"><a name="l02206"></a><span class="lineno"> 2206</span>&#160;        DataComponentInterpretation::component_is_scalar);</div>
 <div class="line"><a name="l02207"></a><span class="lineno"> 2207</span>&#160; </div>
 <div class="line"><a name="l02208"></a><span class="lineno"> 2208</span>&#160;      data_out.add_data_vector(</div>
@@ -2297,11 +2297,11 @@ $(function() {
 <div class="line"><a name="l02216"></a><span class="lineno"> 2216</span>&#160;      <span class="comment">// the following ones are others resolved reynolds stresses.</span></div>
 <div class="line"><a name="l02217"></a><span class="lineno"> 2217</span>&#160;      std::vector&lt;std::string&gt; reynolds_normal_stress_names(</div>
 <div class="line"><a name="l02218"></a><span class="lineno"> 2218</span>&#160;        dim, <span class="stringliteral">&quot;reynolds_normal_stress&quot;</span>);</div>
-<div class="line"><a name="l02219"></a><span class="lineno"> 2219</span>&#160;      reynolds_normal_stress_names.push_back(<span class="stringliteral">&quot;turbulent_kinetic_energy&quot;</span>);</div>
+<div class="line"><a name="l02219"></a><span class="lineno"> 2219</span>&#160;      reynolds_normal_stress_names.emplace_back(<span class="stringliteral">&quot;turbulent_kinetic_energy&quot;</span>);</div>
 <div class="line"><a name="l02220"></a><span class="lineno"> 2220</span>&#160;      std::vector&lt;DataComponentInterpretation::DataComponentInterpretation&gt;</div>
 <div class="line"><a name="l02221"></a><span class="lineno"> 2221</span>&#160;        reynolds_normal_stress_data_component_interpretation(</div>
 <div class="line"><a name="l02222"></a><span class="lineno"> 2222</span>&#160;          dim, DataComponentInterpretation::component_is_part_of_vector);</div>
-<div class="line"><a name="l02223"></a><span class="lineno"> 2223</span>&#160;      reynolds_normal_stress_data_component_interpretation.push_back(</div>
+<div class="line"><a name="l02223"></a><span class="lineno"> 2223</span>&#160;      reynolds_normal_stress_data_component_interpretation.emplace_back(</div>
 <div class="line"><a name="l02224"></a><span class="lineno"> 2224</span>&#160;        DataComponentInterpretation::component_is_scalar);</div>
 <div class="line"><a name="l02225"></a><span class="lineno"> 2225</span>&#160; </div>
 <div class="line"><a name="l02226"></a><span class="lineno"> 2226</span>&#160; </div>
@@ -2309,19 +2309,19 @@ $(function() {
 <div class="line"><a name="l02228"></a><span class="lineno"> 2228</span>&#160;        <span class="stringliteral">&quot;reynolds_shear_stress_uv&quot;</span>};</div>
 <div class="line"><a name="l02229"></a><span class="lineno"> 2229</span>&#160;      <span class="keywordflow">if</span> (dim == 2)</div>
 <div class="line"><a name="l02230"></a><span class="lineno"> 2230</span>&#160;        {</div>
-<div class="line"><a name="l02231"></a><span class="lineno"> 2231</span>&#160;          reynolds_shear_stress_names.push_back(<span class="stringliteral">&quot;dummy_rss_2d&quot;</span>);</div>
+<div class="line"><a name="l02231"></a><span class="lineno"> 2231</span>&#160;          reynolds_shear_stress_names.emplace_back(<span class="stringliteral">&quot;dummy_rss_2d&quot;</span>);</div>
 <div class="line"><a name="l02232"></a><span class="lineno"> 2232</span>&#160;        }</div>
 <div class="line"><a name="l02233"></a><span class="lineno"> 2233</span>&#160;      <span class="keywordflow">if</span> (dim == 3)</div>
 <div class="line"><a name="l02234"></a><span class="lineno"> 2234</span>&#160;        {</div>
-<div class="line"><a name="l02235"></a><span class="lineno"> 2235</span>&#160;          reynolds_shear_stress_names.push_back(<span class="stringliteral">&quot;reynolds_shear_stress_vw&quot;</span>);</div>
-<div class="line"><a name="l02236"></a><span class="lineno"> 2236</span>&#160;          reynolds_shear_stress_names.push_back(<span class="stringliteral">&quot;reynolds_shear_stress_uw&quot;</span>);</div>
+<div class="line"><a name="l02235"></a><span class="lineno"> 2235</span>&#160;          reynolds_shear_stress_names.emplace_back(<span class="stringliteral">&quot;reynolds_shear_stress_vw&quot;</span>);</div>
+<div class="line"><a name="l02236"></a><span class="lineno"> 2236</span>&#160;          reynolds_shear_stress_names.emplace_back(<span class="stringliteral">&quot;reynolds_shear_stress_uw&quot;</span>);</div>
 <div class="line"><a name="l02237"></a><span class="lineno"> 2237</span>&#160;        }</div>
-<div class="line"><a name="l02238"></a><span class="lineno"> 2238</span>&#160;      reynolds_shear_stress_names.push_back(<span class="stringliteral">&quot;dummy_rss&quot;</span>);</div>
+<div class="line"><a name="l02238"></a><span class="lineno"> 2238</span>&#160;      reynolds_shear_stress_names.emplace_back(<span class="stringliteral">&quot;dummy_rss&quot;</span>);</div>
 <div class="line"><a name="l02239"></a><span class="lineno"> 2239</span>&#160; </div>
 <div class="line"><a name="l02240"></a><span class="lineno"> 2240</span>&#160;      std::vector&lt;DataComponentInterpretation::DataComponentInterpretation&gt;</div>
 <div class="line"><a name="l02241"></a><span class="lineno"> 2241</span>&#160;        reynolds_shear_stress_data_component_interpretation(</div>
 <div class="line"><a name="l02242"></a><span class="lineno"> 2242</span>&#160;          dim, DataComponentInterpretation::component_is_scalar);</div>
-<div class="line"><a name="l02243"></a><span class="lineno"> 2243</span>&#160;      reynolds_shear_stress_data_component_interpretation.push_back(</div>
+<div class="line"><a name="l02243"></a><span class="lineno"> 2243</span>&#160;      reynolds_shear_stress_data_component_interpretation.emplace_back(</div>
 <div class="line"><a name="l02244"></a><span class="lineno"> 2244</span>&#160;        DataComponentInterpretation::component_is_scalar);</div>
 <div class="line"><a name="l02245"></a><span class="lineno"> 2245</span>&#160; </div>
 <div class="line"><a name="l02246"></a><span class="lineno"> 2246</span>&#160;      data_out.add_data_vector(</div>
@@ -2374,11 +2374,11 @@ $(function() {
 <div class="line"><a name="l02293"></a><span class="lineno"> 2293</span>&#160; </div>
 <div class="line"><a name="l02294"></a><span class="lineno"> 2294</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> f_id = 0; f_id &lt; n_fluids; ++f_id)</div>
 <div class="line"><a name="l02295"></a><span class="lineno"> 2295</span>&#160;    {</div>
-<div class="line"><a name="l02296"></a><span class="lineno"> 2296</span>&#160;      density_postprocessors.push_back(</div>
+<div class="line"><a name="l02296"></a><span class="lineno"> 2296</span>&#160;      density_postprocessors.emplace_back(</div>
 <div class="line"><a name="l02297"></a><span class="lineno"> 2297</span>&#160;        <a class="code" href="classDensityPostprocessor.html">DensityPostprocessor&lt;dim&gt;</a>(density_models[f_id], f_id));</div>
-<div class="line"><a name="l02298"></a><span class="lineno"> 2298</span>&#160;      kinematic_viscosity_postprocessors.push_back(</div>
+<div class="line"><a name="l02298"></a><span class="lineno"> 2298</span>&#160;      kinematic_viscosity_postprocessors.emplace_back(</div>
 <div class="line"><a name="l02299"></a><span class="lineno"> 2299</span>&#160;        <a class="code" href="classKinematicViscosityPostprocessor.html">KinematicViscosityPostprocessor&lt;dim&gt;</a>(rheological_models[f_id], f_id));</div>
-<div class="line"><a name="l02300"></a><span class="lineno"> 2300</span>&#160;      dynamic_viscosity_postprocessors.push_back(</div>
+<div class="line"><a name="l02300"></a><span class="lineno"> 2300</span>&#160;      dynamic_viscosity_postprocessors.emplace_back(</div>
 <div class="line"><a name="l02301"></a><span class="lineno"> 2301</span>&#160;        <a class="code" href="classDynamicViscosityPostprocessor.html">DynamicViscosityPostprocessor&lt;dim&gt;</a>(</div>
 <div class="line"><a name="l02302"></a><span class="lineno"> 2302</span>&#160;          rheological_models[f_id],</div>
 <div class="line"><a name="l02303"></a><span class="lineno"> 2303</span>&#160;          density_models[f_id]-&gt;get_density_ref(),</div>
@@ -2585,10 +2585,10 @@ $(function() {
 <div class="line"><a name="l02504"></a><span class="lineno"> 2504</span>&#160;    }</div>
 <div class="line"><a name="l02505"></a><span class="lineno"> 2505</span>&#160; </div>
 <div class="line"><a name="l02506"></a><span class="lineno"> 2506</span>&#160;  std::vector&lt;const VectorType *&gt; sol_set_transfer;</div>
-<div class="line"><a name="l02507"></a><span class="lineno"> 2507</span>&#160;  sol_set_transfer.push_back(&amp;this-&gt;present_solution);</div>
+<div class="line"><a name="l02507"></a><span class="lineno"> 2507</span>&#160;  sol_set_transfer.emplace_back(&amp;this-&gt;present_solution);</div>
 <div class="line"><a name="l02508"></a><span class="lineno"> 2508</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; previous_solutions.size(); ++i)</div>
 <div class="line"><a name="l02509"></a><span class="lineno"> 2509</span>&#160;    {</div>
-<div class="line"><a name="l02510"></a><span class="lineno"> 2510</span>&#160;      sol_set_transfer.push_back(&amp;previous_solutions[i]);</div>
+<div class="line"><a name="l02510"></a><span class="lineno"> 2510</span>&#160;      sol_set_transfer.emplace_back(&amp;previous_solutions[i]);</div>
 <div class="line"><a name="l02511"></a><span class="lineno"> 2511</span>&#160;    }</div>
 <div class="line"><a name="l02512"></a><span class="lineno"> 2512</span>&#160; </div>
 <div class="line"><a name="l02513"></a><span class="lineno"> 2513</span>&#160;  <span class="keywordflow">if</span> (simulation_parameters.post_processing.calculate_average_velocities ||</div>
@@ -2757,108 +2757,100 @@ $(function() {
 <div class="line"><a name="l02676"></a><span class="lineno"> 2676</span>&#160; </div>
 <div class="line"><a name="l02677"></a><span class="lineno"> 2677</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 0; d &lt; dim; ++d)</div>
 <div class="line"><a name="l02678"></a><span class="lineno"> 2678</span>&#160;        {</div>
-<div class="line"><a name="l02679"></a><span class="lineno"> 2679</span>&#160;          <span class="keywordflow">for</span> (<span class="keyword">auto</span> j = index_set_velocity[d].begin();</div>
-<div class="line"><a name="l02680"></a><span class="lineno"> 2680</span>&#160;               j != index_set_velocity[d].end();</div>
-<div class="line"><a name="l02681"></a><span class="lineno"> 2681</span>&#160;               j++)</div>
-<div class="line"><a name="l02682"></a><span class="lineno"> 2682</span>&#160;            {</div>
-<div class="line"><a name="l02683"></a><span class="lineno"> 2683</span>&#160;              <span class="keywordtype">double</span> dof_newton_update = newton_update[*j];</div>
-<div class="line"><a name="l02684"></a><span class="lineno"> 2684</span>&#160; </div>
-<div class="line"><a name="l02685"></a><span class="lineno"> 2685</span>&#160;              local_sum += dof_newton_update * dof_newton_update;</div>
+<div class="line"><a name="l02679"></a><span class="lineno"> 2679</span>&#160;          <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;j : index_set_velocity[d])</div>
+<div class="line"><a name="l02680"></a><span class="lineno"> 2680</span>&#160;            {</div>
+<div class="line"><a name="l02681"></a><span class="lineno"> 2681</span>&#160;              <span class="keywordtype">double</span> dof_newton_update = newton_update[j];</div>
+<div class="line"><a name="l02682"></a><span class="lineno"> 2682</span>&#160;              local_sum += dof_newton_update * dof_newton_update;</div>
+<div class="line"><a name="l02683"></a><span class="lineno"> 2683</span>&#160;              local_max = std::max(local_max, std::abs(dof_newton_update));</div>
+<div class="line"><a name="l02684"></a><span class="lineno"> 2684</span>&#160;            }</div>
+<div class="line"><a name="l02685"></a><span class="lineno"> 2685</span>&#160;        }</div>
 <div class="line"><a name="l02686"></a><span class="lineno"> 2686</span>&#160; </div>
-<div class="line"><a name="l02687"></a><span class="lineno"> 2687</span>&#160;              local_max = std::max(local_max, std::abs(dof_newton_update));</div>
-<div class="line"><a name="l02688"></a><span class="lineno"> 2688</span>&#160;            }</div>
-<div class="line"><a name="l02689"></a><span class="lineno"> 2689</span>&#160;        }</div>
-<div class="line"><a name="l02690"></a><span class="lineno"> 2690</span>&#160; </div>
-<div class="line"><a name="l02691"></a><span class="lineno"> 2691</span>&#160;      <span class="keywordtype">double</span> global_velocity_l2_norm =</div>
-<div class="line"><a name="l02692"></a><span class="lineno"> 2692</span>&#160;        std::sqrt(Utilities::MPI::sum(local_sum, this-&gt;mpi_communicator));</div>
-<div class="line"><a name="l02693"></a><span class="lineno"> 2693</span>&#160;      <span class="keywordtype">double</span> global_velocity_linfty_norm =</div>
-<div class="line"><a name="l02694"></a><span class="lineno"> 2694</span>&#160;        Utilities::MPI::max(local_max, this-&gt;mpi_communicator);</div>
-<div class="line"><a name="l02695"></a><span class="lineno"> 2695</span>&#160; </div>
-<div class="line"><a name="l02696"></a><span class="lineno"> 2696</span>&#160;      local_sum = 0.0;</div>
-<div class="line"><a name="l02697"></a><span class="lineno"> 2697</span>&#160;      local_max = std::numeric_limits&lt;double&gt;::lowest();</div>
-<div class="line"><a name="l02698"></a><span class="lineno"> 2698</span>&#160; </div>
-<div class="line"><a name="l02699"></a><span class="lineno"> 2699</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span> j = index_set_pressure[dim].begin();</div>
-<div class="line"><a name="l02700"></a><span class="lineno"> 2700</span>&#160;           j != index_set_pressure[dim].end();</div>
-<div class="line"><a name="l02701"></a><span class="lineno"> 2701</span>&#160;           j++)</div>
-<div class="line"><a name="l02702"></a><span class="lineno"> 2702</span>&#160;        {</div>
-<div class="line"><a name="l02703"></a><span class="lineno"> 2703</span>&#160;          <span class="keywordtype">double</span> dof_newton_update = newton_update[*j];</div>
-<div class="line"><a name="l02704"></a><span class="lineno"> 2704</span>&#160; </div>
-<div class="line"><a name="l02705"></a><span class="lineno"> 2705</span>&#160;          local_sum += dof_newton_update * dof_newton_update;</div>
+<div class="line"><a name="l02687"></a><span class="lineno"> 2687</span>&#160;      <span class="keywordtype">double</span> global_velocity_l2_norm =</div>
+<div class="line"><a name="l02688"></a><span class="lineno"> 2688</span>&#160;        std::sqrt(Utilities::MPI::sum(local_sum, this-&gt;mpi_communicator));</div>
+<div class="line"><a name="l02689"></a><span class="lineno"> 2689</span>&#160;      <span class="keywordtype">double</span> global_velocity_linfty_norm =</div>
+<div class="line"><a name="l02690"></a><span class="lineno"> 2690</span>&#160;        Utilities::MPI::max(local_max, this-&gt;mpi_communicator);</div>
+<div class="line"><a name="l02691"></a><span class="lineno"> 2691</span>&#160; </div>
+<div class="line"><a name="l02692"></a><span class="lineno"> 2692</span>&#160;      local_sum = 0.0;</div>
+<div class="line"><a name="l02693"></a><span class="lineno"> 2693</span>&#160;      local_max = std::numeric_limits&lt;double&gt;::lowest();</div>
+<div class="line"><a name="l02694"></a><span class="lineno"> 2694</span>&#160; </div>
+<div class="line"><a name="l02695"></a><span class="lineno"> 2695</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;j : index_set_pressure[dim])</div>
+<div class="line"><a name="l02696"></a><span class="lineno"> 2696</span>&#160;        {</div>
+<div class="line"><a name="l02697"></a><span class="lineno"> 2697</span>&#160;          <span class="keywordtype">double</span> dof_newton_update = newton_update[j];</div>
+<div class="line"><a name="l02698"></a><span class="lineno"> 2698</span>&#160;          local_sum += dof_newton_update * dof_newton_update;</div>
+<div class="line"><a name="l02699"></a><span class="lineno"> 2699</span>&#160;          local_max = std::max(local_max, std::abs(dof_newton_update));</div>
+<div class="line"><a name="l02700"></a><span class="lineno"> 2700</span>&#160;        }</div>
+<div class="line"><a name="l02701"></a><span class="lineno"> 2701</span>&#160; </div>
+<div class="line"><a name="l02702"></a><span class="lineno"> 2702</span>&#160;      <span class="keywordtype">double</span> global_pressure_l2_norm =</div>
+<div class="line"><a name="l02703"></a><span class="lineno"> 2703</span>&#160;        std::sqrt(Utilities::MPI::sum(local_sum, this-&gt;mpi_communicator));</div>
+<div class="line"><a name="l02704"></a><span class="lineno"> 2704</span>&#160;      <span class="keywordtype">double</span> global_pressure_linfty_norm =</div>
+<div class="line"><a name="l02705"></a><span class="lineno"> 2705</span>&#160;        Utilities::MPI::max(local_max, this-&gt;mpi_communicator);</div>
 <div class="line"><a name="l02706"></a><span class="lineno"> 2706</span>&#160; </div>
-<div class="line"><a name="l02707"></a><span class="lineno"> 2707</span>&#160;          local_max = std::max(local_max, std::abs(dof_newton_update));</div>
-<div class="line"><a name="l02708"></a><span class="lineno"> 2708</span>&#160;        }</div>
-<div class="line"><a name="l02709"></a><span class="lineno"> 2709</span>&#160; </div>
-<div class="line"><a name="l02710"></a><span class="lineno"> 2710</span>&#160;      <span class="keywordtype">double</span> global_pressure_l2_norm =</div>
-<div class="line"><a name="l02711"></a><span class="lineno"> 2711</span>&#160;        std::sqrt(Utilities::MPI::sum(local_sum, this-&gt;mpi_communicator));</div>
-<div class="line"><a name="l02712"></a><span class="lineno"> 2712</span>&#160;      <span class="keywordtype">double</span> global_pressure_linfty_norm =</div>
-<div class="line"><a name="l02713"></a><span class="lineno"> 2713</span>&#160;        Utilities::MPI::max(local_max, this-&gt;mpi_communicator);</div>
-<div class="line"><a name="l02714"></a><span class="lineno"> 2714</span>&#160; </div>
-<div class="line"><a name="l02715"></a><span class="lineno"> 2715</span>&#160;      this-&gt;pcout &lt;&lt; std::setprecision(display_precision)</div>
-<div class="line"><a name="l02716"></a><span class="lineno"> 2716</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot;\n\t||du||_L2 = &quot;</span> &lt;&lt; std::setw(6)</div>
-<div class="line"><a name="l02717"></a><span class="lineno"> 2717</span>&#160;                  &lt;&lt; global_velocity_l2_norm &lt;&lt; std::setw(6)</div>
-<div class="line"><a name="l02718"></a><span class="lineno"> 2718</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot;\t||du||_Linfty = &quot;</span></div>
-<div class="line"><a name="l02719"></a><span class="lineno"> 2719</span>&#160;                  &lt;&lt; std::setprecision(display_precision)</div>
-<div class="line"><a name="l02720"></a><span class="lineno"> 2720</span>&#160;                  &lt;&lt; global_velocity_linfty_norm &lt;&lt; std::endl;</div>
+<div class="line"><a name="l02707"></a><span class="lineno"> 2707</span>&#160;      this-&gt;pcout &lt;&lt; std::setprecision(display_precision)</div>
+<div class="line"><a name="l02708"></a><span class="lineno"> 2708</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot;\n\t||du||_L2 = &quot;</span> &lt;&lt; std::setw(6)</div>
+<div class="line"><a name="l02709"></a><span class="lineno"> 2709</span>&#160;                  &lt;&lt; global_velocity_l2_norm &lt;&lt; std::setw(6)</div>
+<div class="line"><a name="l02710"></a><span class="lineno"> 2710</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot;\t||du||_Linfty = &quot;</span></div>
+<div class="line"><a name="l02711"></a><span class="lineno"> 2711</span>&#160;                  &lt;&lt; std::setprecision(display_precision)</div>
+<div class="line"><a name="l02712"></a><span class="lineno"> 2712</span>&#160;                  &lt;&lt; global_velocity_linfty_norm &lt;&lt; std::endl;</div>
+<div class="line"><a name="l02713"></a><span class="lineno"> 2713</span>&#160;      this-&gt;pcout &lt;&lt; std::setprecision(display_precision)</div>
+<div class="line"><a name="l02714"></a><span class="lineno"> 2714</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot;\t||dp||_L2 = &quot;</span> &lt;&lt; std::setw(6) &lt;&lt; global_pressure_l2_norm</div>
+<div class="line"><a name="l02715"></a><span class="lineno"> 2715</span>&#160;                  &lt;&lt; std::setw(6) &lt;&lt; <span class="stringliteral">&quot;\t||dp||_Linfty = &quot;</span></div>
+<div class="line"><a name="l02716"></a><span class="lineno"> 2716</span>&#160;                  &lt;&lt; std::setprecision(display_precision)</div>
+<div class="line"><a name="l02717"></a><span class="lineno"> 2717</span>&#160;                  &lt;&lt; global_pressure_linfty_norm &lt;&lt; std::endl;</div>
+<div class="line"><a name="l02718"></a><span class="lineno"> 2718</span>&#160;    }</div>
+<div class="line"><a name="l02719"></a><span class="lineno"> 2719</span>&#160;  <span class="keywordflow">if</span> constexpr (std::is_same_v&lt;VectorType, GlobalBlockVectorType&gt;)</div>
+<div class="line"><a name="l02720"></a><span class="lineno"> 2720</span>&#160;    {</div>
 <div class="line"><a name="l02721"></a><span class="lineno"> 2721</span>&#160;      this-&gt;pcout &lt;&lt; std::setprecision(display_precision)</div>
-<div class="line"><a name="l02722"></a><span class="lineno"> 2722</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot;\t||dp||_L2 = &quot;</span> &lt;&lt; std::setw(6) &lt;&lt; global_pressure_l2_norm</div>
-<div class="line"><a name="l02723"></a><span class="lineno"> 2723</span>&#160;                  &lt;&lt; std::setw(6) &lt;&lt; <span class="stringliteral">&quot;\t||dp||_Linfty = &quot;</span></div>
-<div class="line"><a name="l02724"></a><span class="lineno"> 2724</span>&#160;                  &lt;&lt; std::setprecision(display_precision)</div>
-<div class="line"><a name="l02725"></a><span class="lineno"> 2725</span>&#160;                  &lt;&lt; global_pressure_linfty_norm &lt;&lt; std::endl;</div>
-<div class="line"><a name="l02726"></a><span class="lineno"> 2726</span>&#160;    }</div>
-<div class="line"><a name="l02727"></a><span class="lineno"> 2727</span>&#160;  <span class="keywordflow">if</span> constexpr (std::is_same_v&lt;VectorType, GlobalBlockVectorType&gt;)</div>
-<div class="line"><a name="l02728"></a><span class="lineno"> 2728</span>&#160;    {</div>
-<div class="line"><a name="l02729"></a><span class="lineno"> 2729</span>&#160;      this-&gt;pcout &lt;&lt; std::setprecision(display_precision)</div>
-<div class="line"><a name="l02730"></a><span class="lineno"> 2730</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot;\t||du||_L2 = &quot;</span> &lt;&lt; std::setw(6)</div>
-<div class="line"><a name="l02731"></a><span class="lineno"> 2731</span>&#160;                  &lt;&lt; newton_update.block(0).l2_norm() &lt;&lt; std::setw(6)</div>
-<div class="line"><a name="l02732"></a><span class="lineno"> 2732</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot;\t||du||_Linfty = &quot;</span></div>
-<div class="line"><a name="l02733"></a><span class="lineno"> 2733</span>&#160;                  &lt;&lt; std::setprecision(display_precision)</div>
-<div class="line"><a name="l02734"></a><span class="lineno"> 2734</span>&#160;                  &lt;&lt; newton_update.block(0).linfty_norm() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l02735"></a><span class="lineno"> 2735</span>&#160;      this-&gt;pcout &lt;&lt; std::setprecision(display_precision)</div>
-<div class="line"><a name="l02736"></a><span class="lineno"> 2736</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot;\t||dp||_L2 = &quot;</span> &lt;&lt; std::setw(6)</div>
-<div class="line"><a name="l02737"></a><span class="lineno"> 2737</span>&#160;                  &lt;&lt; newton_update.block(1).l2_norm() &lt;&lt; std::setw(6)</div>
-<div class="line"><a name="l02738"></a><span class="lineno"> 2738</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot;\t||dp||_Linfty = &quot;</span></div>
-<div class="line"><a name="l02739"></a><span class="lineno"> 2739</span>&#160;                  &lt;&lt; std::setprecision(display_precision)</div>
-<div class="line"><a name="l02740"></a><span class="lineno"> 2740</span>&#160;                  &lt;&lt; newton_update.block(1).linfty_norm() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l02741"></a><span class="lineno"> 2741</span>&#160;    }</div>
-<div class="line"><a name="l02742"></a><span class="lineno"> 2742</span>&#160;}</div>
-<div class="line"><a name="l02743"></a><span class="lineno"> 2743</span>&#160; </div>
-<div class="line"><a name="l02744"></a><span class="lineno"> 2744</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim, <span class="keyword">typename</span> VectorType, <span class="keyword">typename</span> DofsType&gt;</div>
-<div class="line"><a name="l02745"></a><span class="lineno"> 2745</span>&#160;<span class="keyword">inline</span> VectorType</div>
-<div class="line"><a name="l02746"></a><span class="lineno"><a class="line" href="classNavierStokesBase.html#aafccb927a868ab52abb8411752067137"> 2746</a></span>&#160;<a class="code" href="classNavierStokesBase.html#aafccb927a868ab52abb8411752067137">NavierStokesBase&lt;dim, VectorType, DofsType&gt;::init_temporary_vector</a>()</div>
-<div class="line"><a name="l02747"></a><span class="lineno"> 2747</span>&#160;{</div>
-<div class="line"><a name="l02748"></a><span class="lineno"> 2748</span>&#160;  VectorType tmp;</div>
-<div class="line"><a name="l02749"></a><span class="lineno"> 2749</span>&#160; </div>
-<div class="line"><a name="l02750"></a><span class="lineno"> 2750</span>&#160;  <span class="keywordflow">if</span> constexpr (std::is_same_v&lt;VectorType, GlobalVectorType&gt; ||</div>
-<div class="line"><a name="l02751"></a><span class="lineno"> 2751</span>&#160;                std::is_same_v&lt;VectorType, GlobalBlockVectorType&gt;)</div>
-<div class="line"><a name="l02752"></a><span class="lineno"> 2752</span>&#160;    tmp.reinit(locally_owned_dofs, this-&gt;mpi_communicator);</div>
-<div class="line"><a name="l02753"></a><span class="lineno"> 2753</span>&#160; </div>
-<div class="line"><a name="l02754"></a><span class="lineno"> 2754</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr (std::is_same_v&lt;VectorType,</div>
-<div class="line"><a name="l02755"></a><span class="lineno"> 2755</span>&#160;                                    LinearAlgebra::distributed::Vector&lt;double&gt;&gt;)</div>
-<div class="line"><a name="l02756"></a><span class="lineno"> 2756</span>&#160;    tmp.reinit(locally_owned_dofs,</div>
-<div class="line"><a name="l02757"></a><span class="lineno"> 2757</span>&#160;               locally_relevant_dofs,</div>
-<div class="line"><a name="l02758"></a><span class="lineno"> 2758</span>&#160;               this-&gt;mpi_communicator);</div>
-<div class="line"><a name="l02759"></a><span class="lineno"> 2759</span>&#160; </div>
-<div class="line"><a name="l02760"></a><span class="lineno"> 2760</span>&#160;  <span class="keywordflow">return</span> tmp;</div>
-<div class="line"><a name="l02761"></a><span class="lineno"> 2761</span>&#160;}</div>
-<div class="line"><a name="l02762"></a><span class="lineno"> 2762</span>&#160; </div>
-<div class="line"><a name="l02763"></a><span class="lineno"> 2763</span>&#160;<span class="comment">// Pre-compile the 2D and 3D version with the types that can occur</span></div>
-<div class="line"><a name="l02764"></a><span class="lineno"> 2764</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classNavierStokesBase.html">NavierStokesBase&lt;2, GlobalVectorType, IndexSet&gt;</a>;</div>
-<div class="line"><a name="l02765"></a><span class="lineno"> 2765</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classNavierStokesBase.html">NavierStokesBase&lt;3, GlobalVectorType, IndexSet&gt;</a>;</div>
+<div class="line"><a name="l02722"></a><span class="lineno"> 2722</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot;\t||du||_L2 = &quot;</span> &lt;&lt; std::setw(6)</div>
+<div class="line"><a name="l02723"></a><span class="lineno"> 2723</span>&#160;                  &lt;&lt; newton_update.block(0).l2_norm() &lt;&lt; std::setw(6)</div>
+<div class="line"><a name="l02724"></a><span class="lineno"> 2724</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot;\t||du||_Linfty = &quot;</span></div>
+<div class="line"><a name="l02725"></a><span class="lineno"> 2725</span>&#160;                  &lt;&lt; std::setprecision(display_precision)</div>
+<div class="line"><a name="l02726"></a><span class="lineno"> 2726</span>&#160;                  &lt;&lt; newton_update.block(0).linfty_norm() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l02727"></a><span class="lineno"> 2727</span>&#160;      this-&gt;pcout &lt;&lt; std::setprecision(display_precision)</div>
+<div class="line"><a name="l02728"></a><span class="lineno"> 2728</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot;\t||dp||_L2 = &quot;</span> &lt;&lt; std::setw(6)</div>
+<div class="line"><a name="l02729"></a><span class="lineno"> 2729</span>&#160;                  &lt;&lt; newton_update.block(1).l2_norm() &lt;&lt; std::setw(6)</div>
+<div class="line"><a name="l02730"></a><span class="lineno"> 2730</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot;\t||dp||_Linfty = &quot;</span></div>
+<div class="line"><a name="l02731"></a><span class="lineno"> 2731</span>&#160;                  &lt;&lt; std::setprecision(display_precision)</div>
+<div class="line"><a name="l02732"></a><span class="lineno"> 2732</span>&#160;                  &lt;&lt; newton_update.block(1).linfty_norm() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l02733"></a><span class="lineno"> 2733</span>&#160;    }</div>
+<div class="line"><a name="l02734"></a><span class="lineno"> 2734</span>&#160;}</div>
+<div class="line"><a name="l02735"></a><span class="lineno"> 2735</span>&#160; </div>
+<div class="line"><a name="l02736"></a><span class="lineno"> 2736</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim, <span class="keyword">typename</span> VectorType, <span class="keyword">typename</span> DofsType&gt;</div>
+<div class="line"><a name="l02737"></a><span class="lineno"> 2737</span>&#160;<span class="keyword">inline</span> VectorType</div>
+<div class="line"><a name="l02738"></a><span class="lineno"><a class="line" href="classNavierStokesBase.html#aafccb927a868ab52abb8411752067137"> 2738</a></span>&#160;<a class="code" href="classNavierStokesBase.html#aafccb927a868ab52abb8411752067137">NavierStokesBase&lt;dim, VectorType, DofsType&gt;::init_temporary_vector</a>()</div>
+<div class="line"><a name="l02739"></a><span class="lineno"> 2739</span>&#160;{</div>
+<div class="line"><a name="l02740"></a><span class="lineno"> 2740</span>&#160;  VectorType tmp;</div>
+<div class="line"><a name="l02741"></a><span class="lineno"> 2741</span>&#160; </div>
+<div class="line"><a name="l02742"></a><span class="lineno"> 2742</span>&#160;  <span class="keywordflow">if</span> constexpr (std::is_same_v&lt;VectorType, GlobalVectorType&gt; ||</div>
+<div class="line"><a name="l02743"></a><span class="lineno"> 2743</span>&#160;                std::is_same_v&lt;VectorType, GlobalBlockVectorType&gt;)</div>
+<div class="line"><a name="l02744"></a><span class="lineno"> 2744</span>&#160;    tmp.reinit(locally_owned_dofs, this-&gt;mpi_communicator);</div>
+<div class="line"><a name="l02745"></a><span class="lineno"> 2745</span>&#160; </div>
+<div class="line"><a name="l02746"></a><span class="lineno"> 2746</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr (std::is_same_v&lt;VectorType,</div>
+<div class="line"><a name="l02747"></a><span class="lineno"> 2747</span>&#160;                                    LinearAlgebra::distributed::Vector&lt;double&gt;&gt;)</div>
+<div class="line"><a name="l02748"></a><span class="lineno"> 2748</span>&#160;    tmp.reinit(locally_owned_dofs,</div>
+<div class="line"><a name="l02749"></a><span class="lineno"> 2749</span>&#160;               locally_relevant_dofs,</div>
+<div class="line"><a name="l02750"></a><span class="lineno"> 2750</span>&#160;               this-&gt;mpi_communicator);</div>
+<div class="line"><a name="l02751"></a><span class="lineno"> 2751</span>&#160; </div>
+<div class="line"><a name="l02752"></a><span class="lineno"> 2752</span>&#160;  <span class="keywordflow">return</span> tmp;</div>
+<div class="line"><a name="l02753"></a><span class="lineno"> 2753</span>&#160;}</div>
+<div class="line"><a name="l02754"></a><span class="lineno"> 2754</span>&#160; </div>
+<div class="line"><a name="l02755"></a><span class="lineno"> 2755</span>&#160;<span class="comment">// Pre-compile the 2D and 3D version with the types that can occur</span></div>
+<div class="line"><a name="l02756"></a><span class="lineno"> 2756</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classNavierStokesBase.html">NavierStokesBase&lt;2, GlobalVectorType, IndexSet&gt;</a>;</div>
+<div class="line"><a name="l02757"></a><span class="lineno"> 2757</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classNavierStokesBase.html">NavierStokesBase&lt;3, GlobalVectorType, IndexSet&gt;</a>;</div>
+<div class="line"><a name="l02758"></a><span class="lineno"> 2758</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classNavierStokesBase.html">NavierStokesBase</a>&lt;2,</div>
+<div class="line"><a name="l02759"></a><span class="lineno"> 2759</span>&#160;                                <a class="code" href="vector_8h.html#ac71ba75c5119edae876800f9e80b59e7">GlobalBlockVectorType</a>,</div>
+<div class="line"><a name="l02760"></a><span class="lineno"> 2760</span>&#160;                                std::vector&lt;IndexSet&gt;&gt;;</div>
+<div class="line"><a name="l02761"></a><span class="lineno"> 2761</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classNavierStokesBase.html">NavierStokesBase</a>&lt;3,</div>
+<div class="line"><a name="l02762"></a><span class="lineno"> 2762</span>&#160;                                <a class="code" href="vector_8h.html#ac71ba75c5119edae876800f9e80b59e7">GlobalBlockVectorType</a>,</div>
+<div class="line"><a name="l02763"></a><span class="lineno"> 2763</span>&#160;                                std::vector&lt;IndexSet&gt;&gt;;</div>
+<div class="line"><a name="l02764"></a><span class="lineno"> 2764</span>&#160; </div>
+<div class="line"><a name="l02765"></a><span class="lineno"> 2765</span>&#160;<span class="preprocessor">#ifndef LETHE_USE_LDV</span></div>
 <div class="line"><a name="l02766"></a><span class="lineno"> 2766</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classNavierStokesBase.html">NavierStokesBase</a>&lt;2,</div>
-<div class="line"><a name="l02767"></a><span class="lineno"> 2767</span>&#160;                                <a class="code" href="vector_8h.html#ac71ba75c5119edae876800f9e80b59e7">GlobalBlockVectorType</a>,</div>
-<div class="line"><a name="l02768"></a><span class="lineno"> 2768</span>&#160;                                std::vector&lt;IndexSet&gt;&gt;;</div>
+<div class="line"><a name="l02767"></a><span class="lineno"> 2767</span>&#160;                                LinearAlgebra::distributed::Vector&lt;double&gt;,</div>
+<div class="line"><a name="l02768"></a><span class="lineno"> 2768</span>&#160;                                IndexSet&gt;;</div>
 <div class="line"><a name="l02769"></a><span class="lineno"> 2769</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classNavierStokesBase.html">NavierStokesBase</a>&lt;3,</div>
-<div class="line"><a name="l02770"></a><span class="lineno"> 2770</span>&#160;                                <a class="code" href="vector_8h.html#ac71ba75c5119edae876800f9e80b59e7">GlobalBlockVectorType</a>,</div>
-<div class="line"><a name="l02771"></a><span class="lineno"> 2771</span>&#160;                                std::vector&lt;IndexSet&gt;&gt;;</div>
-<div class="line"><a name="l02772"></a><span class="lineno"> 2772</span>&#160; </div>
-<div class="line"><a name="l02773"></a><span class="lineno"> 2773</span>&#160;<span class="preprocessor">#ifndef LETHE_USE_LDV</span></div>
-<div class="line"><a name="l02774"></a><span class="lineno"> 2774</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classNavierStokesBase.html">NavierStokesBase</a>&lt;2,</div>
-<div class="line"><a name="l02775"></a><span class="lineno"> 2775</span>&#160;                                LinearAlgebra::distributed::Vector&lt;double&gt;,</div>
-<div class="line"><a name="l02776"></a><span class="lineno"> 2776</span>&#160;                                IndexSet&gt;;</div>
-<div class="line"><a name="l02777"></a><span class="lineno"> 2777</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classNavierStokesBase.html">NavierStokesBase</a>&lt;3,</div>
-<div class="line"><a name="l02778"></a><span class="lineno"> 2778</span>&#160;                                LinearAlgebra::distributed::Vector&lt;double&gt;,</div>
-<div class="line"><a name="l02779"></a><span class="lineno"> 2779</span>&#160;                                IndexSet&gt;;</div>
-<div class="line"><a name="l02780"></a><span class="lineno"> 2780</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l02770"></a><span class="lineno"> 2770</span>&#160;                                LinearAlgebra::distributed::Vector&lt;double&gt;,</div>
+<div class="line"><a name="l02771"></a><span class="lineno"> 2771</span>&#160;                                IndexSet&gt;;</div>
+<div class="line"><a name="l02772"></a><span class="lineno"> 2772</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="abdf_8h_html"><div class="ttname"><a href="bdf_8h.html">bdf.h</a></div></div>
 <div class="ttc" id="abdf_8h_html_a20abc47ca7441007f8923c529000ace5"><div class="ttname"><a href="bdf_8h.html#a20abc47ca7441007f8923c529000ace5">maximum_number_of_previous_solutions</a></div><div class="ttdeci">unsigned int maximum_number_of_previous_solutions()</div><div class="ttdoc">Get the maximum number of previous time steps supposed by the BDF schemes implemented in Lethe.</div><div class="ttdef"><b>Definition:</b> <a href="bdf_8h_source.html#l00099">bdf.h:99</a></div></div>
 <div class="ttc" id="aclassBoundaryPostprocessor_html"><div class="ttname"><a href="classBoundaryPostprocessor.html">BoundaryPostprocessor</a></div><div class="ttdoc">BoundaryPostprocessor Post-processor class used to attach the boundary id to the faces when outputtin...</div><div class="ttdef"><b>Definition:</b> <a href="manifolds_8h_source.html#l00087">manifolds.h:88</a></div></div>
@@ -2903,7 +2895,7 @@ $(function() {
 <div class="ttc" id="aclassNavierStokesBase_html_aab5e1ddc5b125318c547187f880e5fad"><div class="ttname"><a href="classNavierStokesBase.html#aab5e1ddc5b125318c547187f880e5fad">NavierStokesBase::establish_solid_domain</a></div><div class="ttdeci">void establish_solid_domain(const bool non_zero_constraints)</div><div class="ttdoc">Turn regions of the mesh where the material_id&gt;0 into a solid block by injecting velocity and pressur...</div><div class="ttdef"><b>Definition:</b> <a href="navier__stokes__base_8cc_source.html#l01907">navier_stokes_base.cc:1907</a></div></div>
 <div class="ttc" id="aclassNavierStokesBase_html_aae8593566e552e78506f88d9d9ca9885"><div class="ttname"><a href="classNavierStokesBase.html#aae8593566e552e78506f88d9d9ca9885">NavierStokesBase::forcing_function</a></div><div class="ttdeci">std::shared_ptr&lt; Function&lt; dim &gt; &gt; forcing_function</div><div class="ttdef"><b>Definition:</b> <a href="navier__stokes__base_8h_source.html#l00820">navier_stokes_base.h:820</a></div></div>
 <div class="ttc" id="aclassNavierStokesBase_html_aaebb2c81bd4185fe345831f6eefe4f19"><div class="ttname"><a href="classNavierStokesBase.html#aaebb2c81bd4185fe345831f6eefe4f19">NavierStokesBase::previous_solutions</a></div><div class="ttdeci">std::vector&lt; VectorType &gt; previous_solutions</div><div class="ttdef"><b>Definition:</b> <a href="navier__stokes__base_8h_source.html#l00837">navier_stokes_base.h:837</a></div></div>
-<div class="ttc" id="aclassNavierStokesBase_html_aafccb927a868ab52abb8411752067137"><div class="ttname"><a href="classNavierStokesBase.html#aafccb927a868ab52abb8411752067137">NavierStokesBase::init_temporary_vector</a></div><div class="ttdeci">VectorType init_temporary_vector()</div><div class="ttdoc">init_temporary_vector This function initializes correctly a temporary vector depending on the vector ...</div><div class="ttdef"><b>Definition:</b> <a href="navier__stokes__base_8cc_source.html#l02746">navier_stokes_base.cc:2746</a></div></div>
+<div class="ttc" id="aclassNavierStokesBase_html_aafccb927a868ab52abb8411752067137"><div class="ttname"><a href="classNavierStokesBase.html#aafccb927a868ab52abb8411752067137">NavierStokesBase::init_temporary_vector</a></div><div class="ttdeci">VectorType init_temporary_vector()</div><div class="ttdoc">init_temporary_vector This function initializes correctly a temporary vector depending on the vector ...</div><div class="ttdef"><b>Definition:</b> <a href="navier__stokes__base_8cc_source.html#l02738">navier_stokes_base.cc:2738</a></div></div>
 <div class="ttc" id="aclassNavierStokesBase_html_ab038a3890e972dcf3fbcd8b57f4b06a1"><div class="ttname"><a href="classNavierStokesBase.html#ab038a3890e972dcf3fbcd8b57f4b06a1">NavierStokesBase::simulation_control</a></div><div class="ttdeci">std::shared_ptr&lt; SimulationControl &gt; simulation_control</div><div class="ttdef"><b>Definition:</b> <a href="navier__stokes__base_8h_source.html#l00856">navier_stokes_base.h:856</a></div></div>
 <div class="ttc" id="aclassNavierStokesBase_html_ab1aafc2801e35f5162f0b9e1d7c0add2"><div class="ttname"><a href="classNavierStokesBase.html#ab1aafc2801e35f5162f0b9e1d7c0add2">NavierStokesBase::torques_tables</a></div><div class="ttdeci">std::vector&lt; TableHandler &gt; torques_tables</div><div class="ttdef"><b>Definition:</b> <a href="navier__stokes__base_8h_source.html#l00880">navier_stokes_base.h:880</a></div></div>
 <div class="ttc" id="aclassNavierStokesBase_html_ac8a90a05bdef648307a900513585bd86"><div class="ttname"><a href="classNavierStokesBase.html#ac8a90a05bdef648307a900513585bd86">NavierStokesBase::refine_mesh_uniform</a></div><div class="ttdeci">void refine_mesh_uniform()</div><div class="ttdoc">Allow the uniform refinement of all the mesh.</div><div class="ttdef"><b>Definition:</b> <a href="navier__stokes__base_8cc_source.html#l01140">navier_stokes_base.cc:1140</a></div></div>
@@ -2951,18 +2943,18 @@ $(function() {
 <div class="ttc" id="aphysical__property__model_8h_html_a0b2c854385812ebfac83689a5c3ead58a8e7f8389b914e827058d694b31468b3a"><div class="ttname"><a href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58a8e7f8389b914e827058d694b31468b3a">pressure</a></div><div class="ttdeci">@ pressure</div><div class="ttdef"><b>Definition:</b> <a href="physical__property__model_8h_source.html#l00056">physical_property_model.h:56</a></div></div>
 <div class="ttc" id="aphysical__property__model_8h_html_a0b2c854385812ebfac83689a5c3ead58a9922a43d37bee3212593f77ce4ec82f3"><div class="ttname"><a href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58a9922a43d37bee3212593f77ce4ec82f3">temperature</a></div><div class="ttdeci">@ temperature</div><div class="ttdef"><b>Definition:</b> <a href="physical__property__model_8h_source.html#l00053">physical_property_model.h:53</a></div></div>
 <div class="ttc" id="apostprocessing__cfd_8h_html"><div class="ttname"><a href="postprocessing__cfd_8h.html">postprocessing_cfd.h</a></div></div>
-<div class="ttc" id="apostprocessing__cfd_8h_html_a02e5072b6f6abdda7c5ef07e0b866f19"><div class="ttname"><a href="postprocessing__cfd_8h.html#a02e5072b6f6abdda7c5ef07e0b866f19">calculate_L2_error</a></div><div class="ttdeci">std::pair&lt; double, double &gt; calculate_L2_error(const DoFHandler&lt; dim &gt; &amp;dof_handler, const VectorType &amp;evaluation_point, const Function&lt; dim &gt; *exact_solution, const Quadrature&lt; dim &gt; &amp;quadrature_formula, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdoc">Calculates the L2 norm of the error on velocity and pressure.</div><div class="ttdef"><b>Definition:</b> <a href="postprocessing__cfd_8cc_source.html#l01228">postprocessing_cfd.cc:1228</a></div></div>
-<div class="ttc" id="apostprocessing__cfd_8h_html_a0b1f61ed52d8cbc4dbf70848099af8f9"><div class="ttname"><a href="postprocessing__cfd_8h.html#a0b1f61ed52d8cbc4dbf70848099af8f9">calculate_pressure_power</a></div><div class="ttdeci">double calculate_pressure_power(const DoFHandler&lt; dim &gt; &amp;dof_handler, const VectorType &amp;evaluation_point, const Quadrature&lt; dim &gt; &amp;quadrature_formula, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdoc">Calculate the average power done by pressure in the simulation domain. The average power is defined a...</div><div class="ttdef"><b>Definition:</b> <a href="postprocessing__cfd_8cc_source.html#l00443">postprocessing_cfd.cc:443</a></div></div>
-<div class="ttc" id="apostprocessing__cfd_8h_html_a12092e92e04aafe458d728885dd49f6d"><div class="ttname"><a href="postprocessing__cfd_8h.html#a12092e92e04aafe458d728885dd49f6d">calculate_flow_rate</a></div><div class="ttdeci">std::pair&lt; double, double &gt; calculate_flow_rate(const DoFHandler&lt; dim &gt; &amp;dof_handler, const VectorType &amp;present_solution, const unsigned int &amp;boundary_id, const Quadrature&lt; dim - 1 &gt; &amp;face_quadrature_formula, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdoc">calculate_flow_rate. This function calculates the volumetric flow rate at the selected boundary....</div><div class="ttdef"><b>Definition:</b> <a href="postprocessing__cfd_8cc_source.html#l01387">postprocessing_cfd.cc:1387</a></div></div>
-<div class="ttc" id="apostprocessing__cfd_8h_html_a435a5183c6ea1ba3055d9d24b1a699da"><div class="ttname"><a href="postprocessing__cfd_8h.html#a435a5183c6ea1ba3055d9d24b1a699da">calculate_apparent_viscosity</a></div><div class="ttdeci">double calculate_apparent_viscosity(const DoFHandler&lt; dim &gt; &amp;dof_handler, const VectorType &amp;evaluation_point, const Quadrature&lt; dim &gt; &amp;quadrature_formula, const Mapping&lt; dim &gt; &amp;mapping, const PhysicalPropertiesManager &amp;properties_manager)</div><div class="ttdoc">Calculates the apparent viscosity of the fluid for non Newtonian flows.</div><div class="ttdef"><b>Definition:</b> <a href="postprocessing__cfd_8cc_source.html#l00752">postprocessing_cfd.cc:752</a></div></div>
-<div class="ttc" id="apostprocessing__cfd_8h_html_a474051d783a95c2eb98bd6ca4b8ba17b"><div class="ttname"><a href="postprocessing__cfd_8h.html#a474051d783a95c2eb98bd6ca4b8ba17b">calculate_torques</a></div><div class="ttdeci">std::vector&lt; Tensor&lt; 1, 3 &gt; &gt; calculate_torques(const DoFHandler&lt; dim &gt; &amp;dof_handler, const VectorType &amp;evaluation_point, const PhysicalPropertiesManager &amp;properties_manager, const BoundaryConditions::NSBoundaryConditions&lt; dim &gt; &amp;boundary_conditions, const Quadrature&lt; dim - 1 &gt; &amp;face_quadrature_formula, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdoc">Calculates the torques due to the fluid motion on every boundary conditions.</div><div class="ttdef"><b>Definition:</b> <a href="postprocessing__cfd_8cc_source.html#l01057">postprocessing_cfd.cc:1057</a></div></div>
-<div class="ttc" id="apostprocessing__cfd_8h_html_a6e07b611c2791d19a53166c71c24e6cc"><div class="ttname"><a href="postprocessing__cfd_8h.html#a6e07b611c2791d19a53166c71c24e6cc">calculate_kinetic_energy</a></div><div class="ttdeci">double calculate_kinetic_energy(const DoFHandler&lt; dim &gt; &amp;dof_handler, const VectorType &amp;evaluation_point, const Quadrature&lt; dim &gt; &amp;quadrature_formula, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdoc">Calculate the average kinetic energy in the simulation domain.</div><div class="ttdef"><b>Definition:</b> <a href="postprocessing__cfd_8cc_source.html#l00655">postprocessing_cfd.cc:655</a></div></div>
+<div class="ttc" id="apostprocessing__cfd_8h_html_a02e5072b6f6abdda7c5ef07e0b866f19"><div class="ttname"><a href="postprocessing__cfd_8h.html#a02e5072b6f6abdda7c5ef07e0b866f19">calculate_L2_error</a></div><div class="ttdeci">std::pair&lt; double, double &gt; calculate_L2_error(const DoFHandler&lt; dim &gt; &amp;dof_handler, const VectorType &amp;evaluation_point, const Function&lt; dim &gt; *exact_solution, const Quadrature&lt; dim &gt; &amp;quadrature_formula, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdoc">Calculates the L2 norm of the error on velocity and pressure.</div><div class="ttdef"><b>Definition:</b> <a href="postprocessing__cfd_8cc_source.html#l01225">postprocessing_cfd.cc:1225</a></div></div>
+<div class="ttc" id="apostprocessing__cfd_8h_html_a0b1f61ed52d8cbc4dbf70848099af8f9"><div class="ttname"><a href="postprocessing__cfd_8h.html#a0b1f61ed52d8cbc4dbf70848099af8f9">calculate_pressure_power</a></div><div class="ttdeci">double calculate_pressure_power(const DoFHandler&lt; dim &gt; &amp;dof_handler, const VectorType &amp;evaluation_point, const Quadrature&lt; dim &gt; &amp;quadrature_formula, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdoc">Calculate the average power done by pressure in the simulation domain. The average power is defined a...</div><div class="ttdef"><b>Definition:</b> <a href="postprocessing__cfd_8cc_source.html#l00440">postprocessing_cfd.cc:440</a></div></div>
+<div class="ttc" id="apostprocessing__cfd_8h_html_a12092e92e04aafe458d728885dd49f6d"><div class="ttname"><a href="postprocessing__cfd_8h.html#a12092e92e04aafe458d728885dd49f6d">calculate_flow_rate</a></div><div class="ttdeci">std::pair&lt; double, double &gt; calculate_flow_rate(const DoFHandler&lt; dim &gt; &amp;dof_handler, const VectorType &amp;present_solution, const unsigned int &amp;boundary_id, const Quadrature&lt; dim - 1 &gt; &amp;face_quadrature_formula, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdoc">calculate_flow_rate. This function calculates the volumetric flow rate at the selected boundary....</div><div class="ttdef"><b>Definition:</b> <a href="postprocessing__cfd_8cc_source.html#l01384">postprocessing_cfd.cc:1384</a></div></div>
+<div class="ttc" id="apostprocessing__cfd_8h_html_a435a5183c6ea1ba3055d9d24b1a699da"><div class="ttname"><a href="postprocessing__cfd_8h.html#a435a5183c6ea1ba3055d9d24b1a699da">calculate_apparent_viscosity</a></div><div class="ttdeci">double calculate_apparent_viscosity(const DoFHandler&lt; dim &gt; &amp;dof_handler, const VectorType &amp;evaluation_point, const Quadrature&lt; dim &gt; &amp;quadrature_formula, const Mapping&lt; dim &gt; &amp;mapping, const PhysicalPropertiesManager &amp;properties_manager)</div><div class="ttdoc">Calculates the apparent viscosity of the fluid for non Newtonian flows.</div><div class="ttdef"><b>Definition:</b> <a href="postprocessing__cfd_8cc_source.html#l00749">postprocessing_cfd.cc:749</a></div></div>
+<div class="ttc" id="apostprocessing__cfd_8h_html_a474051d783a95c2eb98bd6ca4b8ba17b"><div class="ttname"><a href="postprocessing__cfd_8h.html#a474051d783a95c2eb98bd6ca4b8ba17b">calculate_torques</a></div><div class="ttdeci">std::vector&lt; Tensor&lt; 1, 3 &gt; &gt; calculate_torques(const DoFHandler&lt; dim &gt; &amp;dof_handler, const VectorType &amp;evaluation_point, const PhysicalPropertiesManager &amp;properties_manager, const BoundaryConditions::NSBoundaryConditions&lt; dim &gt; &amp;boundary_conditions, const Quadrature&lt; dim - 1 &gt; &amp;face_quadrature_formula, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdoc">Calculates the torques due to the fluid motion on every boundary conditions.</div><div class="ttdef"><b>Definition:</b> <a href="postprocessing__cfd_8cc_source.html#l01054">postprocessing_cfd.cc:1054</a></div></div>
+<div class="ttc" id="apostprocessing__cfd_8h_html_a6e07b611c2791d19a53166c71c24e6cc"><div class="ttname"><a href="postprocessing__cfd_8h.html#a6e07b611c2791d19a53166c71c24e6cc">calculate_kinetic_energy</a></div><div class="ttdeci">double calculate_kinetic_energy(const DoFHandler&lt; dim &gt; &amp;dof_handler, const VectorType &amp;evaluation_point, const Quadrature&lt; dim &gt; &amp;quadrature_formula, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdoc">Calculate the average kinetic energy in the simulation domain.</div><div class="ttdef"><b>Definition:</b> <a href="postprocessing__cfd_8cc_source.html#l00652">postprocessing_cfd.cc:652</a></div></div>
 <div class="ttc" id="apostprocessing__cfd_8h_html_a79160fa3703aadaf40fb29841456e49b"><div class="ttname"><a href="postprocessing__cfd_8h.html#a79160fa3703aadaf40fb29841456e49b">calculate_CFL</a></div><div class="ttdeci">double calculate_CFL(const DoFHandler&lt; dim &gt; &amp;dof_handler, const VectorType &amp;evaluation_point, const double time_step, const Quadrature&lt; dim &gt; &amp;quadrature_formula, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdoc">Calculate the CFL condition on the simulation domain.</div><div class="ttdef"><b>Definition:</b> <a href="postprocessing__cfd_8cc_source.html#l00231">postprocessing_cfd.cc:231</a></div></div>
-<div class="ttc" id="apostprocessing__cfd_8h_html_a885519f82401f5f66cb4f0363b9715a9"><div class="ttname"><a href="postprocessing__cfd_8h.html#a885519f82401f5f66cb4f0363b9715a9">calculate_average_velocity</a></div><div class="ttdeci">double calculate_average_velocity(const DoFHandler&lt; dim &gt; &amp;dof_handler, const VectorType &amp;present_solution, const unsigned int &amp;boundary_id, const Quadrature&lt; dim - 1 &gt; &amp;face_quadrature_formula, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdoc">calculate_average_velocity. This function calculates average velocity from the volumetric flow rate a...</div><div class="ttdef"><b>Definition:</b> <a href="postprocessing__cfd_8cc_source.html#l01492">postprocessing_cfd.cc:1492</a></div></div>
-<div class="ttc" id="apostprocessing__cfd_8h_html_abfdc02addc37b6d8043c1c2d5a17fd36"><div class="ttname"><a href="postprocessing__cfd_8h.html#abfdc02addc37b6d8043c1c2d5a17fd36">calculate_forces</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; Tensor&lt; 1, dim &gt; &gt; &gt; calculate_forces(const DoFHandler&lt; dim &gt; &amp;dof_handler, const VectorType &amp;evaluation_point, const PhysicalPropertiesManager &amp;properties_manager, const BoundaryConditions::NSBoundaryConditions&lt; dim &gt; &amp;boundary_conditions, const Quadrature&lt; dim - 1 &gt; &amp;face_quadrature_formula, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdoc">Calculates the force due to the fluid motion on every boundary conditions.</div><div class="ttdef"><b>Definition:</b> <a href="postprocessing__cfd_8cc_source.html#l00877">postprocessing_cfd.cc:877</a></div></div>
+<div class="ttc" id="apostprocessing__cfd_8h_html_a885519f82401f5f66cb4f0363b9715a9"><div class="ttname"><a href="postprocessing__cfd_8h.html#a885519f82401f5f66cb4f0363b9715a9">calculate_average_velocity</a></div><div class="ttdeci">double calculate_average_velocity(const DoFHandler&lt; dim &gt; &amp;dof_handler, const VectorType &amp;present_solution, const unsigned int &amp;boundary_id, const Quadrature&lt; dim - 1 &gt; &amp;face_quadrature_formula, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdoc">calculate_average_velocity. This function calculates average velocity from the volumetric flow rate a...</div><div class="ttdef"><b>Definition:</b> <a href="postprocessing__cfd_8cc_source.html#l01489">postprocessing_cfd.cc:1489</a></div></div>
+<div class="ttc" id="apostprocessing__cfd_8h_html_abfdc02addc37b6d8043c1c2d5a17fd36"><div class="ttname"><a href="postprocessing__cfd_8h.html#abfdc02addc37b6d8043c1c2d5a17fd36">calculate_forces</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; Tensor&lt; 1, dim &gt; &gt; &gt; calculate_forces(const DoFHandler&lt; dim &gt; &amp;dof_handler, const VectorType &amp;evaluation_point, const PhysicalPropertiesManager &amp;properties_manager, const BoundaryConditions::NSBoundaryConditions&lt; dim &gt; &amp;boundary_conditions, const Quadrature&lt; dim - 1 &gt; &amp;face_quadrature_formula, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdoc">Calculates the force due to the fluid motion on every boundary conditions.</div><div class="ttdef"><b>Definition:</b> <a href="postprocessing__cfd_8cc_source.html#l00874">postprocessing_cfd.cc:874</a></div></div>
 <div class="ttc" id="apostprocessing__cfd_8h_html_ad1a6fe6ace2b66d05ad7f7461dff8c46"><div class="ttname"><a href="postprocessing__cfd_8h.html#ad1a6fe6ace2b66d05ad7f7461dff8c46">calculate_pressure_drop</a></div><div class="ttdeci">std::pair&lt; double, double &gt; calculate_pressure_drop(const DoFHandler&lt; dim &gt; &amp;dof_handler, const Mapping&lt; dim &gt; &amp;mapping, const VectorType &amp;evaluation_point, const Quadrature&lt; dim &gt; &amp;cell_quadrature_formula, const Quadrature&lt; dim - 1 &gt; &amp;face_quadrature_formula, const unsigned int inlet_boundary_id, const unsigned int outlet_boundary_id)</div><div class="ttdoc">Calculate the pressure drop and total pressure drop between two boundaries. The pressure drop thus ca...</div><div class="ttdef"><b>Definition:</b> <a href="postprocessing__cfd_8cc_source.html#l00038">postprocessing_cfd.cc:38</a></div></div>
-<div class="ttc" id="apostprocessing__cfd_8h_html_ada57d5e521dc73dc11b3146b8860a2ea"><div class="ttname"><a href="postprocessing__cfd_8h.html#ada57d5e521dc73dc11b3146b8860a2ea">calculate_enstrophy</a></div><div class="ttdeci">double calculate_enstrophy(const DoFHandler&lt; dim &gt; &amp;dof_handler, const VectorType &amp;evaluation_point, const Quadrature&lt; dim &gt; &amp;quadrature_formula, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdoc">Calculate the average enstrophy in the simulation domain.</div><div class="ttdef"><b>Definition:</b> <a href="postprocessing__cfd_8cc_source.html#l00334">postprocessing_cfd.cc:334</a></div></div>
-<div class="ttc" id="apostprocessing__cfd_8h_html_aeb2970566392bf1cf6d22557893a9f6a"><div class="ttname"><a href="postprocessing__cfd_8h.html#aeb2970566392bf1cf6d22557893a9f6a">calculate_viscous_dissipation</a></div><div class="ttdeci">double calculate_viscous_dissipation(const DoFHandler&lt; dim &gt; &amp;dof_handler, const VectorType &amp;evaluation_point, const Quadrature&lt; dim &gt; &amp;quadrature_formula, const Mapping&lt; dim &gt; &amp;mapping, const PhysicalPropertiesManager &amp;properties_manager)</div><div class="ttdoc">Calculate the viscous dissipation of kinetic energy which is defined as ∫∇u.τdΩ/∫1dΩ</div><div class="ttdef"><b>Definition:</b> <a href="postprocessing__cfd_8cc_source.html#l00538">postprocessing_cfd.cc:538</a></div></div>
+<div class="ttc" id="apostprocessing__cfd_8h_html_ada57d5e521dc73dc11b3146b8860a2ea"><div class="ttname"><a href="postprocessing__cfd_8h.html#ada57d5e521dc73dc11b3146b8860a2ea">calculate_enstrophy</a></div><div class="ttdeci">double calculate_enstrophy(const DoFHandler&lt; dim &gt; &amp;dof_handler, const VectorType &amp;evaluation_point, const Quadrature&lt; dim &gt; &amp;quadrature_formula, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdoc">Calculate the average enstrophy in the simulation domain.</div><div class="ttdef"><b>Definition:</b> <a href="postprocessing__cfd_8cc_source.html#l00331">postprocessing_cfd.cc:331</a></div></div>
+<div class="ttc" id="apostprocessing__cfd_8h_html_aeb2970566392bf1cf6d22557893a9f6a"><div class="ttname"><a href="postprocessing__cfd_8h.html#aeb2970566392bf1cf6d22557893a9f6a">calculate_viscous_dissipation</a></div><div class="ttdeci">double calculate_viscous_dissipation(const DoFHandler&lt; dim &gt; &amp;dof_handler, const VectorType &amp;evaluation_point, const Quadrature&lt; dim &gt; &amp;quadrature_formula, const Mapping&lt; dim &gt; &amp;mapping, const PhysicalPropertiesManager &amp;properties_manager)</div><div class="ttdoc">Calculate the viscous dissipation of kinetic energy which is defined as ∫∇u.τdΩ/∫1dΩ</div><div class="ttdef"><b>Definition:</b> <a href="postprocessing__cfd_8cc_source.html#l00535">postprocessing_cfd.cc:535</a></div></div>
 <div class="ttc" id="apostprocessing__velocities_8h_html"><div class="ttname"><a href="postprocessing__velocities_8h.html">postprocessing_velocities.h</a></div></div>
 <div class="ttc" id="apostprocessors_8h_html"><div class="ttname"><a href="postprocessors_8h.html">postprocessors.h</a></div></div>
 <div class="ttc" id="apostprocessors__smoothing_8h_html"><div class="ttname"><a href="postprocessors__smoothing_8h.html">postprocessors_smoothing.h</a></div></div>
@@ -3004,7 +2996,7 @@ $(function() {
 <div class="ttc" id="atime__integration__utilities_8h_html"><div class="ttname"><a href="time__integration__utilities_8h.html">time_integration_utilities.h</a></div></div>
 <div class="ttc" id="autilities_8h_html"><div class="ttname"><a href="utilities_8h.html">utilities.h</a></div></div>
 <div class="ttc" id="autilities_8h_html_a1169674c9744ed63bfb067efce02df5f"><div class="ttname"><a href="utilities_8h.html#a1169674c9744ed63bfb067efce02df5f">serialize_table</a></div><div class="ttdeci">void serialize_table(const TableHandler &amp;table, const std::string filename)</div><div class="ttdoc">Serializes a table using boost serialization feature the filename should contain the desired extensio...</div><div class="ttdef"><b>Definition:</b> <a href="utilities_8h_source.html#l00436">utilities.h:436</a></div></div>
-<div class="ttc" id="autilities_8h_html_a4b182f49ed10ffa3d2d50a9a309cd2f0"><div class="ttname"><a href="utilities_8h.html#a4b182f49ed10ffa3d2d50a9a309cd2f0">create_output_folder</a></div><div class="ttdeci">void create_output_folder(const std::string &amp;dirname)</div><div class="ttdoc">Creates the simulation output folder.</div><div class="ttdef"><b>Definition:</b> <a href="utilities_8cc_source.html#l00365">utilities.cc:365</a></div></div>
+<div class="ttc" id="autilities_8h_html_a4b182f49ed10ffa3d2d50a9a309cd2f0"><div class="ttname"><a href="utilities_8h.html#a4b182f49ed10ffa3d2d50a9a309cd2f0">create_output_folder</a></div><div class="ttdeci">void create_output_folder(const std::string &amp;dirname)</div><div class="ttdoc">Creates the simulation output folder.</div><div class="ttdef"><b>Definition:</b> <a href="utilities_8cc_source.html#l00363">utilities.cc:363</a></div></div>
 <div class="ttc" id="autilities_8h_html_a56a967052620929f4db03cee351d6890"><div class="ttname"><a href="utilities_8h.html#a56a967052620929f4db03cee351d6890">announce_string</a></div><div class="ttdeci">void announce_string(const ConditionalOStream &amp;pcout, const std::string expression, const char delimiter='-')</div><div class="ttdoc">Prints a string and then adds a line above and below made with dashes containing as many dashes as th...</div><div class="ttdef"><b>Definition:</b> <a href="utilities_8h_source.html#l00419">utilities.h:419</a></div></div>
 <div class="ttc" id="autilities_8h_html_a704ab7e8f1f853cd7433b31d571df760"><div class="ttname"><a href="utilities_8h.html#a704ab7e8f1f853cd7433b31d571df760">deserialize_table</a></div><div class="ttdeci">void deserialize_table(TableHandler &amp;table, const std::string filename)</div><div class="ttdoc">Loads a table using boost serialization feature the filename should contain the desired extension.</div><div class="ttdef"><b>Definition:</b> <a href="utilities_8h_source.html#l00451">utilities.h:451</a></div></div>
 <div class="ttc" id="autilities_8h_html_a7d7935807703948c95807db1f02eca18"><div class="ttname"><a href="utilities_8h.html#a7d7935807703948c95807db1f02eca18">make_table_scalars_tensors</a></div><div class="ttdeci">TableHandler make_table_scalars_tensors(const std::vector&lt; T &gt; &amp;independent_values, const std::string &amp;independent_column_name, const std::vector&lt; Tensor&lt; 1, dim &gt;&gt; &amp;dependent_vector, const std::vector&lt; std::string &gt; &amp;dependent_column_names, const unsigned int display_precision, const bool display_scientific_notation=false)</div><div class="ttdoc">Generate a table from a vector of scalars (independent variable) and a vector of Tensor&lt;1,...</div><div class="ttdef"><b>Definition:</b> <a href="utilities_8cc_source.html#l00047">utilities.cc:47</a></div></div>

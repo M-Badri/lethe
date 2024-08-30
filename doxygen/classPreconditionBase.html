@@ -73,6 +73,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classPreconditionBase-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PreconditionBase&lt; VectorType &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -91,8 +92,23 @@ Inheritance diagram for PreconditionBase&lt; VectorType &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a9218b7586475c0edf46ed05cb282450b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPreconditionBase.html#a9218b7586475c0edf46ed05cb282450b">PreconditionBase</a> ()</td></tr>
+<tr class="separator:a9218b7586475c0edf46ed05cb282450b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0426f8c36d5ec5f6871f7b6a230b66a3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPreconditionBase.html#a0426f8c36d5ec5f6871f7b6a230b66a3">vmult</a> (VectorType &amp;dst, const VectorType &amp;src) const =0</td></tr>
 <tr class="separator:a0426f8c36d5ec5f6871f7b6a230b66a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3b1108670987bc83916e09cb61bda84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPreconditionBase.html#aa3b1108670987bc83916e09cb61bda84">timer_print</a> () const</td></tr>
+<tr class="separator:aa3b1108670987bc83916e09cb61bda84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a644fcb4edd2f4411e4e9ce0174ff91f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPreconditionBase.html#a644fcb4edd2f4411e4e9ce0174ff91f5">timer_reset</a> () const</td></tr>
+<tr class="separator:a644fcb4edd2f4411e4e9ce0174ff91f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a59d9072a84e468def4544480471c4f05"><td class="memItemLeft" align="right" valign="top">const MPI_Comm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPreconditionBase.html#a59d9072a84e468def4544480471c4f05">comm</a></td></tr>
+<tr class="separator:a59d9072a84e468def4544480471c4f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4aefe755e27a309592ae3c2366983d9"><td class="memItemLeft" align="right" valign="top">ConditionalOStream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPreconditionBase.html#ad4aefe755e27a309592ae3c2366983d9">pcout</a></td></tr>
+<tr class="separator:ad4aefe755e27a309592ae3c2366983d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c57875564c872e906619b772a022496"><td class="memItemLeft" align="right" valign="top">TimerOutput&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPreconditionBase.html#a9c57875564c872e906619b772a022496">timer</a></td></tr>
+<tr class="separator:a9c57875564c872e906619b772a022496"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename VectorType&gt;<br />
@@ -100,8 +116,106 @@ class PreconditionBase&lt; VectorType &gt;</h3>
 
 <p>A base class of preconditioners used by the smoother. </p>
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free_8cc_source.html#l00052">52</a> of file <a class="el" href="fluid__dynamics__matrix__free_8cc_source.html">fluid_dynamics_matrix_free.cc</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free_8cc_source.html#l00053">53</a> of file <a class="el" href="fluid__dynamics__matrix__free_8cc_source.html">fluid_dynamics_matrix_free.cc</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a9218b7586475c0edf46ed05cb282450b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9218b7586475c0edf46ed05cb282450b">&#9670;&nbsp;</a></span>PreconditionBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPreconditionBase.html">PreconditionBase</a>&lt; VectorType &gt;::<a class="el" href="classPreconditionBase.html">PreconditionBase</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free_8cc_source.html#l00059">59</a> of file <a class="el" href="fluid__dynamics__matrix__free_8cc_source.html">fluid_dynamics_matrix_free.cc</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa3b1108670987bc83916e09cb61bda84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3b1108670987bc83916e09cb61bda84">&#9670;&nbsp;</a></span>timer_print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classPreconditionBase.html">PreconditionBase</a>&lt; VectorType &gt;::timer_print </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Print timers. </p>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free_8cc_source.html#l00078">78</a> of file <a class="el" href="fluid__dynamics__matrix__free_8cc_source.html">fluid_dynamics_matrix_free.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="fluid__dynamics__matrix__free_8cc_source.html#l00094">PreconditionBase&lt; VectorType &gt;::comm</a>, and <a class="el" href="fluid__dynamics__matrix__free_8cc_source.html#l00100">PreconditionBase&lt; VectorType &gt;::timer</a>.</p>
+
+</div>
+</div>
+<a id="a644fcb4edd2f4411e4e9ce0174ff91f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a644fcb4edd2f4411e4e9ce0174ff91f5">&#9670;&nbsp;</a></span>timer_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classPreconditionBase.html">PreconditionBase</a>&lt; VectorType &gt;::timer_reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset timers. </p>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free_8cc_source.html#l00087">87</a> of file <a class="el" href="fluid__dynamics__matrix__free_8cc_source.html">fluid_dynamics_matrix_free.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="fluid__dynamics__matrix__free_8cc_source.html#l00100">PreconditionBase&lt; VectorType &gt;::timer</a>.</p>
+
+</div>
+</div>
 <a id="a0426f8c36d5ec5f6871f7b6a230b66a3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0426f8c36d5ec5f6871f7b6a230b66a3">&#9670;&nbsp;</a></span>vmult()</h2>
 
@@ -139,8 +253,100 @@ template&lt;typename VectorType &gt; </div>
 </div><div class="memdoc">
 
 <p>Apply preconditioner. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">dst</td><td>Destination vector holding the result. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">src</td><td>Input source vector. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implemented in <a class="el" href="classPreconditionASM.html#aea419299707194ff45cfb87abcb72297">PreconditionASM&lt; VectorType &gt;</a>, and <a class="el" href="classMyDiagonalMatrix.html#ab4ad562146d2537ec02c8a590a4d54c1">MyDiagonalMatrix&lt; VectorType &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classPreconditionASM.html#ad3a995485891c32eed9077b007f06a5e">PreconditionASM&lt; VectorType &gt;</a>, and <a class="el" href="classMyDiagonalMatrix.html#ab4ad562146d2537ec02c8a590a4d54c1">MyDiagonalMatrix&lt; VectorType &gt;</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a59d9072a84e468def4544480471c4f05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59d9072a84e468def4544480471c4f05">&#9670;&nbsp;</a></span>comm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const MPI_Comm <a class="el" href="classPreconditionBase.html">PreconditionBase</a>&lt; VectorType &gt;::comm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Communicator used for timer output. </p>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free_8cc_source.html#l00094">94</a> of file <a class="el" href="fluid__dynamics__matrix__free_8cc_source.html">fluid_dynamics_matrix_free.cc</a>.</p>
+
+</div>
+</div>
+<a id="ad4aefe755e27a309592ae3c2366983d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4aefe755e27a309592ae3c2366983d9">&#9670;&nbsp;</a></span>pcout</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ConditionalOStream <a class="el" href="classPreconditionBase.html">PreconditionBase</a>&lt; VectorType &gt;::pcout</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stream used for timer output. </p>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free_8cc_source.html#l00097">97</a> of file <a class="el" href="fluid__dynamics__matrix__free_8cc_source.html">fluid_dynamics_matrix_free.cc</a>.</p>
+
+</div>
+</div>
+<a id="a9c57875564c872e906619b772a022496"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c57875564c872e906619b772a022496">&#9670;&nbsp;</a></span>timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TimerOutput <a class="el" href="classPreconditionBase.html">PreconditionBase</a>&lt; VectorType &gt;::timer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Timer. </p>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__matrix__free_8cc_source.html#l00100">100</a> of file <a class="el" href="fluid__dynamics__matrix__free_8cc_source.html">fluid_dynamics_matrix_free.cc</a>.</p>
 
 </div>
 </div>

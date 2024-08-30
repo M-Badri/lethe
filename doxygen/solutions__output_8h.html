@@ -143,16 +143,16 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a5f2efa78963f4a5e095c5dd6f1db241d"><td class="memTemplParams" colspan="2">template&lt;int dim, int spacedim = dim&gt; </td></tr>
-<tr class="memitem:a5f2efa78963f4a5e095c5dd6f1db241d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="solutions__output_8h.html#a5f2efa78963f4a5e095c5dd6f1db241d">write_vtu_and_pvd</a> (<a class="el" href="classPVDHandler.html">PVDHandler</a> &amp;pvd_handler, const DataOutInterface&lt; dim, spacedim &gt; &amp;data_out, const std::string folder, const std::string file_prefix, const double time, const unsigned int iter, const unsigned int group_files, const MPI_Comm &amp;mpi_communicator, const unsigned int digits=5)</td></tr>
-<tr class="separator:a5f2efa78963f4a5e095c5dd6f1db241d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dd643edfd9d1b7fa5c46dfa3c6e6bf1"><td class="memTemplParams" colspan="2">template&lt;int dim&gt; </td></tr>
-<tr class="memitem:a4dd643edfd9d1b7fa5c46dfa3c6e6bf1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="solutions__output_8h.html#a4dd643edfd9d1b7fa5c46dfa3c6e6bf1">write_boundaries_vtu</a> (const DataOutFaces&lt; dim &gt; &amp;data_out, const std::string folder, const double time, const unsigned int iter, const MPI_Comm &amp;mpi_communicator, const std::string file_prefix=std::string(&quot;boundaries&quot;), const unsigned int digits=5)</td></tr>
-<tr class="separator:a4dd643edfd9d1b7fa5c46dfa3c6e6bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a089ca01c372f5358454bced543e961"><td class="memTemplParams" colspan="2">template&lt;int dim, int spacedim = dim&gt; </td></tr>
+<tr class="memitem:a5a089ca01c372f5358454bced543e961"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="solutions__output_8h.html#a5a089ca01c372f5358454bced543e961">write_vtu_and_pvd</a> (<a class="el" href="classPVDHandler.html">PVDHandler</a> &amp;pvd_handler, const DataOutInterface&lt; dim, spacedim &gt; &amp;data_out, const std::string &amp;folder, const std::string &amp;file_prefix, const double time, const unsigned int iter, const unsigned int group_files, const MPI_Comm &amp;mpi_communicator, const unsigned int digits=5)</td></tr>
+<tr class="separator:a5a089ca01c372f5358454bced543e961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fc16b92766f9e3ba703254845373424"><td class="memTemplParams" colspan="2">template&lt;int dim&gt; </td></tr>
+<tr class="memitem:a6fc16b92766f9e3ba703254845373424"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="solutions__output_8h.html#a6fc16b92766f9e3ba703254845373424">write_boundaries_vtu</a> (const DataOutFaces&lt; dim &gt; &amp;data_out, const std::string &amp;folder, const double time, const unsigned int iter, const MPI_Comm &amp;mpi_communicator, const std::string &amp;file_prefix=std::string(&quot;boundaries&quot;), const unsigned int digits=5)</td></tr>
+<tr class="separator:a6fc16b92766f9e3ba703254845373424"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a4dd643edfd9d1b7fa5c46dfa3c6e6bf1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4dd643edfd9d1b7fa5c46dfa3c6e6bf1">&#9670;&nbsp;</a></span>write_boundaries_vtu()</h2>
+<a id="a6fc16b92766f9e3ba703254845373424"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fc16b92766f9e3ba703254845373424">&#9670;&nbsp;</a></span>write_boundaries_vtu()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -168,7 +168,7 @@ template&lt;int dim&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>folder</em>, </td>
         </tr>
         <tr>
@@ -192,7 +192,7 @@ template&lt;int dim&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>file_prefix</em> = <code>std::string(&quot;boundaries&quot;)</code>, </td>
         </tr>
         <tr>
@@ -225,8 +225,8 @@ template&lt;int dim&gt; </div>
 
 </div>
 </div>
-<a id="a5f2efa78963f4a5e095c5dd6f1db241d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f2efa78963f4a5e095c5dd6f1db241d">&#9670;&nbsp;</a></span>write_vtu_and_pvd()</h2>
+<a id="a5a089ca01c372f5358454bced543e961"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a089ca01c372f5358454bced543e961">&#9670;&nbsp;</a></span>write_vtu_and_pvd()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -248,13 +248,13 @@ template&lt;int dim, int spacedim = dim&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>folder</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>file_prefix</em>, </td>
         </tr>
         <tr>

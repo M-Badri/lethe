@@ -95,8 +95,8 @@ Inheritance diagram for ParticleWallLinearForce&lt; dim &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aed0277a862f5e821548ee43a970e49f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParticleWallLinearForce.html#aed0277a862f5e821548ee43a970e49f9">ParticleWallLinearForce</a> (const <a class="el" href="classDEMSolverParameters.html">DEMSolverParameters</a>&lt; dim &gt; &amp;dem_parameters, const std::vector&lt; types::boundary_id &gt; <a class="el" href="classParticleWallContactForce.html#a34b229e7a32e7855e2ed6e3cc87f3b4c">boundary_index</a>={})</td></tr>
-<tr class="separator:aed0277a862f5e821548ee43a970e49f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d949562bdd3b6036ddb0e256fdf9f4e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParticleWallLinearForce.html#a9d949562bdd3b6036ddb0e256fdf9f4e">ParticleWallLinearForce</a> (const <a class="el" href="classDEMSolverParameters.html">DEMSolverParameters</a>&lt; dim &gt; &amp;dem_parameters, const std::vector&lt; types::boundary_id &gt; &amp;<a class="el" href="classParticleWallContactForce.html#a34b229e7a32e7855e2ed6e3cc87f3b4c">boundary_index</a>={})</td></tr>
+<tr class="separator:a9d949562bdd3b6036ddb0e256fdf9f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10a936bd607d50b3ff91879c843c5113"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParticleWallLinearForce.html#a10a936bd607d50b3ff91879c843c5113">calculate_particle_wall_contact_force</a> (typename <a class="el" href="structDEM_1_1dem__data__structures.html">DEM::dem_data_structures</a>&lt; dim &gt;::particle_wall_in_contact &amp;particle_wall_pairs_in_contact, const double dt, std::vector&lt; Tensor&lt; 1, 3 &gt;&gt; &amp;torque, std::vector&lt; Tensor&lt; 1, 3 &gt;&gt; &amp;force) override</td></tr>
 <tr class="separator:a10a936bd607d50b3ff91879c843c5113"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab02f70af45319d3e490fa3ee7fcee287"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParticleWallLinearForce.html#ab02f70af45319d3e490fa3ee7fcee287">calculate_particle_floating_wall_contact_force</a> (typename <a class="el" href="structDEM_1_1dem__data__structures.html">DEM::dem_data_structures</a>&lt; dim &gt;::particle_floating_mesh_in_contact &amp;particle_floating_mesh_in_contact, const double dt, std::vector&lt; Tensor&lt; 1, 3 &gt;&gt; &amp;torque, std::vector&lt; Tensor&lt; 1, 3 &gt;&gt; &amp;force, const std::vector&lt; std::shared_ptr&lt; <a class="el" href="classSerialSolid.html">SerialSolid</a>&lt; dim - 1, dim &gt;&gt;&gt; &amp;solids) override</td></tr>
@@ -226,8 +226,8 @@ template&lt;int dim&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aed0277a862f5e821548ee43a970e49f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed0277a862f5e821548ee43a970e49f9">&#9670;&nbsp;</a></span>ParticleWallLinearForce()</h2>
+<a id="a9d949562bdd3b6036ddb0e256fdf9f4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d949562bdd3b6036ddb0e256fdf9f4e">&#9670;&nbsp;</a></span>ParticleWallLinearForce()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,7 +243,7 @@ template&lt;int dim&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; types::boundary_id &gt;&#160;</td>
+          <td class="paramtype">const std::vector&lt; types::boundary_id &gt; &amp;&#160;</td>
           <td class="paramname"><em>boundary_index</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
@@ -383,7 +383,7 @@ template&lt;int dim&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="particle__wall__linear__force_8cc_source.html#l00208">208</a> of file <a class="el" href="particle__wall__linear__force_8cc_source.html">particle_wall_linear_force.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="dem__properties_8h_source.html#l00038">DEM::dp</a>, <a class="el" href="lethe__grid__tools_8cc_source.html#l01220">LetheGridTools::find_particle_triangle_projection()</a>, and <a class="el" href="tensors__and__points__dimension__manipulation_8h_source.html#l00082">point_nd_to_3d()</a>.</p>
+<p class="reference">References <a class="el" href="dem__properties_8h_source.html#l00038">DEM::dp</a>, <a class="el" href="lethe__grid__tools_8cc_source.html#l01219">LetheGridTools::find_particle_triangle_projection()</a>, and <a class="el" href="tensors__and__points__dimension__manipulation_8h_source.html#l00082">point_nd_to_3d()</a>.</p>
 
 </div>
 </div>
