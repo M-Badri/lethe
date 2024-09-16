@@ -431,12 +431,14 @@
 <h1>Stabilization<a class="headerlink" href="#stabilization" title="Link to this heading">#</a></h1>
 <p>To solve the Navier-Stokes equations (and other), Lethe uses stabilization techniques to formulate a Petrov-Galerkin strategy in which the test function is not strictly equal to the interpolation. The stabilization provided by Lethe are relatively robust and do not require any manual tinkering. However, stabilization of FEM schemes remain an active area a research, notably when it comes to variational multi-scales (VMS) methods. This is a field in which we are doing active research. As such, Lethe possesses some advanced parameters to control the stabilization techniques used to solve the Navier-Stokes. These are <em>advanced</em> parameters and, in general, the defaults value should be used.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection stabilization
-  set use default stabilization = true
+  set use default stabilization   = true
 
-  set stabilization             = pspg_supg     # &lt;pspg_supg|gls|grad_div&gt;.
+  set stabilization               = pspg_supg     # &lt;pspg_supg|gls|grad_div&gt;.
+
+  set heat transfer stabilization = false
 
   # Pressure scaling factor
-  set pressure scaling factor   = 1
+  set pressure scaling factor     = 1
 end
 </pre></div>
 </div>
@@ -446,6 +448,7 @@ end
 <li><p><code class="docutils literal notranslate"><span class="pre">stabilization=pspg-supg</span></code> assembles a PSPG/SUPG stabilization for the Navier-Stokes equations. This stabilization should only be used with the monolithic solver for the Navier-Stokes equations (<code class="docutils literal notranslate"><span class="pre">lethe-fluid</span></code> or <code class="docutils literal notranslate"><span class="pre">lethe-fluid-matrix-free</span></code>).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">stabilization=gls</span></code> assembles a full GLS stabilization for the Navier-Stokes equations which adds two Least-Squares terms (for more details see <a class="reference internal" href="../../theory/multiphysics/fluid_dynamics/stabilization.html"><span class="doc">On the Need for Stabilization</span></a>). This stabilization should only be used with the monolithic solver for the Navier-Stokes equations (<code class="docutils literal notranslate"><span class="pre">lethe-fluid</span></code> or <code class="docutils literal notranslate"><span class="pre">lethe-fluid-matrix-free</span></code>).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">stabilization=grad_div</span></code> assembles a grad-div penalization term in the momentum equation to ensure mass conservation. This is not a stabilization method per-say and should not be used with elements that are not LBB stable. This stabilization should only be used with the grad-div block Navier-Stokes solver (<code class="docutils literal notranslate"><span class="pre">lethe-fluid-block</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">heat</span> <span class="pre">transfer</span> <span class="pre">stabilization</span></code>: Applies the discontinuity-capturing directional dissipation (DCDD) stabilization term on the heat transfer equation. For more information, see Tezduyar, T. E. (2003).</p></li>
 </ul>
 <p>The <code class="docutils literal notranslate"><span class="pre">pressure</span> <span class="pre">scaling</span> <span class="pre">factor</span></code> parameter is used as a multiplier for the pressure in the momentum equation; the inverse of the factor is applied to the pressure after solving. It helps the convergence of the linear solver  by decreasing the condition number for cases where pressure and velocity have very different scales.</p>
 </section>

@@ -227,6 +227,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a9b1c8b293984f450067058ee53084afc"><td class="memTemplParams" colspan="2">template&lt;int dim&gt; </td></tr>
 <tr class="memitem:a9b1c8b293984f450067058ee53084afc"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="utilities_8h.html#a9b1c8b293984f450067058ee53084afc">compute_cell_diameter</a> (const double cell_measure, const unsigned int fe_degree)</td></tr>
 <tr class="separator:a9b1c8b293984f450067058ee53084afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d02cb065c32b672c94bb862ecff4431"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utilities_8h.html#a3d02cb065c32b672c94bb862ecff4431">compute_cell_measure_with_JxW</a> (const std::vector&lt; double &gt; &amp;JxW_values)</td></tr>
+<tr class="separator:a3d02cb065c32b672c94bb862ecff4431"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a28e3647b49b871d119c8e19d390d6d66"></a>
@@ -557,6 +559,49 @@ template&lt;int dim&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>Cell diameter value. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="utilities_8h_source.html#l00602">602</a> of file <a class="el" href="utilities_8h_source.html">utilities.h</a>.</p>
+
+</div>
+</div>
+<a id="a3d02cb065c32b672c94bb862ecff4431"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d02cb065c32b672c94bb862ecff4431">&#9670;&nbsp;</a></span>compute_cell_measure_with_JxW()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double compute_cell_measure_with_JxW </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>JxW_values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the area (2D) or volume (3D) of the cell by integrating 1 over the cell, by summing JxW values (quadrature weights) returned by the FEValues object. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">dim</td><td>Number of spatial dimensions (2D or 3D).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">JxW_values</td><td>Vector of mapped quadrature weights.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Area (2D) volume (3D) of the cell. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="utilities_8h_source.html#l00630">630</a> of file <a class="el" href="utilities_8h_source.html">utilities.h</a>.</p>
 
 </div>
 </div>
