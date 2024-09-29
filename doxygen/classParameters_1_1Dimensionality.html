@@ -123,6 +123,14 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a530753508c01b7823144578ad5f4aee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a871b83d7e1e171582e092b58435de5b9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParameters_1_1Dimensionality.html#a871b83d7e1e171582e092b58435de5b9">thermal_expansion_scaling</a></td></tr>
 <tr class="separator:a871b83d7e1e171582e092b58435de5b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a512d2b5ae60b8fabddb0af2f816f8e65"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParameters_1_1Dimensionality.html#a512d2b5ae60b8fabddb0af2f816f8e65">surface_tension_scaling</a></td></tr>
+<tr class="separator:a512d2b5ae60b8fabddb0af2f816f8e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f4a74e13a25091f4fc9c032e7f4bfc1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParameters_1_1Dimensionality.html#a4f4a74e13a25091f4fc9c032e7f4bfc1">surface_tension_gradient_scaling</a></td></tr>
+<tr class="separator:a4f4a74e13a25091f4fc9c032e7f4bfc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a636f1acc2bed2cfa2a81d9be704b877c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParameters_1_1Dimensionality.html#a636f1acc2bed2cfa2a81d9be704b877c">cahn_hilliard_mobility_scaling</a></td></tr>
+<tr class="separator:a636f1acc2bed2cfa2a81d9be704b877c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66bedc890daea206984e38b01172574"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParameters_1_1Dimensionality.html#ae66bedc890daea206984e38b01172574">cahn_hilliard_epsilon_scaling</a></td></tr>
+<tr class="separator:ae66bedc890daea206984e38b01172574"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class used to rescale physical properties for cases where the main dimensions of the problems (Length, Mass, Time and Temperature) are not expressed in SI, but are expressed in another set of units. For example, this can be used to carry out a simulation where the mesh is expressed in millimeters instead of meters. This class is currently only used to rescale the physical properties in the FEM-based physics (e.g. all of those that are solvers). Support for <a class="el" href="namespaceDEM.html" title="This namespace defines all the data containers and required operations on these containers for the DE...">DEM</a>, CFD-DEM and rescaling of boundary conditions is planned in the mid-term. </p>
@@ -185,7 +193,7 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="dimensionality_8cc_source.html#l00027">27</a> of file <a class="el" href="dimensionality_8cc_source.html">dimensionality.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dimensionality_8cc_source.html#l00031">31</a> of file <a class="el" href="dimensionality_8cc_source.html">dimensionality.cc</a>.</p>
 
 </div>
 </div>
@@ -236,13 +244,45 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="dimensionality_8cc_source.html#l00064">64</a> of file <a class="el" href="dimensionality_8cc_source.html">dimensionality.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dimensionality_8cc_source.html#l00068">68</a> of file <a class="el" href="dimensionality_8cc_source.html">dimensionality.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="dem__properties_8h_source.html#l00051">DEM::mass</a>, and <a class="el" href="physical__property__model_8h_source.html#l00053">temperature</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae66bedc890daea206984e38b01172574"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66bedc890daea206984e38b01172574">&#9670;&nbsp;</a></span>cahn_hilliard_epsilon_scaling</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Parameters::Dimensionality::cahn_hilliard_epsilon_scaling</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="dimensionality_8h_source.html#l00108">108</a> of file <a class="el" href="dimensionality_8h_source.html">dimensionality.h</a>.</p>
+
+</div>
+</div>
+<a id="a636f1acc2bed2cfa2a81d9be704b877c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a636f1acc2bed2cfa2a81d9be704b877c">&#9670;&nbsp;</a></span>cahn_hilliard_mobility_scaling</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Parameters::Dimensionality::cahn_hilliard_mobility_scaling</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="dimensionality_8h_source.html#l00107">107</a> of file <a class="el" href="dimensionality_8h_source.html">dimensionality.h</a>.</p>
+
+</div>
+</div>
 <a id="a93ce9aac024fc23cb55c2ceca982ff98"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a93ce9aac024fc23cb55c2ceca982ff98">&#9670;&nbsp;</a></span>density_scaling</h2>
 
@@ -352,6 +392,38 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="dimensionality_8h_source.html#l00100">100</a> of file <a class="el" href="dimensionality_8h_source.html">dimensionality.h</a>.</p>
+
+</div>
+</div>
+<a id="a4f4a74e13a25091f4fc9c032e7f4bfc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f4a74e13a25091f4fc9c032e7f4bfc1">&#9670;&nbsp;</a></span>surface_tension_gradient_scaling</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Parameters::Dimensionality::surface_tension_gradient_scaling</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="dimensionality_8h_source.html#l00106">106</a> of file <a class="el" href="dimensionality_8h_source.html">dimensionality.h</a>.</p>
+
+</div>
+</div>
+<a id="a512d2b5ae60b8fabddb0af2f816f8e65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a512d2b5ae60b8fabddb0af2f816f8e65">&#9670;&nbsp;</a></span>surface_tension_scaling</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Parameters::Dimensionality::surface_tension_scaling</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="dimensionality_8h_source.html#l00105">105</a> of file <a class="el" href="dimensionality_8h_source.html">dimensionality.h</a>.</p>
 
 </div>
 </div>

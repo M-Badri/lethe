@@ -90,8 +90,8 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab8f88c502842a46210207b6e6907271d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParameters_1_1SurfaceTensionParameters.html#ab8f88c502842a46210207b6e6907271d">declare_parameters</a> (ParameterHandler &amp;prm)</td></tr>
 <tr class="separator:ab8f88c502842a46210207b6e6907271d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8dc3e50c8790a42ca92b7a4cd8c1957"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParameters_1_1SurfaceTensionParameters.html#ac8dc3e50c8790a42ca92b7a4cd8c1957">parse_parameters</a> (ParameterHandler &amp;prm)</td></tr>
-<tr class="separator:ac8dc3e50c8790a42ca92b7a4cd8c1957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10be37cc823c19d0798b0219c3304419"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParameters_1_1SurfaceTensionParameters.html#a10be37cc823c19d0798b0219c3304419">parse_parameters</a> (ParameterHandler &amp;prm, const <a class="el" href="classParameters_1_1Dimensionality.html">Parameters::Dimensionality</a> dimensions)</td></tr>
+<tr class="separator:a10be37cc823c19d0798b0219c3304419"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -127,12 +127,20 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters_8cc_source.html#l00487">487</a> of file <a class="el" href="parameters_8cc_source.html">parameters.cc</a>.</p>
+<p>Declare the parameters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">prm</td><td>The ParameterHandler. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="parameters_8cc_source.html#l00489">489</a> of file <a class="el" href="parameters_8cc_source.html">parameters.cc</a>.</p>
 
 </div>
 </div>
-<a id="ac8dc3e50c8790a42ca92b7a4cd8c1957"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8dc3e50c8790a42ca92b7a4cd8c1957">&#9670;&nbsp;</a></span>parse_parameters()</h2>
+<a id="a10be37cc823c19d0798b0219c3304419"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10be37cc823c19d0798b0219c3304419">&#9670;&nbsp;</a></span>parse_parameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -141,15 +149,34 @@ Public Attributes</h2></td></tr>
           <td class="memname">void Parameters::SurfaceTensionParameters::parse_parameters </td>
           <td>(</td>
           <td class="paramtype">ParameterHandler &amp;&#160;</td>
-          <td class="paramname"><em>prm</em></td><td>)</td>
+          <td class="paramname"><em>prm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="classParameters_1_1Dimensionality.html">Parameters::Dimensionality</a>&#160;</td>
+          <td class="paramname"><em>dimensions</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters_8cc_source.html#l00517">517</a> of file <a class="el" href="parameters_8cc_source.html">parameters.cc</a>.</p>
+<p>Parse the parameters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">prm</td><td>The ParameterHandler.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dimensions</td><td>The <a class="el" href="classParameters_1_1Dimensionality.html" title="Class used to rescale physical properties for cases where the main dimensions of the problems (Length...">Dimensionality</a> object controling the fundamental dimensions (length, time, mass, temperature) of the problem. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">References <a class="el" href="parameters_8h_source.html#l00339">surface_tension_coefficient</a>, <a class="el" href="parameters_8h_source.html#l00345">surface_tension_gradient</a>, <a class="el" href="parameters_8h_source.html#l00342">T_0</a>, <a class="el" href="parameters_8h_source.html#l00351">T_liquidus</a>, and <a class="el" href="parameters_8h_source.html#l00348">T_solidus</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8cc_source.html#l00519">519</a> of file <a class="el" href="parameters_8cc_source.html">parameters.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="parameters_8h_source.html#l00339">surface_tension_coefficient</a>, <a class="el" href="parameters_8h_source.html#l00345">surface_tension_gradient</a>, <a class="el" href="dimensionality_8h_source.html#l00106">Parameters::Dimensionality::surface_tension_gradient_scaling</a>, <a class="el" href="dimensionality_8h_source.html#l00105">Parameters::Dimensionality::surface_tension_scaling</a>, <a class="el" href="parameters_8h_source.html#l00342">T_0</a>, <a class="el" href="parameters_8h_source.html#l00351">T_liquidus</a>, <a class="el" href="parameters_8h_source.html#l00348">T_solidus</a>, and <a class="el" href="dimensionality_8h_source.html#l00088">Parameters::Dimensionality::temperature</a>.</p>
 
 </div>
 </div>

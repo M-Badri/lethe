@@ -441,14 +441,14 @@
 </ul>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
-\[\nu \nabla \mathbf{u} \cdot \mathbf{n} - p \mathcal{I} \cdot \mathbf{n} - \beta (\mathbf{u}\cdot n)_{-} \mathbf{u} = 0\]</div>
+\[\nu \nabla \mathbf{u} \cdot \mathbf{n} - p \mathcal{I} \cdot \mathbf{n} - \beta (\mathbf{u}\cdot \mathbf{n})_{-} \mathbf{u} = 0\]</div>
 </div>
 <p>or in Einstein notation:</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
 \[\nu \partial_i u_j n_j  - p n_i - \beta ( u_k n_k)_{-} u_i = 0\]</div>
 </div>
-<p>where <span class="math notranslate nohighlight">\(\beta\)</span> is a constant  and <span class="math notranslate nohighlight">\((\mathbf{u}\cdot n)_{-}\)</span> is <span class="math notranslate nohighlight">\(min (0,\mathbf{u}\cdot n)\)</span>. We refer the reader to the work of <a class="reference external" href="https://www.mathsim.eu/~darndt/files/ENUMATH_2015.pdf">Arndt et al 2015</a>  for more detail.</p>
+<p>where <span class="math notranslate nohighlight">\(\beta\)</span> is a constant  and <span class="math notranslate nohighlight">\((\mathbf{u}\cdot \mathbf{n})_{-}\)</span> is <span class="math notranslate nohighlight">\(\min (0,\mathbf{u}\cdot \mathbf{n})\)</span>. We refer the reader to the work of <a class="reference external" href="https://www.mathsim.eu/~darndt/files/ENUMATH_2015.pdf">Arndt et al 2015</a>  for more detail.</p>
 <ul class="simple">
 <li><p>Finally, Lethe also supports not imposing a boundary condition on an ID. Not imposing a boundary condition is equivalent to the <em>do nothing</em> boundary condition (<code class="docutils literal notranslate"><span class="pre">none</span></code>), which results in a zero net traction on a boundary. This, in fact, imposes <span class="math notranslate nohighlight">\(\int_{\Gamma}(-p\mathcal{I} + \mathbf{\tau}) \cdot \mathbf{n}=0\)</span> where <span class="math notranslate nohighlight">\(p\)</span> is the pressure, <span class="math notranslate nohighlight">\(\mathcal{I}\)</span> is the identity tensor, <span class="math notranslate nohighlight">\(\mathbf{\tau}\)</span> is the deviatoric stress tensor  and <span class="math notranslate nohighlight">\(\Gamma\)</span> is the boundary.</p></li>
 </ul>
@@ -519,6 +519,10 @@ end
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 <p>While using the <code class="docutils literal notranslate"><span class="pre">lethe-fluid-sharp</span></code> solver, it is wise to assign a weak type of boundary (<code class="docutils literal notranslate"><span class="pre">outlet</span></code>, <code class="docutils literal notranslate"><span class="pre">partial</span> <span class="pre">slip</span></code>, or <code class="docutils literal notranslate"><span class="pre">function</span> <span class="pre">weak</span></code>) to at least one boundary. The presence of particle(s) has a non-null contribution to the divergence of the problem, making it much harder for the linear solver to converge unless it is given some flexibility through of boundaries.</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">lethe-fluid-matrix-free</span></code> application does not support the <code class="docutils literal notranslate"><span class="pre">pressure</span></code> and <code class="docutils literal notranslate"><span class="pre">partial</span> <span class="pre">slip</span></code> boundary conditions.</p>
 </div>
 </section>
 

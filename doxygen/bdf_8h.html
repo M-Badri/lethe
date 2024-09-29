@@ -247,7 +247,7 @@ template&lt;typename DataType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Extrapolate vector of solution to time_vector[0] using previous solution times and previous solution. </p>
+<p>Extrapolate vector of solution to time_vector[0] using previous solution times and previous solutions. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">DataType</td><td>Type of the variable being extrapolated (e.g. double, Tensor&lt;1,dim&gt;)</td></tr>
@@ -257,9 +257,9 @@ template&lt;typename DataType &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">time_vector</td><td>Vector of times. The solution will be extrapolated to time 0. It should be of size <code>number_of_previous_solutions+1</code>.</td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">solution_vector</td><td>Vector of solutions. The solution will be extrapolated to index 0. It should be at least of size <code>number_of_previous_solutions</code>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">solution_vector</td><td>Vector of solution. The solution will be extrapolated to index 0. It should be at least of size <code>number_of_previous_solutions</code>.</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">number_of_previous_solutions</td><td>Number of previous solutions used to extrapolate.</td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">extrapolated_solution</td><td>Vector of extrapolated solutions. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">extrapolated_solution</td><td>Vector of extrapolated solution. </td></tr>
   </table>
   </dd>
 </dl>

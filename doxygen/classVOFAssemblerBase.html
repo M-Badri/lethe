@@ -85,9 +85,10 @@ Inheritance diagram for VOFAssemblerBase&lt; dim &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classVOFAssemblerBase__inherit__graph.png" border="0" usemap="#aVOFAssemblerBase_3_01dim_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="aVOFAssemblerBase_3_01dim_01_4_inherit__map" id="aVOFAssemblerBase_3_01dim_01_4_inherit__map">
-<area shape="rect" title="A pure virtual class that serves as an interface for all of the assemblers for the VOF solver." alt="" coords="115,5,318,32"/>
-<area shape="rect" href="classVOFAssemblerBDF.html" title="Class that assembles the transient time arising from BDF time integration for the VOF equations...." alt="" coords="5,80,204,107"/>
-<area shape="rect" href="classVOFAssemblerCore.html" title="Class that assembles the core of the VOF solver. According to the following weak form: &#160;with an SUPG ..." alt="" coords="228,80,429,107"/>
+<area shape="rect" title="A pure virtual class that serves as an interface for all of the assemblers for the VOF solver." alt="" coords="5,56,208,83"/>
+<area shape="rect" href="classVOFAssemblerBDF.html" title="Class that assembles the transient time arising from BDF time integration for the VOF equations...." alt="" coords="275,5,473,32"/>
+<area shape="rect" href="classVOFAssemblerCore.html" title="Class that assembles the core of the VOF solver. According to the following weak form: &#160;with an SUPG ..." alt="" coords="273,56,475,83"/>
+<area shape="rect" href="classVOFAssemblerDCDDStabilization.html" title="Assemble the Discontinuity&#45;Capturing Directional Dissipation (DCDD) stabilization term for the VOF ph..." alt="" coords="256,107,492,149"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -152,12 +153,12 @@ template&lt;int dim&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">scratch_data</td><td>Scratch data containing the VOF information. It is important to note that the scratch data has to have been re-inited before calling for matrix assembly. </td></tr>
-    <tr><td class="paramname">copy_data</td><td>Destination where the local_rhs and loc </td></tr>
+    <tr><td class="paramname">copy_data</td><td>Destination where the local_matrix is copied to. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classVOFAssemblerBDF.html#abb31504dee264b6f7beb2dcc8a952bcd">VOFAssemblerBDF&lt; dim &gt;</a>, and <a class="el" href="classVOFAssemblerCore.html#ade84531434d78a40d7554a1ee383fea3">VOFAssemblerCore&lt; dim &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classVOFAssemblerDCDDStabilization.html#afcacc2c1b5d927eef044772693b52eda">VOFAssemblerDCDDStabilization&lt; dim &gt;</a>, <a class="el" href="classVOFAssemblerBDF.html#abb31504dee264b6f7beb2dcc8a952bcd">VOFAssemblerBDF&lt; dim &gt;</a>, and <a class="el" href="classVOFAssemblerCore.html#ade84531434d78a40d7554a1ee383fea3">VOFAssemblerCore&lt; dim &gt;</a>.</p>
 
 </div>
 </div>
@@ -201,12 +202,12 @@ template&lt;int dim&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">scratch_data</td><td>Scratch data containing the VOF information. It is important to note that the scratch data has to have been re-inited before calling for matrix assembly. </td></tr>
-    <tr><td class="paramname">copy_data</td><td>Destination where the local_rhs and loc </td></tr>
+    <tr><td class="paramname">copy_data</td><td>Destination where the local_rhs is copied to. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classVOFAssemblerBDF.html#a213bafd94c5199426a0f39b23f7af8f5">VOFAssemblerBDF&lt; dim &gt;</a>, and <a class="el" href="classVOFAssemblerCore.html#a9e0eaa8178f1d0e57df80c0dec131d62">VOFAssemblerCore&lt; dim &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classVOFAssemblerDCDDStabilization.html#ae090d503229af2642d217a5214c2394e">VOFAssemblerDCDDStabilization&lt; dim &gt;</a>, <a class="el" href="classVOFAssemblerBDF.html#a213bafd94c5199426a0f39b23f7af8f5">VOFAssemblerBDF&lt; dim &gt;</a>, and <a class="el" href="classVOFAssemblerCore.html#a9e0eaa8178f1d0e57df80c0dec131d62">VOFAssemblerCore&lt; dim &gt;</a>.</p>
 
 </div>
 </div>

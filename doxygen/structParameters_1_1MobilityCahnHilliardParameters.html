@@ -90,8 +90,8 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a17a7a8c4ef5f7eaeb59ad7ae49155084"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParameters_1_1MobilityCahnHilliardParameters.html#a17a7a8c4ef5f7eaeb59ad7ae49155084">declare_parameters</a> (ParameterHandler &amp;prm)</td></tr>
 <tr class="separator:a17a7a8c4ef5f7eaeb59ad7ae49155084"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2186d0fc0a9906c575a31b4ef279d9e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParameters_1_1MobilityCahnHilliardParameters.html#a2186d0fc0a9906c575a31b4ef279d9e2">parse_parameters</a> (ParameterHandler &amp;prm)</td></tr>
-<tr class="separator:a2186d0fc0a9906c575a31b4ef279d9e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a323a4cd6bd18b0317cb3c4ce1b74c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParameters_1_1MobilityCahnHilliardParameters.html#a8a323a4cd6bd18b0317cb3c4ce1b74c9">parse_parameters</a> (ParameterHandler &amp;prm, const <a class="el" href="classParameters_1_1Dimensionality.html">Parameters::Dimensionality</a> dimensions)</td></tr>
+<tr class="separator:a8a323a4cd6bd18b0317cb3c4ce1b74c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -101,7 +101,7 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="structParameters_1_1MobilityCahnHilliardParameters.html" title="MobilityCahnHilliardParameters - Defines parameters for the mobility models used in the Cahn-Hilliard...">MobilityCahnHilliardParameters</a> - Defines parameters for the mobility models used in the Cahn-Hilliard equations. </p>
 
-<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l00363">363</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l00377">377</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a17a7a8c4ef5f7eaeb59ad7ae49155084"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a17a7a8c4ef5f7eaeb59ad7ae49155084">&#9670;&nbsp;</a></span>declare_parameters()</h2>
@@ -119,12 +119,20 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters_8cc_source.html#l00531">531</a> of file <a class="el" href="parameters_8cc_source.html">parameters.cc</a>.</p>
+<p>Declare the parameters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">prm</td><td>The ParameterHandler. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="parameters_8cc_source.html#l00539">539</a> of file <a class="el" href="parameters_8cc_source.html">parameters.cc</a>.</p>
 
 </div>
 </div>
-<a id="a2186d0fc0a9906c575a31b4ef279d9e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2186d0fc0a9906c575a31b4ef279d9e2">&#9670;&nbsp;</a></span>parse_parameters()</h2>
+<a id="a8a323a4cd6bd18b0317cb3c4ce1b74c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a323a4cd6bd18b0317cb3c4ce1b74c9">&#9670;&nbsp;</a></span>parse_parameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -133,15 +141,34 @@ Public Attributes</h2></td></tr>
           <td class="memname">void Parameters::MobilityCahnHilliardParameters::parse_parameters </td>
           <td>(</td>
           <td class="paramtype">ParameterHandler &amp;&#160;</td>
-          <td class="paramname"><em>prm</em></td><td>)</td>
+          <td class="paramname"><em>prm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="classParameters_1_1Dimensionality.html">Parameters::Dimensionality</a>&#160;</td>
+          <td class="paramname"><em>dimensions</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters_8cc_source.html#l00542">542</a> of file <a class="el" href="parameters_8cc_source.html">parameters.cc</a>.</p>
+<p>Parse the parameters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">prm</td><td>The ParameterHandler.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dimensions</td><td>The <a class="el" href="classParameters_1_1Dimensionality.html" title="Class used to rescale physical properties for cases where the main dimensions of the problems (Length...">Dimensionality</a> object controling the fundamental dimensions (length, time, mass, temperature) of the problem. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">References <a class="el" href="parameters_8h_source.html#l00366">mobility_cahn_hilliard_constant</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8cc_source.html#l00550">550</a> of file <a class="el" href="parameters_8cc_source.html">parameters.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="dimensionality_8h_source.html#l00107">Parameters::Dimensionality::cahn_hilliard_mobility_scaling</a>, and <a class="el" href="parameters_8h_source.html#l00380">mobility_cahn_hilliard_constant</a>.</p>
 
 </div>
 </div>
@@ -158,7 +185,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l00366">366</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l00380">380</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
 
 </div>
 </div>
