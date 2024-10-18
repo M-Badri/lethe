@@ -287,7 +287,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/small-scale-rotating-drum/small-scale-rotating-drum.html">Small Scale Rotating Drum</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/small-scale-rotating-drum-postprocessing/small-scale-rotating-drum-postprocessing.html">Small Scale Rotating Drum Postprocessing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/rotating-drum/rotating-drum.html">Rotating Drum</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/rotating-drum-with-postprocessing/rotating-drum-with-postprocessing.html">Rotating Drum with Postprocessing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/rotation-of-box/rotation-of-box.html">Rotation of Box</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/silo/silo.html">Silo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/rectangular-hopper/rectangular-hopper.html">Rectangular Hopper</a></li>
@@ -643,7 +642,7 @@ set amg smoother overlap                      = 1
 </ul>
 <p>Different parameters for the main components of the two geometric multigrid algorithms can be specified:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span># General MG parameters
-set mg verbosity                   = quiet
+set mg verbosity                   = verbose
 set mg min level                   = -1
 set mg level min cells             = -1
 set mg int level                   = -1
@@ -658,10 +657,10 @@ set mg smoother preconditioner type = inverse diagonal
 # Eigenvalue estimation parameters
 set eig estimation smoothing range = 10
 set eig estimation cg n iterations = 10
-set eig estimation verbosity       = quiet
+set eig estimation verbosity       = verbose
 
 # Coarse-grid solver parameters
-set mg coarse grid solver          = gmres
+set mg coarse grid solver          = direct
 set mg coarse grid use fe q iso q1 = false
 
 # Parameters for GMRES as coarse grid solver
