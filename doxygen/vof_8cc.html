@@ -79,81 +79,66 @@ $(function() {
 <div class="title">vof.cc File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="bdf_8h_source.html">core/bdf.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="time__integration__utilities_8h_source.html">core/time_integration_utilities.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="utilities_8h_source.html">core/utilities.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="vof_8h_source.html">solvers/vof.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="vof__assemblers_8h_source.html">solvers/vof_assemblers.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="vof__filter_8h_source.html">solvers/vof_filter.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="vof__scratch__data_8h_source.html">solvers/vof_scratch_data.h</a>&gt;</code><br />
-<code>#include &lt;deal.II/base/work_stream.h&gt;</code><br />
-<code>#include &lt;deal.II/dofs/dof_renumbering.h&gt;</code><br />
-<code>#include &lt;deal.II/dofs/dof_tools.h&gt;</code><br />
-<code>#include &lt;deal.II/fe/mapping.h&gt;</code><br />
-<code>#include &lt;deal.II/fe/mapping_q.h&gt;</code><br />
-<code>#include &lt;deal.II/lac/affine_constraints.h&gt;</code><br />
-<code>#include &lt;deal.II/lac/dynamic_sparsity_pattern.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="vof_8h_source.html">solvers/vof.h</a>&gt;</code><br />
 <code>#include &lt;deal.II/lac/solver_control.h&gt;</code><br />
 <code>#include &lt;deal.II/lac/sparsity_tools.h&gt;</code><br />
-<code>#include &lt;deal.II/lac/trilinos_precondition.h&gt;</code><br />
 <code>#include &lt;deal.II/lac/trilinos_solver.h&gt;</code><br />
-<code>#include &lt;deal.II/numerics/vector_tools.h&gt;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for vof.cc:</div>
 <div class="dyncontent">
 <div class="center"><img src="vof_8cc__incl.png" border="0" usemap="#a_2home_2runner_2work_2lethe_2lethe_2source_2solvers_2vof_8cc" alt=""/></div>
 <map name="a_2home_2runner_2work_2lethe_2lethe_2source_2solvers_2vof_8cc" id="a_2home_2runner_2work_2lethe_2lethe_2source_2solvers_2vof_8cc">
-<area shape="rect" title=" " alt="" coords="2810,5,2993,61"/>
-<area shape="rect" href="bdf_8h.html" title=" " alt="" coords="393,563,480,590"/>
-<area shape="rect" href="utilities_8h.html" title=" " alt="" coords="582,720,696,747"/>
-<area shape="rect" href="time__integration__utilities_8h.html" title=" " alt="" coords="2134,377,2296,419"/>
-<area shape="rect" href="vof_8h.html" title=" " alt="" coords="1612,117,1717,143"/>
-<area shape="rect" href="vof__assemblers_8h.html" title=" " alt="" coords="80,206,268,233"/>
-<area shape="rect" href="vof__scratch__data_8h.html" title=" " alt="" coords="2673,288,2821,329"/>
-<area shape="rect" title=" " alt="" coords="2766,385,2987,411"/>
-<area shape="rect" title=" " alt="" coords="3011,385,3182,411"/>
-<area shape="rect" title=" " alt="" coords="3206,385,3358,411"/>
-<area shape="rect" title=" " alt="" coords="3382,377,3552,419"/>
-<area shape="rect" href="vof__filter_8h.html" title=" " alt="" coords="344,206,486,233"/>
-<area shape="rect" title=" " alt="" coords="2412,206,2578,233"/>
-<area shape="rect" title=" " alt="" coords="2602,199,2737,240"/>
-<area shape="rect" title=" " alt="" coords="3065,117,3264,143"/>
-<area shape="rect" title=" " alt="" coords="3288,109,3414,151"/>
-<area shape="rect" title=" " alt="" coords="3439,109,3586,151"/>
-<area shape="rect" title=" " alt="" coords="3610,109,3740,151"/>
-<area shape="rect" title=" " alt="" coords="3764,109,3906,151"/>
-<area shape="rect" title=" " alt="" coords="3930,109,4065,151"/>
-<area shape="rect" title=" " alt="" coords="4089,117,4152,143"/>
-<area shape="rect" href="parameters_8h.html" title=" " alt="" coords="983,645,1124,672"/>
-<area shape="rect" title=" " alt="" coords="513,802,576,829"/>
-<area shape="rect" title=" " alt="" coords="366,645,507,672"/>
-<area shape="rect" href="dimensionality_8h.html" title=" " alt="" coords="1181,720,1342,747"/>
-<area shape="rect" title=" " alt="" coords="1177,795,1346,836"/>
-<area shape="rect" href="ib__particle_8h.html" title=" " alt="" coords="828,720,962,747"/>
-<area shape="rect" href="multiphysics_8h.html" title=" " alt="" coords="1831,720,1980,747"/>
-<area shape="rect" title=" " alt="" coords="716,795,890,836"/>
-<area shape="rect" title=" " alt="" coords="165,795,300,836"/>
-<area shape="rect" title=" " alt="" coords="948,802,1135,829"/>
-<area shape="rect" href="simulation__control_8h.html" title=" " alt="" coords="343,474,530,501"/>
-<area shape="rect" href="vector_8h.html" title=" " alt="" coords="1327,474,1434,501"/>
-<area shape="rect" title=" " alt="" coords="1218,556,1353,597"/>
-<area shape="rect" href="auxiliary__physics_8h.html" title=" " alt="" coords="1558,474,1757,501"/>
-<area shape="rect" href="multiphysics__interface_8h.html" title=" " alt="" coords="1622,377,1778,419"/>
-<area shape="rect" title=" " alt="" coords="1882,467,2018,508"/>
-<area shape="rect" title=" " alt="" coords="1987,385,2110,411"/>
-<area shape="rect" title=" " alt="" coords="1904,199,2088,240"/>
-<area shape="rect" title=" " alt="" coords="2113,199,2285,240"/>
-<area shape="rect" title=" " alt="" coords="562,206,708,233"/>
-<area shape="rect" title=" " alt="" coords="732,199,879,240"/>
-<area shape="rect" title=" " alt="" coords="904,206,1086,233"/>
-<area shape="rect" title=" " alt="" coords="1110,206,1282,233"/>
-<area shape="rect" title=" " alt="" coords="1306,199,1441,240"/>
-<area shape="rect" title=" " alt="" coords="1465,199,1626,240"/>
-<area shape="rect" href="parameters__multiphysics_8h.html" title=" " alt="" coords="938,563,1169,590"/>
-<area shape="rect" href="copy__data_8h.html" title=" " alt="" coords="186,563,338,590"/>
-<area shape="rect" title=" " alt="" coords="2320,385,2504,411"/>
-<area shape="rect" title=" " alt="" coords="2528,385,2691,411"/>
+<area shape="rect" title=" " alt="" coords="2128,5,2311,61"/>
+<area shape="rect" href="vof_8h.html" title=" " alt="" coords="1865,117,1971,143"/>
+<area shape="rect" title=" " alt="" coords="1995,109,2124,151"/>
+<area shape="rect" title=" " alt="" coords="2149,109,2290,151"/>
+<area shape="rect" title=" " alt="" coords="2315,109,2449,151"/>
+<area shape="rect" title=" " alt="" coords="2473,117,2536,143"/>
+<area shape="rect" href="bdf_8h.html" title=" " alt="" coords="2295,727,2381,754"/>
+<area shape="rect" href="simulation__control_8h.html" title=" " alt="" coords="2125,645,2311,672"/>
+<area shape="rect" href="vector_8h.html" title=" " alt="" coords="1002,727,1109,754"/>
+<area shape="rect" title=" " alt="" coords="1639,809,1773,851"/>
+<area shape="rect" href="auxiliary__physics_8h.html" title=" " alt="" coords="344,645,543,672"/>
+<area shape="rect" href="multiphysics__interface_8h.html" title=" " alt="" coords="1100,556,1256,597"/>
+<area shape="rect" title=" " alt="" coords="547,720,719,761"/>
+<area shape="rect" title=" " alt="" coords="2002,720,2138,761"/>
+<area shape="rect" title=" " alt="" coords="2621,727,2743,754"/>
+<area shape="rect" title=" " alt="" coords="1795,727,1977,754"/>
+<area shape="rect" title=" " alt="" coords="1184,727,1356,754"/>
+<area shape="rect" title=" " alt="" coords="670,645,721,672"/>
+<area shape="rect" href="vof__assemblers_8h.html" title=" " alt="" coords="2159,385,2347,411"/>
+<area shape="rect" href="vof__scratch__data_8h.html" title=" " alt="" coords="2500,467,2648,508"/>
+<area shape="rect" href="vof__filter_8h.html" title=" " alt="" coords="5,563,148,590"/>
+<area shape="rect" href="vof__linear__subequations__solver_8h.html" title=" " alt="" coords="2152,199,2327,240"/>
+<area shape="rect" href="vof__subequations__interface_8h.html" title=" " alt="" coords="1824,288,2012,329"/>
+<area shape="rect" title=" " alt="" coords="2391,295,2538,322"/>
+<area shape="rect" title=" " alt="" coords="2563,295,2729,322"/>
+<area shape="rect" title=" " alt="" coords="2753,288,2888,329"/>
+<area shape="rect" title=" " alt="" coords="2912,288,3047,329"/>
+<area shape="rect" title=" " alt="" coords="3173,199,3357,240"/>
+<area shape="rect" title=" " alt="" coords="3381,199,3516,240"/>
+<area shape="rect" title=" " alt="" coords="3541,199,3687,240"/>
+<area shape="rect" title=" " alt="" coords="3712,199,3873,240"/>
+<area shape="rect" href="parameters_8h.html" title=" " alt="" coords="318,899,459,925"/>
+<area shape="rect" title=" " alt="" coords="2399,817,2541,843"/>
+<area shape="rect" title=" " alt="" coords="2312,817,2375,843"/>
+<area shape="rect" href="multiphysics_8h.html" title=" " alt="" coords="183,973,333,1000"/>
+<area shape="rect" title=" " alt="" coords="926,809,1083,851"/>
+<area shape="rect" title=" " alt="" coords="745,809,902,851"/>
+<area shape="rect" title=" " alt="" coords="1107,809,1286,851"/>
+<area shape="rect" href="physics__solver_8h.html" title=" " alt="" coords="63,817,224,843"/>
+<area shape="rect" href="simulation__parameters_8h.html" title=" " alt="" coords="197,720,340,761"/>
+<area shape="rect" title=" " alt="" coords="1482,727,1669,754"/>
+<area shape="rect" title=" " alt="" coords="364,720,523,761"/>
+<area shape="rect" href="parameters__multiphysics_8h.html" title=" " alt="" coords="351,817,581,843"/>
+<area shape="rect" href="exceptions_8h.html" title=" " alt="" coords="949,645,1087,672"/>
+<area shape="rect" title=" " alt="" coords="794,727,978,754"/>
+<area shape="rect" href="solid__base_8h.html" title=" " alt="" coords="1492,645,1627,672"/>
+<area shape="rect" title=" " alt="" coords="1213,645,1290,672"/>
+<area shape="rect" href="copy__data_8h.html" title=" " alt="" coords="2386,645,2538,672"/>
+<area shape="rect" href="physics__assemblers_8h.html" title=" " alt="" coords="2158,474,2374,501"/>
+<area shape="rect" href="physics__subequations__solver_8h.html" title=" " alt="" coords="1219,377,1435,419"/>
 </map>
 </div>
 </div>

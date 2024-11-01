@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['number_7204',['Number',['../classPreconditionASM.html#a6a4a0386b137b1419b8d0430ae21706f',1,'PreconditionASM']]]
+  ['lstransfertype_7369',['LSTransferType',['../classMFNavierStokesPreconditionGMG.html#a13b678ca5534e144d7e430c80de29abd',1,'MFNavierStokesPreconditionGMG']]]
 ];

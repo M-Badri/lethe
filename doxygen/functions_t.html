@@ -323,7 +323,7 @@ $(function() {
 : <a class="el" href="structParameters_1_1SimulationControl.html#a75b33ae454da14bc72dbe078c121d7e9">Parameters::SimulationControl</a>
 </li>
 <li>Tinf
-: <a class="el" href="classBoundaryConditions_1_1HTBoundaryConditions.html#a79e80e5a7c859c434b1ebf2bb6b8da22">BoundaryConditions::HTBoundaryConditions&lt; dim &gt;</a>
+: <a class="el" href="classBoundaryConditions_1_1HTBoundaryConditions.html#a670c315d8449282a22f013c540cdb9df">BoundaryConditions::HTBoundaryConditions&lt; dim &gt;</a>
 , <a class="el" href="structParameters_1_1Laser__FreeSurfaceRadiation.html#a234967aff67883726ee6dd10f0e5ffea">Parameters::Laser_FreeSurfaceRadiation</a>
 </li>
 <li>tolerance
@@ -345,11 +345,8 @@ $(function() {
 : <a class="el" href="classCFDDEMSolver.html#a39140f27365c6f6b0e18e5c5c606f235">CFDDEMSolver&lt; dim &gt;</a>
 , <a class="el" href="classDEMSolver.html#af3d76f36a82836ef386d09aeeebc86ae">DEMSolver&lt; dim &gt;</a>
 </li>
-<li>torques_on_boundaries
-: <a class="el" href="classNavierStokesBase.html#ace9b764f07cbff4b25c54ef5f2745c7b">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
-</li>
 <li>torques_tables
-: <a class="el" href="classNavierStokesBase.html#ab1aafc2801e35f5162f0b9e1d7c0add2">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
+: <a class="el" href="classNavierStokesBase.html#a0455ad3a905adc49ec5eea68ea2c41f6">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>
 </li>
 <li>torus
 : <a class="el" href="classShape.html#a3e44e2b1f6fca48f7b7b2151977b3abda04d7c7decbdeffd2eb8df924f71b9c3a">Shape&lt; dim &gt;</a>
@@ -368,12 +365,15 @@ $(function() {
 </li>
 <li>tracer
 : <a class="el" href="classAnalyticalSolutions_1_1AnalyticalSolution.html#a8837f52e7aa838847211ab44de8696e8">AnalyticalSolutions::AnalyticalSolution&lt; dim &gt;</a>
-, <a class="el" href="classBoundaryConditions_1_1TracerBoundaryConditions.html#ac8541d18102df4005d672ac392d15d31">BoundaryConditions::TracerBoundaryConditions&lt; dim &gt;</a>
+, <a class="el" href="classBoundaryConditions_1_1TracerBoundaryConditions.html#adbd22fae0c2c8f1db654128a0fc9ac19">BoundaryConditions::TracerBoundaryConditions&lt; dim &gt;</a>
 , <a class="el" href="classParameters_1_1InitialConditions.html#ac304a0c77e81d06934dbedbc70db2757">Parameters::InitialConditions&lt; dim &gt;</a>
 , <a class="el" href="structParameters_1_1Multiphysics.html#aa69ced64931cf97f6d3bfa329420497d">Parameters::Multiphysics</a>
 </li>
 <li>Tracer()
 : <a class="el" href="classTracer.html#a1439103a764cca0bafe5acc6284b6e31">Tracer&lt; dim &gt;</a>
+</li>
+<li>tracer_average_gradient
+: <a class="el" href="classTracerScratchData.html#a4e2f548d39c16f0a2e783075d28a06ad">TracerScratchData&lt; dim &gt;</a>
 </li>
 <li>tracer_diffusivity
 : <a class="el" href="classConstantTracerDiffusivity.html#a3f751a3de3ac717019cbd37f65189d90">ConstantTracerDiffusivity</a>
@@ -386,6 +386,9 @@ $(function() {
 </li>
 <li>tracer_diffusivity_1
 : <a class="el" href="classTracerScratchData.html#a244a7a150f0287ab94f026fb3b11e5b2">TracerScratchData&lt; dim &gt;</a>
+</li>
+<li>tracer_diffusivity_face
+: <a class="el" href="classTracerScratchData.html#ae658e917daa193ea680fff5fed2269b3">TracerScratchData&lt; dim &gt;</a>
 </li>
 <li>tracer_diffusivity_inside
 : <a class="el" href="structParameters_1_1ImmersedSolidTanhParameters.html#a6ab483465c3131a76ebe327b294def66">Parameters::ImmersedSolidTanhParameters</a>
@@ -422,14 +425,29 @@ $(function() {
 <li>tracer_source
 : <a class="el" href="classSourceTerms_1_1SourceTerm.html#a11361ed93adec8f0625a1dfddc00fff3">SourceTerms::SourceTerm&lt; dim &gt;</a>
 </li>
+<li>tracer_uses_dg
+: <a class="el" href="structParameters_1_1FEM.html#a07f68f66e7d0a9e4853985233d0a8a48">Parameters::FEM</a>
+</li>
+<li>tracer_value_jump
+: <a class="el" href="classTracerScratchData.html#aa7d7468abfb0d8ce0bbe1f092ab89ec1">TracerScratchData&lt; dim &gt;</a>
+</li>
 <li>tracer_values
 : <a class="el" href="classTracerScratchData.html#a0a8fa3946c73380041084baea6aee5e1">TracerScratchData&lt; dim &gt;</a>
 </li>
 <li>TracerAssemblerBDF()
-: <a class="el" href="classTracerAssemblerBDF.html#a2d3e3d38599b0b7b07c9793cc72a5215">TracerAssemblerBDF&lt; dim &gt;</a>
+: <a class="el" href="classTracerAssemblerBDF.html#a84a9262f4f4db64430dde969aa881be8">TracerAssemblerBDF&lt; dim &gt;</a>
+</li>
+<li>TracerAssemblerBoundaryNitsche()
+: <a class="el" href="classTracerAssemblerBoundaryNitsche.html#a68e4ad7333f811e501696f3793151fa3">TracerAssemblerBoundaryNitsche&lt; dim &gt;</a>
 </li>
 <li>TracerAssemblerCore()
-: <a class="el" href="classTracerAssemblerCore.html#a2d76d11b596a8c3365e590e75cd46ef3">TracerAssemblerCore&lt; dim &gt;</a>
+: <a class="el" href="classTracerAssemblerCore.html#a2c19220c9c343a45bb317192f9fb940b">TracerAssemblerCore&lt; dim &gt;</a>
+</li>
+<li>TracerAssemblerDGCore()
+: <a class="el" href="classTracerAssemblerDGCore.html#a6a26b1e01b7120d9264a436ad4ceb35c">TracerAssemblerDGCore&lt; dim &gt;</a>
+</li>
+<li>TracerAssemblerSIPG()
+: <a class="el" href="classTracerAssemblerSIPG.html#a432bb439660de716b91af286717bd846">TracerAssemblerSIPG&lt; dim &gt;</a>
 </li>
 <li>TracerDiffusivityModel
 : <a class="el" href="classParameters_1_1Material.html#a66662d34dd196af7f5845330c47752bd">Parameters::Material</a>
@@ -438,16 +456,16 @@ $(function() {
 : <a class="el" href="classParameters_1_1TracerDriftVelocity.html#a2964b0580ce6ffc2e392a718618d40a6">Parameters::TracerDriftVelocity&lt; dim &gt;</a>
 </li>
 <li>TracerScratchData()
-: <a class="el" href="classTracerScratchData.html#a4d8617a42475ae8091769d5d4224599d">TracerScratchData&lt; dim &gt;</a>
+: <a class="el" href="classTracerScratchData.html#adb73e9d784f85f0b2c2cb118dcf937ff">TracerScratchData&lt; dim &gt;</a>
 </li>
 <li>trajectory()
 : <a class="el" href="classRPTFEMReconstruction.html#ac99178d8622638caddf6aab84235d18c">RPTFEMReconstruction&lt; dim &gt;</a>
 </li>
 <li>transfers
-: <a class="el" href="classMFNavierStokesPreconditionGMG.html#a11f6119d1ec340e86edef75c635449b4">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
+: <a class="el" href="classMFNavierStokesPreconditionGMG.html#ab3b401109714dedcec01934d4556c841">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
 </li>
 <li>translate_grid()
-: <a class="el" href="classSerialSolid.html#a11e71f7ed55e693757b171e585ed405e">SerialSolid&lt; dim, spacedim &gt;</a>
+: <a class="el" href="classSerialSolid.html#ab5383d41355eecc591b8a9b634e544db">SerialSolid&lt; dim, spacedim &gt;</a>
 , <a class="el" href="classSolidBase.html#aa287aebb7afed84a74093eb454a33ca8">SolidBase&lt; dim, spacedim &gt;</a>
 </li>
 <li>translation
@@ -467,7 +485,11 @@ $(function() {
 , <a class="el" href="classRPTFEMReconstruction.html#af0032e3eca04fc01e0195fc130fa934c">RPTFEMReconstruction&lt; dim &gt;</a>
 , <a class="el" href="classRPTL2Projection.html#a00664a3ac00e61d3eb7a0ec20d90fd33">RPTL2Projection&lt; dim &gt;</a>
 , <a class="el" href="classTracer.html#a5d014171032647dec83c5b854da51094">Tracer&lt; dim &gt;</a>
+, <a class="el" href="classVOFLinearSubequationsSolver.html#acae22cc77baa655b2d78ccb024f43104">VOFLinearSubequationsSolver&lt; dim, ScratchDataType &gt;</a>
 , <a class="el" href="classVolumeOfFluid.html#a66f8dfae1306e94560ed403188a620da">VolumeOfFluid&lt; dim &gt;</a>
+</li>
+<li>TrilinosVectorType
+: <a class="el" href="classMFNavierStokesPreconditionGMG.html#a703de01482feb9a61980103dfdb67299">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>
 </li>
 <li>tuning
 : <a class="el" href="structParameters_1_1RPTTuningParameters.html#aea5c9e7b875989844e07cd1a4634fd35">Parameters::RPTTuningParameters</a>
@@ -479,20 +501,24 @@ $(function() {
 : <a class="el" href="classNavierStokesOperatorBase.html#ae9f46a529fdee3dadf36ac5c79848f93">NavierStokesOperatorBase&lt; dim, number &gt;</a>
 </li>
 <li>type
-: <a class="el" href="classBoundaryConditions_1_1BoundaryConditions.html#a7852339da7c9700fe048748f99fc98bf">BoundaryConditions::BoundaryConditions&lt; dim &gt;</a>
+: <a class="el" href="classBoundaryConditions_1_1BoundaryConditions.html#a8016ef4f0647d339b33f85d5ebfcb7e8">BoundaryConditions::BoundaryConditions&lt; dim &gt;</a>
 , <a class="el" href="structParameters_1_1CahnHilliard__PhaseFilter.html#a7e20242d24138ca8b65c9dfaa5764a4a">Parameters::CahnHilliard_PhaseFilter</a>
 , <a class="el" href="classParameters_1_1InitialConditions.html#a683199f2f31194b94c614279ec37c7c8">Parameters::InitialConditions&lt; dim &gt;</a>
-, <a class="el" href="structParameters_1_1Mesh.html#afbb15a0da03130fc18838e64ad9c8659">Parameters::Mesh</a>
 </li>
 <li>Type
 : <a class="el" href="structParameters_1_1Mesh.html#a9be2ccd9771c7cc7df861429a0c7864c">Parameters::Mesh</a>
 </li>
 <li>type
-: <a class="el" href="structParameters_1_1MeshAdaptation.html#a3d3887253d40863c0fc67c9c4bd0dcb0">Parameters::MeshAdaptation</a>
+: <a class="el" href="structParameters_1_1Mesh.html#afbb15a0da03130fc18838e64ad9c8659">Parameters::Mesh</a>
 </li>
 <li>Type
 : <a class="el" href="structParameters_1_1MeshAdaptation.html#a20a32a04c8c684495ff2d3c7be73c5a2">Parameters::MeshAdaptation</a>
-, <a class="el" href="structParameters_1_1Timer.html#ae1d96ff22b9dbb46d965a0df44142f42">Parameters::Timer</a>
+</li>
+<li>type
+: <a class="el" href="structParameters_1_1MeshAdaptation.html#a3d3887253d40863c0fc67c9c4bd0dcb0">Parameters::MeshAdaptation</a>
+</li>
+<li>Type
+: <a class="el" href="structParameters_1_1Timer.html#ae1d96ff22b9dbb46d965a0df44142f42">Parameters::Timer</a>
 </li>
 <li>type
 : <a class="el" href="structParameters_1_1Timer.html#aa4dd41703e6225d984f8696119f763a7">Parameters::Timer</a>
