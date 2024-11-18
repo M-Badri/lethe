@@ -279,6 +279,7 @@
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../examples/multiphysics/chns.html">CHNS</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of CHNS</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../examples/multiphysics/jurins-law/jurins-law.html">Jurin’s Law</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/multiphysics/bubble-detachment-shear-flow/bubble-detachment-shear-flow.html">Bubble detachment in shear flow</a></li>
 </ul>
 </li>
 </ul>
@@ -538,6 +539,17 @@ cd build
 <p>Then you can compile:</p>
 <div class="copy-button highlight-text notranslate"><div class="highlight"><pre><span></span>make -j$numprocs
 </pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Hyper-threading will result in poor performance when running Lethe. Make sure that it is not turned on for your machine if you have more logical CPU(s) than the number of Core(s). To obtain this information, you can run the following command in a linux terminal:</p>
+<div class="copy-button highlight-text notranslate"><div class="highlight"><pre><span></span>lscpu | grep -E &#39;^Thread|^Core|^Socket|^CPU\(&#39;
+</pre></div>
+</div>
+<p>To limit the number of thread you can set the environment variable <code class="docutils literal notranslate"><span class="pre">OMP_NUM_THREADS</span></code> to 1 in the terminal you are running the application or in your <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file to make it the default:</p>
+<div class="copy-button highlight-text notranslate"><div class="highlight"><pre><span></span>export OMP_NUM_THREADS=1
+</pre></div>
+</div>
 </div>
 </section>
 <section id="testing-your-installation">
