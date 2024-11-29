@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="Tracer" href="../tracer.html" /><link rel="prev" title="Laser Melt Pool" href="../laser-melt-pool/laser-melt-pool.html" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="Tracer" href="../tracer.html" /><link rel="prev" title="Static Irradiation of a Bare Plate" href="../static-irradiation/static-irradiation.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>Concentric Heat Exchanger - Lethe documentation</title>
@@ -268,13 +268,12 @@
 <li class="toctree-l4"><a class="reference internal" href="../stefan-problem/stefan-problem.html">Stefan Problem: Melting of a Solid</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../warming-up-a-viscous-fluid/warming-up-a-viscous-fluid.html">Warming up a Viscous Fluid</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../melting-cavity/melting-cavity.html">Melting Cavity</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../laser-heating/laser-heating.html">Laser Heating</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../laser-melt-pool/laser-melt-pool.html">Laser Melt Pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../static-irradiation/static-irradiation.html">Static Irradiation of a Bare Plate</a></li>
 <li class="toctree-l4 current current-page"><a class="current reference internal" href="#">Concentric Heat Exchanger</a></li>
 </ul>
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../tracer.html">Tracer</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Tracer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="../tracer-through-cad-junction/tracer-through-cad-junction.html">Tracer through CAD Junction in Simplex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tracer-in-static-mixer/tracer-in-static-mixer.html">Tracer in Static Mixer</a></li>
 </ul>
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../chns.html">CHNS</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of CHNS</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -496,42 +495,48 @@ end
 </section>
 <section id="boundary-conditions">
 <h3>Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Link to this heading">#</a></h3>
-<p>The next step is establishing the boundary conditions for the fluid flow. We specify a no-slip boundary condition on the outer walls of the cylinder and specify an inlet velocity for both boundaries 1 and 2. Note that the faces at the interfaces between the solid region and the fluid regions automatically have a <code class="docutils literal notranslate"><span class="pre">noslip</span></code> boundary condition applied to them. They should not be identified by a Physical Surface in the mesh.</p>
+<p>The next step is establishing the boundary conditions for the fluid flow. We specify a no-slip boundary condition on the outer walls of the cylinder and specify an inlet velocity for both boundaries id 0 and 3 and an outlet on id 1 and 2. Note that the faces at the interfaces between the solid region and the fluid regions automatically have a <code class="docutils literal notranslate"><span class="pre">noslip</span></code> boundary condition applied to them. They should not be identified by a Physical Surface in the mesh.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection boundary conditions
-  set number                  = 3
+set number = 5
 
-    subsection bc 0
-        set type              = function
-        set id                = 0
-        subsection u
-            set Function expression = 0
-        end
-        subsection v
-            set Function expression = 0
-        end
-        subsection w
-            set Function expression = 10
-        end
+subsection bc 0
+    set type = function
+    set id   = 0
+    subsection u
+    set Function expression = 0
     end
-    subsection bc 1
-        set type              = function
-        set id                = 3
-        subsection u
-            set Function expression = 0
-        end
-        subsection v
-            set Function expression = 0
-        end
-        subsection w
-            set Function expression = -4
-        end
+    subsection v
+    set Function expression = 0
     end
-
-    subsection bc 2
-        set type              = noslip
-        set id                = 4
+    subsection w
+    set Function expression = 10
     end
-
+end
+subsection bc 1
+    set type = outlet
+    set id   = 1
+end
+subsection bc 2
+    set type = outlet
+    set id   = 2
+end
+subsection bc 3
+    set type = function
+    set id   = 3
+    subsection u
+    set Function expression = 0
+    end
+    subsection v
+    set Function expression = 0
+    end
+    subsection w
+    set Function expression = -4
+    end
+end
+subsection bc 4
+    set type = noslip
+    set id   = 4
+end
 end
 </pre></div>
 </div>
@@ -612,6 +617,7 @@ end
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection simulation control
   set method                  = steady
   set output frequency        = 1
+  set output name             = out
   set output path             = ./output/
 end
 </pre></div>
@@ -668,14 +674,14 @@ run in parallel using mpirun.</p>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../laser-melt-pool/laser-melt-pool.html">
+          <a class="prev-page" href="../static-irradiation/static-irradiation.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Laser Melt Pool</div>
+                <div class="title">Static Irradiation of a Bare Plate</div>
                 
               </div>
             </a>

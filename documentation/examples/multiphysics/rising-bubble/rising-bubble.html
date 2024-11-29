@@ -268,13 +268,12 @@
 <li class="toctree-l4"><a class="reference internal" href="../stefan-problem/stefan-problem.html">Stefan Problem: Melting of a Solid</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../warming-up-a-viscous-fluid/warming-up-a-viscous-fluid.html">Warming up a Viscous Fluid</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../melting-cavity/melting-cavity.html">Melting Cavity</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../laser-heating/laser-heating.html">Laser Heating</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../laser-melt-pool/laser-melt-pool.html">Laser Melt Pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../static-irradiation/static-irradiation.html">Static Irradiation of a Bare Plate</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../concentric-heat-exchanger/concentric-heat-exchanger.html">Concentric Heat Exchanger</a></li>
 </ul>
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../tracer.html">Tracer</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Tracer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="../tracer-through-cad-junction/tracer-through-cad-junction.html">Tracer through CAD Junction in Simplex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tracer-in-static-mixer/tracer-in-static-mixer.html">Tracer in Static Mixer</a></li>
 </ul>
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../chns.html">CHNS</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of CHNS</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -592,7 +591,7 @@ end
 <section id="mesh">
 <h3>Mesh<a class="headerlink" href="#mesh" title="Link to this heading">#</a></h3>
 <p>We start off with a rectangular mesh that spans the domain defined by the corner points situated at the origin and at point
-<span class="math notranslate nohighlight">\([1,2]\)</span>. The first <span class="math notranslate nohighlight">\(1,2\)</span> couple defines that number of initial grid subdivisions along the length and height of the rectangle.
+<span class="math notranslate nohighlight">\((1,2)\)</span>. The first <span class="math notranslate nohighlight">\(1,2\)</span> couple defines that number of initial grid subdivisions along the length and height of the rectangle.
 This makes our initial mesh composed of perfect squares. We proceed then to redefine the mesh globally six times by setting
 <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">initial</span> <span class="pre">refinement</span> <span class="pre">=</span> <span class="pre">6</span></code>.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection mesh
@@ -660,8 +659,8 @@ Run</p>
 </div>
 <p>to execute this post-processing code, where <code class="docutils literal notranslate"><span class="pre">output</span></code> is the directory that
 contains the simulation results. The results for the barycenter position and velocity of the bubble are compared with the simulations of Zahedi <em>et al.</em> <a class="footnote-reference brackets" href="#zahedi2012" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> and Hysing <em>et al.</em> <a class="footnote-reference brackets" href="#hysing2009" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. The following images show the results of these comparisons. The agreement between the two simulations is remarkable considering the coarse mesh used within this example.</p>
-<a class="reference internal image-reference" href="../../../_images/ymean-t.png"><img alt="ymean_t" class="align-center" src="../../../_images/ymean-t.png" style="width: 500px;" /></a>
-<a class="reference internal image-reference" href="../../../_images/bubble-rise-velocity.png"><img alt="bubble_rise_velocity" class="align-center" src="../../../_images/bubble-rise-velocity.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/ymean-t.png"><img alt="ymean_t" class="align-center" src="../../../_images/ymean-t.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/bubble-rise-velocity.png"><img alt="bubble_rise_velocity" class="align-center" src="../../../_images/bubble-rise-velocity.png" style="width: 600px;" /></a>
 <p>Animation of the rising bubble example:</p>
 <iframe width="800" height="450" src="https://www.youtube.com/embed/o73WJ36-2zo"  frameborder="0" allowfullscreen></iframe></section>
 <section id="references">
