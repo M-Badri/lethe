@@ -83,8 +83,8 @@ $(function() {
 
 <h3><a id="index_b" name="index_b"></a>- b -</h3><ul>
 <li>B&#160;:&#160;<a class="el" href="classThermalConductivityLinear.html#a65bdace70d96173f07f99231031daeb6">ThermalConductivityLinear</a></li>
-<li>background_constraints&#160;:&#160;<a class="el" href="classDEMSolver.html#abf871bb77fd3f0d95b2a7946ad312d35">DEMSolver&lt; dim &gt;</a></li>
-<li>background_dh&#160;:&#160;<a class="el" href="classDEMSolver.html#aa6caa41de9fca4cabbd0beb9022e86ed">DEMSolver&lt; dim &gt;</a></li>
+<li>background_constraints&#160;:&#160;<a class="el" href="classDEMSolver.html#a3926006d70a9fb14cfffe6f79bdce0d4">DEMSolver&lt; dim, PropertiesIndex &gt;</a></li>
+<li>background_dh&#160;:&#160;<a class="el" href="classDEMSolver.html#a3f17096d0118455699306606ec86e66a">DEMSolver&lt; dim, PropertiesIndex &gt;</a></li>
 <li>barycenter_output_name&#160;:&#160;<a class="el" href="structParameters_1_1PostProcessing.html#a280e7dcfdb6cf0b285e401aa3c52acd4">Parameters::PostProcessing</a></li>
 <li>barycenter_table&#160;:&#160;<a class="el" href="classCahnHilliard.html#a22290e925b93fbad53f233929a8c49a8">CahnHilliard&lt; dim &gt;</a></li>
 <li>base_radius&#160;:&#160;<a class="el" href="classCone.html#a7f71b74ecd0e8a7f26c65242ebb1cd86">Cone&lt; dim &gt;</a></li>
@@ -117,7 +117,7 @@ $(function() {
 <li>bool_dof_mask&#160;:&#160;<a class="el" href="classNavierStokesOperatorBase.html#a19396fe6188e28386b2edcbd7869dd14">NavierStokesOperatorBase&lt; dim, number &gt;</a></li>
 <li>boundaries_to_fix&#160;:&#160;<a class="el" href="structParameters_1_1MeshAdaptation.html#acdbb0259a02aeb4f0900ce6fab57d8cd">Parameters::MeshAdaptation</a></li>
 <li>boundaries_to_refine&#160;:&#160;<a class="el" href="structParameters_1_1Mesh.html#a88553c9d1dd7239a33d0c53b7d0bcae9">Parameters::Mesh</a></li>
-<li>boundary_cell_object&#160;:&#160;<a class="el" href="classCFDDEMSolver.html#aedf8168ad937f17c24bd4ef7d93cecc6">CFDDEMSolver&lt; dim &gt;</a>, <a class="el" href="classDEMSolver.html#ae8da9db420c7eb0022512d40a92dfdf4">DEMSolver&lt; dim &gt;</a></li>
+<li>boundary_cell_object&#160;:&#160;<a class="el" href="classCFDDEMSolver.html#aedf8168ad937f17c24bd4ef7d93cecc6">CFDDEMSolver&lt; dim &gt;</a>, <a class="el" href="classDEMSolver.html#a541a0864bcd4bc87d52042aca547efaa">DEMSolver&lt; dim, PropertiesIndex &gt;</a></li>
 <li>boundary_cells&#160;:&#160;<a class="el" href="classIBParticlesDEM.html#a3d34e45792721525f65652647a935067">IBParticlesDEM&lt; dim &gt;</a></li>
 <li>boundary_cells_for_floating_walls&#160;:&#160;<a class="el" href="classBoundaryCellsInformation.html#a25770a72ee4794bf1b20435944496f78">BoundaryCellsInformation&lt; dim &gt;</a></li>
 <li>boundary_cells_information&#160;:&#160;<a class="el" href="classBoundaryCellsInformation.html#ae83901cb7b77b12b885aa479c97f76df">BoundaryCellsInformation&lt; dim &gt;</a></li>
@@ -133,13 +133,13 @@ $(function() {
 <li>boundary_face_id&#160;:&#160;<a class="el" href="classCahnHilliardScratchData.html#a4def3234a07eb168479f0be30035f79e">CahnHilliardScratchData&lt; dim &gt;</a>, <a class="el" href="classHeatTransferScratchData.html#a1fc1e987d5d9be45a292f689f82c7fc9">HeatTransferScratchData&lt; dim &gt;</a>, <a class="el" href="classNavierStokesScratchData.html#acc2f4cf7c08898d8ff4172e2e07ce260">NavierStokesScratchData&lt; dim &gt;</a></li>
 <li>boundary_flow_id&#160;:&#160;<a class="el" href="structParameters_1_1DynamicFlowControl.html#af4d0d02ed67879423fb561b28e02e1cd">Parameters::DynamicFlowControl</a></li>
 <li>boundary_id&#160;:&#160;<a class="el" href="structboundary__cells__info__struct.html#a9174d2ac214f641b931088931a6b9a0d">boundary_cells_info_struct&lt; dim &gt;</a>, <a class="el" href="classparticle__wall__contact__info.html#a3d2c7da7f217f017259b17f8255394d0">particle_wall_contact_info&lt; dim &gt;</a>, <a class="el" href="structperiodic__boundaries__cells__info__struct.html#a0d4079726874acd8d8c0ffe5d53228e4">periodic_boundaries_cells_info_struct&lt; dim &gt;</a></li>
-<li>boundary_index&#160;:&#160;<a class="el" href="structIBParticlesDEM_1_1BoundaryCellsInfo.html#a86990defec0343fbaecaeecc94088fa0">IBParticlesDEM&lt; dim &gt;::BoundaryCellsInfo</a>, <a class="el" href="classParticleWallContactForce.html#a34b229e7a32e7855e2ed6e3cc87f3b4c">ParticleWallContactForce&lt; dim &gt;</a>, <a class="el" href="classTracerScratchData.html#a1d371284515b118b0a535e5354f0cba6">TracerScratchData&lt; dim &gt;</a></li>
+<li>boundary_index&#160;:&#160;<a class="el" href="structIBParticlesDEM_1_1BoundaryCellsInfo.html#a86990defec0343fbaecaeecc94088fa0">IBParticlesDEM&lt; dim &gt;::BoundaryCellsInfo</a>, <a class="el" href="classParticleWallContactForce.html#ab88e73b2be30d90143316b047d010f5f">ParticleWallContactForce&lt; dim, PropertiesIndex &gt;</a>, <a class="el" href="classTracerScratchData.html#a1d371284515b118b0a535e5354f0cba6">TracerScratchData&lt; dim &gt;</a></li>
 <li>boundary_layer_thickness&#160;:&#160;<a class="el" href="classBoundaryConditions_1_1BoundaryConditions.html#a236b3f81c55be37a05573c0860dbdca0">BoundaryConditions::BoundaryConditions&lt; dim &gt;</a></li>
 <li>boundary_rotational_speed&#160;:&#160;<a class="el" href="structParameters_1_1Lagrangian_1_1BCDEM.html#a32c01b9253bdaeab1141ba23885bdb9b">Parameters::Lagrangian::BCDEM</a></li>
-<li>boundary_rotational_speed_map&#160;:&#160;<a class="el" href="classParticleWallContactForce.html#aa25e05180136b32778c0e23a9e36d2c7">ParticleWallContactForce&lt; dim &gt;</a></li>
-<li>boundary_rotational_vector&#160;:&#160;<a class="el" href="structParameters_1_1Lagrangian_1_1BCDEM.html#a7a615cccd1e7a083b70926fcb17a14ed">Parameters::Lagrangian::BCDEM</a>, <a class="el" href="classParticleWallContactForce.html#a65579c67e6a5daa5863b9acaa26eb4e6">ParticleWallContactForce&lt; dim &gt;</a></li>
+<li>boundary_rotational_speed_map&#160;:&#160;<a class="el" href="classParticleWallContactForce.html#a1b4e8524fe900d06d9e098c8bda67384">ParticleWallContactForce&lt; dim, PropertiesIndex &gt;</a></li>
+<li>boundary_rotational_vector&#160;:&#160;<a class="el" href="structParameters_1_1Lagrangian_1_1BCDEM.html#a7a615cccd1e7a083b70926fcb17a14ed">Parameters::Lagrangian::BCDEM</a>, <a class="el" href="classParticleWallContactForce.html#a8137540533cba7d50e21c8d4270bf425">ParticleWallContactForce&lt; dim, PropertiesIndex &gt;</a></li>
 <li>boundary_translational_velocity&#160;:&#160;<a class="el" href="structParameters_1_1Lagrangian_1_1BCDEM.html#a1c9a119ce6cb2c3de8f3bf67db066267">Parameters::Lagrangian::BCDEM</a></li>
-<li>boundary_translational_velocity_map&#160;:&#160;<a class="el" href="classParticleWallContactForce.html#ae8dd3a22b4e0ffe6865dd2cf37bcd554">ParticleWallContactForce&lt; dim &gt;</a></li>
+<li>boundary_translational_velocity_map&#160;:&#160;<a class="el" href="classParticleWallContactForce.html#a5843af85ed5d1e2e04e3b2278c9bf02f">ParticleWallContactForce&lt; dim, PropertiesIndex &gt;</a></li>
 <li>bounding_box&#160;:&#160;<a class="el" href="classRBFShape.html#aecd1f24773c3fb4b5605da77598766eb">RBFShape&lt; dim &gt;</a></li>
 <li>bounding_box_center&#160;:&#160;<a class="el" href="classShape.html#a736b232acd7f88f4d84ad6a094b87ecc">Shape&lt; dim &gt;</a></li>
 <li>bounding_box_half_length&#160;:&#160;<a class="el" href="classShape.html#ab1080a0361811deb866dfbb51d9da340">Shape&lt; dim &gt;</a></li>

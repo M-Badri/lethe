@@ -80,7 +80,7 @@ var searchData=
   ['repetitions_5fy_77',['repetitions_y',['../classPeriodicHillsGrid.html#aa650312af76f1b9e6c166d0d2f18a59a',1,'PeriodicHillsGrid']]],
   ['repetitions_5fz_78',['repetitions_z',['../classPeriodicHillsGrid.html#a8eefd055e0c70d87854494b507bd9a4c',1,'PeriodicHillsGrid']]],
   ['report_5fparticle_5fstatistics_79',['report_particle_statistics',['../classCFDDEMSolver.html#aa5fa6cfecbeeaa157714025bd4193a10',1,'CFDDEMSolver']]],
-  ['report_5fstatistics_80',['report_statistics',['../classDEMSolver.html#af20b64f0bf9369e3dfcc95ded99f5cac',1,'DEMSolver']]],
+  ['report_5fstatistics_80',['report_statistics',['../classDEMSolver.html#aa0f2616de39e814fba0ab31cbba7fa2c',1,'DEMSolver']]],
   ['required_5ffields_81',['required_fields',['../classPhysicalPropertiesManager.html#a7365e021bc20971a1a35f37f0d3a45f7',1,'PhysicalPropertiesManager']]],
   ['rescale_5fpressure_5fdofs_5fin_5fnewton_5fupdate_82',['rescale_pressure_dofs_in_newton_update',['../classNavierStokesBase.html#a3f9917c78ef75a806167db64cfd2227a',1,'NavierStokesBase']]],
   ['reset_83',['reset',['../classCopyData.html#ad25c494872cbf4bccb3f7874686582c1',1,'CopyData::reset()'],['../classStabilizedMethodsCopyData.html#a711a40facec1d655a1c20b4604da4c82',1,'StabilizedMethodsCopyData::reset()'],['../classStabilizedMethodsTensorCopyData.html#a6d3c9dccbfe58e7340ef203b4a8868dc',1,'StabilizedMethodsTensorCopyData::reset()']]],

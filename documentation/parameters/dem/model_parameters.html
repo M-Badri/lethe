@@ -481,6 +481,10 @@
     set granular temperature threshold  = 1e-4
     set solid fraction threshold        = 0.4
   end
+
+  # Solver type
+  # Choices are dem|cfd_dem
+  set solver type = dem
 end
 </pre></div>
 </div>
@@ -589,6 +593,10 @@ See how the mechanism works with mobility status in the figure below:</p>
 .. note::
 The <code class="docutils literal notranslate"><span class="pre">load</span> <span class="pre">balance</span> <span class="pre">method</span></code> may be set to <code class="docutils literal notranslate"><span class="pre">dynamic_with_sparse_contacts</span></code> and factors of the weight of the cells by mobility status may be adjusted using the <code class="docutils literal notranslate"><span class="pre">active</span> <span class="pre">weight</span> <span class="pre">factor</span></code> and <code class="docutils literal notranslate"><span class="pre">inactive</span> <span class="pre">weight</span> <span class="pre">factor</span></code> parameters. There is factor only for active and inactive status, mobile factor is always 1.</p>
 </section>
+<section id="solver-type">
+<h2>Solver Type<a class="headerlink" href="#solver-type" title="Link to this heading">#</a></h2>
+<p>The “solver type” parameter controls the type of physic being solved by lethe. Currently, this parameter should always be set to “dem”, which is the default value, even when solving a CFD-DEM problem.</p>
+</section>
 </section>
 
         </article>
@@ -660,6 +668,7 @@ The <code class="docutils literal notranslate"><span class="pre">load</span> <sp
 </ul>
 </li>
 <li><a class="reference internal" href="#adaptive-sparse-contacts-asc">Adaptive Sparse Contacts (ASC)</a></li>
+<li><a class="reference internal" href="#solver-type">Solver Type</a></li>
 </ul>
 </li>
 </ul>

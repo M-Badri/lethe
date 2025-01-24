@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lethe Open-Source Library: DEMContactManager&lt; dim &gt; Class Template Reference</title>
+<title>Lethe Open-Source Library: DEMContactManager&lt; dim, PropertiesIndex &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -83,7 +83,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classDEMContactManager-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DEMContactManager&lt; dim &gt; Class Template Reference</div></div>
+  <div class="headertitle"><div class="title">DEMContactManager&lt; dim, PropertiesIndex &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -91,129 +91,136 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4ffac92c694e849e3ba521f93404cc52" id="r_a4ffac92c694e849e3ba521f93404cc52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a4ffac92c694e849e3ba521f93404cc52">execute_cell_neighbors_search</a> (const parallel::distributed::Triangulation&lt; dim &gt; &amp;triangulation, const typename <a class="el" href="structDEM_1_1dem__data__structures.html">DEM::dem_data_structures</a>&lt; dim &gt;::periodic_boundaries_cells_info periodic_boundaries_cells_information)</td></tr>
-<tr class="separator:a4ffac92c694e849e3ba521f93404cc52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d07ff0191f0a808bc141748bd16b09e" id="r_a5d07ff0191f0a808bc141748bd16b09e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a5d07ff0191f0a808bc141748bd16b09e">update_cell_neighbors</a> (const parallel::distributed::Triangulation&lt; dim &gt; &amp;triangulation, const typename <a class="el" href="structDEM_1_1dem__data__structures.html">DEM::dem_data_structures</a>&lt; dim &gt;::periodic_boundaries_cells_info periodic_boundaries_cells_information)</td></tr>
-<tr class="separator:a5d07ff0191f0a808bc141748bd16b09e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a633a6c9fccfeb2dbe693541f427e442d" id="r_a633a6c9fccfeb2dbe693541f427e442d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a633a6c9fccfeb2dbe693541f427e442d">update_contacts</a> ()</td></tr>
-<tr class="separator:a633a6c9fccfeb2dbe693541f427e442d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e72126fa05e497990926936e4240f6a" id="r_a1e72126fa05e497990926936e4240f6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a1e72126fa05e497990926936e4240f6a">update_local_particles_in_cells</a> (const Particles::ParticleHandler&lt; dim &gt; &amp;particle_handler)</td></tr>
-<tr class="separator:a1e72126fa05e497990926936e4240f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2306e86d107360833796aaba1af13414" id="r_a2306e86d107360833796aaba1af13414"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a2306e86d107360833796aaba1af13414">execute_particle_particle_broad_search</a> (dealii::Particles::ParticleHandler&lt; dim &gt; &amp;particle_handler, const <a class="el" href="classAdaptiveSparseContacts.html">AdaptiveSparseContacts</a>&lt; dim &gt; &amp;sparse_particle_contact_object)</td></tr>
-<tr class="separator:a2306e86d107360833796aaba1af13414"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40afc913290019f98f681c2442511ad7" id="r_a40afc913290019f98f681c2442511ad7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a40afc913290019f98f681c2442511ad7">execute_particle_wall_broad_search</a> (const Particles::ParticleHandler&lt; dim &gt; &amp;particle_handler, <a class="el" href="classBoundaryCellsInformation.html">BoundaryCellsInformation</a>&lt; dim &gt; &amp;boundary_cell_object, const typename <a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::solid_surfaces_mesh_information solid_surfaces_mesh_info, const <a class="el" href="classParameters_1_1Lagrangian_1_1FloatingWalls.html">Parameters::Lagrangian::FloatingWalls</a>&lt; dim &gt; &amp;floating_walls, const double simulation_time, const <a class="el" href="classAdaptiveSparseContacts.html">AdaptiveSparseContacts</a>&lt; dim &gt; &amp;sparse_particle_contact_object)</td></tr>
-<tr class="separator:a40afc913290019f98f681c2442511ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30508b976a6fd8b521ce55bb57dc614e" id="r_a30508b976a6fd8b521ce55bb57dc614e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a30508b976a6fd8b521ce55bb57dc614e">execute_particle_particle_fine_search</a> (const double neighborhood_threshold)</td></tr>
-<tr class="separator:a30508b976a6fd8b521ce55bb57dc614e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9f1cce05ced72b9a7023f8f01e15b3f" id="r_af9f1cce05ced72b9a7023f8f01e15b3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#af9f1cce05ced72b9a7023f8f01e15b3f">execute_particle_wall_fine_search</a> (const <a class="el" href="classParameters_1_1Lagrangian_1_1FloatingWalls.html">Parameters::Lagrangian::FloatingWalls</a>&lt; dim &gt; &amp;floating_walls, const double simulation_time, const double neighborhood_threshold)</td></tr>
-<tr class="separator:af9f1cce05ced72b9a7023f8f01e15b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5aee76dc860f1f65a598adf6abce3b36" id="r_a5aee76dc860f1f65a598adf6abce3b36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a5aee76dc860f1f65a598adf6abce3b36">set_periodic_offset</a> (const Tensor&lt; 1, dim &gt; &amp;offset)</td></tr>
-<tr class="separator:a5aee76dc860f1f65a598adf6abce3b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b12f5a804d8646cda306fe0299f89ae" id="r_a5b12f5a804d8646cda306fe0299f89ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#a5383f45e3d6975b6819496a03123c126">::particle_floating_mesh_in_contact</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a5b12f5a804d8646cda306fe0299f89ae">get_particle_floating_mesh_in_contact</a> ()</td></tr>
-<tr class="separator:a5b12f5a804d8646cda306fe0299f89ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bab724d5e9a1e21d109cd951e37c2d8" id="r_a8bab724d5e9a1e21d109cd951e37c2d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#acf1765999582ae4f5e1d0f87dab3afe0">::particle_wall_in_contact</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a8bab724d5e9a1e21d109cd951e37c2d8">get_particle_floating_wall_in_contact</a> ()</td></tr>
-<tr class="separator:a8bab724d5e9a1e21d109cd951e37c2d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a82a63a9631b21c4f0300551d269fe9" id="r_a0a82a63a9631b21c4f0300551d269fe9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#acf1765999582ae4f5e1d0f87dab3afe0">::particle_wall_in_contact</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a0a82a63a9631b21c4f0300551d269fe9">get_particle_wall_in_contact</a> ()</td></tr>
-<tr class="separator:a0a82a63a9631b21c4f0300551d269fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcb2565c8563a06e6fd7b92362c7f3a0" id="r_afcb2565c8563a06e6fd7b92362c7f3a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#a5e10751dbecde3b5affacd1fd5469d8f">::particle_line_candidates</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#afcb2565c8563a06e6fd7b92362c7f3a0">get_particle_lines_in_contact</a> ()</td></tr>
-<tr class="separator:afcb2565c8563a06e6fd7b92362c7f3a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9d7c600121585e5c9cba7cf3db41dd9" id="r_af9d7c600121585e5c9cba7cf3db41dd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#aae1b6d988aaa1c929df0da3058c0a1e5">::particle_point_candidates</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#af9d7c600121585e5c9cba7cf3db41dd9">get_particle_points_in_contact</a> ()</td></tr>
-<tr class="separator:af9d7c600121585e5c9cba7cf3db41dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a7a56e605c51baabe27e392d9e44e74" id="r_a1a7a56e605c51baabe27e392d9e44e74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a1a7a56e605c51baabe27e392d9e44e74">get_local_adjacent_particles</a> ()</td></tr>
-<tr class="separator:a1a7a56e605c51baabe27e392d9e44e74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad56961e8b8b743276af92f49369bc828" id="r_ad56961e8b8b743276af92f49369bc828"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#ad56961e8b8b743276af92f49369bc828">get_ghost_adjacent_particles</a> ()</td></tr>
-<tr class="separator:ad56961e8b8b743276af92f49369bc828"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a175cf159b71811c703cdfdca54277242" id="r_a175cf159b71811c703cdfdca54277242"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a175cf159b71811c703cdfdca54277242">get_local_local_periodic_adjacent_particles</a> ()</td></tr>
-<tr class="separator:a175cf159b71811c703cdfdca54277242"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf7a20cb20b53ca60f6c796d79a0fbe7" id="r_abf7a20cb20b53ca60f6c796d79a0fbe7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#abf7a20cb20b53ca60f6c796d79a0fbe7">get_local_ghost_periodic_adjacent_particles</a> ()</td></tr>
-<tr class="separator:abf7a20cb20b53ca60f6c796d79a0fbe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a677385f62dc0ac976e62378756d5bba8" id="r_a677385f62dc0ac976e62378756d5bba8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a677385f62dc0ac976e62378756d5bba8">get_ghost_local_periodic_adjacent_particles</a> ()</td></tr>
-<tr class="separator:a677385f62dc0ac976e62378756d5bba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55af3e423074e6ddab8d6df85b8234b4" id="r_a55af3e423074e6ddab8d6df85b8234b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_particle_candidates &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a55af3e423074e6ddab8d6df85b8234b4">get_local_contact_pair_candidates</a> ()</td></tr>
-<tr class="separator:a55af3e423074e6ddab8d6df85b8234b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a213203d54a4cd5c7d73195bf1980a73e" id="r_a213203d54a4cd5c7d73195bf1980a73e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_particle_candidates &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a213203d54a4cd5c7d73195bf1980a73e">get_ghost_contact_pair_candidates</a> ()</td></tr>
-<tr class="separator:a213203d54a4cd5c7d73195bf1980a73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f51051c609b64ac39eaa02a65e4e870" id="r_a5f51051c609b64ac39eaa02a65e4e870"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a5f51051c609b64ac39eaa02a65e4e870">execute_cell_neighbors_search</a> (const parallel::distributed::Triangulation&lt; dim &gt; &amp;triangulation, const typename <a class="el" href="structDEM_1_1dem__data__structures.html">DEM::dem_data_structures</a>&lt; dim &gt;::periodic_boundaries_cells_info periodic_boundaries_cells_information)</td></tr>
+<tr class="separator:a5f51051c609b64ac39eaa02a65e4e870"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68146a421b3913130fb364d21e84d534" id="r_a68146a421b3913130fb364d21e84d534"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a68146a421b3913130fb364d21e84d534">update_cell_neighbors</a> (const parallel::distributed::Triangulation&lt; dim &gt; &amp;triangulation, const typename <a class="el" href="structDEM_1_1dem__data__structures.html">DEM::dem_data_structures</a>&lt; dim &gt;::periodic_boundaries_cells_info periodic_boundaries_cells_information)</td></tr>
+<tr class="separator:a68146a421b3913130fb364d21e84d534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03a33ccbab1db07d26c105677f4b0741" id="r_a03a33ccbab1db07d26c105677f4b0741"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a03a33ccbab1db07d26c105677f4b0741">update_contacts</a> ()</td></tr>
+<tr class="separator:a03a33ccbab1db07d26c105677f4b0741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa28c060306742dbaad81a3ba7c874aaa" id="r_aa28c060306742dbaad81a3ba7c874aaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#aa28c060306742dbaad81a3ba7c874aaa">update_local_particles_in_cells</a> (const Particles::ParticleHandler&lt; dim &gt; &amp;particle_handler)</td></tr>
+<tr class="separator:aa28c060306742dbaad81a3ba7c874aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a31a151fd5ba3630abd432ffc385a5a" id="r_a1a31a151fd5ba3630abd432ffc385a5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a1a31a151fd5ba3630abd432ffc385a5a">execute_particle_particle_broad_search</a> (dealii::Particles::ParticleHandler&lt; dim &gt; &amp;particle_handler, const <a class="el" href="classAdaptiveSparseContacts.html">AdaptiveSparseContacts</a>&lt; dim, PropertiesIndex &gt; &amp;sparse_particle_contact_object)</td></tr>
+<tr class="separator:a1a31a151fd5ba3630abd432ffc385a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afacfcc238648120de34b58a664d1e3fd" id="r_afacfcc238648120de34b58a664d1e3fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#afacfcc238648120de34b58a664d1e3fd">execute_particle_wall_broad_search</a> (const Particles::ParticleHandler&lt; dim &gt; &amp;particle_handler, <a class="el" href="classBoundaryCellsInformation.html">BoundaryCellsInformation</a>&lt; dim &gt; &amp;boundary_cell_object, const typename <a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::solid_surfaces_mesh_information solid_surfaces_mesh_info, const <a class="el" href="classParameters_1_1Lagrangian_1_1FloatingWalls.html">Parameters::Lagrangian::FloatingWalls</a>&lt; dim &gt; &amp;floating_walls, const double simulation_time, const <a class="el" href="classAdaptiveSparseContacts.html">AdaptiveSparseContacts</a>&lt; dim, PropertiesIndex &gt; &amp;sparse_particle_contact_object)</td></tr>
+<tr class="separator:afacfcc238648120de34b58a664d1e3fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7ea1ccc7dcba07d91a5a0d94c687f94" id="r_ad7ea1ccc7dcba07d91a5a0d94c687f94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#ad7ea1ccc7dcba07d91a5a0d94c687f94">execute_particle_particle_fine_search</a> (const double neighborhood_threshold)</td></tr>
+<tr class="separator:ad7ea1ccc7dcba07d91a5a0d94c687f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63acfff5b61c976f709fb2fa7e4f0030" id="r_a63acfff5b61c976f709fb2fa7e4f0030"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a63acfff5b61c976f709fb2fa7e4f0030">execute_particle_wall_fine_search</a> (const <a class="el" href="classParameters_1_1Lagrangian_1_1FloatingWalls.html">Parameters::Lagrangian::FloatingWalls</a>&lt; dim &gt; &amp;floating_walls, const double simulation_time, const double neighborhood_threshold)</td></tr>
+<tr class="separator:a63acfff5b61c976f709fb2fa7e4f0030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2677a2aab2f79832003a5562953da696" id="r_a2677a2aab2f79832003a5562953da696"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a2677a2aab2f79832003a5562953da696">set_periodic_offset</a> (const Tensor&lt; 1, dim &gt; &amp;offset)</td></tr>
+<tr class="separator:a2677a2aab2f79832003a5562953da696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bdf1e4d69ae8445d52a02db6f264955" id="r_a1bdf1e4d69ae8445d52a02db6f264955"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#af99b00fb1dac018b21af6c8417b37c8b">::particle_floating_mesh_in_contact</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a1bdf1e4d69ae8445d52a02db6f264955">get_particle_floating_mesh_in_contact</a> ()</td></tr>
+<tr class="separator:a1bdf1e4d69ae8445d52a02db6f264955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad63943c3472d192771a5f6395cfda25" id="r_aad63943c3472d192771a5f6395cfda25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#a2a2a0bfc12712080cfbba658127f6fb8">::particle_wall_in_contact</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#aad63943c3472d192771a5f6395cfda25">get_particle_floating_wall_in_contact</a> ()</td></tr>
+<tr class="separator:aad63943c3472d192771a5f6395cfda25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5817400e32e593c39e2424f306fd5c8" id="r_ad5817400e32e593c39e2424f306fd5c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#a2a2a0bfc12712080cfbba658127f6fb8">::particle_wall_in_contact</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#ad5817400e32e593c39e2424f306fd5c8">get_particle_wall_in_contact</a> ()</td></tr>
+<tr class="separator:ad5817400e32e593c39e2424f306fd5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bfe8dc96492e00b0472952a5e819f7a" id="r_a9bfe8dc96492e00b0472952a5e819f7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#aa43e73ae1497867681848fd771dda1cd">::particle_line_candidates</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a9bfe8dc96492e00b0472952a5e819f7a">get_particle_lines_in_contact</a> ()</td></tr>
+<tr class="separator:a9bfe8dc96492e00b0472952a5e819f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a550ce4913ceb8bf9f73a24c4bc0012bb" id="r_a550ce4913ceb8bf9f73a24c4bc0012bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#a431ee5c6b2acef1d744095e5d5dde9a0">::particle_point_candidates</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a550ce4913ceb8bf9f73a24c4bc0012bb">get_particle_points_in_contact</a> ()</td></tr>
+<tr class="separator:a550ce4913ceb8bf9f73a24c4bc0012bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5477e50c4382234a46a68447a9eb76cf" id="r_a5477e50c4382234a46a68447a9eb76cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a5477e50c4382234a46a68447a9eb76cf">get_local_adjacent_particles</a> ()</td></tr>
+<tr class="separator:a5477e50c4382234a46a68447a9eb76cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c0ccc235942a495bf719336437e26ed" id="r_a0c0ccc235942a495bf719336437e26ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a0c0ccc235942a495bf719336437e26ed">get_ghost_adjacent_particles</a> ()</td></tr>
+<tr class="separator:a0c0ccc235942a495bf719336437e26ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af226186995d0122efc788347e4aafcbc" id="r_af226186995d0122efc788347e4aafcbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#af226186995d0122efc788347e4aafcbc">get_local_local_periodic_adjacent_particles</a> ()</td></tr>
+<tr class="separator:af226186995d0122efc788347e4aafcbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ff93937299ede18c9fafa12a507d41d" id="r_a2ff93937299ede18c9fafa12a507d41d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a2ff93937299ede18c9fafa12a507d41d">get_local_ghost_periodic_adjacent_particles</a> ()</td></tr>
+<tr class="separator:a2ff93937299ede18c9fafa12a507d41d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17ec72c7f37d8d2f7a49f0b0c1881879" id="r_a17ec72c7f37d8d2f7a49f0b0c1881879"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a17ec72c7f37d8d2f7a49f0b0c1881879">get_ghost_local_periodic_adjacent_particles</a> ()</td></tr>
+<tr class="separator:a17ec72c7f37d8d2f7a49f0b0c1881879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ecda7fdd82433affc0ffe8144e2c91c" id="r_a0ecda7fdd82433affc0ffe8144e2c91c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_particle_candidates &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a0ecda7fdd82433affc0ffe8144e2c91c">get_local_contact_pair_candidates</a> ()</td></tr>
+<tr class="separator:a0ecda7fdd82433affc0ffe8144e2c91c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af10473952e6883736a7ae85796613c1d" id="r_af10473952e6883736a7ae85796613c1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_particle_candidates &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#af10473952e6883736a7ae85796613c1d">get_ghost_contact_pair_candidates</a> ()</td></tr>
+<tr class="separator:af10473952e6883736a7ae85796613c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a1725ebb594727ad64e8a15decd29b827" id="r_a1725ebb594727ad64e8a15decd29b827"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_index_iterator_map&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a1725ebb594727ad64e8a15decd29b827">particle_container</a></td></tr>
-<tr class="separator:a1725ebb594727ad64e8a15decd29b827"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afed95cd7c9fd28779c3329d743dd27d6" id="r_afed95cd7c9fd28779c3329d743dd27d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::cells_total_neighbor_list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#afed95cd7c9fd28779c3329d743dd27d6">total_neighbor_list</a></td></tr>
-<tr class="separator:afed95cd7c9fd28779c3329d743dd27d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab00f458688f9955be35949e606ae7545" id="r_ab00f458688f9955be35949e606ae7545"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::cells_neighbor_list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#ab00f458688f9955be35949e606ae7545">cells_local_neighbor_list</a></td></tr>
-<tr class="separator:ab00f458688f9955be35949e606ae7545"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85333f4f36c57ba76a3cc998b20ca04d" id="r_a85333f4f36c57ba76a3cc998b20ca04d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::cells_neighbor_list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a85333f4f36c57ba76a3cc998b20ca04d">cells_ghost_neighbor_list</a></td></tr>
-<tr class="separator:a85333f4f36c57ba76a3cc998b20ca04d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e3a309dc0b831a1faef62203fbc2618" id="r_a0e3a309dc0b831a1faef62203fbc2618"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::cells_neighbor_list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a0e3a309dc0b831a1faef62203fbc2618">cells_local_periodic_neighbor_list</a></td></tr>
-<tr class="separator:a0e3a309dc0b831a1faef62203fbc2618"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaddd411d40eecb8b7f4786a807ef193" id="r_afaddd411d40eecb8b7f4786a807ef193"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::cells_neighbor_list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#afaddd411d40eecb8b7f4786a807ef193">cells_ghost_periodic_neighbor_list</a></td></tr>
-<tr class="separator:afaddd411d40eecb8b7f4786a807ef193"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06c81be88437a8bd21c4f16f6379b1a5" id="r_a06c81be88437a8bd21c4f16f6379b1a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::cells_neighbor_list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a06c81be88437a8bd21c4f16f6379b1a5">cells_ghost_local_periodic_neighbor_list</a></td></tr>
-<tr class="separator:a06c81be88437a8bd21c4f16f6379b1a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94972cd84e62fe1347a5ddd540d330df" id="r_a94972cd84e62fe1347a5ddd540d330df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_particle_candidates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a94972cd84e62fe1347a5ddd540d330df">local_contact_pair_candidates</a></td></tr>
-<tr class="separator:a94972cd84e62fe1347a5ddd540d330df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a104795c4dca62051bb561a7a0567d3e6" id="r_a104795c4dca62051bb561a7a0567d3e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_particle_candidates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a104795c4dca62051bb561a7a0567d3e6">ghost_contact_pair_candidates</a></td></tr>
-<tr class="separator:a104795c4dca62051bb561a7a0567d3e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f6ba35f9783f21b8ba8c94569270dc8" id="r_a4f6ba35f9783f21b8ba8c94569270dc8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_particle_candidates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a4f6ba35f9783f21b8ba8c94569270dc8">ghost_local_contact_pair_candidates</a></td></tr>
-<tr class="separator:a4f6ba35f9783f21b8ba8c94569270dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6448bf0169c0db7bbd1d9708a5a6c44e" id="r_a6448bf0169c0db7bbd1d9708a5a6c44e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_particle_candidates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a6448bf0169c0db7bbd1d9708a5a6c44e">local_contact_pair_periodic_candidates</a></td></tr>
-<tr class="separator:a6448bf0169c0db7bbd1d9708a5a6c44e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e5ab847647f0024b1aa05a06f187166" id="r_a6e5ab847647f0024b1aa05a06f187166"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_particle_candidates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a6e5ab847647f0024b1aa05a06f187166">ghost_contact_pair_periodic_candidates</a></td></tr>
-<tr class="separator:a6e5ab847647f0024b1aa05a06f187166"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5fe89713bcacfd0d3c09815a02a7a3b" id="r_ab5fe89713bcacfd0d3c09815a02a7a3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_particle_candidates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#ab5fe89713bcacfd0d3c09815a02a7a3b">ghost_local_contact_pair_periodic_candidates</a></td></tr>
-<tr class="separator:ab5fe89713bcacfd0d3c09815a02a7a3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa994740e8fa68486fe09a716c9d87d1d" id="r_aa994740e8fa68486fe09a716c9d87d1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_floating_mesh_candidates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#aa994740e8fa68486fe09a716c9d87d1d">particle_floating_mesh_candidates</a></td></tr>
-<tr class="separator:aa994740e8fa68486fe09a716c9d87d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a170e7b52a60481364b7a36cc2c2f9009" id="r_a170e7b52a60481364b7a36cc2c2f9009"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_floating_wall_candidates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a170e7b52a60481364b7a36cc2c2f9009">particle_floating_wall_candidates</a></td></tr>
-<tr class="separator:a170e7b52a60481364b7a36cc2c2f9009"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae1b6d988aaa1c929df0da3058c0a1e5" id="r_aae1b6d988aaa1c929df0da3058c0a1e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_point_candidates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#aae1b6d988aaa1c929df0da3058c0a1e5">particle_point_candidates</a></td></tr>
-<tr class="separator:aae1b6d988aaa1c929df0da3058c0a1e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e10751dbecde3b5affacd1fd5469d8f" id="r_a5e10751dbecde3b5affacd1fd5469d8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_line_candidates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a5e10751dbecde3b5affacd1fd5469d8f">particle_line_candidates</a></td></tr>
-<tr class="separator:a5e10751dbecde3b5affacd1fd5469d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3edc60486a86ae53d28127632f71a2d2" id="r_a3edc60486a86ae53d28127632f71a2d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_wall_candidates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a3edc60486a86ae53d28127632f71a2d2">particle_wall_candidates</a></td></tr>
-<tr class="separator:a3edc60486a86ae53d28127632f71a2d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5383f45e3d6975b6819496a03123c126" id="r_a5383f45e3d6975b6819496a03123c126"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_floating_mesh_in_contact&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a5383f45e3d6975b6819496a03123c126">particle_floating_mesh_in_contact</a></td></tr>
-<tr class="separator:a5383f45e3d6975b6819496a03123c126"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f51a297e47921605123543632c9bf33" id="r_a7f51a297e47921605123543632c9bf33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#acf1765999582ae4f5e1d0f87dab3afe0">::particle_wall_in_contact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a7f51a297e47921605123543632c9bf33">particle_floating_wall_in_contact</a></td></tr>
-<tr class="separator:a7f51a297e47921605123543632c9bf33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf1765999582ae4f5e1d0f87dab3afe0" id="r_acf1765999582ae4f5e1d0f87dab3afe0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_wall_in_contact&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#acf1765999582ae4f5e1d0f87dab3afe0">particle_wall_in_contact</a></td></tr>
-<tr class="separator:acf1765999582ae4f5e1d0f87dab3afe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc8ce2a4c1de67c3c528069b7bd59150" id="r_adc8ce2a4c1de67c3c528069b7bd59150"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#a5e10751dbecde3b5affacd1fd5469d8f">::particle_line_candidates</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#adc8ce2a4c1de67c3c528069b7bd59150">particle_lines_in_contact</a></td></tr>
-<tr class="separator:adc8ce2a4c1de67c3c528069b7bd59150"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5186e2fb21535e84f03cda62dfc537a" id="r_ac5186e2fb21535e84f03cda62dfc537a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#aae1b6d988aaa1c929df0da3058c0a1e5">::particle_point_candidates</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#ac5186e2fb21535e84f03cda62dfc537a">particle_points_in_contact</a></td></tr>
-<tr class="separator:ac5186e2fb21535e84f03cda62dfc537a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29f327bcf2d8587e3811dc1e95017edb" id="r_a29f327bcf2d8587e3811dc1e95017edb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a29f327bcf2d8587e3811dc1e95017edb">local_adjacent_particles</a></td></tr>
-<tr class="separator:a29f327bcf2d8587e3811dc1e95017edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71897bee4c0f99d980cc33e74a8fbbfa" id="r_a71897bee4c0f99d980cc33e74a8fbbfa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a71897bee4c0f99d980cc33e74a8fbbfa">ghost_adjacent_particles</a></td></tr>
-<tr class="separator:a71897bee4c0f99d980cc33e74a8fbbfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae66057ba1e7535ffcd0e304fda58d0a4" id="r_ae66057ba1e7535ffcd0e304fda58d0a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#ae66057ba1e7535ffcd0e304fda58d0a4">local_local_periodic_adjacent_particles</a></td></tr>
-<tr class="separator:ae66057ba1e7535ffcd0e304fda58d0a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0dd6158ab897f9b81e93926ed2ab6e2f" id="r_a0dd6158ab897f9b81e93926ed2ab6e2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a0dd6158ab897f9b81e93926ed2ab6e2f">local_ghost_periodic_adjacent_particles</a></td></tr>
-<tr class="separator:a0dd6158ab897f9b81e93926ed2ab6e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae40e03dde81bf0d5875b981b985cafde" id="r_ae40e03dde81bf0d5875b981b985cafde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#ae40e03dde81bf0d5875b981b985cafde">ghost_local_periodic_adjacent_particles</a></td></tr>
-<tr class="separator:ae40e03dde81bf0d5875b981b985cafde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa56abf7b07d7d5f704de5c5cfd26c11e" id="r_aa56abf7b07d7d5f704de5c5cfd26c11e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">DEM::dem_data_structures</a>&lt; dim &gt;::cell_vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#aa56abf7b07d7d5f704de5c5cfd26c11e">periodic_cells_container</a></td></tr>
-<tr class="separator:aa56abf7b07d7d5f704de5c5cfd26c11e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5cffa8a1b9b514526021949d46233ee" id="r_af5cffa8a1b9b514526021949d46233ee"><td class="memItemLeft" align="right" valign="top">Tensor&lt; 1, dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#af5cffa8a1b9b514526021949d46233ee">periodic_offset</a> = Tensor&lt;1, dim&gt;()</td></tr>
-<tr class="separator:af5cffa8a1b9b514526021949d46233ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63de2152b68334eddf9eb5e2634ffbea" id="r_a63de2152b68334eddf9eb5e2634ffbea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_index_iterator_map&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a63de2152b68334eddf9eb5e2634ffbea">particle_container</a></td></tr>
+<tr class="separator:a63de2152b68334eddf9eb5e2634ffbea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dd7e7ad05c08cafa3f4f97b4418c434" id="r_a8dd7e7ad05c08cafa3f4f97b4418c434"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::cells_total_neighbor_list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a8dd7e7ad05c08cafa3f4f97b4418c434">total_neighbor_list</a></td></tr>
+<tr class="separator:a8dd7e7ad05c08cafa3f4f97b4418c434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac694666a4df048c76de5171982b5ec3a" id="r_ac694666a4df048c76de5171982b5ec3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::cells_neighbor_list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#ac694666a4df048c76de5171982b5ec3a">cells_local_neighbor_list</a></td></tr>
+<tr class="separator:ac694666a4df048c76de5171982b5ec3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec6d0c2b4de296cb792403288d60425d" id="r_aec6d0c2b4de296cb792403288d60425d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::cells_neighbor_list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#aec6d0c2b4de296cb792403288d60425d">cells_ghost_neighbor_list</a></td></tr>
+<tr class="separator:aec6d0c2b4de296cb792403288d60425d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9690d57882b17c2a1500e71ff4f13dfb" id="r_a9690d57882b17c2a1500e71ff4f13dfb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::cells_neighbor_list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a9690d57882b17c2a1500e71ff4f13dfb">cells_local_periodic_neighbor_list</a></td></tr>
+<tr class="separator:a9690d57882b17c2a1500e71ff4f13dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae20b1049b7cdd9dc240f7abd9690c231" id="r_ae20b1049b7cdd9dc240f7abd9690c231"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::cells_neighbor_list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#ae20b1049b7cdd9dc240f7abd9690c231">cells_ghost_periodic_neighbor_list</a></td></tr>
+<tr class="separator:ae20b1049b7cdd9dc240f7abd9690c231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0645db1847089253bbeab912c717a6f3" id="r_a0645db1847089253bbeab912c717a6f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::cells_neighbor_list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a0645db1847089253bbeab912c717a6f3">cells_ghost_local_periodic_neighbor_list</a></td></tr>
+<tr class="separator:a0645db1847089253bbeab912c717a6f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a163c92a97623ca276e537856297c0b36" id="r_a163c92a97623ca276e537856297c0b36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_particle_candidates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a163c92a97623ca276e537856297c0b36">local_contact_pair_candidates</a></td></tr>
+<tr class="separator:a163c92a97623ca276e537856297c0b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e9bb04cacf6f43f5ebf3828109639ab" id="r_a0e9bb04cacf6f43f5ebf3828109639ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_particle_candidates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a0e9bb04cacf6f43f5ebf3828109639ab">ghost_contact_pair_candidates</a></td></tr>
+<tr class="separator:a0e9bb04cacf6f43f5ebf3828109639ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa21945b8228a4059e21ce12c9a4610d" id="r_afa21945b8228a4059e21ce12c9a4610d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_particle_candidates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#afa21945b8228a4059e21ce12c9a4610d">ghost_local_contact_pair_candidates</a></td></tr>
+<tr class="separator:afa21945b8228a4059e21ce12c9a4610d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c2ff0eeb5e68266876506fe458da43a" id="r_a7c2ff0eeb5e68266876506fe458da43a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_particle_candidates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a7c2ff0eeb5e68266876506fe458da43a">local_contact_pair_periodic_candidates</a></td></tr>
+<tr class="separator:a7c2ff0eeb5e68266876506fe458da43a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1f747ef226f4d5ebb9669e9a7910673" id="r_aa1f747ef226f4d5ebb9669e9a7910673"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_particle_candidates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#aa1f747ef226f4d5ebb9669e9a7910673">ghost_contact_pair_periodic_candidates</a></td></tr>
+<tr class="separator:aa1f747ef226f4d5ebb9669e9a7910673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb3987da2d6aa98420a9e0f2ef26c599" id="r_acb3987da2d6aa98420a9e0f2ef26c599"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_particle_candidates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#acb3987da2d6aa98420a9e0f2ef26c599">ghost_local_contact_pair_periodic_candidates</a></td></tr>
+<tr class="separator:acb3987da2d6aa98420a9e0f2ef26c599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc0e4df5dbb4ff04bf07a6f88876c14a" id="r_acc0e4df5dbb4ff04bf07a6f88876c14a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_floating_mesh_candidates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#acc0e4df5dbb4ff04bf07a6f88876c14a">particle_floating_mesh_candidates</a></td></tr>
+<tr class="separator:acc0e4df5dbb4ff04bf07a6f88876c14a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae315958e02440efcf58e26f25f0a3d6b" id="r_ae315958e02440efcf58e26f25f0a3d6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_floating_wall_candidates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#ae315958e02440efcf58e26f25f0a3d6b">particle_floating_wall_candidates</a></td></tr>
+<tr class="separator:ae315958e02440efcf58e26f25f0a3d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a431ee5c6b2acef1d744095e5d5dde9a0" id="r_a431ee5c6b2acef1d744095e5d5dde9a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_point_candidates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a431ee5c6b2acef1d744095e5d5dde9a0">particle_point_candidates</a></td></tr>
+<tr class="separator:a431ee5c6b2acef1d744095e5d5dde9a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa43e73ae1497867681848fd771dda1cd" id="r_aa43e73ae1497867681848fd771dda1cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_line_candidates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#aa43e73ae1497867681848fd771dda1cd">particle_line_candidates</a></td></tr>
+<tr class="separator:aa43e73ae1497867681848fd771dda1cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c9c8bb5aeb7712e6f391ed95c689d89" id="r_a3c9c8bb5aeb7712e6f391ed95c689d89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_wall_candidates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a3c9c8bb5aeb7712e6f391ed95c689d89">particle_wall_candidates</a></td></tr>
+<tr class="separator:a3c9c8bb5aeb7712e6f391ed95c689d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af99b00fb1dac018b21af6c8417b37c8b" id="r_af99b00fb1dac018b21af6c8417b37c8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_floating_mesh_in_contact&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#af99b00fb1dac018b21af6c8417b37c8b">particle_floating_mesh_in_contact</a></td></tr>
+<tr class="separator:af99b00fb1dac018b21af6c8417b37c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f00979ce64058c8a31b15b856971469" id="r_a6f00979ce64058c8a31b15b856971469"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#a2a2a0bfc12712080cfbba658127f6fb8">::particle_wall_in_contact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a6f00979ce64058c8a31b15b856971469">particle_floating_wall_in_contact</a></td></tr>
+<tr class="separator:a6f00979ce64058c8a31b15b856971469"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a2a0bfc12712080cfbba658127f6fb8" id="r_a2a2a0bfc12712080cfbba658127f6fb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_wall_in_contact&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a2a2a0bfc12712080cfbba658127f6fb8">particle_wall_in_contact</a></td></tr>
+<tr class="separator:a2a2a0bfc12712080cfbba658127f6fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a218acc18dce1149c922594e1cd4ee49d" id="r_a218acc18dce1149c922594e1cd4ee49d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#aa43e73ae1497867681848fd771dda1cd">::particle_line_candidates</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a218acc18dce1149c922594e1cd4ee49d">particle_lines_in_contact</a></td></tr>
+<tr class="separator:a218acc18dce1149c922594e1cd4ee49d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52de2652e2c335ef3c40269c745a6c33" id="r_a52de2652e2c335ef3c40269c745a6c33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#a431ee5c6b2acef1d744095e5d5dde9a0">::particle_point_candidates</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a52de2652e2c335ef3c40269c745a6c33">particle_points_in_contact</a></td></tr>
+<tr class="separator:a52de2652e2c335ef3c40269c745a6c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f9b121ad9186b0e7a636d4338f8f54a" id="r_a9f9b121ad9186b0e7a636d4338f8f54a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a9f9b121ad9186b0e7a636d4338f8f54a">local_adjacent_particles</a></td></tr>
+<tr class="separator:a9f9b121ad9186b0e7a636d4338f8f54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a062f179d445a5b65159a4c16090b24e3" id="r_a062f179d445a5b65159a4c16090b24e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a062f179d445a5b65159a4c16090b24e3">ghost_adjacent_particles</a></td></tr>
+<tr class="separator:a062f179d445a5b65159a4c16090b24e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab901ce52defcac6a3786d0ba819b2260" id="r_ab901ce52defcac6a3786d0ba819b2260"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#ab901ce52defcac6a3786d0ba819b2260">local_local_periodic_adjacent_particles</a></td></tr>
+<tr class="separator:ab901ce52defcac6a3786d0ba819b2260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ab385091667664ae0a89d1fe10b2ccf" id="r_a1ab385091667664ae0a89d1fe10b2ccf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a1ab385091667664ae0a89d1fe10b2ccf">local_ghost_periodic_adjacent_particles</a></td></tr>
+<tr class="separator:a1ab385091667664ae0a89d1fe10b2ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af922486c20e92e3bbbffb600f7d30483" id="r_af922486c20e92e3bbbffb600f7d30483"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#af922486c20e92e3bbbffb600f7d30483">ghost_local_periodic_adjacent_particles</a></td></tr>
+<tr class="separator:af922486c20e92e3bbbffb600f7d30483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45ee4121fc1cd1ce952091d2cf0e48da" id="r_a45ee4121fc1cd1ce952091d2cf0e48da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDEM_1_1dem__data__structures.html">DEM::dem_data_structures</a>&lt; dim &gt;::cell_vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#a45ee4121fc1cd1ce952091d2cf0e48da">periodic_cells_container</a></td></tr>
+<tr class="separator:a45ee4121fc1cd1ce952091d2cf0e48da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa816f28174fa6e91066bd00d1a0cd540" id="r_aa816f28174fa6e91066bd00d1a0cd540"><td class="memItemLeft" align="right" valign="top">Tensor&lt; 1, dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDEMContactManager.html#aa816f28174fa6e91066bd00d1a0cd540">periodic_offset</a> = Tensor&lt;1, dim&gt;()</td></tr>
+<tr class="separator:aa816f28174fa6e91066bd00d1a0cd540"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;int dim&gt;<br />
-class DEMContactManager&lt; dim &gt;</div><p>Manage the numerous of contact detection search operations in the <a class="el" href="namespaceDEM.html" title="This namespace defines all the data containers and required operations on these containers for the DE...">DEM</a>. </p>
-<p>This class mostly calls proper functions in regards the type of contacts for the contact detection and updates of data containers. </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;int dim, typename PropertiesIndex&gt;<br />
+class DEMContactManager&lt; dim, PropertiesIndex &gt;</div><p>Manage the numerous of contact detection search operations in the <a class="el" href="namespaceDEM.html" title="This namespace defines all the data containers and required operations on these containers for the DE...">DEM</a>. </p>
+<p>This class mostly calls proper functions in regards the type of contacts for the contact detection and updates of data containers.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">dim</td><td>An integer that denotes the number of spatial dimensions. </td></tr>
+    <tr><td class="paramname">PropertiesIndex</td><td>Index of the properties used within the ParticleHandler. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00034">34</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00037">37</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4ffac92c694e849e3ba521f93404cc52" name="a4ffac92c694e849e3ba521f93404cc52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ffac92c694e849e3ba521f93404cc52">&#9670;&#160;</a></span>execute_cell_neighbors_search()</h2>
+<a id="a5f51051c609b64ac39eaa02a65e4e870" name="a5f51051c609b64ac39eaa02a65e4e870"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f51051c609b64ac39eaa02a65e4e870">&#9670;&#160;</a></span>execute_cell_neighbors_search()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::execute_cell_neighbors_search </td>
+          <td class="memname">void <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::execute_cell_neighbors_search </td>
           <td>(</td>
           <td class="paramtype">const parallel::distributed::Triangulation&lt; dim &gt; &amp;&#160;</td>
           <td class="paramname"><em>triangulation</em>, </td>
@@ -248,16 +255,16 @@ template&lt;int dim&gt; </div>
 
 </div>
 </div>
-<a id="a2306e86d107360833796aaba1af13414" name="a2306e86d107360833796aaba1af13414"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2306e86d107360833796aaba1af13414">&#9670;&#160;</a></span>execute_particle_particle_broad_search()</h2>
+<a id="a1a31a151fd5ba3630abd432ffc385a5a" name="a1a31a151fd5ba3630abd432ffc385a5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a31a151fd5ba3630abd432ffc385a5a">&#9670;&#160;</a></span>execute_particle_particle_broad_search()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::execute_particle_particle_broad_search </td>
+          <td class="memname">void <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::execute_particle_particle_broad_search </td>
           <td>(</td>
           <td class="paramtype">dealii::Particles::ParticleHandler&lt; dim &gt; &amp;&#160;</td>
           <td class="paramname"><em>particle_handler</em>, </td>
@@ -265,7 +272,7 @@ template&lt;int dim&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classAdaptiveSparseContacts.html">AdaptiveSparseContacts</a>&lt; dim &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classAdaptiveSparseContacts.html">AdaptiveSparseContacts</a>&lt; dim, PropertiesIndex &gt; &amp;&#160;</td>
           <td class="paramname"><em>sparse_particle_contact_object</em>&#160;</td>
         </tr>
         <tr>
@@ -292,16 +299,16 @@ template&lt;int dim&gt; </div>
 
 </div>
 </div>
-<a id="a30508b976a6fd8b521ce55bb57dc614e" name="a30508b976a6fd8b521ce55bb57dc614e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30508b976a6fd8b521ce55bb57dc614e">&#9670;&#160;</a></span>execute_particle_particle_fine_search()</h2>
+<a id="ad7ea1ccc7dcba07d91a5a0d94c687f94" name="ad7ea1ccc7dcba07d91a5a0d94c687f94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7ea1ccc7dcba07d91a5a0d94c687f94">&#9670;&#160;</a></span>execute_particle_particle_fine_search()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::execute_particle_particle_fine_search </td>
+          <td class="memname">void <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::execute_particle_particle_fine_search </td>
           <td>(</td>
           <td class="paramtype">const double&#160;</td>
           <td class="paramname"><em>neighborhood_threshold</em></td><td>)</td>
@@ -325,16 +332,16 @@ template&lt;int dim&gt; </div>
 
 </div>
 </div>
-<a id="a40afc913290019f98f681c2442511ad7" name="a40afc913290019f98f681c2442511ad7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40afc913290019f98f681c2442511ad7">&#9670;&#160;</a></span>execute_particle_wall_broad_search()</h2>
+<a id="afacfcc238648120de34b58a664d1e3fd" name="afacfcc238648120de34b58a664d1e3fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afacfcc238648120de34b58a664d1e3fd">&#9670;&#160;</a></span>execute_particle_wall_broad_search()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::execute_particle_wall_broad_search </td>
+          <td class="memname">void <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::execute_particle_wall_broad_search </td>
           <td>(</td>
           <td class="paramtype">const Particles::ParticleHandler&lt; dim &gt; &amp;&#160;</td>
           <td class="paramname"><em>particle_handler</em>, </td>
@@ -366,7 +373,7 @@ template&lt;int dim&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classAdaptiveSparseContacts.html">AdaptiveSparseContacts</a>&lt; dim &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classAdaptiveSparseContacts.html">AdaptiveSparseContacts</a>&lt; dim, PropertiesIndex &gt; &amp;&#160;</td>
           <td class="paramname"><em>sparse_particle_contact_object</em>&#160;</td>
         </tr>
         <tr>
@@ -393,20 +400,20 @@ template&lt;int dim&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="dem__contact__manager_8cc_source.html#l00284">284</a> of file <a class="el" href="dem__contact__manager_8cc_source.html">dem_contact_manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="parameters__lagrangian_8h_source.html#l00343">Parameters::Lagrangian::FloatingWalls&lt; dim &gt;::floating_walls_number</a>, <a class="el" href="dem__action__manager_8cc_source.html#l00009">DEMActionManager::get_action_manager()</a>, <a class="el" href="find__boundary__cells__information_8h_source.html#l00073">BoundaryCellsInformation&lt; dim &gt;::get_boundary_cells_information()</a>, <a class="el" href="find__boundary__cells__information_8h_source.html#l00093">BoundaryCellsInformation&lt; dim &gt;::get_boundary_cells_with_floating_walls()</a>, <a class="el" href="find__boundary__cells__information_8h_source.html#l00085">BoundaryCellsInformation&lt; dim &gt;::get_boundary_cells_with_lines()</a>, and <a class="el" href="find__boundary__cells__information_8h_source.html#l00079">BoundaryCellsInformation&lt; dim &gt;::get_boundary_cells_with_points()</a>.</p>
+<p class="reference">References <a class="el" href="parameters__lagrangian_8h_source.html#l00346">Parameters::Lagrangian::FloatingWalls&lt; dim &gt;::floating_walls_number</a>, <a class="el" href="dem__action__manager_8cc_source.html#l00009">DEMActionManager::get_action_manager()</a>, <a class="el" href="find__boundary__cells__information_8h_source.html#l00073">BoundaryCellsInformation&lt; dim &gt;::get_boundary_cells_information()</a>, <a class="el" href="find__boundary__cells__information_8h_source.html#l00093">BoundaryCellsInformation&lt; dim &gt;::get_boundary_cells_with_floating_walls()</a>, <a class="el" href="find__boundary__cells__information_8h_source.html#l00085">BoundaryCellsInformation&lt; dim &gt;::get_boundary_cells_with_lines()</a>, and <a class="el" href="find__boundary__cells__information_8h_source.html#l00079">BoundaryCellsInformation&lt; dim &gt;::get_boundary_cells_with_points()</a>.</p>
 
 </div>
 </div>
-<a id="af9f1cce05ced72b9a7023f8f01e15b3f" name="af9f1cce05ced72b9a7023f8f01e15b3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9f1cce05ced72b9a7023f8f01e15b3f">&#9670;&#160;</a></span>execute_particle_wall_fine_search()</h2>
+<a id="a63acfff5b61c976f709fb2fa7e4f0030" name="a63acfff5b61c976f709fb2fa7e4f0030"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63acfff5b61c976f709fb2fa7e4f0030">&#9670;&#160;</a></span>execute_particle_wall_fine_search()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::execute_particle_wall_fine_search </td>
+          <td class="memname">void <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::execute_particle_wall_fine_search </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classParameters_1_1Lagrangian_1_1FloatingWalls.html">Parameters::Lagrangian::FloatingWalls</a>&lt; dim &gt; &amp;&#160;</td>
           <td class="paramname"><em>floating_walls</em>, </td>
@@ -444,23 +451,23 @@ template&lt;int dim&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="dem__contact__manager_8cc_source.html#l00434">434</a> of file <a class="el" href="dem__contact__manager_8cc_source.html">dem_contact_manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="parameters__lagrangian_8h_source.html#l00343">Parameters::Lagrangian::FloatingWalls&lt; dim &gt;::floating_walls_number</a>, and <a class="el" href="dem__action__manager_8cc_source.html#l00009">DEMActionManager::get_action_manager()</a>.</p>
+<p class="reference">References <a class="el" href="parameters__lagrangian_8h_source.html#l00346">Parameters::Lagrangian::FloatingWalls&lt; dim &gt;::floating_walls_number</a>, and <a class="el" href="dem__action__manager_8cc_source.html#l00009">DEMActionManager::get_action_manager()</a>.</p>
 
 </div>
 </div>
-<a id="ad56961e8b8b743276af92f49369bc828" name="ad56961e8b8b743276af92f49369bc828"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad56961e8b8b743276af92f49369bc828">&#9670;&#160;</a></span>get_ghost_adjacent_particles()</h2>
+<a id="a0c0ccc235942a495bf719336437e26ed" name="a0c0ccc235942a495bf719336437e26ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c0ccc235942a495bf719336437e26ed">&#9670;&#160;</a></span>get_ghost_adjacent_particles()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::get_ghost_adjacent_particles </td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::get_ghost_adjacent_particles </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -475,25 +482,25 @@ template&lt;int dim&gt; </div>
 
 <p>Return the local-ghost particle contact container. </p>
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00264">264</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00269">269</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
-<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00377">DEMContactManager&lt; dim &gt;::ghost_adjacent_particles</a>.</p>
+<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00382">DEMContactManager&lt; dim, PropertiesIndex &gt;::ghost_adjacent_particles</a>.</p>
 
 </div>
 </div>
-<a id="a213203d54a4cd5c7d73195bf1980a73e" name="a213203d54a4cd5c7d73195bf1980a73e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a213203d54a4cd5c7d73195bf1980a73e">&#9670;&#160;</a></span>get_ghost_contact_pair_candidates()</h2>
+<a id="af10473952e6883736a7ae85796613c1d" name="af10473952e6883736a7ae85796613c1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af10473952e6883736a7ae85796613c1d">&#9670;&#160;</a></span>get_ghost_contact_pair_candidates()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_particle_candidates &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::get_ghost_contact_pair_candidates </td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_particle_candidates &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::get_ghost_contact_pair_candidates </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -508,25 +515,25 @@ template&lt;int dim&gt; </div>
 
 <p>Return the ghost particle-particle contact candidates. </p>
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00309">309</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00314">314</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
-<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00338">DEMContactManager&lt; dim &gt;::ghost_contact_pair_candidates</a>.</p>
+<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00343">DEMContactManager&lt; dim, PropertiesIndex &gt;::ghost_contact_pair_candidates</a>.</p>
 
 </div>
 </div>
-<a id="a677385f62dc0ac976e62378756d5bba8" name="a677385f62dc0ac976e62378756d5bba8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a677385f62dc0ac976e62378756d5bba8">&#9670;&#160;</a></span>get_ghost_local_periodic_adjacent_particles()</h2>
+<a id="a17ec72c7f37d8d2f7a49f0b0c1881879" name="a17ec72c7f37d8d2f7a49f0b0c1881879"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17ec72c7f37d8d2f7a49f0b0c1881879">&#9670;&#160;</a></span>get_ghost_local_periodic_adjacent_particles()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::get_ghost_local_periodic_adjacent_particles </td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::get_ghost_local_periodic_adjacent_particles </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -541,25 +548,25 @@ template&lt;int dim&gt; </div>
 
 <p>Return the ghost-local periodic particle contact container. </p>
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00291">291</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00296">296</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
-<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00383">DEMContactManager&lt; dim &gt;::ghost_local_periodic_adjacent_particles</a>.</p>
+<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00388">DEMContactManager&lt; dim, PropertiesIndex &gt;::ghost_local_periodic_adjacent_particles</a>.</p>
 
 </div>
 </div>
-<a id="a1a7a56e605c51baabe27e392d9e44e74" name="a1a7a56e605c51baabe27e392d9e44e74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a7a56e605c51baabe27e392d9e44e74">&#9670;&#160;</a></span>get_local_adjacent_particles()</h2>
+<a id="a5477e50c4382234a46a68447a9eb76cf" name="a5477e50c4382234a46a68447a9eb76cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5477e50c4382234a46a68447a9eb76cf">&#9670;&#160;</a></span>get_local_adjacent_particles()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::get_local_adjacent_particles </td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::get_local_adjacent_particles </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -574,25 +581,25 @@ template&lt;int dim&gt; </div>
 
 <p>Return the local-local particle contact container. </p>
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00255">255</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00260">260</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
-<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00375">DEMContactManager&lt; dim &gt;::local_adjacent_particles</a>.</p>
+<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00380">DEMContactManager&lt; dim, PropertiesIndex &gt;::local_adjacent_particles</a>.</p>
 
 </div>
 </div>
-<a id="a55af3e423074e6ddab8d6df85b8234b4" name="a55af3e423074e6ddab8d6df85b8234b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55af3e423074e6ddab8d6df85b8234b4">&#9670;&#160;</a></span>get_local_contact_pair_candidates()</h2>
+<a id="a0ecda7fdd82433affc0ffe8144e2c91c" name="a0ecda7fdd82433affc0ffe8144e2c91c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ecda7fdd82433affc0ffe8144e2c91c">&#9670;&#160;</a></span>get_local_contact_pair_candidates()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_particle_candidates &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::get_local_contact_pair_candidates </td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::particle_particle_candidates &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::get_local_contact_pair_candidates </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -607,25 +614,25 @@ template&lt;int dim&gt; </div>
 
 <p>Return the local particle-particle contact candidates. </p>
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00300">300</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00305">305</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
-<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00336">DEMContactManager&lt; dim &gt;::local_contact_pair_candidates</a>.</p>
+<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00341">DEMContactManager&lt; dim, PropertiesIndex &gt;::local_contact_pair_candidates</a>.</p>
 
 </div>
 </div>
-<a id="abf7a20cb20b53ca60f6c796d79a0fbe7" name="abf7a20cb20b53ca60f6c796d79a0fbe7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf7a20cb20b53ca60f6c796d79a0fbe7">&#9670;&#160;</a></span>get_local_ghost_periodic_adjacent_particles()</h2>
+<a id="a2ff93937299ede18c9fafa12a507d41d" name="a2ff93937299ede18c9fafa12a507d41d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ff93937299ede18c9fafa12a507d41d">&#9670;&#160;</a></span>get_local_ghost_periodic_adjacent_particles()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::get_local_ghost_periodic_adjacent_particles </td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::get_local_ghost_periodic_adjacent_particles </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -640,25 +647,25 @@ template&lt;int dim&gt; </div>
 
 <p>Return the local-ghost periodic particle contact container. </p>
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00282">282</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00287">287</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
-<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00381">DEMContactManager&lt; dim &gt;::local_ghost_periodic_adjacent_particles</a>.</p>
+<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00386">DEMContactManager&lt; dim, PropertiesIndex &gt;::local_ghost_periodic_adjacent_particles</a>.</p>
 
 </div>
 </div>
-<a id="a175cf159b71811c703cdfdca54277242" name="a175cf159b71811c703cdfdca54277242"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a175cf159b71811c703cdfdca54277242">&#9670;&#160;</a></span>get_local_local_periodic_adjacent_particles()</h2>
+<a id="af226186995d0122efc788347e4aafcbc" name="af226186995d0122efc788347e4aafcbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af226186995d0122efc788347e4aafcbc">&#9670;&#160;</a></span>get_local_local_periodic_adjacent_particles()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::get_local_local_periodic_adjacent_particles </td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;::adjacent_particle_pairs &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::get_local_local_periodic_adjacent_particles </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -673,25 +680,25 @@ template&lt;int dim&gt; </div>
 
 <p>Return the local-local periodic particle contact container. </p>
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00273">273</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00278">278</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
-<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00379">DEMContactManager&lt; dim &gt;::local_local_periodic_adjacent_particles</a>.</p>
+<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00384">DEMContactManager&lt; dim, PropertiesIndex &gt;::local_local_periodic_adjacent_particles</a>.</p>
 
 </div>
 </div>
-<a id="a5b12f5a804d8646cda306fe0299f89ae" name="a5b12f5a804d8646cda306fe0299f89ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b12f5a804d8646cda306fe0299f89ae">&#9670;&#160;</a></span>get_particle_floating_mesh_in_contact()</h2>
+<a id="a1bdf1e4d69ae8445d52a02db6f264955" name="a1bdf1e4d69ae8445d52a02db6f264955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bdf1e4d69ae8445d52a02db6f264955">&#9670;&#160;</a></span>get_particle_floating_mesh_in_contact()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#a5383f45e3d6975b6819496a03123c126">::particle_floating_mesh_in_contact</a> &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::get_particle_floating_mesh_in_contact </td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#af99b00fb1dac018b21af6c8417b37c8b">::particle_floating_mesh_in_contact</a> &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::get_particle_floating_mesh_in_contact </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -706,25 +713,25 @@ template&lt;int dim&gt; </div>
 
 <p>Return the particle-floating mesh contact container. </p>
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00210">210</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00215">215</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
-<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00361">DEMContactManager&lt; dim &gt;::particle_floating_mesh_in_contact</a>.</p>
+<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00366">DEMContactManager&lt; dim, PropertiesIndex &gt;::particle_floating_mesh_in_contact</a>.</p>
 
 </div>
 </div>
-<a id="a8bab724d5e9a1e21d109cd951e37c2d8" name="a8bab724d5e9a1e21d109cd951e37c2d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8bab724d5e9a1e21d109cd951e37c2d8">&#9670;&#160;</a></span>get_particle_floating_wall_in_contact()</h2>
+<a id="aad63943c3472d192771a5f6395cfda25" name="aad63943c3472d192771a5f6395cfda25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad63943c3472d192771a5f6395cfda25">&#9670;&#160;</a></span>get_particle_floating_wall_in_contact()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#acf1765999582ae4f5e1d0f87dab3afe0">::particle_wall_in_contact</a> &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::get_particle_floating_wall_in_contact </td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#a2a2a0bfc12712080cfbba658127f6fb8">::particle_wall_in_contact</a> &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::get_particle_floating_wall_in_contact </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -739,25 +746,25 @@ template&lt;int dim&gt; </div>
 
 <p>Return the particle-floating wall contact container. </p>
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00219">219</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00224">224</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
-<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00363">DEMContactManager&lt; dim &gt;::particle_floating_wall_in_contact</a>.</p>
+<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00368">DEMContactManager&lt; dim, PropertiesIndex &gt;::particle_floating_wall_in_contact</a>.</p>
 
 </div>
 </div>
-<a id="afcb2565c8563a06e6fd7b92362c7f3a0" name="afcb2565c8563a06e6fd7b92362c7f3a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcb2565c8563a06e6fd7b92362c7f3a0">&#9670;&#160;</a></span>get_particle_lines_in_contact()</h2>
+<a id="a9bfe8dc96492e00b0472952a5e819f7a" name="a9bfe8dc96492e00b0472952a5e819f7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bfe8dc96492e00b0472952a5e819f7a">&#9670;&#160;</a></span>get_particle_lines_in_contact()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#a5e10751dbecde3b5affacd1fd5469d8f">::particle_line_candidates</a> &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::get_particle_lines_in_contact </td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#aa43e73ae1497867681848fd771dda1cd">::particle_line_candidates</a> &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::get_particle_lines_in_contact </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -772,25 +779,25 @@ template&lt;int dim&gt; </div>
 
 <p>Return the particle-line contact container. </p>
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00237">237</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00242">242</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
-<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00367">DEMContactManager&lt; dim &gt;::particle_lines_in_contact</a>.</p>
+<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00372">DEMContactManager&lt; dim, PropertiesIndex &gt;::particle_lines_in_contact</a>.</p>
 
 </div>
 </div>
-<a id="af9d7c600121585e5c9cba7cf3db41dd9" name="af9d7c600121585e5c9cba7cf3db41dd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9d7c600121585e5c9cba7cf3db41dd9">&#9670;&#160;</a></span>get_particle_points_in_contact()</h2>
+<a id="a550ce4913ceb8bf9f73a24c4bc0012bb" name="a550ce4913ceb8bf9f73a24c4bc0012bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a550ce4913ceb8bf9f73a24c4bc0012bb">&#9670;&#160;</a></span>get_particle_points_in_contact()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#aae1b6d988aaa1c929df0da3058c0a1e5">::particle_point_candidates</a> &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::get_particle_points_in_contact </td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#a431ee5c6b2acef1d744095e5d5dde9a0">::particle_point_candidates</a> &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::get_particle_points_in_contact </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -805,25 +812,25 @@ template&lt;int dim&gt; </div>
 
 <p>Return the particle-point contact container. </p>
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00246">246</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00251">251</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
-<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00369">DEMContactManager&lt; dim &gt;::particle_points_in_contact</a>.</p>
+<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00374">DEMContactManager&lt; dim, PropertiesIndex &gt;::particle_points_in_contact</a>.</p>
 
 </div>
 </div>
-<a id="a0a82a63a9631b21c4f0300551d269fe9" name="a0a82a63a9631b21c4f0300551d269fe9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a82a63a9631b21c4f0300551d269fe9">&#9670;&#160;</a></span>get_particle_wall_in_contact()</h2>
+<a id="ad5817400e32e593c39e2424f306fd5c8" name="ad5817400e32e593c39e2424f306fd5c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5817400e32e593c39e2424f306fd5c8">&#9670;&#160;</a></span>get_particle_wall_in_contact()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#acf1765999582ae4f5e1d0f87dab3afe0">::particle_wall_in_contact</a> &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::get_particle_wall_in_contact </td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt; dim &gt;<a class="el" href="classDEMContactManager.html#a2a2a0bfc12712080cfbba658127f6fb8">::particle_wall_in_contact</a> &amp; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::get_particle_wall_in_contact </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -838,25 +845,25 @@ template&lt;int dim&gt; </div>
 
 <p>Return the particle-wall contact container. </p>
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00228">228</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00233">233</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
-<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00365">DEMContactManager&lt; dim &gt;::particle_wall_in_contact</a>.</p>
+<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00370">DEMContactManager&lt; dim, PropertiesIndex &gt;::particle_wall_in_contact</a>.</p>
 
 </div>
 </div>
-<a id="a5aee76dc860f1f65a598adf6abce3b36" name="a5aee76dc860f1f65a598adf6abce3b36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5aee76dc860f1f65a598adf6abce3b36">&#9670;&#160;</a></span>set_periodic_offset()</h2>
+<a id="a2677a2aab2f79832003a5562953da696" name="a2677a2aab2f79832003a5562953da696"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2677a2aab2f79832003a5562953da696">&#9670;&#160;</a></span>set_periodic_offset()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::set_periodic_offset </td>
+          <td class="memname">void <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::set_periodic_offset </td>
           <td>(</td>
           <td class="paramtype">const Tensor&lt; 1, dim &gt; &amp;&#160;</td>
           <td class="paramname"><em>offset</em></td><td>)</td>
@@ -878,25 +885,25 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00201">201</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00206">206</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
-<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00389">DEMContactManager&lt; dim &gt;::periodic_offset</a>.</p>
+<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00394">DEMContactManager&lt; dim, PropertiesIndex &gt;::periodic_offset</a>.</p>
 
 </div>
 </div>
-<a id="a5d07ff0191f0a808bc141748bd16b09e" name="a5d07ff0191f0a808bc141748bd16b09e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d07ff0191f0a808bc141748bd16b09e">&#9670;&#160;</a></span>update_cell_neighbors()</h2>
+<a id="a68146a421b3913130fb364d21e84d534" name="a68146a421b3913130fb364d21e84d534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68146a421b3913130fb364d21e84d534">&#9670;&#160;</a></span>update_cell_neighbors()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::update_cell_neighbors </td>
+          <td class="memname">void <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::update_cell_neighbors </td>
           <td>(</td>
           <td class="paramtype">const parallel::distributed::Triangulation&lt; dim &gt; &amp;&#160;</td>
           <td class="paramname"><em>triangulation</em>, </td>
@@ -929,22 +936,22 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00069">69</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00072">72</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
-<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00332">DEMContactManager&lt; dim &gt;::cells_ghost_local_periodic_neighbor_list</a>, <a class="el" href="dem__contact__manager_8h_source.html#l00326">DEMContactManager&lt; dim &gt;::cells_ghost_neighbor_list</a>, <a class="el" href="dem__contact__manager_8h_source.html#l00330">DEMContactManager&lt; dim &gt;::cells_ghost_periodic_neighbor_list</a>, <a class="el" href="dem__contact__manager_8h_source.html#l00324">DEMContactManager&lt; dim &gt;::cells_local_neighbor_list</a>, <a class="el" href="dem__contact__manager_8h_source.html#l00328">DEMContactManager&lt; dim &gt;::cells_local_periodic_neighbor_list</a>, <a class="el" href="dem__contact__manager_8cc_source.html#l00011">DEMContactManager&lt; dim &gt;::execute_cell_neighbors_search()</a>, and <a class="el" href="dem__contact__manager_8h_source.html#l00322">DEMContactManager&lt; dim &gt;::total_neighbor_list</a>.</p>
+<p class="reference">References <a class="el" href="dem__contact__manager_8h_source.html#l00337">DEMContactManager&lt; dim, PropertiesIndex &gt;::cells_ghost_local_periodic_neighbor_list</a>, <a class="el" href="dem__contact__manager_8h_source.html#l00331">DEMContactManager&lt; dim, PropertiesIndex &gt;::cells_ghost_neighbor_list</a>, <a class="el" href="dem__contact__manager_8h_source.html#l00335">DEMContactManager&lt; dim, PropertiesIndex &gt;::cells_ghost_periodic_neighbor_list</a>, <a class="el" href="dem__contact__manager_8h_source.html#l00329">DEMContactManager&lt; dim, PropertiesIndex &gt;::cells_local_neighbor_list</a>, <a class="el" href="dem__contact__manager_8h_source.html#l00333">DEMContactManager&lt; dim, PropertiesIndex &gt;::cells_local_periodic_neighbor_list</a>, <a class="el" href="dem__contact__manager_8cc_source.html#l00011">DEMContactManager&lt; dim, PropertiesIndex &gt;::execute_cell_neighbors_search()</a>, and <a class="el" href="dem__contact__manager_8h_source.html#l00327">DEMContactManager&lt; dim, PropertiesIndex &gt;::total_neighbor_list</a>.</p>
 
 </div>
 </div>
-<a id="a633a6c9fccfeb2dbe693541f427e442d" name="a633a6c9fccfeb2dbe693541f427e442d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a633a6c9fccfeb2dbe693541f427e442d">&#9670;&#160;</a></span>update_contacts()</h2>
+<a id="a03a33ccbab1db07d26c105677f4b0741" name="a03a33ccbab1db07d26c105677f4b0741"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03a33ccbab1db07d26c105677f4b0741">&#9670;&#160;</a></span>update_contacts()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::update_contacts </td>
+          <td class="memname">void <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::update_contacts </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -957,20 +964,20 @@ template&lt;int dim&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="dem__contact__manager_8cc_source.html#l00044">44</a> of file <a class="el" href="dem__contact__manager_8cc_source.html">dem_contact_manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="dem__action__manager_8h_source.html#l00093">DEMActionManager::check_periodic_boundaries_enabled()</a>, <a class="el" href="dem__action__manager_8cc_source.html#l00009">DEMActionManager::get_action_manager()</a>, <a class="el" href="contact__type_8h_source.html#l00016">ghost_local_periodic_particle_particle</a>, <a class="el" href="contact__type_8h_source.html#l00013">ghost_particle_particle</a>, <a class="el" href="contact__type_8h_source.html#l00015">ghost_periodic_particle_particle</a>, <a class="el" href="contact__type_8h_source.html#l00012">local_particle_particle</a>, <a class="el" href="contact__type_8h_source.html#l00014">local_periodic_particle_particle</a>, <a class="el" href="contact__type_8h_source.html#l00019">particle_floating_mesh</a>, <a class="el" href="contact__type_8h_source.html#l00018">particle_floating_wall</a>, <a class="el" href="contact__type_8h_source.html#l00017">particle_wall</a>, and <a class="el" href="update__fine__search__candidates_8cc_source.html#l00014">update_fine_search_candidates()</a>.</p>
+<p class="reference">References <a class="el" href="contact__type_8h_source.html#l00012">local_particle_particle</a>, and <a class="el" href="update__fine__search__candidates_8cc_source.html#l00014">update_fine_search_candidates()</a>.</p>
 
 </div>
 </div>
-<a id="a1e72126fa05e497990926936e4240f6a" name="a1e72126fa05e497990926936e4240f6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e72126fa05e497990926936e4240f6a">&#9670;&#160;</a></span>update_local_particles_in_cells()</h2>
+<a id="aa28c060306742dbaad81a3ba7c874aaa" name="aa28c060306742dbaad81a3ba7c874aaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa28c060306742dbaad81a3ba7c874aaa">&#9670;&#160;</a></span>update_local_particles_in_cells()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::update_local_particles_in_cells </td>
+          <td class="memname">void <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::update_local_particles_in_cells </td>
           <td>(</td>
           <td class="paramtype">const Particles::ParticleHandler&lt; dim &gt; &amp;&#160;</td>
           <td class="paramname"><em>particle_handler</em></td><td>)</td>
@@ -989,24 +996,24 @@ template&lt;int dim&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="dem__contact__manager_8cc_source.html#l00139">139</a> of file <a class="el" href="dem__contact__manager_8cc_source.html">dem_contact_manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="dem__action__manager_8h_source.html#l00093">DEMActionManager::check_periodic_boundaries_enabled()</a>, <a class="el" href="dem__action__manager_8cc_source.html#l00009">DEMActionManager::get_action_manager()</a>, <a class="el" href="contact__type_8h_source.html#l00016">ghost_local_periodic_particle_particle</a>, <a class="el" href="contact__type_8h_source.html#l00013">ghost_particle_particle</a>, <a class="el" href="contact__type_8h_source.html#l00015">ghost_periodic_particle_particle</a>, <a class="el" href="contact__type_8h_source.html#l00012">local_particle_particle</a>, <a class="el" href="contact__type_8h_source.html#l00014">local_periodic_particle_particle</a>, <a class="el" href="contact__type_8h_source.html#l00019">particle_floating_mesh</a>, <a class="el" href="contact__type_8h_source.html#l00018">particle_floating_wall</a>, <a class="el" href="contact__type_8h_source.html#l00021">particle_line</a>, <a class="el" href="contact__type_8h_source.html#l00020">particle_point</a>, <a class="el" href="contact__type_8h_source.html#l00017">particle_wall</a>, and <a class="el" href="update__local__particle__containers_8cc_source.html#l00040">update_contact_container_iterators()</a>.</p>
+<p class="reference">References <a class="el" href="dem__action__manager_8h_source.html#l00093">DEMActionManager::check_periodic_boundaries_enabled()</a>, <a class="el" href="dem__action__manager_8cc_source.html#l00009">DEMActionManager::get_action_manager()</a>, <a class="el" href="contact__type_8h_source.html#l00013">ghost_particle_particle</a>, <a class="el" href="contact__type_8h_source.html#l00012">local_particle_particle</a>, and <a class="el" href="update__local__particle__containers_8cc_source.html#l00040">update_contact_container_iterators()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a06c81be88437a8bd21c4f16f6379b1a5" name="a06c81be88437a8bd21c4f16f6379b1a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06c81be88437a8bd21c4f16f6379b1a5">&#9670;&#160;</a></span>cells_ghost_local_periodic_neighbor_list</h2>
+<a id="a0645db1847089253bbeab912c717a6f3" name="a0645db1847089253bbeab912c717a6f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0645db1847089253bbeab912c717a6f3">&#9670;&#160;</a></span>cells_ghost_local_periodic_neighbor_list</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::cells_neighbor_list <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::cells_ghost_local_periodic_neighbor_list</td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::cells_neighbor_list <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::cells_ghost_local_periodic_neighbor_list</td>
         </tr>
       </table>
   </td>
@@ -1016,23 +1023,23 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00332">332</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00337">337</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
 </div>
 </div>
-<a id="a85333f4f36c57ba76a3cc998b20ca04d" name="a85333f4f36c57ba76a3cc998b20ca04d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85333f4f36c57ba76a3cc998b20ca04d">&#9670;&#160;</a></span>cells_ghost_neighbor_list</h2>
+<a id="aec6d0c2b4de296cb792403288d60425d" name="aec6d0c2b4de296cb792403288d60425d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec6d0c2b4de296cb792403288d60425d">&#9670;&#160;</a></span>cells_ghost_neighbor_list</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::cells_neighbor_list <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::cells_ghost_neighbor_list</td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::cells_neighbor_list <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::cells_ghost_neighbor_list</td>
         </tr>
       </table>
   </td>
@@ -1042,23 +1049,23 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00326">326</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00331">331</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
 </div>
 </div>
-<a id="afaddd411d40eecb8b7f4786a807ef193" name="afaddd411d40eecb8b7f4786a807ef193"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afaddd411d40eecb8b7f4786a807ef193">&#9670;&#160;</a></span>cells_ghost_periodic_neighbor_list</h2>
+<a id="ae20b1049b7cdd9dc240f7abd9690c231" name="ae20b1049b7cdd9dc240f7abd9690c231"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae20b1049b7cdd9dc240f7abd9690c231">&#9670;&#160;</a></span>cells_ghost_periodic_neighbor_list</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::cells_neighbor_list <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::cells_ghost_periodic_neighbor_list</td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::cells_neighbor_list <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::cells_ghost_periodic_neighbor_list</td>
         </tr>
       </table>
   </td>
@@ -1068,23 +1075,23 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00330">330</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00335">335</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
 </div>
 </div>
-<a id="ab00f458688f9955be35949e606ae7545" name="ab00f458688f9955be35949e606ae7545"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab00f458688f9955be35949e606ae7545">&#9670;&#160;</a></span>cells_local_neighbor_list</h2>
+<a id="ac694666a4df048c76de5171982b5ec3a" name="ac694666a4df048c76de5171982b5ec3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac694666a4df048c76de5171982b5ec3a">&#9670;&#160;</a></span>cells_local_neighbor_list</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::cells_neighbor_list <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::cells_local_neighbor_list</td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::cells_neighbor_list <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::cells_local_neighbor_list</td>
         </tr>
       </table>
   </td>
@@ -1094,23 +1101,23 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00324">324</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00329">329</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
 </div>
 </div>
-<a id="a0e3a309dc0b831a1faef62203fbc2618" name="a0e3a309dc0b831a1faef62203fbc2618"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e3a309dc0b831a1faef62203fbc2618">&#9670;&#160;</a></span>cells_local_periodic_neighbor_list</h2>
+<a id="a9690d57882b17c2a1500e71ff4f13dfb" name="a9690d57882b17c2a1500e71ff4f13dfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9690d57882b17c2a1500e71ff4f13dfb">&#9670;&#160;</a></span>cells_local_periodic_neighbor_list</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::cells_neighbor_list <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::cells_local_periodic_neighbor_list</td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::cells_neighbor_list <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::cells_local_periodic_neighbor_list</td>
         </tr>
       </table>
   </td>
@@ -1120,23 +1127,23 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00328">328</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00333">333</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
 </div>
 </div>
-<a id="a71897bee4c0f99d980cc33e74a8fbbfa" name="a71897bee4c0f99d980cc33e74a8fbbfa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71897bee4c0f99d980cc33e74a8fbbfa">&#9670;&#160;</a></span>ghost_adjacent_particles</h2>
+<a id="a062f179d445a5b65159a4c16090b24e3" name="a062f179d445a5b65159a4c16090b24e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a062f179d445a5b65159a4c16090b24e3">&#9670;&#160;</a></span>ghost_adjacent_particles</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::adjacent_particle_pairs <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::ghost_adjacent_particles</td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::adjacent_particle_pairs <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::ghost_adjacent_particles</td>
         </tr>
       </table>
   </td>
@@ -1146,23 +1153,23 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00377">377</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00382">382</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
 </div>
 </div>
-<a id="a104795c4dca62051bb561a7a0567d3e6" name="a104795c4dca62051bb561a7a0567d3e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a104795c4dca62051bb561a7a0567d3e6">&#9670;&#160;</a></span>ghost_contact_pair_candidates</h2>
+<a id="a0e9bb04cacf6f43f5ebf3828109639ab" name="a0e9bb04cacf6f43f5ebf3828109639ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e9bb04cacf6f43f5ebf3828109639ab">&#9670;&#160;</a></span>ghost_contact_pair_candidates</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_particle_candidates <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::ghost_contact_pair_candidates</td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_particle_candidates <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::ghost_contact_pair_candidates</td>
         </tr>
       </table>
   </td>
@@ -1172,23 +1179,23 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00338">338</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00343">343</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
 </div>
 </div>
-<a id="a6e5ab847647f0024b1aa05a06f187166" name="a6e5ab847647f0024b1aa05a06f187166"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e5ab847647f0024b1aa05a06f187166">&#9670;&#160;</a></span>ghost_contact_pair_periodic_candidates</h2>
+<a id="aa1f747ef226f4d5ebb9669e9a7910673" name="aa1f747ef226f4d5ebb9669e9a7910673"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1f747ef226f4d5ebb9669e9a7910673">&#9670;&#160;</a></span>ghost_contact_pair_periodic_candidates</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_particle_candidates <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::ghost_contact_pair_periodic_candidates</td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_particle_candidates <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::ghost_contact_pair_periodic_candidates</td>
         </tr>
       </table>
   </td>
@@ -1198,23 +1205,23 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00344">344</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00349">349</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
 </div>
 </div>
-<a id="a4f6ba35f9783f21b8ba8c94569270dc8" name="a4f6ba35f9783f21b8ba8c94569270dc8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f6ba35f9783f21b8ba8c94569270dc8">&#9670;&#160;</a></span>ghost_local_contact_pair_candidates</h2>
+<a id="afa21945b8228a4059e21ce12c9a4610d" name="afa21945b8228a4059e21ce12c9a4610d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa21945b8228a4059e21ce12c9a4610d">&#9670;&#160;</a></span>ghost_local_contact_pair_candidates</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_particle_candidates <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::ghost_local_contact_pair_candidates</td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_particle_candidates <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::ghost_local_contact_pair_candidates</td>
         </tr>
       </table>
   </td>
@@ -1224,23 +1231,23 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00340">340</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00345">345</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
 </div>
 </div>
-<a id="ab5fe89713bcacfd0d3c09815a02a7a3b" name="ab5fe89713bcacfd0d3c09815a02a7a3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5fe89713bcacfd0d3c09815a02a7a3b">&#9670;&#160;</a></span>ghost_local_contact_pair_periodic_candidates</h2>
+<a id="acb3987da2d6aa98420a9e0f2ef26c599" name="acb3987da2d6aa98420a9e0f2ef26c599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb3987da2d6aa98420a9e0f2ef26c599">&#9670;&#160;</a></span>ghost_local_contact_pair_periodic_candidates</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_particle_candidates <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::ghost_local_contact_pair_periodic_candidates</td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_particle_candidates <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::ghost_local_contact_pair_periodic_candidates</td>
         </tr>
       </table>
   </td>
@@ -1250,23 +1257,23 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00346">346</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00351">351</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
 </div>
 </div>
-<a id="ae40e03dde81bf0d5875b981b985cafde" name="ae40e03dde81bf0d5875b981b985cafde"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae40e03dde81bf0d5875b981b985cafde">&#9670;&#160;</a></span>ghost_local_periodic_adjacent_particles</h2>
+<a id="af922486c20e92e3bbbffb600f7d30483" name="af922486c20e92e3bbbffb600f7d30483"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af922486c20e92e3bbbffb600f7d30483">&#9670;&#160;</a></span>ghost_local_periodic_adjacent_particles</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::adjacent_particle_pairs <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::ghost_local_periodic_adjacent_particles</td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::adjacent_particle_pairs <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::ghost_local_periodic_adjacent_particles</td>
         </tr>
       </table>
   </td>
@@ -1276,23 +1283,23 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00383">383</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00388">388</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
 </div>
 </div>
-<a id="a29f327bcf2d8587e3811dc1e95017edb" name="a29f327bcf2d8587e3811dc1e95017edb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29f327bcf2d8587e3811dc1e95017edb">&#9670;&#160;</a></span>local_adjacent_particles</h2>
+<a id="a9f9b121ad9186b0e7a636d4338f8f54a" name="a9f9b121ad9186b0e7a636d4338f8f54a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f9b121ad9186b0e7a636d4338f8f54a">&#9670;&#160;</a></span>local_adjacent_particles</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::adjacent_particle_pairs <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::local_adjacent_particles</td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::adjacent_particle_pairs <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::local_adjacent_particles</td>
         </tr>
       </table>
   </td>
@@ -1302,23 +1309,23 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00375">375</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00380">380</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
 </div>
 </div>
-<a id="a94972cd84e62fe1347a5ddd540d330df" name="a94972cd84e62fe1347a5ddd540d330df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94972cd84e62fe1347a5ddd540d330df">&#9670;&#160;</a></span>local_contact_pair_candidates</h2>
+<a id="a163c92a97623ca276e537856297c0b36" name="a163c92a97623ca276e537856297c0b36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a163c92a97623ca276e537856297c0b36">&#9670;&#160;</a></span>local_contact_pair_candidates</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_particle_candidates <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::local_contact_pair_candidates</td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_particle_candidates <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::local_contact_pair_candidates</td>
         </tr>
       </table>
   </td>
@@ -1328,23 +1335,23 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00336">336</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00341">341</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
 </div>
 </div>
-<a id="a6448bf0169c0db7bbd1d9708a5a6c44e" name="a6448bf0169c0db7bbd1d9708a5a6c44e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6448bf0169c0db7bbd1d9708a5a6c44e">&#9670;&#160;</a></span>local_contact_pair_periodic_candidates</h2>
+<a id="a7c2ff0eeb5e68266876506fe458da43a" name="a7c2ff0eeb5e68266876506fe458da43a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c2ff0eeb5e68266876506fe458da43a">&#9670;&#160;</a></span>local_contact_pair_periodic_candidates</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_particle_candidates <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::local_contact_pair_periodic_candidates</td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_particle_candidates <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::local_contact_pair_periodic_candidates</td>
         </tr>
       </table>
   </td>
@@ -1354,361 +1361,23 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00342">342</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00347">347</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
 </div>
 </div>
-<a id="a0dd6158ab897f9b81e93926ed2ab6e2f" name="a0dd6158ab897f9b81e93926ed2ab6e2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0dd6158ab897f9b81e93926ed2ab6e2f">&#9670;&#160;</a></span>local_ghost_periodic_adjacent_particles</h2>
+<a id="a1ab385091667664ae0a89d1fe10b2ccf" name="a1ab385091667664ae0a89d1fe10b2ccf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ab385091667664ae0a89d1fe10b2ccf">&#9670;&#160;</a></span>local_ghost_periodic_adjacent_particles</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::adjacent_particle_pairs <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::local_ghost_periodic_adjacent_particles</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00381">381</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
-
-</div>
-</div>
-<a id="ae66057ba1e7535ffcd0e304fda58d0a4" name="ae66057ba1e7535ffcd0e304fda58d0a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae66057ba1e7535ffcd0e304fda58d0a4">&#9670;&#160;</a></span>local_local_periodic_adjacent_particles</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int dim&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::adjacent_particle_pairs <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::local_local_periodic_adjacent_particles</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00379">379</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
-
-</div>
-</div>
-<a id="a1725ebb594727ad64e8a15decd29b827" name="a1725ebb594727ad64e8a15decd29b827"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1725ebb594727ad64e8a15decd29b827">&#9670;&#160;</a></span>particle_container</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int dim&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_index_iterator_map <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::particle_container</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00317">317</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
-
-</div>
-</div>
-<a id="aa994740e8fa68486fe09a716c9d87d1d" name="aa994740e8fa68486fe09a716c9d87d1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa994740e8fa68486fe09a716c9d87d1d">&#9670;&#160;</a></span>particle_floating_mesh_candidates</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int dim&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_floating_mesh_candidates <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::particle_floating_mesh_candidates</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00348">348</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
-
-</div>
-</div>
-<a id="a5383f45e3d6975b6819496a03123c126" name="a5383f45e3d6975b6819496a03123c126"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5383f45e3d6975b6819496a03123c126">&#9670;&#160;</a></span>particle_floating_mesh_in_contact</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int dim&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_floating_mesh_in_contact <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::particle_floating_mesh_in_contact</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00361">361</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
-
-</div>
-</div>
-<a id="a170e7b52a60481364b7a36cc2c2f9009" name="a170e7b52a60481364b7a36cc2c2f9009"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a170e7b52a60481364b7a36cc2c2f9009">&#9670;&#160;</a></span>particle_floating_wall_candidates</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int dim&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_floating_wall_candidates <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::particle_floating_wall_candidates</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00350">350</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
-
-</div>
-</div>
-<a id="a7f51a297e47921605123543632c9bf33" name="a7f51a297e47921605123543632c9bf33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f51a297e47921605123543632c9bf33">&#9670;&#160;</a></span>particle_floating_wall_in_contact</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int dim&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;<a class="el" href="classDEMContactManager.html#acf1765999582ae4f5e1d0f87dab3afe0">::particle_wall_in_contact</a> <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::particle_floating_wall_in_contact</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00363">363</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
-
-</div>
-</div>
-<a id="a5e10751dbecde3b5affacd1fd5469d8f" name="a5e10751dbecde3b5affacd1fd5469d8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e10751dbecde3b5affacd1fd5469d8f">&#9670;&#160;</a></span>particle_line_candidates</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int dim&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_line_candidates <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::particle_line_candidates</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00354">354</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
-
-</div>
-</div>
-<a id="adc8ce2a4c1de67c3c528069b7bd59150" name="adc8ce2a4c1de67c3c528069b7bd59150"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc8ce2a4c1de67c3c528069b7bd59150">&#9670;&#160;</a></span>particle_lines_in_contact</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int dim&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;<a class="el" href="classDEMContactManager.html#a5e10751dbecde3b5affacd1fd5469d8f">::particle_line_candidates</a> <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::particle_lines_in_contact</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00367">367</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
-
-</div>
-</div>
-<a id="aae1b6d988aaa1c929df0da3058c0a1e5" name="aae1b6d988aaa1c929df0da3058c0a1e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae1b6d988aaa1c929df0da3058c0a1e5">&#9670;&#160;</a></span>particle_point_candidates</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int dim&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_point_candidates <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::particle_point_candidates</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00352">352</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
-
-</div>
-</div>
-<a id="ac5186e2fb21535e84f03cda62dfc537a" name="ac5186e2fb21535e84f03cda62dfc537a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5186e2fb21535e84f03cda62dfc537a">&#9670;&#160;</a></span>particle_points_in_contact</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int dim&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;<a class="el" href="classDEMContactManager.html#aae1b6d988aaa1c929df0da3058c0a1e5">::particle_point_candidates</a> <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::particle_points_in_contact</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00369">369</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
-
-</div>
-</div>
-<a id="a3edc60486a86ae53d28127632f71a2d2" name="a3edc60486a86ae53d28127632f71a2d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3edc60486a86ae53d28127632f71a2d2">&#9670;&#160;</a></span>particle_wall_candidates</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int dim&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_wall_candidates <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::particle_wall_candidates</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00356">356</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
-
-</div>
-</div>
-<a id="acf1765999582ae4f5e1d0f87dab3afe0" name="acf1765999582ae4f5e1d0f87dab3afe0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf1765999582ae4f5e1d0f87dab3afe0">&#9670;&#160;</a></span>particle_wall_in_contact</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int dim&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_wall_in_contact <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::particle_wall_in_contact</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00365">365</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
-
-</div>
-</div>
-<a id="aa56abf7b07d7d5f704de5c5cfd26c11e" name="aa56abf7b07d7d5f704de5c5cfd26c11e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa56abf7b07d7d5f704de5c5cfd26c11e">&#9670;&#160;</a></span>periodic_cells_container</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int dim&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">DEM::dem_data_structures</a>&lt;dim&gt;::cell_vector <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::periodic_cells_container</td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::adjacent_particle_pairs <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::local_ghost_periodic_adjacent_particles</td>
         </tr>
       </table>
   </td>
@@ -1722,19 +1391,19 @@ template&lt;int dim&gt; </div>
 
 </div>
 </div>
-<a id="af5cffa8a1b9b514526021949d46233ee" name="af5cffa8a1b9b514526021949d46233ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5cffa8a1b9b514526021949d46233ee">&#9670;&#160;</a></span>periodic_offset</h2>
+<a id="ab901ce52defcac6a3786d0ba819b2260" name="ab901ce52defcac6a3786d0ba819b2260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab901ce52defcac6a3786d0ba819b2260">&#9670;&#160;</a></span>local_local_periodic_adjacent_particles</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Tensor&lt;1, dim&gt; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::periodic_offset = Tensor&lt;1, dim&gt;()</td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::adjacent_particle_pairs <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::local_local_periodic_adjacent_particles</td>
         </tr>
       </table>
   </td>
@@ -1744,23 +1413,23 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00389">389</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00384">384</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
 </div>
 </div>
-<a id="afed95cd7c9fd28779c3329d743dd27d6" name="afed95cd7c9fd28779c3329d743dd27d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afed95cd7c9fd28779c3329d743dd27d6">&#9670;&#160;</a></span>total_neighbor_list</h2>
+<a id="a63de2152b68334eddf9eb5e2634ffbea" name="a63de2152b68334eddf9eb5e2634ffbea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63de2152b68334eddf9eb5e2634ffbea">&#9670;&#160;</a></span>particle_container</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim&gt; </div>
+template&lt;int dim, typename PropertiesIndex &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::cells_total_neighbor_list <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim &gt;::total_neighbor_list</td>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_index_iterator_map <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::particle_container</td>
         </tr>
       </table>
   </td>
@@ -1771,6 +1440,344 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00322">322</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+
+</div>
+</div>
+<a id="acc0e4df5dbb4ff04bf07a6f88876c14a" name="acc0e4df5dbb4ff04bf07a6f88876c14a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc0e4df5dbb4ff04bf07a6f88876c14a">&#9670;&#160;</a></span>particle_floating_mesh_candidates</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename PropertiesIndex &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_floating_mesh_candidates <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::particle_floating_mesh_candidates</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00353">353</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+
+</div>
+</div>
+<a id="af99b00fb1dac018b21af6c8417b37c8b" name="af99b00fb1dac018b21af6c8417b37c8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af99b00fb1dac018b21af6c8417b37c8b">&#9670;&#160;</a></span>particle_floating_mesh_in_contact</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename PropertiesIndex &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_floating_mesh_in_contact <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::particle_floating_mesh_in_contact</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00366">366</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+
+</div>
+</div>
+<a id="ae315958e02440efcf58e26f25f0a3d6b" name="ae315958e02440efcf58e26f25f0a3d6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae315958e02440efcf58e26f25f0a3d6b">&#9670;&#160;</a></span>particle_floating_wall_candidates</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename PropertiesIndex &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_floating_wall_candidates <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::particle_floating_wall_candidates</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00355">355</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+
+</div>
+</div>
+<a id="a6f00979ce64058c8a31b15b856971469" name="a6f00979ce64058c8a31b15b856971469"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f00979ce64058c8a31b15b856971469">&#9670;&#160;</a></span>particle_floating_wall_in_contact</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename PropertiesIndex &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;<a class="el" href="classDEMContactManager.html#a2a2a0bfc12712080cfbba658127f6fb8">::particle_wall_in_contact</a> <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::particle_floating_wall_in_contact</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00368">368</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+
+</div>
+</div>
+<a id="aa43e73ae1497867681848fd771dda1cd" name="aa43e73ae1497867681848fd771dda1cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa43e73ae1497867681848fd771dda1cd">&#9670;&#160;</a></span>particle_line_candidates</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename PropertiesIndex &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_line_candidates <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::particle_line_candidates</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00359">359</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+
+</div>
+</div>
+<a id="a218acc18dce1149c922594e1cd4ee49d" name="a218acc18dce1149c922594e1cd4ee49d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a218acc18dce1149c922594e1cd4ee49d">&#9670;&#160;</a></span>particle_lines_in_contact</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename PropertiesIndex &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;<a class="el" href="classDEMContactManager.html#aa43e73ae1497867681848fd771dda1cd">::particle_line_candidates</a> <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::particle_lines_in_contact</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00372">372</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+
+</div>
+</div>
+<a id="a431ee5c6b2acef1d744095e5d5dde9a0" name="a431ee5c6b2acef1d744095e5d5dde9a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a431ee5c6b2acef1d744095e5d5dde9a0">&#9670;&#160;</a></span>particle_point_candidates</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename PropertiesIndex &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_point_candidates <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::particle_point_candidates</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00357">357</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+
+</div>
+</div>
+<a id="a52de2652e2c335ef3c40269c745a6c33" name="a52de2652e2c335ef3c40269c745a6c33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52de2652e2c335ef3c40269c745a6c33">&#9670;&#160;</a></span>particle_points_in_contact</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename PropertiesIndex &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;<a class="el" href="classDEMContactManager.html#a431ee5c6b2acef1d744095e5d5dde9a0">::particle_point_candidates</a> <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::particle_points_in_contact</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00374">374</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+
+</div>
+</div>
+<a id="a3c9c8bb5aeb7712e6f391ed95c689d89" name="a3c9c8bb5aeb7712e6f391ed95c689d89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c9c8bb5aeb7712e6f391ed95c689d89">&#9670;&#160;</a></span>particle_wall_candidates</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename PropertiesIndex &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_wall_candidates <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::particle_wall_candidates</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00361">361</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+
+</div>
+</div>
+<a id="a2a2a0bfc12712080cfbba658127f6fb8" name="a2a2a0bfc12712080cfbba658127f6fb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a2a0bfc12712080cfbba658127f6fb8">&#9670;&#160;</a></span>particle_wall_in_contact</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename PropertiesIndex &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::particle_wall_in_contact <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::particle_wall_in_contact</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00370">370</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+
+</div>
+</div>
+<a id="a45ee4121fc1cd1ce952091d2cf0e48da" name="a45ee4121fc1cd1ce952091d2cf0e48da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45ee4121fc1cd1ce952091d2cf0e48da">&#9670;&#160;</a></span>periodic_cells_container</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename PropertiesIndex &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">DEM::dem_data_structures</a>&lt;dim&gt;::cell_vector <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::periodic_cells_container</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00391">391</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+
+</div>
+</div>
+<a id="aa816f28174fa6e91066bd00d1a0cd540" name="aa816f28174fa6e91066bd00d1a0cd540"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa816f28174fa6e91066bd00d1a0cd540">&#9670;&#160;</a></span>periodic_offset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename PropertiesIndex &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tensor&lt;1, dim&gt; <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::periodic_offset = Tensor&lt;1, dim&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00394">394</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
+
+</div>
+</div>
+<a id="a8dd7e7ad05c08cafa3f4f97b4418c434" name="a8dd7e7ad05c08cafa3f4f97b4418c434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dd7e7ad05c08cafa3f4f97b4418c434">&#9670;&#160;</a></span>total_neighbor_list</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename PropertiesIndex &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structDEM_1_1dem__data__structures.html">dem_data_structures</a>&lt;dim&gt;::cells_total_neighbor_list <a class="el" href="classDEMContactManager.html">DEMContactManager</a>&lt; dim, PropertiesIndex &gt;::total_neighbor_list</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="dem__contact__manager_8h_source.html#l00327">327</a> of file <a class="el" href="dem__contact__manager_8h_source.html">dem_contact_manager.h</a>.</p>
 
 </div>
 </div>

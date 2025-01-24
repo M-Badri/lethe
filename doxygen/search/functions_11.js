@@ -39,7 +39,7 @@ var searchData=
   ['remove_5fparticles_5fin_5fbox_36',['remove_particles_in_box',['../classInsertion.html#a8843f788eeac3ede326d7ee3138e031c',1,'Insertion']]],
   ['remove_5fsuperfluous_5fdata_37',['remove_superfluous_data',['../classIBParticle.html#a6f8122e0e1a3746c7cffd6951654c910',1,'IBParticle::remove_superfluous_data()'],['../classCompositeShape.html#a48be7f23c3dc3dfe11a9880bd9b25b18',1,'CompositeShape::remove_superfluous_data()'],['../classRBFShape.html#a02d165a5215eb4e8f45bbd82515551e1',1,'RBFShape::remove_superfluous_data()']]],
   ['report_5fparticle_5fstatistics_38',['report_particle_statistics',['../classCFDDEMSolver.html#aa5fa6cfecbeeaa157714025bd4193a10',1,'CFDDEMSolver']]],
-  ['report_5fstatistics_39',['report_statistics',['../classDEMSolver.html#af20b64f0bf9369e3dfcc95ded99f5cac',1,'DEMSolver']]],
+  ['report_5fstatistics_39',['report_statistics',['../classDEMSolver.html#aa0f2616de39e814fba0ab31cbba7fa2c',1,'DEMSolver']]],
   ['rescale_5fpressure_5fdofs_5fin_5fnewton_5fupdate_40',['rescale_pressure_dofs_in_newton_update',['../classNavierStokesBase.html#a3f9917c78ef75a806167db64cfd2227a',1,'NavierStokesBase']]],
   ['reset_41',['reset',['../classStabilizedMethodsTensorCopyData.html#a6d3c9dccbfe58e7340ef203b4a8868dc',1,'StabilizedMethodsTensorCopyData::reset()'],['../classStabilizedMethodsCopyData.html#a711a40facec1d655a1c20b4604da4c82',1,'StabilizedMethodsCopyData::reset()'],['../classCopyData.html#ad25c494872cbf4bccb3f7874686582c1',1,'CopyData::reset()']]],
   ['reset_5fdisplacement_5fmonitoring_42',['reset_displacement_monitoring',['../classSerialSolid.html#a641d4246069103564995b55b8d630de8',1,'SerialSolid']]],

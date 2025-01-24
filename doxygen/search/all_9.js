@@ -7,7 +7,7 @@ var searchData=
   ['hamaker_5fconstant_5fwall_4',['hamaker_constant_wall',['../structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#a4dcf8f0d84314a56c3c179f3ac12a4b0',1,'Parameters::Lagrangian::LagrangianPhysicalProperties']]],
   ['handle_5finterface_5fsharpening_5',['handle_interface_sharpening',['../classVolumeOfFluid.html#a3dfbdb32df5d6c5b214df48014442435',1,'VolumeOfFluid']]],
   ['harmonic_5fmean_6',['harmonic_mean',['../auxiliary__math__functions_8h.html#a8ff6bf628f52424c1bf0cfa6530779fe',1,'auxiliary_math_functions.h']]],
-  ['has_5fadvected_5fparticles_7',['has_advected_particles',['../classAdaptiveSparseContacts.html#af5773b508f63c3715f82e078a66b0017',1,'AdaptiveSparseContacts']]],
+  ['has_5fadvected_5fparticles_7',['has_advected_particles',['../classAdaptiveSparseContacts.html#a9afbf388ab6ec28110e04f3ad2496049',1,'AdaptiveSparseContacts']]],
   ['has_5fconvection_5fradiation_5fbc_8',['has_convection_radiation_bc',['../classBoundaryConditions_1_1HTBoundaryConditions.html#ae5959028ad9c8619ae382532073c0d69',1,'BoundaryConditions::HTBoundaryConditions']]],
   ['has_5fedge_5fconstrained_5findices_9',['has_edge_constrained_indices',['../classNavierStokesOperatorBase.html#a2855c16f9456cdfa7a847cddd2574e2c',1,'NavierStokesOperatorBase']]],
   ['has_5fperiodic_5fboundaries_10',['has_periodic_boundaries',['../classFluidDynamicsVANS.html#a4a63e1c827e7f8eba761bc4632d3d7d7',1,'FluidDynamicsVANS::has_periodic_boundaries'],['../classVoidFractionBase.html#aa67b344d3e69fdd87845757085d3f8dd',1,'VoidFractionBase::has_periodic_boundaries']]],

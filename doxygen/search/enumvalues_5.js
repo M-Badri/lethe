@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['fem_5fforce_5fx_0',['fem_force_x',['../namespaceDEM.html#ae6292a647794105882a3dcd6b8c941aca43afebfbb655ae91cbc6af475c510965',1,'DEM']]],
-  ['fem_5fforce_5fy_1',['fem_force_y',['../namespaceDEM.html#ae6292a647794105882a3dcd6b8c941acaca00c263e63d84db03e8e86bdb18f051',1,'DEM']]],
-  ['fem_5fforce_5fz_2',['fem_force_z',['../namespaceDEM.html#ae6292a647794105882a3dcd6b8c941aca0adc02078f4d6ac94e50d6876752b1ff',1,'DEM']]],
-  ['fem_5ftorque_5fx_3',['fem_torque_x',['../namespaceDEM.html#ae6292a647794105882a3dcd6b8c941aca402b46384e92c48fa81c13738e011228',1,'DEM']]],
-  ['fem_5ftorque_5fy_4',['fem_torque_y',['../namespaceDEM.html#ae6292a647794105882a3dcd6b8c941acacd96faf56e32e8c0478dbb74c1803048',1,'DEM']]],
-  ['fem_5ftorque_5fz_5',['fem_torque_z',['../namespaceDEM.html#ae6292a647794105882a3dcd6b8c941aca240ffaafb9f4edcc45b1a812124906ce',1,'DEM']]],
+  ['fem_5fforce_5fx_0',['fem_force_x',['../namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fa5eb09b7710337e3c52bdee099ccf708b',1,'DEM::CFDDEMProperties']]],
+  ['fem_5fforce_5fy_1',['fem_force_y',['../namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fa65159bc42f5e25a9bfa3004d59d2b8d1',1,'DEM::CFDDEMProperties']]],
+  ['fem_5fforce_5fz_2',['fem_force_z',['../namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2faa67326af83307298b6ce793ddb1724e4',1,'DEM::CFDDEMProperties']]],
+  ['fem_5ftorque_5fx_3',['fem_torque_x',['../namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fa0b120504b8591bd6814e4291c614e7ae',1,'DEM::CFDDEMProperties']]],
+  ['fem_5ftorque_5fy_4',['fem_torque_y',['../namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2faf5cd455a2868dda49123bf78e84fd05a',1,'DEM::CFDDEMProperties']]],
+  ['fem_5ftorque_5fz_5',['fem_torque_z',['../namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fa602b0e0a4adad5b2e0601326ae811dfb',1,'DEM::CFDDEMProperties']]],
   ['file_6',['file',['../structParameters_1_1Lagrangian_1_1InsertionInfo.html#a8935f71b97c7cce069b63a2e28949a4ba8c7dd922ad47494fc02c388e12c00eac',1,'Parameters::Lagrangian::InsertionInfo']]],
   ['fixed_5fwall_7',['fixed_wall',['../structParameters_1_1Lagrangian_1_1BCDEM.html#ac65d80d2721f9155291c2622d9261555a891f9e808d010b039f9d0aed411b7dee',1,'Parameters::Lagrangian::BCDEM']]],
   ['fluid0_8',['fluid0',['../namespaceParameters.html#a978815f8cf26f3c77304639e1786aec1a1e86df18a83727e4a5dc8dc2859a097c',1,'Parameters']]],

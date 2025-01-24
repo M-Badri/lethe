@@ -6,7 +6,7 @@ var searchData=
   ['dem_5fdata_5fstructures_3',['dem_data_structures',['../structDEM_1_1dem__data__structures.html',1,'DEM']]],
   ['demactionmanager_4',['DEMActionManager',['../classDEMActionManager.html',1,'']]],
   ['demcontactmanager_5',['DEMContactManager',['../classDEMContactManager.html',1,'']]],
-  ['demproperties_6',['DEMProperties',['../classDEM_1_1DEMProperties.html',1,'DEM']]],
+  ['demcontactmanager_3c_20dim_2c_20dem_3a_3acfddemproperties_3a_3apropertiesindex_20_3e_6',['DEMContactManager&lt; dim, DEM::CFDDEMProperties::PropertiesIndex &gt;',['../classDEMContactManager.html',1,'']]],
   ['demsolidobjects_7',['DEMSolidObjects',['../classParameters_1_1DEMSolidObjects.html',1,'Parameters']]],
   ['demsolver_8',['DEMSolver',['../classDEMSolver.html',1,'']]],
   ['demsolverparameters_9',['DEMSolverParameters',['../classDEMSolverParameters.html',1,'']]],
