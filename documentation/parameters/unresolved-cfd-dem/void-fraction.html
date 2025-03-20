@@ -241,6 +241,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-transient-flow-around-cylinder/2d-transient-flow-around-cylinder.html">Transient Flow around a Cylinder</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-naca0012-low-reynolds/2d-naca0012-low-reynolds.html">Flow around NACA0012 at Low Reynolds Number</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">Taylor-Couette Flow Using Nitsche Immersed Boundary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-sudden-expansion-flow/2d-sudden-expansion-flow.html">Sudden-Expansion Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">Flow around a Sphere</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-taylor-green-vortex/3d-taylor-green-vortex.html">Taylor-Green Vortex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-turbulent-taylor-couette/3d-turbulent-taylor-couette.html">Turbulent Taylor-Couette Flow</a></li>
@@ -264,6 +265,7 @@
 </ul>
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../examples/multiphysics/heat-transfer.html">Heat Transfer</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Heat Transfer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/cooling-fin/cooling-fin.html">Cooling Fin</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/rayleigh-benard-convection/rayleigh-benard-convection.html">Rayleigh-Bénard Convection</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/stefan-problem/stefan-problem.html">Stefan Problem: Melting of a Solid</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/warming-up-a-viscous-fluid/warming-up-a-viscous-fluid.html">Warming up a Viscous Fluid</a></li>
@@ -292,6 +294,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/small-scale-rotating-drum-postprocessing/small-scale-rotating-drum-postprocessing.html">Small Scale Rotating Drum Postprocessing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/rotating-drum/rotating-drum.html">Rotating Drum</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/rotation-of-box/rotation-of-box.html">Rotation of Box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/sandpile-formation/sandpile-formation.html">Sandpile Formation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/silo/silo.html">Silo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/rectangular-hopper/rectangular-hopper.html">Rectangular Hopper</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/granular-dam-break/granular-dam-break.html">Granular Dam-Break</a></li>
@@ -302,6 +305,7 @@
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/single-particle-sedimentation/single-particle-sedimentation.html">Single Particle Sedimentation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/cylindrical-packed-bed/cylindrical-packed-bed.html">Cylindrical Packed Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-fluidized-bed/gas-solid-fluidized-bed.html">Gas-Solid Fluidized Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-spouted-bed/gas-solid-spouted-bed.html">Gas-Solid Spouted Bed</a></li>
@@ -457,6 +461,8 @@ end
 set qcm sphere diameter          = 0
 set qcm sphere equal cell volume = false
 set particle refinement factor   = 0
+set quadrature rule              = gauss
+set n quadrature points          = 0
 </pre></div>
 </div>
 <ul class="simple">
@@ -465,6 +471,8 @@ set particle refinement factor   = 0
 <li><p>The <code class="docutils literal notranslate"><span class="pre">l2</span> <span class="pre">smoothing</span> <span class="pre">length</span></code> is a smoothing length used for smoothing the L2 projection of the void fraction to avoid sharp discontinuities which can lead to instabilities in the simulation.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">qcm</span> <span class="pre">sphere</span> <span class="pre">diameter</span></code> allows us to fix the diameter of all reference spheres in the simulation to a given value. If this option is used (a value other than 0 is specified), it overrides the default calculation of the size of the sphere and sets its diameter to the value specified.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">qcm</span> <span class="pre">sphere</span> <span class="pre">equal</span> <span class="pre">cell</span> <span class="pre">volume</span></code> determines whether or not we want to use a reference sphere with the same volume as the element in which it is located. If it is disabled, then each sphere will have a radius equal to the size of the element in which it is located. This parameter is important only when the <code class="docutils literal notranslate"><span class="pre">qcm</span> <span class="pre">sphere</span> <span class="pre">diameter</span></code> is not used or is set to 0.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">quadrature</span> <span class="pre">rule</span></code> is only required for the <code class="docutils literal notranslate"><span class="pre">qcm</span></code>. The parameter allows us to choose the quadrature rule for the calculation of the void fraction. Such quadrature rule dictates the position of the quadrature points in the void fraction calculation. Currently, the implemented quadrature rules are Gauss (<code class="docutils literal notranslate"><span class="pre">gauss</span></code>) and Gauss-Lobatto (<code class="docutils literal notranslate"><span class="pre">gauss-lobatto</span></code>). The default behavior is <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">quadrature</span> <span class="pre">rule</span> <span class="pre">=</span> <span class="pre">gauss</span></code>.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">quadrature</span> <span class="pre">points</span></code> is only required for the <code class="docutils literal notranslate"><span class="pre">qcm</span></code>. The parameter allows us to specify the number of quadrature points to be used in the void fraction calculation. If the number of quadrature points is not specified or it is set to <code class="docutils literal notranslate"><span class="pre">0</span></code>, the default value will be void_fraction_degree + 1 (in general 2) for the case of Gauss quadrature rule and void_fraction_degree+2 (in general 3) for the case of Gauss-Lobatto quadrature rule.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">particle</span> <span class="pre">refinement</span> <span class="pre">factor</span></code> is only required for the <code class="docutils literal notranslate"><span class="pre">spm</span></code>. It allows to determine the number of pseudo-particles that we want to divide our particle into. By default, it is set to 0 refinements, and results in no refinement of the original meshed particle (division into 7 particles in 3D). Every additional refinement results in a <span class="math notranslate nohighlight">\(2^{dim}\)</span> times more particles. The figure below shows how the number of pseudo-particles change with every refinement. Every cell in the particle mesh represents a pseudo-particle in the satellite point method.</p></li>
 </ul>
 <img alt="../../_images/refinement1.png" src="../../_images/refinement1.png" />

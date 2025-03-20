@@ -241,6 +241,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../examples/incompressible-flow/2d-transient-flow-around-cylinder/2d-transient-flow-around-cylinder.html">Transient Flow around a Cylinder</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/incompressible-flow/2d-naca0012-low-reynolds/2d-naca0012-low-reynolds.html">Flow around NACA0012 at Low Reynolds Number</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">Taylor-Couette Flow Using Nitsche Immersed Boundary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/incompressible-flow/2d-sudden-expansion-flow/2d-sudden-expansion-flow.html">Sudden-Expansion Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">Flow around a Sphere</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/incompressible-flow/3d-taylor-green-vortex/3d-taylor-green-vortex.html">Taylor-Green Vortex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/incompressible-flow/3d-turbulent-taylor-couette/3d-turbulent-taylor-couette.html">Turbulent Taylor-Couette Flow</a></li>
@@ -264,6 +265,7 @@
 </ul>
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../examples/multiphysics/heat-transfer.html">Heat Transfer</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Heat Transfer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../examples/multiphysics/cooling-fin/cooling-fin.html">Cooling Fin</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../examples/multiphysics/rayleigh-benard-convection/rayleigh-benard-convection.html">Rayleigh-Bénard Convection</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../examples/multiphysics/stefan-problem/stefan-problem.html">Stefan Problem: Melting of a Solid</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../examples/multiphysics/warming-up-a-viscous-fluid/warming-up-a-viscous-fluid.html">Warming up a Viscous Fluid</a></li>
@@ -292,6 +294,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../examples/dem/small-scale-rotating-drum-postprocessing/small-scale-rotating-drum-postprocessing.html">Small Scale Rotating Drum Postprocessing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/dem/rotating-drum/rotating-drum.html">Rotating Drum</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/dem/rotation-of-box/rotation-of-box.html">Rotation of Box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/dem/sandpile-formation/sandpile-formation.html">Sandpile Formation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/dem/silo/silo.html">Silo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/dem/rectangular-hopper/rectangular-hopper.html">Rectangular Hopper</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/dem/granular-dam-break/granular-dam-break.html">Granular Dam-Break</a></li>
@@ -302,6 +305,7 @@
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../examples/unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../examples/unresolved-cfd-dem/single-particle-sedimentation/single-particle-sedimentation.html">Single Particle Sedimentation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/unresolved-cfd-dem/cylindrical-packed-bed/cylindrical-packed-bed.html">Cylindrical Packed Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/unresolved-cfd-dem/gas-solid-fluidized-bed/gas-solid-fluidized-bed.html">Gas-Solid Fluidized Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/unresolved-cfd-dem/gas-solid-spouted-bed/gas-solid-spouted-bed.html">Gas-Solid Spouted Bed</a></li>
@@ -455,13 +459,9 @@
 <section id="installing-deal-ii-using-apt">
 <span id="install-deal-ii-apt"></span><h2>Installing deal.II using apt<a class="headerlink" href="#installing-deal-ii-using-apt" title="Link to this heading">#</a></h2>
 <p>This is done following <a class="reference external" href="https://www.dealii.org/download.html#:~:text=page%20for%20details.-,Linux%20distributions,-Arch%20Linux">this procedure</a>.</p>
-<p>In case you are using Ubuntu, you will need to <a class="reference external" href="https://launchpad.net/~ginggs/+archive/ubuntu/deal.ii-9.5.1-backports">update the backports</a>:</p>
+<p>In case you are using Ubuntu, you will need to <a class="reference external" href="https://launchpad.net/~ginggs/+archive/ubuntu/deal.ii-9.6.0-backports">update the backports</a>:</p>
 <div class="copy-button highlight-text notranslate"><div class="highlight"><pre><span></span>sudo add-apt-repository ppa:ginggs/deal.ii-9.6.0-backports
 sudo apt update
-</pre></div>
-</div>
-<p>A dependency required by Lethe, and that deal.II needs to be compiled with, is muParser:</p>
-<div class="copy-button highlight-text notranslate"><div class="highlight"><pre><span></span>sudo apt-get install libmuparser-dev
 </pre></div>
 </div>
 <p>To install deal.II, run:</p>
@@ -472,7 +472,7 @@ sudo apt update
 <div class="copy-button highlight-text notranslate"><div class="highlight"><pre><span></span>apt show libdeal.ii-dev
 </pre></div>
 </div>
-<p>This should output several information about the installed version. Everything worked as expected if <code class="docutils literal notranslate"><span class="pre">deal.ii-9.6.0</span></code> is output</p>
+<p>This should output several information about the installed version. Everything worked as expected if <code class="docutils literal notranslate"><span class="pre">deal.ii-9.6.0</span></code> is the output</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If the installed version is other than <code class="docutils literal notranslate"><span class="pre">deal.ii-9.6.0</span></code>, follow <a class="reference external" href="https://github.com/dealii/dealii/wiki/Getting-deal.II">this link</a>.</p>
@@ -494,10 +494,6 @@ PACKAGES=&quot;${PACKAGES} dealii&quot;
 </pre></div>
 </div>
 </div></blockquote>
-<p>A dependency required by Lethe, and that deal.II needs to be compiled with, is muParser:</p>
-<div class="copy-button highlight-text notranslate"><div class="highlight"><pre><span></span>sudo apt-get install libmuparser-dev
-</pre></div>
-</div>
 <p>Other packages can be disabled by simply commenting out the lines (adding a <code class="docutils literal notranslate"><span class="pre">#</span></code> at the beginning of the lines)</p>
 <p>To ensure that the Lethe test suite works, deal.II must be configured with p4est version 2.3.6, the current default candi version of p4est. Otherwise, application tests that include restart files will fail.</p>
 <p>From the candi folder, the installation of candi can be launched using:</p>
@@ -536,9 +532,14 @@ cd build
 </pre></div>
 </div>
 <p>Then you can compile:</p>
-<div class="copy-button highlight-text notranslate"><div class="highlight"><pre><span></span>make -j$numprocs
+<div class="copy-button highlight-text notranslate"><div class="highlight"><pre><span></span>make -j$numprocs install
 </pre></div>
 </div>
+<p>This will install lethe to the installation folder you provided in the previous step. You can now add the following lines to your <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code>:</p>
+<div class="copy-button highlight-text notranslate"><div class="highlight"><pre><span></span>export PATH=$PATH:/home/username/path/to/installation/bin:
+</pre></div>
+</div>
+<p>to add the Lethe executables to your path.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Hyper-threading will result in poor performance when running Lethe. Make sure that it is not turned on for your machine if you have more logical CPU(s) than the number of Core(s). To obtain this information, you can run the following command in a linux terminal:</p>
@@ -574,7 +575,7 @@ cd build
 cd build
 </pre></div>
 </div>
-<p>Depending on how you have installed p4est, Trilinos and METIS, you may need to specify the installation folder of the three libraries. You also need to ensure that muParser is installed.</p>
+<p>Depending on how you have installed p4est, Trilinos and METIS, you may need to specify the installation folder of the three libraries.</p>
 <div class="copy-button highlight-text notranslate"><div class="highlight"><pre><span></span>cmake ../dealii -DDEAL_II_WITH_MPI=ON -DDEAL_II_WITH_TRILINOS=ON -DTRILINOS_DIR=path/to/your/trilinos/installation -DDEAL_II_WITH_P4EST=ON -DP4EST_DIR=path/to/your/p4est/installation  -DDEAL_II_WITH_METIS=ON -DMETIS_DIR=path/to/your/metis/installation -DCMAKE_INSTALL_PREFIX=/path/to/desired/installation`
 </pre></div>
 </div>

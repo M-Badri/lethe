@@ -241,6 +241,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-transient-flow-around-cylinder/2d-transient-flow-around-cylinder.html">Transient Flow around a Cylinder</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-naca0012-low-reynolds/2d-naca0012-low-reynolds.html">Flow around NACA0012 at Low Reynolds Number</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">Taylor-Couette Flow Using Nitsche Immersed Boundary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-sudden-expansion-flow/2d-sudden-expansion-flow.html">Sudden-Expansion Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">Flow around a Sphere</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-taylor-green-vortex/3d-taylor-green-vortex.html">Taylor-Green Vortex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-turbulent-taylor-couette/3d-turbulent-taylor-couette.html">Turbulent Taylor-Couette Flow</a></li>
@@ -264,6 +265,7 @@
 </ul>
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../examples/multiphysics/heat-transfer.html">Heat Transfer</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Heat Transfer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/cooling-fin/cooling-fin.html">Cooling Fin</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/rayleigh-benard-convection/rayleigh-benard-convection.html">Rayleigh-Bénard Convection</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/stefan-problem/stefan-problem.html">Stefan Problem: Melting of a Solid</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/warming-up-a-viscous-fluid/warming-up-a-viscous-fluid.html">Warming up a Viscous Fluid</a></li>
@@ -292,6 +294,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/small-scale-rotating-drum-postprocessing/small-scale-rotating-drum-postprocessing.html">Small Scale Rotating Drum Postprocessing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/rotating-drum/rotating-drum.html">Rotating Drum</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/rotation-of-box/rotation-of-box.html">Rotation of Box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/sandpile-formation/sandpile-formation.html">Sandpile Formation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/silo/silo.html">Silo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/rectangular-hopper/rectangular-hopper.html">Rectangular Hopper</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/granular-dam-break/granular-dam-break.html">Granular Dam-Break</a></li>
@@ -302,6 +305,7 @@
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/single-particle-sedimentation/single-particle-sedimentation.html">Single Particle Sedimentation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/cylindrical-packed-bed/cylindrical-packed-bed.html">Cylindrical Packed Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-fluidized-bed/gas-solid-fluidized-bed.html">Gas-Solid Fluidized Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-spouted-bed/gas-solid-spouted-bed.html">Gas-Solid Spouted Bed</a></li>
@@ -467,6 +471,7 @@
     set restitution coefficient particles = 0.1
     set friction coefficient particles    = 0.1
     set rolling friction particles        = 0.1
+    set rolling viscous damping particles = 0.1
     set surface energy particles          = 0.0
     set Hamaker constant particles        = 4.e-19
 
@@ -478,6 +483,7 @@
   set restitution coefficient wall = 0.1
   set friction coefficient wall    = 0.1
   set rolling friction wall        = 0.1
+  set rolling viscous damping wall = 0.1
   set surface energy wall          = 0.0
   set Hamaker constant wall        = 4.e-19
 end
@@ -517,6 +523,7 @@ end
 <li><p>The <code class="docutils literal notranslate"><span class="pre">restitution</span> <span class="pre">coefficient</span> <span class="pre">particles</span></code> defines the restitution coefficient for particles in each type.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">friction</span> <span class="pre">coefficient</span> <span class="pre">particles</span></code> defines the friction coefficient for particles in each type.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">rolling</span> <span class="pre">friction</span> <span class="pre">particles</span></code> defines the rolling friction coefficient of particles for each type.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">rolling</span> <span class="pre">viscous</span> <span class="pre">damping</span> <span class="pre">particles`</span></code> defines the rolling viscous damping coefficient of the particles for the elasto-plastic spring-dashpot rolling friction model.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">surface</span> <span class="pre">energy</span> <span class="pre">particles</span></code> defines the surface energy of particles for each type. This parameter is used with the JKR and DMT force model.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">Hamaker</span> <span class="pre">constant</span> <span class="pre">particles</span></code> defines the Hamaker constant of particles for each type. This parameter is used with the DMT force model.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">young</span> <span class="pre">modulus</span> <span class="pre">wall</span></code> defines the Young’s modulus of the walls.</p></li>
@@ -524,6 +531,7 @@ end
 <li><p>The <code class="docutils literal notranslate"><span class="pre">restitution</span> <span class="pre">coefficient</span> <span class="pre">wall</span></code> defines the restitution coefficient of the walls.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">friction</span> <span class="pre">coefficient</span> <span class="pre">wall</span></code> defines the friction coefficient of the walls.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">rolling</span> <span class="pre">friction</span> <span class="pre">wall</span></code> defines the rolling friction coefficient of the walls.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">rolling</span> <span class="pre">viscous</span> <span class="pre">damping</span> <span class="pre">wall</span></code> defines the rolling viscous damping coefficient of the walls for the elasto-plastic spring-dashpot rolling friction model.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">surface</span> <span class="pre">energy</span> <span class="pre">wall</span></code> defines the surface energy of the walls. This parameter is used with the JKR and DMT force model.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">Hamaker</span> <span class="pre">constant</span> <span class="pre">wall</span></code> defines the Hamaker constant of the walls. This parameter is used with the DMT force model.</p></li>
 </ul>

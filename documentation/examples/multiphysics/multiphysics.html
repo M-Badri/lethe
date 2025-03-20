@@ -241,6 +241,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../incompressible-flow/2d-transient-flow-around-cylinder/2d-transient-flow-around-cylinder.html">Transient Flow around a Cylinder</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../incompressible-flow/2d-naca0012-low-reynolds/2d-naca0012-low-reynolds.html">Flow around NACA0012 at Low Reynolds Number</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">Taylor-Couette Flow Using Nitsche Immersed Boundary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../incompressible-flow/2d-sudden-expansion-flow/2d-sudden-expansion-flow.html">Sudden-Expansion Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">Flow around a Sphere</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../incompressible-flow/3d-taylor-green-vortex/3d-taylor-green-vortex.html">Taylor-Green Vortex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../incompressible-flow/3d-turbulent-taylor-couette/3d-turbulent-taylor-couette.html">Turbulent Taylor-Couette Flow</a></li>
@@ -264,6 +265,7 @@
 </ul>
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="heat-transfer.html">Heat Transfer</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Heat Transfer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="cooling-fin/cooling-fin.html">Cooling Fin</a></li>
 <li class="toctree-l4"><a class="reference internal" href="rayleigh-benard-convection/rayleigh-benard-convection.html">Rayleigh-Bénard Convection</a></li>
 <li class="toctree-l4"><a class="reference internal" href="stefan-problem/stefan-problem.html">Stefan Problem: Melting of a Solid</a></li>
 <li class="toctree-l4"><a class="reference internal" href="warming-up-a-viscous-fluid/warming-up-a-viscous-fluid.html">Warming up a Viscous Fluid</a></li>
@@ -292,6 +294,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../dem/small-scale-rotating-drum-postprocessing/small-scale-rotating-drum-postprocessing.html">Small Scale Rotating Drum Postprocessing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/rotating-drum/rotating-drum.html">Rotating Drum</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/rotation-of-box/rotation-of-box.html">Rotation of Box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dem/sandpile-formation/sandpile-formation.html">Sandpile Formation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/silo/silo.html">Silo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/rectangular-hopper/rectangular-hopper.html">Rectangular Hopper</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/granular-dam-break/granular-dam-break.html">Granular Dam-Break</a></li>
@@ -302,6 +305,7 @@
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../unresolved-cfd-dem/single-particle-sedimentation/single-particle-sedimentation.html">Single Particle Sedimentation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../unresolved-cfd-dem/cylindrical-packed-bed/cylindrical-packed-bed.html">Cylindrical Packed Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../unresolved-cfd-dem/gas-solid-fluidized-bed/gas-solid-fluidized-bed.html">Gas-Solid Fluidized Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../unresolved-cfd-dem/gas-solid-spouted-bed/gas-solid-spouted-bed.html">Gas-Solid Spouted Bed</a></li>
@@ -435,7 +439,7 @@
 <h1>Multiphysics<a class="headerlink" href="#multiphysics" title="Link to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="graphviz"><img src="../../_images/graphviz-843319efb393477db9b84e35692be8c10016b6e5.png" alt="digraph multiphysics_diagram {
+<div class="graphviz"><img src="../../_images/graphviz-c41e3d1213ef4e8a4cd485a7bba8bd11c5dbf7ec.png" alt="digraph multiphysics_diagram {
   graph [bgcolor=&quot;transparent&quot;, align=true, ranksep=1.5];
   node [fontname=Arial, fontsize=20, shape=box, fontcolor=royalblue, color=royalblue, height=1];
   edge [color=royalblue];
@@ -468,17 +472,19 @@
 
   multiphysics_2 [label=&quot;Heat Transfer&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/heat-transfer.html&quot;];
 
-  multiphysics_2_1 [label=&quot;Rayleigh-Bénard Convection&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/rayleigh-benard-convection/rayleigh-benard-convection.html&quot;];
+  multiphysics_2_1 [label=&quot;Rayleigh-Bénard Convection&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/cooling-fin/cooling-fin.html&quot;];
 
-  multiphysics_2_2 [label=&quot;Stefan Problem: Melting of a Solid&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/stefan-problem/stefan-problem.html&quot;];
+  multiphysics_2_2 [label=&quot;Rayleigh-Bénard Convection&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/rayleigh-benard-convection/rayleigh-benard-convection.html&quot;];
 
-  multiphysics_2_3 [label=&quot;Warming up a Viscous Fluid&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/warming-up-a-viscous-fluid/warming-up-a-viscous-fluid.html&quot;];
+  multiphysics_2_3 [label=&quot;Stefan Problem: Melting of a Solid&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/stefan-problem/stefan-problem.html&quot;];
 
-  multiphysics_2_4 [label=&quot;Melting Cavity&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/melting-cavity/melting-cavity.html&quot;];
+  multiphysics_2_4 [label=&quot;Warming up a Viscous Fluid&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/warming-up-a-viscous-fluid/warming-up-a-viscous-fluid.html&quot;];
 
-  multiphysics_2_5 [label=&quot;Static Irradiation of a Bare Plate&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/static-irradiation/static-irradiation.html&quot;];
+  multiphysics_2_5 [label=&quot;Melting Cavity&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/melting-cavity/melting-cavity.html&quot;];
 
-  multiphysics_2_6 [label=&quot;Concentric Heat Exchanger&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/concentric-heat-exchanger/concentric-heat-exchanger.html&quot;];
+  multiphysics_2_6 [label=&quot;Static Irradiation of a Bare Plate&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/static-irradiation/static-irradiation.html&quot;];
+
+  multiphysics_2_7 [label=&quot;Concentric Heat Exchanger&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/concentric-heat-exchanger/concentric-heat-exchanger.html&quot;];
 
   multiphysics_3 [label=&quot;Tracer&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/tracer.html&quot;];
 
@@ -486,11 +492,10 @@
 
   multiphysics_4 [label=&quot;CHNS&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/chns.html&quot;];
 
+  multiphysics_4_1 [label=&quot;Jurin's Law&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/jurins-law/jurins-law.html&quot;];
+
   multiphysics_4_2 [label=&quot;Shear Bubble Detachment&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/bubble-detachment-shear-flow/bubble-detachment-shear-flow.html&quot;];
 
-  multiphysics_4 [label=&quot;CHNS&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/chns.html&quot;];
-
-  multiphysics_4_1 [label=&quot;Jurin's Law&quot;, href=&quot;https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/jurins-law/jurins-law.html&quot;];
 
   multiphysics -&gt; multiphysics_1:w;
   multiphysics -&gt; multiphysics_2:w;
@@ -525,8 +530,8 @@
 <area shape="rect" id="node1" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/multiphysics.html" title="Multiphysics" alt="" coords="2,610,62,645"/>
 <area shape="rect" id="node2" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/vof.html" title="VOF" alt="" coords="133,219,161,254"/>
 <area shape="rect" id="node13" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/heat-transfer.html" title="Heat Transfer" alt="" coords="114,588,181,623"/>
-<area shape="rect" id="node20" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/tracer.html" title="Tracer" alt="" coords="130,697,165,732"/>
-<area shape="rect" id="node22" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/chns.html" title="CHNS" alt="" coords="130,784,165,819"/>
+<area shape="rect" id="node21" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/tracer.html" title="Tracer" alt="" coords="130,697,165,732"/>
+<area shape="rect" id="node23" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/chns.html" title="CHNS" alt="" coords="130,784,165,819"/>
 <area shape="rect" id="node3" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/dam-break/dam-break.html" title="Dam&#45;Break" alt="" coords="281,2,338,37"/>
 <area shape="rect" id="node4" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/rayleigh-taylor-instability/rayleigh-taylor-instability.html" title="Rayleigh&#45;Taylor Instability" alt="" coords="251,45,368,80"/>
 <area shape="rect" id="node5" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/static-bubble/static-bubble.html" title="Static Bubble" alt="" coords="277,89,342,124"/>
@@ -537,15 +542,16 @@
 <area shape="rect" id="node10" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/3d-dam-break/3d-dam-break.html" title="3D Dam&#45;Break with an Obstacle" alt="" coords="237,306,382,341"/>
 <area shape="rect" id="node11" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/water-injection-in-a-closed-cell/water-injection-in-a-closed-cell.html" title="Water Injection in a Closed Cell" alt="" coords="239,349,380,384"/>
 <area shape="rect" id="node12" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/air-bubble-compression/air-bubble-compression.html" title="Air Bubble Compression" alt="" coords="253,393,366,428"/>
-<area shape="rect" id="node14" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/rayleigh-benard-convection/rayleigh-benard-convection.html" title="Rayleigh&#45;Bénard Convection" alt="" coords="244,436,375,471"/>
-<area shape="rect" id="node15" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/stefan-problem/stefan-problem.html" title="Stefan Problem: Melting of a Solid" alt="" coords="233,480,386,515"/>
-<area shape="rect" id="node16" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/warming-up-a-viscous-fluid/warming-up-a-viscous-fluid.html" title="Warming up a Viscous Fluid" alt="" coords="246,523,373,558"/>
-<area shape="rect" id="node17" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/melting-cavity/melting-cavity.html" title="Melting Cavity" alt="" coords="275,567,343,601"/>
-<area shape="rect" id="node18" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/static-irradiation/static-irradiation.html" title="Static Irradiation of a Bare Plate" alt="" coords="237,610,381,645"/>
-<area shape="rect" id="node19" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/concentric-heat-exchanger/concentric-heat-exchanger.html" title="Concentric Heat Exchanger" alt="" coords="247,654,372,688"/>
-<area shape="rect" id="node21" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/tracer-in-static-mixer/tracer-in-static-mixer.html" title="Tracer in Static Mixer" alt="" coords="260,740,358,775"/>
-<area shape="rect" id="node23" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/bubble-detachment-shear-flow/bubble-detachment-shear-flow.html" title="Shear Bubble Detachment" alt="" coords="249,784,370,819"/>
-<area shape="rect" id="node24" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/jurins-law/jurins-law.html" title="Jurin&#39;s Law" alt="" coords="281,827,337,862"/>
+<area shape="rect" id="node14" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/cooling-fin/cooling-fin.html" title="Rayleigh&#45;Bénard Convection" alt="" coords="244,436,375,471"/>
+<area shape="rect" id="node15" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/rayleigh-benard-convection/rayleigh-benard-convection.html" title="Rayleigh&#45;Bénard Convection" alt="" coords="244,480,375,515"/>
+<area shape="rect" id="node16" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/stefan-problem/stefan-problem.html" title="Stefan Problem: Melting of a Solid" alt="" coords="233,523,386,558"/>
+<area shape="rect" id="node17" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/warming-up-a-viscous-fluid/warming-up-a-viscous-fluid.html" title="Warming up a Viscous Fluid" alt="" coords="246,567,373,601"/>
+<area shape="rect" id="node18" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/melting-cavity/melting-cavity.html" title="Melting Cavity" alt="" coords="275,610,343,645"/>
+<area shape="rect" id="node19" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/static-irradiation/static-irradiation.html" title="Static Irradiation of a Bare Plate" alt="" coords="237,654,381,688"/>
+<area shape="rect" id="node20" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/concentric-heat-exchanger/concentric-heat-exchanger.html" title="Concentric Heat Exchanger" alt="" coords="247,697,372,732"/>
+<area shape="rect" id="node22" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/tracer-in-static-mixer/tracer-in-static-mixer.html" title="Tracer in Static Mixer" alt="" coords="260,740,358,775"/>
+<area shape="rect" id="node24" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/jurins-law/jurins-law.html" title="Jurin&#39;s Law" alt="" coords="281,784,337,819"/>
+<area shape="rect" id="node25" href="https://chaos-polymtl.github.io/lethe/documentation/examples/multiphysics/bubble-detachment-shear-flow/bubble-detachment-shear-flow.html" title="Shear Bubble Detachment" alt="" coords="249,827,370,862"/>
 </map></section>
 
         </article>
