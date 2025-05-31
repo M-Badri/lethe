@@ -274,6 +274,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/melting-cavity/melting-cavity.html">Melting Cavity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/static-irradiation/static-irradiation.html">Static Irradiation of a Bare Plate</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/concentric-heat-exchanger/concentric-heat-exchanger.html">Concentric Heat Exchanger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/cylinder-cooling/cylinder-cooling.html">Cooling of a Cylinder</a></li>
 </ul>
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../examples/multiphysics/tracer.html">Tracer</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Tracer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -321,6 +322,7 @@
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../examples/sharp-immersed-boundary/resolved-cfd-dem.html">Resolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of Resolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/sharp-immersed-boundary/sedimentation-1-particle/sedimentation-1-particle.html">Sedimentation of One Particle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/sharp-immersed-boundary/sedimentation-64-particles/sedimentation-64-particles.html">Sedimentation of 64 Particles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/sharp-immersed-boundary/sedimentation-1-cuboid/sedimentation-1-cuboid.html">Sedimentation of One Cuboid Particle</a></li>
 </ul>
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../examples/sharp-immersed-boundary/incompressible-flow.html">Incompressible Flow</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle navigation of Incompressible Flow</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -473,6 +475,13 @@
 
       set center of rotation    = 0., 0., 0.
       set output solid object = true
+
+      # Choices are adiabatic|isothermal
+      set thermal boundary type = adiabatic
+      # If type = isothermal
+      subsection temperature
+        set Function expression = 0
+      end
     end
   end
 end
@@ -485,6 +494,8 @@ end
 <li><p>In the subsection <code class="docutils literal notranslate"><span class="pre">angular</span> <span class="pre">velocity</span></code>, we define the angular velocity function of the solid object.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">center</span> <span class="pre">of</span> <span class="pre">rotation</span></code> defines the center of rotation of the solid object (in the case of rotational motion) in the <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">z</span></code> directions. This center of rotation will move according to the <code class="docutils literal notranslate"><span class="pre">translational</span> <span class="pre">velocity</span></code> parameter.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">output</span> <span class="pre">solid</span> <span class="pre">object</span></code> defines if we want an output file to be generated for the solid object at every output time step.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">thermal</span> <span class="pre">boundary</span> <span class="pre">type</span></code> defines whether the solid object should be adiabatic or isothermal when launching a multiphysic DEM simulation.</p></li>
+<li><p>In the subsection <code class="docutils literal notranslate"><span class="pre">temperature</span></code>, we define the temperature of the solid object as a function of time. It is used only if the solid object is not adiabatic.</p></li>
 </ul>
 </section>
 

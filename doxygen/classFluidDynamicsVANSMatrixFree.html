@@ -154,6 +154,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a5ba8a119f37a6a01d4fedf4e615e94fc inherit pro_methods_classFluidDynamicsMatrixFree"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a571cf74e2c58273a8e3c1cb4aec0c65c inherit pro_methods_classFluidDynamicsMatrixFree" id="r_a571cf74e2c58273a8e3c1cb4aec0c65c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFluidDynamicsMatrixFree.html#a571cf74e2c58273a8e3c1cb4aec0c65c">update_solutions_for_multiphysics</a> () override</td></tr>
 <tr class="separator:a571cf74e2c58273a8e3c1cb4aec0c65c inherit pro_methods_classFluidDynamicsMatrixFree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31fc23aaea18937aa70ee30cb285c2b1 inherit pro_methods_classFluidDynamicsMatrixFree" id="r_a31fc23aaea18937aa70ee30cb285c2b1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFluidDynamicsMatrixFree.html#a31fc23aaea18937aa70ee30cb285c2b1">update_solutions_for_fluid_dynamics</a> () override</td></tr>
+<tr class="separator:a31fc23aaea18937aa70ee30cb285c2b1 inherit pro_methods_classFluidDynamicsMatrixFree"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c23480292be53839527718b82c5c508 inherit pro_methods_classFluidDynamicsMatrixFree" id="r_a9c23480292be53839527718b82c5c508"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFluidDynamicsMatrixFree.html#a9c23480292be53839527718b82c5c508">calculate_time_derivative_previous_solutions</a> ()</td></tr>
 <tr class="separator:a9c23480292be53839527718b82c5c508 inherit pro_methods_classFluidDynamicsMatrixFree"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a568a965e3a3f1522b15bc517730a64a6 inherit pro_methods_classFluidDynamicsMatrixFree" id="r_a568a965e3a3f1522b15bc517730a64a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFluidDynamicsMatrixFree.html#a568a965e3a3f1522b15bc517730a64a6">setup_preconditioner</a> () override</td></tr>
@@ -299,6 +301,10 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a8b4aafafb3e9fb7597f03e1b2180d01a inherit pro_attribs_classFluidDynamicsMatrixFree"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dafa12fe242eed650a907649f970d16 inherit pro_attribs_classFluidDynamicsMatrixFree" id="r_a6dafa12fe242eed650a907649f970d16"><td class="memItemLeft" align="right" valign="top">std::vector&lt; TrilinosWrappers::MPI::Vector &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFluidDynamicsMatrixFree.html#a6dafa12fe242eed650a907649f970d16">multiphysics_previous_solutions</a></td></tr>
 <tr class="separator:a6dafa12fe242eed650a907649f970d16 inherit pro_attribs_classFluidDynamicsMatrixFree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4888f08c9ddf50172643711b44ea8033 inherit pro_attribs_classFluidDynamicsMatrixFree" id="r_a4888f08c9ddf50172643711b44ea8033"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFluidDynamicsMatrixFree.html#aef1791a66a1816e85808ceffca8129c5">VectorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFluidDynamicsMatrixFree.html#a4888f08c9ddf50172643711b44ea8033">temperature_present_solution</a></td></tr>
+<tr class="separator:a4888f08c9ddf50172643711b44ea8033 inherit pro_attribs_classFluidDynamicsMatrixFree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fd53952f322381c723c4ec4ae05d0e9 inherit pro_attribs_classFluidDynamicsMatrixFree" id="r_a2fd53952f322381c723c4ec4ae05d0e9"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classPhysicalPropertiesManager.html">PhysicalPropertiesManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFluidDynamicsMatrixFree.html#a2fd53952f322381c723c4ec4ae05d0e9">physical_properties_manager</a></td></tr>
+<tr class="separator:a2fd53952f322381c723c4ec4ae05d0e9 inherit pro_attribs_classFluidDynamicsMatrixFree"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classNavierStokesBase"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classNavierStokesBase')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classNavierStokesBase.html">NavierStokesBase&lt; dim, LinearAlgebra::distributed::Vector&lt; double &gt;, IndexSet &gt;</a></td></tr>
 <tr class="memitem:a29a0b9e949fe037c3e7fc9d98b9764de inherit pro_attribs_classNavierStokesBase" id="r_a29a0b9e949fe037c3e7fc9d98b9764de"><td class="memItemLeft" align="right" valign="top">IndexSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesBase.html#a29a0b9e949fe037c3e7fc9d98b9764de">locally_owned_dofs</a></td></tr>
 <tr class="separator:a29a0b9e949fe037c3e7fc9d98b9764de inherit pro_attribs_classNavierStokesBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -356,6 +362,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a1733bf24b0ca53cd549f88e6b773c3a6 inherit pro_attribs_classNavierStokesBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a490b6390dbe8b3ad9b045f6127e5406e inherit pro_attribs_classNavierStokesBase" id="r_a490b6390dbe8b3ad9b045f6127e5406e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; Quadrature&lt; dim - 1 &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesBase.html#a490b6390dbe8b3ad9b045f6127e5406e">face_quadrature</a></td></tr>
 <tr class="separator:a490b6390dbe8b3ad9b045f6127e5406e inherit pro_attribs_classNavierStokesBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ea1d4eec56c10677df5908ba59e7de0 inherit pro_attribs_classNavierStokesBase" id="r_a2ea1d4eec56c10677df5908ba59e7de0"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; Mapping&lt; dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesBase.html#a2ea1d4eec56c10677df5908ba59e7de0">previous_mapping</a></td></tr>
+<tr class="separator:a2ea1d4eec56c10677df5908ba59e7de0 inherit pro_attribs_classNavierStokesBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc40827c7d61b7a25e4066d31a0a4274 inherit pro_attribs_classNavierStokesBase" id="r_acc40827c7d61b7a25e4066d31a0a4274"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="navier__stokes__assemblers_8h.html#a26641e967456860ca3880098d2769ce5">NavierStokesAssemblerBase</a>&lt; dim &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesBase.html#acc40827c7d61b7a25e4066d31a0a4274">assemblers</a></td></tr>
 <tr class="separator:acc40827c7d61b7a25e4066d31a0a4274 inherit pro_attribs_classNavierStokesBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accd6ec2d22ee6e6d789948d4ead4e681 inherit pro_attribs_classNavierStokesBase" id="r_accd6ec2d22ee6e6d789948d4ead4e681"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface</a>&lt; dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesBase.html#accd6ec2d22ee6e6d789948d4ead4e681">multiphysics</a></td></tr>
@@ -448,7 +456,7 @@ template&lt;int dim&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans__matrix__free_8cc_source.html#l00060">60</a> of file <a class="el" href="fluid__dynamics__vans__matrix__free_8cc_source.html">fluid_dynamics_vans_matrix_free.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="fluid__dynamics__vans__matrix__free_8h_source.html#l00145">FluidDynamicsVANSMatrixFree&lt; dim &gt;::cfd_dem_simulation_parameters</a>, <a class="el" href="fluid__dynamics__vans__matrix__free_8h_source.html#l00159">FluidDynamicsVANSMatrixFree&lt; dim &gt;::has_periodic_boundaries</a>, <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8ae6ffdec5e14fce371eb7ae99edebbbee">BoundaryConditions::periodic</a>, and <a class="el" href="fluid__dynamics__matrix__free_8h_source.html#l00542">FluidDynamicsMatrixFree&lt; dim &gt;::system_operator</a>.</p>
+<p class="reference">References <a class="el" href="fluid__dynamics__vans__matrix__free_8h_source.html#l00145">FluidDynamicsVANSMatrixFree&lt; dim &gt;::cfd_dem_simulation_parameters</a>, <a class="el" href="fluid__dynamics__vans__matrix__free_8h_source.html#l00159">FluidDynamicsVANSMatrixFree&lt; dim &gt;::has_periodic_boundaries</a>, <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8ae6ffdec5e14fce371eb7ae99edebbbee">BoundaryConditions::periodic</a>, and <a class="el" href="fluid__dynamics__matrix__free_8h_source.html#l00576">FluidDynamicsMatrixFree&lt; dim &gt;::system_operator</a>.</p>
 
 </div>
 </div>
@@ -515,7 +523,7 @@ template&lt;int dim&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans__matrix__free_8cc_source.html#l00117">117</a> of file <a class="el" href="fluid__dynamics__vans__matrix__free_8cc_source.html">fluid_dynamics_vans_matrix_free.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="navier__stokes__base_8cc_source.html#l00513">NavierStokesBase&lt; dim, LinearAlgebra::distributed::Vector&lt; double &gt;, IndexSet &gt;::finish_time_step()</a>.</p>
+<p class="reference">References <a class="el" href="navier__stokes__base_8cc_source.html#l00514">NavierStokesBase&lt; dim, LinearAlgebra::distributed::Vector&lt; double &gt;, IndexSet &gt;::finish_time_step()</a>.</p>
 
 </div>
 </div>
@@ -547,7 +555,7 @@ template&lt;int dim&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classFluidDynamicsMatrixFree.html#a0a5851a571798217680e13a127e074e5">FluidDynamicsMatrixFree&lt; dim &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans__matrix__free_8cc_source.html#l00243">243</a> of file <a class="el" href="fluid__dynamics__vans__matrix__free_8cc_source.html">fluid_dynamics_vans_matrix_free.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans__matrix__free_8cc_source.html#l00244">244</a> of file <a class="el" href="fluid__dynamics__vans__matrix__free_8cc_source.html">fluid_dynamics_vans_matrix_free.cc</a>.</p>
 
 </div>
 </div>
