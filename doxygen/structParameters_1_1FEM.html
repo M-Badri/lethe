@@ -126,11 +126,15 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a44257122ea767efddf5385f698591efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad455d960df990fb708a6e7a1d63cbc4a" id="r_ad455d960df990fb708a6e7a1d63cbc4a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParameters_1_1FEM.html#ad455d960df990fb708a6e7a1d63cbc4a">potential_cahn_hilliard_order</a></td></tr>
 <tr class="separator:ad455d960df990fb708a6e7a1d63cbc4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f1bb52821d2a0f932f44349a0db1251" id="r_a1f1bb52821d2a0f932f44349a0db1251"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParameters_1_1FEM.html#a1f1bb52821d2a0f932f44349a0db1251">enable_bubble_function_velocity</a></td></tr>
+<tr class="separator:a1f1bb52821d2a0f932f44349a0db1251"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcc97be9f143dbe3671f81f67bf266bf" id="r_afcc97be9f143dbe3671f81f67bf266bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParameters_1_1FEM.html#afcc97be9f143dbe3671f81f67bf266bf">enable_bubble_function_pressure</a></td></tr>
+<tr class="separator:afcc97be9f143dbe3671f81f67bf266bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="structParameters_1_1FEM.html" title="FEM - The finite element section controls the properties of the finite element method....">FEM</a> - The finite element section controls the properties of the finite element method. This section controls the order of polynomial integration and the number of quadrature points within the cells. </p>
 
-<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01079">1079</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01087">1087</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0f26120a2f4f8d08336584ba061864fc" name="a0f26120a2f4f8d08336584ba061864fc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0f26120a2f4f8d08336584ba061864fc">&#9670;&#160;</a></span>declare_parameters()</h2>
@@ -156,7 +160,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters_8cc_source.html#l01509">1509</a> of file <a class="el" href="parameters_8cc_source.html">parameters.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8cc_source.html#l01526">1526</a> of file <a class="el" href="parameters_8cc_source.html">parameters.cc</a>.</p>
 
 </div>
 </div>
@@ -176,13 +180,45 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters_8cc_source.html#l01564">1564</a> of file <a class="el" href="parameters_8cc_source.html">parameters.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8cc_source.html#l01591">1591</a> of file <a class="el" href="parameters_8cc_source.html">parameters.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="parameters_8h_source.html#l01106">phase_cahn_hilliard_order</a>, <a class="el" href="parameters_8h_source.html#l01107">potential_cahn_hilliard_order</a>, <a class="el" href="parameters_8h_source.html#l01085">pressure_order</a>, <a class="el" href="parameters_8h_source.html#l01091">temperature_order</a>, <a class="el" href="parameters_8h_source.html#l01094">tracer_order</a>, <a class="el" href="parameters_8h_source.html#l01097">tracer_uses_dg</a>, <a class="el" href="parameters_8h_source.html#l01082">velocity_order</a>, <a class="el" href="parameters_8h_source.html#l01100">VOF_order</a>, <a class="el" href="parameters_8h_source.html#l01103">VOF_uses_dg</a>, and <a class="el" href="parameters_8h_source.html#l01088">void_fraction_order</a>.</p>
+<p class="reference">References <a class="el" href="parameters_8h_source.html#l01119">enable_bubble_function_pressure</a>, <a class="el" href="parameters_8h_source.html#l01118">enable_bubble_function_velocity</a>, <a class="el" href="parameters_8h_source.html#l01114">phase_cahn_hilliard_order</a>, <a class="el" href="parameters_8h_source.html#l01115">potential_cahn_hilliard_order</a>, <a class="el" href="parameters_8h_source.html#l01093">pressure_order</a>, <a class="el" href="parameters_8h_source.html#l01099">temperature_order</a>, <a class="el" href="parameters_8h_source.html#l01102">tracer_order</a>, <a class="el" href="parameters_8h_source.html#l01105">tracer_uses_dg</a>, <a class="el" href="parameters_8h_source.html#l01090">velocity_order</a>, <a class="el" href="parameters_8h_source.html#l01108">VOF_order</a>, <a class="el" href="parameters_8h_source.html#l01111">VOF_uses_dg</a>, and <a class="el" href="parameters_8h_source.html#l01096">void_fraction_order</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="afcc97be9f143dbe3671f81f67bf266bf" name="afcc97be9f143dbe3671f81f67bf266bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcc97be9f143dbe3671f81f67bf266bf">&#9670;&#160;</a></span>enable_bubble_function_pressure</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Parameters::FEM::enable_bubble_function_pressure</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01119">1119</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+
+</div>
+</div>
+<a id="a1f1bb52821d2a0f932f44349a0db1251" name="a1f1bb52821d2a0f932f44349a0db1251"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f1bb52821d2a0f932f44349a0db1251">&#9670;&#160;</a></span>enable_bubble_function_velocity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Parameters::FEM::enable_bubble_function_velocity</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01118">1118</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+
+</div>
+</div>
 <a id="a44257122ea767efddf5385f698591efe" name="a44257122ea767efddf5385f698591efe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a44257122ea767efddf5385f698591efe">&#9670;&#160;</a></span>phase_cahn_hilliard_order</h2>
 
@@ -195,7 +231,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01106">1106</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01114">1114</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
 
 </div>
 </div>
@@ -211,7 +247,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01107">1107</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01115">1115</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
 
 </div>
 </div>
@@ -227,7 +263,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01085">1085</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01093">1093</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
 
 </div>
 </div>
@@ -243,7 +279,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01091">1091</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01099">1099</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
 
 </div>
 </div>
@@ -259,7 +295,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01094">1094</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01102">1102</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
 
 </div>
 </div>
@@ -275,7 +311,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01097">1097</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01105">1105</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
 
 </div>
 </div>
@@ -291,7 +327,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01082">1082</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01090">1090</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
 
 </div>
 </div>
@@ -307,7 +343,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01100">1100</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01108">1108</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
 
 </div>
 </div>
@@ -323,7 +359,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01103">1103</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01111">1111</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
 
 </div>
 </div>
@@ -339,7 +375,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01088">1088</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01096">1096</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
 
 </div>
 </div>

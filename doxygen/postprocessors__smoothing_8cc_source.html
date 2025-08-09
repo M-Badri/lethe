@@ -91,7 +91,7 @@ $(document).ready(function() { init_codefold(0); });
   <div class="headertitle"><div class="title">postprocessors_smoothing.cc</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="postprocessors__smoothing_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// SPDX-FileCopyrightText: Copyright (c) 2022-2024 The Lethe Authors</span></div>
+<a href="postprocessors__smoothing_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// SPDX-FileCopyrightText: Copyright (c) 2022-2025 The Lethe Authors</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;<a class="code" href="postprocessors__smoothing_8h.html">solvers/postprocessors_smoothing.h</a>&gt;</span></div>
@@ -106,7 +106,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  , dof_handler(triangulation)</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  , simulation_parameters(simulation_parameters)</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  , number_quadrature_points(number_quadrature_points)</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  , mpi_communicator(triangulation.get_communicator())</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  , mpi_communicator(triangulation.get_mpi_communicator())</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <a class="code hl_variable" href="classPostProcessorSmoothing.html#a954d749b0b1634e8aa02bfee98ac2713">mapping</a>       = std::make_shared&lt;MappingQ&lt;dim&gt;&gt;(1);</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <a class="code hl_variable" href="classPostProcessorSmoothing.html#a19394a56563bf065c3496ef06e02a647">system_matrix</a> = std::make_shared&lt;TrilinosWrappers::SparseMatrix&gt;();</div>
@@ -123,7 +123,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  locally_relevant_dofs = DoFTools::extract_locally_relevant_dofs(dof_handler);</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  constraints.clear();</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  constraints.reinit(locally_relevant_dofs);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  constraints.reinit(locally_owned_dofs, locally_relevant_dofs);</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  DoFTools::make_hanging_node_constraints(dof_handler, constraints);</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  constraints.close();</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
@@ -537,7 +537,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassSimulationParameters_html"><div class="ttname"><a href="classSimulationParameters.html">SimulationParameters</a></div><div class="ttdef"><b>Definition</b> <a href="simulation__parameters_8h_source.html#l00023">simulation_parameters.h:24</a></div></div>
 <div class="ttc" id="amultiphysics_8h_html_ae14bb720bc9a37edc36fb8d90df712c2a0bb34d58a3e8914bc47bf4b415f206c2"><div class="ttname"><a href="multiphysics_8h.html#ae14bb720bc9a37edc36fb8d90df712c2a0bb34d58a3e8914bc47bf4b415f206c2">fluid_dynamics</a></div><div class="ttdeci">@ fluid_dynamics</div><div class="ttdef"><b>Definition</b> <a href="multiphysics_8h_source.html#l00009">multiphysics.h:9</a></div></div>
 <div class="ttc" id="apostprocessors__smoothing_8h_html"><div class="ttname"><a href="postprocessors__smoothing_8h.html">postprocessors_smoothing.h</a></div></div>
-<div class="ttc" id="avector_8h_html_a4ea4005d75c88e60bee47d4e79a13a39"><div class="ttname"><a href="vector_8h.html#a4ea4005d75c88e60bee47d4e79a13a39">GlobalVectorType</a></div><div class="ttdeci">dealii::TrilinosWrappers::MPI::Vector GlobalVectorType</div><div class="ttdef"><b>Definition</b> <a href="vector_8h_source.html#l00015">vector.h:15</a></div></div>
+<div class="ttc" id="avector_8h_html_a4ea4005d75c88e60bee47d4e79a13a39"><div class="ttname"><a href="vector_8h.html#a4ea4005d75c88e60bee47d4e79a13a39">GlobalVectorType</a></div><div class="ttdeci">dealii::TrilinosWrappers::MPI::Vector GlobalVectorType</div><div class="ttdef"><b>Definition</b> <a href="vector_8h_source.html#l00017">vector.h:17</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

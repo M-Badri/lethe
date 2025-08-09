@@ -83,6 +83,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classVoidFractionBase-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">VoidFractionBase&lt; dim &gt; Class Template Reference</div></div>
@@ -137,6 +138,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:acfbe9af71df4d8d45072a68e55c40278"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e6dda728c57df255661980fd06e76be" id="r_a8e6dda728c57df255661980fd06e76be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="vector_8h.html#a4ea4005d75c88e60bee47d4e79a13a39">GlobalVectorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVoidFractionBase.html#a8e6dda728c57df255661980fd06e76be">void_fraction_locally_relevant</a></td></tr>
 <tr class="separator:a8e6dda728c57df255661980fd06e76be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5622e2ec9e0ee0f28a0f647f5c609077" id="r_a5622e2ec9e0ee0f28a0f647f5c609077"><td class="memItemLeft" align="right" valign="top">LinearAlgebra::distributed::Vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVoidFractionBase.html#a5622e2ec9e0ee0f28a0f647f5c609077">void_fraction_solution</a></td></tr>
+<tr class="separator:a5622e2ec9e0ee0f28a0f647f5c609077"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6137f2b5902e9ddb4f9007f642c2b984" id="r_a6137f2b5902e9ddb4f9007f642c2b984"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; FiniteElement&lt; dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVoidFractionBase.html#a6137f2b5902e9ddb4f9007f642c2b984">fe</a></td></tr>
 <tr class="separator:a6137f2b5902e9ddb4f9007f642c2b984"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3e3a5cc906c0cededb2c8018b5bd281" id="r_af3e3a5cc906c0cededb2c8018b5bd281"><td class="memItemLeft" align="right" valign="top">IndexSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVoidFractionBase.html#af3e3a5cc906c0cededb2c8018b5bd281">locally_owned_dofs</a></td></tr>
@@ -145,11 +148,11 @@ Public Attributes</h2></td></tr>
 <tr class="separator:aa41e7d4ae5c710bb757252d3e3a21585"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f18869162d1d52fa7fb89c07a835793" id="r_a9f18869162d1d52fa7fb89c07a835793"><td class="memItemLeft" align="right" valign="top">AffineConstraints&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVoidFractionBase.html#a9f18869162d1d52fa7fb89c07a835793">void_fraction_constraints</a></td></tr>
 <tr class="separator:a9f18869162d1d52fa7fb89c07a835793"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc494190a0649176dbc46f5eebe524d0" id="r_abc494190a0649176dbc46f5eebe524d0"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classParameters_1_1VoidFractionParameters.html">Parameters::VoidFractionParameters</a>&lt; dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVoidFractionBase.html#abc494190a0649176dbc46f5eebe524d0">void_fraction_parameters</a></td></tr>
-<tr class="separator:abc494190a0649176dbc46f5eebe524d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
+<tr class="memitem:a8e4ee34b55be037b752fcd68f83201b2" id="r_a8e4ee34b55be037b752fcd68f83201b2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVoidFractionBase.html#a8e4ee34b55be037b752fcd68f83201b2">calculate_qcm_radius_from_cell_measure</a> (const double cell_measure)</td></tr>
+<tr class="separator:a8e4ee34b55be037b752fcd68f83201b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace3922671cb420f734c10fabe99a291d" id="r_ace3922671cb420f734c10fabe99a291d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVoidFractionBase.html#ace3922671cb420f734c10fabe99a291d">calculate_void_fraction_function</a> (const double time)</td></tr>
 <tr class="separator:ace3922671cb420f734c10fabe99a291d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae74b975a28fdbf666f3ee25bbfd1eeb9" id="r_ae74b975a28fdbf666f3ee25bbfd1eeb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVoidFractionBase.html#ae74b975a28fdbf666f3ee25bbfd1eeb9">calculate_void_fraction_particle_centered_method</a> ()</td></tr>
@@ -163,10 +166,19 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:adf3e9fe3b2f706b5ba163f3fa25df49e" id="r_adf3e9fe3b2f706b5ba163f3fa25df49e"><td class="memItemLeft" align="right" valign="top">Tensor&lt; 1, dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVoidFractionBase.html#adf3e9fe3b2f706b5ba163f3fa25df49e">get_periodic_offset_distance</a> (unsigned int boundary_id) const</td></tr>
 <tr class="separator:adf3e9fe3b2f706b5ba163f3fa25df49e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a4ceba620c04395d68a98c38e25914ebb" id="r_a4ceba620c04395d68a98c38e25914ebb"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVoidFractionBase.html#a4ceba620c04395d68a98c38e25914ebb">radius_sphere_equivalent_volume</a> (const double volume)</td></tr>
+<tr class="separator:a4ceba620c04395d68a98c38e25914ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba83719588cb8e04f1d3fbc0092cf673" id="r_aba83719588cb8e04f1d3fbc0092cf673"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVoidFractionBase.html#aba83719588cb8e04f1d3fbc0092cf673">calculate_intersection_measure</a> (double r_particle, double r_sphere, double distance_between_spheres)</td></tr>
+<tr class="separator:aba83719588cb8e04f1d3fbc0092cf673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ae46f747f2f3f7a6543ae5a5645dc7142" id="r_ae46f747f2f3f7a6543ae5a5645dc7142"><td class="memItemLeft" align="right" valign="top">parallel::DistributedTriangulationBase&lt; dim &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVoidFractionBase.html#ae46f747f2f3f7a6543ae5a5645dc7142">triangulation</a></td></tr>
 <tr class="separator:ae46f747f2f3f7a6543ae5a5645dc7142"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc494190a0649176dbc46f5eebe524d0" id="r_abc494190a0649176dbc46f5eebe524d0"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classParameters_1_1VoidFractionParameters.html">Parameters::VoidFractionParameters</a>&lt; dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVoidFractionBase.html#abc494190a0649176dbc46f5eebe524d0">void_fraction_parameters</a></td></tr>
+<tr class="separator:abc494190a0649176dbc46f5eebe524d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a677d3a16953d0fdb118a890860faa46c" id="r_a677d3a16953d0fdb118a890860faa46c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structParameters_1_1LinearSolver.html">Parameters::LinearSolver</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVoidFractionBase.html#a677d3a16953d0fdb118a890860faa46c">linear_solver_parameters</a></td></tr>
 <tr class="separator:a677d3a16953d0fdb118a890860faa46c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1778898e13be6bb452c9469e7e4128cf" id="r_a1778898e13be6bb452c9469e7e4128cf"><td class="memItemLeft" align="right" valign="top">Particles::ParticleHandler&lt; dim &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVoidFractionBase.html#a1778898e13be6bb452c9469e7e4128cf">particle_handler</a></td></tr>
@@ -292,11 +304,111 @@ template&lt;int dim&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00112">112</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
 
-<p class="reference">References <a class="el" href="void__fraction_8h_source.html#l00248">VoidFractionBase&lt; dim &gt;::fe</a>, <a class="el" href="namespaceParameters.html#a3c3b515caf96bc00d4181a1085dfdb84a710a4950250286365cf841f765a790f1">Parameters::gauss</a>, <a class="el" href="namespaceParameters.html#a3c3b515caf96bc00d4181a1085dfdb84a9a8a1f8739356c62c5da46aef8be53fb">Parameters::gauss_lobatto</a>, <a class="el" href="void__fraction_8h_source.html#l00235">VoidFractionBase&lt; dim &gt;::mapping</a>, <a class="el" href="void__fraction_8h_source.html#l00238">VoidFractionBase&lt; dim &gt;::quadrature</a>, and <a class="el" href="void__fraction_8h_source.html#l00371">VoidFractionBase&lt; dim &gt;::void_fraction_parameters</a>.</p>
+<p class="reference">References <a class="el" href="void__fraction_8h_source.html#l00251">VoidFractionBase&lt; dim &gt;::fe</a>, <a class="el" href="namespaceParameters.html#a3c3b515caf96bc00d4181a1085dfdb84a710a4950250286365cf841f765a790f1">Parameters::gauss</a>, <a class="el" href="namespaceParameters.html#a3c3b515caf96bc00d4181a1085dfdb84a9a8a1f8739356c62c5da46aef8be53fb">Parameters::gauss_lobatto</a>, <a class="el" href="void__fraction_8h_source.html#l00235">VoidFractionBase&lt; dim &gt;::mapping</a>, <a class="el" href="void__fraction_8h_source.html#l00238">VoidFractionBase&lt; dim &gt;::quadrature</a>, and <a class="el" href="void__fraction_8h_source.html#l00459">VoidFractionBase&lt; dim &gt;::void_fraction_parameters</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aba83719588cb8e04f1d3fbc0092cf673" name="aba83719588cb8e04f1d3fbc0092cf673"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba83719588cb8e04f1d3fbc0092cf673">&#9670;&#160;</a></span>calculate_intersection_measure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double <a class="el" href="classVoidFractionBase.html">VoidFractionBase</a>&lt; dim &gt;::calculate_intersection_measure </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>r_particle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>r_sphere</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>distance_between_spheres</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the intersection measure (volume in 3D and area in 2D) between a particle and an hypersphere. This is used when calculating the intersection volume between the averaging sphere and a particle in QCM. The calculation inherently assumes that the radius of the averaging sphere is larger than that of the particle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r_particle</td><td>The radius of the particle </td></tr>
+    <tr><td class="paramname">r_sphere</td><td>The radius of the averaging sphere </td></tr>
+    <tr><td class="paramname">distance_between_spheres</td><td>The distance between the centers of the spheres</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The intersection volume (in 3D) or area (in 2d) </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00321">321</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+
+<p class="reference">References <a class="el" href="void__fraction_8h_source.html#l00042">particle_circle_intersection_2d()</a>, and <a class="el" href="void__fraction_8h_source.html#l00072">particle_sphere_intersection_3d()</a>.</p>
+
+</div>
+</div>
+<a id="a8e4ee34b55be037b752fcd68f83201b2" name="a8e4ee34b55be037b752fcd68f83201b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e4ee34b55be037b752fcd68f83201b2">&#9670;&#160;</a></span>calculate_qcm_radius_from_cell_measure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classVoidFractionBase.html">VoidFractionBase</a>&lt; dim &gt;::calculate_qcm_radius_from_cell_measure </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>cell_measure</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the radius of the QCM averaging sphere. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cell_measure</td><td>The measure of the cell in wich QCM is calculated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The QCM radius used in the calculations. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00291">291</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+
+<p class="reference">References <a class="el" href="void__fraction_8h_source.html#l00277">VoidFractionBase&lt; dim &gt;::radius_sphere_equivalent_volume()</a>, and <a class="el" href="void__fraction_8h_source.html#l00459">VoidFractionBase&lt; dim &gt;::void_fraction_parameters</a>.</p>
+
+</div>
+</div>
 <a id="a36c4824e019c986f73fba5db4da26641" name="a36c4824e019c986f73fba5db4da26641"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a36c4824e019c986f73fba5db4da26641">&#9670;&#160;</a></span>calculate_void_fraction()</h2>
 
@@ -323,7 +435,7 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8cc_source.html#l00155">155</a> of file <a class="el" href="void__fraction_8cc_source.html">void_fraction.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8cc_source.html#l00164">164</a> of file <a class="el" href="void__fraction_8cc_source.html">void_fraction.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="utilities_8h_source.html#l00423">announce_string()</a>, <a class="el" href="namespaceParameters.html#a59bccd897a552f378b3da967e9fa803fac1c425268e68385d1ab5074c17a94f14">Parameters::function</a>, <a class="el" href="namespaceParameters.html#a59bccd897a552f378b3da967e9fa803faec5c8103218f27aa6ecfd3f11e1a6b45">Parameters::pcm</a>, <a class="el" href="namespaceParameters.html#a59bccd897a552f378b3da967e9fa803fa68bf09624358e484ec7c4880e70a8ba1">Parameters::qcm</a>, and <a class="el" href="namespaceParameters.html#a59bccd897a552f378b3da967e9fa803fa51762626b4f785729159fd35eea74deb">Parameters::spm</a>.</p>
 
@@ -363,7 +475,9 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8cc_source.html#l00188">188</a> of file <a class="el" href="void__fraction_8cc_source.html">void_fraction.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8cc_source.html#l00197">197</a> of file <a class="el" href="void__fraction_8cc_source.html">void_fraction.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="vector_8h_source.html#l00054">convert_vector_trilinos_to_dealii()</a>.</p>
 
 </div>
 </div>
@@ -394,7 +508,7 @@ template&lt;int dim&gt; </div>
 
 <p>Calculate the void fraction using the particle centered method. </p>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8cc_source.html#l00208">208</a> of file <a class="el" href="void__fraction_8cc_source.html">void_fraction.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8cc_source.html#l00226">226</a> of file <a class="el" href="void__fraction_8cc_source.html">void_fraction.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="dem__properties_8h_source.html#l00061">DEM::CFDDEMProperties::dp</a>.</p>
 
@@ -427,9 +541,9 @@ template&lt;int dim&gt; </div>
 
 <p>Calculate the void fraction using the Quadrature-Centered Method (QCM). </p>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8cc_source.html#l00547">547</a> of file <a class="el" href="void__fraction_8cc_source.html">void_fraction.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8cc_source.html#l00565">565</a> of file <a class="el" href="void__fraction_8cc_source.html">void_fraction.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="dem__properties_8h_source.html#l00061">DEM::CFDDEMProperties::dp</a>, <a class="el" href="void__fraction_8h_source.html#l00042">particle_circle_intersection_2d()</a>, <a class="el" href="void__fraction_8h_source.html#l00072">particle_sphere_intersection_3d()</a>, and <a class="el" href="dem__properties_8h_source.html#l00075">DEM::CFDDEMProperties::volumetric_contribution</a>.</p>
+<p class="reference">References <a class="el" href="dem__properties_8h_source.html#l00061">DEM::CFDDEMProperties::dp</a>, and <a class="el" href="dem__properties_8h_source.html#l00075">DEM::CFDDEMProperties::volumetric_contribution</a>.</p>
 
 </div>
 </div>
@@ -460,7 +574,7 @@ template&lt;int dim&gt; </div>
 
 <p>Calculate the void fraction using the satellite point method. </p>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8cc_source.html#l00307">307</a> of file <a class="el" href="void__fraction_8cc_source.html">void_fraction.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8cc_source.html#l00325">325</a> of file <a class="el" href="void__fraction_8cc_source.html">void_fraction.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="dem__properties_8h_source.html#l00061">DEM::CFDDEMProperties::dp</a>.</p>
 
@@ -501,9 +615,9 @@ template&lt;int dim&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The periodic offset vector. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00315">315</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00404">404</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
 
-<p class="reference">References <a class="el" href="void__fraction_8h_source.html#l00362">VoidFractionBase&lt; dim &gt;::triangulation</a>.</p>
+<p class="reference">References <a class="el" href="void__fraction_8h_source.html#l00451">VoidFractionBase&lt; dim &gt;::triangulation</a>.</p>
 
 </div>
 </div>
@@ -543,7 +657,7 @@ template&lt;int dim&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00224">224</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
 
-<p class="reference">References <a class="el" href="void__fraction_8cc_source.html#l00155">VoidFractionBase&lt; dim &gt;::calculate_void_fraction()</a>, <a class="el" href="void__fraction_8h_source.html#l00242">VoidFractionBase&lt; dim &gt;::previous_void_fraction</a>, and <a class="el" href="void__fraction_8h_source.html#l00245">VoidFractionBase&lt; dim &gt;::void_fraction_locally_relevant</a>.</p>
+<p class="reference">References <a class="el" href="void__fraction_8cc_source.html#l00164">VoidFractionBase&lt; dim &gt;::calculate_void_fraction()</a>, <a class="el" href="void__fraction_8h_source.html#l00242">VoidFractionBase&lt; dim &gt;::previous_void_fraction</a>, and <a class="el" href="void__fraction_8h_source.html#l00245">VoidFractionBase&lt; dim &gt;::void_fraction_locally_relevant</a>.</p>
 
 </div>
 </div>
@@ -580,6 +694,45 @@ template&lt;int dim&gt; </div>
 
 </div>
 </div>
+<a id="a4ceba620c04395d68a98c38e25914ebb" name="a4ceba620c04395d68a98c38e25914ebb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ceba620c04395d68a98c38e25914ebb">&#9670;&#160;</a></span>radius_sphere_equivalent_volume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double <a class="el" href="classVoidFractionBase.html">VoidFractionBase</a>&lt; dim &gt;::radius_sphere_equivalent_volume </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>volume</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the characteristic radius of a sphere with a given volume (area in 2D): R = (2*dim*V/pi)^(1/dim) / 2. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">volume</td><td>value for which the equivalent radius of a sphere is calculated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Radius of a sphere with equivalent volume </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00277">277</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+
+</div>
+</div>
 <a id="ac57dee3ccf93e94bd8472691a25753e7" name="ac57dee3ccf93e94bd8472691a25753e7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac57dee3ccf93e94bd8472691a25753e7">&#9670;&#160;</a></span>setup_constraints()</h2>
 
@@ -606,7 +759,7 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8cc_source.html#l00090">90</a> of file <a class="el" href="void__fraction_8cc_source.html">void_fraction.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8cc_source.html#l00097">97</a> of file <a class="el" href="void__fraction_8cc_source.html">void_fraction.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8ae6ffdec5e14fce371eb7ae99edebbbee">BoundaryConditions::periodic</a>, <a class="el" href="boundary__conditions_8h_source.html#l00117">BoundaryConditions::BoundaryConditions::periodic_direction</a>, <a class="el" href="boundary__conditions_8h_source.html#l00114">BoundaryConditions::BoundaryConditions::periodic_neighbor_id</a>, <a class="el" href="namespaceParameters.html#a59bccd897a552f378b3da967e9fa803fa68bf09624358e484ec7c4880e70a8ba1">Parameters::qcm</a>, <a class="el" href="namespaceParameters.html#a59bccd897a552f378b3da967e9fa803fa51762626b4f785729159fd35eea74deb">Parameters::spm</a>, <a class="el" href="boundary__conditions_8h_source.html#l00095">BoundaryConditions::BoundaryConditions::type</a>, and <a class="el" href="lethe__grid__tools_8cc_source.html#l00051">LetheGridTools::vertices_cell_mapping_with_periodic_boundaries()</a>.</p>
 
@@ -641,7 +794,7 @@ template&lt;int dim&gt; </div>
 
 <p>Implements <a class="el" href="classPhysicsSubequationsSolverBase.html#abb7e722d51428100ef3e642309f6ff6c">PhysicsSubequationsSolverBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8cc_source.html#l00025">25</a> of file <a class="el" href="void__fraction_8cc_source.html">void_fraction.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8cc_source.html#l00026">26</a> of file <a class="el" href="void__fraction_8cc_source.html">void_fraction.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="bdf_8h_source.html#l00084">maximum_number_of_previous_solutions()</a>, and <a class="el" href="lethe__grid__tools_8cc_source.html#l00020">LetheGridTools::vertices_cell_mapping()</a>.</p>
 
@@ -709,9 +862,9 @@ template&lt;int dim&gt; </div>
 
 <p>Implements <a class="el" href="classPhysicsLinearSubequationsSolver.html#ad07b8e3652412522f754006c783aa450">PhysicsLinearSubequationsSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8cc_source.html#l01105">1105</a> of file <a class="el" href="void__fraction_8cc_source.html">void_fraction.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8cc_source.html#l00946">946</a> of file <a class="el" href="void__fraction_8cc_source.html">void_fraction.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="namespaceParameters.html#ad408350a21239600add83c5e91fcfa26a556966c7830465dc4623d62e32cec31d">Parameters::quiet</a>.</p>
+<p class="reference">References <a class="el" href="vector_8h_source.html#l00054">convert_vector_trilinos_to_dealii()</a>, and <a class="el" href="namespaceParameters.html#ad408350a21239600add83c5e91fcfa26a556966c7830465dc4623d62e32cec31d">Parameters::quiet</a>.</p>
 
 </div>
 </div>
@@ -752,7 +905,7 @@ template&lt;int dim&gt; </div>
 
 <p>Finite element for the void fraction. </p>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00248">248</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00251">251</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
 
 </div>
 </div>
@@ -780,7 +933,7 @@ template&lt;int dim&gt; </div>
 
 <p>Boolean to indicate if the mesh has periodic boundaries. </p>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00402">402</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00489">489</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
 
 </div>
 </div>
@@ -807,7 +960,7 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 <p>Preconditioner used for the solution of the smoothed L2 projection of the void fraction </p>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00385">385</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00472">472</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
 
 </div>
 </div>
@@ -834,9 +987,9 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">    Utilities::fixed_power&lt;2&gt;(<a class="code hl_variable" href="classVoidFractionBase.html#abc494190a0649176dbc46f5eebe524d0">void_fraction_parameters</a>-&gt;l2_smoothing_length)</div>
-<div class="ttc" id="aclassVoidFractionBase_html_abc494190a0649176dbc46f5eebe524d0"><div class="ttname"><a href="classVoidFractionBase.html#abc494190a0649176dbc46f5eebe524d0">VoidFractionBase::void_fraction_parameters</a></div><div class="ttdeci">std::shared_ptr&lt; Parameters::VoidFractionParameters&lt; dim &gt; &gt; void_fraction_parameters</div><div class="ttdef"><b>Definition</b> <a href="void__fraction_8h_source.html#l00371">void_fraction.h:371</a></div></div>
+<div class="ttc" id="aclassVoidFractionBase_html_abc494190a0649176dbc46f5eebe524d0"><div class="ttname"><a href="classVoidFractionBase.html#abc494190a0649176dbc46f5eebe524d0">VoidFractionBase::void_fraction_parameters</a></div><div class="ttdeci">std::shared_ptr&lt; Parameters::VoidFractionParameters&lt; dim &gt; &gt; void_fraction_parameters</div><div class="ttdef"><b>Definition</b> <a href="void__fraction_8h_source.html#l00459">void_fraction.h:459</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00417">417</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00504">504</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
 
 </div>
 </div>
@@ -864,7 +1017,7 @@ template&lt;int dim&gt; </div>
 
 <p>Linear solvers for the calculation of the void fraction. </p>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00375">375</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00462">462</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
 
 </div>
 </div>
@@ -884,7 +1037,7 @@ template&lt;int dim&gt; </div>
 
 <p>Index set for the locally owned degree of freedoms. </p>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00251">251</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00254">254</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
 
 </div>
 </div>
@@ -904,7 +1057,7 @@ template&lt;int dim&gt; </div>
 
 <p>Index set for the locally relevant degree of freedoms. </p>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00254">254</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00257">257</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
 
 </div>
 </div>
@@ -952,7 +1105,7 @@ template&lt;int dim&gt; </div>
 
 <p>Particle handler used when the void fraction depends on particles. </p>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00378">378</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00465">465</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
 
 </div>
 </div>
@@ -980,7 +1133,7 @@ template&lt;int dim&gt; </div>
 
 <p>Direction associated with the periodic boundary condition. </p>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00408">408</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00495">495</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
 
 </div>
 </div>
@@ -1008,7 +1161,7 @@ template&lt;int dim&gt; </div>
 
 <p>Offset for the periodic boundary condition. </p>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00405">405</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00492">492</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
 
 </div>
 </div>
@@ -1074,7 +1227,7 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 <p>System matrix used to assemble the smoothed L2 projection of the void fraction </p>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00389">389</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00476">476</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
 
 </div>
 </div>
@@ -1101,7 +1254,7 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 <p>Right-hand side used to assemble the smoothed L2 projection of the void fraction </p>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00393">393</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00480">480</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
 
 </div>
 </div>
@@ -1129,7 +1282,7 @@ template&lt;int dim&gt; </div>
 
 <p>Triangulation. </p>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00362">362</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00451">451</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
 
 </div>
 </div>
@@ -1156,7 +1309,7 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 <p>Vertices to cell map, this is used in the QCM and the satellite point method to access the neighboring cells of a cell. </p>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00399">399</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00486">486</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
 
 </div>
 </div>
@@ -1183,7 +1336,7 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 <p>Vertices to periodic cell map, this is used in the QCM and the satellite point method to access the neighboring cells of a cell. </p>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00414">414</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00501">501</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
 
 </div>
 </div>
@@ -1202,7 +1355,7 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 <p>Constraints used for the boundary conditions of the void fraction. Currently, this is only used to establish periodic void fractions. This object has to be made public because the boundary conditions are set outside of the object for now. </p>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00260">260</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00263">263</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
 
 </div>
 </div>
@@ -1230,7 +1383,7 @@ template&lt;int dim&gt; </div>
 
 <p>Locally owned solution of the void fraction. </p>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00381">381</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00468">468</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
 
 </div>
 </div>
@@ -1261,15 +1414,43 @@ template&lt;int dim&gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int dim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::shared_ptr&lt;<a class="el" href="classParameters_1_1VoidFractionParameters.html">Parameters::VoidFractionParameters</a>&lt;dim&gt; &gt; <a class="el" href="classVoidFractionBase.html">VoidFractionBase</a>&lt; dim &gt;::void_fraction_parameters</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>TODO: To move to private <a class="el" href="namespaceParameters.html">Parameters</a> for the calculation of the void fraction Right now this is used for the VANS matrix-free solver to directly calculate the void fraction from the function itself. The function will be removed back to private in a future PR. </p>
+<p><a class="el" href="namespaceParameters.html">Parameters</a> for the calculation of the void fraction Right now this is used for the VANS matrix-free solver to directly calculate the void fraction from the function itself. The function will be removed back to private in a future PR. </p>
 
-<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00371">371</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00459">459</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
+
+</div>
+</div>
+<a id="a5622e2ec9e0ee0f28a0f647f5c609077" name="a5622e2ec9e0ee0f28a0f647f5c609077"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5622e2ec9e0ee0f28a0f647f5c609077">&#9670;&#160;</a></span>void_fraction_solution</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">LinearAlgebra::distributed::Vector&lt;double&gt; <a class="el" href="classVoidFractionBase.html">VoidFractionBase</a>&lt; dim &gt;::void_fraction_solution</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>deal.II vector for the void fraction </p>
+
+<p class="definition">Definition at line <a class="el" href="void__fraction_8h_source.html#l00248">248</a> of file <a class="el" href="void__fraction_8h_source.html">void_fraction.h</a>.</p>
 
 </div>
 </div>

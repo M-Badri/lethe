@@ -91,7 +91,7 @@ $(document).ready(function() { init_codefold(0); });
   <div class="headertitle"><div class="title">postprocessing_cfd.cc</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="postprocessing__cfd_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// SPDX-FileCopyrightText: Copyright (c) 2020-2024 The Lethe Authors</span></div>
+<a href="postprocessing__cfd_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// SPDX-FileCopyrightText: Copyright (c) 2020-2025 The Lethe Authors</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Base</span></div>
@@ -230,7 +230,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        }</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  <span class="keyword">const</span> MPI_Comm mpi_communicator = dof_handler.get_communicator();</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  <span class="keyword">const</span> MPI_Comm mpi_communicator = dof_handler.get_mpi_communicator();</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  static_pressure_inlet_boundary =</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    Utilities::MPI::sum(static_pressure_inlet_boundary, mpi_communicator);</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  static_pressure_outlet_boundary =</div>
@@ -376,7 +376,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>            }</div>
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        }</div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    }</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>  <span class="keyword">const</span> MPI_Comm mpi_communicator = dof_handler.get_communicator();</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>  <span class="keyword">const</span> MPI_Comm mpi_communicator = dof_handler.get_mpi_communicator();</div>
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>  CFL                             = Utilities::MPI::max(CFL, mpi_communicator);</div>
 <div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>  <span class="keywordflow">return</span> (CFL);</div>
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>}</div>
@@ -492,7 +492,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>            }</div>
 <div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>        }</div>
 <div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>    }</div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>  <span class="keyword">const</span> MPI_Comm mpi_communicator = dof_handler.get_communicator();</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>  <span class="keyword">const</span> MPI_Comm mpi_communicator = dof_handler.get_mpi_communicator();</div>
 <div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>  en                              = Utilities::MPI::sum(en, mpi_communicator);</div>
 <div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>  <span class="keywordflow">return</span> (en);</div>
 <div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>}</div>
@@ -587,7 +587,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span> </div>
 <div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span>  pressure_power /= GridTools::volume(dof_handler.get_triangulation(), mapping);</div>
 <div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span> </div>
-<div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>  <span class="keyword">const</span> MPI_Comm mpi_communicator = dof_handler.get_communicator();</div>
+<div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>  <span class="keyword">const</span> MPI_Comm mpi_communicator = dof_handler.get_mpi_communicator();</div>
 <div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span>  pressure_power = Utilities::MPI::sum(pressure_power, mpi_communicator);</div>
 <div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span> </div>
 <div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span>  <span class="keywordflow">return</span> pressure_power;</div>
@@ -700,7 +700,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>  viscous_dissipation /=</div>
 <div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>    GridTools::volume(dof_handler.get_triangulation(), mapping);</div>
 <div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span> </div>
-<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>  <span class="keyword">const</span> MPI_Comm mpi_communicator = dof_handler.get_communicator();</div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>  <span class="keyword">const</span> MPI_Comm mpi_communicator = dof_handler.get_mpi_communicator();</div>
 <div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>  viscous_dissipation =</div>
 <div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>    Utilities::MPI::sum(viscous_dissipation, mpi_communicator);</div>
 <div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>  <span class="keywordflow">return</span> viscous_dissipation;</div>
@@ -807,7 +807,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>            }</div>
 <div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>        }</div>
 <div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>    }</div>
-<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>  <span class="keyword">const</span> MPI_Comm mpi_communicator = dof_handler.get_communicator();</div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>  <span class="keyword">const</span> MPI_Comm mpi_communicator = dof_handler.get_mpi_communicator();</div>
 <div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>  KEU = Utilities::MPI::sum(KEU / domain_volume, mpi_communicator);</div>
 <div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>  <span class="keywordflow">return</span> (KEU);</div>
 <div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>}</div>
@@ -925,7 +925,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>            }</div>
 <div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>        }</div>
 <div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>    }</div>
-<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>  <span class="keyword">const</span> MPI_Comm mpi_communicator = dof_handler.get_communicator();</div>
+<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>  <span class="keyword">const</span> MPI_Comm mpi_communicator = dof_handler.get_mpi_communicator();</div>
 <div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>  integral_viscosity_x_shear_rate =</div>
 <div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>    Utilities::MPI::sum(integral_viscosity_x_shear_rate, mpi_communicator);</div>
 <div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>  integral_shear_rate =</div>
@@ -1023,7 +1023,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>                                   update_values | update_quadrature_points |</div>
 <div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>                                     update_gradients | update_JxW_values |</div>
 <div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>                                     update_normal_vectors);</div>
-<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span>  <span class="keyword">const</span> MPI_Comm    mpi_communicator = dof_handler.get_communicator();</div>
+<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span>  <span class="keyword">const</span> MPI_Comm    mpi_communicator = dof_handler.get_mpi_communicator();</div>
 <div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span> </div>
 <div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;cell : dof_handler.active_cell_iterators())</div>
 <div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span>    {</div>
@@ -1191,7 +1191,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>                                   update_values | update_quadrature_points |</div>
 <div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>                                     update_gradients | update_JxW_values |</div>
 <div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>                                     update_normal_vectors);</div>
-<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>  <span class="keyword">const</span> MPI_Comm    mpi_communicator = dof_handler.get_communicator();</div>
+<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>  <span class="keyword">const</span> MPI_Comm    mpi_communicator = dof_handler.get_mpi_communicator();</div>
 <div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span> </div>
 <div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;cell : dof_handler.active_cell_iterators())</div>
 <div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>    {</div>
@@ -1376,7 +1376,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01264" name="l01264"></a><span class="lineno"> 1264</span>            }</div>
 <div class="line"><a id="l01265" name="l01265"></a><span class="lineno"> 1265</span>        }</div>
 <div class="line"><a id="l01266" name="l01266"></a><span class="lineno"> 1266</span>    }</div>
-<div class="line"><a id="l01267" name="l01267"></a><span class="lineno"> 1267</span>  <span class="keyword">const</span> MPI_Comm mpi_communicator = dof_handler.get_communicator();</div>
+<div class="line"><a id="l01267" name="l01267"></a><span class="lineno"> 1267</span>  <span class="keyword">const</span> MPI_Comm mpi_communicator = dof_handler.get_mpi_communicator();</div>
 <div class="line"><a id="l01268" name="l01268"></a><span class="lineno"> 1268</span>  pressure_integral = Utilities::MPI::sum(pressure_integral, mpi_communicator);</div>
 <div class="line"><a id="l01269" name="l01269"></a><span class="lineno"> 1269</span>  exact_pressure_integral =</div>
 <div class="line"><a id="l01270" name="l01270"></a><span class="lineno"> 1270</span>    Utilities::MPI::sum(exact_pressure_integral, mpi_communicator);</div>
@@ -1542,7 +1542,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01428" name="l01428"></a><span class="lineno"> 1428</span>        }</div>
 <div class="line"><a id="l01429" name="l01429"></a><span class="lineno"> 1429</span>    }</div>
 <div class="line"><a id="l01430" name="l01430"></a><span class="lineno"> 1430</span> </div>
-<div class="line"><a id="l01431" name="l01431"></a><span class="lineno"> 1431</span>  <span class="keyword">const</span> MPI_Comm mpi_communicator = dof_handler.get_communicator();</div>
+<div class="line"><a id="l01431" name="l01431"></a><span class="lineno"> 1431</span>  <span class="keyword">const</span> MPI_Comm mpi_communicator = dof_handler.get_mpi_communicator();</div>
 <div class="line"><a id="l01432" name="l01432"></a><span class="lineno"> 1432</span>  area                            = Utilities::MPI::sum(area, mpi_communicator);</div>
 <div class="line"><a id="l01433" name="l01433"></a><span class="lineno"> 1433</span>  flow_rate = Utilities::MPI::sum(flow_rate, mpi_communicator);</div>
 <div class="line"><a id="l01434" name="l01434"></a><span class="lineno"> 1434</span> </div>
@@ -1693,7 +1693,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01575" name="l01575"></a><span class="lineno"> 1575</span>  <span class="comment">// Set up for void fraction fe values</span></div>
 <div class="line"><a id="l01576" name="l01576"></a><span class="lineno"> 1576</span>  <span class="keyword">const</span> FESystem&lt;dim, dim&gt; fe_void_fraction =</div>
 <div class="line"><a id="l01577" name="l01577"></a><span class="lineno"> 1577</span>    void_fraction_dof_handler.get_fe();</div>
-<div class="line"><a id="l01578" name="l01578"></a><span class="lineno"> 1578</span>  <span class="keyword">const</span> FEValuesExtractors::Scalar void_fraction(0);</div>
+<div class="line"><a id="l01578" name="l01578"></a><span class="lineno"> 1578</span>  <span class="keyword">const</span> FEValuesExtractors::Scalar <a class="code hl_enumvalue" href="multiphysics_8h.html#ae14bb720bc9a37edc36fb8d90df712c2ac7d22c326661ea68be0f32a25a45a666">void_fraction</a>(0);</div>
 <div class="line"><a id="l01579" name="l01579"></a><span class="lineno"> 1579</span>  std::vector&lt;double&gt;              void_fraction_values(n_q_points);</div>
 <div class="line"><a id="l01580" name="l01580"></a><span class="lineno"> 1580</span> </div>
 <div class="line"><a id="l01581" name="l01581"></a><span class="lineno"> 1581</span>  FEValues&lt;dim&gt; fe_vf_values(mapping,</div>
@@ -1718,7 +1718,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01600" name="l01600"></a><span class="lineno"> 1600</span>          <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> q = 0; q &lt; n_q_points; q++)</div>
 <div class="line"><a id="l01601" name="l01601"></a><span class="lineno"> 1601</span>            {</div>
 <div class="line"><a id="l01602" name="l01602"></a><span class="lineno"> 1602</span>              <span class="comment">// Get the void fraction at the quadrature point</span></div>
-<div class="line"><a id="l01603" name="l01603"></a><span class="lineno"> 1603</span>              fe_vf_values[void_fraction].get_function_values(</div>
+<div class="line"><a id="l01603" name="l01603"></a><span class="lineno"> 1603</span>              fe_vf_values[<a class="code hl_enumvalue" href="multiphysics_8h.html#ae14bb720bc9a37edc36fb8d90df712c2ac7d22c326661ea68be0f32a25a45a666">void_fraction</a>].get_function_values(</div>
 <div class="line"><a id="l01604" name="l01604"></a><span class="lineno"> 1604</span>                present_void_fraction_solution, void_fraction_values);</div>
 <div class="line"><a id="l01605" name="l01605"></a><span class="lineno"> 1605</span> </div>
 <div class="line"><a id="l01606" name="l01606"></a><span class="lineno"> 1606</span>              <span class="comment">// Add the area of the face on boundary</span></div>
@@ -1736,7 +1736,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01618" name="l01618"></a><span class="lineno"> 1618</span>        }</div>
 <div class="line"><a id="l01619" name="l01619"></a><span class="lineno"> 1619</span>    }</div>
 <div class="line"><a id="l01620" name="l01620"></a><span class="lineno"> 1620</span> </div>
-<div class="line"><a id="l01621" name="l01621"></a><span class="lineno"> 1621</span>  <span class="keyword">const</span> MPI_Comm mpi_communicator = dof_handler.get_communicator();</div>
+<div class="line"><a id="l01621" name="l01621"></a><span class="lineno"> 1621</span>  <span class="keyword">const</span> MPI_Comm mpi_communicator = dof_handler.get_mpi_communicator();</div>
 <div class="line"><a id="l01622" name="l01622"></a><span class="lineno"> 1622</span>  average_velocity = Utilities::MPI::sum(average_velocity, mpi_communicator);</div>
 <div class="line"><a id="l01623" name="l01623"></a><span class="lineno"> 1623</span>  volume           = Utilities::MPI::sum(volume, mpi_communicator);</div>
 <div class="line"><a id="l01624" name="l01624"></a><span class="lineno"> 1624</span> </div>
@@ -1773,6 +1773,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassPhysicalPropertiesManager_html"><div class="ttname"><a href="classPhysicalPropertiesManager.html">PhysicalPropertiesManager</a></div><div class="ttdoc">Class that manages the physical properties model which are required to calculate the various physical...</div><div class="ttdef"><b>Definition</b> <a href="physical__properties__manager_8h_source.html#l00057">physical_properties_manager.h:58</a></div></div>
 <div class="ttc" id="aclassPhysicalPropertiesManager_html_ac301cee6597f9d4565681d9069365a8a"><div class="ttname"><a href="classPhysicalPropertiesManager.html#ac301cee6597f9d4565681d9069365a8a">PhysicalPropertiesManager::get_rheology</a></div><div class="ttdeci">std::shared_ptr&lt; RheologicalModel &gt; get_rheology(const unsigned int fluid_id=0, const unsigned int material_id=0) const</div><div class="ttdef"><b>Definition</b> <a href="physical__properties__manager_8h_source.html#l00138">physical_properties_manager.h:138</a></div></div>
 <div class="ttc" id="amultiphysics_8h_html_a2cbb04ef215561a69b48772159577fddaac1a453d0cdc1f19d9479ccfaa8b082c"><div class="ttname"><a href="multiphysics_8h.html#a2cbb04ef215561a69b48772159577fddaac1a453d0cdc1f19d9479ccfaa8b082c">Variable::velocity</a></div><div class="ttdeci">@ velocity</div><div class="ttdoc">Velocity vector field from fluid dynamics.</div></div>
+<div class="ttc" id="amultiphysics_8h_html_ae14bb720bc9a37edc36fb8d90df712c2ac7d22c326661ea68be0f32a25a45a666"><div class="ttname"><a href="multiphysics_8h.html#ae14bb720bc9a37edc36fb8d90df712c2ac7d22c326661ea68be0f32a25a45a666">void_fraction</a></div><div class="ttdeci">@ void_fraction</div><div class="ttdef"><b>Definition</b> <a href="multiphysics_8h_source.html#l00015">multiphysics.h:14</a></div></div>
 <div class="ttc" id="anamespacedealii_html"><div class="ttname"><a href="namespacedealii.html">dealii</a></div><div class="ttdef"><b>Definition</b> <a href="fluid__dynamics__matrix__free_8h_source.html#l00033">fluid_dynamics_matrix_free.h:34</a></div></div>
 <div class="ttc" id="aparameters_8h_html"><div class="ttname"><a href="parameters_8h.html">parameters.h</a></div></div>
 <div class="ttc" id="aphysical__property__model_8h_html_a0b2c854385812ebfac83689a5c3ead58a8e7f8389b914e827058d694b31468b3a"><div class="ttname"><a href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58a8e7f8389b914e827058d694b31468b3a">pressure</a></div><div class="ttdeci">@ pressure</div><div class="ttdef"><b>Definition</b> <a href="physical__property__model_8h_source.html#l00043">physical_property_model.h:43</a></div></div>
@@ -1830,8 +1831,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="arheological__model_8h_html_ae75fc07fc5d04fd29ba0409c9fbaffcb"><div class="ttname"><a href="rheological__model_8h.html#ae75fc07fc5d04fd29ba0409c9fbaffcb">calculate_shear_rate_magnitude</a></div><div class="ttdeci">double calculate_shear_rate_magnitude(const Tensor&lt; 2, dim &gt; shear_rate)</div><div class="ttdoc">Calculates the magnitude of the shear rate tensor given as input.</div><div class="ttdef"><b>Definition</b> <a href="rheological__model_8h_source.html#l00682">rheological_model.h:682</a></div></div>
 <div class="ttc" id="autilities_8h_html_a3d02cb065c32b672c94bb862ecff4431"><div class="ttname"><a href="utilities_8h.html#a3d02cb065c32b672c94bb862ecff4431">compute_cell_measure_with_JxW</a></div><div class="ttdeci">double compute_cell_measure_with_JxW(const std::vector&lt; double &gt; &amp;JxW_values)</div><div class="ttdoc">Computes the area (2D) or volume (3D) of the cell by integrating 1 over the cell, by summing JxW valu...</div><div class="ttdef"><b>Definition</b> <a href="utilities_8h_source.html#l00637">utilities.h:637</a></div></div>
 <div class="ttc" id="avector_8h_html"><div class="ttname"><a href="vector_8h.html">vector.h</a></div></div>
-<div class="ttc" id="avector_8h_html_a4ea4005d75c88e60bee47d4e79a13a39"><div class="ttname"><a href="vector_8h.html#a4ea4005d75c88e60bee47d4e79a13a39">GlobalVectorType</a></div><div class="ttdeci">dealii::TrilinosWrappers::MPI::Vector GlobalVectorType</div><div class="ttdef"><b>Definition</b> <a href="vector_8h_source.html#l00015">vector.h:15</a></div></div>
-<div class="ttc" id="avector_8h_html_ac71ba75c5119edae876800f9e80b59e7"><div class="ttname"><a href="vector_8h.html#ac71ba75c5119edae876800f9e80b59e7">GlobalBlockVectorType</a></div><div class="ttdeci">dealii::TrilinosWrappers::MPI::BlockVector GlobalBlockVectorType</div><div class="ttdef"><b>Definition</b> <a href="vector_8h_source.html#l00016">vector.h:16</a></div></div>
+<div class="ttc" id="avector_8h_html_a4ea4005d75c88e60bee47d4e79a13a39"><div class="ttname"><a href="vector_8h.html#a4ea4005d75c88e60bee47d4e79a13a39">GlobalVectorType</a></div><div class="ttdeci">dealii::TrilinosWrappers::MPI::Vector GlobalVectorType</div><div class="ttdef"><b>Definition</b> <a href="vector_8h_source.html#l00017">vector.h:17</a></div></div>
+<div class="ttc" id="avector_8h_html_ac71ba75c5119edae876800f9e80b59e7"><div class="ttname"><a href="vector_8h.html#ac71ba75c5119edae876800f9e80b59e7">GlobalBlockVectorType</a></div><div class="ttdeci">dealii::TrilinosWrappers::MPI::BlockVector GlobalBlockVectorType</div><div class="ttdef"><b>Definition</b> <a href="vector_8h_source.html#l00018">vector.h:18</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
