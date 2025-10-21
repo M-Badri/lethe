@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['h_0',['h',['../classBoundaryConditions_1_1HTBoundaryConditions.html#a63fd1fb158b3b9214a84c715eb249454',1,'BoundaryConditions::HTBoundaryConditions::h'],['../classParticleDetectorInteractions.html#aef249d1dcaa0fa6b2f877252ac2ed0cb',1,'ParticleDetectorInteractions::h'],['../structParameters_1_1LinearSolver.html#a4e1400efdb5848b055b7b17bbe6ddceda2510c39011c5be704182423e3a695e91',1,'Parameters::LinearSolver::h']]],
+  ['h_0',['h',['../classBoundaryConditions_1_1HTBoundaryConditions.html#a63fd1fb158b3b9214a84c715eb249454',1,'BoundaryConditions::HTBoundaryConditions::h'],['../classParticleDetectorInteractions.html#aef249d1dcaa0fa6b2f877252ac2ed0cb',1,'ParticleDetectorInteractions::h'],['../structParameters_1_1LinearSolver.html#a6fad820fb2de28065c95f3511cf78935a2510c39011c5be704182423e3a695e91',1,'Parameters::LinearSolver::h']]],
   ['half_5flength_1',['half_length',['../classCylinder.html#a61761b17c9291f6cae66bbf5528db011',1,'Cylinder']]],
   ['half_5flengths_2',['half_lengths',['../classSuperquadric.html#afb0e43158fb41d79db46bf8ef7954055',1,'Superquadric::half_lengths'],['../classHyperRectangle.html#a3127b564ccfca11c86f4a37639970db0',1,'HyperRectangle::half_lengths']]],
   ['hamaker_5fconstant_5fparticle_3',['hamaker_constant_particle',['../structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#a194a3076e5771ead3f83efe7372d62a9',1,'Parameters::Lagrangian::LagrangianPhysicalProperties']]],
@@ -51,16 +51,16 @@ var searchData=
   ['hertz_5fjkr_48',['hertz_JKR',['../namespaceParameters_1_1Lagrangian.html#a71dab08c2bfee9dee4b2ea9875d43d3ba638c14a20811366fc71cab494ea05c3b',1,'Parameters::Lagrangian']]],
   ['hertz_5fmindlin_5flimit_5fforce_49',['hertz_mindlin_limit_force',['../namespaceParameters_1_1Lagrangian.html#a71dab08c2bfee9dee4b2ea9875d43d3baba022ec0e90d20310303f1b00842933a',1,'Parameters::Lagrangian']]],
   ['hertz_5fmindlin_5flimit_5foverlap_50',['hertz_mindlin_limit_overlap',['../namespaceParameters_1_1Lagrangian.html#a71dab08c2bfee9dee4b2ea9875d43d3baace296ebda6d5aae5af60e422f24db99',1,'Parameters::Lagrangian']]],
-  ['hess_5fphi_51',['hess_phi',['../classVOFScratchData.html#a3c6d9fb37cbfc98f8c1ea33bd98ab8ee',1,'VOFScratchData::hess_phi'],['../classTracerScratchData.html#a290e8502ad8a79e3aa0c49154df1d43b',1,'TracerScratchData::hess_phi']]],
-  ['hess_5fphi_5fphase_52',['hess_phi_phase',['../classCahnHilliardScratchData.html#a0ecb975c6b3fe625277d5ee06022bd47',1,'CahnHilliardScratchData']]],
-  ['hess_5fphi_5fpotential_53',['hess_phi_potential',['../classCahnHilliardScratchData.html#aadc251e41bfc5ed35eba9e076fdd48d5',1,'CahnHilliardScratchData']]],
-  ['hess_5fphi_5ft_54',['hess_phi_T',['../classHeatTransferScratchData.html#ae13fc302aa6530c26d795df0dba067a3',1,'HeatTransferScratchData']]],
-  ['hess_5fphi_5fu_55',['hess_phi_u',['../classNavierStokesScratchData.html#aa34d4aaa0898052080018672890aa933',1,'NavierStokesScratchData']]],
+  ['hess_5fphi_51',['hess_phi',['../classVOFScratchData.html#a51c41d7ce633f56d4122e0d4fd38d1e3',1,'VOFScratchData::hess_phi'],['../classTracerScratchData.html#a943a8ce7d78704878f1440c5ececc6f2',1,'TracerScratchData::hess_phi']]],
+  ['hess_5fphi_5fphase_52',['hess_phi_phase',['../classCahnHilliardScratchData.html#a606bb0ae05283ddb02efb0c9cb5241fd',1,'CahnHilliardScratchData']]],
+  ['hess_5fphi_5fpotential_53',['hess_phi_potential',['../classCahnHilliardScratchData.html#a40537b193f67757e6aa99a019e8c74f6',1,'CahnHilliardScratchData']]],
+  ['hess_5fphi_5ft_54',['hess_phi_T',['../classHeatTransferScratchData.html#a781b323bc8a63c5ad9a446a55e035fe9',1,'HeatTransferScratchData']]],
+  ['hess_5fphi_5fu_55',['hess_phi_u',['../classNavierStokesScratchData.html#a981c3e639a7e753c867a48d835f2b9b9',1,'NavierStokesScratchData']]],
   ['hessian_56',['hessian',['../classInterfaceTools_1_1CellWiseFunction.html#a80cbb30376899c78d07a5795b1b5f464',1,'InterfaceTools::CellWiseFunction']]],
   ['hill_5fgeometry_57',['hill_geometry',['../classPeriodicHillsGrid.html#ac2ebbe3b29d8072ec2c43f0b95cfe4b6',1,'PeriodicHillsGrid']]],
   ['hole_5fradius_58',['hole_radius',['../classDeathStar.html#a871728bde6ff92de7ae7240cb11ea772',1,'DeathStar']]],
-  ['hp_59',['hp',['../structParameters_1_1LinearSolver.html#a4e1400efdb5848b055b7b17bbe6ddcedad2ccda10db94c2b5d51beed10484c025',1,'Parameters::LinearSolver']]],
+  ['hp_59',['hp',['../structParameters_1_1LinearSolver.html#a6fad820fb2de28065c95f3511cf78935ad2ccda10db94c2b5d51beed10484c025',1,'Parameters::LinearSolver']]],
   ['htboundaryconditions_60',['HTBoundaryConditions',['../classBoundaryConditions_1_1HTBoundaryConditions.html',1,'BoundaryConditions']]],
-  ['hyper_5frectangle_61',['hyper_rectangle',['../classShape.html#a3e44e2b1f6fca48f7b7b2151977b3abda37c0074da66fc8173cb16591045af43a',1,'Shape']]],
+  ['hyper_5frectangle_61',['hyper_rectangle',['../classShape.html#a394819ce751267dc955abe4ad18ebdeba37c0074da66fc8173cb16591045af43a',1,'Shape']]],
   ['hyperrectangle_62',['hyperrectangle',['../classHyperRectangle.html#a6fccd48e250c2d6c850e8a173ca9a2dc',1,'HyperRectangle::HyperRectangle()'],['../classHyperRectangle.html',1,'HyperRectangle&lt; dim &gt;']]]
 ];

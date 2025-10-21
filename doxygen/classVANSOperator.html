@@ -124,22 +124,24 @@ Public Types</h2></td></tr>
 <tr class="separator:a1f5d82523546bcc2e987181745dd7b65 inherit pub_types_classNavierStokesOperatorBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0d0fe7fb5be752191599bb308f52df0 inherit pub_types_classNavierStokesOperatorBase" id="r_aa0d0fe7fb5be752191599bb308f52df0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#aa0d0fe7fb5be752191599bb308f52df0">size_type</a> = VectorizedArray&lt; number &gt;</td></tr>
 <tr class="separator:aa0d0fe7fb5be752191599bb308f52df0 inherit pub_types_classNavierStokesOperatorBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94d7db964d971e7232fb70d6fbf0c8b9 inherit pub_types_classNavierStokesOperatorBase" id="r_a94d7db964d971e7232fb70d6fbf0c8b9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#a94d7db964d971e7232fb70d6fbf0c8b9">StabilizationType</a> = <a class="el" href="structParameters_1_1Stabilization.html#aa349ab6e7ab2df88077df91d4707a4ba">Parameters::Stabilization::NavierStokesStabilization</a></td></tr>
+<tr class="memitem:a94d7db964d971e7232fb70d6fbf0c8b9 inherit pub_types_classNavierStokesOperatorBase" id="r_a94d7db964d971e7232fb70d6fbf0c8b9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#a94d7db964d971e7232fb70d6fbf0c8b9">StabilizationType</a> = <a class="el" href="structParameters_1_1Stabilization.html#a7f67c17b0ca688dd966290f8610583bb">Parameters::Stabilization::NavierStokesStabilization</a></td></tr>
 <tr class="separator:a94d7db964d971e7232fb70d6fbf0c8b9 inherit pub_types_classNavierStokesOperatorBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a63dd3fd2a8f0139b14e95b802112105d" id="r_a63dd3fd2a8f0139b14e95b802112105d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVANSOperator.html#a63dd3fd2a8f0139b14e95b802112105d">VANSOperator</a> (const <a class="el" href="structParameters_1_1CFDDEM.html">Parameters::CFDDEM</a> &amp;<a class="el" href="classVANSOperator.html#a862213bec194764b66b4b72c932bf87e">cfd_dem_parameters</a>)</td></tr>
 <tr class="separator:a63dd3fd2a8f0139b14e95b802112105d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae67d8e965b1ad8370d64ac504e5991df" id="r_ae67d8e965b1ad8370d64ac504e5991df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVANSOperator.html#ae67d8e965b1ad8370d64ac504e5991df">compute_void_fraction</a> (const LinearAlgebra::distributed::Vector&lt; double &gt; &amp;void_fraction_solution, const DoFHandler&lt; dim &gt; &amp;void_fraction_dof_handler)</td></tr>
-<tr class="separator:ae67d8e965b1ad8370d64ac504e5991df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79d4a6f3a52aea56bdb567d57d3efa5a" id="r_a79d4a6f3a52aea56bdb567d57d3efa5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVANSOperator.html#a79d4a6f3a52aea56bdb567d57d3efa5a">compute_void_fraction</a> (const DoFHandler&lt; dim &gt; &amp;void_fraction_dof_handler, const LinearAlgebra::distributed::Vector&lt; double &gt; &amp;void_fraction_solution)</td></tr>
+<tr class="separator:a79d4a6f3a52aea56bdb567d57d3efa5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6de1d8e31801af5236cb78eee5d51c85" id="r_a6de1d8e31801af5236cb78eee5d51c85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVANSOperator.html#a6de1d8e31801af5236cb78eee5d51c85">compute_particle_fluid_force</a> (const DoFHandler&lt; dim &gt; &amp;pf_force_dof_handler, const LinearAlgebra::distributed::Vector&lt; double &gt; &amp;pf_force_solution, const DoFHandler&lt; dim &gt; &amp;pf_drag_dof_handler, const LinearAlgebra::distributed::Vector&lt; double &gt; &amp;pf_drag_solution)</td></tr>
+<tr class="separator:a6de1d8e31801af5236cb78eee5d51c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classNavierStokesOperatorBase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classNavierStokesOperatorBase')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classNavierStokesOperatorBase.html">NavierStokesOperatorBase&lt; dim, number &gt;</a></td></tr>
 <tr class="memitem:ac7568c9fc9b3fec66af8d8093ad77222 inherit pub_methods_classNavierStokesOperatorBase" id="r_ac7568c9fc9b3fec66af8d8093ad77222"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#ac7568c9fc9b3fec66af8d8093ad77222">NavierStokesOperatorBase</a> ()</td></tr>
 <tr class="separator:ac7568c9fc9b3fec66af8d8093ad77222 inherit pub_methods_classNavierStokesOperatorBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d6b677c2213771713ffbc0fd6c98c95 inherit pub_methods_classNavierStokesOperatorBase" id="r_a6d6b677c2213771713ffbc0fd6c98c95"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#a6d6b677c2213771713ffbc0fd6c98c95">NavierStokesOperatorBase</a> (const Mapping&lt; dim &gt; &amp;mapping, const DoFHandler&lt; dim &gt; &amp;dof_handler, const AffineConstraints&lt; number &gt; &amp;<a class="el" href="classNavierStokesOperatorBase.html#a4e23aa3b87f060442c860397c6bfad00">constraints</a>, const Quadrature&lt; dim &gt; &amp;quadrature, const std::shared_ptr&lt; Function&lt; dim &gt; &gt; <a class="el" href="classNavierStokesOperatorBase.html#a77b26290315670bb10acd810331f5a5d">forcing_function</a>, const std::shared_ptr&lt; <a class="el" href="classPhysicalPropertiesManager.html">PhysicalPropertiesManager</a> &gt; &amp;physical_properties_manager, const <a class="el" href="structParameters_1_1Stabilization.html#aa349ab6e7ab2df88077df91d4707a4ba">StabilizationType</a> <a class="el" href="classNavierStokesOperatorBase.html#ab9efff8facaebd37096ecd6c38288ef7">stabilization</a>, const unsigned int mg_level, const std::shared_ptr&lt; <a class="el" href="classSimulationControl.html">SimulationControl</a> &gt; &amp;<a class="el" href="classNavierStokesOperatorBase.html#abb73a9c670b5a5bd743d29d77b5e8b48">simulation_control</a>, const <a class="el" href="classBoundaryConditions_1_1NSBoundaryConditions.html">BoundaryConditions::NSBoundaryConditions</a>&lt; dim &gt; &amp;<a class="el" href="classNavierStokesOperatorBase.html#ac52044c719025528cbf25981ea0c8cf4">boundary_conditions</a>, const bool &amp;<a class="el" href="classNavierStokesOperatorBase.html#a4b6dab6ab78101adac53dc831da6fa47">enable_hessians_jacobian</a>, const bool &amp;<a class="el" href="classNavierStokesOperatorBase.html#a51028b69effddf76f9fbf5d6f8cf4ffb">enable_hessians_residual</a>)</td></tr>
-<tr class="separator:a6d6b677c2213771713ffbc0fd6c98c95 inherit pub_methods_classNavierStokesOperatorBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c1e1921161746aea3f1360efbc481a0 inherit pub_methods_classNavierStokesOperatorBase" id="r_a8c1e1921161746aea3f1360efbc481a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#a8c1e1921161746aea3f1360efbc481a0">reinit</a> (const Mapping&lt; dim &gt; &amp;mapping, const DoFHandler&lt; dim &gt; &amp;dof_handler, const AffineConstraints&lt; number &gt; &amp;<a class="el" href="classNavierStokesOperatorBase.html#a4e23aa3b87f060442c860397c6bfad00">constraints</a>, const Quadrature&lt; dim &gt; &amp;quadrature, const std::shared_ptr&lt; Function&lt; dim &gt; &gt; <a class="el" href="classNavierStokesOperatorBase.html#a77b26290315670bb10acd810331f5a5d">forcing_function</a>, const std::shared_ptr&lt; <a class="el" href="classPhysicalPropertiesManager.html">PhysicalPropertiesManager</a> &gt; &amp;physical_properties_manager, const <a class="el" href="structParameters_1_1Stabilization.html#aa349ab6e7ab2df88077df91d4707a4ba">StabilizationType</a> <a class="el" href="classNavierStokesOperatorBase.html#ab9efff8facaebd37096ecd6c38288ef7">stabilization</a>, const unsigned int mg_level, const std::shared_ptr&lt; <a class="el" href="classSimulationControl.html">SimulationControl</a> &gt; &amp;<a class="el" href="classNavierStokesOperatorBase.html#abb73a9c670b5a5bd743d29d77b5e8b48">simulation_control</a>, const <a class="el" href="classBoundaryConditions_1_1NSBoundaryConditions.html">BoundaryConditions::NSBoundaryConditions</a>&lt; dim &gt; &amp;<a class="el" href="classNavierStokesOperatorBase.html#ac52044c719025528cbf25981ea0c8cf4">boundary_conditions</a>, const bool &amp;<a class="el" href="classNavierStokesOperatorBase.html#a4b6dab6ab78101adac53dc831da6fa47">enable_hessians_jacobian</a>, const bool &amp;<a class="el" href="classNavierStokesOperatorBase.html#a51028b69effddf76f9fbf5d6f8cf4ffb">enable_hessians_residual</a>)</td></tr>
-<tr class="separator:a8c1e1921161746aea3f1360efbc481a0 inherit pub_methods_classNavierStokesOperatorBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a461784aa465e195d005766e66e927cff inherit pub_methods_classNavierStokesOperatorBase" id="r_a461784aa465e195d005766e66e927cff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#a461784aa465e195d005766e66e927cff">NavierStokesOperatorBase</a> (const Mapping&lt; dim &gt; &amp;mapping, const DoFHandler&lt; dim &gt; &amp;dof_handler, const AffineConstraints&lt; number &gt; &amp;<a class="el" href="classNavierStokesOperatorBase.html#a4e23aa3b87f060442c860397c6bfad00">constraints</a>, const Quadrature&lt; dim &gt; &amp;quadrature, const std::shared_ptr&lt; Function&lt; dim &gt; &gt; <a class="el" href="classNavierStokesOperatorBase.html#a77b26290315670bb10acd810331f5a5d">forcing_function</a>, const std::shared_ptr&lt; <a class="el" href="classPhysicalPropertiesManager.html">PhysicalPropertiesManager</a> &gt; &amp;physical_properties_manager, const <a class="el" href="structParameters_1_1Stabilization.html#a7f67c17b0ca688dd966290f8610583bb">StabilizationType</a> <a class="el" href="classNavierStokesOperatorBase.html#ab9efff8facaebd37096ecd6c38288ef7">stabilization</a>, const unsigned int mg_level, const std::shared_ptr&lt; <a class="el" href="classSimulationControl.html">SimulationControl</a> &gt; &amp;<a class="el" href="classNavierStokesOperatorBase.html#abb73a9c670b5a5bd743d29d77b5e8b48">simulation_control</a>, const <a class="el" href="classBoundaryConditions_1_1NSBoundaryConditions.html">BoundaryConditions::NSBoundaryConditions</a>&lt; dim &gt; &amp;<a class="el" href="classNavierStokesOperatorBase.html#ac52044c719025528cbf25981ea0c8cf4">boundary_conditions</a>, const bool &amp;<a class="el" href="classNavierStokesOperatorBase.html#a4b6dab6ab78101adac53dc831da6fa47">enable_hessians_jacobian</a>, const bool &amp;<a class="el" href="classNavierStokesOperatorBase.html#a51028b69effddf76f9fbf5d6f8cf4ffb">enable_hessians_residual</a>, const bool &amp;<a class="el" href="classNavierStokesOperatorBase.html#aa9e09c8d85c457df60f3815236c15fc4">enable_mortar</a>)</td></tr>
+<tr class="separator:a461784aa465e195d005766e66e927cff inherit pub_methods_classNavierStokesOperatorBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2fc244c8a0c4ad88aef7a3db4e94317 inherit pub_methods_classNavierStokesOperatorBase" id="r_ab2fc244c8a0c4ad88aef7a3db4e94317"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#ab2fc244c8a0c4ad88aef7a3db4e94317">reinit</a> (const Mapping&lt; dim &gt; &amp;mapping, const DoFHandler&lt; dim &gt; &amp;dof_handler, const AffineConstraints&lt; number &gt; &amp;<a class="el" href="classNavierStokesOperatorBase.html#a4e23aa3b87f060442c860397c6bfad00">constraints</a>, const Quadrature&lt; dim &gt; &amp;quadrature, const std::shared_ptr&lt; Function&lt; dim &gt; &gt; <a class="el" href="classNavierStokesOperatorBase.html#a77b26290315670bb10acd810331f5a5d">forcing_function</a>, const std::shared_ptr&lt; <a class="el" href="classPhysicalPropertiesManager.html">PhysicalPropertiesManager</a> &gt; &amp;physical_properties_manager, const <a class="el" href="structParameters_1_1Stabilization.html#a7f67c17b0ca688dd966290f8610583bb">StabilizationType</a> <a class="el" href="classNavierStokesOperatorBase.html#ab9efff8facaebd37096ecd6c38288ef7">stabilization</a>, const unsigned int mg_level, const std::shared_ptr&lt; <a class="el" href="classSimulationControl.html">SimulationControl</a> &gt; &amp;<a class="el" href="classNavierStokesOperatorBase.html#abb73a9c670b5a5bd743d29d77b5e8b48">simulation_control</a>, const <a class="el" href="classBoundaryConditions_1_1NSBoundaryConditions.html">BoundaryConditions::NSBoundaryConditions</a>&lt; dim &gt; &amp;<a class="el" href="classNavierStokesOperatorBase.html#ac52044c719025528cbf25981ea0c8cf4">boundary_conditions</a>, const bool &amp;<a class="el" href="classNavierStokesOperatorBase.html#a4b6dab6ab78101adac53dc831da6fa47">enable_hessians_jacobian</a>, const bool &amp;<a class="el" href="classNavierStokesOperatorBase.html#a51028b69effddf76f9fbf5d6f8cf4ffb">enable_hessians_residual</a>, const bool &amp;<a class="el" href="classNavierStokesOperatorBase.html#aa9e09c8d85c457df60f3815236c15fc4">enable_mortar</a>)</td></tr>
+<tr class="separator:ab2fc244c8a0c4ad88aef7a3db4e94317 inherit pub_methods_classNavierStokesOperatorBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63547240ab69673bbfc4cff24e1d3a80 inherit pub_methods_classNavierStokesOperatorBase" id="r_a63547240ab69673bbfc4cff24e1d3a80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#a63547240ab69673bbfc4cff24e1d3a80">compute_element_size</a> ()</td></tr>
 <tr class="separator:a63547240ab69673bbfc4cff24e1d3a80 inherit pub_methods_classNavierStokesOperatorBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab28f65d6c368e788ff8faeb2f1750dcc inherit pub_methods_classNavierStokesOperatorBase" id="r_ab28f65d6c368e788ff8faeb2f1750dcc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#ab28f65d6c368e788ff8faeb2f1750dcc">compute_forcing_term</a> ()</td></tr>
@@ -207,6 +209,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ac3f142d45fcefe115588ec9e3a305c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a696e1eca97adcfce9f4893f22472f514" id="r_a696e1eca97adcfce9f4893f22472f514"><td class="memItemLeft" align="right" valign="top">Table&lt; 2, Tensor&lt; 1, dim, VectorizedArray&lt; number &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVANSOperator.html#a696e1eca97adcfce9f4893f22472f514">void_fraction_gradient</a></td></tr>
 <tr class="separator:a696e1eca97adcfce9f4893f22472f514"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34695b17980cfa6c0fc915025960319f" id="r_a34695b17980cfa6c0fc915025960319f"><td class="memItemLeft" align="right" valign="top">Table&lt; 2, Tensor&lt; 1, dim, VectorizedArray&lt; number &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVANSOperator.html#a34695b17980cfa6c0fc915025960319f">particle_fluid_force</a></td></tr>
+<tr class="separator:a34695b17980cfa6c0fc915025960319f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3259e11505baf670d385fffcad8e83d2" id="r_a3259e11505baf670d385fffcad8e83d2"><td class="memItemLeft" align="right" valign="top">Table&lt; 2, VectorizedArray&lt; number &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVANSOperator.html#a3259e11505baf670d385fffcad8e83d2">grad_div_gamma</a></td></tr>
 <tr class="separator:a3259e11505baf670d385fffcad8e83d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a862213bec194764b66b4b72c932bf87e" id="r_a862213bec194764b66b4b72c932bf87e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structParameters_1_1CFDDEM.html">Parameters::CFDDEM</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVANSOperator.html#a862213bec194764b66b4b72c932bf87e">cfd_dem_parameters</a></td></tr>
@@ -228,7 +232,7 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a77b26290315670bb10acd810331f5a5d inherit pro_attribs_classNavierStokesOperatorBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0d63608e35a2225279a2c26fddb1fe6 inherit pro_attribs_classNavierStokesOperatorBase" id="r_ae0d63608e35a2225279a2c26fddb1fe6"><td class="memItemLeft" align="right" valign="top">Tensor&lt; 1, dim, VectorizedArray&lt; number &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#ae0d63608e35a2225279a2c26fddb1fe6">beta_force</a></td></tr>
 <tr class="separator:ae0d63608e35a2225279a2c26fddb1fe6 inherit pro_attribs_classNavierStokesOperatorBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9efff8facaebd37096ecd6c38288ef7 inherit pro_attribs_classNavierStokesOperatorBase" id="r_ab9efff8facaebd37096ecd6c38288ef7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structParameters_1_1Stabilization.html#aa349ab6e7ab2df88077df91d4707a4ba">StabilizationType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#ab9efff8facaebd37096ecd6c38288ef7">stabilization</a></td></tr>
+<tr class="memitem:ab9efff8facaebd37096ecd6c38288ef7 inherit pro_attribs_classNavierStokesOperatorBase" id="r_ab9efff8facaebd37096ecd6c38288ef7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structParameters_1_1Stabilization.html#a7f67c17b0ca688dd966290f8610583bb">StabilizationType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#ab9efff8facaebd37096ecd6c38288ef7">stabilization</a></td></tr>
 <tr class="separator:ab9efff8facaebd37096ecd6c38288ef7 inherit pro_attribs_classNavierStokesOperatorBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb73a9c670b5a5bd743d29d77b5e8b48 inherit pro_attribs_classNavierStokesOperatorBase" id="r_abb73a9c670b5a5bd743d29d77b5e8b48"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classSimulationControl.html">SimulationControl</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#abb73a9c670b5a5bd743d29d77b5e8b48">simulation_control</a></td></tr>
 <tr class="separator:abb73a9c670b5a5bd743d29d77b5e8b48 inherit pro_attribs_classNavierStokesOperatorBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -274,6 +278,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:afcf6923799f051890c90d17ba0474442 inherit pro_attribs_classNavierStokesOperatorBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66be91d31a9a6e2a549cda171af555fb inherit pro_attribs_classNavierStokesOperatorBase" id="r_a66be91d31a9a6e2a549cda171af555fb"><td class="memItemLeft" align="right" valign="top">Table&lt; 1, VectorizedArray&lt; number &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#a66be91d31a9a6e2a549cda171af555fb">effective_beta_face</a></td></tr>
 <tr class="separator:a66be91d31a9a6e2a549cda171af555fb inherit pro_attribs_classNavierStokesOperatorBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9e09c8d85c457df60f3815236c15fc4 inherit pro_attribs_classNavierStokesOperatorBase" id="r_aa9e09c8d85c457df60f3815236c15fc4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#aa9e09c8d85c457df60f3815236c15fc4">enable_mortar</a></td></tr>
+<tr class="separator:aa9e09c8d85c457df60f3815236c15fc4 inherit pro_attribs_classNavierStokesOperatorBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f61a4f53daea8600b981c4ad6f4e528 inherit pro_attribs_classNavierStokesOperatorBase" id="r_a0f61a4f53daea8600b981c4ad6f4e528"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#a0f61a4f53daea8600b981c4ad6f4e528">constrained_indices</a></td></tr>
 <tr class="separator:a0f61a4f53daea8600b981c4ad6f4e528 inherit pro_attribs_classNavierStokesOperatorBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d98fc8b8ae9beda0c332a1bbedfa1cd inherit pro_attribs_classNavierStokesOperatorBase" id="r_a3d98fc8b8ae9beda0c332a1bbedfa1cd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; number, number &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#a3d98fc8b8ae9beda0c332a1bbedfa1cd">constrained_values</a></td></tr>
@@ -294,6 +300,12 @@ Protected Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_classNavierStokesOperatorBase"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classNavierStokesOperatorBase')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classNavierStokesOperatorBase.html">NavierStokesOperatorBase&lt; dim, number &gt;</a></td></tr>
+<tr class="memitem:a37261fcb7f93e7bc3a5167c419e0430f inherit pub_attribs_classNavierStokesOperatorBase" id="r_a37261fcb7f93e7bc3a5167c419e0430f"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classMortarManagerCircle.html">MortarManagerCircle</a>&lt; dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#a37261fcb7f93e7bc3a5167c419e0430f">mortar_manager_mf</a></td></tr>
+<tr class="separator:a37261fcb7f93e7bc3a5167c419e0430f inherit pub_attribs_classNavierStokesOperatorBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f2945e36304ffb0f3dbf21056feba47 inherit pub_attribs_classNavierStokesOperatorBase" id="r_a2f2945e36304ffb0f3dbf21056feba47"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classCouplingOperator.html">CouplingOperator</a>&lt; dim, double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#a2f2945e36304ffb0f3dbf21056feba47">mortar_coupling_operator_mf</a></td></tr>
+<tr class="separator:a2f2945e36304ffb0f3dbf21056feba47 inherit pub_attribs_classNavierStokesOperatorBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43b688038815b89c575c2d2a6c15d272 inherit pub_attribs_classNavierStokesOperatorBase" id="r_a43b688038815b89c575c2d2a6c15d272"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classNavierStokesCouplingEvaluation.html">NavierStokesCouplingEvaluation</a>&lt; dim, double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#a43b688038815b89c575c2d2a6c15d272">mortar_coupling_evaluator_mf</a></td></tr>
+<tr class="separator:a43b688038815b89c575c2d2a6c15d272 inherit pub_attribs_classNavierStokesOperatorBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7dee043710bbe4b934d93dda118f62b inherit pub_attribs_classNavierStokesOperatorBase" id="r_ab7dee043710bbe4b934d93dda118f62b"><td class="memItemLeft" align="right" valign="top">TimerOutput&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesOperatorBase.html#ab7dee043710bbe4b934d93dda118f62b">timer</a></td></tr>
 <tr class="separator:ab7dee043710bbe4b934d93dda118f62b inherit pub_attribs_classNavierStokesOperatorBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -399,15 +411,15 @@ template&lt;int dim, typename number &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8h_source.html#l00036">36</a> of file <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8h_source.html">fluid_dynamics_vans_matrix_free_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8h_source.html#l00035">35</a> of file <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8h_source.html">fluid_dynamics_vans_matrix_free_operators.h</a>.</p>
 
-<p class="reference">References <a class="el" href="namespaceParameters.html#a885ce66c74635a68dd078d94aedddac6aaab653aeeee220006e2b9f692569492c">Parameters::modelA</a>, and <a class="el" href="parameters__cfd__dem_8h_source.html#l00094">Parameters::CFDDEM::vans_model</a>.</p>
+<p class="reference">References <a class="el" href="namespaceParameters.html#a885ce66c74635a68dd078d94aedddac6aaab653aeeee220006e2b9f692569492c">Parameters::modelA</a>, and <a class="el" href="parameters__cfd__dem_8h_source.html#l00089">Parameters::CFDDEM::vans_model</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae67d8e965b1ad8370d64ac504e5991df" name="ae67d8e965b1ad8370d64ac504e5991df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae67d8e965b1ad8370d64ac504e5991df">&#9670;&#160;</a></span>compute_void_fraction()</h2>
+<a id="a6de1d8e31801af5236cb78eee5d51c85" name="a6de1d8e31801af5236cb78eee5d51c85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6de1d8e31801af5236cb78eee5d51c85">&#9670;&#160;</a></span>compute_particle_fluid_force()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -415,16 +427,28 @@ template&lt;int dim, typename number &gt; </div>
 template&lt;int dim, typename number &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classVANSOperator.html">VANSOperator</a>&lt; dim, number &gt;::compute_void_fraction </td>
+          <td class="memname">void <a class="el" href="classVANSOperator.html">VANSOperator</a>&lt; dim, number &gt;::compute_particle_fluid_force </td>
           <td>(</td>
+          <td class="paramtype">const DoFHandler&lt; dim &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pf_force_dof_handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const LinearAlgebra::distributed::Vector&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>void_fraction_solution</em>, </td>
+          <td class="paramname"><em>pf_force_solution</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const DoFHandler&lt; dim &gt; &amp;&#160;</td>
-          <td class="paramname"><em>void_fraction_dof_handler</em>&#160;</td>
+          <td class="paramname"><em>pf_drag_dof_handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const LinearAlgebra::distributed::Vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pf_drag_solution</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -434,11 +458,54 @@ template&lt;int dim, typename number &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Compute the void fraction and the void fraction gradient at the quadrature points. </p>
+<p>Compute the terms the particle-fluid (pf) forces at the fluid quadrature points. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">void_fraction_solution</td><td>The solution of the void fraction</td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">void_fraction_dof_handler</td><td>The dof handler associated with the void fraction </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pf_force_dof_handler</td><td>The dof handler associated with the particle-fluid forces. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pf_force_solution</td><td>The solution of the particle-fluid forces. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pf_drag_dof_handler</td><td>The dof handler associated with the drag force. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pf_drag_solution</td><td>The solution of the drag force. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8cc_source.html#l00109">109</a> of file <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8cc_source.html">fluid_dynamics_vans_matrix_free_operators.cc</a>.</p>
+
+</div>
+</div>
+<a id="a79d4a6f3a52aea56bdb567d57d3efa5a" name="a79d4a6f3a52aea56bdb567d57d3efa5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79d4a6f3a52aea56bdb567d57d3efa5a">&#9670;&#160;</a></span>compute_void_fraction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename number &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVANSOperator.html">VANSOperator</a>&lt; dim, number &gt;::compute_void_fraction </td>
+          <td>(</td>
+          <td class="paramtype">const DoFHandler&lt; dim &gt; &amp;&#160;</td>
+          <td class="paramname"><em>void_fraction_dof_handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const LinearAlgebra::distributed::Vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>void_fraction_solution</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute the void fraction at the fluid quadrature point. This essentially calculates the void fraction and the void fraction gradient. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">void_fraction_dof_handler</td><td>The dof handler associated with the void fraction</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">void_fraction_solution</td><td>The solution of the void fraction </td></tr>
   </table>
   </dd>
 </dl>
@@ -486,9 +553,9 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Implements <a class="el" href="classNavierStokesOperatorBase.html#a9f3bb8de4716c95844cbdf35272b30a6">NavierStokesOperatorBase&lt; dim, number &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8cc_source.html#l00121">121</a> of file <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8cc_source.html">fluid_dynamics_vans_matrix_free_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8cc_source.html#l00189">189</a> of file <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8cc_source.html">fluid_dynamics_vans_matrix_free_operators.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="time__integration__utilities_8h_source.html#l00042">is_bdf()</a>, and <a class="el" href="multiphysics_8h_source.html#l00014">void_fraction</a>.</p>
+<p class="reference">References <a class="el" href="time__integration__utilities_8h_source.html#l00041">is_bdf()</a>, and <a class="el" href="multiphysics_8h_source.html#l00014">void_fraction</a>.</p>
 
 </div>
 </div>
@@ -530,7 +597,7 @@ template&lt;int dim, typename number &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8cc_source.html#l00008">8</a> of file <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8cc_source.html">fluid_dynamics_vans_matrix_free_operators.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00733">NavierStokesOperatorBase&lt; dim, number &gt;::evaluate_non_linear_term_and_calculate_tau()</a>, and <a class="el" href="structParameters_1_1Stabilization.html#aa349ab6e7ab2df88077df91d4707a4baaae21e5838883a96aab921c84e14383bb">Parameters::Stabilization::pspg_supg</a>.</p>
+<p class="reference">References <a class="el" href="fluid__dynamics__matrix__free__operators_8cc_source.html#l00769">NavierStokesOperatorBase&lt; dim, number &gt;::evaluate_non_linear_term_and_calculate_tau()</a>, and <a class="el" href="structParameters_1_1Stabilization.html#a7f67c17b0ca688dd966290f8610583bbaae21e5838883a96aab921c84e14383bb">Parameters::Stabilization::pspg_supg</a>.</p>
 
 </div>
 </div>
@@ -596,9 +663,9 @@ template&lt;int dim, typename number &gt; </div>
 
 <p>Implements <a class="el" href="classNavierStokesOperatorBase.html#a1d289e3cf780010e8be1f75d4b027194">NavierStokesOperatorBase&lt; dim, number &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8cc_source.html#l00326">326</a> of file <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8cc_source.html">fluid_dynamics_vans_matrix_free_operators.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8cc_source.html#l00406">406</a> of file <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8cc_source.html">fluid_dynamics_vans_matrix_free_operators.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="time__integration__utilities_8h_source.html#l00042">is_bdf()</a>, and <a class="el" href="multiphysics_8h_source.html#l00014">void_fraction</a>.</p>
+<p class="reference">References <a class="el" href="time__integration__utilities_8h_source.html#l00041">is_bdf()</a>, and <a class="el" href="multiphysics_8h_source.html#l00014">void_fraction</a>.</p>
 
 </div>
 </div>
@@ -626,7 +693,7 @@ template&lt;int dim, typename number &gt; </div>
 </div><div class="memdoc">
 <p>Internal copy of the CFD-DEM parameters. This is used for grad-div stabilization, but also to switch between form A and B of the VANS equations. </p>
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8h_source.html#l00115">115</a> of file <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8h_source.html">fluid_dynamics_vans_matrix_free_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8h_source.html#l00140">140</a> of file <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8h_source.html">fluid_dynamics_vans_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -653,7 +720,34 @@ template&lt;int dim, typename number &gt; </div>
 </div><div class="memdoc">
 <p>Table with correct alignment for vectorization to store the values of the grad-div gamma parameter </p>
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8h_source.html#l00110">110</a> of file <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8h_source.html">fluid_dynamics_vans_matrix_free_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8h_source.html#l00135">135</a> of file <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8h_source.html">fluid_dynamics_vans_matrix_free_operators.h</a>.</p>
+
+</div>
+</div>
+<a id="a34695b17980cfa6c0fc915025960319f" name="a34695b17980cfa6c0fc915025960319f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34695b17980cfa6c0fc915025960319f">&#9670;&#160;</a></span>particle_fluid_force</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename number &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Table&lt;2, Tensor&lt;1, dim, VectorizedArray&lt;number&gt; &gt; &gt; <a class="el" href="classVANSOperator.html">VANSOperator</a>&lt; dim, number &gt;::particle_fluid_force</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Table with correct alignment for vectorization to store the values of the particle-fluid forces. These are the resulting forces applied on the particles due to hydrodynamic interaction, normalized by the volume of the cells. </p>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8h_source.html#l00131">131</a> of file <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8h_source.html">fluid_dynamics_vans_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -680,7 +774,7 @@ template&lt;int dim, typename number &gt; </div>
 </div><div class="memdoc">
 <p>Table with correct alignment for vectorization to store the values of the void fraction </p>
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8h_source.html#l00102">102</a> of file <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8h_source.html">fluid_dynamics_vans_matrix_free_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8h_source.html#l00121">121</a> of file <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8h_source.html">fluid_dynamics_vans_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>
@@ -707,7 +801,7 @@ template&lt;int dim, typename number &gt; </div>
 </div><div class="memdoc">
 <p>Table with correct alignment for vectorization to store the values of the void fraction gradient </p>
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8h_source.html#l00106">106</a> of file <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8h_source.html">fluid_dynamics_vans_matrix_free_operators.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8h_source.html#l00125">125</a> of file <a class="el" href="fluid__dynamics__vans__matrix__free__operators_8h_source.html">fluid_dynamics_vans_matrix_free_operators.h</a>.</p>
 
 </div>
 </div>

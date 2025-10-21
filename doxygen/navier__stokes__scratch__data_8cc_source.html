@@ -111,7 +111,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  this-&gt;n_dofs     = fe_values.get_fe().n_dofs_per_cell();</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <span class="comment">// Initialize arrays related to quadrature</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  this-&gt;JxW = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  this-&gt;JxW.reinit(n_q_points);</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="comment">// Initialize component array</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  this-&gt;components = std::vector&lt;unsigned int&gt;(n_dofs);</div>
@@ -156,282 +156,282 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                                     std::vector&lt;double&gt;(n_q_points));</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="comment">// Initialize arrays related to shape functions</span></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="comment">// Velocity shape functions</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  this-&gt;phi_u = std::vector&lt;std::vector&lt;Tensor&lt;1, dim&gt;&gt;&gt;(</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    n_q_points, std::vector&lt;Tensor&lt;1, dim&gt;&gt;(n_dofs));</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  this-&gt;grad_phi_u = std::vector&lt;std::vector&lt;Tensor&lt;2, dim&gt;&gt;&gt;(</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    n_q_points, std::vector&lt;Tensor&lt;2, dim&gt;&gt;(n_dofs));</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  this-&gt;div_phi_u =</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    std::vector&lt;std::vector&lt;double&gt;&gt;(n_q_points, std::vector&lt;double&gt;(n_dofs));</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  this-&gt;hess_phi_u = std::vector&lt;std::vector&lt;Tensor&lt;3, dim&gt;&gt;&gt;(</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    n_q_points, std::vector&lt;Tensor&lt;3, dim&gt;&gt;(n_dofs));</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  this-&gt;laplacian_phi_u = std::vector&lt;std::vector&lt;Tensor&lt;1, dim&gt;&gt;&gt;(</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    n_q_points, std::vector&lt;Tensor&lt;1, dim&gt;&gt;(n_dofs));</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="comment">// Pressure shape functions</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  this-&gt;phi_p =</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    std::vector&lt;std::vector&lt;double&gt;&gt;(n_q_points, std::vector&lt;double&gt;(n_dofs));</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  this-&gt;grad_phi_p = std::vector&lt;std::vector&lt;Tensor&lt;1, dim&gt;&gt;&gt;(</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    n_q_points, std::vector&lt;Tensor&lt;1, dim&gt;&gt;(n_dofs));</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="comment">// Physical properties</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  fields.insert(</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    std::pair&lt;<a class="code hl_enumeration" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a>, std::vector&lt;double&gt;&gt;(<a class="code hl_enumvalue" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58a8e7f8389b914e827058d694b31468b3a">field::pressure</a>, n_q_points));</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  fields.insert(</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    std::pair&lt;<a class="code hl_enumeration" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a>, std::vector&lt;double&gt;&gt;(<a class="code hl_enumvalue" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58a9c093e9ca22af8657a0bf5280a298a55">field::shear_rate</a>, n_q_points));</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  density                               = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  dynamic_viscosity                     = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  kinematic_viscosity                   = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  dynamic_viscosity_for_stabilization   = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  kinematic_viscosity_for_stabilization = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  thermal_expansion                     = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  grad_kinematic_viscosity_shear_rate   = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  previous_density =</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    std::vector&lt;std::vector&lt;double&gt;&gt;(<a class="code hl_function" href="bdf_8h.html#a20abc47ca7441007f8923c529000ace5">maximum_number_of_previous_solutions</a>(),</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                                     std::vector&lt;double&gt;(this-&gt;n_q_points));</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  this-&gt;phi_u.reinit(n_q_points, n_dofs);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  this-&gt;grad_phi_u.reinit(n_q_points, n_dofs);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  this-&gt;div_phi_u.reinit(n_q_points, n_dofs);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  this-&gt;hess_phi_u.reinit(n_q_points, n_dofs);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  this-&gt;laplacian_phi_u.reinit(n_q_points, n_dofs);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="comment">// Pressure shape functions</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  this-&gt;phi_p.reinit(n_q_points, n_dofs);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  this-&gt;grad_phi_p.reinit(n_q_points, n_dofs);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="comment">// Physical properties</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  fields.insert(</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    std::pair&lt;<a class="code hl_enumeration" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a>, std::vector&lt;double&gt;&gt;(<a class="code hl_enumvalue" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58a8e7f8389b914e827058d694b31468b3a">field::pressure</a>, n_q_points));</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  fields.insert(</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    std::pair&lt;<a class="code hl_enumeration" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a>, std::vector&lt;double&gt;&gt;(<a class="code hl_enumvalue" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58a9c093e9ca22af8657a0bf5280a298a55">field::shear_rate</a>, n_q_points));</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  density                               = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  dynamic_viscosity                     = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  kinematic_viscosity                   = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  dynamic_viscosity_for_stabilization   = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  kinematic_viscosity_for_stabilization = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  thermal_expansion                     = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  grad_kinematic_viscosity_shear_rate   = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  previous_density =</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    std::vector&lt;std::vector&lt;double&gt;&gt;(<a class="code hl_function" href="bdf_8h.html#a20abc47ca7441007f8923c529000ace5">maximum_number_of_previous_solutions</a>(),</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                                     std::vector&lt;double&gt;(this-&gt;n_q_points));</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}</div>
 </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00102" data-start="{" data-end="}">
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classNavierStokesScratchData.html#aa3ac2a1e98dd07b62ee49f808642ce09">  102</a></span><a class="code hl_function" href="classNavierStokesScratchData.html#aa3ac2a1e98dd07b62ee49f808642ce09">NavierStokesScratchData&lt;dim&gt;::enable_vof</a>(</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="keyword">const</span> FiniteElement&lt;dim&gt;          &amp;fe,</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  <span class="keyword">const</span> Quadrature&lt;dim&gt;             &amp;quadrature,</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keyword">const</span> Mapping&lt;dim&gt;                &amp;mapping,</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <span class="keyword">const</span> <a class="code hl_struct" href="structParameters_1_1VOF__PhaseFilter.html">Parameters::VOF_PhaseFilter</a> &amp;phase_filter_parameters)</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>{</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  gather_vof    = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  fe_values_vof = std::make_shared&lt;FEValues&lt;dim&gt;&gt;(</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    mapping, fe, quadrature, update_values | update_gradients);</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <span class="comment">// Allocate VOF values</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  phase_values          = std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  filtered_phase_values = std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  previous_phase_values =</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    std::vector&lt;std::vector&lt;double&gt;&gt;(<a class="code hl_function" href="bdf_8h.html#a20abc47ca7441007f8923c529000ace5">maximum_number_of_previous_solutions</a>(),</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                                     std::vector&lt;double&gt;(this-&gt;n_q_points));</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="comment">// For STF calculation</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  phase_gradient_values = std::vector&lt;Tensor&lt;1, dim&gt;&gt;(this-&gt;n_q_points);</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  filtered_phase_gradient_values =</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    std::vector&lt;Tensor&lt;1, dim&gt;&gt;(this-&gt;n_q_points);</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  <span class="comment">// Allocate physical properties</span></div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  density_0                             = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  density_1                             = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  dynamic_viscosity_0                   = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  dynamic_viscosity_1                   = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  dynamic_viscosity_for_stabilization_0 = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  dynamic_viscosity_for_stabilization_1 = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  thermal_expansion_0                   = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  thermal_expansion_1                   = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  surface_tension                       = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  surface_tension_gradient              = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  compressibility_multiplier            = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  <span class="comment">// Create filter</span></div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  filter = <a class="code hl_function" href="classVolumeOfFluidFilterBase.html#a87286b158579e34a40627510e9824536">VolumeOfFluidFilterBase::model_cast</a>(phase_filter_parameters);</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>}</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00095" data-start="{" data-end="}">
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="classNavierStokesScratchData.html#aa3ac2a1e98dd07b62ee49f808642ce09">   95</a></span><a class="code hl_function" href="classNavierStokesScratchData.html#aa3ac2a1e98dd07b62ee49f808642ce09">NavierStokesScratchData&lt;dim&gt;::enable_vof</a>(</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="keyword">const</span> FiniteElement&lt;dim&gt;          &amp;fe,</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keyword">const</span> Quadrature&lt;dim&gt;             &amp;quadrature,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <span class="keyword">const</span> Mapping&lt;dim&gt;                &amp;mapping,</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="keyword">const</span> <a class="code hl_struct" href="structParameters_1_1VOF__PhaseFilter.html">Parameters::VOF_PhaseFilter</a> &amp;phase_filter_parameters)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>{</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  gather_vof    = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  fe_values_vof = std::make_shared&lt;FEValues&lt;dim&gt;&gt;(</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    mapping, fe, quadrature, update_values | update_gradients);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="comment">// Allocate VOF values</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  phase_values          = std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  filtered_phase_values = std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  previous_phase_values =</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    std::vector&lt;std::vector&lt;double&gt;&gt;(<a class="code hl_function" href="bdf_8h.html#a20abc47ca7441007f8923c529000ace5">maximum_number_of_previous_solutions</a>(),</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                                     std::vector&lt;double&gt;(this-&gt;n_q_points));</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <span class="comment">// For STF calculation</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  phase_gradient_values = std::vector&lt;Tensor&lt;1, dim&gt;&gt;(this-&gt;n_q_points);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  filtered_phase_gradient_values =</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    std::vector&lt;Tensor&lt;1, dim&gt;&gt;(this-&gt;n_q_points);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  <span class="comment">// Allocate physical properties</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  density_0                             = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  density_1                             = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  dynamic_viscosity_0                   = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  dynamic_viscosity_1                   = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  dynamic_viscosity_for_stabilization_0 = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  dynamic_viscosity_for_stabilization_1 = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  thermal_expansion_0                   = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  thermal_expansion_1                   = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  surface_tension                       = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  surface_tension_gradient              = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  compressibility_multiplier            = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <span class="comment">// Create filter</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  filter = <a class="code hl_function" href="classVolumeOfFluidFilterBase.html#a87286b158579e34a40627510e9824536">VolumeOfFluidFilterBase::model_cast</a>(phase_filter_parameters);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>}</div>
 </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00143" data-start="{" data-end="}">
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="classNavierStokesScratchData.html#a92fe89f9886104997f908b82f4b1ea2d">  143</a></span><a class="code hl_function" href="classNavierStokesScratchData.html#aa3ac2a1e98dd07b62ee49f808642ce09">NavierStokesScratchData&lt;dim&gt;::enable_vof</a>(</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  <span class="keyword">const</span> FiniteElement&lt;dim&gt;                       &amp;fe,</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>  <span class="keyword">const</span> Quadrature&lt;dim&gt;                          &amp;quadrature,</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <span class="keyword">const</span> Mapping&lt;dim&gt;                             &amp;mapping,</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  <span class="keyword">const</span> std::shared_ptr&lt;VolumeOfFluidFilterBase&gt; &amp;filter)</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>{</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  gather_vof    = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  fe_values_vof = std::make_shared&lt;FEValues&lt;dim&gt;&gt;(</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    mapping, fe, quadrature, update_values | update_gradients);</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  <span class="comment">// Allocate VOF values</span></div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  phase_values          = std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  filtered_phase_values = std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  previous_phase_values =</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    std::vector&lt;std::vector&lt;double&gt;&gt;(<a class="code hl_function" href="bdf_8h.html#a20abc47ca7441007f8923c529000ace5">maximum_number_of_previous_solutions</a>(),</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                                     std::vector&lt;double&gt;(this-&gt;n_q_points));</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  <span class="comment">// For STF calculation</span></div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  phase_gradient_values = std::vector&lt;Tensor&lt;1, dim&gt;&gt;(this-&gt;n_q_points);</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  filtered_phase_gradient_values =</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    std::vector&lt;Tensor&lt;1, dim&gt;&gt;(this-&gt;n_q_points);</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  <span class="comment">// Allocate physical properties</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  density_0                             = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  density_1                             = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  dynamic_viscosity_0                   = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  dynamic_viscosity_1                   = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  dynamic_viscosity_for_stabilization_0 = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  dynamic_viscosity_for_stabilization_1 = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  thermal_expansion_0                   = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  thermal_expansion_1                   = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  surface_tension                       = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  surface_tension_gradient              = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  compressibility_multiplier            = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  <span class="comment">// Create filter</span></div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  this-&gt;filter = filter;</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>}</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00136" data-start="{" data-end="}">
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="classNavierStokesScratchData.html#a92fe89f9886104997f908b82f4b1ea2d">  136</a></span><a class="code hl_function" href="classNavierStokesScratchData.html#aa3ac2a1e98dd07b62ee49f808642ce09">NavierStokesScratchData&lt;dim&gt;::enable_vof</a>(</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  <span class="keyword">const</span> FiniteElement&lt;dim&gt;                       &amp;fe,</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  <span class="keyword">const</span> Quadrature&lt;dim&gt;                          &amp;quadrature,</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  <span class="keyword">const</span> Mapping&lt;dim&gt;                             &amp;mapping,</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <span class="keyword">const</span> std::shared_ptr&lt;VolumeOfFluidFilterBase&gt; &amp;filter)</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>{</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  gather_vof    = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  fe_values_vof = std::make_shared&lt;FEValues&lt;dim&gt;&gt;(</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    mapping, fe, quadrature, update_values | update_gradients);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <span class="comment">// Allocate VOF values</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  phase_values          = std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  filtered_phase_values = std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  previous_phase_values =</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    std::vector&lt;std::vector&lt;double&gt;&gt;(<a class="code hl_function" href="bdf_8h.html#a20abc47ca7441007f8923c529000ace5">maximum_number_of_previous_solutions</a>(),</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                                     std::vector&lt;double&gt;(this-&gt;n_q_points));</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <span class="comment">// For STF calculation</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  phase_gradient_values = std::vector&lt;Tensor&lt;1, dim&gt;&gt;(this-&gt;n_q_points);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  filtered_phase_gradient_values =</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    std::vector&lt;Tensor&lt;1, dim&gt;&gt;(this-&gt;n_q_points);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <span class="comment">// Allocate physical properties</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  density_0                             = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  density_1                             = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  dynamic_viscosity_0                   = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  dynamic_viscosity_1                   = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  dynamic_viscosity_for_stabilization_0 = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  dynamic_viscosity_for_stabilization_1 = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  thermal_expansion_0                   = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  thermal_expansion_1                   = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  surface_tension                       = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  surface_tension_gradient              = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  compressibility_multiplier            = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <span class="comment">// Create filter</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  this-&gt;filter = filter;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>}</div>
 </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00184" data-start="{" data-end="}">
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="classNavierStokesScratchData.html#a126d7e05decf1cd0ab526d786a86e1af">  184</a></span><a class="code hl_function" href="classNavierStokesScratchData.html#a126d7e05decf1cd0ab526d786a86e1af">NavierStokesScratchData&lt;dim&gt;::enable_cahn_hilliard</a>(</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  <span class="keyword">const</span> FiniteElement&lt;dim&gt;       &amp;fe,</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  <span class="keyword">const</span> Quadrature&lt;dim&gt;          &amp;quadrature,</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <span class="keyword">const</span> Mapping&lt;dim&gt;             &amp;mapping,</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <span class="keyword">const</span> <a class="code hl_struct" href="structParameters_1_1CahnHilliard.html">Parameters::CahnHilliard</a> &amp;cahn_hilliard_parameters)</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>{</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  gather_cahn_hilliard    = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  fe_values_cahn_hilliard = std::make_shared&lt;FEValues&lt;dim&gt;&gt;(</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    mapping, fe, quadrature, update_values | update_gradients);</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  <span class="comment">// Allocate CahnHilliard values</span></div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  phase_order_cahn_hilliard_values = std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  chemical_potential_cahn_hilliard_values =</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  <span class="comment">// Allocate CahnHilliard gradients</span></div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  phase_order_cahn_hilliard_gradients =</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    std::vector&lt;Tensor&lt;1, dim&gt;&gt;(this-&gt;n_q_points);</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  <span class="comment">// For STF calculation</span></div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  filtered_phase_order_cahn_hilliard_values =</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  fields.insert(</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    std::pair&lt;<a class="code hl_enumeration" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a>, std::vector&lt;double&gt;&gt;(<a class="code hl_enumvalue" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58a744f7cf7a054452bef69c506e47b4464">field::phase_order_cahn_hilliard</a>,</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                                          n_q_points));</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  fields.insert(std::pair&lt;<a class="code hl_enumeration" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a>, std::vector&lt;double&gt;&gt;(</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <a class="code hl_enumvalue" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58a2d397f452fbf87274e898b191306e373">field::phase_order_cahn_hilliard_filtered</a>, n_q_points));</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  <span class="comment">// Allocate physical properties</span></div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  density_0                             = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  density_1                             = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  dynamic_viscosity_0                   = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  dynamic_viscosity_1                   = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  dynamic_viscosity_for_stabilization_0 = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  dynamic_viscosity_for_stabilization_1 = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  thermal_expansion_0                   = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  thermal_expansion_1                   = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  surface_tension                       = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>  surface_tension_gradient              = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>  <span class="comment">// Create filter</span></div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>  cahn_hilliard_filter =</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <a class="code hl_function" href="classCahnHilliardFilterBase.html#a3768b77608aa7e5f45fe38efdc5827f4">CahnHilliardFilterBase::model_cast</a>(cahn_hilliard_parameters);</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>}</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00177" data-start="{" data-end="}">
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="classNavierStokesScratchData.html#a126d7e05decf1cd0ab526d786a86e1af">  177</a></span><a class="code hl_function" href="classNavierStokesScratchData.html#a126d7e05decf1cd0ab526d786a86e1af">NavierStokesScratchData&lt;dim&gt;::enable_cahn_hilliard</a>(</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <span class="keyword">const</span> FiniteElement&lt;dim&gt;       &amp;fe,</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  <span class="keyword">const</span> Quadrature&lt;dim&gt;          &amp;quadrature,</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  <span class="keyword">const</span> Mapping&lt;dim&gt;             &amp;mapping,</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  <span class="keyword">const</span> <a class="code hl_struct" href="structParameters_1_1CahnHilliard.html">Parameters::CahnHilliard</a> &amp;cahn_hilliard_parameters)</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>{</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  gather_cahn_hilliard    = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>  fe_values_cahn_hilliard = std::make_shared&lt;FEValues&lt;dim&gt;&gt;(</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    mapping, fe, quadrature, update_values | update_gradients);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <span class="comment">// Allocate CahnHilliard values</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  phase_order_cahn_hilliard_values = std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  chemical_potential_cahn_hilliard_values =</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <span class="comment">// Allocate CahnHilliard gradients</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  phase_order_cahn_hilliard_gradients =</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    std::vector&lt;Tensor&lt;1, dim&gt;&gt;(this-&gt;n_q_points);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  <span class="comment">// For STF calculation</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>  filtered_phase_order_cahn_hilliard_values =</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  fields.insert(</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    std::pair&lt;<a class="code hl_enumeration" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a>, std::vector&lt;double&gt;&gt;(<a class="code hl_enumvalue" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58a744f7cf7a054452bef69c506e47b4464">field::phase_order_cahn_hilliard</a>,</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                                          n_q_points));</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  fields.insert(std::pair&lt;<a class="code hl_enumeration" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a>, std::vector&lt;double&gt;&gt;(</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <a class="code hl_enumvalue" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58a2d397f452fbf87274e898b191306e373">field::phase_order_cahn_hilliard_filtered</a>, n_q_points));</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  <span class="comment">// Allocate physical properties</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  density_0                             = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  density_1                             = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  dynamic_viscosity_0                   = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  dynamic_viscosity_1                   = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  dynamic_viscosity_for_stabilization_0 = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>  dynamic_viscosity_for_stabilization_1 = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  thermal_expansion_0                   = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  thermal_expansion_1                   = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  surface_tension                       = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  surface_tension_gradient              = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  <span class="comment">// Create filter</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  cahn_hilliard_filter =</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <a class="code hl_function" href="classCahnHilliardFilterBase.html#a3768b77608aa7e5f45fe38efdc5827f4">CahnHilliardFilterBase::model_cast</a>(cahn_hilliard_parameters);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>}</div>
 </div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00232" data-start="{" data-end="}">
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno"><a class="line" href="classNavierStokesScratchData.html#a73f68215f2c16e0e5a4ef75350ebf1bd">  232</a></span><a class="code hl_function" href="classNavierStokesScratchData.html#a126d7e05decf1cd0ab526d786a86e1af">NavierStokesScratchData&lt;dim&gt;::enable_cahn_hilliard</a>(</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  <span class="keyword">const</span> FiniteElement&lt;dim&gt;                      &amp;fe,</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>  <span class="keyword">const</span> Quadrature&lt;dim&gt;                         &amp;quadrature,</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  <span class="keyword">const</span> Mapping&lt;dim&gt;                            &amp;mapping,</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>  <span class="keyword">const</span> std::shared_ptr&lt;CahnHilliardFilterBase&gt; &amp;cahn_hilliard_filter)</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>{</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>  gather_cahn_hilliard    = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>  fe_values_cahn_hilliard = std::make_shared&lt;FEValues&lt;dim&gt;&gt;(</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    mapping, fe, quadrature, update_values | update_gradients);</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>  <span class="comment">// Allocate CahnHilliard values</span></div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>  phase_order_cahn_hilliard_values = std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>  chemical_potential_cahn_hilliard_values =</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>  <span class="comment">// Allocate CahnHilliard gradients</span></div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>  phase_order_cahn_hilliard_gradients =</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    std::vector&lt;Tensor&lt;1, dim&gt;&gt;(this-&gt;n_q_points);</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  <span class="comment">// For STF calculation</span></div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>  filtered_phase_order_cahn_hilliard_values =</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00225" data-start="{" data-end="}">
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno"><a class="line" href="classNavierStokesScratchData.html#a73f68215f2c16e0e5a4ef75350ebf1bd">  225</a></span><a class="code hl_function" href="classNavierStokesScratchData.html#a126d7e05decf1cd0ab526d786a86e1af">NavierStokesScratchData&lt;dim&gt;::enable_cahn_hilliard</a>(</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>  <span class="keyword">const</span> FiniteElement&lt;dim&gt;                      &amp;fe,</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>  <span class="keyword">const</span> Quadrature&lt;dim&gt;                         &amp;quadrature,</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  <span class="keyword">const</span> Mapping&lt;dim&gt;                            &amp;mapping,</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  <span class="keyword">const</span> std::shared_ptr&lt;CahnHilliardFilterBase&gt; &amp;cahn_hilliard_filter)</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>{</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  gather_cahn_hilliard    = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>  fe_values_cahn_hilliard = std::make_shared&lt;FEValues&lt;dim&gt;&gt;(</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    mapping, fe, quadrature, update_values | update_gradients);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  <span class="comment">// Allocate CahnHilliard values</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>  phase_order_cahn_hilliard_values = std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  chemical_potential_cahn_hilliard_values =</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  <span class="comment">// Allocate CahnHilliard gradients</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  phase_order_cahn_hilliard_gradients =</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    std::vector&lt;Tensor&lt;1, dim&gt;&gt;(this-&gt;n_q_points);</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>  <span class="comment">// For STF calculation</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>  filtered_phase_order_cahn_hilliard_values =</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>  fields.insert(</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    std::pair&lt;<a class="code hl_enumeration" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a>, std::vector&lt;double&gt;&gt;(<a class="code hl_enumvalue" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58a744f7cf7a054452bef69c506e47b4464">field::phase_order_cahn_hilliard</a>,</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                                          n_q_points));</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>  fields.insert(std::pair&lt;<a class="code hl_enumeration" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a>, std::vector&lt;double&gt;&gt;(</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    <a class="code hl_enumvalue" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58a2d397f452fbf87274e898b191306e373">field::phase_order_cahn_hilliard_filtered</a>, n_q_points));</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>  fields.insert(</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    std::pair&lt;<a class="code hl_enumeration" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a>, std::vector&lt;double&gt;&gt;(<a class="code hl_enumvalue" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58a744f7cf7a054452bef69c506e47b4464">field::phase_order_cahn_hilliard</a>,</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                                          n_q_points));</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>  fields.insert(std::pair&lt;<a class="code hl_enumeration" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a>, std::vector&lt;double&gt;&gt;(</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <a class="code hl_enumvalue" href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58a2d397f452fbf87274e898b191306e373">field::phase_order_cahn_hilliard_filtered</a>, n_q_points));</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>  <span class="comment">// Allocate physical properties</span></div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>  density_0                             = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>  density_1                             = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  dynamic_viscosity_0                   = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>  dynamic_viscosity_1                   = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  dynamic_viscosity_for_stabilization_0 = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>  dynamic_viscosity_for_stabilization_1 = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>  thermal_expansion_0                   = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  thermal_expansion_1                   = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>  surface_tension                       = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>  surface_tension_gradient              = std::vector&lt;double&gt;(n_q_points);</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>  <span class="comment">// Create filter</span></div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  this-&gt;cahn_hilliard_filter = cahn_hilliard_filter;</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>}</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>  <span class="comment">// Allocate physical properties</span></div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>  density_0                             = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>  density_1                             = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>  dynamic_viscosity_0                   = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>  dynamic_viscosity_1                   = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>  dynamic_viscosity_for_stabilization_0 = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>  dynamic_viscosity_for_stabilization_1 = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>  thermal_expansion_0                   = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>  thermal_expansion_1                   = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>  surface_tension                       = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  surface_tension_gradient              = std::vector&lt;double&gt;(n_q_points);</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  <span class="comment">// Create filter</span></div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>  this-&gt;cahn_hilliard_filter = cahn_hilliard_filter;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>}</div>
 </div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00281" data-start="{" data-end="}">
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno"><a class="line" href="classNavierStokesScratchData.html#a6937a49938e44bf91ff473c99e176561">  281</a></span><a class="code hl_function" href="classNavierStokesScratchData.html#a6937a49938e44bf91ff473c99e176561">NavierStokesScratchData&lt;dim&gt;::enable_projected_phase_fraction_gradient</a>(</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>  <span class="keyword">const</span> FiniteElement&lt;dim&gt; &amp;fe_projected_phase_fraction_gradient,</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>  <span class="keyword">const</span> Quadrature&lt;dim&gt;    &amp;quadrature,</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>  <span class="keyword">const</span> Mapping&lt;dim&gt;       &amp;mapping)</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>{</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>  gather_projected_phase_fraction_gradient = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>  fe_values_projected_phase_fraction_gradient =</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    std::make_shared&lt;FEValues&lt;dim&gt;&gt;(mapping,</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                                    fe_projected_phase_fraction_gradient,</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                                    quadrature,</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                                    update_values | update_gradients);</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>  <span class="comment">// phase fraction gradient (PFG)</span></div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>  projected_phase_fraction_gradient_values =</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    std::vector&lt;Tensor&lt;1, dim&gt;&gt;(this-&gt;n_q_points);</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>}</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00274" data-start="{" data-end="}">
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno"><a class="line" href="classNavierStokesScratchData.html#a6937a49938e44bf91ff473c99e176561">  274</a></span><a class="code hl_function" href="classNavierStokesScratchData.html#a6937a49938e44bf91ff473c99e176561">NavierStokesScratchData&lt;dim&gt;::enable_projected_phase_fraction_gradient</a>(</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  <span class="keyword">const</span> FiniteElement&lt;dim&gt; &amp;fe_projected_phase_fraction_gradient,</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>  <span class="keyword">const</span> Quadrature&lt;dim&gt;    &amp;quadrature,</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>  <span class="keyword">const</span> Mapping&lt;dim&gt;       &amp;mapping)</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>{</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>  gather_projected_phase_fraction_gradient = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>  fe_values_projected_phase_fraction_gradient =</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    std::make_shared&lt;FEValues&lt;dim&gt;&gt;(mapping,</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                                    fe_projected_phase_fraction_gradient,</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                                    quadrature,</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                                    update_values | update_gradients);</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>  <span class="comment">// phase fraction gradient (PFG)</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>  projected_phase_fraction_gradient_values =</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    std::vector&lt;Tensor&lt;1, dim&gt;&gt;(this-&gt;n_q_points);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>}</div>
 </div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00301" data-start="{" data-end="}">
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno"><a class="line" href="classNavierStokesScratchData.html#a9f3a9b09303fb38071eba70e6392dc0c">  301</a></span><a class="code hl_function" href="classNavierStokesScratchData.html#a9f3a9b09303fb38071eba70e6392dc0c">NavierStokesScratchData&lt;dim&gt;::enable_curvature</a>(</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>  <span class="keyword">const</span> FiniteElement&lt;dim&gt; &amp;fe_curvature,</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>  <span class="keyword">const</span> Quadrature&lt;dim&gt;    &amp;quadrature,</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>  <span class="keyword">const</span> Mapping&lt;dim&gt;       &amp;mapping)</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>{</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>  gather_curvature    = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>  fe_values_curvature = std::make_shared&lt;FEValues&lt;dim&gt;&gt;(</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    mapping, fe_curvature, quadrature, update_values | update_gradients);</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>  <span class="comment">// curvature</span></div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>  curvature_values = std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>}</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00294" data-start="{" data-end="}">
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno"><a class="line" href="classNavierStokesScratchData.html#a9f3a9b09303fb38071eba70e6392dc0c">  294</a></span><a class="code hl_function" href="classNavierStokesScratchData.html#a9f3a9b09303fb38071eba70e6392dc0c">NavierStokesScratchData&lt;dim&gt;::enable_curvature</a>(</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>  <span class="keyword">const</span> FiniteElement&lt;dim&gt; &amp;fe_curvature,</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>  <span class="keyword">const</span> Quadrature&lt;dim&gt;    &amp;quadrature,</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>  <span class="keyword">const</span> Mapping&lt;dim&gt;       &amp;mapping)</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>{</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  gather_curvature    = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  fe_values_curvature = std::make_shared&lt;FEValues&lt;dim&gt;&gt;(</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    mapping, fe_curvature, quadrature, update_values | update_gradients);</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>  <span class="comment">// curvature</span></div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>  curvature_values = std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>}</div>
 </div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span> </div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00317" data-start="{" data-end="}">
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno"><a class="line" href="classNavierStokesScratchData.html#a2c271b97942ba7a74d7f4e9e0c545b6b">  317</a></span><a class="code hl_function" href="classNavierStokesScratchData.html#a2c271b97942ba7a74d7f4e9e0c545b6b">NavierStokesScratchData&lt;dim&gt;::enable_void_fraction</a>(</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>  <span class="keyword">const</span> FiniteElement&lt;dim&gt; &amp;fe,</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>  <span class="keyword">const</span> Quadrature&lt;dim&gt;    &amp;quadrature,</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>  <span class="keyword">const</span> Mapping&lt;dim&gt;       &amp;mapping)</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>{</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>  gather_void_fraction    = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  fe_values_void_fraction = std::make_shared&lt;FEValues&lt;dim&gt;&gt;(</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    mapping, fe, quadrature, update_values | update_gradients);</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00310" data-start="{" data-end="}">
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno"><a class="line" href="classNavierStokesScratchData.html#a2c271b97942ba7a74d7f4e9e0c545b6b">  310</a></span><a class="code hl_function" href="classNavierStokesScratchData.html#a2c271b97942ba7a74d7f4e9e0c545b6b">NavierStokesScratchData&lt;dim&gt;::enable_void_fraction</a>(</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>  <span class="keyword">const</span> FiniteElement&lt;dim&gt; &amp;fe,</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>  <span class="keyword">const</span> Quadrature&lt;dim&gt;    &amp;quadrature,</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>  <span class="keyword">const</span> Mapping&lt;dim&gt;       &amp;mapping)</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>{</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>  gather_void_fraction = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>  <span class="comment">// Contrary to the other physics, we enable the calculation of the JxW values</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>  <span class="comment">// on the void fraction</span></div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>  fe_values_void_fraction =</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    std::make_shared&lt;FEValues&lt;dim&gt;&gt;(mapping,</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                                    fe,</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                                    quadrature,</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                                    update_values | update_gradients |</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                                      update_JxW_values);</div>
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>  <span class="comment">// Void Fraction</span></div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>  void_fraction_values = std::vector&lt;double&gt;(this-&gt;n_q_points);</div>
@@ -798,134 +798,141 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>      <span class="comment">// Set the particle_fluid_interactions properties and vectors to 0</span></div>
 <div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> d = 0; d &lt; dim; ++d)</div>
 <div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>        {</div>
-<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>          particle_properties</div>
-<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>            [<a class="code hl_enumvalue" href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fa5eb09b7710337e3c52bdee099ccf708b">DEM::CFDDEMProperties::PropertiesIndex::fem_force_x</a> + d] = 0.;</div>
-<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>          particle_properties</div>
-<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>            [<a class="code hl_enumvalue" href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fa0b120504b8591bd6814e4291c614e7ae">DEM::CFDDEMProperties::PropertiesIndex::fem_torque_x</a> + d] = 0.;</div>
-<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>          undisturbed_flow_force[d]                                    = 0.;</div>
-<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>        }</div>
-<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>    }</div>
-<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>}</div>
+<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>          particle_properties[DEM::CFDDEMProperties::PropertiesIndex::</div>
+<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>                                fem_force_two_way_coupling_x +</div>
+<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>                              d] = 0.;</div>
+<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>          particle_properties[DEM::CFDDEMProperties::PropertiesIndex::</div>
+<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>                                fem_force_one_way_coupling_x +</div>
+<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>                              d] = 0.;</div>
+<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>          particle_properties</div>
+<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>            [<a class="code hl_enumvalue" href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2faacc103a5acb9c524c2405a52ce420416">DEM::CFDDEMProperties::PropertiesIndex::fem_drag_x</a> + d] = 0.;</div>
+<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>          particle_properties</div>
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>            [<a class="code hl_enumvalue" href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fa0b120504b8591bd6814e4291c614e7ae">DEM::CFDDEMProperties::PropertiesIndex::fem_torque_x</a> + d] = 0.;</div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>          undisturbed_flow_force[d]                                    = 0.;</div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>        }</div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>    }</div>
+<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>}</div>
 </div>
-<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span> </div>
-<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
-<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span><span class="keywordtype">double</span></div>
-<div class="foldopen" id="foldopen00690" data-start="{" data-end="}">
-<div class="line"><a id="l00690" name="l00690"></a><span class="lineno"><a class="line" href="classNavierStokesScratchData.html#af8ac55b44d36bba2da5edb79754de69b">  690</a></span><a class="code hl_function" href="classNavierStokesScratchData.html#af8ac55b44d36bba2da5edb79754de69b">NavierStokesScratchData&lt;dim&gt;::extract_particle_properties</a>()</div>
-<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>{</div>
-<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>  average_particle_velocity = 0;</div>
-<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>  <span class="comment">// Loop over particles in cell</span></div>
-<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>  <span class="keywordtype">double</span>       total_particle_volume = 0;</div>
-<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i_particle            = 0;</div>
-<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span> </div>
-<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;particle : pic)</div>
-<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>    {</div>
-<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>      <span class="keyword">auto</span> particle_properties = particle.get_properties();</div>
-<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>      <span class="comment">// Stores the values of particle velocity in a tensor</span></div>
-<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>      particle_velocity[i_particle][0] =</div>
-<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>        particle_properties[<a class="code hl_enumvalue" href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fa827460368a1344eadd594a4b96171190">DEM::CFDDEMProperties::PropertiesIndex::v_x</a>];</div>
-<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>      particle_velocity[i_particle][1] =</div>
-<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>        particle_properties[<a class="code hl_enumvalue" href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fa4af26e866f40c8a1bd22036c7269522a">DEM::CFDDEMProperties::PropertiesIndex::v_y</a>];</div>
-<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>      <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (dim == 3)</div>
-<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>        particle_velocity[i_particle][2] =</div>
-<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>          particle_properties[<a class="code hl_enumvalue" href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fa9413149ffc733a83556c8164b7844d3d">DEM::CFDDEMProperties::PropertiesIndex::v_z</a>];</div>
-<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span> </div>
-<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>      <span class="keywordflow">if</span> (!interpolated_void_fraction)</div>
-<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>        total_particle_volume +=</div>
-<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>          M_PI *</div>
-<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>          pow(particle_properties[<a class="code hl_enumvalue" href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fac31564c0282259a90fa3036a0f7993e5">DEM::CFDDEMProperties::PropertiesIndex::dp</a>],</div>
-<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>              dim) /</div>
-<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>          (2 * dim);</div>
-<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span> </div>
-<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>      average_particle_velocity += particle_velocity[i_particle];</div>
-<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>      i_particle++;</div>
-<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>    }</div>
-<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>  number_of_particles = i_particle;</div>
-<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>  <span class="keywordflow">if</span> (number_of_particles != 0)</div>
-<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>    { <span class="comment">// Calculate the average particle velocity within the cell</span></div>
-<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>      average_particle_velocity =</div>
-<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>        average_particle_velocity / number_of_particles;</div>
+<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span> </div>
+<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
+<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span><span class="keywordtype">double</span></div>
+<div class="foldopen" id="foldopen00696" data-start="{" data-end="}">
+<div class="line"><a id="l00696" name="l00696"></a><span class="lineno"><a class="line" href="classNavierStokesScratchData.html#af8ac55b44d36bba2da5edb79754de69b">  696</a></span><a class="code hl_function" href="classNavierStokesScratchData.html#af8ac55b44d36bba2da5edb79754de69b">NavierStokesScratchData&lt;dim&gt;::extract_particle_properties</a>()</div>
+<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>{</div>
+<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>  average_particle_velocity = 0;</div>
+<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>  <span class="comment">// Loop over particles in cell</span></div>
+<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>  <span class="keywordtype">double</span>       total_particle_volume = 0;</div>
+<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i_particle            = 0;</div>
+<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span> </div>
+<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;particle : pic)</div>
+<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>    {</div>
+<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>      <span class="keyword">auto</span> particle_properties = particle.get_properties();</div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>      <span class="comment">// Stores the values of particle velocity in a tensor</span></div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>      particle_velocity[i_particle][0] =</div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>        particle_properties[<a class="code hl_enumvalue" href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fa827460368a1344eadd594a4b96171190">DEM::CFDDEMProperties::PropertiesIndex::v_x</a>];</div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>      particle_velocity[i_particle][1] =</div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>        particle_properties[<a class="code hl_enumvalue" href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fa4af26e866f40c8a1bd22036c7269522a">DEM::CFDDEMProperties::PropertiesIndex::v_y</a>];</div>
+<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>      <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (dim == 3)</div>
+<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>        particle_velocity[i_particle][2] =</div>
+<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>          particle_properties[<a class="code hl_enumvalue" href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fa9413149ffc733a83556c8164b7844d3d">DEM::CFDDEMProperties::PropertiesIndex::v_z</a>];</div>
+<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span> </div>
+<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>      <span class="keywordflow">if</span> (!interpolated_void_fraction)</div>
+<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>        total_particle_volume +=</div>
+<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>          M_PI *</div>
+<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>          pow(particle_properties[<a class="code hl_enumvalue" href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fac31564c0282259a90fa3036a0f7993e5">DEM::CFDDEMProperties::PropertiesIndex::dp</a>],</div>
+<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>              dim) /</div>
+<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>          (2 * dim);</div>
+<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span> </div>
+<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>      average_particle_velocity += particle_velocity[i_particle];</div>
+<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>      i_particle++;</div>
 <div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>    }</div>
-<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>  <span class="keywordflow">return</span> total_particle_volume;</div>
-<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>}</div>
+<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>  number_of_particles = i_particle;</div>
+<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>  <span class="keywordflow">if</span> (number_of_particles != 0)</div>
+<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>    { <span class="comment">// Calculate the average particle velocity within the cell</span></div>
+<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>      average_particle_velocity =</div>
+<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>        average_particle_velocity / number_of_particles;</div>
+<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>    }</div>
+<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>  <span class="keywordflow">return</span> total_particle_volume;</div>
+<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>}</div>
 </div>
-<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span> </div>
-<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
-<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00730" data-start="{" data-end="}">
-<div class="line"><a id="l00730" name="l00730"></a><span class="lineno"><a class="line" href="classNavierStokesScratchData.html#af72659fbca48ccb8a9a76fcacef290ee">  730</a></span><a class="code hl_function" href="classNavierStokesScratchData.html#af72659fbca48ccb8a9a76fcacef290ee">NavierStokesScratchData&lt;dim&gt;::calculate_cell_void_fraction</a>(</div>
-<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>  <span class="keyword">const</span> <span class="keywordtype">double</span> &amp;total_particle_volume)</div>
-<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>{</div>
-<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>  cell_volume = <a class="code hl_function" href="utilities_8h.html#a3d02cb065c32b672c94bb862ecff4431">compute_cell_measure_with_JxW</a>(this-&gt;fe_values.get_JxW_values());</div>
-<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span> </div>
-<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>  <span class="keywordflow">if</span> (!this-&gt;interpolated_void_fraction)</div>
-<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>    {</div>
-<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>      <span class="keywordtype">double</span> cell_void_fraction_bulk = 0;</div>
-<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>      cell_void_fraction_bulk =</div>
-<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>        (cell_volume - total_particle_volume) / cell_volume;</div>
-<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span> </div>
-<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; number_of_particles; ++j)</div>
-<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>        cell_void_fraction[j] = cell_void_fraction_bulk;</div>
-<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>    }</div>
-<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>  <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; number_of_particles; ++j)</div>
-<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>      cell_void_fraction[j] = 0;</div>
-<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>}</div>
+<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span> </div>
+<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
+<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00736" data-start="{" data-end="}">
+<div class="line"><a id="l00736" name="l00736"></a><span class="lineno"><a class="line" href="classNavierStokesScratchData.html#af72659fbca48ccb8a9a76fcacef290ee">  736</a></span><a class="code hl_function" href="classNavierStokesScratchData.html#af72659fbca48ccb8a9a76fcacef290ee">NavierStokesScratchData&lt;dim&gt;::calculate_cell_void_fraction</a>(</div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>  <span class="keyword">const</span> <span class="keywordtype">double</span> &amp;total_particle_volume)</div>
+<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>{</div>
+<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>  cell_volume = <a class="code hl_function" href="utilities_8h.html#a3d02cb065c32b672c94bb862ecff4431">compute_cell_measure_with_JxW</a>(</div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>    this-&gt;fe_values_void_fraction-&gt;get_JxW_values());</div>
+<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span> </div>
+<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>  <span class="keywordflow">if</span> (!this-&gt;interpolated_void_fraction)</div>
+<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>    {</div>
+<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>      <span class="keywordtype">double</span> cell_void_fraction_bulk = 0;</div>
+<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>      cell_void_fraction_bulk =</div>
+<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>        (cell_volume - total_particle_volume) / cell_volume;</div>
+<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span> </div>
+<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; number_of_particles; ++j)</div>
+<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>        cell_void_fraction[j] = cell_void_fraction_bulk;</div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>    }</div>
+<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; number_of_particles; ++j)</div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>      cell_void_fraction[j] = 0;</div>
+<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>}</div>
 </div>
-<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span> </div>
-<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
-<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>Quadrature&lt;dim&gt;</div>
-<div class="foldopen" id="foldopen00751" data-start="{" data-end="}">
-<div class="line"><a id="l00751" name="l00751"></a><span class="lineno"><a class="line" href="classNavierStokesScratchData.html#aa2e6cff4889a98d9ed713209ad8e9a06">  751</a></span><a class="code hl_function" href="classNavierStokesScratchData.html#aa2e6cff4889a98d9ed713209ad8e9a06">NavierStokesScratchData&lt;dim&gt;::gather_particles_reference_location</a>()</div>
-<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>{</div>
-<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>  <span class="comment">// Create local vector that will be used to spawn an in-situ quadrature to</span></div>
-<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>  <span class="comment">// interpolate at the locations of the particles</span></div>
-<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>  std::vector&lt;Point&lt;dim&gt;&gt; particle_reference_location(number_of_particles);</div>
-<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>  std::vector&lt;double&gt;     particle_weights(number_of_particles, 1);</div>
-<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>            i_particle = 0;</div>
-<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span> </div>
-<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>  <span class="comment">// Loop over particles in cell and cache their reference location</span></div>
-<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;particle : pic)</div>
-<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>    {</div>
-<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>      <span class="comment">// Store particle positions and weights</span></div>
-<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>      <span class="comment">// Reference location of the particle</span></div>
-<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>      particle_reference_location[i_particle] =</div>
-<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>        particle.get_reference_location();</div>
-<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>      i_particle++;</div>
-<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>    }</div>
-<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span> </div>
-<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>  <span class="comment">// Return a quadrature for the Navier-Stokes equations that is based on the</span></div>
-<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>  <span class="comment">// particle reference location</span></div>
-<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>  <span class="keywordflow">return</span> Quadrature&lt;dim&gt;(particle_reference_location, particle_weights);</div>
-<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>}</div>
+<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span> </div>
+<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
+<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>Quadrature&lt;dim&gt;</div>
+<div class="foldopen" id="foldopen00758" data-start="{" data-end="}">
+<div class="line"><a id="l00758" name="l00758"></a><span class="lineno"><a class="line" href="classNavierStokesScratchData.html#aa2e6cff4889a98d9ed713209ad8e9a06">  758</a></span><a class="code hl_function" href="classNavierStokesScratchData.html#aa2e6cff4889a98d9ed713209ad8e9a06">NavierStokesScratchData&lt;dim&gt;::gather_particles_reference_location</a>()</div>
+<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>{</div>
+<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>  <span class="comment">// Create local vector that will be used to spawn an in-situ quadrature to</span></div>
+<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>  <span class="comment">// interpolate at the locations of the particles</span></div>
+<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>  std::vector&lt;Point&lt;dim&gt;&gt; particle_reference_location(number_of_particles);</div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>  std::vector&lt;double&gt;     particle_weights(number_of_particles, 1);</div>
+<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>            i_particle = 0;</div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span> </div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>  <span class="comment">// Loop over particles in cell and cache their reference location</span></div>
+<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;particle : pic)</div>
+<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>    {</div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>      <span class="comment">// Store particle positions and weights</span></div>
+<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>      <span class="comment">// Reference location of the particle</span></div>
+<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>      particle_reference_location[i_particle] =</div>
+<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>        particle.get_reference_location();</div>
+<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>      i_particle++;</div>
+<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>    }</div>
+<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span> </div>
+<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>  <span class="comment">// Return a quadrature for the Navier-Stokes equations that is based on the</span></div>
+<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>  <span class="comment">// particle reference location</span></div>
+<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>  <span class="keywordflow">return</span> Quadrature&lt;dim&gt;(particle_reference_location, particle_weights);</div>
+<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>}</div>
 </div>
-<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span><span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classNavierStokesScratchData.html">NavierStokesScratchData&lt;2&gt;</a>;</div>
-<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span><span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classNavierStokesScratchData.html">NavierStokesScratchData&lt;3&gt;</a>;</div>
+<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span><span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classNavierStokesScratchData.html">NavierStokesScratchData&lt;2&gt;</a>;</div>
+<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span><span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classNavierStokesScratchData.html">NavierStokesScratchData&lt;3&gt;</a>;</div>
 <div class="ttc" id="abdf_8h_html"><div class="ttname"><a href="bdf_8h.html">bdf.h</a></div></div>
 <div class="ttc" id="abdf_8h_html_a20abc47ca7441007f8923c529000ace5"><div class="ttname"><a href="bdf_8h.html#a20abc47ca7441007f8923c529000ace5">maximum_number_of_previous_solutions</a></div><div class="ttdeci">unsigned int maximum_number_of_previous_solutions()</div><div class="ttdoc">Get the maximum number of previous time steps supposed by the BDF schemes implemented in Lethe.</div><div class="ttdef"><b>Definition</b> <a href="bdf_8h_source.html#l00084">bdf.h:84</a></div></div>
 <div class="ttc" id="aclassCahnHilliardFilterBase_html_a3768b77608aa7e5f45fe38efdc5827f4"><div class="ttname"><a href="classCahnHilliardFilterBase.html#a3768b77608aa7e5f45fe38efdc5827f4">CahnHilliardFilterBase::model_cast</a></div><div class="ttdeci">static std::shared_ptr&lt; CahnHilliardFilterBase &gt; model_cast(const Parameters::CahnHilliard &amp;cahn_hilliard_parameters)</div><div class="ttdoc">Instantiate and return a pointer to a CahnHilliardFilterBase object by casting it to the proper child...</div><div class="ttdef"><b>Definition</b> <a href="cahn__hilliard__filter_8cc_source.html#l00007">cahn_hilliard_filter.cc:7</a></div></div>
-<div class="ttc" id="aclassNavierStokesScratchData_html"><div class="ttname"><a href="classNavierStokesScratchData.html">NavierStokesScratchData</a></div><div class="ttdoc">Class that stores the information required by the assembly procedure for a Navier-Stokes equation....</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8h_source.html#l00055">navier_stokes_scratch_data.h:56</a></div></div>
-<div class="ttc" id="aclassNavierStokesScratchData_html_a126d7e05decf1cd0ab526d786a86e1af"><div class="ttname"><a href="classNavierStokesScratchData.html#a126d7e05decf1cd0ab526d786a86e1af">NavierStokesScratchData::enable_cahn_hilliard</a></div><div class="ttdeci">void enable_cahn_hilliard(const FiniteElement&lt; dim &gt; &amp;fe, const Quadrature&lt; dim &gt; &amp;quadrature, const Mapping&lt; dim &gt; &amp;mapping, const Parameters::CahnHilliard &amp;cahn_hilliard_parameters)</div><div class="ttdoc">enable_cahn_hilliard Enables the collection of the CahnHilliard data by the scratch</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00184">navier_stokes_scratch_data.cc:184</a></div></div>
-<div class="ttc" id="aclassNavierStokesScratchData_html_a2c271b97942ba7a74d7f4e9e0c545b6b"><div class="ttname"><a href="classNavierStokesScratchData.html#a2c271b97942ba7a74d7f4e9e0c545b6b">NavierStokesScratchData::enable_void_fraction</a></div><div class="ttdeci">void enable_void_fraction(const FiniteElement&lt; dim &gt; &amp;fe, const Quadrature&lt; dim &gt; &amp;quadrature, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdoc">enable_void_fraction Enables the collection of the void fraction data by the scratch</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00317">navier_stokes_scratch_data.cc:317</a></div></div>
+<div class="ttc" id="aclassNavierStokesScratchData_html"><div class="ttname"><a href="classNavierStokesScratchData.html">NavierStokesScratchData</a></div><div class="ttdoc">Class that stores the information required by the assembly procedure for a Navier-Stokes equation....</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8h_source.html#l00054">navier_stokes_scratch_data.h:55</a></div></div>
+<div class="ttc" id="aclassNavierStokesScratchData_html_a126d7e05decf1cd0ab526d786a86e1af"><div class="ttname"><a href="classNavierStokesScratchData.html#a126d7e05decf1cd0ab526d786a86e1af">NavierStokesScratchData::enable_cahn_hilliard</a></div><div class="ttdeci">void enable_cahn_hilliard(const FiniteElement&lt; dim &gt; &amp;fe, const Quadrature&lt; dim &gt; &amp;quadrature, const Mapping&lt; dim &gt; &amp;mapping, const Parameters::CahnHilliard &amp;cahn_hilliard_parameters)</div><div class="ttdoc">enable_cahn_hilliard Enables the collection of the CahnHilliard data by the scratch</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00177">navier_stokes_scratch_data.cc:177</a></div></div>
+<div class="ttc" id="aclassNavierStokesScratchData_html_a2c271b97942ba7a74d7f4e9e0c545b6b"><div class="ttname"><a href="classNavierStokesScratchData.html#a2c271b97942ba7a74d7f4e9e0c545b6b">NavierStokesScratchData::enable_void_fraction</a></div><div class="ttdeci">void enable_void_fraction(const FiniteElement&lt; dim &gt; &amp;fe, const Quadrature&lt; dim &gt; &amp;quadrature, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdoc">enable_void_fraction Enables the collection of the void fraction data by the scratch</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00310">navier_stokes_scratch_data.cc:310</a></div></div>
 <div class="ttc" id="aclassNavierStokesScratchData_html_a30ca912e22e35000f7109061ad47726b"><div class="ttname"><a href="classNavierStokesScratchData.html#a30ca912e22e35000f7109061ad47726b">NavierStokesScratchData::calculate_physical_properties</a></div><div class="ttdeci">void calculate_physical_properties()</div><div class="ttdoc">Calculates the physical properties. This function calculates the physical properties that may be requ...</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00433">navier_stokes_scratch_data.cc:433</a></div></div>
 <div class="ttc" id="aclassNavierStokesScratchData_html_a3377bdde203866dd8bd0d4670df2fb89"><div class="ttname"><a href="classNavierStokesScratchData.html#a3377bdde203866dd8bd0d4670df2fb89">NavierStokesScratchData::reinit_mortar</a></div><div class="ttdeci">void reinit_mortar(const typename DoFHandler&lt; dim &gt;::active_cell_iterator &amp;cell, const Parameters::Mortar&lt; dim &gt; &amp;mortar_parameters, const double &amp;radius)</div><div class="ttdoc">Renitialize the content of the scratch data for mortar.</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00371">navier_stokes_scratch_data.cc:371</a></div></div>
 <div class="ttc" id="aclassNavierStokesScratchData_html_a51cadf33b64ca212d6b49e6bfa7be9e1"><div class="ttname"><a href="classNavierStokesScratchData.html#a51cadf33b64ca212d6b49e6bfa7be9e1">NavierStokesScratchData::enable_mortar</a></div><div class="ttdeci">void enable_mortar()</div><div class="ttdoc">enable_mortar Enables the calculation of the rotor rotation angle</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00364">navier_stokes_scratch_data.cc:364</a></div></div>
 <div class="ttc" id="aclassNavierStokesScratchData_html_a59bab3e52c8e29cf84473965f49baefe"><div class="ttname"><a href="classNavierStokesScratchData.html#a59bab3e52c8e29cf84473965f49baefe">NavierStokesScratchData::enable_heat_transfer</a></div><div class="ttdeci">void enable_heat_transfer(const FiniteElement&lt; dim &gt; &amp;fe, const Quadrature&lt; dim &gt; &amp;quadrature, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdoc">enable_heat_transfer Enables the collection of the heat transfer data (Temperature field) by the scra...</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00409">navier_stokes_scratch_data.cc:409</a></div></div>
 <div class="ttc" id="aclassNavierStokesScratchData_html_a661e62ccc078b9798322641b2c56655c"><div class="ttname"><a href="classNavierStokesScratchData.html#a661e62ccc078b9798322641b2c56655c">NavierStokesScratchData::enable_particle_fluid_interactions</a></div><div class="ttdeci">void enable_particle_fluid_interactions(const unsigned int n_global_max_particles_per_cell, const bool enable_void_fraction_interpolation)</div><div class="ttdoc">enable_particle_fluid_interactions Enables the calculation of the fluid information at the particle l...</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00337">navier_stokes_scratch_data.cc:337</a></div></div>
-<div class="ttc" id="aclassNavierStokesScratchData_html_a6937a49938e44bf91ff473c99e176561"><div class="ttname"><a href="classNavierStokesScratchData.html#a6937a49938e44bf91ff473c99e176561">NavierStokesScratchData::enable_projected_phase_fraction_gradient</a></div><div class="ttdeci">void enable_projected_phase_fraction_gradient(const FiniteElement&lt; dim &gt; &amp;fe_projected_phase_fraction_gradient, const Quadrature&lt; dim &gt; &amp;quadrature, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00281">navier_stokes_scratch_data.cc:281</a></div></div>
-<div class="ttc" id="aclassNavierStokesScratchData_html_a9f3a9b09303fb38071eba70e6392dc0c"><div class="ttname"><a href="classNavierStokesScratchData.html#a9f3a9b09303fb38071eba70e6392dc0c">NavierStokesScratchData::enable_curvature</a></div><div class="ttdeci">void enable_curvature(const FiniteElement&lt; dim &gt; &amp;fe_curvature, const Quadrature&lt; dim &gt; &amp;quadrature, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00301">navier_stokes_scratch_data.cc:301</a></div></div>
-<div class="ttc" id="aclassNavierStokesScratchData_html_aa2e6cff4889a98d9ed713209ad8e9a06"><div class="ttname"><a href="classNavierStokesScratchData.html#aa2e6cff4889a98d9ed713209ad8e9a06">NavierStokesScratchData::gather_particles_reference_location</a></div><div class="ttdeci">Quadrature&lt; dim &gt; gather_particles_reference_location()</div><div class="ttdoc">Creates an object of type Quadrature&lt;dim&gt; that contains the particle reference location....</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00751">navier_stokes_scratch_data.cc:751</a></div></div>
-<div class="ttc" id="aclassNavierStokesScratchData_html_aa3ac2a1e98dd07b62ee49f808642ce09"><div class="ttname"><a href="classNavierStokesScratchData.html#aa3ac2a1e98dd07b62ee49f808642ce09">NavierStokesScratchData::enable_vof</a></div><div class="ttdeci">void enable_vof(const FiniteElement&lt; dim &gt; &amp;fe, const Quadrature&lt; dim &gt; &amp;quadrature, const Mapping&lt; dim &gt; &amp;mapping, const Parameters::VOF_PhaseFilter &amp;phase_filter_parameters)</div><div class="ttdoc">enable_vof Enables the collection of the VOF data by the scratch</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00102">navier_stokes_scratch_data.cc:102</a></div></div>
+<div class="ttc" id="aclassNavierStokesScratchData_html_a6937a49938e44bf91ff473c99e176561"><div class="ttname"><a href="classNavierStokesScratchData.html#a6937a49938e44bf91ff473c99e176561">NavierStokesScratchData::enable_projected_phase_fraction_gradient</a></div><div class="ttdeci">void enable_projected_phase_fraction_gradient(const FiniteElement&lt; dim &gt; &amp;fe_projected_phase_fraction_gradient, const Quadrature&lt; dim &gt; &amp;quadrature, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00274">navier_stokes_scratch_data.cc:274</a></div></div>
+<div class="ttc" id="aclassNavierStokesScratchData_html_a9f3a9b09303fb38071eba70e6392dc0c"><div class="ttname"><a href="classNavierStokesScratchData.html#a9f3a9b09303fb38071eba70e6392dc0c">NavierStokesScratchData::enable_curvature</a></div><div class="ttdeci">void enable_curvature(const FiniteElement&lt; dim &gt; &amp;fe_curvature, const Quadrature&lt; dim &gt; &amp;quadrature, const Mapping&lt; dim &gt; &amp;mapping)</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00294">navier_stokes_scratch_data.cc:294</a></div></div>
+<div class="ttc" id="aclassNavierStokesScratchData_html_aa2e6cff4889a98d9ed713209ad8e9a06"><div class="ttname"><a href="classNavierStokesScratchData.html#aa2e6cff4889a98d9ed713209ad8e9a06">NavierStokesScratchData::gather_particles_reference_location</a></div><div class="ttdeci">Quadrature&lt; dim &gt; gather_particles_reference_location()</div><div class="ttdoc">Creates an object of type Quadrature&lt;dim&gt; that contains the particle reference location....</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00758">navier_stokes_scratch_data.cc:758</a></div></div>
+<div class="ttc" id="aclassNavierStokesScratchData_html_aa3ac2a1e98dd07b62ee49f808642ce09"><div class="ttname"><a href="classNavierStokesScratchData.html#aa3ac2a1e98dd07b62ee49f808642ce09">NavierStokesScratchData::enable_vof</a></div><div class="ttdeci">void enable_vof(const FiniteElement&lt; dim &gt; &amp;fe, const Quadrature&lt; dim &gt; &amp;quadrature, const Mapping&lt; dim &gt; &amp;mapping, const Parameters::VOF_PhaseFilter &amp;phase_filter_parameters)</div><div class="ttdoc">enable_vof Enables the collection of the VOF data by the scratch</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00095">navier_stokes_scratch_data.cc:95</a></div></div>
 <div class="ttc" id="aclassNavierStokesScratchData_html_ab059ac1bfc7ed0fc0f1540ead8fa59f0"><div class="ttname"><a href="classNavierStokesScratchData.html#ab059ac1bfc7ed0fc0f1540ead8fa59f0">NavierStokesScratchData::reinit_particle_fluid_forces</a></div><div class="ttdeci">void reinit_particle_fluid_forces()</div><div class="ttdoc">Reinitializes the fluid forces and torques on the particles in the cell to zero.</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00671">navier_stokes_scratch_data.cc:671</a></div></div>
 <div class="ttc" id="aclassNavierStokesScratchData_html_ad98b8bde0f425d5269cde4132d5cdfd3"><div class="ttname"><a href="classNavierStokesScratchData.html#ad98b8bde0f425d5269cde4132d5cdfd3">NavierStokesScratchData::allocate</a></div><div class="ttdeci">void allocate() override</div><div class="ttdoc">Allocates the memory for the scratch.</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00011">navier_stokes_scratch_data.cc:11</a></div></div>
-<div class="ttc" id="aclassNavierStokesScratchData_html_af72659fbca48ccb8a9a76fcacef290ee"><div class="ttname"><a href="classNavierStokesScratchData.html#af72659fbca48ccb8a9a76fcacef290ee">NavierStokesScratchData::calculate_cell_void_fraction</a></div><div class="ttdeci">void calculate_cell_void_fraction(const double &amp;total_particle_volume)</div><div class="ttdoc">Computes the cell void fraction.</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00730">navier_stokes_scratch_data.cc:730</a></div></div>
-<div class="ttc" id="aclassNavierStokesScratchData_html_af8ac55b44d36bba2da5edb79754de69b"><div class="ttname"><a href="classNavierStokesScratchData.html#af8ac55b44d36bba2da5edb79754de69b">NavierStokesScratchData::extract_particle_properties</a></div><div class="ttdeci">double extract_particle_properties()</div><div class="ttdoc">Extracts the velocity of the particles and calculates their total volume in the cell.</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00690">navier_stokes_scratch_data.cc:690</a></div></div>
+<div class="ttc" id="aclassNavierStokesScratchData_html_af72659fbca48ccb8a9a76fcacef290ee"><div class="ttname"><a href="classNavierStokesScratchData.html#af72659fbca48ccb8a9a76fcacef290ee">NavierStokesScratchData::calculate_cell_void_fraction</a></div><div class="ttdeci">void calculate_cell_void_fraction(const double &amp;total_particle_volume)</div><div class="ttdoc">Computes the cell void fraction.</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00736">navier_stokes_scratch_data.cc:736</a></div></div>
+<div class="ttc" id="aclassNavierStokesScratchData_html_af8ac55b44d36bba2da5edb79754de69b"><div class="ttname"><a href="classNavierStokesScratchData.html#af8ac55b44d36bba2da5edb79754de69b">NavierStokesScratchData::extract_particle_properties</a></div><div class="ttdeci">double extract_particle_properties()</div><div class="ttdoc">Extracts the velocity of the particles and calculates their total volume in the cell.</div><div class="ttdef"><b>Definition</b> <a href="navier__stokes__scratch__data_8cc_source.html#l00696">navier_stokes_scratch_data.cc:696</a></div></div>
 <div class="ttc" id="aclassVolumeOfFluidFilterBase_html_a87286b158579e34a40627510e9824536"><div class="ttname"><a href="classVolumeOfFluidFilterBase.html#a87286b158579e34a40627510e9824536">VolumeOfFluidFilterBase::model_cast</a></div><div class="ttdeci">static std::shared_ptr&lt; VolumeOfFluidFilterBase &gt; model_cast(const Parameters::VOF_PhaseFilter &amp;phase_filter_parameters)</div><div class="ttdoc">Instantiate and return a pointer to a VolumeOfFluidFilterBase object by casting it to the proper chil...</div><div class="ttdef"><b>Definition</b> <a href="vof__filter_8cc_source.html#l00007">vof_filter.cc:7</a></div></div>
-<div class="ttc" id="anamespaceDEM_1_1CFDDEMProperties_html_ae9734b9d29480269e4764c5092d87b2fa0b120504b8591bd6814e4291c614e7ae"><div class="ttname"><a href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fa0b120504b8591bd6814e4291c614e7ae">DEM::CFDDEMProperties::fem_torque_x</a></div><div class="ttdeci">@ fem_torque_x</div><div class="ttdef"><b>Definition</b> <a href="dem__properties_8h_source.html#l00072">dem_properties.h:72</a></div></div>
+<div class="ttc" id="anamespaceDEM_1_1CFDDEMProperties_html_ae9734b9d29480269e4764c5092d87b2fa0b120504b8591bd6814e4291c614e7ae"><div class="ttname"><a href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fa0b120504b8591bd6814e4291c614e7ae">DEM::CFDDEMProperties::fem_torque_x</a></div><div class="ttdeci">@ fem_torque_x</div><div class="ttdef"><b>Definition</b> <a href="dem__properties_8h_source.html#l00082">dem_properties.h:82</a></div></div>
 <div class="ttc" id="anamespaceDEM_1_1CFDDEMProperties_html_ae9734b9d29480269e4764c5092d87b2fa4af26e866f40c8a1bd22036c7269522a"><div class="ttname"><a href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fa4af26e866f40c8a1bd22036c7269522a">DEM::CFDDEMProperties::v_y</a></div><div class="ttdeci">@ v_y</div><div class="ttdef"><b>Definition</b> <a href="dem__properties_8h_source.html#l00064">dem_properties.h:64</a></div></div>
-<div class="ttc" id="anamespaceDEM_1_1CFDDEMProperties_html_ae9734b9d29480269e4764c5092d87b2fa5eb09b7710337e3c52bdee099ccf708b"><div class="ttname"><a href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fa5eb09b7710337e3c52bdee099ccf708b">DEM::CFDDEMProperties::fem_force_x</a></div><div class="ttdeci">@ fem_force_x</div><div class="ttdef"><b>Definition</b> <a href="dem__properties_8h_source.html#l00069">dem_properties.h:69</a></div></div>
 <div class="ttc" id="anamespaceDEM_1_1CFDDEMProperties_html_ae9734b9d29480269e4764c5092d87b2fa827460368a1344eadd594a4b96171190"><div class="ttname"><a href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fa827460368a1344eadd594a4b96171190">DEM::CFDDEMProperties::v_x</a></div><div class="ttdeci">@ v_x</div><div class="ttdef"><b>Definition</b> <a href="dem__properties_8h_source.html#l00063">dem_properties.h:63</a></div></div>
 <div class="ttc" id="anamespaceDEM_1_1CFDDEMProperties_html_ae9734b9d29480269e4764c5092d87b2fa9413149ffc733a83556c8164b7844d3d"><div class="ttname"><a href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fa9413149ffc733a83556c8164b7844d3d">DEM::CFDDEMProperties::v_z</a></div><div class="ttdeci">@ v_z</div><div class="ttdef"><b>Definition</b> <a href="dem__properties_8h_source.html#l00065">dem_properties.h:65</a></div></div>
+<div class="ttc" id="anamespaceDEM_1_1CFDDEMProperties_html_ae9734b9d29480269e4764c5092d87b2faacc103a5acb9c524c2405a52ce420416"><div class="ttname"><a href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2faacc103a5acb9c524c2405a52ce420416">DEM::CFDDEMProperties::fem_drag_x</a></div><div class="ttdeci">@ fem_drag_x</div><div class="ttdef"><b>Definition</b> <a href="dem__properties_8h_source.html#l00079">dem_properties.h:79</a></div></div>
 <div class="ttc" id="anamespaceDEM_1_1CFDDEMProperties_html_ae9734b9d29480269e4764c5092d87b2fac31564c0282259a90fa3036a0f7993e5"><div class="ttname"><a href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fac31564c0282259a90fa3036a0f7993e5">DEM::CFDDEMProperties::dp</a></div><div class="ttdeci">@ dp</div><div class="ttdef"><b>Definition</b> <a href="dem__properties_8h_source.html#l00061">dem_properties.h:61</a></div></div>
 <div class="ttc" id="anavier__stokes__scratch__data_8h_html"><div class="ttname"><a href="navier__stokes__scratch__data_8h.html">navier_stokes_scratch_data.h</a></div></div>
 <div class="ttc" id="aphysical__properties__manager_8h_html_a3374dca42581d32444eb366feb9f3189afca154035ca3d8f1e45a9b648a2d6ef6"><div class="ttname"><a href="physical__properties__manager_8h.html#a3374dca42581d32444eb366feb9f3189afca154035ca3d8f1e45a9b648a2d6ef6">fluid_fluid</a></div><div class="ttdeci">@ fluid_fluid</div><div class="ttdef"><b>Definition</b> <a href="physical__properties__manager_8h_source.html#l00039">physical_properties_manager.h:39</a></div></div>
@@ -936,12 +943,12 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aphysical__property__model_8h_html_a0b2c854385812ebfac83689a5c3ead58a9922a43d37bee3212593f77ce4ec82f3"><div class="ttname"><a href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58a9922a43d37bee3212593f77ce4ec82f3">temperature</a></div><div class="ttdeci">@ temperature</div><div class="ttdef"><b>Definition</b> <a href="physical__property__model_8h_source.html#l00040">physical_property_model.h:40</a></div></div>
 <div class="ttc" id="aphysical__property__model_8h_html_a0b2c854385812ebfac83689a5c3ead58a9c093e9ca22af8657a0bf5280a298a55"><div class="ttname"><a href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58a9c093e9ca22af8657a0bf5280a298a55">shear_rate</a></div><div class="ttdeci">@ shear_rate</div><div class="ttdef"><b>Definition</b> <a href="physical__property__model_8h_source.html#l00039">physical_property_model.h:39</a></div></div>
 <div class="ttc" id="aphysical__property__model_8h_html_a65b5aa6b102ceba005e3572636e0e942"><div class="ttname"><a href="physical__property__model_8h.html#a65b5aa6b102ceba005e3572636e0e942">set_field_vector</a></div><div class="ttdeci">void set_field_vector(const field &amp;id, const std::vector&lt; double &gt; &amp;data, std::map&lt; field, std::vector&lt; double &gt; &gt; &amp;fields)</div><div class="ttdef"><b>Definition</b> <a href="physical__property__model_8h_source.html#l00051">physical_property_model.h:51</a></div></div>
-<div class="ttc" id="arheological__model_8h_html_ae75fc07fc5d04fd29ba0409c9fbaffcb"><div class="ttname"><a href="rheological__model_8h.html#ae75fc07fc5d04fd29ba0409c9fbaffcb">calculate_shear_rate_magnitude</a></div><div class="ttdeci">double calculate_shear_rate_magnitude(const Tensor&lt; 2, dim &gt; shear_rate)</div><div class="ttdoc">Calculates the magnitude of the shear rate tensor given as input.</div><div class="ttdef"><b>Definition</b> <a href="rheological__model_8h_source.html#l00682">rheological_model.h:682</a></div></div>
-<div class="ttc" id="astructParameters_1_1CahnHilliard_html"><div class="ttname"><a href="structParameters_1_1CahnHilliard.html">Parameters::CahnHilliard</a></div><div class="ttdef"><b>Definition</b> <a href="parameters__multiphysics_8h_source.html#l00361">parameters_multiphysics.h:362</a></div></div>
-<div class="ttc" id="astructParameters_1_1Mortar_html"><div class="ttname"><a href="structParameters_1_1Mortar.html">Parameters::Mortar</a></div><div class="ttdoc">Mortar - Defines parameters used to construct mortar elements.</div><div class="ttdef"><b>Definition</b> <a href="parameters_8h_source.html#l01800">parameters.h:1801</a></div></div>
-<div class="ttc" id="astructParameters_1_1Mortar_html_a01ab1689f9329a893329c90069073b86"><div class="ttname"><a href="structParameters_1_1Mortar.html#a01ab1689f9329a893329c90069073b86">Parameters::Mortar::center_of_rotation</a></div><div class="ttdeci">Point&lt; dim &gt; center_of_rotation</div><div class="ttdoc">Center of rotation of the rotor domain.</div><div class="ttdef"><b>Definition</b> <a href="parameters_8h_source.html#l01811">parameters.h:1811</a></div></div>
-<div class="ttc" id="astructParameters_1_1Mortar_html_a14c1851190ff8ecabeb3b7e98f6e3a3e"><div class="ttname"><a href="structParameters_1_1Mortar.html#a14c1851190ff8ecabeb3b7e98f6e3a3e">Parameters::Mortar::rotor_angular_velocity</a></div><div class="ttdeci">std::shared_ptr&lt; Functions::ParsedFunction&lt; dim &gt; &gt; rotor_angular_velocity</div><div class="ttdoc">Angular velocity of the rotor domain.</div><div class="ttdef"><b>Definition</b> <a href="parameters_8h_source.html#l01817">parameters.h:1817</a></div></div>
-<div class="ttc" id="astructParameters_1_1VOF__PhaseFilter_html"><div class="ttname"><a href="structParameters_1_1VOF__PhaseFilter.html">Parameters::VOF_PhaseFilter</a></div><div class="ttdoc">Parameters for the phase filtration.</div><div class="ttdef"><b>Definition</b> <a href="parameters__multiphysics_8h_source.html#l00190">parameters_multiphysics.h:191</a></div></div>
+<div class="ttc" id="arheological__model_8h_html_ae75fc07fc5d04fd29ba0409c9fbaffcb"><div class="ttname"><a href="rheological__model_8h.html#ae75fc07fc5d04fd29ba0409c9fbaffcb">calculate_shear_rate_magnitude</a></div><div class="ttdeci">double calculate_shear_rate_magnitude(const Tensor&lt; 2, dim &gt; shear_rate)</div><div class="ttdoc">Calculates the magnitude of the shear rate tensor given as input.</div><div class="ttdef"><b>Definition</b> <a href="rheological__model_8h_source.html#l00690">rheological_model.h:690</a></div></div>
+<div class="ttc" id="astructParameters_1_1CahnHilliard_html"><div class="ttname"><a href="structParameters_1_1CahnHilliard.html">Parameters::CahnHilliard</a></div><div class="ttdef"><b>Definition</b> <a href="parameters__multiphysics_8h_source.html#l00360">parameters_multiphysics.h:361</a></div></div>
+<div class="ttc" id="astructParameters_1_1Mortar_html"><div class="ttname"><a href="structParameters_1_1Mortar.html">Parameters::Mortar</a></div><div class="ttdoc">Mortar - Defines parameters used to construct mortar elements.</div><div class="ttdef"><b>Definition</b> <a href="parameters_8h_source.html#l01821">parameters.h:1822</a></div></div>
+<div class="ttc" id="astructParameters_1_1Mortar_html_a01ab1689f9329a893329c90069073b86"><div class="ttname"><a href="structParameters_1_1Mortar.html#a01ab1689f9329a893329c90069073b86">Parameters::Mortar::center_of_rotation</a></div><div class="ttdeci">Point&lt; dim &gt; center_of_rotation</div><div class="ttdoc">Center of rotation of the rotor domain.</div><div class="ttdef"><b>Definition</b> <a href="parameters_8h_source.html#l01832">parameters.h:1832</a></div></div>
+<div class="ttc" id="astructParameters_1_1Mortar_html_a14c1851190ff8ecabeb3b7e98f6e3a3e"><div class="ttname"><a href="structParameters_1_1Mortar.html#a14c1851190ff8ecabeb3b7e98f6e3a3e">Parameters::Mortar::rotor_angular_velocity</a></div><div class="ttdeci">std::shared_ptr&lt; Functions::ParsedFunction&lt; dim &gt; &gt; rotor_angular_velocity</div><div class="ttdoc">Angular velocity of the rotor domain.</div><div class="ttdef"><b>Definition</b> <a href="parameters_8h_source.html#l01838">parameters.h:1838</a></div></div>
+<div class="ttc" id="astructParameters_1_1VOF__PhaseFilter_html"><div class="ttname"><a href="structParameters_1_1VOF__PhaseFilter.html">Parameters::VOF_PhaseFilter</a></div><div class="ttdoc">Parameters for the phase filtration.</div><div class="ttdef"><b>Definition</b> <a href="parameters__multiphysics_8h_source.html#l00189">parameters_multiphysics.h:190</a></div></div>
 <div class="ttc" id="autilities_8h_html"><div class="ttname"><a href="utilities_8h.html">utilities.h</a></div></div>
 <div class="ttc" id="autilities_8h_html_a3d02cb065c32b672c94bb862ecff4431"><div class="ttname"><a href="utilities_8h.html#a3d02cb065c32b672c94bb862ecff4431">compute_cell_measure_with_JxW</a></div><div class="ttdeci">double compute_cell_measure_with_JxW(const std::vector&lt; double &gt; &amp;JxW_values)</div><div class="ttdoc">Computes the area (2D) or volume (3D) of the cell by integrating 1 over the cell, by summing JxW valu...</div><div class="ttdef"><b>Definition</b> <a href="utilities_8h_source.html#l00708">utilities.h:708</a></div></div>
 <div class="ttc" id="autilities_8h_html_a955c2851894d041727c14dff59686f0d"><div class="ttname"><a href="utilities_8h.html#a955c2851894d041727c14dff59686f0d">calculate_point_property</a></div><div class="ttdeci">double calculate_point_property(const double phase, const double property0, const double property1)</div><div class="ttdoc">Calculate the equivalent properties for a given phase. Method called in quadrature points loops in VO...</div><div class="ttdef"><b>Definition</b> <a href="utilities_8h_source.html#l00292">utilities.h:292</a></div></div>

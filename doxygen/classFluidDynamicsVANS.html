@@ -97,8 +97,8 @@ Inheritance diagram for FluidDynamicsVANS&lt; dim &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFluidDynamicsVANS__inherit__graph.png" border="0" usemap="#aFluidDynamicsVANS_3_01dim_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="aFluidDynamicsVANS_3_01dim_01_4_inherit__map" id="aFluidDynamicsVANS_3_01dim_01_4_inherit__map">
-<area shape="rect" title=" " alt="" coords="32,255,197,295"/>
-<area shape="rect" href="classCFDDEMSolver.html" title="Solver using the GLS Volume&#45;averaged Navier&#45;Stokes (VANS) solver for fluid and the soft&#45;sphere model ..." alt="" coords="27,343,202,368"/>
+<area shape="rect" title="Solver class for Volume&#45;Averaged Navier&#45;Stokes (VANS) equations with GLS stabilization." alt="" coords="32,255,197,295"/>
+<area shape="rect" href="classCFDDEMSolver.html" title="Solver class for coupled Computational Fluid Dynamics and Discrete Element Method (CFD&#45;DEM) simulatio..." alt="" coords="27,343,202,368"/>
 <area shape="poly" title=" " alt="" coords="117,308,117,342,112,342,112,308"/>
 <area shape="rect" href="classFluidDynamicsMatrixBased.html" title="A solver class for the Navier&#45;Stokes equation using GLS stabilization." alt="" coords="14,167,215,207"/>
 <area shape="poly" title=" " alt="" coords="117,221,117,254,112,254,112,221"/>
@@ -177,8 +177,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:aa9d4082f8100a4be7481c4a7b80121a7 inherit pro_methods_classFluidDynamicsMatrixBased"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01fd5496793c44c9889381ab54f7d6ba inherit pro_methods_classFluidDynamicsMatrixBased" id="r_a01fd5496793c44c9889381ab54f7d6ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFluidDynamicsMatrixBased.html#a01fd5496793c44c9889381ab54f7d6ba">define_dynamic_zero_constraints</a> ()</td></tr>
 <tr class="separator:a01fd5496793c44c9889381ab54f7d6ba inherit pro_methods_classFluidDynamicsMatrixBased"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac95ee9d38109d2248756e7ea8c78205b inherit pro_methods_classFluidDynamicsMatrixBased" id="r_ac95ee9d38109d2248756e7ea8c78205b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFluidDynamicsMatrixBased.html#ac95ee9d38109d2248756e7ea8c78205b">update_mortar_configuration</a> ()</td></tr>
-<tr class="separator:ac95ee9d38109d2248756e7ea8c78205b inherit pro_methods_classFluidDynamicsMatrixBased"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eb538079a51e71748469cfca0d20bf7 inherit pro_methods_classFluidDynamicsMatrixBased" id="r_a7eb538079a51e71748469cfca0d20bf7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFluidDynamicsMatrixBased.html#a7eb538079a51e71748469cfca0d20bf7">update_mortar_configuration</a> () override</td></tr>
+<tr class="separator:a7eb538079a51e71748469cfca0d20bf7 inherit pro_methods_classFluidDynamicsMatrixBased"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2336f352ca23bd4532ceeffae3ea2890 inherit pro_methods_classFluidDynamicsMatrixBased" id="r_a2336f352ca23bd4532ceeffae3ea2890"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFluidDynamicsMatrixBased.html#a2336f352ca23bd4532ceeffae3ea2890">solve_linear_system</a> (const bool initial_step, const bool renewed_matrix=true) override</td></tr>
 <tr class="separator:a2336f352ca23bd4532ceeffae3ea2890 inherit pro_methods_classFluidDynamicsMatrixBased"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classNavierStokesBase"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classNavierStokesBase')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classNavierStokesBase.html">NavierStokesBase&lt; dim, GlobalVectorType, IndexSet &gt;</a></td></tr>
@@ -224,9 +224,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a5fbfce857a0331b37588f002999e6856 inherit pro_methods_classNavierStokesBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81907d370a2824fdd1ca042e63601208 inherit pro_methods_classNavierStokesBase" id="r_a81907d370a2824fdd1ca042e63601208"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesBase.html#a81907d370a2824fdd1ca042e63601208">dynamic_flow_control</a> ()</td></tr>
 <tr class="separator:a81907d370a2824fdd1ca042e63601208 inherit pro_methods_classNavierStokesBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc25764ff5747601ef20882e07a756ba inherit pro_methods_classNavierStokesBase" id="r_abc25764ff5747601ef20882e07a756ba"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesBase.html#abc25764ff5747601ef20882e07a756ba">multi_stage_preresolution</a> (unsigned int stage, <a class="el" href="structParameters_1_1SimulationControl.html#a75b33ae454da14bc72dbe078c121d7e9">Parameters::SimulationControl::TimeSteppingMethod</a> method)</td></tr>
+<tr class="memitem:abc25764ff5747601ef20882e07a756ba inherit pro_methods_classNavierStokesBase" id="r_abc25764ff5747601ef20882e07a756ba"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesBase.html#abc25764ff5747601ef20882e07a756ba">multi_stage_preresolution</a> (unsigned int stage, <a class="el" href="structParameters_1_1SimulationControl.html#a86daf86652a712eb783c105c953eb7f8">Parameters::SimulationControl::TimeSteppingMethod</a> method)</td></tr>
 <tr class="separator:abc25764ff5747601ef20882e07a756ba inherit pro_methods_classNavierStokesBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a984c1d9d0be7b89df837a383cd40d301 inherit pro_methods_classNavierStokesBase" id="r_a984c1d9d0be7b89df837a383cd40d301"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesBase.html#a984c1d9d0be7b89df837a383cd40d301">multi_stage_postresolution</a> (unsigned int stage, <a class="el" href="structParameters_1_1SimulationControl.html#a75b33ae454da14bc72dbe078c121d7e9">Parameters::SimulationControl::TimeSteppingMethod</a> method, double time_step)</td></tr>
+<tr class="memitem:a984c1d9d0be7b89df837a383cd40d301 inherit pro_methods_classNavierStokesBase" id="r_a984c1d9d0be7b89df837a383cd40d301"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesBase.html#a984c1d9d0be7b89df837a383cd40d301">multi_stage_postresolution</a> (unsigned int stage, <a class="el" href="structParameters_1_1SimulationControl.html#a86daf86652a712eb783c105c953eb7f8">Parameters::SimulationControl::TimeSteppingMethod</a> method, double time_step)</td></tr>
 <tr class="separator:a984c1d9d0be7b89df837a383cd40d301 inherit pro_methods_classNavierStokesBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a91f69db90acde96ce5848bbf18647d inherit pro_methods_classNavierStokesBase" id="r_a1a91f69db90acde96ce5848bbf18647d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesBase.html#a1a91f69db90acde96ce5848bbf18647d">update_multi_stage_solution</a> (double time_step)</td></tr>
 <tr class="separator:a1a91f69db90acde96ce5848bbf18647d inherit pro_methods_classNavierStokesBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -286,6 +286,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a0280c83da8fca948b2ca6e0f475da19c inherit pro_methods_classNavierStokesBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42a93d1b332da6a4bd52b9540b24012c inherit pro_methods_classNavierStokesBase" id="r_a42a93d1b332da6a4bd52b9540b24012c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesBase.html#a42a93d1b332da6a4bd52b9540b24012c">constrain_stasis_with_temperature_vof</a> (const DoFHandler&lt; dim &gt; *dof_handler_vof, const DoFHandler&lt; dim &gt; *dof_handler_ht)</td></tr>
 <tr class="separator:a42a93d1b332da6a4bd52b9540b24012c inherit pro_methods_classNavierStokesBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2932cb8c662806e38471f5e388fe4e65 inherit pro_methods_classNavierStokesBase" id="r_a2932cb8c662806e38471f5e388fe4e65"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="structOutputStructTableHandler.html">OutputStructTableHandler</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesBase.html#a2932cb8c662806e38471f5e388fe4e65">gather_tables</a> ()</td></tr>
+<tr class="separator:a2932cb8c662806e38471f5e388fe4e65 inherit pro_methods_classNavierStokesBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a459e5dd4f683a6454b713c598e0dcc3d inherit pro_methods_classNavierStokesBase" id="r_a459e5dd4f683a6454b713c598e0dcc3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesBase.html#a459e5dd4f683a6454b713c598e0dcc3d">serialize_tables_vector</a> (const std::vector&lt; <a class="el" href="structOutputStructTableHandler.html">OutputStructTableHandler</a> &gt; &amp;table_output_structs)</td></tr>
+<tr class="separator:a459e5dd4f683a6454b713c598e0dcc3d inherit pro_methods_classNavierStokesBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9c6999150be2fb03966e9f578508b72 inherit pro_methods_classNavierStokesBase" id="r_af9c6999150be2fb03966e9f578508b72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesBase.html#af9c6999150be2fb03966e9f578508b72">deserialize_tables_vector</a> (std::vector&lt; <a class="el" href="structOutputStructTableHandler.html">OutputStructTableHandler</a> &gt; &amp;table_output_structs)</td></tr>
+<tr class="separator:af9c6999150be2fb03966e9f578508b72 inherit pro_methods_classNavierStokesBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af311920c0b819b973d410db4fa5e8924 inherit pro_methods_classNavierStokesBase" id="r_af311920c0b819b973d410db4fa5e8924"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesBase.html#af311920c0b819b973d410db4fa5e8924">write_checkpoint</a> ()</td></tr>
 <tr class="separator:af311920c0b819b973d410db4fa5e8924 inherit pro_methods_classNavierStokesBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73730111a45fabb5bcc26e950ed5bbe6 inherit pro_methods_classNavierStokesBase" id="r_a73730111a45fabb5bcc26e950ed5bbe6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNavierStokesBase.html#a73730111a45fabb5bcc26e950ed5bbe6">gather_output_results</a> (const <a class="el" href="vector_8h.html#a4ea4005d75c88e60bee47d4e79a13a39">GlobalVectorType</a> &amp;solution, std::vector&lt; <a class="el" href="output__struct_8h.html#a24c1f4e015db04387ac9c28a58ee7378">OutputStruct</a>&lt; dim, <a class="el" href="vector_8h.html#a4ea4005d75c88e60bee47d4e79a13a39">GlobalVectorType</a> &gt; &gt; &amp;solution_output_structs)</td></tr>
@@ -452,7 +458,7 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a6cad37a42da47ba33ff03456b8bae53e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f087afdfb431839cf7d89421d9c0efd" id="r_a6f087afdfb431839cf7d89421d9c0efd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFluidDynamicsVANS.html#a6f087afdfb431839cf7d89421d9c0efd">update_solution_and_constraints</a> ()</td></tr>
 <tr class="separator:a6f087afdfb431839cf7d89421d9c0efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ebb387a23a295e689d0ef9c6d428321" id="r_a9ebb387a23a295e689d0ef9c6d428321"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFluidDynamicsVANS.html#a9ebb387a23a295e689d0ef9c6d428321">read_dem</a> ()</td></tr>
+<tr class="memitem:a9ebb387a23a295e689d0ef9c6d428321" id="r_a9ebb387a23a295e689d0ef9c6d428321"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFluidDynamicsVANS.html#a9ebb387a23a295e689d0ef9c6d428321">read_dem</a> ()</td></tr>
 <tr class="separator:a9ebb387a23a295e689d0ef9c6d428321"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -460,20 +466,22 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_classPhysicsSolver"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classPhysicsSolver')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classPhysicsSolver.html">PhysicsSolver&lt; VectorType &gt;</a></td></tr>
 <tr class="memitem:a438c5dbf8b3a750d042d56ffc3285f1f inherit pub_attribs_classPhysicsSolver" id="r_a438c5dbf8b3a750d042d56ffc3285f1f"><td class="memItemLeft" align="right" valign="top">ConditionalOStream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicsSolver.html#a438c5dbf8b3a750d042d56ffc3285f1f">pcout</a></td></tr>
 <tr class="separator:a438c5dbf8b3a750d042d56ffc3285f1f inherit pub_attribs_classPhysicsSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13df07fecddd07c49c6c6f7355c27ac8 inherit pub_attribs_classPhysicsSolver" id="r_a13df07fecddd07c49c6c6f7355c27ac8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structParameters_1_1SimulationControl.html#a75b33ae454da14bc72dbe078c121d7e9">Parameters::SimulationControl::TimeSteppingMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicsSolver.html#a13df07fecddd07c49c6c6f7355c27ac8">time_stepping_method</a></td></tr>
+<tr class="memitem:a13df07fecddd07c49c6c6f7355c27ac8 inherit pub_attribs_classPhysicsSolver" id="r_a13df07fecddd07c49c6c6f7355c27ac8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structParameters_1_1SimulationControl.html#a86daf86652a712eb783c105c953eb7f8">Parameters::SimulationControl::TimeSteppingMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicsSolver.html#a13df07fecddd07c49c6c6f7355c27ac8">time_stepping_method</a></td></tr>
 <tr class="separator:a13df07fecddd07c49c6c6f7355c27ac8 inherit pub_attribs_classPhysicsSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int dim&gt;<br />
-class FluidDynamicsVANS&lt; dim &gt;</div><p>A solver class for the VANS equation using GLS stabilization</p>
+class FluidDynamicsVANS&lt; dim &gt;</div><p>Solver class for Volume-Averaged Navier-Stokes (VANS) equations with GLS stabilization. </p>
+<p>This class implements a computational fluid dynamics solver for the VANS equations, which are used to model fluid flow in porous media or multiphase systems where the presence of solid particles affects the fluid motion. The solver uses Galerkin Least Squares (GLS) stabilization techniques including SUPG (Streamline Upwind Petrov-Galerkin) and PSPG (Pressure Stabilizing Petrov-Galerkin) methods.</p>
+<p>The VANS equations account for the volume fraction of the fluid phase (void fraction) and incorporate particle-fluid interactions through appropriate source terms. This solver forms the foundation for CFD-DEM simulations where particle dynamics are coupled with fluid flow.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">dim</td><td>An integer that denotes the dimension of the space in which the flow is solved </td></tr>
+    <tr><td class="paramname">dim</td><td>Spatial dimension of the simulation (2 or 3) </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00035">35</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00045">45</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8d3a93bf74d6adb68024be2143e97d18" name="a8d3a93bf74d6adb68024be2143e97d18"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8d3a93bf74d6adb68024be2143e97d18">&#9670;&#160;</a></span>FluidDynamicsVANS()</h2>
@@ -493,9 +501,17 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Constructor for the VANS solver. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nsparam</td><td>CFD-DEM simulation parameters containing all configuration options for the coupled fluid-particle simulation </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8cc_source.html#l00015">15</a> of file <a class="el" href="fluid__dynamics__vans_8cc_source.html">fluid_dynamics_vans.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="fluid__dynamics__vans_8h_source.html#l00173">FluidDynamicsVANS&lt; dim &gt;::cfd_dem_simulation_parameters</a>, <a class="el" href="fluid__dynamics__vans_8h_source.html#l00198">FluidDynamicsVANS&lt; dim &gt;::has_periodic_boundaries</a>, and <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8ae6ffdec5e14fce371eb7ae99edebbbee">BoundaryConditions::periodic</a>.</p>
+<p class="reference">References <a class="el" href="fluid__dynamics__vans_8h_source.html#l00275">FluidDynamicsVANS&lt; dim &gt;::cfd_dem_simulation_parameters</a>, <a class="el" href="fluid__dynamics__vans_8h_source.html#l00314">FluidDynamicsVANS&lt; dim &gt;::has_periodic_boundaries</a>, and <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8ae6ffdec5e14fce371eb7ae99edebbbee">BoundaryConditions::periodic</a>.</p>
 
 </div>
 </div>
@@ -515,6 +531,8 @@ template&lt;int dim&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Destructor for the VANS solver. </p>
 
 <p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8cc_source.html#l00055">55</a> of file <a class="el" href="fluid__dynamics__vans_8cc_source.html">fluid_dynamics_vans.cc</a>.</p>
 
@@ -563,13 +581,13 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Assembles the local matrix for a given cell. </p>
-<p>This function is used by the WorkStream class to assemble the system matrix. It is a thread safe function.</p>
+<p>Assemble the local system matrix for a given cell. </p>
+<p>Computes the local contributions to the global system matrix for a single cell, including VANS-specific terms with void fraction effects and GLS stabilization terms. This function is used by WorkStream for thread-safe parallel assembly.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cell</td><td>The cell for which the local matrix is assembled.</td></tr>
-    <tr><td class="paramname">scratch_data</td><td>The scratch data which is used to store the calculated finite element information at the gauss point. See the documentation for <a class="el" href="classNavierStokesScratchData.html" title="Class that stores the information required by the assembly procedure for a Navier-Stokes equation....">NavierStokesScratchData</a> for more information</td></tr>
-    <tr><td class="paramname">copy_data</td><td>The copy data which is used to store the results of the assembly over a cell </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cell</td><td>Iterator pointing to the current active cell </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">scratch_data</td><td>Scratch data containing finite element information at quadrature points for efficient assembly </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">copy_data</td><td>Copy data structure for storing local assembly results before copying to global structures </td></tr>
   </table>
   </dd>
 </dl>
@@ -578,7 +596,7 @@ template&lt;int dim&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8cc_source.html#l00429">429</a> of file <a class="el" href="fluid__dynamics__vans_8cc_source.html">fluid_dynamics_vans.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00433">NavierStokesScratchData&lt; dim &gt;::calculate_physical_properties()</a>, <a class="el" href="copy__data_8h_source.html#l00215">StabilizedMethodsTensorCopyData&lt; dim &gt;::cell_is_local</a>, <a class="el" href="copy__data_8h_source.html#l00207">StabilizedMethodsTensorCopyData&lt; dim &gt;::local_dof_indices</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00226">NavierStokesScratchData&lt; dim &gt;::reinit()</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00962">NavierStokesScratchData&lt; dim &gt;::reinit_particle_fluid_interactions()</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00536">NavierStokesScratchData&lt; dim &gt;::reinit_vof()</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00630">NavierStokesScratchData&lt; dim &gt;::reinit_void_fraction()</a>, <a class="el" href="copy__data_8h_source.html#l00191">StabilizedMethodsTensorCopyData&lt; dim &gt;::reset()</a>, and <a class="el" href="multiphysics_8h_source.html#l00012">VOF</a>.</p>
+<p class="reference">References <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00433">NavierStokesScratchData&lt; dim &gt;::calculate_physical_properties()</a>, <a class="el" href="copy__data_8h_source.html#l00213">StabilizedMethodsTensorCopyData&lt; dim &gt;::cell_is_local</a>, <a class="el" href="copy__data_8h_source.html#l00205">StabilizedMethodsTensorCopyData&lt; dim &gt;::local_dof_indices</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00225">NavierStokesScratchData&lt; dim &gt;::reinit()</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00943">NavierStokesScratchData&lt; dim &gt;::reinit_particle_fluid_interactions()</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00505">NavierStokesScratchData&lt; dim &gt;::reinit_vof()</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00599">NavierStokesScratchData&lt; dim &gt;::reinit_void_fraction()</a>, <a class="el" href="copy__data_8h_source.html#l00189">StabilizedMethodsTensorCopyData&lt; dim &gt;::reset()</a>, and <a class="el" href="multiphysics_8h_source.html#l00012">VOF</a>.</p>
 
 </div>
 </div>
@@ -624,12 +642,13 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Assembles the local rhs for a given cell. </p>
+<p>Assemble the local right-hand side vector for a given cell. </p>
+<p>Computes the local contributions to the global right-hand side vector for a single cell, including source terms, boundary conditions, and particle-fluid interaction terms modified by void fraction.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cell</td><td>The cell for which the local matrix is assembled.</td></tr>
-    <tr><td class="paramname">scratch_data</td><td>The scratch data which is used to store the calculated finite element information at the gauss point. See the documentation for <a class="el" href="classNavierStokesScratchData.html" title="Class that stores the information required by the assembly procedure for a Navier-Stokes equation....">NavierStokesScratchData</a> for more information</td></tr>
-    <tr><td class="paramname">copy_data</td><td>The copy data which is used to store the results of the assembly over a cell </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cell</td><td>Iterator pointing to the current active cell </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">scratch_data</td><td>Scratch data containing finite element information at quadrature points for efficient assembly </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">copy_data</td><td>Copy data structure for storing local assembly results before copying to global structures </td></tr>
   </table>
   </dd>
 </dl>
@@ -638,7 +657,7 @@ template&lt;int dim&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8cc_source.html#l00583">583</a> of file <a class="el" href="fluid__dynamics__vans_8cc_source.html">fluid_dynamics_vans.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00433">NavierStokesScratchData&lt; dim &gt;::calculate_physical_properties()</a>, <a class="el" href="copy__data_8h_source.html#l00215">StabilizedMethodsTensorCopyData&lt; dim &gt;::cell_is_local</a>, <a class="el" href="copy__data_8h_source.html#l00207">StabilizedMethodsTensorCopyData&lt; dim &gt;::local_dof_indices</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00226">NavierStokesScratchData&lt; dim &gt;::reinit()</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00962">NavierStokesScratchData&lt; dim &gt;::reinit_particle_fluid_interactions()</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00536">NavierStokesScratchData&lt; dim &gt;::reinit_vof()</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00630">NavierStokesScratchData&lt; dim &gt;::reinit_void_fraction()</a>, <a class="el" href="copy__data_8h_source.html#l00191">StabilizedMethodsTensorCopyData&lt; dim &gt;::reset()</a>, and <a class="el" href="multiphysics_8h_source.html#l00012">VOF</a>.</p>
+<p class="reference">References <a class="el" href="navier__stokes__scratch__data_8cc_source.html#l00433">NavierStokesScratchData&lt; dim &gt;::calculate_physical_properties()</a>, <a class="el" href="copy__data_8h_source.html#l00213">StabilizedMethodsTensorCopyData&lt; dim &gt;::cell_is_local</a>, <a class="el" href="copy__data_8h_source.html#l00205">StabilizedMethodsTensorCopyData&lt; dim &gt;::local_dof_indices</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00225">NavierStokesScratchData&lt; dim &gt;::reinit()</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00943">NavierStokesScratchData&lt; dim &gt;::reinit_particle_fluid_interactions()</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00505">NavierStokesScratchData&lt; dim &gt;::reinit_vof()</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l00599">NavierStokesScratchData&lt; dim &gt;::reinit_void_fraction()</a>, <a class="el" href="copy__data_8h_source.html#l00189">StabilizedMethodsTensorCopyData&lt; dim &gt;::reset()</a>, and <a class="el" href="multiphysics_8h_source.html#l00012">VOF</a>.</p>
 
 </div>
 </div>
@@ -668,6 +687,15 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Assemble the diagonal mass matrix for the VANS system. </p>
+<p>Constructs the diagonal mass matrix used in time-dependent VANS calculations, incorporating void fraction effects.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">mass_matrix</td><td>Sparse matrix to store the assembled mass matrix </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="acfd25108dae4492000ed0216e934a8da" name="acfd25108dae4492000ed0216e934a8da"></a>
@@ -695,7 +723,8 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Assembles the matrix associated with the solver. </p>
+<p>Assemble the global system matrix for the VANS equations. </p>
+<p>Constructs the global system matrix by assembling contributions from all cells, including fluid dynamics terms modified by void fraction and particle-fluid interaction terms. </p>
 
 <p>Reimplemented from <a class="el" href="classFluidDynamicsMatrixBased.html#a8e89abd997c09d50fad2eb8e2e092443">FluidDynamicsMatrixBased&lt; dim &gt;</a>.</p>
 
@@ -730,7 +759,8 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Assembles the rhs associated with the solver. </p>
+<p>Assemble the global right-hand side vector for the VANS equations. </p>
+<p>Constructs the global right-hand side vector including all source terms, boundary conditions, and particle-fluid coupling contributions. </p>
 
 <p>Reimplemented from <a class="el" href="classFluidDynamicsMatrixBased.html#ae20a8b3537aef54c5c53f26688c6667a">FluidDynamicsMatrixBased&lt; dim &gt;</a>.</p>
 
@@ -766,6 +796,15 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Calculate void fraction field based on particle positions. </p>
+<p>Computes the local void fraction (porosity) at each point in the computational domain based on the current particle configuration.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>Current simulation time for time-dependent calculations </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8cc_source.html#l00165">165</a> of file <a class="el" href="fluid__dynamics__vans_8cc_source.html">fluid_dynamics_vans.cc</a>.</p>
 
 </div>
@@ -796,13 +835,20 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Copies local cell information to global matrix. </p>
+<p>Copy local matrix contributions to the global system matrix. </p>
+<p>Transfers the locally assembled matrix contributions from a single cell to the appropriate locations in the global system matrix, handling constraint applications and matrix sparsity patterns.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">copy_data</td><td>Local assembly data containing matrix contributions and associated degree of freedom indices </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Reimplemented from <a class="el" href="classFluidDynamicsMatrixBased.html#ac762ec75cd1d1c47ec5deebd82d54d2c">FluidDynamicsMatrixBased&lt; dim &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8cc_source.html#l00516">516</a> of file <a class="el" href="fluid__dynamics__vans_8cc_source.html">fluid_dynamics_vans.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="copy__data_8h_source.html#l00215">StabilizedMethodsTensorCopyData&lt; dim &gt;::cell_is_local</a>, <a class="el" href="copy__data_8h_source.html#l00207">StabilizedMethodsTensorCopyData&lt; dim &gt;::local_dof_indices</a>, and <a class="el" href="copy__data_8h_source.html#l00205">StabilizedMethodsTensorCopyData&lt; dim &gt;::local_matrix</a>.</p>
+<p class="reference">References <a class="el" href="copy__data_8h_source.html#l00213">StabilizedMethodsTensorCopyData&lt; dim &gt;::cell_is_local</a>, <a class="el" href="copy__data_8h_source.html#l00205">StabilizedMethodsTensorCopyData&lt; dim &gt;::local_dof_indices</a>, and <a class="el" href="copy__data_8h_source.html#l00203">StabilizedMethodsTensorCopyData&lt; dim &gt;::local_matrix</a>.</p>
 
 </div>
 </div>
@@ -832,13 +878,20 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Copies local cell rhs information to global rhs. </p>
+<p>Copy local right-hand side contributions to the global vector. </p>
+<p>Transfers the locally assembled right-hand side contributions from a single cell to the appropriate locations in the global right-hand side vector, handling constraint applications.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">copy_data</td><td>Local assembly data containing right-hand side contributions and associated degree of freedom indices </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Reimplemented from <a class="el" href="classFluidDynamicsMatrixBased.html#a368346e9777ffb09492541270ed43198">FluidDynamicsMatrixBased&lt; dim &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8cc_source.html#l00670">670</a> of file <a class="el" href="fluid__dynamics__vans_8cc_source.html">fluid_dynamics_vans.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="copy__data_8h_source.html#l00215">StabilizedMethodsTensorCopyData&lt; dim &gt;::cell_is_local</a>, <a class="el" href="copy__data_8h_source.html#l00207">StabilizedMethodsTensorCopyData&lt; dim &gt;::local_dof_indices</a>, and <a class="el" href="copy__data_8h_source.html#l00206">StabilizedMethodsTensorCopyData&lt; dim &gt;::local_rhs</a>.</p>
+<p class="reference">References <a class="el" href="copy__data_8h_source.html#l00213">StabilizedMethodsTensorCopyData&lt; dim &gt;::cell_is_local</a>, <a class="el" href="copy__data_8h_source.html#l00205">StabilizedMethodsTensorCopyData&lt; dim &gt;::local_dof_indices</a>, and <a class="el" href="copy__data_8h_source.html#l00204">StabilizedMethodsTensorCopyData&lt; dim &gt;::local_rhs</a>.</p>
 
 </div>
 </div>
@@ -867,7 +920,8 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>finish_time_step Finishes the time step Post-processing and time stepping </p>
+<p>Complete operations at the end of a time step. </p>
+<p>Performs final operations required at the completion of each time step including post-processing and time advancement for fluid dynamics. </p>
 
 <p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8cc_source.html#l00073">73</a> of file <a class="el" href="fluid__dynamics__vans_8cc_source.html">fluid_dynamics_vans.cc</a>.</p>
 
@@ -900,8 +954,9 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Add void fractio and particle velocity field to output files. </p>
-<dl class="section return"><dt>Returns</dt><dd>Vector of OutputStructs that will be used to write the output results as VTU files. </dd></dl>
+<p>Gather additional output fields for visualization. </p>
+<p>Adds void fraction and particle velocity fields to the standard fluid dynamics output for comprehensive visualization of the coupled CFD-DEM system.</p>
+<dl class="section return"><dt>Returns</dt><dd>Vector of OutputStruct objects containing additional fields for VTU output file generation </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classNavierStokesBase.html#ab51c98b276b35c1d5861fba16b724914">NavierStokesBase&lt; dim, GlobalVectorType, IndexSet &gt;</a>.</p>
 
@@ -936,13 +991,14 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Do a regular CFD iteration. </p>
+<p>Execute a single VANS iteration. </p>
+<p>Performs one iteration of the VANS solution procedure including assembly, solution of the linear system, and solution update. </p>
 
 <p>Reimplemented from <a class="el" href="classNavierStokesBase.html#a98a7f846709b83df0ea64c361fee192c">NavierStokesBase&lt; dim, GlobalVectorType, IndexSet &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8cc_source.html#l00191">191</a> of file <a class="el" href="fluid__dynamics__vans_8cc_source.html">fluid_dynamics_vans.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="utilities_8h_source.html#l00463">announce_string()</a>, and <a class="el" href="physics__solver_8h_source.html#l00169">PhysicsSolver&lt; VectorType &gt;::solve_non_linear_system()</a>.</p>
+<p class="reference">References <a class="el" href="utilities_8h_source.html#l00463">announce_string()</a>, and <a class="el" href="physics__solver_8h_source.html#l00168">PhysicsSolver&lt; VectorType &gt;::solve_non_linear_system()</a>.</p>
 
 </div>
 </div>
@@ -971,9 +1027,12 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Monitor mass conservation in the VANS system. </p>
+<p>Calculates and reports mass conservation metrics for the VANS solution, taking into account the void fraction field. </p>
+
 <p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8cc_source.html#l00713">713</a> of file <a class="el" href="fluid__dynamics__vans_8cc_source.html">fluid_dynamics_vans.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="structParameters_1_1SimulationControl.html#a75b33ae454da14bc72dbe078c121d7e9a0267dc6b1db4ed7cf48c60fa776c8843">Parameters::SimulationControl::bdf1</a>, <a class="el" href="structParameters_1_1SimulationControl.html#a75b33ae454da14bc72dbe078c121d7e9a7e23e875a6c062a276f90cb43a6280c0">Parameters::SimulationControl::bdf2</a>, <a class="el" href="structParameters_1_1SimulationControl.html#a75b33ae454da14bc72dbe078c121d7e9a62fd133dd9c35c94e867fc65606aeffe">Parameters::SimulationControl::bdf3</a>, and <a class="el" href="structParameters_1_1SimulationControl.html#a75b33ae454da14bc72dbe078c121d7e9a4f997f546b68779b58e9f6f19dc2b9e5">Parameters::SimulationControl::steady</a>.</p>
+<p class="reference">References <a class="el" href="structParameters_1_1SimulationControl.html#a86daf86652a712eb783c105c953eb7f8a0267dc6b1db4ed7cf48c60fa776c8843">Parameters::SimulationControl::bdf1</a>, <a class="el" href="structParameters_1_1SimulationControl.html#a86daf86652a712eb783c105c953eb7f8a7e23e875a6c062a276f90cb43a6280c0">Parameters::SimulationControl::bdf2</a>, <a class="el" href="structParameters_1_1SimulationControl.html#a86daf86652a712eb783c105c953eb7f8a62fd133dd9c35c94e867fc65606aeffe">Parameters::SimulationControl::bdf3</a>, and <a class="el" href="structParameters_1_1SimulationControl.html#a86daf86652a712eb783c105c953eb7f8a4f997f546b68779b58e9f6f19dc2b9e5">Parameters::SimulationControl::steady</a>.</p>
 
 </div>
 </div>
@@ -997,14 +1056,19 @@ template&lt;int dim&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>Read <a class="el" href="namespaceDEM.html" title="This namespace defines all the data containers and required operations on these containers for the DE...">DEM</a> data for particle-fluid coupling. </p>
+<p>Loads particle information from <a class="el" href="namespaceDEM.html" title="This namespace defines all the data containers and required operations on these containers for the DE...">DEM</a> simulation for use in computing void fraction and particle-fluid interaction terms. </p>
+
+<p>Reimplemented in <a class="el" href="classCFDDEMSolver.html#a851571bba2e51badf4ef10387c5e3bb9">CFDDEMSolver&lt; dim &gt;</a>.</p>
+
 <p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8cc_source.html#l00084">84</a> of file <a class="el" href="fluid__dynamics__vans_8cc_source.html">fluid_dynamics_vans.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="particle__handler__conversion_8h_source.html#l00034">convert_particle_handler()</a>, and <a class="el" href="dem__properties_8h_source.html#l00046">DEM::DEMProperties::n_properties</a>.</p>
+<p class="reference">References <a class="el" href="particle__handler__conversion_8h_source.html#l00033">convert_particle_handler()</a>, and <a class="el" href="dem__properties_8h_source.html#l00046">DEM::DEMProperties::n_properties</a>.</p>
 
 </div>
 </div>
@@ -1033,13 +1097,14 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>sets up the vector of assembler functions </p>
+<p>Set up the vector of assembler functions for VANS equations. </p>
+<p>Initializes the assembler objects responsible for computing different terms in the VANS equations, including particle-fluid interaction assemblers and void fraction-dependent terms. </p>
 
 <p>Reimplemented from <a class="el" href="classFluidDynamicsMatrixBased.html#a53dc7e7aba58ac071e69f49b445d6169">FluidDynamicsMatrixBased&lt; dim &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8cc_source.html#l00202">202</a> of file <a class="el" href="fluid__dynamics__vans_8cc_source.html">fluid_dynamics_vans.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="namespaceParameters.html#a8b408c8f42632c3dd96b69b720ace6f6a8efa8d4f5786679eabd0fdb325bad76b">Parameters::beetstra</a>, <a class="el" href="namespaceParameters.html#a8b408c8f42632c3dd96b69b720ace6f6a0d3593f2d6bf48e3e2700f0bc2a1e970">Parameters::dallavalle</a>, <a class="el" href="namespaceParameters.html#a8b408c8f42632c3dd96b69b720ace6f6ab1f1e7a3c1ddcf75366181531f51873a">Parameters::difelice</a>, <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8add95ffdcea64b1eaaa9244611678ed38">BoundaryConditions::function_weak</a>, <a class="el" href="namespaceParameters.html#a8b408c8f42632c3dd96b69b720ace6f6a5b11eff46b4ff2d0e186789cb3a402ed">Parameters::gidaspow</a>, <a class="el" href="time__integration__utilities_8h_source.html#l00042">is_bdf()</a>, <a class="el" href="namespaceParameters.html#a8b408c8f42632c3dd96b69b720ace6f6a9e42d27391c1851954ee4d7795d713cf">Parameters::kochhill</a>, <a class="el" href="namespaceParameters.html#a885ce66c74635a68dd078d94aedddac6aaab653aeeee220006e2b9f692569492c">Parameters::modelA</a>, <a class="el" href="namespaceParameters.html#a885ce66c74635a68dd078d94aedddac6ab35bb34924c70e61eec8a8bae8cac690">Parameters::modelB</a>, <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8ab0ba1623558e169131cb513037504286">BoundaryConditions::outlet</a>, <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8ac6bda74f8a2d6e410535eaa3dca28e9d">BoundaryConditions::partial_slip</a>, <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8ad99fad96a5d0a7cb2eb41341ea556093">BoundaryConditions::pressure</a>, and <a class="el" href="namespaceParameters.html#a8b408c8f42632c3dd96b69b720ace6f6a08279be0e2c1aba70f92cd04058b995a">Parameters::rong</a>.</p>
+<p class="reference">References <a class="el" href="namespaceParameters.html#a8b408c8f42632c3dd96b69b720ace6f6a8efa8d4f5786679eabd0fdb325bad76b">Parameters::beetstra</a>, <a class="el" href="namespaceParameters.html#a8b408c8f42632c3dd96b69b720ace6f6a0d3593f2d6bf48e3e2700f0bc2a1e970">Parameters::dallavalle</a>, <a class="el" href="namespaceParameters.html#a8b408c8f42632c3dd96b69b720ace6f6ab1f1e7a3c1ddcf75366181531f51873a">Parameters::difelice</a>, <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8add95ffdcea64b1eaaa9244611678ed38">BoundaryConditions::function_weak</a>, <a class="el" href="namespaceParameters.html#a8b408c8f42632c3dd96b69b720ace6f6a5b11eff46b4ff2d0e186789cb3a402ed">Parameters::gidaspow</a>, <a class="el" href="time__integration__utilities_8h_source.html#l00041">is_bdf()</a>, <a class="el" href="namespaceParameters.html#a8b408c8f42632c3dd96b69b720ace6f6a9e42d27391c1851954ee4d7795d713cf">Parameters::kochhill</a>, <a class="el" href="namespaceParameters.html#a885ce66c74635a68dd078d94aedddac6aaab653aeeee220006e2b9f692569492c">Parameters::modelA</a>, <a class="el" href="namespaceParameters.html#a885ce66c74635a68dd078d94aedddac6ab35bb34924c70e61eec8a8bae8cac690">Parameters::modelB</a>, <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8ab0ba1623558e169131cb513037504286">BoundaryConditions::outlet</a>, <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8ac6bda74f8a2d6e410535eaa3dca28e9d">BoundaryConditions::partial_slip</a>, <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8ad99fad96a5d0a7cb2eb41341ea556093">BoundaryConditions::pressure</a>, and <a class="el" href="namespaceParameters.html#a8b408c8f42632c3dd96b69b720ace6f6a08279be0e2c1aba70f92cd04058b995a">Parameters::rong</a>.</p>
 
 </div>
 </div>
@@ -1068,13 +1133,14 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>associates the degrees of freedom to each vertex of the finite elements and initialize the void fraction </p>
+<p>Set up degrees of freedom and initialize void fraction field. </p>
+<p>Associates degrees of freedom to each vertex of the finite elements and initializes the void fraction field that represents the local volume fraction available to the fluid phase. </p>
 
 <p>Reimplemented from <a class="el" href="classNavierStokesBase.html#adf2f852055a04e76674325e408807a74">NavierStokesBase&lt; dim, GlobalVectorType, IndexSet &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8cc_source.html#l00062">62</a> of file <a class="el" href="fluid__dynamics__vans_8cc_source.html">fluid_dynamics_vans.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="navier__stokes__base_8h_source.html#l00210">NavierStokesBase&lt; dim, GlobalVectorType, IndexSet &gt;::setup_dofs()</a>.</p>
+<p class="reference">References <a class="el" href="navier__stokes__base_8h_source.html#l00208">NavierStokesBase&lt; dim, GlobalVectorType, IndexSet &gt;::setup_dofs()</a>.</p>
 
 </div>
 </div>
@@ -1103,8 +1169,8 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>solve Solves the Navier-Stokes problem </p>
-<p>This functions solves the problem defined by the Navier-Stokes parameter by iterating through time or through the mesh refinements. </p>
+<p>Main solver loop for the VANS equations. </p>
+<p>Executes the complete solution procedure for the VANS equations including time stepping, matrix assembly, linear system solution, and convergence checking. </p>
 
 <p>Reimplemented from <a class="el" href="classFluidDynamicsMatrixBased.html#a0851f8761d15071cf776a0467b339eaa">FluidDynamicsMatrixBased&lt; dim &gt;</a>.</p>
 
@@ -1112,7 +1178,7 @@ template&lt;int dim&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8cc_source.html#l00889">889</a> of file <a class="el" href="fluid__dynamics__vans_8cc_source.html">fluid_dynamics_vans.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="grids_8cc_source.html#l00345">read_mesh_and_manifolds()</a>, and <a class="el" href="navier__stokes__base_8cc_source.html#l00855">NavierStokesBase&lt; dim, VectorType, DofsType &gt;::refine_mesh()</a>.</p>
+<p class="reference">References <a class="el" href="grids_8cc_source.html#l00343">read_mesh_and_manifolds()</a>, and <a class="el" href="navier__stokes__base_8cc_source.html#l00855">NavierStokesBase&lt; dim, VectorType, DofsType &gt;::refine_mesh()</a>.</p>
 
 </div>
 </div>
@@ -1141,6 +1207,9 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Update solution vectors and constraint objects. </p>
+<p>Updates the solution vectors and applies constraints after each iteration or time step in the VANS solution process. </p>
+
 </div>
 </div>
 <a id="a554bd6e2e9a3be741af530fb92c4bd93" name="a554bd6e2e9a3be741af530fb92c4bd93"></a>
@@ -1168,9 +1237,12 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Create mapping between vertices and cells. </p>
+<p>Establishes the relationship between mesh vertices and the cells that contain them, which is needed for efficient void fraction and particle-fluid coupling calculations. </p>
+
 <p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8cc_source.html#l00173">173</a> of file <a class="el" href="fluid__dynamics__vans_8cc_source.html">fluid_dynamics_vans.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lethe__grid__tools_8cc_source.html#l00020">LetheGridTools::vertices_cell_mapping()</a>, and <a class="el" href="lethe__grid__tools_8cc_source.html#l00051">LetheGridTools::vertices_cell_mapping_with_periodic_boundaries()</a>.</p>
+<p class="reference">References <a class="el" href="lethe__grid__tools_8cc_source.html#l00021">LetheGridTools::vertices_cell_mapping()</a>, and <a class="el" href="lethe__grid__tools_8cc_source.html#l00052">LetheGridTools::vertices_cell_mapping_with_periodic_boundaries()</a>.</p>
 
 </div>
 </div>
@@ -1196,9 +1268,11 @@ template&lt;int dim&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Member Variables </p>
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00173">173</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
+<p>Member Variables. </p>
+<p>CFD-DEM simulation parameters containing all configuration options </p>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00275">275</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1224,7 +1298,9 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00184">184</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
+<p>Scaling factor for GLS velocity stabilization terms. </p>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00291">291</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1250,7 +1326,9 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00198">198</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
+<p>Flag indicating whether the domain has periodic boundary conditions. </p>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00314">314</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1276,7 +1354,9 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00179">179</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
+<p>Vector of assembler objects for particle-fluid interaction terms. </p>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00282">282</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1302,7 +1382,9 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00194">194</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
+<p>Particle handler for managing particle data and operations. </p>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00308">308</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1328,7 +1410,9 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00175">175</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
+<p>Mapping object for particle position calculations and projections. </p>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00278">278</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1354,7 +1438,9 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00196">196</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
+<p>Particle projector for calculating void fraction and particle effects. </p>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00311">311</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1380,7 +1466,9 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00200">200</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
+<p>Direction index for periodic boundary conditions. </p>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00320">320</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1406,7 +1494,9 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00199">199</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
+<p>Offset vector for periodic boundary condition calculations. </p>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00317">317</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1432,7 +1522,9 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00185">185</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
+<p>Pressure drop across the computational domain. </p>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00294">294</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1458,7 +1550,9 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00182">182</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
+<p>Flag enabling Pressure Stabilizing Petrov-Galerkin (PSPG) stabilization. </p>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00285">285</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1484,7 +1578,9 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00183">183</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
+<p>Flag enabling Streamline Upwind Petrov-Galerkin (SUPG) stabilization. </p>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00288">288</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1510,7 +1606,9 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00189">189</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
+<p>Mapping from vertex indices to sets of cells containing each vertex. </p>
+
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00299">299</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
 
 </div>
 </div>
@@ -1535,8 +1633,9 @@ template&lt;int dim&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Mapping from vertex indices to sets of periodic cells containing each vertex </p>
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00192">192</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__vans_8h_source.html#l00305">305</a> of file <a class="el" href="fluid__dynamics__vans_8h_source.html">fluid_dynamics_vans.h</a>.</p>
 
 </div>
 </div>
