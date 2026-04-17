@@ -176,6 +176,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../cfd/boundary_conditions_multiphysics.html">Boundary Conditions - Multiphysics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/box_refinement.html">Box Refinement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/cahn_hilliard.html">Cahn-Hilliard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cfd/conservative_level_set.html">Conservative Level-Set (Multiphase Flow)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/constrain_stasis.html">Constrain Stasis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/dimensionality.html">Dimensionality</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/dynamic_flow_control.html">Dynamic Flow Control</a></li>
@@ -200,7 +201,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../cfd/timer.html">Timer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/tracer_drift_velocity.html">Tracer Drift Velocity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/velocity_source.html">Velocity Source</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../cfd/volume_of_fluid.html">Volume of Fluid (Multiphase Flow)</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../dem/dem.html">Discrete Element Method (DEM)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Discrete Element Method (DEM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -238,6 +238,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-naca0012-low-reynolds/2d-naca0012-low-reynolds.html">Flow around NACA0012 at Low Reynolds Number</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">Taylor-Couette Flow Using Nitsche Immersed Boundary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-sudden-expansion-flow/2d-sudden-expansion-flow.html">Sudden-Expansion Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-paddle-mixer-mortar/2d-paddle-mixer-mortar.html">Paddle Mixer Using the Mortar Method</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">Flow around a Sphere</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-taylor-green-vortex/3d-taylor-green-vortex.html">Taylor-Green Vortex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-turbulent-taylor-couette/3d-turbulent-taylor-couette.html">Turbulent Taylor-Couette Flow</a></li>
@@ -248,7 +249,7 @@
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/multiphysics/multiphysics.html">Multiphysics</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Multiphysics</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../examples/multiphysics/vof.html">VOF</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of VOF</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../examples/multiphysics/cls.html">CLS</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of CLS</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/dam-break/dam-break.html">Dam-Break</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/rayleigh-taylor-instability/rayleigh-taylor-instability.html">Rayleigh-Taylor Instability</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/static-bubble/static-bubble.html">Static Bubble</a></li>
@@ -310,7 +311,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/single-particle-sedimentation/single-particle-sedimentation.html">Single Particle Sedimentation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/cylindrical-packed-bed/cylindrical-packed-bed.html">Cylindrical Packed Bed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-fluidized-bed/gas-solid-fluidized-bed.html">Gas-Solid Fluidized Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-fluidized-cylinder-bed/gas-solid-fluidized-cylinder-bed.html">Gas-Solid Fluidized Cylinder Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/pseudo-2d-gas-solid-fluidized-bed/pseudo-2d-gas-solid-fluidized-bed.html">Pseudo-2D Gas-Solid Fluidized Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-spouted-rectangular-bed/gas-solid-spouted-rectangular-bed.html">Gas-Solid Spouted Rectangular Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/liquid-solid-fluidized-bed/liquid-solid-fluidized-bed.html">Liquid-Solid Fluidized Bed</a></li>
@@ -375,7 +376,7 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../theory/multiphase/multiphase.html">Multiphase</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle navigation of Multiphase</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../theory/multiphase/cfd/cfd.html">Fluid-Fluid Flows - Interface Capturing Models</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle navigation of Fluid-Fluid Flows - Interface Capturing Models</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../theory/multiphase/cfd/vof.html">The Volume of Fluid (VOF) Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../theory/multiphase/cfd/cls.html">The Conservative Level-Set (CLS) Method</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../theory/multiphase/cfd/cahn-hilliard.html">Cahn-Hilliard Method</a></li>
 </ul>
 </li>
@@ -461,7 +462,9 @@
   set shear force                   = true
   set pressure force                = true
   set project particle forces       = false
+  set dem iteration control         = number of iterations # number of iterations | fraction of rayleigh time
   set coupling frequency            = 100
+  set fraction rayleigh time        = 0.1
   set implicit stabilization        = true
   set grad-div length scale         = 1
   set particle statistics           = true
@@ -516,7 +519,7 @@ Since the viscous torque model is not complete without the vortical component, <
 <ul class="simple">
 <li><dl class="simple">
 <dt>The <code class="docutils literal notranslate"><span class="pre">drag</span> <span class="pre">coupling</span></code> parameter controls the time level at which the fluid velocity is evaluated when computing the drag and hydrodynamic forces.</dt><dd><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">drag</span> <span class="pre">coupling</span> <span class="pre">=</span> <span class="pre">semi-implicit</span></code>:  the drag force on the particles is computed using the velocity of both the particles and the fluid at time <span class="math notranslate nohighlight">\(t\)</span> . When transferring momentum to the fluid, the previous fluid velocity is used to evaluate the momentum transfer coefficient, while the current fluid velocity is used to calculate relative velocity between the particle and the fluid. This provides extensive stability, but for larger time-step may lead to a slight violation of Newton’s third law since the drag applied on the fluid is not strictly equal to the drag applied to the particles. the drag force is computed but is partially implicit on the fluid to ensure stable coupling. The default value is to use a <code class="docutils literal notranslate"><span class="pre">drag</span> <span class="pre">coupling</span> <span class="pre">=</span> <span class="pre">semi-implicit</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">drag</span> <span class="pre">coupling</span> <span class="pre">=</span> <span class="pre">semi-implicit</span></code>:  the drag force on the particles is computed using the velocity of both the particles and the fluid at time <span class="math notranslate nohighlight">\(t\)</span> . When transferring momentum to the fluid, the previous fluid velocity is used to evaluate the momentum transfer coefficient, while the current fluid velocity is used to calculate relative velocity between the particle and the fluid. This provides extensive stability, but for larger time step may lead to a slight violation of Newton’s third law since the drag applied on the fluid is not strictly equal to the drag applied to the particles. the drag force is computed but is partially implicit on the fluid to ensure stable coupling. The default value is to use a <code class="docutils literal notranslate"><span class="pre">drag</span> <span class="pre">coupling</span> <span class="pre">=</span> <span class="pre">semi-implicit</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">drag</span> <span class="pre">coupling</span> <span class="pre">=</span> <span class="pre">implicit</span></code>: the drag force (including the drag coefficient) is evaluated implicitly using the fluid velocity at time <span class="math notranslate nohighlight">\(t + \Delta t\)</span>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">drag</span> <span class="pre">coupling</span> <span class="pre">=</span> <span class="pre">explicit</span></code>: the drag force is computed explicitly using the fluid velocity at time <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
 </ul>
@@ -561,20 +564,23 @@ Since the viscous torque model is not complete without the vortical component, <
 </tbody>
 </table>
 </div>
-<ul class="simple">
+<ul>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">project</span> <span class="pre">particle</span> <span class="pre">forces</span></code> option enables the inclusion of particle–fluid interaction forces directly in the VANS equations by projecting these forces from the particles onto the fluid using the <code class="docutils literal notranslate"><span class="pre">qcm</span></code> filter. Thus, it is only compatible with the <code class="docutils literal notranslate"><span class="pre">qcm</span></code> method, which can be selected in the void fraction subsection <a class="reference internal" href="void-fraction.html"><span class="doc">Void Fraction</span></a>. By default, this option is set to <code class="docutils literal notranslate"><span class="pre">false</span></code>. In that case, the particle-fluid forces incorporated in the VANS equations are calculated in each cell as the average of the fluid forces acting on the particles within that cell.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">particle</span> <span class="pre">statistics</span></code> parameter, when enabled, outputs statistics about the particles’ velocity, kinetic energy, and the amount of contact detection.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">coupling</span> <span class="pre">frequency</span></code> determines the number of DEM iterations per 1 CFD iteration.</p></li>
+<li><dl>
+<dt>The <code class="docutils literal notranslate"><span class="pre">dem</span> <span class="pre">iteration</span> <span class="pre">control</span></code> determines the strategy to carry out the DEM time-steps. Two modes are supported:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dem</span> <span class="pre">iteration</span> <span class="pre">control</span> <span class="pre">=</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">iterations</span></code>: A fixed number of DEM iterations, equal to <code class="docutils literal notranslate"><span class="pre">coupling</span> <span class="pre">frequency</span></code> (<span class="math notranslate nohighlight">\(f_{\text{coupling}}\)</span>), is carried out per 1 CFD iteration. If the CFD time step is not constant, the DEM time step will changed dynamically:</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">coupling</span> <span class="pre">frequency</span></code> parameter is used to calculate the dem time step as it is not explicitly determined in the parameter file. It is calculated as:</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
-\[\Delta t_{DEM} = \frac{\Delta t_{CFD}}{coupling frequency}\]</div>
-</div>
+\[\Delta t_{\text{DEM}} = \frac{\Delta t_{\text{CFD}}}{f_{\text{coupling}}}\]</div>
 </div>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dem</span> <span class="pre">iteration</span> <span class="pre">control</span> <span class="pre">=</span> <span class="pre">fraction</span> <span class="pre">of</span> <span class="pre">rayleigh</span> <span class="pre">time</span></code>: The DEM time step is fixed to a given fraction of the Rayleigh time ( equal to <code class="docutils literal notranslate"><span class="pre">fraction</span> <span class="pre">rayleigh</span> <span class="pre">time</span></code>) and remains constant throughout the simulation.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">implicit</span> <span class="pre">stabilization</span></code> parameter determines whether or not we calculate the <span class="math notranslate nohighlight">\(\tau\)</span> for the SUPG/PSPG stabilization and the <span class="math notranslate nohighlight">\(\gamma\)</span> for the grad-div stabilization using the current velocity (implicit stabilization) or the velocity at the previous time step (explicit stabilization). By default, this is set to true. If difficulties are encountered in the convergence of the non-linear solver, a good practice is to set this to false.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">grad-div</span> <span class="pre">length</span> <span class="pre">scale</span></code> parameter determines the value of the length scale constant <span class="math notranslate nohighlight">\(c^*\)</span> in the calculation of <span class="math notranslate nohighlight">\(\gamma = \nu + c^* \mathbf{u}\)</span>.</p></li>
 </ul>

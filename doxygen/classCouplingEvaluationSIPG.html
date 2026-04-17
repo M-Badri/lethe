@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -94,12 +98,7 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for CouplingEvaluationSIPG&lt; dim, n_components, Number &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="classCouplingEvaluationSIPG__inherit__graph.png" border="0" usemap="#aCouplingEvaluationSIPG_3_01dim_00_01n__components_00_01Number_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="aCouplingEvaluationSIPG_3_01dim_00_01n__components_00_01Number_01_4_inherit__map" id="aCouplingEvaluationSIPG_3_01dim_00_01n__components_00_01Number_01_4_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,93,245,133"/>
-<area shape="rect" href="classCouplingEvaluationBase.html" title="Base class for coupling evaluation routines." alt="" coords="35,5,215,45"/>
-<area shape="poly" title=" " alt="" coords="128,59,128,93,123,93,123,59"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classCouplingEvaluationSIPG__inherit__graph.svg" width="251" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -139,7 +138,7 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int dim, int n_components, typename Number&gt;<br />
 class CouplingEvaluationSIPG&lt; dim, n_components, Number &gt;</div>
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00834">834</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l01053">1053</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a737f3fb9e58bb7f84d9779aea2c2f239" name="a737f3fb9e58bb7f84d9779aea2c2f239"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a737f3fb9e58bb7f84d9779aea2c2f239">&#9670;&#160;</a></span>FEPointIntegrator</h2>
@@ -155,7 +154,7 @@ template&lt;int dim, int n_components, typename Number &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00837">837</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l01056">1056</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
 
 </div>
 </div>
@@ -173,7 +172,7 @@ template&lt;int dim, int n_components, typename Number &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00838">838</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l01057">1057</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
 
 </div>
 </div>
@@ -212,9 +211,9 @@ template&lt;int dim, int n_components, typename Number &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l01542">1542</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l01654">1654</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="mortar__coupling__manager_8h_source.html#l00878">CouplingEvaluationSIPG&lt; dim, n_components, Number &gt;::relevant_dof_indices</a>.</p>
+<p class="reference">References <a class="el" href="mortar__coupling__manager_8h_source.html#l01097">CouplingEvaluationSIPG&lt; dim, n_components, Number &gt;::relevant_dof_indices</a>.</p>
 
 </div>
 </div>
@@ -247,7 +246,7 @@ template&lt;int dim, int n_components, typename Number &gt; </div>
 
 <p>Implements <a class="el" href="classCouplingEvaluationBase.html#ac96f2c483bd43e64fe34fe75c30ca88f">CouplingEvaluationBase&lt; dim, Number &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l01563">1563</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l01675">1675</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
 
 </div>
 </div>
@@ -280,7 +279,7 @@ template&lt;int dim, int n_components, typename Number &gt; </div>
 
 <p>Implements <a class="el" href="classCouplingEvaluationBase.html#ac0b053bb06db8e6e572bc77c46e70703">CouplingEvaluationBase&lt; dim, Number &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l01570">1570</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l01682">1682</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
 
 </div>
 </div>
@@ -341,6 +340,7 @@ template&lt;int dim, int n_components, typename Number &gt; </div>
 <p>Evaluate values and gradients at the coupling entries. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Coupling evaluation data containing values of normals, weights, and penalty parameters at each integration point </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">buffer</td><td>Temporary vector where data is stored before being passes to the system matrix </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ptr_q</td><td>Pointer for the quadrature point index related to the rotor-stator interface </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">q_stride</td><td>Pointer for the cell index in which the quadrature point lies in </td></tr>
@@ -351,9 +351,9 @@ template&lt;int dim, int n_components, typename Number &gt; </div>
 
 <p>Implements <a class="el" href="classCouplingEvaluationBase.html#a75c244e6a0ce001458698e0b5c4c1c24">CouplingEvaluationBase&lt; dim, Number &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l01587">1587</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l01699">1699</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="mortar__coupling__manager_8h_source.html#l00524">CouplingEvaluationData&lt; dim, Number &gt;::all_normals</a>, <a class="el" href="mortar__coupling__manager_8h_source.html#l00344">contract()</a>, and <a class="el" href="mortar__coupling__manager_8h_source.html#l00782">BufferRW&lt; T &gt;::write()</a>.</p>
+<p class="reference">References <a class="el" href="mortar__coupling__manager_8h_source.html#l00720">CouplingEvaluationData&lt; dim, Number &gt;::all_normals</a>, <a class="el" href="mortar__coupling__manager_8h_source.html#l00540">contract()</a>, and <a class="el" href="mortar__coupling__manager_8h_source.html#l01001">BufferRW&lt; T &gt;::write()</a>.</p>
 
 </div>
 </div>
@@ -420,6 +420,7 @@ template&lt;int dim, int n_components, typename Number &gt; </div>
 <p>Perform integral of mortar elements at the rotor-stator interface. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Coupling evaluation data containing values of normals, weights, and penalty parameters at each integration point </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>Temporary vector where data is stored before being passes to the system matrix </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ptr_q</td><td>Pointer for the quadrature point index related to the rotor-stator interface </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">q_stride</td><td>Pointer for the cell index in which the quadrature point lies in </td></tr>
@@ -432,9 +433,9 @@ template&lt;int dim, int n_components, typename Number &gt; </div>
 
 <p>Implements <a class="el" href="classCouplingEvaluationBase.html#a7ffaee40ffe734e4724b927ca33e3ee6">CouplingEvaluationBase&lt; dim, Number &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l01619">1619</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l01731">1731</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="mortar__coupling__manager_8h_source.html#l00524">CouplingEvaluationData&lt; dim, Number &gt;::all_normals</a>, <a class="el" href="mortar__coupling__manager_8h_source.html#l00520">CouplingEvaluationData&lt; dim, Number &gt;::all_penalty_parameter</a>, <a class="el" href="mortar__coupling__manager_8h_source.html#l00522">CouplingEvaluationData&lt; dim, Number &gt;::all_weights</a>, <a class="el" href="mortar__coupling__manager_8h_source.html#l00344">contract()</a>, <a class="el" href="mortar__coupling__manager_8h_source.html#l00398">outer()</a>, and <a class="el" href="mortar__coupling__manager_8h_source.html#l00518">CouplingEvaluationData&lt; dim, Number &gt;::penalty_factor</a>.</p>
+<p class="reference">References <a class="el" href="mortar__coupling__manager_8h_source.html#l00720">CouplingEvaluationData&lt; dim, Number &gt;::all_normals</a>, <a class="el" href="mortar__coupling__manager_8h_source.html#l00716">CouplingEvaluationData&lt; dim, Number &gt;::all_penalty_parameter</a>, <a class="el" href="mortar__coupling__manager_8h_source.html#l00718">CouplingEvaluationData&lt; dim, Number &gt;::all_weights</a>, <a class="el" href="mortar__coupling__manager_8h_source.html#l00540">contract()</a>, <a class="el" href="mortar__coupling__manager_8h_source.html#l00594">outer()</a>, and <a class="el" href="mortar__coupling__manager_8h_source.html#l00714">CouplingEvaluationData&lt; dim, Number &gt;::penalty_factor</a>.</p>
 
 </div>
 </div>
@@ -485,7 +486,7 @@ template&lt;int dim, int n_components, typename Number &gt; </div>
 
 <p>Implements <a class="el" href="classCouplingEvaluationBase.html#a4c818592f30a0f686ea67ba788bfb246">CouplingEvaluationBase&lt; dim, Number &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l01578">1578</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l01690">1690</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
 
 </div>
 </div>
@@ -505,7 +506,7 @@ template&lt;int dim, int n_components, typename Number &gt; </div>
 </div><div class="memdoc">
 <p>Finite element that matches the components <code>n_components</code> components starting at component with index <code>first_selected_component</code> </p>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00872">872</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l01091">1091</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
 
 </div>
 </div>
@@ -533,7 +534,7 @@ template&lt;int dim, int n_components, typename Number &gt; </div>
 
 <p>Interface to the evaluation of mortar coupling interpolated solution. </p>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00875">875</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l01094">1094</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
 
 </div>
 </div>
@@ -553,7 +554,7 @@ template&lt;int dim, int n_components, typename Number &gt; </div>
 
 <p>Relevant dof indices. </p>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00878">878</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l01097">1097</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
 
 </div>
 </div>
@@ -562,9 +563,37 @@ template&lt;int dim, int n_components, typename Number &gt; </div>
 <li>/home/runner/work/lethe/lethe/source/core/<a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

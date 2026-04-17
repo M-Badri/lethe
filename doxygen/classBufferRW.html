@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -120,8 +124,9 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-class BufferRW&lt; T &gt;</div>
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00774">774</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
+class BufferRW&lt; T &gt;</div><p>Create a temporary vector where mortar evaluation data is stored before being passed to the system matrix. </p>
+
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00987">987</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2f5425aab11f6a768ae8def0bf8a0f85" name="a2f5425aab11f6a768ae8def0bf8a0f85"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2f5425aab11f6a768ae8def0bf8a0f85">&#9670;&#160;</a></span>BufferRW()</h2>
@@ -159,7 +164,16 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00777">777</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
+<p>Class constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>Vector of values on one of the mortar sides </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Number of components to offset the ptr vector </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00996">996</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
 
 </div>
 </div>
@@ -191,9 +205,9 @@ template&lt;typename T0 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00800">800</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l01019">1019</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
 
-<p class="reference">References <a class="el" href="mortar__coupling__manager_8h_source.html#l00811">BufferRW&lt; T &gt;::ptr</a>, and <a class="el" href="mortar__coupling__manager_8h_source.html#l00800">BufferRW&lt; T &gt;::read()</a>.</p>
+<p class="reference">References <a class="el" href="mortar__coupling__manager_8h_source.html#l01030">BufferRW&lt; T &gt;::ptr</a>, and <a class="el" href="mortar__coupling__manager_8h_source.html#l01019">BufferRW&lt; T &gt;::read()</a>.</p>
 
 </div>
 </div>
@@ -223,9 +237,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00824">824</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l01043">1043</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
 
-<p class="reference">References <a class="el" href="mortar__coupling__manager_8h_source.html#l00811">BufferRW&lt; T &gt;::ptr</a>.</p>
+<p class="reference">References <a class="el" href="mortar__coupling__manager_8h_source.html#l01030">BufferRW&lt; T &gt;::ptr</a>.</p>
 
 </div>
 </div>
@@ -257,9 +271,9 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00815">815</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l01034">1034</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
 
-<p class="reference">References <a class="el" href="mortar__coupling__manager_8h_source.html#l00811">BufferRW&lt; T &gt;::ptr</a>.</p>
+<p class="reference">References <a class="el" href="mortar__coupling__manager_8h_source.html#l01030">BufferRW&lt; T &gt;::ptr</a>.</p>
 
 </div>
 </div>
@@ -289,9 +303,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00782">782</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l01001">1001</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
 
-<p class="reference">References <a class="el" href="mortar__coupling__manager_8h_source.html#l00811">BufferRW&lt; T &gt;::ptr</a>.</p>
+<p class="reference">References <a class="el" href="mortar__coupling__manager_8h_source.html#l01030">BufferRW&lt; T &gt;::ptr</a>.</p>
 
 </div>
 </div>
@@ -323,9 +337,9 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00790">790</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l01009">1009</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
 
-<p class="reference">References <a class="el" href="mortar__coupling__manager_8h_source.html#l00811">BufferRW&lt; T &gt;::ptr</a>.</p>
+<p class="reference">References <a class="el" href="mortar__coupling__manager_8h_source.html#l01030">BufferRW&lt; T &gt;::ptr</a>.</p>
 
 </div>
 </div>
@@ -352,7 +366,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00811">811</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l01030">1030</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
 
 </div>
 </div>
@@ -360,9 +374,37 @@ template&lt;typename T &gt; </div>
 <li>/home/runner/work/lethe/lethe/include/core/<a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

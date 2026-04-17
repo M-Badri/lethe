@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -84,7 +88,7 @@ $(function() {
 <div class="textblock">Here is a list of all file members with links to the files they belong to:</div>
 
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
-<li>add_statistics_to_table_handler()&#160;:&#160;<a class="el" href="utilities_8h.html#aa7402e768126a85108ec67b651924bbe">utilities.h</a></li>
+<li>add_statistics_to_table_handler()&#160;:&#160;<a class="el" href="core_2utilities_8h.html#aa7402e768126a85108ec67b651924bbe">utilities.h</a></li>
 <li>ANKERL_UNORDERED_DENSE_CPP_VERSION&#160;:&#160;<a class="el" href="unordered__dense_8h.html#a93710ce10dccefbf8aa1a923c48a53fe">unordered_dense.h</a></li>
 <li>ANKERL_UNORDERED_DENSE_EXPORT&#160;:&#160;<a class="el" href="unordered__dense_8h.html#ae13aa69bf3100d984a804179a9b5c058">unordered_dense.h</a></li>
 <li>ANKERL_UNORDERED_DENSE_HAS_EXCEPTIONS&#160;:&#160;<a class="el" href="unordered__dense_8h.html#a6a80acff97c9f89acc0766feeeefc06f">unordered_dense.h</a></li>
@@ -95,17 +99,46 @@ $(function() {
 <li>ANKERL_UNORDERED_DENSE_VERSION_MAJOR&#160;:&#160;<a class="el" href="unordered__dense_8h.html#ab03c2804ad831a329362b3f373841885">unordered_dense.h</a></li>
 <li>ANKERL_UNORDERED_DENSE_VERSION_MINOR&#160;:&#160;<a class="el" href="unordered__dense_8h.html#a298c35aaaa94b3eb77142553a92a37ac">unordered_dense.h</a></li>
 <li>ANKERL_UNORDERED_DENSE_VERSION_PATCH&#160;:&#160;<a class="el" href="unordered__dense_8h.html#a31de2b96b0c90b90d8c72f5c87ebafb4">unordered_dense.h</a></li>
-<li>announce_string()&#160;:&#160;<a class="el" href="utilities_8h.html#a9329b0f36d22e7ab552519cfd2846612">utilities.h</a></li>
+<li>announce_string()&#160;:&#160;<a class="el" href="core_2utilities_8h.html#a9329b0f36d22e7ab552519cfd2846612">utilities.h</a></li>
 <li>apply_heat_transfer_on_local_particles()&#160;:&#160;<a class="el" href="particle__heat__transfer_8h.html#a85aeee87547a4cc6ce2f2f8edcdc6963">particle_heat_transfer.h</a>, <a class="el" href="particle__heat__transfer_8cc.html#a85aeee87547a4cc6ce2f2f8edcdc6963">particle_heat_transfer.cc</a></li>
 <li>apply_heat_transfer_on_single_local_particle()&#160;:&#160;<a class="el" href="particle__heat__transfer_8h.html#ac69c8dac19df3afb6bdd1383792dadfb">particle_heat_transfer.h</a>, <a class="el" href="particle__heat__transfer_8cc.html#ac69c8dac19df3afb6bdd1383792dadfb">particle_heat_transfer.cc</a></li>
-<li>attach_cad_to_manifold()&#160;:&#160;<a class="el" href="manifolds_8h.html#a3480a099a06add9277e1226e8f916a1f">manifolds.h</a>, <a class="el" href="manifolds_8cc.html#a93bd1919ca34327a06e274fe420b41b6">manifolds.cc</a>, <a class="el" href="manifolds_8h.html#a653a1d6299f7f51059226cf48293f0cb">manifolds.h</a></li>
-<li>attach_grid_to_triangulation()&#160;:&#160;<a class="el" href="grids_8h.html#a0e43462e6e495ea290b5e38d88a8db00">grids.h</a>, <a class="el" href="grids_8cc.html#a0e43462e6e495ea290b5e38d88a8db00">grids.cc</a></li>
+<li>apply_mesh_transformation()&#160;:&#160;<a class="el" href="grids_8cc.html#adb114aba6bc0bd040d10833ff5ea0a57">grids.cc</a>, <a class="el" href="grids_8h.html#a1fa30e317e09d3907d84ed97ba4cb9e1">grids.h</a>, <a class="el" href="grids_8cc.html#a1fa30e317e09d3907d84ed97ba4cb9e1">grids.cc</a></li>
+<li>attach_cad_to_manifold()&#160;:&#160;<a class="el" href="manifolds_8h.html#a3480a099a06add9277e1226e8f916a1f">manifolds.h</a>, <a class="el" href="manifolds_8cc.html#acf3cc9c0fa83515d767d0f7cb4882344">manifolds.cc</a></li>
+<li>attach_grid_to_triangulation()&#160;:&#160;<a class="el" href="grids_8cc.html#a0e43462e6e495ea290b5e38d88a8db00">grids.cc</a>, <a class="el" href="grids_8h.html#a0e43462e6e495ea290b5e38d88a8db00">grids.h</a></li>
 <li>attach_manifolds_to_triangulation()&#160;:&#160;<a class="el" href="manifolds_8h.html#a6cf3a8fabce0608b5487c5c517fbd1d8">manifolds.h</a>, <a class="el" href="manifolds_8cc.html#a665658dbe45c11149a27c1fae4ab4320">manifolds.cc</a></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

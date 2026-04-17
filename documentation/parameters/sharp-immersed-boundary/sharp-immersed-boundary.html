@@ -176,6 +176,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../cfd/boundary_conditions_multiphysics.html">Boundary Conditions - Multiphysics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/box_refinement.html">Box Refinement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/cahn_hilliard.html">Cahn-Hilliard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cfd/conservative_level_set.html">Conservative Level-Set (Multiphase Flow)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/constrain_stasis.html">Constrain Stasis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/dimensionality.html">Dimensionality</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/dynamic_flow_control.html">Dynamic Flow Control</a></li>
@@ -200,7 +201,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../cfd/timer.html">Timer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/tracer_drift_velocity.html">Tracer Drift Velocity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/velocity_source.html">Velocity Source</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../cfd/volume_of_fluid.html">Volume of Fluid (Multiphase Flow)</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../dem/dem.html">Discrete Element Method (DEM)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Discrete Element Method (DEM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -238,6 +238,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-naca0012-low-reynolds/2d-naca0012-low-reynolds.html">Flow around NACA0012 at Low Reynolds Number</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">Taylor-Couette Flow Using Nitsche Immersed Boundary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-sudden-expansion-flow/2d-sudden-expansion-flow.html">Sudden-Expansion Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-paddle-mixer-mortar/2d-paddle-mixer-mortar.html">Paddle Mixer Using the Mortar Method</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">Flow around a Sphere</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-taylor-green-vortex/3d-taylor-green-vortex.html">Taylor-Green Vortex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-turbulent-taylor-couette/3d-turbulent-taylor-couette.html">Turbulent Taylor-Couette Flow</a></li>
@@ -248,7 +249,7 @@
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/multiphysics/multiphysics.html">Multiphysics</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Multiphysics</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../examples/multiphysics/vof.html">VOF</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of VOF</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../examples/multiphysics/cls.html">CLS</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of CLS</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/dam-break/dam-break.html">Dam-Break</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/rayleigh-taylor-instability/rayleigh-taylor-instability.html">Rayleigh-Taylor Instability</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/static-bubble/static-bubble.html">Static Bubble</a></li>
@@ -310,7 +311,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/single-particle-sedimentation/single-particle-sedimentation.html">Single Particle Sedimentation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/cylindrical-packed-bed/cylindrical-packed-bed.html">Cylindrical Packed Bed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-fluidized-bed/gas-solid-fluidized-bed.html">Gas-Solid Fluidized Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-fluidized-cylinder-bed/gas-solid-fluidized-cylinder-bed.html">Gas-Solid Fluidized Cylinder Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/pseudo-2d-gas-solid-fluidized-bed/pseudo-2d-gas-solid-fluidized-bed.html">Pseudo-2D Gas-Solid Fluidized Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-spouted-rectangular-bed/gas-solid-spouted-rectangular-bed.html">Gas-Solid Spouted Rectangular Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/liquid-solid-fluidized-bed/liquid-solid-fluidized-bed.html">Liquid-Solid Fluidized Bed</a></li>
@@ -375,7 +376,7 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../theory/multiphase/multiphase.html">Multiphase</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle navigation of Multiphase</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../theory/multiphase/cfd/cfd.html">Fluid-Fluid Flows - Interface Capturing Models</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle navigation of Fluid-Fluid Flows - Interface Capturing Models</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../theory/multiphase/cfd/vof.html">The Volume of Fluid (VOF) Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../theory/multiphase/cfd/cls.html">The Conservative Level-Set (CLS) Method</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../theory/multiphase/cfd/cahn-hilliard.html">Cahn-Hilliard Method</a></li>
 </ul>
 </li>
@@ -468,10 +469,12 @@
     end
 
     subsection local mesh refinement
-      set initial refinement                = 0
-      set refine mesh inside radius factor  = 0.5
-      set refine mesh outside radius factor = 1.5
-      set refinement zone extrapolation     = false
+      set initial refinement                 = 0
+      set enable distance based coarsening   = false
+      set refine mesh inside radius factor   = 0.5
+      set refine mesh outside radius factor  = 1.5
+      set coarsen mesh outside radius factor = 2.0
+      set refinement zone extrapolation      = false
     end
 
     subsection DEM
@@ -572,8 +575,8 @@ end
 <dt>The <code class="docutils literal notranslate"><span class="pre">output</span></code> subsection contains the parameters controlling the information printed in the terminal and output files.</dt><dd><ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">calculate</span> <span class="pre">force</span></code> parameter controls if the force is evaluated on each particle.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">ib</span> <span class="pre">force</span> <span class="pre">output</span> <span class="pre">file</span></code> parameter is the file name where the variables associated with each particle are stored. One file will be created for each particle in the simulation.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">ib</span> <span class="pre">particles</span> <span class="pre">pvd</span> <span class="pre">file</span></code> parameter is the file’s name that will be created to animate the particles. This file stores all the variables calculated for each of the particles. This file is compatible with Paraview.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">print</span> <span class="pre">DEM</span></code> parameter is a boolean that define if particles’ informations are printed on the terminal when particles’ time-step is finished.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">ib</span> <span class="pre">particles</span> <span class="pre">pvd</span> <span class="pre">file</span></code> parameter is the file’s name that will be created to animate the particles. This file stores all the variables calculated for each of the particles. This file is compatible with Paraview. When outputs are enabled, this particle output is written on the same output iterations as the fluid results, including the initial step 0.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">print</span> <span class="pre">DEM</span></code> parameter is a boolean that define if particles’ information are printed on the terminal when particles’ time step is finished.</p></li>
 <li><p>When the <code class="docutils literal notranslate"><span class="pre">enable</span> <span class="pre">extra</span> <span class="pre">sharp</span> <span class="pre">interface</span> <span class="pre">vtu</span> <span class="pre">output</span> <span class="pre">field</span></code> parameter is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, it enables the output of additional value fields in the vtu file produced by the simulation. Currently, these additional output fields consist of: the id of the cell that cuts a specific cell (<code class="docutils literal notranslate"><span class="pre">cell_cut</span></code>).</p></li>
 </ul>
 </dd>
@@ -584,15 +587,21 @@ end
 <li><p>The <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">refinement</span></code> parameter controls the number of refinement cycles in the near-particle refinement zone around every particle before the simulation starts.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">refine</span> <span class="pre">mesh</span> <span class="pre">inside</span> <span class="pre">radius</span> <span class="pre">factor</span></code> parameter defines how deep inside the solid that cells can be refined. If the absolute distance between a cell’s degree of freedom and the solid’s surface is lower than <span class="math notranslate nohighlight">\((1 - \textit{inside factor}) * \textit{radius}\)</span>, one of the two required conditions to refine this cell is met. For example: with a particle radius of 2 and the inside radius factor of 0.8, the inside reach of the refinement zone would be 0.4 (see example below).</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">refine</span> <span class="pre">mesh</span> <span class="pre">outside</span> <span class="pre">radius</span> <span class="pre">factor</span></code> parameter defines how far outside the solid that cells can be refined. If the absolute distance between a cell’s degree of freedom and the solid’s surface is lower than <span class="math notranslate nohighlight">\((\textit{outside factor} - 1) * \textit{radius}\)</span>, the second of the two required conditions to refine this cell is met. For example: with a particle radius of 2 and the outside radius factor of 1.5, the outside reach of the refinement zone would be 1 (see example below).</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">enable</span> <span class="pre">distance</span> <span class="pre">based</span> <span class="pre">coarsening</span></code> parameter controls whether the local mesh refinement zone can also coarsen based on the particle distance. When this parameter is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, cells that are sufficiently far from every particle become eligible for coarsening during adaptive mesh refinement.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">coarsen</span> <span class="pre">mesh</span> <span class="pre">outside</span> <span class="pre">radius</span> <span class="pre">factor</span></code> parameter defines how far outside the solid a cell must be before it can be coarsened by the local distance-based criterion. This factor should be greater than or equal to the <code class="docutils literal notranslate"><span class="pre">refine</span> <span class="pre">mesh</span> <span class="pre">outside</span> <span class="pre">radius</span> <span class="pre">factor</span></code> to avoid immediately coarsening cells that still belong to the refinement zone.</p></li>
 </ul>
 <img alt="../../_images/particle_hypershell.png" class="align-center" src="../../_images/particle_hypershell.png" />
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">mesh</span> <span class="pre">adaptation</span> <span class="pre">type</span></code> must be <code class="docutils literal notranslate"><span class="pre">kelly</span></code> to use the near-particle refinement around particles; otherwise, no near-particle refinement will happen. See <a class="reference internal" href="../cfd/mesh_adaptation_control.html"><span class="doc">Mesh Adaptation</span></a> for more details on adaptative mesh refinement.</p>
+<p>The mesh adaptation <code class="docutils literal notranslate"><span class="pre">type</span></code> must be <code class="docutils literal notranslate"><span class="pre">adaptive</span></code> with the error estimator set to <code class="docutils literal notranslate"><span class="pre">kelly</span></code> to use the near-particle refinement or distance-based coarsening around particles; otherwise, this local mesh adaptation will not happen. See <a class="reference internal" href="../cfd/mesh_adaptation_control.html"><span class="doc">Mesh Adaptation</span></a> for more details on adaptative mesh refinement.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The refined cells are all those for which at least one of the degrees of freedom (dof) location satisfies both the <code class="docutils literal notranslate"><span class="pre">refine</span> <span class="pre">mesh</span> <span class="pre">inside</span> <span class="pre">radius</span> <span class="pre">factor</span></code> and the <code class="docutils literal notranslate"><span class="pre">refine</span> <span class="pre">mesh</span> <span class="pre">outside</span> <span class="pre">radius</span> <span class="pre">factor</span></code> thresholds. Each cycle of refinement reduces the length of the elements by a factor two.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When <code class="docutils literal notranslate"><span class="pre">enable</span> <span class="pre">distance</span> <span class="pre">based</span> <span class="pre">coarsening</span></code> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, cells that are outside the <code class="docutils literal notranslate"><span class="pre">coarsen</span> <span class="pre">mesh</span> <span class="pre">outside</span> <span class="pre">radius</span> <span class="pre">factor</span></code> threshold can be coarsened by the local particle-distance criterion. Refinement still takes precedence over coarsening within the near-particle zone.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -611,8 +620,18 @@ end
 <li><dl>
 <dt>The <code class="docutils literal notranslate"><span class="pre">DEM</span></code> subsection contains all the parameters associated with the motion and contacts of spherical particles.</dt><dd><ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">DEM</span> <span class="pre">coupling</span> <span class="pre">frequency</span></code> parameter controls the number of iterations done on the DEM side for each CFD time step. It’s necessary to use a much smaller time step for the particle dynamics than for the fluid in case of contact between the particles. The particle collision happens at a much smaller time-scale than the fluid dynamics.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The DEM <code class="docutils literal notranslate"><span class="pre">post-processing</span></code> subsection documented in <a class="reference internal" href="../dem/post-processing.html"><span class="doc">Post-processing</span></a> is partially available for Sharp resolved CFD-DEM simulations. Force-chain output is rebuilt from the current Sharp-IB particles and follows the same output cadence as the fluid results. Particle-wall collision statistics are also available for Sharp-IB and are accumulated throughout the run before being written at the end of the simulation.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>DEM lagrangian post-processing is not supported for <code class="docutils literal notranslate"><span class="pre">lethe-fluid-sharp</span></code>. If it is enabled in the input file, the solver throws an error at startup.</p>
+</div>
+<ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">alpha</span></code> parameter is the relaxation parameter used when solving the dynamics equation of the particle.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">contact</span> <span class="pre">search</span> <span class="pre">frequency</span></code> parameter is used to set the updating frequency of the contact search list. By default, it is set to 1, which means that the contact search list is updated at each time-step.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">contact</span> <span class="pre">search</span> <span class="pre">frequency</span></code> parameter is used to set the updating frequency of the contact search list. By default, it is set to 1, which means that the contact search list is updated at each time step.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">contact</span> <span class="pre">search</span> <span class="pre">radius</span> <span class="pre">factor</span></code> parameter is used to create the list of potential contacting particles. Two given particles with respective radii <span class="math notranslate nohighlight">\(R_1\)</span> and <span class="math notranslate nohighlight">\(R_2\)</span> are in potential contact if the distance between them is &lt; <span class="math notranslate nohighlight">\((R_1 + R_2) * factor\)</span>. The default value of this parameter is set to 3.</p></li>
 </ul>
 <div class="admonition note">
@@ -643,7 +662,7 @@ end
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The lubrication force between two particles is expressed by the equation <span class="math notranslate nohighlight">\(\mathbf{F_{lub_{ij}}} = \frac{3}{2} \pi \mu_f \left(\frac{d_{p_i} d_{p_j}}{d_{p_i}+d_{p_j}}\right)^2 \frac{1}{y}(\mathbf{v_{ij}}\cdot \mathbf{e_{ij}})\mathbf{e_{ij}}\)</span>. Where <span class="math notranslate nohighlight">\(\mu_f\)</span> is the fluid viscosity, <span class="math notranslate nohighlight">\(d_{p_i}\)</span> the diameter of the first particle, <span class="math notranslate nohighlight">\(d_{p_j}\)</span> the diameter of the second particle, <span class="math notranslate nohighlight">\(y\)</span> the gap between the two particles, <span class="math notranslate nohighlight">\(\mathbf{v_{ij}}\)</span> the relative velocity of the two particles, <span class="math notranslate nohighlight">\(\mathbf{e_{ij}}\)</span> the unit vector along the line that joint the centroide of the two particles. In the case of particle wall lubrication force we take the diameter of the second particle to be infinity <a class="footnote-reference brackets" href="#kim2005" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.
+<p>The lubrication force between two particles is expressed by the equation <span class="math notranslate nohighlight">\(\mathbf{F_{lub_{ij}}} = \frac{3}{2} \pi \mu_f \left(\frac{d_{p_i} d_{p_j}}{d_{p_i}+d_{p_j}}\right)^2 \frac{1}{y}(\mathbf{v_{ij}}\cdot \mathbf{e_{ij}})\mathbf{e_{ij}}\)</span>. Where <span class="math notranslate nohighlight">\(\mu_f\)</span> is the fluid viscosity, <span class="math notranslate nohighlight">\(d_{p_i}\)</span> the diameter of the first particle, <span class="math notranslate nohighlight">\(d_{p_j}\)</span> the diameter of the second particle, <span class="math notranslate nohighlight">\(y\)</span> the gap between the two particles, <span class="math notranslate nohighlight">\(\mathbf{v_{ij}}\)</span> the relative velocity of the two particles, <span class="math notranslate nohighlight">\(\mathbf{e_{ij}}\)</span> the unit vector along the line that joint the centroid of the two particles. In the case of particle wall lubrication force we take the diameter of the second particle to be infinity <a class="footnote-reference brackets" href="#kim2005" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.
 This model requires a constant viscosity and density of the fluid.</p>
 </div>
 <ul>

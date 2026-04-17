@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -95,14 +99,16 @@ $(function() {
   <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#aafcec0aa61b2e3a963457ab1360cf72a">assemble_system_rhs</a>() override</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#a3f10bd232c9b5997e7fbe4c7c04a2daa">assemblers</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classAuxiliaryPhysics.html#afe5c8707f20900ab81eae0526156dc82">AuxiliaryPhysics</a>(const Parameters::NonLinearSolver non_linear_solver_parameters)</td><td class="entry"><a class="el" href="classAuxiliaryPhysics.html">AuxiliaryPhysics&lt; dim, GlobalVectorType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#a22290e925b93fbad53f233929a8c49a8">barycenter_table</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#a25120e3a0c771e73a77ab19841519019">CahnHilliard</a>(MultiphysicsInterface&lt; dim &gt; *multiphysics_interface, const SimulationParameters&lt; dim &gt; &amp;p_simulation_parameters, std::shared_ptr&lt; parallel::DistributedTriangulationBase&lt; dim &gt; &gt; p_triangulation, std::shared_ptr&lt; SimulationControl &gt; p_simulation_control)</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#a9a979d647bfa251a583f550eef5b7f1e">calculate_barycenter</a>(const GlobalVectorType &amp;solution, const VectorType &amp;current_solution_fd)</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#af4cb5f47a1918a7b3aa4827ac0087127">calculate_L2_error</a>()</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#aebfae6c29cd95f9b3af7f97fd2f1e1f0">calculate_phase_energy</a>()</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#acc03545536c89564bcff8815401cb469">calculate_phase_statistics</a>()</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#ab0c0a61e082e30d3c1601d439a258bdc">cell_quadrature</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#a7256cf0d8415b8a20750fa7895940d1c">compute_kelly</a>(const std::pair&lt; const Variable, Parameters::MultipleAdaptationParameters &gt; &amp;ivar, dealii::Vector&lt; float &gt; &amp;estimated_error_per_cell) override</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classAuxiliaryPhysics.html#afba17578da847e046f13b2d766b3f68f">AuxiliaryPhysics</a>()</td><td class="entry"><a class="el" href="classAuxiliaryPhysics.html">AuxiliaryPhysics&lt; dim, GlobalVectorType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#a22290e925b93fbad53f233929a8c49a8">barycenter_table</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#a25120e3a0c771e73a77ab19841519019">CahnHilliard</a>(MultiphysicsInterface&lt; dim &gt; *multiphysics_interface, const SimulationParameters&lt; dim &gt; &amp;p_simulation_parameters, std::shared_ptr&lt; parallel::DistributedTriangulationBase&lt; dim &gt; &gt; p_triangulation, std::shared_ptr&lt; SimulationControl &gt; p_simulation_control)</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#a9a979d647bfa251a583f550eef5b7f1e">calculate_barycenter</a>(const GlobalVectorType &amp;solution, const VectorType &amp;current_solution_fd)</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#af4cb5f47a1918a7b3aa4827ac0087127">calculate_L2_error</a>()</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#aebfae6c29cd95f9b3af7f97fd2f1e1f0">calculate_phase_energy</a>()</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#acc03545536c89564bcff8815401cb469">calculate_phase_statistics</a>()</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#ab0c0a61e082e30d3c1601d439a258bdc">cell_quadrature</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#afaf941bc4f473e25837052726ebbc600">compute_error_estimate</a>(const std::pair&lt; const Variable, Parameters::MultipleAdaptationParameters &gt; &amp;ivar, dealii::Vector&lt; float &gt; &amp;estimated_error_per_cell) override</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#a3b7251a53032baa2038a4093083ec252">compute_kelly</a>(dealii::Vector&lt; float &gt; &amp;estimated_error_per_cell, const ComponentMask &amp;component_mask)</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#a282aaee8fbae343b4bbc5a90fe8b9f22">computing_timer</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#a35c8ceb847c857e5105e4e6de7b37d7e">copy_local_matrix_to_global_matrix</a>(const StabilizedMethodsCopyData &amp;copy_data)</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#a86873b1c21635dcb96321cdec91e3251">copy_local_rhs_to_global_rhs</a>(const StabilizedMethodsCopyData &amp;copy_data)</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">virtual</span></td></tr>
@@ -134,7 +140,7 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#a8ff818ef8ba8f941b7c83816978acddb">multiphysics</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#a2396a3bce30d24b3cebfb686e527f71b">newton_update</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#aa4915433850ebaa8f807786ad92a9d3b">nonzero_constraints</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#a7d44b1d4589ce3abe9d207fe5be9076d">output_newton_update_norms</a>(const unsigned int display_precision) override</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#afe3af37c88fc4e08296dc6ccbd4c0ae0">output_newton_update_norms</a>() override</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classPhysicsSolver.html#a438c5dbf8b3a750d042d56ffc3285f1f">pcout</a></td><td class="entry"><a class="el" href="classPhysicsSolver.html">PhysicsSolver&lt; VectorType &gt;</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#acae32e8fc7fca8cd911338d65154bf22">percolate_time_vectors</a>() override</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#a88ff51d0c9c3f938fd190b667828fe38">phase_energy_table</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
@@ -152,28 +158,57 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#a06f41b5561e4017c381bbb27217f0b2f">setup_assemblers</a>()</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">virtual</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#a5e73668b024d2697820f386fdbebccd6">setup_dofs</a>() override</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classAuxiliaryPhysics.html#a664990d705edc069f7676ac5e575e3c8">setup_preconditioner</a>() override</td><td class="entry"><a class="el" href="classAuxiliaryPhysics.html">AuxiliaryPhysics&lt; dim, GlobalVectorType &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#a69e5392abafa510ed860a999dca2909d">simulation_control</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#ae2ff28f509cf039a05f0edc886f90a18">simulation_parameters</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#aa92a407bedbe1a42ef3144973caed3d1">solution_transfer</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classPhysicsSolver.html#a4d98831ac8b521abed70f31162b4f6f4">solve_governing_system</a>()</td><td class="entry"><a class="el" href="classPhysicsSolver.html">PhysicsSolver&lt; VectorType &gt;</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#a2741b0b4074cd16655d529d0291f704d">solve_linear_system</a>() override</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#af01b17b6808415804c7fdd8c1e500257">statistics_table</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#a2155d047d25989a302121da42e02b1cd">system_matrix</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#a73e777904b4098cbb986800eb53cb381">system_rhs</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classPhysicsSolver.html#a13df07fecddd07c49c6c6f7355c27ac8">time_stepping_method</a></td><td class="entry"><a class="el" href="classPhysicsSolver.html">PhysicsSolver&lt; VectorType &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#a42beb74714c27f7dcf9710af0cebbde6">triangulation</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#af92cd0dbe8d21a2b38062e4fa49e39b1">update_boundary_conditions</a>() override</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#a161e2695de0e29cffb35f292f86f1214">verify_consistency_of_boundary_conditions</a>()</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#aadf3482b407082b319fbfeb31bbc99ad">write_checkpoint</a>() override</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#ab6d091181cb3b9d8e1a47ce0d343e2ed">write_phase_energy</a>()</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#a77e1079efb4a15271a5bd238b1fe4a0f">write_phase_statistics</a>()</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#ab5d75d0c8d9ab97323c4a229208a571d">zero_constraints</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classAuxiliaryPhysics.html#a5559d192bb50405effa6e5ef52ca3a1e">~AuxiliaryPhysics</a>()</td><td class="entry"><a class="el" href="classAuxiliaryPhysics.html">AuxiliaryPhysics&lt; dim, GlobalVectorType &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classPhysicsSolver.html#af58e44ac26b7968b5aa943d30732086b">~PhysicsSolver</a>()</td><td class="entry"><a class="el" href="classPhysicsSolver.html">PhysicsSolver&lt; VectorType &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classAuxiliaryPhysics.html#aadfc7f9c22afe74fe283deb52d794b13">should_solve_auxiliary_physics</a>()</td><td class="entry"><a class="el" href="classAuxiliaryPhysics.html">AuxiliaryPhysics&lt; dim, GlobalVectorType &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#a69e5392abafa510ed860a999dca2909d">simulation_control</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#ae2ff28f509cf039a05f0edc886f90a18">simulation_parameters</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#aa92a407bedbe1a42ef3144973caed3d1">solution_transfer</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classPhysicsSolver.html#a4d98831ac8b521abed70f31162b4f6f4">solve_governing_system</a>()</td><td class="entry"><a class="el" href="classPhysicsSolver.html">PhysicsSolver&lt; VectorType &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#a2741b0b4074cd16655d529d0291f704d">solve_linear_system</a>() override</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#af01b17b6808415804c7fdd8c1e500257">statistics_table</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#a2155d047d25989a302121da42e02b1cd">system_matrix</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#a73e777904b4098cbb986800eb53cb381">system_rhs</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classPhysicsSolver.html#a13df07fecddd07c49c6c6f7355c27ac8">time_stepping_method</a></td><td class="entry"><a class="el" href="classPhysicsSolver.html">PhysicsSolver&lt; VectorType &gt;</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#a42beb74714c27f7dcf9710af0cebbde6">triangulation</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#af92cd0dbe8d21a2b38062e4fa49e39b1">update_boundary_conditions</a>() override</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#a161e2695de0e29cffb35f292f86f1214">verify_consistency_of_boundary_conditions</a>()</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#aadf3482b407082b319fbfeb31bbc99ad">write_checkpoint</a>() override</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#ab6d091181cb3b9d8e1a47ce0d343e2ed">write_phase_energy</a>()</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCahnHilliard.html#a77e1079efb4a15271a5bd238b1fe4a0f">write_phase_statistics</a>()</td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classCahnHilliard.html#ab5d75d0c8d9ab97323c4a229208a571d">zero_constraints</a></td><td class="entry"><a class="el" href="classCahnHilliard.html">CahnHilliard&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classAuxiliaryPhysics.html#a5559d192bb50405effa6e5ef52ca3a1e">~AuxiliaryPhysics</a>()</td><td class="entry"><a class="el" href="classAuxiliaryPhysics.html">AuxiliaryPhysics&lt; dim, GlobalVectorType &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classPhysicsSolver.html#af58e44ac26b7968b5aa943d30732086b">~PhysicsSolver</a>()</td><td class="entry"><a class="el" href="classPhysicsSolver.html">PhysicsSolver&lt; VectorType &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

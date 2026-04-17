@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -115,8 +119,16 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int dim&gt;<br />
-class Parameters::Lagrangian::FloatingGrid&lt; dim &gt;</div>
-<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l00634">634</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
+class Parameters::Lagrangian::FloatingGrid&lt; dim &gt;</div><p><a class="el" href="namespaceParameters.html">Parameters</a> for a floating grid in <a class="el" href="namespaceDEM.html" title="This namespace defines all the data containers and required operations on these containers for the DE...">DEM</a> simulations. </p>
+<p>A floating grid is an auxiliary mesh that can move independently of the main triangulation, activated between specified start and end times.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">dim</td><td>Number of spatial dimensions. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l00984">984</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a72b94b29ba14b6afdcdecae58674f0f6" name="a72b94b29ba14b6afdcdecae58674f0f6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a72b94b29ba14b6afdcdecae58674f0f6">&#9670;&#160;</a></span>declare_parameters()</h2>
@@ -136,7 +148,15 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8cc_source.html#l01803">1803</a> of file <a class="el" href="parameters__lagrangian_8cc_source.html">parameters_lagrangian.cc</a>.</p>
+<p>Declare the parameters in the parameter handler. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">prm</td><td>The parameter handler. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8cc_source.html#l01871">1871</a> of file <a class="el" href="parameters__lagrangian_8cc_source.html">parameters_lagrangian.cc</a>.</p>
 
 </div>
 </div>
@@ -158,7 +178,15 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8cc_source.html#l01818">1818</a> of file <a class="el" href="parameters__lagrangian_8cc_source.html">parameters_lagrangian.cc</a>.</p>
+<p>Parse the parameters from the parameter handler. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">prm</td><td>The parameter handler. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8cc_source.html#l01886">1886</a> of file <a class="el" href="parameters__lagrangian_8cc_source.html">parameters_lagrangian.cc</a>.</p>
 
 </div>
 </div>
@@ -177,7 +205,9 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l00638">638</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
+<p><a class="el" href="structParameters_1_1Mesh.html" title="Mesh - Parameters that control mesh reading and mesh generation.">Mesh</a> parameters for the floating grid. </p>
+
+<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l00988">988</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
 
 </div>
 </div>
@@ -195,7 +225,9 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l00641">641</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
+<p>Motion parameters for the floating grid. </p>
+
+<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l00991">991</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
 
 </div>
 </div>
@@ -213,7 +245,9 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l00646">646</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
+<p>Deactivation time of the floating grid. </p>
+
+<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l00997">997</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
 
 </div>
 </div>
@@ -231,7 +265,9 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l00644">644</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
+<p>Activation time of the floating grid. </p>
+
+<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l00994">994</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
 
 </div>
 </div>
@@ -240,9 +276,37 @@ template&lt;int dim&gt; </div>
 <li>/home/runner/work/lethe/lethe/source/core/<a class="el" href="parameters__lagrangian_8cc_source.html">parameters_lagrangian.cc</a></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

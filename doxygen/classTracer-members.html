@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -98,11 +102,13 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="classTracer.html#a3e0c10786164903ae8148de471c5fb99">assemble_system_rhs_dg</a>()</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classTracer.html#a810c0db83b2edc9811d463fa2f919cd8">assemblers</a></td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classAuxiliaryPhysics.html#afe5c8707f20900ab81eae0526156dc82">AuxiliaryPhysics</a>(const Parameters::NonLinearSolver non_linear_solver_parameters)</td><td class="entry"><a class="el" href="classAuxiliaryPhysics.html">AuxiliaryPhysics&lt; dim, GlobalVectorType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classTracer.html#aef616e5bcfe3f5ea3de335041117c135">boundary_face_assembler</a></td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classTracer.html#a4e0ff8ba911c592a91286beeda7955c6">calculate_L2_error</a>()</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classTracer.html#adcc81d835a1e2e9b71ea0c897d16dcf9">calculate_tracer_statistics</a>()</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classTracer.html#a155749e5654dba8efc5dff8efc58cc63">cell_quadrature</a></td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classTracer.html#ae37db3727824079215f6379e56fd7f60">compute_kelly</a>(const std::pair&lt; const Variable, Parameters::MultipleAdaptationParameters &gt; &amp;, dealii::Vector&lt; float &gt; &amp;estimated_error_per_cell) override</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classAuxiliaryPhysics.html#afba17578da847e046f13b2d766b3f68f">AuxiliaryPhysics</a>()</td><td class="entry"><a class="el" href="classAuxiliaryPhysics.html">AuxiliaryPhysics&lt; dim, GlobalVectorType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classTracer.html#aef616e5bcfe3f5ea3de335041117c135">boundary_face_assembler</a></td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classTracer.html#a4e0ff8ba911c592a91286beeda7955c6">calculate_L2_error</a>()</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classTracer.html#adcc81d835a1e2e9b71ea0c897d16dcf9">calculate_tracer_statistics</a>()</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classTracer.html#a155749e5654dba8efc5dff8efc58cc63">cell_quadrature</a></td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classTracer.html#ac43b71a2da0101fa9e796e9715bfc384">compute_error_estimate</a>(const std::pair&lt; const Variable, Parameters::MultipleAdaptationParameters &gt; &amp;ivar, dealii::Vector&lt; float &gt; &amp;estimated_error_per_cell) override</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classTracer.html#a36c79997594bd97da510831b6ad94e0e">compute_kelly</a>(dealii::Vector&lt; float &gt; &amp;estimated_error_per_cell, const ComponentMask &amp;component_mask)</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classTracer.html#a0cf2959bd091a21cfadb6ea7ef32fe17">computing_timer</a></td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classTracer.html#acde0311373b63944d1201d3ebce09aa2">copy_local_matrix_to_global_matrix</a>(const StabilizedMethodsCopyData &amp;copy_data)</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classTracer.html#a43f8facd06187b6f2e2f219883e2a698">copy_local_rhs_to_global_rhs</a>(const StabilizedMethodsCopyData &amp;copy_data)</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">virtual</span></td></tr>
@@ -133,7 +139,7 @@ $(function() {
   <tr class="odd"><td class="entry"><a class="el" href="classTracer.html#a3298668e1f12db561cb9234d243a74bb">multiphysics</a></td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classTracer.html#a162e9225276a7d20953cc48c029d5188">newton_update</a></td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classTracer.html#afa752d8d4fe4ff63c9a837ce58f7ec99">nonzero_constraints</a></td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classTracer.html#a73e5c7e432b15f2ba929cf1dd0cbed9d">output_newton_update_norms</a>(const unsigned int display_precision) override</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classTracer.html#a9e250fe327e7052f2a3edae33931e052">output_newton_update_norms</a>() override</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classPhysicsSolver.html#a438c5dbf8b3a750d042d56ffc3285f1f">pcout</a></td><td class="entry"><a class="el" href="classPhysicsSolver.html">PhysicsSolver&lt; VectorType &gt;</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classTracer.html#ac03b008aba02e9b4a43562d3b2857039">percolate_time_vectors</a>() override</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classPhysicsSolver.html#a84b77fd8c27ea6117b541c4c841b0532">physics_solving_strategy</a></td><td class="entry"><a class="el" href="classPhysicsSolver.html">PhysicsSolver&lt; VectorType &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
@@ -142,17 +148,17 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="classTracer.html#a795a508e06b9df7eff9187203b4be415">post_mesh_adaptation</a>() override</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classTracer.html#ac4b7c30629b580945490919c0427db12">postprocess</a>(bool first_iteration) override</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classTracer.html#af90f22587fcaa2edc164be3b7af9b6df">postprocess_tracer_flow_rate</a>(const GlobalVectorType &amp;current_solution_fd)</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classTracer.html#a3330097d0fbcbe57535ea0a397b9894e">postprocess_tracer_flow_rate</a>(const VectorType &amp;current_solution_fd)</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classTracer.html#a5c2e4178c68808459672f3607e0b80b1">pre_mesh_adaptation</a>() override</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classTracer.html#adcccde6c1dbc610ff255ca34ef65db23">present_solution</a></td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classTracer.html#abb4529bf0ee57e7894c70ce34c8ea78e">previous_solutions</a></td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classTracer.html#af2c61b0e701741949a81ef829a958c13">previous_solutions_transfer</a></td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classTracer.html#aeb8ac98be79872fb1ea9d30414e8cc5a">read_checkpoint</a>() override</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classTracer.html#a5c12f1c5a98769bd48d5d043d29b473d">reinit_face_velocity_with_adequate_solution</a>(const typename DoFHandler&lt; dim &gt;::active_cell_iterator &amp;velocity_cell, const unsigned int &amp;face_no, TracerScratchData&lt; dim &gt; &amp;scratch_data)</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classTracer.html#ab09781c62a32bbf7bfcc87e501deb8a0">set_initial_conditions</a>() override</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classTracer.html#aa2505b526801876bb0e18dd02d6e7c73">setup_assemblers</a>()</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classTracer.html#af8dfb40376adc77b7bc9236fa7de3689">setup_dofs</a>() override</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classAuxiliaryPhysics.html#a664990d705edc069f7676ac5e575e3c8">setup_preconditioner</a>() override</td><td class="entry"><a class="el" href="classAuxiliaryPhysics.html">AuxiliaryPhysics&lt; dim, GlobalVectorType &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classTracer.html#a5c2e4178c68808459672f3607e0b80b1">pre_mesh_adaptation</a>() override</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classTracer.html#adcccde6c1dbc610ff255ca34ef65db23">present_solution</a></td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classTracer.html#abb4529bf0ee57e7894c70ce34c8ea78e">previous_solutions</a></td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classTracer.html#af2c61b0e701741949a81ef829a958c13">previous_solutions_transfer</a></td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classTracer.html#aeb8ac98be79872fb1ea9d30414e8cc5a">read_checkpoint</a>() override</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classTracer.html#a5c12f1c5a98769bd48d5d043d29b473d">reinit_face_velocity_with_adequate_solution</a>(const typename DoFHandler&lt; dim &gt;::active_cell_iterator &amp;velocity_cell, const unsigned int &amp;face_no, TracerScratchData&lt; dim &gt; &amp;scratch_data)</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classTracer.html#ab09781c62a32bbf7bfcc87e501deb8a0">set_initial_conditions</a>() override</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classTracer.html#aa2505b526801876bb0e18dd02d6e7c73">setup_assemblers</a>()</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classTracer.html#af8dfb40376adc77b7bc9236fa7de3689">setup_dofs</a>() override</td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classAuxiliaryPhysics.html#a664990d705edc069f7676ac5e575e3c8">setup_preconditioner</a>() override</td><td class="entry"><a class="el" href="classAuxiliaryPhysics.html">AuxiliaryPhysics&lt; dim, GlobalVectorType &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classAuxiliaryPhysics.html#aadfc7f9c22afe74fe283deb52d794b13">should_solve_auxiliary_physics</a>()</td><td class="entry"><a class="el" href="classAuxiliaryPhysics.html">AuxiliaryPhysics&lt; dim, GlobalVectorType &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classTracer.html#ac4eefd6011f97338ae6a16f6b3387ebe">simulation_control</a></td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classTracer.html#ae9abe79a880750e8b93394f1ee01c7bb">simulation_parameters</a></td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classTracer.html#a983f190dd993b043b3870236be508dff">solution_transfer</a></td><td class="entry"><a class="el" href="classTracer.html">Tracer&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
@@ -174,9 +180,37 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="classAuxiliaryPhysics.html#a5559d192bb50405effa6e5ef52ca3a1e">~AuxiliaryPhysics</a>()</td><td class="entry"><a class="el" href="classAuxiliaryPhysics.html">AuxiliaryPhysics&lt; dim, GlobalVectorType &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classPhysicsSolver.html#af58e44ac26b7968b5aa943d30732086b">~PhysicsSolver</a>()</td><td class="entry"><a class="el" href="classPhysicsSolver.html">PhysicsSolver&lt; VectorType &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

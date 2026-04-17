@@ -176,6 +176,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/boundary_conditions_multiphysics.html">Boundary Conditions - Multiphysics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/box_refinement.html">Box Refinement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/cahn_hilliard.html">Cahn-Hilliard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/conservative_level_set.html">Conservative Level-Set (Multiphase Flow)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/constrain_stasis.html">Constrain Stasis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/dimensionality.html">Dimensionality</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/dynamic_flow_control.html">Dynamic Flow Control</a></li>
@@ -200,7 +201,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/timer.html">Timer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/tracer_drift_velocity.html">Tracer Drift Velocity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/velocity_source.html">Velocity Source</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/volume_of_fluid.html">Volume of Fluid (Multiphase Flow)</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../parameters/dem/dem.html">Discrete Element Method (DEM)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Discrete Element Method (DEM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -238,6 +238,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-naca0012-low-reynolds/2d-naca0012-low-reynolds.html">Flow around NACA0012 at Low Reynolds Number</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">Taylor-Couette Flow Using Nitsche Immersed Boundary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-sudden-expansion-flow/2d-sudden-expansion-flow.html">Sudden-Expansion Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-paddle-mixer-mortar/2d-paddle-mixer-mortar.html">Paddle Mixer Using the Mortar Method</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">Flow around a Sphere</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/3d-taylor-green-vortex/3d-taylor-green-vortex.html">Taylor-Green Vortex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/3d-turbulent-taylor-couette/3d-turbulent-taylor-couette.html">Turbulent Taylor-Couette Flow</a></li>
@@ -248,7 +249,7 @@
 </ul>
 </li>
 <li class="toctree-l2 current has-children"><a class="reference internal" href="../multiphysics.html">Multiphysics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Multiphysics</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l3 has-children"><a class="reference internal" href="../vof.html">VOF</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of VOF</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../cls.html">CLS</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of CLS</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../dam-break/dam-break.html">Dam-Break</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rayleigh-taylor-instability/rayleigh-taylor-instability.html">Rayleigh-Taylor Instability</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../static-bubble/static-bubble.html">Static Bubble</a></li>
@@ -310,7 +311,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/single-particle-sedimentation/single-particle-sedimentation.html">Single Particle Sedimentation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/cylindrical-packed-bed/cylindrical-packed-bed.html">Cylindrical Packed Bed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/gas-solid-fluidized-bed/gas-solid-fluidized-bed.html">Gas-Solid Fluidized Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/gas-solid-fluidized-cylinder-bed/gas-solid-fluidized-cylinder-bed.html">Gas-Solid Fluidized Cylinder Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/pseudo-2d-gas-solid-fluidized-bed/pseudo-2d-gas-solid-fluidized-bed.html">Pseudo-2D Gas-Solid Fluidized Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/gas-solid-spouted-rectangular-bed/gas-solid-spouted-rectangular-bed.html">Gas-Solid Spouted Rectangular Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/liquid-solid-fluidized-bed/liquid-solid-fluidized-bed.html">Liquid-Solid Fluidized Bed</a></li>
@@ -375,7 +376,7 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../theory/multiphase/multiphase.html">Multiphase</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle navigation of Multiphase</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../../theory/multiphase/cfd/cfd.html">Fluid-Fluid Flows - Interface Capturing Models</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle navigation of Fluid-Fluid Flows - Interface Capturing Models</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphase/cfd/vof.html">The Volume of Fluid (VOF) Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphase/cfd/cls.html">The Conservative Level-Set (CLS) Method</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphase/cfd/cahn-hilliard.html">Cahn-Hilliard Method</a></li>
 </ul>
 </li>
@@ -450,7 +451,7 @@
 <h2>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Solver: <code class="docutils literal notranslate"><span class="pre">lethe-fluid</span></code></p></li>
-<li><p>Volume of fluid (VOF) and Heat Transfer (HT)</p></li>
+<li><p>Conservative Level-Set (CLS) and Heat Transfer (HT)</p></li>
 <li><p>Unsteady problem with phase change handled by an adaptive BDF1 time-stepping scheme</p></li>
 </ul>
 </section>
@@ -511,7 +512,7 @@
 </tbody>
 </table>
 </div>
-<p>There are three phases involved in this simulation: solid and liquid Ti6Al4V, and Argon. The metal-gas interface is handled by the VOF solver, while the solid-liquid interface is obtained from the temperature field of the HT solver. Hence, this example models a two-fluid problem: <code class="docutils literal notranslate"><span class="pre">fluid</span> <span class="pre">0</span></code> corresponds to the Argon phase and <code class="docutils literal notranslate"><span class="pre">fluid</span> <span class="pre">1</span></code> is the metal (solid and liquid), for which the solid part corresponds to a infinitely viscous fluid.</p>
+<p>There are three phases involved in this simulation: solid and liquid Ti6Al4V, and Argon. The metal-gas interface is handled by the CLS solver, while the solid-liquid interface is obtained from the temperature field of the HT solver. Hence, this example models a two-fluid problem: <code class="docutils literal notranslate"><span class="pre">fluid</span> <span class="pre">0</span></code> corresponds to the Argon phase and <code class="docutils literal notranslate"><span class="pre">fluid</span> <span class="pre">1</span></code> is the metal (solid and liquid), for which the solid part corresponds to a infinitely viscous fluid.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To improve the performance of the solvers, all dimensional quantities in this example are based on the SI system except for the reference length, which is taken as <span class="math notranslate nohighlight">\(1\;\text{mm}\)</span>. This scaling helps the matrices to have better conditioning, as explained for the pressure scaling in the <a class="reference internal" href="../../../parameters/cfd/stabilization.html"><span class="doc">stabilization subsection</span></a>.</p>
@@ -521,26 +522,26 @@
 <h2>Parameter File<a class="headerlink" href="#parameter-file" title="Link to this heading">#</a></h2>
 <section id="simulation-control">
 <h3>Simulation Control<a class="headerlink" href="#simulation-control" title="Link to this heading">#</a></h3>
-<p>The time integration is handled by a first order backward differentiation scheme (<code class="docutils literal notranslate"><span class="pre">bdf1</span></code>) with a maximum time-step of <span class="math notranslate nohighlight">\(\Delta t = 1.9 \times 10^{-8} \; \text{s} &lt; \Delta t_\sigma\)</span> which corresponds to the capillary time-step constraint (see <a class="reference internal" href="../capillary-wave/capillary-wave.html"><span class="doc">capillary wave example</span></a>). We use adaptive time stepping with a maximum CFL of <span class="math notranslate nohighlight">\(0.06\)</span> to prevent instability resulting from the explicit coupling between the NS and HT solvers through the recoil pressure and evaporative cooling.</p>
+<p>The time integration is handled by a first order backward differentiation scheme (<code class="docutils literal notranslate"><span class="pre">bdf1</span></code>) with a maximum time step of <span class="math notranslate nohighlight">\(\Delta t = 1.9 \times 10^{-8} \; \text{s} &lt; \Delta t_\sigma\)</span> which corresponds to the capillary time-step constraint (see <a class="reference internal" href="../capillary-wave/capillary-wave.html"><span class="doc">capillary wave example</span></a>). We use adaptive time stepping with a maximum CFL of <span class="math notranslate nohighlight">\(0.06\)</span> to prevent instability resulting from the explicit coupling between the NS and HT solvers through the recoil pressure and evaporative cooling.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection simulation control
-  set method           = bdf1
-  set time end         = 0.0005
-  set time step        = 1.9e-8
-  set adapt            = true
-  set max cfl          = 0.06
-  set max time step    = 1.9e-8
-  set output name      = static-irradiation
-  set output path      = output/
-  set output frequency = 100
+  set method                         = bdf1
+  set time end                       = 0.0005
+  set time step                      = 1.9e-8
+  set adapt time step to respect CFL = true
+  set max cfl                        = 0.06
+  set max time step                  = 1.9e-8
+  set output name                    = static-irradiation
+  set output path                    = output/
+  set output frequency               = 100
 end
 </pre></div>
 </div>
 </section>
 <section id="multiphysics">
 <h3>Multiphysics<a class="headerlink" href="#multiphysics" title="Link to this heading">#</a></h3>
-<p>In the <code class="docutils literal notranslate"><span class="pre">multiphysics</span></code> subsection, we enable both the VOF and HT solvers.</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">multiphysics</span></code> subsection, we enable both the CLS and HT solvers.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection multiphysics
-  set VOF           = true
+  set cls           = true
   set heat transfer = true
 end
 </pre></div>
@@ -556,12 +557,15 @@ end
 end
 
 subsection box refinement
-  subsection mesh
-    set type           = dealii
-    set grid type      = subdivided_hyper_rectangle
-    set grid arguments = 8,1 : 0,0.3925: 0.6,0.4675: false
+  set number of refinement boxes = 1
+  subsection box 0
+    subsection mesh
+      set type           = dealii
+      set grid type      = subdivided_hyper_rectangle
+      set grid arguments = 8,1 : 0,0.3925: 0.6,0.4675: false
+    end
+    set additional refinement = 3
   end
-  set initial refinement = 3
 end
 </pre></div>
 </div>
@@ -570,7 +574,8 @@ end
 <h3>Mesh Adaptation<a class="headerlink" href="#mesh-adaptation" title="Link to this heading">#</a></h3>
 <p>As the laser heats the metal-gas interface, a vapor depression forms and deepens, and the liquid-gas interface reaches the bottom boundary of the box refinement. Hence, we dynamically adapt the mesh using the <code class="docutils literal notranslate"><span class="pre">temperature</span></code> as the refinement <code class="docutils literal notranslate"><span class="pre">variable</span></code> to keep a well discretized interface. We choose <span class="math notranslate nohighlight">\(7\)</span> as the <code class="docutils literal notranslate"><span class="pre">min</span> <span class="pre">refinement</span> <span class="pre">level</span></code> and <span class="math notranslate nohighlight">\(4\)</span> as the <code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">refinement</span> <span class="pre">level</span></code>. The mesh is adapted each <span class="math notranslate nohighlight">\(20\)</span> iterations to reduce the computational cost by setting <code class="docutils literal notranslate"><span class="pre">frequency</span> <span class="pre">=</span> <span class="pre">20</span></code>. Note that the <code class="docutils literal notranslate"><span class="pre">fraction</span> <span class="pre">coarsening</span></code> is set to <span class="math notranslate nohighlight">\(0.0\)</span> to avoid coarsening in the center of the melt pool, where the temperature gradient, used by the Kelly error estimator, is less important than at the liquid-gas interface.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection mesh adaptation
-  set type                 = kelly
+  set type                 = adaptive
+  set error estimator      = kelly
   set variable             = temperature
   set fraction type        = fraction
   set max refinement level = 7
@@ -584,7 +589,7 @@ end
 </section>
 <section id="boundary-conditions">
 <h3>Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Link to this heading">#</a></h3>
-<p>In the <code class="docutils literal notranslate"><span class="pre">boundary</span> <span class="pre">conditions</span></code> subsection, we set the boundary conditions described in the figure above for the NS, HT, and VOF solvers. The following <code class="docutils literal notranslate"><span class="pre">subsection</span> <span class="pre">boundary</span> <span class="pre">conditions</span></code> sets the NS boundary conditions:</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">boundary</span> <span class="pre">conditions</span></code> subsection, we set the boundary conditions described in the figure above for the NS, HT, and CLS solvers. The following <code class="docutils literal notranslate"><span class="pre">subsection</span> <span class="pre">boundary</span> <span class="pre">conditions</span></code> sets the NS boundary conditions:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection boundary conditions
   set number = 6
   subsection bc 0
@@ -673,7 +678,7 @@ $EndPhysicalNames
 </div>
 <p>Here, the <code class="docutils literal notranslate"><span class="pre">id</span></code> corresponds to the second column and we identify the corresponding boundary in the domain with the description given in the third column.</p>
 </div>
-<p>For the sake of brevity, we leave out the <code class="docutils literal notranslate"><span class="pre">subsection</span> <span class="pre">boundary</span> <span class="pre">conditions</span> <span class="pre">VOF</span></code> because they all corresponds to no flux boundary conditions (<code class="docutils literal notranslate"><span class="pre">none</span></code>). However, in the example’s parameter file, all boundary conditions are defined.</p>
+<p>For the sake of brevity, we leave out the <code class="docutils literal notranslate"><span class="pre">subsection</span> <span class="pre">boundary</span> <span class="pre">conditions</span> <span class="pre">CLS</span></code> because they all corresponds to no flux boundary conditions (<code class="docutils literal notranslate"><span class="pre">none</span></code>). However, in the example’s parameter file, all boundary conditions are defined.</p>
 </section>
 <section id="initial-conditions">
 <h3>Initial Conditions<a class="headerlink" href="#initial-conditions" title="Link to this heading">#</a></h3>
@@ -681,7 +686,7 @@ $EndPhysicalNames
 <ul class="simple">
 <li><p>NS intial conditions are <span class="math notranslate nohighlight">\(0.0\)</span> for both velocity components and for the pressure</p></li>
 <li><p>HT intial condition corresponds to a uniform temperature <span class="math notranslate nohighlight">\(T_\text{0} = 298\;\text{K}\)</span></p></li>
-<li><p>VOF intial condition allows us to described the metal and gas phases. The bottom part of the domain (<span class="math notranslate nohighlight">\(y&lt;430\;\mu\text{m}\)</span>) corresponds to the Ti6Al4V metal phase (<code class="docutils literal notranslate"><span class="pre">fluid</span> <span class="pre">1</span></code>), while Argon (<code class="docutils literal notranslate"><span class="pre">fluid</span> <span class="pre">0</span></code>) fills the top part.</p></li>
+<li><p>CLS intial condition allows us to described the metal and gas phases. The bottom part of the domain (<span class="math notranslate nohighlight">\(y&lt;430\;\mu\text{m}\)</span>) corresponds to the Ti6Al4V metal phase (<code class="docutils literal notranslate"><span class="pre">fluid</span> <span class="pre">1</span></code>), while Argon (<code class="docutils literal notranslate"><span class="pre">fluid</span> <span class="pre">0</span></code>) fills the top part.</p></li>
 </ul>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection initial conditions
   set type = nodal
@@ -691,7 +696,7 @@ $EndPhysicalNames
   subsection temperature
     set Function expression = 298
   end
-  subsection VOF
+  subsection CLS
     set Function expression = if (y&lt;0.43 , 1, 0)
   end
 end
@@ -701,7 +706,7 @@ end
 <section id="physical-properties">
 <h3>Physical Properties<a class="headerlink" href="#physical-properties" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">physical</span> <span class="pre">properties</span></code> subsection sets the material properties for the metal and gas phase. It is in this subsection that we activate the phase change by setting the solid and liquid properties for the metal phase, in the same fashion as in the <a class="reference internal" href="../stefan-problem/stefan-problem.html"><span class="doc">Stefan problem</span></a> and <a class="reference internal" href="../melting-cavity/melting-cavity.html"><span class="doc">melting cavity</span></a> examples. However, since we consider an alloy (TI6Al4V), the phase change occurs over a temperature range. Hence, the difference between the <code class="docutils literal notranslate"><span class="pre">liquidus</span> <span class="pre">temperature</span></code> and <code class="docutils literal notranslate"><span class="pre">solidus</span> <span class="pre">temperature</span></code> corresponds to the real temperature range in which the solid and liquid TI6Al4V coexist (mushy zone).</p>
-<p>We also set in this subsection the reference surface tension coefficient of the metal-gas interface and its temperature derivative to simulate the Maragoni effect. Here, we consider a linear evolution of the surface tension coefficient with the temperature at the liquid-gas interface, and we neglect its effect at the solid-gas interface to avoid numerical instabilities. This is done by setting <code class="docutils literal notranslate"><span class="pre">surface</span> <span class="pre">tension</span> <span class="pre">model</span> <span class="pre">=</span> <span class="pre">phase</span> <span class="pre">change</span></code>. We refer to the parameter guide <a class="reference internal" href="../../../parameters/cfd/physical_properties.html"><span class="doc">Physical Properties</span></a> for more details on this model.</p>
+<p>We also set in this subsection the reference surface tension coefficient of the metal-gas interface and its temperature derivative to simulate the Marangoni effect. Here, we consider a linear evolution of the surface tension coefficient with the temperature at the liquid-gas interface, and we neglect its effect at the solid-gas interface to avoid numerical instabilities. This is done by setting <code class="docutils literal notranslate"><span class="pre">surface</span> <span class="pre">tension</span> <span class="pre">model</span> <span class="pre">=</span> <span class="pre">phase</span> <span class="pre">change</span></code>. We refer to the parameter guide <a class="reference internal" href="../../../parameters/cfd/physical_properties.html"><span class="doc">Physical Properties</span></a> for more details on this model.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection physical properties
   set number of fluids = 2
   subsection fluid 1
@@ -752,10 +757,10 @@ end
 </section>
 <section id="laser-parameters">
 <h3>Laser parameters<a class="headerlink" href="#laser-parameters" title="Link to this heading">#</a></h3>
-<p>We defined the laser heat source in the <code class="docutils literal notranslate"><span class="pre">laser</span> <span class="pre">parameters</span></code> subsection. In the present example, we are considering the irradiation of a bare plate. Thus, the laser only heats the metal-gas interface and we model this surface heat flux using the <code class="docutils literal notranslate"><span class="pre">gaussian_heat_flux_vof_interface</span></code> laser model. We refer to the parameter guide <a class="reference internal" href="../../../parameters/cfd/laser_heat_source.html"><span class="doc">Laser Heat Source</span></a> for more details on this model.</p>
+<p>We defined the laser heat source in the <code class="docutils literal notranslate"><span class="pre">laser</span> <span class="pre">parameters</span></code> subsection. In the present example, we are considering the irradiation of a bare plate. Thus, the laser only heats the metal-gas interface and we model this surface heat flux using the <code class="docutils literal notranslate"><span class="pre">gaussian_heat_flux_cls_interface</span></code> laser model. We refer to the parameter guide <a class="reference internal" href="../../../parameters/cfd/laser_heat_source.html"><span class="doc">Laser Heat Source</span></a> for more details on this model.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection laser parameters
   set enable           = true
-  set type             = gaussian_heat_flux_vof_interface
+  set type             = gaussian_heat_flux_cls_interface
   set power            = 156e6
   set absorptivity     = 0.35
   set beam radius      = 0.07
@@ -768,7 +773,7 @@ end
 end
 </pre></div>
 </div>
-<p>The laser is static in the middle of the domain at the metal-gas interface <span class="math notranslate nohighlight">\(\vec{x} = [0.3, 0.43]\)</span>, hence its <code class="docutils literal notranslate"><span class="pre">path</span></code> is independent of the time. Note that the <span class="math notranslate nohighlight">\(y\)</span> component of the <code class="docutils literal notranslate"><span class="pre">path</span></code> is not relevant: the <code class="docutils literal notranslate"><span class="pre">gaussian_heat_flux_vof_interface</span></code> model applies the laser heat flux at the metal-gas interface no matter its postion along the <span class="math notranslate nohighlight">\(y\)</span> axis. This allows us to model the effect of the interface deformation on the surface heat flux.</p>
+<p>The laser is static in the middle of the domain at the metal-gas interface <span class="math notranslate nohighlight">\(\vec{x} = [0.3, 0.43]\)</span>, hence its <code class="docutils literal notranslate"><span class="pre">path</span></code> is independent of the time. Note that the <span class="math notranslate nohighlight">\(y\)</span> component of the <code class="docutils literal notranslate"><span class="pre">path</span></code> is not relevant: the <code class="docutils literal notranslate"><span class="pre">gaussian_heat_flux_cls_interface</span></code> model applies the laser heat flux at the metal-gas interface no matter its position along the <span class="math notranslate nohighlight">\(y\)</span> axis. This allows us to model the effect of the interface deformation on the surface heat flux.</p>
 </section>
 <section id="evaporation">
 <h3>Evaporation<a class="headerlink" href="#evaporation" title="Link to this heading">#</a></h3>
@@ -803,7 +808,7 @@ end
 \[p_\text{sat} = p_\text{atm}\exp{\left[\frac{L_\text{vap}M}{RT_\text{boil}}\left(1-\frac{T_\text{boil}}{T}\right)\right]}\]</div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(p_\text{atm}=101.325\;\text{kPa}\)</span> is the <code class="docutils literal notranslate"><span class="pre">ambient</span> <span class="pre">pressure</span></code>, and <span class="math notranslate nohighlight">\(T_\text{boil}=3550\;\text{K}\)</span> is the <code class="docutils literal notranslate"><span class="pre">boiling</span> <span class="pre">temperature</span></code>.</p>
-<p>Both terms are then applied at the liquid-gas interface using the Continuous Surface Force (CSF) model, as described for the surface tension in <a class="reference internal" href="../../../theory/multiphase/cfd/vof.html"><span class="doc">The Volume of Fluid (VOF) Method</span></a> theory guide.</p>
+<p>Both terms are then applied at the liquid-gas interface using the Continuous Surface Force (CSF) model, as described for the surface tension in <a class="reference internal" href="../../../theory/multiphase/cfd/cls.html"><span class="doc">The Conservative Level-Set (CLS) Method</span></a> theory guide.</p>
 </section>
 <section id="non-linear-solver">
 <h3>Non-Linear Solver<a class="headerlink" href="#non-linear-solver" title="Link to this heading">#</a></h3>
@@ -819,7 +824,7 @@ end
     set max iterations = 20
     set verbosity      = verbose
   end
-  subsection VOF
+  subsection CLS
     set tolerance      = 1e-4
     set max iterations = 20
     set verbosity      = verbose
@@ -863,8 +868,12 @@ This simulation takes <span class="math notranslate nohighlight">\(\sim \, 24\)<
 </section>
 <section id="results">
 <h2>Results<a class="headerlink" href="#results" title="Link to this heading">#</a></h2>
-<p>The following video shows on the left the temperature evolution in the metal, and on the right, the phase fraction evolution. We observe the melt pool, delimited by the black line, deepening and the formation of the vapor depression at the liquid-gas interface. This is often refered as a keyhole. It is caused by the recoil pressure, resulting from the fast out of equilibrium evaporation, and the Marangoni effect, driving melt alway from the melt pool center.</p>
-<iframe width="700" height="394" src="https://www.youtube.com/embed/1L66uYqNbXQ" title="Static irradiation of the Ti6Al4V bare plate" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>We also observe a air cushion forming at the triple-phase contact line. We assume it is linked to the fact that wetting is not modeled in the simulation. Thus, the implementation of a wetting model corresponds to a future addition in Lethe.</p>
+<p>The following video shows on the left the temperature evolution in the metal, and on the right, the phase indicator evolution. We observe the melt pool, delimited by the black line, deepening and the formation of the vapor depression at the liquid-gas interface. This is often referred as a keyhole. It is caused by the recoil pressure, resulting from the fast out of equilibrium evaporation, and the Marangoni effect, driving melt always from the melt pool center.
+.. raw:: html</p>
+<blockquote>
+<div><p>&lt;iframe width=”700” height=”394” src=”<a class="reference external" href="https://www.youtube.com/embed/1L66uYqNbXQ">https://www.youtube.com/embed/1L66uYqNbXQ</a>” title=”Static irradiation of the Ti6Al4V bare plate” frameborder=”0” allow=”accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share” referrerpolicy=”strict-origin-when-cross-origin” allowfullscreen&gt;&lt;/iframe&gt;</p>
+</div></blockquote>
+<p>We also observe a air cushion forming at the triple-phase contact line. We assume it is linked to the fact that wetting is not modeled in the simulation. Thus, the implementation of a wetting model corresponds to a future addition in Lethe.</p>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>

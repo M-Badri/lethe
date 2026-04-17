@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -97,12 +101,7 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for BoundaryConditions::CahnHilliardBoundaryConditions&lt; dim &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="classBoundaryConditions_1_1CahnHilliardBoundaryConditions__inherit__graph.png" border="0" usemap="#aBoundaryConditions_1_1CahnHilliardBoundaryConditions_3_01dim_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="aBoundaryConditions_1_1CahnHilliardBoundaryConditions_3_01dim_01_4_inherit__map" id="aBoundaryConditions_1_1CahnHilliardBoundaryConditions_3_01dim_01_4_inherit__map">
-<area shape="rect" title="This class manages the boundary conditions for the Cahn&#45;Hilliard solver It introduces the boundary fu..." alt="" coords="5,93,247,148"/>
-<area shape="rect" href="classBoundaryConditions_1_1BoundaryConditions.html" title="This class is the base class for all boundary conditions. It stores the general information that all ..." alt="" coords="45,5,207,45"/>
-<area shape="poly" title=" " alt="" coords="129,59,129,93,123,93,123,59"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classBoundaryConditions_1_1CahnHilliardBoundaryConditions__inherit__graph.svg" width="252" height="154"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -144,7 +143,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int dim&gt;<br />
 class BoundaryConditions::CahnHilliardBoundaryConditions&lt; dim &gt;</div><p>This class manages the boundary conditions for the Cahn-Hilliard solver It introduces the boundary functions and declares the boundary conditions coherently. </p>
 
-<p class="definition">Definition at line <a class="el" href="boundary__conditions_8h_source.html#l01028">1028</a> of file <a class="el" href="boundary__conditions_8h_source.html">boundary_conditions.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="boundary__conditions_8h_source.html#l01066">1066</a> of file <a class="el" href="boundary__conditions_8h_source.html">boundary_conditions.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a2ee482777b3436bf5268bfe584d8f1b9" name="a2ee482777b3436bf5268bfe584d8f1b9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2ee482777b3436bf5268bfe584d8f1b9">&#9670;&#160;</a></span>declare_default_entry()</h2>
@@ -183,7 +182,7 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="boundary__conditions_8h_source.html#l01058">1058</a> of file <a class="el" href="boundary__conditions_8h_source.html">boundary_conditions.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="boundary__conditions_8h_source.html#l01096">1096</a> of file <a class="el" href="boundary__conditions_8h_source.html">boundary_conditions.h</a>.</p>
 
 </div>
 </div>
@@ -224,7 +223,7 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="boundary__conditions_8h_source.html#l01113">1113</a> of file <a class="el" href="boundary__conditions_8h_source.html">boundary_conditions.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="boundary__conditions_8h_source.html#l01151">1151</a> of file <a class="el" href="boundary__conditions_8h_source.html">boundary_conditions.h</a>.</p>
 
 </div>
 </div>
@@ -254,7 +253,7 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="boundary__conditions_8h_source.html#l01150">1150</a> of file <a class="el" href="boundary__conditions_8h_source.html">boundary_conditions.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="boundary__conditions_8h_source.html#l01188">1188</a> of file <a class="el" href="boundary__conditions_8h_source.html">boundary_conditions.h</a>.</p>
 
 <p class="reference">References <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8ab1004baebeb1fd16f6bb7780e9b5d3e3">BoundaryConditions::cahn_hilliard_angle_of_contact</a>, <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8acfe4f2ec5a0912a19c266d141ccf58bf">BoundaryConditions::cahn_hilliard_dirichlet_phase_order</a>, <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8a653ca5ac2544b1bc952023bd93949517">BoundaryConditions::cahn_hilliard_free_angle</a>, <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8a1940f9f2a34c8894367379761bf6ae11">BoundaryConditions::cahn_hilliard_noflux</a>, <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8a334c4a4c42fdb79d7ebc3e73b517e6f8">BoundaryConditions::none</a>, <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8ae6ffdec5e14fce371eb7ae99edebbbee">BoundaryConditions::periodic</a>, and <a class="el" href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8a526a99532e70736e1153dec9f45ff924">BoundaryConditions::periodic_neighbor</a>.</p>
 
@@ -286,7 +285,7 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="boundary__conditions_8h_source.html#l01235">1235</a> of file <a class="el" href="boundary__conditions_8h_source.html">boundary_conditions.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="boundary__conditions_8h_source.html#l01273">1273</a> of file <a class="el" href="boundary__conditions_8h_source.html">boundary_conditions.h</a>.</p>
 
 </div>
 </div>
@@ -305,7 +304,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="boundary__conditions_8h_source.html#l01031">1031</a> of file <a class="el" href="boundary__conditions_8h_source.html">boundary_conditions.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="boundary__conditions_8h_source.html#l01069">1069</a> of file <a class="el" href="boundary__conditions_8h_source.html">boundary_conditions.h</a>.</p>
 
 </div>
 </div>
@@ -323,7 +322,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="boundary__conditions_8h_source.html#l01035">1035</a> of file <a class="el" href="boundary__conditions_8h_source.html">boundary_conditions.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="boundary__conditions_8h_source.html#l01073">1073</a> of file <a class="el" href="boundary__conditions_8h_source.html">boundary_conditions.h</a>.</p>
 
 </div>
 </div>
@@ -341,7 +340,7 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="boundary__conditions_8h_source.html#l01032">1032</a> of file <a class="el" href="boundary__conditions_8h_source.html">boundary_conditions.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="boundary__conditions_8h_source.html#l01070">1070</a> of file <a class="el" href="boundary__conditions_8h_source.html">boundary_conditions.h</a>.</p>
 
 </div>
 </div>
@@ -349,9 +348,37 @@ template&lt;int dim&gt; </div>
 <li>/home/runner/work/lethe/lethe/include/core/<a class="el" href="boundary__conditions_8h_source.html">boundary_conditions.h</a></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -93,12 +97,7 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for SRFPostprocessor&lt; dim &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="classSRFPostprocessor__inherit__graph.png" border="0" usemap="#aSRFPostprocessor_3_01dim_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="aSRFPostprocessor_3_01dim_01_4_inherit__map" id="aSRFPostprocessor_3_01dim_01_4_inherit__map">
-<area shape="rect" title="Compute the velocity field in the Eulerian frame of reference for simulations carried out in a single..." alt="" coords="5,93,199,119"/>
-<area shape="rect" title=" " alt="" coords="9,5,195,45"/>
-<area shape="poly" title=" " alt="" coords="105,59,105,93,99,93,99,59"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSRFPostprocessor__inherit__graph.svg" width="204" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -123,7 +122,7 @@ class SRFPostprocessor&lt; dim &gt;</div><p>Compute the velocity field in the Eu
 <p>The velocity in the Eulerian frame is \(\mathbf{u}_\mathrm{E}
 =\mathbf{u}_\mathrm{L}+ \mathbf{\Omega} \times \mathbf{R}\) where \(\mathbf{\Omega}\) is the velocity of the frame of reference and \(\mathbf{R}\) the position vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00209">209</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00261">261</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adb61a618cca2bc35b17aea9d80d4451f" name="adb61a618cca2bc35b17aea9d80d4451f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adb61a618cca2bc35b17aea9d80d4451f">&#9670;&#160;</a></span>SRFPostprocessor()</h2>
@@ -177,7 +176,7 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00221">221</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00273">273</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
 </div>
 </div>
@@ -228,9 +227,9 @@ template&lt;int dim&gt; </div>
 </dl>
 <dl class="section note"><dt>Note</dt><dd><code>input_data</code> contains both velocity and pressure data since fluid dynamics in Lethe is solved in a monolithic way, but only the velocity vector is used to compute the Eulerian velocity. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00242">242</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00294">294</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
-<p class="reference">References <a class="el" href="postprocessors_8h_source.html#l00277">SRFPostprocessor&lt; dim &gt;::omega_x</a>, <a class="el" href="postprocessors_8h_source.html#l00279">SRFPostprocessor&lt; dim &gt;::omega_y</a>, <a class="el" href="postprocessors_8h_source.html#l00281">SRFPostprocessor&lt; dim &gt;::omega_z</a>, and <a class="el" href="multiphysics_8h.html#a2cbb04ef215561a69b48772159577fddaac1a453d0cdc1f19d9479ccfaa8b082c">velocity</a>.</p>
+<p class="reference">References <a class="el" href="postprocessors_8h_source.html#l00329">SRFPostprocessor&lt; dim &gt;::omega_x</a>, <a class="el" href="postprocessors_8h_source.html#l00331">SRFPostprocessor&lt; dim &gt;::omega_y</a>, <a class="el" href="postprocessors_8h_source.html#l00333">SRFPostprocessor&lt; dim &gt;::omega_z</a>, and <a class="el" href="multiphysics_8h.html#a2cbb04ef215561a69b48772159577fddaac1a453d0cdc1f19d9479ccfaa8b082c">velocity</a>.</p>
 
 </div>
 </div>
@@ -259,7 +258,7 @@ template&lt;int dim&gt; </div>
 
 <p>Value of the \(x\) component of the SRF's velocity. </p>
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00277">277</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00329">329</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
 </div>
 </div>
@@ -287,7 +286,7 @@ template&lt;int dim&gt; </div>
 
 <p>Value of the \(y\) component of the SRF's velocity. </p>
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00279">279</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00331">331</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
 </div>
 </div>
@@ -315,7 +314,7 @@ template&lt;int dim&gt; </div>
 
 <p>Value of the \(z\) component of the SRF's velocity. </p>
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00281">281</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00333">333</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
 </div>
 </div>
@@ -323,9 +322,37 @@ template&lt;int dim&gt; </div>
 <li>/home/runner/work/lethe/lethe/include/solvers/<a class="el" href="postprocessors_8h_source.html">postprocessors.h</a></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

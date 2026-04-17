@@ -176,6 +176,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/boundary_conditions_multiphysics.html">Boundary Conditions - Multiphysics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/box_refinement.html">Box Refinement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/cahn_hilliard.html">Cahn-Hilliard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/conservative_level_set.html">Conservative Level-Set (Multiphase Flow)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/constrain_stasis.html">Constrain Stasis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/dimensionality.html">Dimensionality</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/dynamic_flow_control.html">Dynamic Flow Control</a></li>
@@ -200,7 +201,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/timer.html">Timer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/tracer_drift_velocity.html">Tracer Drift Velocity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/velocity_source.html">Velocity Source</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/volume_of_fluid.html">Volume of Fluid (Multiphase Flow)</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../parameters/dem/dem.html">Discrete Element Method (DEM)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Discrete Element Method (DEM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -238,6 +238,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-naca0012-low-reynolds/2d-naca0012-low-reynolds.html">Flow around NACA0012 at Low Reynolds Number</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">Taylor-Couette Flow Using Nitsche Immersed Boundary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-sudden-expansion-flow/2d-sudden-expansion-flow.html">Sudden-Expansion Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-paddle-mixer-mortar/2d-paddle-mixer-mortar.html">Paddle Mixer Using the Mortar Method</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">Flow around a Sphere</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/3d-taylor-green-vortex/3d-taylor-green-vortex.html">Taylor-Green Vortex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/3d-turbulent-taylor-couette/3d-turbulent-taylor-couette.html">Turbulent Taylor-Couette Flow</a></li>
@@ -248,7 +249,7 @@
 </ul>
 </li>
 <li class="toctree-l2 current has-children"><a class="reference internal" href="../multiphysics.html">Multiphysics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Multiphysics</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l3 has-children"><a class="reference internal" href="../vof.html">VOF</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of VOF</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../cls.html">CLS</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of CLS</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../dam-break/dam-break.html">Dam-Break</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rayleigh-taylor-instability/rayleigh-taylor-instability.html">Rayleigh-Taylor Instability</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../static-bubble/static-bubble.html">Static Bubble</a></li>
@@ -310,7 +311,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/single-particle-sedimentation/single-particle-sedimentation.html">Single Particle Sedimentation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/cylindrical-packed-bed/cylindrical-packed-bed.html">Cylindrical Packed Bed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/gas-solid-fluidized-bed/gas-solid-fluidized-bed.html">Gas-Solid Fluidized Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/gas-solid-fluidized-cylinder-bed/gas-solid-fluidized-cylinder-bed.html">Gas-Solid Fluidized Cylinder Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/pseudo-2d-gas-solid-fluidized-bed/pseudo-2d-gas-solid-fluidized-bed.html">Pseudo-2D Gas-Solid Fluidized Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/gas-solid-spouted-rectangular-bed/gas-solid-spouted-rectangular-bed.html">Gas-Solid Spouted Rectangular Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/liquid-solid-fluidized-bed/liquid-solid-fluidized-bed.html">Liquid-Solid Fluidized Bed</a></li>
@@ -375,7 +376,7 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../theory/multiphase/multiphase.html">Multiphase</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle navigation of Multiphase</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../../theory/multiphase/cfd/cfd.html">Fluid-Fluid Flows - Interface Capturing Models</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle navigation of Fluid-Fluid Flows - Interface Capturing Models</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphase/cfd/vof.html">The Volume of Fluid (VOF) Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphase/cfd/cls.html">The Conservative Level-Set (CLS) Method</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphase/cfd/cahn-hilliard.html">Cahn-Hilliard Method</a></li>
 </ul>
 </li>
@@ -494,35 +495,35 @@ Pr &amp;= \frac{\mu c_\text{p}}{k}\end{split}\]</div>
 </div>
 <section id="simulation-control">
 <h3>Simulation Control<a class="headerlink" href="#simulation-control" title="Link to this heading">#</a></h3>
-<p>The time integration is handled by a 1st order backward differentiation scheme to reach a steady-state solution <cite>(steady_bdf)</cite>. A stop tolerance of <span class="math notranslate nohighlight">\(1e-5\)</span> has been selected to ensure that the system reaches steady-state. The initial time-step is set to <span class="math notranslate nohighlight">\(0.001\)</span> s, but this will be adapted during the simulation.</p>
+<p>The time integration is handled by a 1st order backward differentiation scheme to reach a steady-state solution <cite>(steady_bdf)</cite>. A stop tolerance of <span class="math notranslate nohighlight">\(1e-5\)</span> has been selected to ensure that the system reaches steady-state. The initial time step is set to <span class="math notranslate nohighlight">\(0.001\)</span> s, but this will be adapted during the simulation.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This example uses an adaptive time-stepping method, where the
-time-step is modified during the simulation to keep the maximum value of the CFL condition below a given threshold (0.9 here). Using <code class="docutils literal notranslate"><span class="pre">output</span> <span class="pre">control</span> <span class="pre">=</span> <span class="pre">time</span></code>, and <code class="docutils literal notranslate"><span class="pre">output</span> <span class="pre">time</span> <span class="pre">frequency</span> <span class="pre">=</span> <span class="pre">0.5</span></code> the simulation results are written every 0.5 seconds regardless of the time-steps.</p>
+time step is modified during the simulation to keep the maximum value of the CFL condition below a given threshold (0.9 here). Using <code class="docutils literal notranslate"><span class="pre">output</span> <span class="pre">control</span> <span class="pre">=</span> <span class="pre">time</span></code>, and <code class="docutils literal notranslate"><span class="pre">output</span> <span class="pre">time</span> <span class="pre">frequency</span> <span class="pre">=</span> <span class="pre">0.5</span></code> the simulation results are written every 0.5 seconds regardless of the time steps.</p>
 </div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection simulation control
-  set method                       = bdf1
-  set time step                    = 0.001
-  set adapt                        = true
-  set max cfl                      = 0.9
-  set stop tolerance               = 1e-5
-  set adaptative time step scaling = 1.3
-  set number mesh adapt            = 0
-  set output name                  = rayleigh-benard_convection
-  set output control               = time
-  set output time frequency        = 0.5
-  set output path                  = ./output/
+  set method                         = steady_bdf
+  set time end                       = 10
+  set time step                      = 0.001
+  set adapt time step to respect CFL = true
+  set max cfl                        = 0.9
+  set stop tolerance                 = 1e-5
+  set adaptative time step scaling   = 1.3
+  set output name                    = rayleigh-benard_convection
+  set output control                 = time
+  set output time frequency          = 0.5
+  set output path                    = ./output/
 end
 </pre></div>
 </div>
 </section>
 <section id="multiphysics">
 <h3>Multiphysics<a class="headerlink" href="#multiphysics" title="Link to this heading">#</a></h3>
-<p>The <code class="docutils literal notranslate"><span class="pre">multiphysics</span></code> subsection enables to turn on <code class="docutils literal notranslate"><span class="pre">true</span></code> and off <code class="docutils literal notranslate"><span class="pre">false</span></code> the physics of interest. Here <code class="docutils literal notranslate"><span class="pre">heat</span> <span class="pre">transfer</span></code>, <code class="docutils literal notranslate"><span class="pre">buoyancy</span> <span class="pre">force</span></code>, and <code class="docutils literal notranslate"><span class="pre">fluid</span> <span class="pre">dynamics</span></code> are chosen.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">multiphysics</span></code> subsection enables to turn on <code class="docutils literal notranslate"><span class="pre">true</span></code> and off <code class="docutils literal notranslate"><span class="pre">false</span></code> the physics of interest. Here <code class="docutils literal notranslate"><span class="pre">heat</span> <span class="pre">transfer</span></code>, <code class="docutils literal notranslate"><span class="pre">thermal</span> <span class="pre">buoyancy</span> <span class="pre">force</span></code>, and <code class="docutils literal notranslate"><span class="pre">fluid</span> <span class="pre">dynamics</span></code> are chosen.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection multiphysics
-  set buoyancy force = true
-  set heat transfer  = true
-  set fluid dynamics = true
+  set thermal buoyancy force = true
+  set heat transfer          = true
+  set fluid dynamics         = true
 end
 </pre></div>
 </div>
@@ -579,7 +580,7 @@ end
 <p class="admonition-title">Warning</p>
 <p>Make sure to compile lethe in <cite>Release</cite> mode and
 run in parallel using mpirun. The first simulation takes
-<span class="math notranslate nohighlight">\(\approx\)</span> 20 minutes on 8 processes and the second at <span class="math notranslate nohighlight">\(Ra=10^6\)</span> can take a few hours because of the much smaller time-step required to respect the CFL condition.</p>
+<span class="math notranslate nohighlight">\(\approx\)</span> 20 minutes on 8 processes and the second at <span class="math notranslate nohighlight">\(Ra=10^6\)</span> can take a few hours because of the much smaller time step required to respect the CFL condition.</p>
 </div>
 </section>
 <section id="results">

@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -89,28 +93,32 @@ $(function() {
 <li>radii&#160;:&#160;<a class="el" href="classEllipsoid.html#a63be34106cc71dbf772c161e6fa8bf23">Ellipsoid&lt; dim &gt;</a></li>
 <li>radius&#160;:&#160;<a class="el" href="classCutHollowSphere.html#a994ab1af608e5f704cb5da1a0d6b679a">CutHollowSphere&lt; dim &gt;</a>, <a class="el" href="classCylinder.html#aef3dec7bceb66a04716695848d155b60">Cylinder&lt; dim &gt;</a>, <a class="el" href="classCylindricalHelix.html#ac63df9418098b2ceda77b8d90e62d6a9">CylindricalHelix&lt; dim &gt;</a>, <a class="el" href="classCylindricalTube.html#a5e4c96a458fb7135de8985d3e5acf2c8">CylindricalTube&lt; dim &gt;</a>, <a class="el" href="classDeathStar.html#a7e33c323beb0f2380dbd45d360de8065">DeathStar&lt; dim &gt;</a>, <a class="el" href="classIBParticle.html#a17446a5fc80ee5f459e51d4cdabae375">IBParticle&lt; dim &gt;</a>, <a class="el" href="classMortarManagerBase.html#a97b7ade36316049de4b1295837c61615">MortarManagerBase&lt; dim &gt;</a></li>
 <li>radius_disk&#160;:&#160;<a class="el" href="classCylindricalHelix.html#a146a811f7b10fee58e1853a6b3250c7b">CylindricalHelix&lt; dim &gt;</a></li>
+<li>radius_tolerance&#160;:&#160;<a class="el" href="structParameters_1_1Mortar.html#ab4c9c82a2ca88d194e745f339dc73046">Parameters::Mortar&lt; dim &gt;</a></li>
 <li>ramp&#160;:&#160;<a class="el" href="classParameters_1_1InitialConditions.html#a3e11201ab43e854f3b7b39e93bf47bef">Parameters::InitialConditions&lt; dim &gt;</a></li>
 <li>ramp_n&#160;:&#160;<a class="el" href="structParameters_1_1Ramp.html#a8654989a65534c10ae6cbcf185eb7582">Parameters::Ramp</a></li>
 <li>ramp_viscosity&#160;:&#160;<a class="el" href="structParameters_1_1Ramp.html#a1f0b020a72b5d33f7198d2c041b61cc6">Parameters::Ramp</a></li>
 <li>ray_tracing_info&#160;:&#160;<a class="el" href="classRayTracingSolverParameters.html#ab7ac52b91229c69d39b8e30cea7c9205">RayTracingSolverParameters&lt; dim &gt;</a></li>
+<li>rayleigh_characteristic_time&#160;:&#160;<a class="el" href="classSubSimulationControlDEM.html#a45c86d15bbc3ccf64bc3b4bd2e2a3d70">SubSimulationControlDEM</a></li>
 <li>rayleigh_time_step&#160;:&#160;<a class="el" href="classCFDDEMMatrixFree.html#a5aaa6d10c7a3fd9141635de890fa71fd">CFDDEMMatrixFree&lt; dim &gt;</a>, <a class="el" href="classCFDDEMSolver.html#a420b8033386312f89ffe3003a0f7298d">CFDDEMSolver&lt; dim &gt;</a></li>
 <li>Re_particle&#160;:&#160;<a class="el" href="classNavierStokesScratchData.html#a91011b4cd4861cad33fe26dd60c010b8">NavierStokesScratchData&lt; dim &gt;</a></li>
 <li>read_checkpoint_trigger&#160;:&#160;<a class="el" href="classDEMActionManager.html#ac15057f7e671c993d88c6c1d58422982">DEMActionManager</a></li>
 <li>read_dem&#160;:&#160;<a class="el" href="classParameters_1_1VoidFractionParameters.html#a81123e705cd9576f27774ab57cd67585">Parameters::VoidFractionParameters&lt; dim &gt;</a></li>
 <li>real_initial_time&#160;:&#160;<a class="el" href="classAverageScalar.html#ad5055e220c19ebf4384731821ebf6627">AverageScalar&lt; dim &gt;</a>, <a class="el" href="classAverageVelocities.html#af3c111556e181fa4a78ebbbf6fcc0fa5">AverageVelocities&lt; dim, VectorType, DofsType &gt;</a></li>
-<li>real_youngs_modulus_particle&#160;:&#160;<a class="el" href="structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#a4de5d2d46c5ec3963ac50f16f631a60b">Parameters::Lagrangian::LagrangianPhysicalProperties</a></li>
+<li>real_youngs_modulus_particle&#160;:&#160;<a class="el" href="structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#a93118c7d26b7fc4cf5bd2b28918d23fd">Parameters::Lagrangian::LagrangianPhysicalProperties</a></li>
 <li>real_youngs_modulus_wall&#160;:&#160;<a class="el" href="structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#a7b4fc8617665a8c7f396d825f6785040">Parameters::Lagrangian::LagrangianPhysicalProperties</a></li>
 <li>recoil_pressure_coefficient&#160;:&#160;<a class="el" href="classEvaporationModelTemperature.html#a043deb6c256617b0bd41c415877aa159">EvaporationModelTemperature</a>, <a class="el" href="structParameters_1_1Evaporation.html#a6b362c400fb37bd3f87df52f456210e9">Parameters::Evaporation</a></li>
 <li>rectangular_base&#160;:&#160;<a class="el" href="classCylindricalTube.html#a69a13a83408dc2161bc14af03783e711">CylindricalTube&lt; dim &gt;</a></li>
 <li>ref_displacement_tensor_unit&#160;:&#160;<a class="el" href="structParameters_1_1Lagrangian_1_1ParticleRayTracing.html#aeb82655d5e52be8599ff4f7c47edc739">Parameters::Lagrangian::ParticleRayTracing&lt; dim &gt;</a></li>
 <li>reference_points&#160;:&#160;<a class="el" href="classIBStencil.html#afdc9fd11681c2f6a720b0b5e1ca37272">IBStencil&lt; dim &gt;</a></li>
-<li>reference_temperature&#160;:&#160;<a class="el" href="classParameters_1_1PhysicalProperties.html#a0f42fb91f8a7e229684d5bb11e3d240a">Parameters::PhysicalProperties</a>, <a class="el" href="classPhysicalPropertiesManager.html#aa871ae374af570d8f8fd34b69ad87546">PhysicalPropertiesManager</a></li>
+<li>reference_temperature&#160;:&#160;<a class="el" href="classParameters_1_1PhysicalProperties.html#a0f42fb91f8a7e229684d5bb11e3d240a">Parameters::PhysicalProperties</a>, <a class="el" href="classPhysicalPropertiesManager.html#aa871ae374af570d8f8fd34b69ad87546">PhysicalPropertiesManager</a>, <a class="el" href="classThermalBuoyancyAssemblyCLS.html#ac92fa010c86e515abed0e57498d3b568">ThermalBuoyancyAssemblyCLS&lt; dim &gt;</a></li>
 <li>refine_until_target_size&#160;:&#160;<a class="el" href="structParameters_1_1Mesh.html#afab6627aa65eb4296cf15d2c4c3c124a">Parameters::Mesh</a></li>
 <li>refinement_at_frequency&#160;:&#160;<a class="el" href="structParameters_1_1MeshAdaptation.html#a9ad70731e3dcb802fd1e76564ef91a38">Parameters::MeshAdaptation</a></li>
+<li>refinement_boxes_meshes&#160;:&#160;<a class="el" href="structParameters_1_1MeshBoxRefinement.html#a0d65c320cae985ff01b0d432a1914c6f">Parameters::MeshBoxRefinement</a></li>
 <li>refinement_fraction&#160;:&#160;<a class="el" href="structParameters_1_1MultipleAdaptationParameters.html#a8feef14a2efcfbd178fd431ee9b560c3">Parameters::MultipleAdaptationParameters</a></li>
-<li>regularization_method&#160;:&#160;<a class="el" href="structParameters_1_1VOF.html#a32cf8a2cfee3ef09b86f00e7e3e19908">Parameters::VOF</a></li>
-<li>regularization_method_type&#160;:&#160;<a class="el" href="structParameters_1_1VOF__RegularizationMethod.html#a6d825f3c1b1506e267afc63eb8ef4baa">Parameters::VOF_RegularizationMethod</a></li>
-<li>reinitialization_cfl&#160;:&#160;<a class="el" href="structParameters_1_1VOF__AlgebraicInterfaceReinitialization.html#aab1e5eaf029500880abe0c85157702a6">Parameters::VOF_AlgebraicInterfaceReinitialization</a></li>
+<li>refinement_inside_distance_factor&#160;:&#160;<a class="el" href="classParameters_1_1IBParticles.html#a8d011661ec992b3bc0e13d8dfccbad3e">Parameters::IBParticles&lt; dim &gt;</a></li>
+<li>refinement_outside_distance_factor&#160;:&#160;<a class="el" href="classParameters_1_1IBParticles.html#aeadca7bad8198acf7ccf0ddc72eb5a1b">Parameters::IBParticles&lt; dim &gt;</a></li>
+<li>reinitialization_method&#160;:&#160;<a class="el" href="structParameters_1_1CLS.html#abbbb72a3d6d63ab9f6e5fd69b2b91767">Parameters::CLS</a></li>
+<li>reinitialization_method_type&#160;:&#160;<a class="el" href="structParameters_1_1CLS__ReinitializationMethod.html#aa535b69c9857ec6b471b8001b1ab0cb1">Parameters::CLS_ReinitializationMethod</a></li>
 <li>relative_residual&#160;:&#160;<a class="el" href="structParameters_1_1LinearSolver.html#a37749d5c2b57f9161faec8fb3ba71bf1">Parameters::LinearSolver</a></li>
 <li>relevant_dof_indices&#160;:&#160;<a class="el" href="classCouplingEvaluationSIPG.html#a62635cf4e16d34563d4010ecec6b044d">CouplingEvaluationSIPG&lt; dim, n_components, Number &gt;</a>, <a class="el" href="classCouplingOperator.html#af436ef02adaca97dcc438cbcd73f54fa">CouplingOperator&lt; dim, Number &gt;</a>, <a class="el" href="classNavierStokesCouplingEvaluation.html#a280b06d191647ee1904e549e0366715f">NavierStokesCouplingEvaluation&lt; dim, Number &gt;</a></li>
 <li>remaining_particles_of_each_type&#160;:&#160;<a class="el" href="classInsertionFile.html#adb64f4406c86c918a98ed1175767af81">InsertionFile&lt; dim, PropertiesIndex &gt;</a>, <a class="el" href="classInsertionList.html#a118d1cc94d9fd05229344d11ab2e7b16">InsertionList&lt; dim, PropertiesIndex &gt;</a></li>
@@ -127,7 +135,7 @@ $(function() {
 <li>restart&#160;:&#160;<a class="el" href="classCheckpointControl.html#aa7c92ab5298a0ddead0ec82c22cb4ae7">CheckpointControl</a>, <a class="el" href="classDEMSolverParameters.html#a518770fc42973abc4721c1ec7c5cac7c">DEMSolverParameters&lt; dim &gt;</a>, <a class="el" href="structParameters_1_1Restart.html#ad71babefa334afc643f3093b7b654149">Parameters::Restart</a></li>
 <li>restart_parameters&#160;:&#160;<a class="el" href="classSimulationParameters.html#a384c442019a3f12539b07663886f4c81">SimulationParameters&lt; dim &gt;</a></li>
 <li>restitution_coefficient&#160;:&#160;<a class="el" href="classIBParticle.html#a95785ef9825ebd34879b5e4bd25836dd">IBParticle&lt; dim &gt;</a></li>
-<li>restitution_coefficient_particle&#160;:&#160;<a class="el" href="structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#aae18d580cc8beb33ce45b6bb4c90c1a2">Parameters::Lagrangian::LagrangianPhysicalProperties</a></li>
+<li>restitution_coefficient_particle&#160;:&#160;<a class="el" href="structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#af51cb5f0190e5b051a785f5d8001d191">Parameters::Lagrangian::LagrangianPhysicalProperties</a></li>
 <li>restitution_coefficient_wall&#160;:&#160;<a class="el" href="structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#aecda543c0b695175adc5f07c47463276">Parameters::Lagrangian::LagrangianPhysicalProperties</a></li>
 <li>restriction_plane_normal_vector&#160;:&#160;<a class="el" href="structParameters_1_1ConstrainSolidDomain.html#a6d39f4d2313c5231f2759fbfb3fe4dc4">Parameters::ConstrainSolidDomain&lt; dim &gt;</a></li>
 <li>restriction_plane_point&#160;:&#160;<a class="el" href="structParameters_1_1ConstrainSolidDomain.html#ad720b213273afe16073c82ace0732db2">Parameters::ConstrainSolidDomain&lt; dim &gt;</a></li>
@@ -143,11 +151,11 @@ $(function() {
 <li>ring_radius&#160;:&#160;<a class="el" href="classTorus.html#a84cefccdb34009ed66c894ff9bbb2940">Torus&lt; dim &gt;</a></li>
 <li>ring_thickness&#160;:&#160;<a class="el" href="classTorus.html#a5ae7a4069fa133597875a7d083c575a0">Torus&lt; dim &gt;</a></li>
 <li>rolling_friction_coefficient&#160;:&#160;<a class="el" href="classIBParticle.html#aed5d8c101ecc710c13fe0d4006a6195d">IBParticle&lt; dim &gt;</a></li>
-<li>rolling_friction_coefficient_particle&#160;:&#160;<a class="el" href="structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#a37524cb4c2fe71d9732d27e4cd52e10c">Parameters::Lagrangian::LagrangianPhysicalProperties</a></li>
+<li>rolling_friction_coefficient_particle&#160;:&#160;<a class="el" href="structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#a3bcba6979c2a571442c78de606dfc9ca">Parameters::Lagrangian::LagrangianPhysicalProperties</a></li>
 <li>rolling_friction_wall&#160;:&#160;<a class="el" href="structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#ac56baa863ff667a5f131471dbeaf13db">Parameters::Lagrangian::LagrangianPhysicalProperties</a></li>
 <li>rolling_resistance_method&#160;:&#160;<a class="el" href="classParameters_1_1Lagrangian_1_1ModelParameters.html#a3fe09dda6bb822068b0dfcce2c83f1ae">Parameters::Lagrangian::ModelParameters&lt; dim &gt;</a></li>
 <li>rolling_resistance_spring_torque&#160;:&#160;<a class="el" href="structIBParticlesDEM_1_1ContactInfo.html#a63cc9278b774212cedf25f25c499d140">IBParticlesDEM&lt; dim &gt;::ContactInfo</a>, <a class="el" href="structparticle__particle__contact__info.html#af1652a85dcad720d7e21c1a06336b2b9">particle_particle_contact_info&lt; dim &gt;</a>, <a class="el" href="structparticle__wall__contact__info.html#ac9b3c405410ab567525ff5db26951da5">particle_wall_contact_info&lt; dim &gt;</a></li>
-<li>rolling_viscous_damping_coefficient_particle&#160;:&#160;<a class="el" href="structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#afa94c316a9a9a743201246d3fef412eb">Parameters::Lagrangian::LagrangianPhysicalProperties</a></li>
+<li>rolling_viscous_damping_coefficient_particle&#160;:&#160;<a class="el" href="structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#a8f2b7e985b653f5b8f7364f494f151f3">Parameters::Lagrangian::LagrangianPhysicalProperties</a></li>
 <li>rolling_viscous_damping_wall&#160;:&#160;<a class="el" href="structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#ad8c8c5515e89aac21aa2265427591e4b">Parameters::Lagrangian::LagrangianPhysicalProperties</a></li>
 <li>rotated_nodes_positions&#160;:&#160;<a class="el" href="classRBFShape.html#aa6c393f51fc07580a0f6ba64a0b19dee">RBFShape&lt; dim &gt;</a></li>
 <li>rotating_frame_type&#160;:&#160;<a class="el" href="structParameters_1_1VelocitySource.html#afd60c8043dcf7a0bfcca777e112252b0">Parameters::VelocitySource</a></li>
@@ -162,9 +170,37 @@ $(function() {
 <li>rotor_rotation_angle&#160;:&#160;<a class="el" href="structParameters_1_1Mortar.html#aa505cb02c5808619a3538f57da0de941">Parameters::Mortar&lt; dim &gt;</a></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

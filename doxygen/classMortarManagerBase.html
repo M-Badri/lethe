@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -95,12 +99,7 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for MortarManagerBase&lt; dim &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="classMortarManagerBase__inherit__graph.png" border="0" usemap="#aMortarManagerBase_3_01dim_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="aMortarManagerBase_3_01dim_01_4_inherit__map" id="aMortarManagerBase_3_01dim_01_4_inherit__map">
-<area shape="rect" title="Base class for the mortar manager." alt="" coords="5,5,171,45"/>
-<area shape="rect" href="classMortarManagerCircle.html" title=" " alt="" coords="9,93,167,133"/>
-<area shape="poly" title=" " alt="" coords="91,59,91,93,85,93,85,59"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classMortarManagerBase__inherit__graph.svg" width="358" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -145,8 +144,8 @@ Public Attributes</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:aae8afe656a03ff92fa6c4f7e4e840ea8" id="r_aae8afe656a03ff92fa6c4f7e4e840ea8"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; unsigned int, unsigned int, unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMortarManagerBase.html#aae8afe656a03ff92fa6c4f7e4e840ea8">get_config</a> (const Point&lt; dim &gt; &amp;face_center, const bool is_inner) const</td></tr>
 <tr class="separator:aae8afe656a03ff92fa6c4f7e4e840ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23079f9952ce138420ee90d7d160e56d" id="r_a23079f9952ce138420ee90d7d160e56d"><td class="memItemLeft" align="right" valign="top">virtual Point&lt; dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMortarManagerBase.html#a23079f9952ce138420ee90d7d160e56d">from_1D</a> (const double radiant) const =0</td></tr>
-<tr class="separator:a23079f9952ce138420ee90d7d160e56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7a5466ca7bbf1b07606623697a52903" id="r_ae7a5466ca7bbf1b07606623697a52903"><td class="memItemLeft" align="right" valign="top">virtual Point&lt; dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMortarManagerBase.html#ae7a5466ca7bbf1b07606623697a52903">from_1D</a> (const double angle_rad) const =0</td></tr>
+<tr class="separator:ae7a5466ca7bbf1b07606623697a52903"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d293bd209c2953085ed86c37e9935ae" id="r_a2d293bd209c2953085ed86c37e9935ae"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMortarManagerBase.html#a2d293bd209c2953085ed86c37e9935ae">to_1D</a> (const Point&lt; dim &gt; &amp;point) const =0</td></tr>
 <tr class="separator:a2d293bd209c2953085ed86c37e9935ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f88e0afa02fed23556106c9cb91514c" id="r_a5f88e0afa02fed23556106c9cb91514c"><td class="memItemLeft" align="right" valign="top">virtual Tensor&lt; 1, dim, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMortarManagerBase.html#a5f88e0afa02fed23556106c9cb91514c">get_normal</a> (const Point&lt; dim &gt; &amp;point) const =0</td></tr>
@@ -209,9 +208,20 @@ template&lt;int dim2&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00253">253</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
+<p>Mortar manager base constructor used in 2D problems TODO: Combine both 2D and 3D constructors into one. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">n_subdivisions</td><td>Number of cells at the interface between inner and outer domains </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">radius</td><td>Radius at the mortar interface </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">quadrature</td><td>Quadrature for local cell operations </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rotation_angle</td><td>Rotation angle for the inner domain </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">References <a class="el" href="mortar__coupling__manager_8h_source.html#l00123">MortarManagerBase&lt; dim &gt;::n_subdivisions</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00424">424</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
+
+<p class="reference">References <a class="el" href="mortar__coupling__manager_8h_source.html#l00154">MortarManagerBase&lt; dim &gt;::n_subdivisions</a>.</p>
 
 </div>
 </div>
@@ -257,7 +267,18 @@ template&lt;int dim2&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00266">266</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
+<p>Mortar manager base constructor used in 3D problems TODO: Combine both 2D and 3D constructors into one. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">n_subdivisions</td><td>Number of cells at the interface between inner and outer domains </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">radius</td><td>Vector containing the radius at the mortar interface and the domain length in the direction of the rotation axis </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">quadrature</td><td>Quadrature for local cell operations </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rotation_angle</td><td>Rotation angle for the inner domain </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00437">437</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
 
 </div>
 </div>
@@ -291,8 +312,8 @@ template&lt;int dim&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a23079f9952ce138420ee90d7d160e56d" name="a23079f9952ce138420ee90d7d160e56d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23079f9952ce138420ee90d7d160e56d">&#9670;&#160;</a></span>from_1D()</h2>
+<a id="ae7a5466ca7bbf1b07606623697a52903" name="ae7a5466ca7bbf1b07606623697a52903"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7a5466ca7bbf1b07606623697a52903">&#9670;&#160;</a></span>from_1D()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -306,7 +327,7 @@ template&lt;int dim&gt; </div>
           <td class="memname">virtual Point&lt; dim &gt; <a class="el" href="classMortarManagerBase.html">MortarManagerBase</a>&lt; dim &gt;::from_1D </td>
           <td>(</td>
           <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>radiant</em></td><td>)</td>
+          <td class="paramname"><em>angle_rad</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -317,9 +338,16 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Convert radiant to quadrature point in real space. </p>
+<p>Convert angle (in radians) to quadrature point in real space. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">angle_rad</td><td>Angle (in radians) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Point in cartesian coordinates </dd></dl>
 
-<p>Implemented in <a class="el" href="classMortarManagerCircle.html#a4fc9c04930033d64058b9fa6257ddf0c">MortarManagerCircle&lt; dim &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classMortarManagerCircle.html#a3f472445542f7a1837ceab451fb22dee">MortarManagerCircle&lt; dim &gt;</a>, and <a class="el" href="classMortarManagerLinear.html#abc1df7713d73fa4840b54beda0f14d6d">MortarManagerLinear&lt; dim &gt;</a>.</p>
 
 </div>
 </div>
@@ -362,7 +390,8 @@ template&lt;int dim&gt; </div>
 <p>Returns the mesh alignment type and cell index. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">face_center</td><td>Face center</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">face_center</td><td>Face center </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">is_inner</td><td>Boolean that indicates whether the face is part of the rotor (inner) side of the mortar interface</td></tr>
   </table>
   </dd>
 </dl>
@@ -371,9 +400,9 @@ template&lt;int dim&gt; </div>
 id_in_plane Index of the cell in which lies the rotated cell center </dd>
 <dd>
 id_out_plane Second index of the cell in which lies the rotated cell center.</dd></dl>
-<p>Note that the id_out_plane corresponds to indexes along the rotation axis, and it is necessary only for 3D problems. </p>
+<p>The id_out_plane corresponds to indexes along the rotation axis, and it is necessary only for 3D problems </p>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l00391">391</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l00389">389</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
 
 </div>
 </div>
@@ -409,11 +438,12 @@ template&lt;int dim&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">face_center</td><td>Face center </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">is_inner</td><td>Boolean that indicates whether the face is part of the rotor (inner) side of the mortar interface </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l00072">72</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l00070">70</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
 
 </div>
 </div>
@@ -436,7 +466,7 @@ template&lt;int dim&gt; </div>
 
 <p>Returns the number of mortars per face. </p>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l00055">55</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l00057">57</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
 
 </div>
 </div>
@@ -459,7 +489,7 @@ template&lt;int dim&gt; </div>
 
 <p>Returns the coordinates of the quadrature points at both sides of the interface. </p>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l00139">139</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l00137">137</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
 
 </div>
 </div>
@@ -482,7 +512,7 @@ template&lt;int dim&gt; </div>
 
 <p>Returns the total number of mortars. </p>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l00030">30</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l00036">36</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
 
 </div>
 </div>
@@ -505,7 +535,7 @@ template&lt;int dim&gt; </div>
 
 <p>Returns the total number of quadrature points at the inner/outer boundary interface. </p>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l00129">129</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l00127">127</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
 
 </div>
 </div>
@@ -536,8 +566,15 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 
 <p>Return the normal for a given quadrature point. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">point</td><td>Point in cartesian coordinates </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Corresponding outward normal vector </dd></dl>
 
-<p>Implemented in <a class="el" href="classMortarManagerCircle.html#acf76f76ce16a140e187a28a8fa04d51a">MortarManagerCircle&lt; dim &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classMortarManagerLinear.html#aa2950b0bca0996d101e711c665c69b6b">MortarManagerLinear&lt; dim &gt;</a>, and <a class="el" href="classMortarManagerCircle.html#acf76f76ce16a140e187a28a8fa04d51a">MortarManagerCircle&lt; dim &gt;</a>.</p>
 
 </div>
 </div>
@@ -572,13 +609,14 @@ template&lt;int dim&gt; </div>
 <p>Returns the normal vector for the quadrature points. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">face_center</td><td>Face center</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">face_center</td><td>Face center </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">is_inner</td><td>Boolean that indicates whether the face is part of the rotor (inner) side of the mortar interface</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>result Normal vectors of the cell quadrature points </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l00373">373</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l00371">371</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
 
 </div>
 </div>
@@ -613,13 +651,14 @@ template&lt;int dim&gt; </div>
 <p>Returns the coordinates of the quadrature points at both sides of the interface. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">face_center</td><td>Face center</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">face_center</td><td>Face center </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">is_inner</td><td>Boolean that indicates whether the face is part of the rotor (inner) side of the mortar interface</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>points Coordinate of quadrature points of the cell </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l00149">149</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l00147">147</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
 
 </div>
 </div>
@@ -654,13 +693,14 @@ template&lt;int dim&gt; </div>
 <p>Returns the coordinates of the quadrature points at the interface. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">face_center</td><td>Face center</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">face_center</td><td>Face center </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">is_inner</td><td>Boolean that indicates whether the face is part of the rotor (inner) side of the mortar interface</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>points Coordinate of quadrature points of the cell </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l00239">239</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l00237">237</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
 
 </div>
 </div>
@@ -695,13 +735,14 @@ template&lt;int dim&gt; </div>
 <p>Returns the weights of the quadrature points at both sides of the interface. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">face_center</td><td>Face center</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">face_center</td><td>Face center </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">is_inner</td><td>Boolean that indicates whether the face is part of the rotor (inner) side of the mortar interface</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>points Angular weights of quadrature points of the cell </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l00310">310</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l00308">308</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
 
 </div>
 </div>
@@ -724,7 +765,7 @@ template&lt;int dim&gt; </div>
 
 <p>Verify if cells of the inner and outer domains are aligned. </p>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l00017">17</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8cc_source.html#l00023">23</a> of file <a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a>.</p>
 
 </div>
 </div>
@@ -754,9 +795,16 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Convert quadrature point in real space to radiant. </p>
+<p>Convert quadrature point in real space to angle (in radians) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">point</td><td>Point in cartesian coordinates </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Angle (in radians) </dd></dl>
 
-<p>Implemented in <a class="el" href="classMortarManagerCircle.html#a5f53fe21509f1aeb5e1a86f17bb21b9f">MortarManagerCircle&lt; dim &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classMortarManagerCircle.html#a5f53fe21509f1aeb5e1a86f17bb21b9f">MortarManagerCircle&lt; dim &gt;</a>, and <a class="el" href="classMortarManagerLinear.html#a215f88124f26d58d2c970c810c823cfa">MortarManagerLinear&lt; dim &gt;</a>.</p>
 
 </div>
 </div>
@@ -785,7 +833,7 @@ template&lt;int dim&gt; </div>
 
 <p>Number of quadrature points per cell. </p>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00168">168</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00210">210</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
 
 </div>
 </div>
@@ -805,7 +853,7 @@ template&lt;int dim&gt; </div>
 
 <p>Number of cells at the interface between inner and outer domains. </p>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00123">123</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00154">154</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
 
 </div>
 </div>
@@ -833,7 +881,7 @@ template&lt;int dim&gt; </div>
 
 <p>Mortar quadrature. </p>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00166">166</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00208">208</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
 
 </div>
 </div>
@@ -852,7 +900,7 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 <p>Vector containing the radius at the mortar interface and the domain length in the direction of the rotation axis </p>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00126">126</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00157">157</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
 
 </div>
 </div>
@@ -880,7 +928,7 @@ template&lt;int dim&gt; </div>
 
 <p>Rotation angle for the inner domain. </p>
 
-<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00170">170</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mortar__coupling__manager_8h_source.html#l00212">212</a> of file <a class="el" href="mortar__coupling__manager_8h_source.html">mortar_coupling_manager.h</a>.</p>
 
 </div>
 </div>
@@ -889,9 +937,37 @@ template&lt;int dim&gt; </div>
 <li>/home/runner/work/lethe/lethe/source/core/<a class="el" href="mortar__coupling__manager_8cc_source.html">mortar_coupling_manager.cc</a></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

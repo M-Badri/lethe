@@ -176,6 +176,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/boundary_conditions_multiphysics.html">Boundary Conditions - Multiphysics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/box_refinement.html">Box Refinement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/cahn_hilliard.html">Cahn-Hilliard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/conservative_level_set.html">Conservative Level-Set (Multiphase Flow)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/constrain_stasis.html">Constrain Stasis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/dimensionality.html">Dimensionality</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/dynamic_flow_control.html">Dynamic Flow Control</a></li>
@@ -200,7 +201,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/timer.html">Timer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/tracer_drift_velocity.html">Tracer Drift Velocity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/velocity_source.html">Velocity Source</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/volume_of_fluid.html">Volume of Fluid (Multiphase Flow)</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../parameters/dem/dem.html">Discrete Element Method (DEM)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Discrete Element Method (DEM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -238,6 +238,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-naca0012-low-reynolds/2d-naca0012-low-reynolds.html">Flow around NACA0012 at Low Reynolds Number</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">Taylor-Couette Flow Using Nitsche Immersed Boundary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-sudden-expansion-flow/2d-sudden-expansion-flow.html">Sudden-Expansion Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-paddle-mixer-mortar/2d-paddle-mixer-mortar.html">Paddle Mixer Using the Mortar Method</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">Flow around a Sphere</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/3d-taylor-green-vortex/3d-taylor-green-vortex.html">Taylor-Green Vortex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/3d-turbulent-taylor-couette/3d-turbulent-taylor-couette.html">Turbulent Taylor-Couette Flow</a></li>
@@ -248,7 +249,7 @@
 </ul>
 </li>
 <li class="toctree-l2 current has-children"><a class="reference internal" href="../multiphysics.html">Multiphysics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Multiphysics</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l3 current has-children"><a class="reference internal" href="../vof.html">VOF</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of VOF</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3 current has-children"><a class="reference internal" href="../cls.html">CLS</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of CLS</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="../dam-break/dam-break.html">Dam-Break</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rayleigh-taylor-instability/rayleigh-taylor-instability.html">Rayleigh-Taylor Instability</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../static-bubble/static-bubble.html">Static Bubble</a></li>
@@ -310,7 +311,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/single-particle-sedimentation/single-particle-sedimentation.html">Single Particle Sedimentation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/cylindrical-packed-bed/cylindrical-packed-bed.html">Cylindrical Packed Bed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/gas-solid-fluidized-bed/gas-solid-fluidized-bed.html">Gas-Solid Fluidized Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/gas-solid-fluidized-cylinder-bed/gas-solid-fluidized-cylinder-bed.html">Gas-Solid Fluidized Cylinder Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/pseudo-2d-gas-solid-fluidized-bed/pseudo-2d-gas-solid-fluidized-bed.html">Pseudo-2D Gas-Solid Fluidized Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/gas-solid-spouted-rectangular-bed/gas-solid-spouted-rectangular-bed.html">Gas-Solid Spouted Rectangular Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/liquid-solid-fluidized-bed/liquid-solid-fluidized-bed.html">Liquid-Solid Fluidized Bed</a></li>
@@ -375,7 +376,7 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../theory/multiphase/multiphase.html">Multiphase</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle navigation of Multiphase</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../../theory/multiphase/cfd/cfd.html">Fluid-Fluid Flows - Interface Capturing Models</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle navigation of Fluid-Fluid Flows - Interface Capturing Models</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphase/cfd/vof.html">The Volume of Fluid (VOF) Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphase/cfd/cls.html">The Conservative Level-Set (CLS) Method</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphase/cfd/cahn-hilliard.html">Cahn-Hilliard Method</a></li>
 </ul>
 </li>
@@ -453,8 +454,8 @@
 <h2>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Solver: <code class="docutils literal notranslate"><span class="pre">lethe-fluid</span></code> (Q1-Q1)</p></li>
-<li><p>Two phase flow handled by the Volume-of-Fluids (VOF) approach with phase fraction filtration</p></li>
-<li><p>Mesh adaptation using phase fraction</p></li>
+<li><p>Two phase flow handled by the Conservative Level-Set (CLS) approach with phase indicator filtration</p></li>
+<li><p>Mesh adaptation using phase indicator</p></li>
 <li><p>Unsteady problem handled by an adaptive BDF1 time-stepping scheme</p></li>
 <li><p>The use of a python script for post-processing data</p></li>
 </ul>
@@ -527,23 +528,23 @@
 <h2>Parameter File<a class="headerlink" href="#parameter-file" title="Link to this heading">#</a></h2>
 <section id="simulation-control">
 <h3>Simulation Control<a class="headerlink" href="#simulation-control" title="Link to this heading">#</a></h3>
-<p>Time integration is handled by a 1st order backward differentiation scheme (<cite>bdf1</cite>), for a <span class="math notranslate nohighlight">\(6 \ \text{s}\)</span> simulation time with an initial time-step of <span class="math notranslate nohighlight">\(0.001 \ \text{s}\)</span>. Time-step adaptation is enabled using <code class="docutils literal notranslate"><span class="pre">adapt=true</span></code>
+<p>Time integration is handled by a 1st order backward differentiation scheme (<cite>bdf1</cite>), for a <span class="math notranslate nohighlight">\(6 \ \text{s}\)</span> simulation time with an initial time step of <span class="math notranslate nohighlight">\(0.001 \ \text{s}\)</span>. Time-step adaptation is enabled using <code class="docutils literal notranslate"><span class="pre">adapt</span> <span class="pre">time</span> <span class="pre">step</span> <span class="pre">to</span> <span class="pre">respect</span> <span class="pre">CFL`</span> <span class="pre">=</span> <span class="pre">true</span></code>
 and the max CFL is <span class="math notranslate nohighlight">\(0.8\)</span>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This example uses an adaptive time-stepping method, where the time-steps are modified during the simulation to keep the maximum value of the CFL condition below the given threshold (0.5).</p>
+<p>This example uses an adaptive time-stepping method, where the time steps are modified during the simulation to keep the maximum value of the CFL condition below the given threshold (0.5).</p>
 </div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection simulation control
-  set method                       = bdf1
-  set time end                     = 6
-  set time step                    = 0.001
-  set adapt                        = true
-  set max cfl                      = 0.8
-  set output name                  = 3d-dam-break
-  set output frequency             = 5
-  set output path                  = ./output/
-  set adaptative time step scaling = 1.05
-  set output boundaries            = true
+  set method                         = bdf1
+  set time end                       = 6
+  set time step                      = 0.001
+  set adapt time step to respect CFL = true
+  set max cfl                        = 0.8
+  set output name                    = 3d-dam-break
+  set output frequency               = 5
+  set output path                    = ./output/
+  set adaptative time step scaling   = 1.05
+  set output boundaries              = true
 end
 </pre></div>
 </div>
@@ -551,10 +552,10 @@ end
 <section id="multiphysics">
 <h3>Multiphysics<a class="headerlink" href="#multiphysics" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">multiphysics</span></code> subsection enables to turn on <cite>(true)</cite>
-and off <cite>(false)</cite> the physics of interest. Here <code class="docutils literal notranslate"><span class="pre">VOF</span></code> is chosen.
+and off <cite>(false)</cite> the physics of interest. Here <code class="docutils literal notranslate"><span class="pre">CLS</span></code> is chosen.
 Note that the fluid dynamics are solved by default.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection multiphysics
-  set VOF = true
+  set cls = true
 end
 </pre></div>
 </div>
@@ -582,14 +583,14 @@ end
 </section>
 <section id="initial-conditions">
 <h3>Initial Conditions<a class="headerlink" href="#initial-conditions" title="Link to this heading">#</a></h3>
-<p>In the <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">conditions</span></code> subsection, we need to define the interface between the two fluids. We define this interface by using a function expression in the <code class="docutils literal notranslate"><span class="pre">VOF</span></code> subsection of <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">conditions</span></code>. A projection step is applied to ensure a smooth definition of the initial condition.</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">conditions</span></code> subsection, we need to define the interface between the two fluids. We define this interface by using a function expression in the <code class="docutils literal notranslate"><span class="pre">CLS</span></code> subsection of <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">conditions</span></code>. A projection step is applied to ensure a smooth definition of the initial condition.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection initial conditions
   set type = nodal
   subsection uvwp
     set Function expression = 0; 0; 0; 0
   end
 
-  subsection VOF
+  subsection CLS
     set Function expression = if (x&gt;1.992 &amp; z&lt;0.55 &amp; y&gt;=-0.5, 1, 0)
     subsection projection step
       set enable           = true
@@ -611,10 +612,10 @@ end
 </pre></div>
 </div>
 </section>
-<section id="vof">
-<h3>VOF<a class="headerlink" href="#vof" title="Link to this heading">#</a></h3>
-<p>In the <code class="docutils literal notranslate"><span class="pre">VOF</span></code> subsection, we select the <code class="docutils literal notranslate"><span class="pre">tanh</span></code> filter to filter the phase fraction and get a more defined interface. We set the value of beta to 10.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection VOF
+<section id="cls">
+<h3>CLS<a class="headerlink" href="#cls" title="Link to this heading">#</a></h3>
+<p>In the <code class="docutils literal notranslate"><span class="pre">CLS</span></code> subsection, we select the <code class="docutils literal notranslate"><span class="pre">tanh</span></code> filter to filter the phase indicator and get a more defined interface. We set the value of beta to 10.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection CLS
   subsection phase filtration
     set type   = tanh
     set beta   = 10
@@ -638,7 +639,8 @@ end
 <h3>Mesh Adaptation<a class="headerlink" href="#mesh-adaptation" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">mesh</span> <span class="pre">adaptation</span></code> section controls the dynamic mesh adaptation. Here, we choose <code class="docutils literal notranslate"><span class="pre">phase</span></code> and <code class="docutils literal notranslate"><span class="pre">pressure</span></code> as the <code class="docutils literal notranslate"><span class="pre">refinement</span> <span class="pre">variables</span></code>. The maximum and minimum refinement levels are respectively set to <span class="math notranslate nohighlight">\(4\)</span> and <span class="math notranslate nohighlight">\(2\)</span>.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection mesh adaptation
-  set type                     = kelly
+  set type                     = adaptive
+  set error estimator          = kelly, kelly
   set variable                 = phase, pressure
   set fraction type            = fraction
   set max refinement level     = 4
@@ -759,7 +761,7 @@ end
 <li><a class="reference internal" href="#physical-properties">Physical Properties</a></li>
 <li><a class="reference internal" href="#initial-conditions">Initial Conditions</a></li>
 <li><a class="reference internal" href="#source-term">Source Term</a></li>
-<li><a class="reference internal" href="#vof">VOF</a></li>
+<li><a class="reference internal" href="#cls">CLS</a></li>
 <li><a class="reference internal" href="#mesh">Mesh</a></li>
 <li><a class="reference internal" href="#mesh-adaptation">Mesh Adaptation</a></li>
 </ul>

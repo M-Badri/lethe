@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -385,26 +389,54 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    <span class="keyword">const</span> MPI_Comm                         &amp;mpi_communicator);</div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>} <span class="comment">// namespace DEM</span></div>
-<div class="ttc" id="aclassstatistics_html"><div class="ttname"><a href="classstatistics.html">statistics</a></div><div class="ttdoc">A simple container for storing basic statistical values.</div><div class="ttdef"><b>Definition</b> <a href="utilities_8h_source.html#l00045">utilities.h:46</a></div></div>
-<div class="ttc" id="aclassstatistics_html_a0288afba1bf979183eed4fe63c9d6677"><div class="ttname"><a href="classstatistics.html#a0288afba1bf979183eed4fe63c9d6677">statistics::average</a></div><div class="ttdeci">double average</div><div class="ttdoc">The average value of the dataset.</div><div class="ttdef"><b>Definition</b> <a href="utilities_8h_source.html#l00071">utilities.h:71</a></div></div>
-<div class="ttc" id="aclassstatistics_html_a04dec28f738b790becb32245ef23a1d0"><div class="ttname"><a href="classstatistics.html#a04dec28f738b790becb32245ef23a1d0">statistics::max</a></div><div class="ttdeci">double max</div><div class="ttdoc">The maximum value in the dataset.</div><div class="ttdef"><b>Definition</b> <a href="utilities_8h_source.html#l00065">utilities.h:65</a></div></div>
-<div class="ttc" id="aclassstatistics_html_a369777f49617bdece739dc561218ef1d"><div class="ttname"><a href="classstatistics.html#a369777f49617bdece739dc561218ef1d">statistics::min</a></div><div class="ttdeci">double min</div><div class="ttdoc">The minimum value in the dataset.</div><div class="ttdef"><b>Definition</b> <a href="utilities_8h_source.html#l00062">utilities.h:62</a></div></div>
-<div class="ttc" id="aclassstatistics_html_aa329652ce74ac69d02f7e2a2706083f8"><div class="ttname"><a href="classstatistics.html#aa329652ce74ac69d02f7e2a2706083f8">statistics::total</a></div><div class="ttdeci">double total</div><div class="ttdoc">The sum of all values in the dataset.</div><div class="ttdef"><b>Definition</b> <a href="utilities_8h_source.html#l00068">utilities.h:68</a></div></div>
+<div class="ttc" id="aclassstatistics_html"><div class="ttname"><a href="classstatistics.html">statistics</a></div><div class="ttdoc">A simple container for storing basic statistical values.</div><div class="ttdef"><b>Definition</b> <a href="core_2utilities_8h_source.html#l00045">utilities.h:46</a></div></div>
+<div class="ttc" id="aclassstatistics_html_a0288afba1bf979183eed4fe63c9d6677"><div class="ttname"><a href="classstatistics.html#a0288afba1bf979183eed4fe63c9d6677">statistics::average</a></div><div class="ttdeci">double average</div><div class="ttdoc">The average value of the dataset.</div><div class="ttdef"><b>Definition</b> <a href="core_2utilities_8h_source.html#l00071">utilities.h:71</a></div></div>
+<div class="ttc" id="aclassstatistics_html_a04dec28f738b790becb32245ef23a1d0"><div class="ttname"><a href="classstatistics.html#a04dec28f738b790becb32245ef23a1d0">statistics::max</a></div><div class="ttdeci">double max</div><div class="ttdoc">The maximum value in the dataset.</div><div class="ttdef"><b>Definition</b> <a href="core_2utilities_8h_source.html#l00065">utilities.h:65</a></div></div>
+<div class="ttc" id="aclassstatistics_html_a369777f49617bdece739dc561218ef1d"><div class="ttname"><a href="classstatistics.html#a369777f49617bdece739dc561218ef1d">statistics::min</a></div><div class="ttdeci">double min</div><div class="ttdoc">The minimum value in the dataset.</div><div class="ttdef"><b>Definition</b> <a href="core_2utilities_8h_source.html#l00062">utilities.h:62</a></div></div>
+<div class="ttc" id="aclassstatistics_html_aa329652ce74ac69d02f7e2a2706083f8"><div class="ttname"><a href="classstatistics.html#aa329652ce74ac69d02f7e2a2706083f8">statistics::total</a></div><div class="ttdeci">double total</div><div class="ttdoc">The sum of all values in the dataset.</div><div class="ttdef"><b>Definition</b> <a href="core_2utilities_8h_source.html#l00068">utilities.h:68</a></div></div>
 <div class="ttc" id="adem__post__processing_8h_html"><div class="ttname"><a href="dem__post__processing_8h.html">dem_post_processing.h</a></div></div>
-<div class="ttc" id="adem__properties_8h_html"><div class="ttname"><a href="dem__properties_8h.html">dem_properties.h</a></div></div>
-<div class="ttc" id="anamespaceDEM_1_1CFDDEMProperties_html_ae9734b9d29480269e4764c5092d87b2f"><div class="ttname"><a href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2f">DEM::CFDDEMProperties::PropertiesIndex</a></div><div class="ttdeci">PropertiesIndex</div><div class="ttdef"><b>Definition</b> <a href="dem__properties_8h_source.html#l00058">dem_properties.h:59</a></div></div>
-<div class="ttc" id="anamespaceDEM_1_1DEMMPProperties_html_aca0676848b97f3864735e524aac253f8"><div class="ttname"><a href="namespaceDEM_1_1DEMMPProperties.html#aca0676848b97f3864735e524aac253f8">DEM::DEMMPProperties::PropertiesIndex</a></div><div class="ttdeci">PropertiesIndex</div><div class="ttdef"><b>Definition</b> <a href="dem__properties_8h_source.html#l00099">dem_properties.h:100</a></div></div>
-<div class="ttc" id="anamespaceDEM_1_1DEMProperties_html_ad4c9c6eeafe6423a5619617d6c8a5987"><div class="ttname"><a href="namespaceDEM_1_1DEMProperties.html#ad4c9c6eeafe6423a5619617d6c8a5987">DEM::DEMProperties::PropertiesIndex</a></div><div class="ttdeci">PropertiesIndex</div><div class="ttdef"><b>Definition</b> <a href="dem__properties_8h_source.html#l00035">dem_properties.h:36</a></div></div>
-<div class="ttc" id="anamespaceDEM_html"><div class="ttname"><a href="namespaceDEM.html">DEM</a></div><div class="ttdoc">This namespace defines all the data containers and required operations on these containers for the DE...</div><div class="ttdef"><b>Definition</b> <a href="dem__properties_8h_source.html#l00010">dem_properties.h:11</a></div></div>
+<div class="ttc" id="adem__properties_8h_html"><div class="ttname"><a href="dem__properties_8h.html">dem_properties.h</a></div><div class="ttdoc">DEM particle property definitions and output name management.</div></div>
+<div class="ttc" id="anamespaceDEM_1_1CFDDEMProperties_html_ae9734b9d29480269e4764c5092d87b2f"><div class="ttname"><a href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2f">DEM::CFDDEMProperties::PropertiesIndex</a></div><div class="ttdeci">PropertiesIndex</div><div class="ttdoc">Particle property indices for CFD-DEM simulations.</div><div class="ttdef"><b>Definition</b> <a href="dem__properties_8h_source.html#l00089">dem_properties.h:90</a></div></div>
+<div class="ttc" id="anamespaceDEM_1_1DEMMPProperties_html_aca0676848b97f3864735e524aac253f8"><div class="ttname"><a href="namespaceDEM_1_1DEMMPProperties.html#aca0676848b97f3864735e524aac253f8">DEM::DEMMPProperties::PropertiesIndex</a></div><div class="ttdeci">PropertiesIndex</div><div class="ttdoc">Particle property indices for DEM multiphysics simulations.</div><div class="ttdef"><b>Definition</b> <a href="dem__properties_8h_source.html#l00154">dem_properties.h:155</a></div></div>
+<div class="ttc" id="anamespaceDEM_1_1DEMProperties_html_ad4c9c6eeafe6423a5619617d6c8a5987"><div class="ttname"><a href="namespaceDEM_1_1DEMProperties.html#ad4c9c6eeafe6423a5619617d6c8a5987">DEM::DEMProperties::PropertiesIndex</a></div><div class="ttdeci">PropertiesIndex</div><div class="ttdoc">Particle property indices for pure DEM simulations.</div><div class="ttdef"><b>Definition</b> <a href="dem__properties_8h_source.html#l00051">dem_properties.h:52</a></div></div>
+<div class="ttc" id="anamespaceDEM_html"><div class="ttname"><a href="namespaceDEM.html">DEM</a></div><div class="ttdoc">This namespace defines all the data containers and required operations on these containers for the DE...</div><div class="ttdef"><b>Definition</b> <a href="dem__properties_8h_source.html#l00020">dem_properties.h:21</a></div></div>
 <div class="ttc" id="anamespaceDEM_html_a7a8aca4f226de77c7ee7cf037ee2d04f"><div class="ttname"><a href="namespaceDEM.html#a7a8aca4f226de77c7ee7cf037ee2d04f">DEM::calculate_granular_statistics</a></div><div class="ttdeci">statistics calculate_granular_statistics(const Particles::ParticleHandler&lt; dim &gt; &amp;particle_handler, const MPI_Comm &amp;mpi_communicator)</div><div class="ttdoc">Calculate statistics on a DEM ParticleHandler. At the moment, the following statistics are supported:</div><div class="ttdef"><b>Definition</b> <a href="dem__post__processing_8cc_source.html#l00012">dem_post_processing.cc:12</a></div></div>
 <div class="ttc" id="anamespaceDEM_html_af85feac59e2a3e30010cccde5bda5b2ba0c1c97be26e7d13e9c7757f74414040e"><div class="ttname"><a href="namespaceDEM.html#af85feac59e2a3e30010cccde5bda5b2ba0c1c97be26e7d13e9c7757f74414040e">DEM::dem_statistic_variable::rotational_kinetic_energy</a></div><div class="ttdeci">@ rotational_kinetic_energy</div></div>
 <div class="ttc" id="anamespaceDEM_html_af85feac59e2a3e30010cccde5bda5b2baac1a453d0cdc1f19d9479ccfaa8b082c"><div class="ttname"><a href="namespaceDEM.html#af85feac59e2a3e30010cccde5bda5b2baac1a453d0cdc1f19d9479ccfaa8b082c">DEM::dem_statistic_variable::velocity</a></div><div class="ttdeci">@ velocity</div></div>
 <div class="ttc" id="anamespaceDEM_html_af85feac59e2a3e30010cccde5bda5b2bac6d6bd7ebf806f43c76acc3681703b81"><div class="ttname"><a href="namespaceDEM.html#af85feac59e2a3e30010cccde5bda5b2bac6d6bd7ebf806f43c76acc3681703b81">DEM::dem_statistic_variable::omega</a></div><div class="ttdeci">@ omega</div></div>
 <div class="ttc" id="anamespaceDEM_html_af85feac59e2a3e30010cccde5bda5b2baeb81959bf8f42fe1d4bdaec5fd3fdb41"><div class="ttname"><a href="namespaceDEM.html#af85feac59e2a3e30010cccde5bda5b2baeb81959bf8f42fe1d4bdaec5fd3fdb41">DEM::dem_statistic_variable::translational_kinetic_energy</a></div><div class="ttdeci">@ translational_kinetic_energy</div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

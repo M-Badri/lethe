@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -102,11 +106,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a4caaa0b6ff57c488bba9b7d6fd317cc8" id="r_a4caaa0b6ff57c488bba9b7d6fd317cc8"><td class="memTemplParams" colspan="2">template&lt;int dim&gt; </td></tr>
 <tr class="memitem:a4caaa0b6ff57c488bba9b7d6fd317cc8"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceInterfaceTools.html#a4caaa0b6ff57c488bba9b7d6fd317cc8">compute_cell_wise_volume</a> (FEPointEvaluation&lt; 1, dim &gt; &amp;fe_point_evaluation, const typename DoFHandler&lt; dim &gt;::active_cell_iterator &amp;cell, Vector&lt; double &gt; cell_dof_level_set_values, const double corr, const unsigned int n_quad_points)</td></tr>
 <tr class="separator:a4caaa0b6ff57c488bba9b7d6fd317cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ccc3916532b0c8bb3f6908a5d9b23da" id="r_a9ccc3916532b0c8bb3f6908a5d9b23da"><td class="memTemplParams" colspan="2">template&lt;int dim, typename VectorType &gt; </td></tr>
-<tr class="memitem:a9ccc3916532b0c8bb3f6908a5d9b23da"><td class="memTemplItemLeft" align="right" valign="top">std::pair&lt; double, double &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceInterfaceTools.html#a9ccc3916532b0c8bb3f6908a5d9b23da">compute_surface_and_volume</a> (const DoFHandler&lt; dim &gt; &amp;dof_handler, const FiniteElement&lt; dim &gt; &amp;fe, const VectorType &amp;level_set_vector, const double iso_level, const MPI_Comm &amp;mpi_communicator)</td></tr>
+<tr class="memitem:a9ccc3916532b0c8bb3f6908a5d9b23da" id="r_a9ccc3916532b0c8bb3f6908a5d9b23da"><td class="memTemplParams" colspan="2">template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </td></tr>
+<tr class="memitem:a9ccc3916532b0c8bb3f6908a5d9b23da"><td class="memTemplItemLeft" align="right" valign="top">std::pair&lt; double, double &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceInterfaceTools.html#a9ccc3916532b0c8bb3f6908a5d9b23da">compute_surface_and_volume</a> (const DoFHandler&lt; dim &gt; &amp;dof_handler, const FiniteElement&lt; dim &gt; &amp;fe, const <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &amp;level_set_vector, const double iso_level, const MPI_Comm &amp;mpi_communicator)</td></tr>
 <tr class="separator:a9ccc3916532b0c8bb3f6908a5d9b23da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b8f20a8d1cc30650de3b1a02ffe59b7" id="r_a7b8f20a8d1cc30650de3b1a02ffe59b7"><td class="memTemplParams" colspan="2">template&lt;int dim, typename VectorType &gt; </td></tr>
-<tr class="memitem:a7b8f20a8d1cc30650de3b1a02ffe59b7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceInterfaceTools.html#a7b8f20a8d1cc30650de3b1a02ffe59b7">reconstruct_interface</a> (const Mapping&lt; dim &gt; &amp;mapping, const DoFHandler&lt; dim &gt; &amp;dof_handler, const FiniteElement&lt; dim &gt; &amp;fe, const VectorType &amp;level_set_vector, const double iso_level, std::map&lt; types::global_cell_index, std::vector&lt; Point&lt; dim &gt; &gt; &gt; &amp;interface_reconstruction_vertices, std::map&lt; types::global_cell_index, std::vector&lt; CellData&lt; dim - 1 &gt; &gt; &gt; &amp;interface_reconstruction_cells, std::set&lt; types::global_dof_index &gt; &amp;intersected_dofs)</td></tr>
+<tr class="memitem:a7b8f20a8d1cc30650de3b1a02ffe59b7" id="r_a7b8f20a8d1cc30650de3b1a02ffe59b7"><td class="memTemplParams" colspan="2">template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </td></tr>
+<tr class="memitem:a7b8f20a8d1cc30650de3b1a02ffe59b7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceInterfaceTools.html#a7b8f20a8d1cc30650de3b1a02ffe59b7">reconstruct_interface</a> (const Mapping&lt; dim &gt; &amp;mapping, const DoFHandler&lt; dim &gt; &amp;dof_handler, const FiniteElement&lt; dim &gt; &amp;fe, const <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &amp;level_set_vector, const double iso_level, std::map&lt; types::global_cell_index, std::vector&lt; Point&lt; dim &gt; &gt; &gt; &amp;interface_reconstruction_vertices, std::map&lt; types::global_cell_index, std::vector&lt; CellData&lt; dim - 1 &gt; &gt; &gt; &amp;interface_reconstruction_cells, std::set&lt; types::global_dof_index &gt; &amp;intersected_dofs)</td></tr>
 <tr class="separator:a7b8f20a8d1cc30650de3b1a02ffe59b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -187,7 +191,7 @@ template&lt;int dim&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">std::pair&lt; double, double &gt; InterfaceTools::compute_surface_and_volume </td>
@@ -204,7 +208,7 @@ template&lt;int dim, typename VectorType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const VectorType &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &amp;&#160;</td>
           <td class="paramname"><em>level_set_vector</em>, </td>
         </tr>
         <tr>
@@ -257,7 +261,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void InterfaceTools::reconstruct_interface </td>
@@ -280,7 +284,7 @@ template&lt;int dim, typename VectorType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const VectorType &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &amp;&#160;</td>
           <td class="paramname"><em>level_set_vector</em>, </td>
         </tr>
         <tr>
@@ -342,9 +346,37 @@ template&lt;int dim, typename VectorType &gt; </div>
 </div>
 </div>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

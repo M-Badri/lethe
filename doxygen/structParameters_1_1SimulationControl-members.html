@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -91,17 +95,19 @@ $(function() {
 
 <p>This is the complete list of members for <a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a86c747f4f9b8e122c8c110f3dd5d813c">adapt</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a1c26877cf190cb29f0bf9b126673a045">adaptative_time_step_scaling</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a9ba4585544ce364b96a199186f054aa1">bdf_startup_method</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a5fef9c9888f530e256aed538f319fd23">BDFStartupMethods</a> enum name</td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a64fb4a396452f658c0d776b0dea16bdf">declare_parameters</a>(ParameterHandler &amp;prm)</td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#aee77fceed7309c7410747735c9385e6a">dt</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a6af3fe0ec3086f2404b1ab55f018b9ea">group_files</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#abe06361f4d4ffe5aa7dc81083ece3503">lagrangian_method</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a92fbafe5fc1c4414cafc6570517197e5">LagrangianTimeSteppingMethod</a> enum name</td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a0772ad89f3968586ee877830b71f8707">log_frequency</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#ac8b3c1563edebd42cfc38cd231a7036e">log_precision</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#ad1b2cb6dcac5695d1ad8af87af1c3254">adapt_with_capillary_time_step_ratio</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a573a742bc67af2f976dc1ac5bc8752ed">adapt_with_cfl</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a1c26877cf190cb29f0bf9b126673a045">adaptative_time_step_scaling</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a9ba4585544ce364b96a199186f054aa1">bdf_startup_method</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a5fef9c9888f530e256aed538f319fd23">BDFStartupMethods</a> enum name</td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a64fb4a396452f658c0d776b0dea16bdf">declare_parameters</a>(ParameterHandler &amp;prm)</td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#aee77fceed7309c7410747735c9385e6a">dt</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a6af3fe0ec3086f2404b1ab55f018b9ea">group_files</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#abe06361f4d4ffe5aa7dc81083ece3503">lagrangian_method</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a92fbafe5fc1c4414cafc6570517197e5">LagrangianTimeSteppingMethod</a> enum name</td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a0772ad89f3968586ee877830b71f8707">log_frequency</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#ac8b3c1563edebd42cfc38cd231a7036e">log_precision</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#acae2359e5ff92c6bcb7f532f55017da2">max_capillary_time_step_ratio</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a1141905465b700d2b552ab1a2193c614">max_dt</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a7d9ae67c474300b1392a08bffb2978ac">maxCFL</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#ad23d34e8d2c08389bf746b2704a475d5">method</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
@@ -121,12 +127,41 @@ $(function() {
   <tr class="odd"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#ae10795e844109dd8c2cad075efd8086e">stop_tolerance</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a04eadddfd611183e1765c1d0cdeb7443">subdivision</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#abe91b8cd94d711f56086ec2323dd8e5c">time_end</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a69859daac8c78a60d8e1fd5b4421c244">time_step_independent_of_end_time</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a86daf86652a712eb783c105c953eb7f8">TimeSteppingMethod</a> enum name</td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a3e260017b98e7a273e64ead5e5d7626c">time_step_adaptation_required</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a69859daac8c78a60d8e1fd5b4421c244">time_step_independent_of_end_time</a></td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html#a86daf86652a712eb783c105c953eb7f8">TimeSteppingMethod</a> enum name</td><td class="entry"><a class="el" href="structParameters_1_1SimulationControl.html">Parameters::SimulationControl</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

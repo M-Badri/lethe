@@ -7,7 +7,8 @@ The mortar section is used when simulating rotor-stator geometries, in which the
 .. code-block:: text
 
   subsection mortar
-    set enable = true
+    set enable          = true
+    set interface type  = circular 
     subsection mesh
       set type                   = dealii
       set grid type              = subdivided_hyper_rectangle
@@ -26,8 +27,15 @@ The mortar section is used when simulating rotor-stator geometries, in which the
     end
     set penalty factor      = 1.0
     set oversampling factor = 2
-    set verbosity           = verbose
+    set radius tolerance    = 1e-8
+    set cell weight         = 1000
+    set verbosity           = quiet
   end
+
+* The available options for the mortar ``interface type`` are ``circular`` and ``linear``.
+
+.. warning::
+  The ``linear`` interface type supports only two-dimensional problems. It assumes that the domain is rectangular, and that the mortar interface is parallel to the y axis.
 
 * The mesh parameters in the :doc:`../cfd/mesh` subsection refer to the stator domain. The ``mesh`` subsection herein mentioned contains the parameters of the rotor domain; nonetheless, the input format is the same as in :doc:`../cfd/mesh`.
 
@@ -55,7 +63,32 @@ The mortar section is used when simulating rotor-stator geometries, in which the
 
 * The ``oversampling factor`` is used to increase the number of quadrature points. This feature is used to better approximate the weak imposition of the interface coupling.
 
-* When enabling ``verbosity`` (``set verbosity = verbose``), the rotor rotation information is printed at every iteration.
+* When computing the rotor-stator interface radius, the radial distance of every node at both rotor and stator boundaries to the ``center of rotation`` is computed, and the following check is performed:
+
+.. math::
+   |r_{max} - r_{min}| < tol
+
+where :math:`r_{max}`, :math:`r_{min}` are the maximum and minimum values obtained, respectively, and  :math:`tol` is the prescribed ``radius tolerance`` parameter.
+
+.. note::
+  The default value for ``radius tolerance`` is :math:`10^{-8}`, which should cover the precision range of deal.II-generated grids. The tolerance might need to be increased for some ``gmsh`` mesh type cases or for large simulations running in multiple cores, when the above verification fails even if the mesh discretization is coherent.
+
+* The ``cell weight`` allows the imposition of a higher cell weight for the cells located at the mortar interface, which is then accounted for in the workload balancing between processors. The default value of ``1000`` assumes that mortar cells have the same weight as other cells.
+
+* When enabling ``verbosity`` (``set verbosity = verbose``), the rotor rotation information is printed at every iteration. The option ``extra verbose`` also prints the workload imbalance of mortar cells. We consider that an ideal work imbalance is given by:
+
+.. math::
+  \text{ideal} = \dfrac{\sum_i^{n_{proc}} cells_{(i)}}{n_{proc}}
+
+where :math:`n_{proc}` is the total number of processes and :math:`cells_{(i)}` is the number of cells at each process :math:`i`. The actual workload imbalance is given by the ratio between the maximum number of cells in a processor, :math:`cells_{(max)}`, and the ideal workload:
+
+.. math::
+  \text{workload} = \dfrac{cells_{(max)}}{\text{ideal}}
+
+Ideally, this parallel distribution imbalance is equal to 1; values greater than 1 indicate a slowdown compared to a perfectly distributed scenario in which all processes would contain the same number of mortar cells.
+
+.. seealso::
+  The workload imbalance computation used here follows the same idea as the deal.II ``workload_imbalance()`` function used in the `geometric multigrid setup <https://dealii.org/current/doxygen/deal.II/namespaceMGTools.html>`_, enabled in the :doc:`../cfd/linear_solver_control` when ``set preconditioner = gcmg`` and ``set mg verbosity = extra verbose``.
 
 Reference
 ---------

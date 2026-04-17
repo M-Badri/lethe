@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -93,12 +97,7 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for LevelsetGradientPostprocessor&lt; dim &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="classLevelsetGradientPostprocessor__inherit__graph.png" border="0" usemap="#aLevelsetGradientPostprocessor_3_01dim_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="aLevelsetGradientPostprocessor_3_01dim_01_4_inherit__map" id="aLevelsetGradientPostprocessor_3_01dim_01_4_inherit__map">
-<area shape="rect" title="Compute a level set gradient vector field for a given shape within a domain." alt="" coords="5,93,229,133"/>
-<area shape="rect" title=" " alt="" coords="25,5,210,45"/>
-<area shape="poly" title=" " alt="" coords="120,59,120,93,115,93,115,59"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classLevelsetGradientPostprocessor__inherit__graph.svg" width="235" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -117,7 +116,7 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int dim&gt;<br />
 class LevelsetGradientPostprocessor&lt; dim &gt;</div><p>Compute a level set gradient vector field for a given shape within a domain. </p>
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00616">616</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00668">668</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2e8d85276c660a5b587080973d95286a" name="a2e8d85276c660a5b587080973d95286a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2e8d85276c660a5b587080973d95286a">&#9670;&#160;</a></span>LevelsetGradientPostprocessor()</h2>
@@ -153,7 +152,7 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00624">624</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00676">676</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
 </div>
 </div>
@@ -204,9 +203,9 @@ template&lt;int dim&gt; </div>
 </dl>
 <dl class="section note"><dt>Note</dt><dd><code>input_data</code> contains both velocity and pressure data since fluid dynamics in Lethe is solved in a monolithic way, but here only the positions of evaluation points are used. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00644">644</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00696">696</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
-<p class="reference">References <a class="el" href="postprocessors_8h_source.html#l00666">LevelsetGradientPostprocessor&lt; dim &gt;::shape</a>.</p>
+<p class="reference">References <a class="el" href="postprocessors_8h_source.html#l00718">LevelsetGradientPostprocessor&lt; dim &gt;::shape</a>.</p>
 
 </div>
 </div>
@@ -235,7 +234,7 @@ template&lt;int dim&gt; </div>
 
 <p>Geometrical entity. </p>
 
-<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00666">666</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="postprocessors_8h_source.html#l00718">718</a> of file <a class="el" href="postprocessors_8h_source.html">postprocessors.h</a>.</p>
 
 </div>
 </div>
@@ -243,9 +242,37 @@ template&lt;int dim&gt; </div>
 <li>/home/runner/work/lethe/lethe/include/solvers/<a class="el" href="postprocessors_8h_source.html">postprocessors.h</a></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

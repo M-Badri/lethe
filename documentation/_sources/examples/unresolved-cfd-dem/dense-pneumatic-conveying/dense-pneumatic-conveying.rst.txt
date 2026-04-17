@@ -70,13 +70,13 @@ In this section we introduce the different sections of the parameter file ``load
 Mesh
 ----
 
-In this example, we simulate the transport of particles in a 1 m wide long 0.084 m diameter pipe. The conveying is processed in the x-direction through periodic boundary conditions. We use the `custom cylinder <../../../parameters/cfd/mesh.html>`_ of type balanced, which is prefered over the regular deal.II option for having an uniform cell size distribution in the radial direction. Cells' size are approximately 2 times the diameter of the particles in both longitudinal and radial directions.
+In this example, we simulate the transport of particles in a 1 m wide long 0.084 m diameter pipe. The conveying is processed in the x-direction through periodic boundary conditions. We use the lethe custom `cylinder_balanced <../../../parameters/cfd/mesh.html>`_ , which is prefered over the regular deal.II option for having an uniform cell size distribution in the radial direction. Cells' size are approximately 2 times the diameter of the particles in both longitudinal and radial directions.
 
 .. code-block:: text
 
    subsection mesh
-     set type                                = cylinder
-     set grid type                           = balanced
+     set type                                = lethe
+     set grid type                           = cylinder_balanced
      set grid arguments                      = 45 : 0.042 : 0.5
      set initial refinement                  = 1
      set expand particle-wall contact search = true
@@ -181,30 +181,14 @@ We use floating walls to avoid particles passing through the periodic boundary c
    subsection floating walls
    set number of floating walls = 2
    subsection wall 0
-     subsection point on wall
-       set x = -0.5
-       set y = 0
-       set z = 0
-     end
-     subsection normal vector
-       set nx = 1
-       set ny = 0
-       set nz = 0
-     end
+     set point on wall = -0.5, 0., 0.
+     set normal vector = 1., 0., 0.
      set start time = 0
      set end time   = 30
    end
    subsection wall 1
-     subsection point on wall
-       set x = 0.5
-       set y = 0
-       set z = 0
-     end
-     subsection normal vector
-       set nx = -1
-       set ny = 0
-       set nz = 0
-     end
+     set point on wall = 0.5, 0., 0.
+     set normal vector = 1., 0., 0.
      set start time = 0
      set end time   = 30
    end

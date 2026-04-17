@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -93,7 +97,7 @@ $(document).ready(function() { init_codefold(0); });
   <div class="headertitle"><div class="title">tracer_assemblers.cc</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="tracer__assemblers_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// SPDX-FileCopyrightText: Copyright (c) 2021-2024 The Lethe Authors</span></div>
+<a href="tracer__assemblers_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// SPDX-FileCopyrightText: Copyright (c) 2021-2024, 2026 The Lethe Authors</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;<a class="code" href="bdf_8h.html">core/bdf.h</a>&gt;</span></div>
@@ -184,7 +188,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>      <span class="comment">// Calculation of the GLS stabilization parameter. The</span></div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>      <span class="comment">// stabilization parameter used is different if the simulation is</span></div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      <span class="comment">// steady or unsteady. In the unsteady case it includes the value</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      <span class="comment">// of the time-step</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      <span class="comment">// of the time step</span></div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> tau =</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <a class="code hl_function" href="time__integration__utilities_8h.html#a2070dbfdd25ef92b18165612d533e92d">is_steady</a>(method) ?</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>          1. / std::sqrt(std::pow(2. * u_mag / h, 2) +</div>
@@ -305,7 +309,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>      <span class="comment">// Calculation of the GLS stabilization parameter. The</span></div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>      <span class="comment">// stabilization parameter used is different if the simulation is</span></div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>      <span class="comment">// steady or unsteady. In the unsteady case it includes the value</span></div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>      <span class="comment">// of the time-step</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>      <span class="comment">// of the time step</span></div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> tau =</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        <a class="code hl_function" href="time__integration__utilities_8h.html#a2070dbfdd25ef92b18165612d533e92d">is_steady</a>(method) ?</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>          1. / std::sqrt(std::pow(2. * u_mag / h, 2) +</div>
@@ -992,7 +996,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassTracerScratchData_html_ae811eb4b6aa8e59688312d007adaa79a"><div class="ttname"><a href="classTracerScratchData.html#ae811eb4b6aa8e59688312d007adaa79a">TracerScratchData::fe_values_tracer</a></div><div class="ttdeci">FEValues&lt; dim &gt; fe_values_tracer</div><div class="ttdef"><b>Definition</b> <a href="tracer__scratch__data_8h_source.html#l00535">tracer_scratch_data.h:535</a></div></div>
 <div class="ttc" id="acopy__data_8h_html"><div class="ttname"><a href="copy__data_8h.html">copy_data.h</a></div></div>
 <div class="ttc" id="amultiphysics_8h_html_a2cbb04ef215561a69b48772159577fddaac1a453d0cdc1f19d9479ccfaa8b082c"><div class="ttname"><a href="multiphysics_8h.html#a2cbb04ef215561a69b48772159577fddaac1a453d0cdc1f19d9479ccfaa8b082c">Variable::velocity</a></div><div class="ttdeci">@ velocity</div><div class="ttdoc">Velocity vector field from fluid dynamics.</div></div>
-<div class="ttc" id="amultiphysics_8h_html_ae14bb720bc9a37edc36fb8d90df712c2a50955dac125ab3c822a8f3bb4f6fcaef"><div class="ttname"><a href="multiphysics_8h.html#ae14bb720bc9a37edc36fb8d90df712c2a50955dac125ab3c822a8f3bb4f6fcaef">tracer</a></div><div class="ttdeci">@ tracer</div><div class="ttdef"><b>Definition</b> <a href="multiphysics_8h_source.html#l00011">multiphysics.h:11</a></div></div>
+<div class="ttc" id="amultiphysics_8h_html_ae14bb720bc9a37edc36fb8d90df712c2a50955dac125ab3c822a8f3bb4f6fcaef"><div class="ttname"><a href="multiphysics_8h.html#ae14bb720bc9a37edc36fb8d90df712c2a50955dac125ab3c822a8f3bb4f6fcaef">tracer</a></div><div class="ttdeci">@ tracer</div><div class="ttdoc">Passive scalar tracer (Tracer)</div><div class="ttdef"><b>Definition</b> <a href="multiphysics_8h_source.html#l00030">multiphysics.h:30</a></div></div>
 <div class="ttc" id="anamespaceBoundaryConditions_html_a07df76d63cde5cb5bcbea0d9c25a54b8a526a99532e70736e1153dec9f45ff924"><div class="ttname"><a href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8a526a99532e70736e1153dec9f45ff924">BoundaryConditions::BoundaryType::periodic_neighbor</a></div><div class="ttdeci">@ periodic_neighbor</div></div>
 <div class="ttc" id="anamespaceBoundaryConditions_html_a07df76d63cde5cb5bcbea0d9c25a54b8a73b05af1b2487b24f8027cf106e0651f"><div class="ttname"><a href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8a73b05af1b2487b24f8027cf106e0651f">BoundaryConditions::BoundaryType::tracer_dirichlet</a></div><div class="ttdeci">@ tracer_dirichlet</div></div>
 <div class="ttc" id="anamespaceBoundaryConditions_html_a07df76d63cde5cb5bcbea0d9c25a54b8ab0ba1623558e169131cb513037504286"><div class="ttname"><a href="namespaceBoundaryConditions.html#a07df76d63cde5cb5bcbea0d9c25a54b8ab0ba1623558e169131cb513037504286">BoundaryConditions::BoundaryType::outlet</a></div><div class="ttdeci">@ outlet</div></div>
@@ -1001,9 +1005,37 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="atime__integration__utilities_8h_html_a2070dbfdd25ef92b18165612d533e92d"><div class="ttname"><a href="time__integration__utilities_8h.html#a2070dbfdd25ef92b18165612d533e92d">is_steady</a></div><div class="ttdeci">bool is_steady(const Parameters::SimulationControl::TimeSteppingMethod method)</div><div class="ttdoc">Determines if the time integration method is a steady-state method.</div><div class="ttdef"><b>Definition</b> <a href="time__integration__utilities_8h_source.html#l00015">time_integration_utilities.h:15</a></div></div>
 <div class="ttc" id="atracer__assemblers_8h_html"><div class="ttname"><a href="tracer__assemblers_8h.html">tracer_assemblers.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="Gas-Solid Fluidized Bed" href="../gas-solid-fluidized-bed/gas-solid-fluidized-bed.html" /><link rel="prev" title="Single Particle Sedimentation" href="../single-particle-sedimentation/single-particle-sedimentation.html" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="Gas-Solid Fluidized Cylinder Bed" href="../gas-solid-fluidized-cylinder-bed/gas-solid-fluidized-cylinder-bed.html" /><link rel="prev" title="Single Particle Sedimentation" href="../single-particle-sedimentation/single-particle-sedimentation.html" />
 
     <link rel="shortcut icon" href="../../../_static/lethe_favicon.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>Cylindrical Packed Bed - Lethe documentation</title>
@@ -176,6 +176,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/boundary_conditions_multiphysics.html">Boundary Conditions - Multiphysics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/box_refinement.html">Box Refinement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/cahn_hilliard.html">Cahn-Hilliard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/conservative_level_set.html">Conservative Level-Set (Multiphase Flow)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/constrain_stasis.html">Constrain Stasis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/dimensionality.html">Dimensionality</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/dynamic_flow_control.html">Dynamic Flow Control</a></li>
@@ -200,7 +201,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/timer.html">Timer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/tracer_drift_velocity.html">Tracer Drift Velocity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/velocity_source.html">Velocity Source</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/volume_of_fluid.html">Volume of Fluid (Multiphase Flow)</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../parameters/dem/dem.html">Discrete Element Method (DEM)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Discrete Element Method (DEM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -238,6 +238,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-naca0012-low-reynolds/2d-naca0012-low-reynolds.html">Flow around NACA0012 at Low Reynolds Number</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">Taylor-Couette Flow Using Nitsche Immersed Boundary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-sudden-expansion-flow/2d-sudden-expansion-flow.html">Sudden-Expansion Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-paddle-mixer-mortar/2d-paddle-mixer-mortar.html">Paddle Mixer Using the Mortar Method</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">Flow around a Sphere</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/3d-taylor-green-vortex/3d-taylor-green-vortex.html">Taylor-Green Vortex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/3d-turbulent-taylor-couette/3d-turbulent-taylor-couette.html">Turbulent Taylor-Couette Flow</a></li>
@@ -248,7 +249,7 @@
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../multiphysics/multiphysics.html">Multiphysics</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Multiphysics</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../multiphysics/vof.html">VOF</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of VOF</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../multiphysics/cls.html">CLS</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of CLS</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../multiphysics/dam-break/dam-break.html">Dam-Break</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../multiphysics/rayleigh-taylor-instability/rayleigh-taylor-instability.html">Rayleigh-Taylor Instability</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../multiphysics/static-bubble/static-bubble.html">Static Bubble</a></li>
@@ -310,7 +311,7 @@
 <li class="toctree-l2 current has-children"><a class="reference internal" href="../unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../single-particle-sedimentation/single-particle-sedimentation.html">Single Particle Sedimentation</a></li>
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Cylindrical Packed Bed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../gas-solid-fluidized-bed/gas-solid-fluidized-bed.html">Gas-Solid Fluidized Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gas-solid-fluidized-cylinder-bed/gas-solid-fluidized-cylinder-bed.html">Gas-Solid Fluidized Cylinder Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../pseudo-2d-gas-solid-fluidized-bed/pseudo-2d-gas-solid-fluidized-bed.html">Pseudo-2D Gas-Solid Fluidized Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../gas-solid-spouted-rectangular-bed/gas-solid-spouted-rectangular-bed.html">Gas-Solid Spouted Rectangular Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../liquid-solid-fluidized-bed/liquid-solid-fluidized-bed.html">Liquid-Solid Fluidized Bed</a></li>
@@ -375,7 +376,7 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../theory/multiphase/multiphase.html">Multiphase</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle navigation of Multiphase</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../../theory/multiphase/cfd/cfd.html">Fluid-Fluid Flows - Interface Capturing Models</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle navigation of Fluid-Fluid Flows - Interface Capturing Models</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphase/cfd/vof.html">The Volume of Fluid (VOF) Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphase/cfd/cls.html">The Conservative Level-Set (CLS) Method</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../theory/multiphase/cfd/cahn-hilliard.html">Cahn-Hilliard Method</a></li>
 </ul>
 </li>
@@ -570,16 +571,8 @@ end
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection floating walls
   set number of floating walls = 1
   subsection wall 0
-    subsection point on wall
-      set x = -0.01
-      set y = 0
-      set z = 0
-    end
-    subsection normal vector
-      set nx = 1
-      set ny = 0
-      set nz = 0
-    end
+    set point on wall = -0.01, 0., 0.
+    set normal vector = 1., 0., 0.
     set start time = 0
     set end time   = 2
   end
@@ -752,9 +745,30 @@ end
 </section>
 <section id="results-vans">
 <h2>Results VANS<a class="headerlink" href="#results-vans" title="Link to this heading">#</a></h2>
-<p>The results are shown in the plots below. The first plot visualises the velocity of the fluid and the void fraction along the center axis of the cylinder. We see that the fluid rapidly accelerates in as the void fraction decreases to ensure mass conservation. The second plot displays the pressure drop resulting from the particle-fluid interactions. The quasi totality of the pressure drop occurs within the bed of particles.</p>
+<p>The results are shown in the plots below. The first plot visualizes the velocity of the fluid and the void fraction along the axis of the cylinder. As expected, within the particle bed, the fluid velocity rises sharply while the void fraction decreases, reflecting mass conservation.</p>
+<p>The second plot displays the pressure drop resulting from particle-fluid interactions. It can be seen that the quasi-totality of the pressure drop occurs within the bed of particles. The dashed horizontal line corresponds to the pressure drop obtained from the Ergun correlation <a class="footnote-reference brackets" href="#ergun1952" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>:</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Delta P = \left( \frac{150 (1-\varepsilon)^2 \mu U}{d_p^2 \varepsilon^3} + \frac{1.75 (1-\varepsilon) \rho U^2}{d_p \varepsilon^3} \right) H_{\rm bed}\]</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(\varepsilon\)</span> is the porosity of the packed bed, <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(\rho\)</span> are the dynamic viscosity and density of the fluid respectively, <span class="math notranslate nohighlight">\(U\)</span> is the superficial velocity, <span class="math notranslate nohighlight">\(d_p\)</span> is the particle diameter and <span class="math notranslate nohighlight">\(H_{\rm bed}\)</span> is the height of the packed bed.To evaluate this correlation, we first determine the bed height by identifying the position of the highest particle in the bed at the last time step of the DEM simulation. The mean bed porosity is then calculated as:</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\varepsilon = 1 - \frac{V_{\rm p}}{V_{\rm bed}}\]</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(V_{\rm p}\)</span> is the total volume of particles in the bed and <span class="math notranslate nohighlight">\(V_{\rm bed} = H_{\rm bed}\cdot \pi (d_c/2)^2\)</span> is the total volume of the packed bed, <span class="math notranslate nohighlight">\(d_{\rm c}\)</span> being the column diameter.</p>
+<p>The Ergun correlation provides a reasonable estimate of the expected order of magnitude. In this case, it predicts a pressure drop of approximately <span class="math notranslate nohighlight">\(54\)</span> Pa, which is comparable to the numerical result (<span class="math notranslate nohighlight">\(45\)</span> Pa).</p>
 <img alt="velocity and void fraction distribution" class="align-center" src="../../../_images/velocity_void_fraction.png" />
 <img alt="pressure drop in packed bed" class="align-center" src="../../../_images/pressure_drop_void_fraction.png" />
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="ergun1952" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>S. Ergun, “Fluid flow through packed columns,” <em>Chemical Engineering Progress</em>, vol. 48, no. 2, pp. 89, 1952.</p>
+</aside>
+</aside>
 </section>
 </section>
 
@@ -763,12 +777,12 @@ end
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../gas-solid-fluidized-bed/gas-solid-fluidized-bed.html">
+          <a class="next-page" href="../gas-solid-fluidized-cylinder-bed/gas-solid-fluidized-cylinder-bed.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Gas-Solid Fluidized Bed</div>
+                <div class="title">Gas-Solid Fluidized Cylinder Bed</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -842,6 +856,7 @@ end
 </li>
 <li><a class="reference internal" href="#running-the-vans-simulation">Running the VANS Simulation</a></li>
 <li><a class="reference internal" href="#results-vans">Results VANS</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
 </ul>
 </li>
 </ul>

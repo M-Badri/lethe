@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -89,18 +93,20 @@ $(function() {
 <li>ib_force_output_file&#160;:&#160;<a class="el" href="classParameters_1_1IBParticles.html#a40828a7ce42f7b907df60ce3d6ff14f6">Parameters::IBParticles&lt; dim &gt;</a></li>
 <li>ib_particles_pvd_file&#160;:&#160;<a class="el" href="classParameters_1_1IBParticles.html#ac8e429daf452b1b9ab9383a9b1c5d757">Parameters::IBParticles&lt; dim &gt;</a></li>
 <li>ib_particles_pvdhandler&#160;:&#160;<a class="el" href="classFluidDynamicsSharp.html#ac913f5c633e4816448a5e5b173b87bec">FluidDynamicsSharp&lt; dim &gt;</a></li>
-<li>ib_velocity()&#160;:&#160;<a class="el" href="classIBStencil.html#a8964a6702b2e5e9bcf6b15a979f20b93">IBStencil&lt; dim &gt;</a></li>
+<li>ib_particles_pvdhandler_force_chains&#160;:&#160;<a class="el" href="classFluidDynamicsSharp.html#a627884d2c7e638dabe683020b1b0d69a">FluidDynamicsSharp&lt; dim &gt;</a></li>
+<li>ib_velocity()&#160;:&#160;<a class="el" href="classIBStencil.html#aede5a0adadb55c7342aa8c7fb171aaa1">IBStencil&lt; dim &gt;</a></li>
 <li>id&#160;:&#160;<a class="el" href="classParameters_1_1Manifolds.html#aad5dff23944c7397f36556c781992e05">Parameters::Manifolds</a>, <a class="el" href="classSerialSolid.html#a108709db5f2eca7699fc3b51d60f0f70">SerialSolid&lt; dim, spacedim &gt;</a></li>
 <li>identify_cell_and_constrain_velocity()&#160;:&#160;<a class="el" href="classNavierStokesBase.html#ae7e650e71ee42e4afc19a6c3de676d47">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a></li>
 <li>identify_mobility_status()&#160;:&#160;<a class="el" href="classAdaptiveSparseContacts.html#a87a6ec374e003a88ec304fcfac8e919b">AdaptiveSparseContacts&lt; dim, PropertiesIndex &gt;</a></li>
 <li>ilu_precond_atol&#160;:&#160;<a class="el" href="structParameters_1_1LinearSolver.html#aca9ca8ba0eff28b3fffe294e2a4fa988">Parameters::LinearSolver</a></li>
 <li>ilu_precond_fill&#160;:&#160;<a class="el" href="structParameters_1_1LinearSolver.html#a2c51c8600f38d5b0bd830fa4b821b255">Parameters::LinearSolver</a></li>
 <li>ilu_precond_rtol&#160;:&#160;<a class="el" href="structParameters_1_1LinearSolver.html#a326fac8659bb8a3bd1bc8d1fac7c2e49">Parameters::LinearSolver</a></li>
-<li>ilu_preconditioner&#160;:&#160;<a class="el" href="classFluidDynamicsMatrixBased.html#a68db5de569e66c2398005fc0285975a7">FluidDynamicsMatrixBased&lt; dim &gt;</a>, <a class="el" href="classFluidDynamicsMatrixFree.html#ac9e72b6f67d48a22483f89f87a22c28e">FluidDynamicsMatrixFree&lt; dim &gt;</a>, <a class="el" href="classParticleProjector.html#a1be3d52454af44860d3cc5b3f0268216">ParticleProjector&lt; dim &gt;</a>, <a class="el" href="classVOFLinearSubequationsSolver.html#a50d22aa27afbe4aaaa6c73dbcb35990f">VOFLinearSubequationsSolver&lt; dim &gt;</a>, <a class="el" href="classVolumeOfFluid.html#ae4c273d849912a235896ab89290b3a40">VolumeOfFluid&lt; dim &gt;</a></li>
+<li>ilu_preconditioner&#160;:&#160;<a class="el" href="classCLSLinearSubequationsSolver.html#a3d38178f734f03eba051159d730809b6">CLSLinearSubequationsSolver&lt; dim &gt;</a>, <a class="el" href="classConservativeLevelSet.html#aeb734983e9ad2ba9b58fb61c8d867b97">ConservativeLevelSet&lt; dim &gt;</a>, <a class="el" href="classFluidDynamicsMatrixBased.html#a68db5de569e66c2398005fc0285975a7">FluidDynamicsMatrixBased&lt; dim &gt;</a>, <a class="el" href="classFluidDynamicsMatrixFree.html#ac9e72b6f67d48a22483f89f87a22c28e">FluidDynamicsMatrixFree&lt; dim &gt;</a>, <a class="el" href="classParticleFieldQCM.html#aaf6464074dffae560a1e24123cbf057e">ParticleFieldQCM&lt; dim, n_components, property_start_index &gt;</a>, <a class="el" href="classParticleProjector.html#a1be3d52454af44860d3cc5b3f0268216">ParticleProjector&lt; dim &gt;</a></li>
 <li>immersed_solid_gaussian_parameters&#160;:&#160;<a class="el" href="classParameters_1_1Material.html#a42d2dc1d1d1c8b5a69b7bfa380564d2b">Parameters::Material</a></li>
 <li>immersed_solid_shape&#160;:&#160;<a class="el" href="classMultiphysicsInterface.html#ae4661fa66dae071e667ec73a2406cd0a">MultiphysicsInterface&lt; dim &gt;</a></li>
 <li>immersed_solid_tanh_parameters&#160;:&#160;<a class="el" href="classParameters_1_1Material.html#a7412ca075eb12d74a8db7c04feea3f51">Parameters::Material</a></li>
 <li>implicit_stabilization&#160;:&#160;<a class="el" href="structParameters_1_1CFDDEM.html#acd1a358b0ccac0ef0bc4167d9698910b">Parameters::CFDDEM</a></li>
+<li>imposed_electromagnetic_fields&#160;:&#160;<a class="el" href="classBoundaryConditions_1_1TimeHarmonicMaxwellBoundaryConditions.html#ab6f2f80a569a92881ec1cc3aa4fd71ed">BoundaryConditions::TimeHarmonicMaxwellBoundaryConditions&lt; dim &gt;</a></li>
 <li>impulsion&#160;:&#160;<a class="el" href="classIBParticle.html#a982aa8afc19a6196c3b3391f1551f669">IBParticle&lt; dim &gt;</a></li>
 <li>impulsion_iter&#160;:&#160;<a class="el" href="classIBParticle.html#adf8301c20e687e124d5ec8fbe2e65637">IBParticle&lt; dim &gt;</a></li>
 <li>in_removal_box&#160;:&#160;<a class="el" href="classInsertion.html#a68ead0805baa5479db78dfe10d12e6e8">Insertion&lt; dim, PropertiesIndex &gt;</a></li>
@@ -115,7 +121,7 @@ $(function() {
 <li>initial_number_of_particles&#160;:&#160;<a class="el" href="classSolidBase.html#af52a1e31f6993b4b03d03c6888a3c55d">SolidBase&lt; dim, spacedim &gt;</a></li>
 <li>initial_omega&#160;:&#160;<a class="el" href="classParameters_1_1Lagrangian_1_1InsertionInfo.html#ab4c54f302580af7bc8ca0744ff66d8f0">Parameters::Lagrangian::InsertionInfo&lt; dim &gt;</a></li>
 <li>initial_preconditioner_fill_level&#160;:&#160;<a class="el" href="classFluidDynamicsMatrixBased.html#a9e508dc9afaf1eccb37c606b7197b8ca">FluidDynamicsMatrixBased&lt; dim &gt;</a></li>
-<li>initial_refinement&#160;:&#160;<a class="el" href="classParameters_1_1IBParticles.html#a9bb4006565e81ea19ec7f88946247f2f">Parameters::IBParticles&lt; dim &gt;</a>, <a class="el" href="structParameters_1_1Mesh.html#a69eb54011736d460a431639ed9c55ab5">Parameters::Mesh</a>, <a class="el" href="structParameters_1_1MeshAdaptation.html#aad17693a02b907d94ce16a1ba1808a78">Parameters::MeshAdaptation</a>, <a class="el" href="structParameters_1_1MeshBoxRefinement.html#a94c7daba4d7e6becb3ffae086253c700">Parameters::MeshBoxRefinement</a></li>
+<li>initial_refinement&#160;:&#160;<a class="el" href="classParameters_1_1IBParticles.html#a9bb4006565e81ea19ec7f88946247f2f">Parameters::IBParticles&lt; dim &gt;</a>, <a class="el" href="structParameters_1_1Mesh.html#a69eb54011736d460a431639ed9c55ab5">Parameters::Mesh</a>, <a class="el" href="structParameters_1_1MeshAdaptation.html#aad17693a02b907d94ce16a1ba1808a78">Parameters::MeshAdaptation</a></li>
 <li>initial_refinement_at_boundaries&#160;:&#160;<a class="el" href="structParameters_1_1Mesh.html#adc6bf5c3fb5f59c2f1bae7c6e01cbe34">Parameters::Mesh</a></li>
 <li>initial_setup()&#160;:&#160;<a class="el" href="classSerialSolid.html#a638e083c3505ef7729194357add903a7">SerialSolid&lt; dim, spacedim &gt;</a>, <a class="el" href="classSolidBase.html#a92aea3e357d30cf2cb021cac7c3a8ffa">SolidBase&lt; dim, spacedim &gt;</a></li>
 <li>initial_temperature_function&#160;:&#160;<a class="el" href="classParameters_1_1Lagrangian_1_1InsertionInfo.html#a2caeb7dbc02c840672be363d5fed7c55">Parameters::Lagrangian::InsertionInfo&lt; dim &gt;</a></li>
@@ -124,23 +130,25 @@ $(function() {
 <li>initial_time_step&#160;:&#160;<a class="el" href="classSimulationControl.html#a3e05bb11139f31bf28cbce8a3a435cf6">SimulationControl</a></li>
 <li>initial_vel&#160;:&#160;<a class="el" href="classParameters_1_1Lagrangian_1_1InsertionInfo.html#ac81cd3315761db3ac5878325254dca1b">Parameters::Lagrangian::InsertionInfo&lt; dim &gt;</a></li>
 <li>InitialConditions()&#160;:&#160;<a class="el" href="classParameters_1_1InitialConditions.html#ae3b50407178541902f1c59a089c9322e">Parameters::InitialConditions&lt; dim &gt;</a></li>
-<li>initialize()&#160;:&#160;<a class="el" href="classdealii_1_1MGCoarseGridApplyPreconditioner.html#ac4b86a2d236dd2ab41e74e131f8db1cf">dealii::MGCoarseGridApplyPreconditioner&lt; VectorType, PreconditionerType &gt;</a>, <a class="el" href="classIBParticlesDEM.html#a293be82c5c9bdf4f38dcbf5465b4d050">IBParticlesDEM&lt; dim &gt;</a>, <a class="el" href="classMFNavierStokesPreconditionGMG.html#af5ddcb3518f6ddf3d318eb8be5612219">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>, <a class="el" href="classMFNavierStokesPreconditionGMGBase.html#a4bbc619f6ae34a719d76ef86f557ac88">MFNavierStokesPreconditionGMGBase&lt; dim &gt;</a>, <a class="el" href="classMFNavierStokesVANSPreconditionGMG.html#a864fb9fdf267503110502753d05f1f60">MFNavierStokesVANSPreconditionGMG&lt; dim &gt;</a>, <a class="el" href="classPhysicalPropertiesManager.html#a8ff075795ba8a60c71e5163d8566993d">PhysicalPropertiesManager</a>, <a class="el" href="classPreconditionASM.html#a14ea10732b137f5d5729d88c3cc386c3">PreconditionASM&lt; VectorType &gt;</a></li>
+<li>initialize()&#160;:&#160;<a class="el" href="classdealii_1_1MGCoarseGridApplyPreconditioner.html#ac4b86a2d236dd2ab41e74e131f8db1cf">dealii::MGCoarseGridApplyPreconditioner&lt; VectorType, PreconditionerType &gt;</a>, <a class="el" href="classIBParticlesDEM.html#a4f5b5de38b01e70fb62423e423258dc3">IBParticlesDEM&lt; dim &gt;</a>, <a class="el" href="classMFNavierStokesPreconditionGMG.html#af5ddcb3518f6ddf3d318eb8be5612219">MFNavierStokesPreconditionGMG&lt; dim &gt;</a>, <a class="el" href="classMFNavierStokesPreconditionGMGBase.html#a4bbc619f6ae34a719d76ef86f557ac88">MFNavierStokesPreconditionGMGBase&lt; dim &gt;</a>, <a class="el" href="classMFNavierStokesVANSPreconditionGMG.html#a864fb9fdf267503110502753d05f1f60">MFNavierStokesVANSPreconditionGMG&lt; dim &gt;</a>, <a class="el" href="classPhysicalPropertiesManager.html#a8ff075795ba8a60c71e5163d8566993d">PhysicalPropertiesManager</a>, <a class="el" href="classPreconditionASM.html#a14ea10732b137f5d5729d88c3cc386c3">PreconditionASM&lt; VectorType &gt;</a></li>
 <li>initialize_all()&#160;:&#160;<a class="el" href="classIBParticle.html#a8e24bfa945f64bf499bfbde33f5391b0">IBParticle&lt; dim &gt;</a></li>
 <li>initialize_auxiliary_physics()&#160;:&#160;<a class="el" href="classMFNavierStokesPreconditionGMG.html#af9af94c3cc1f1cc80360f09c9ff806cc">MFNavierStokesPreconditionGMG&lt; dim &gt;</a></li>
 <li>initialize_bounding_box()&#160;:&#160;<a class="el" href="classRBFShape.html#a786fc190bff11ee476260842837cdfae">RBFShape&lt; dim &gt;</a></li>
-<li>initialize_containers()&#160;:&#160;<a class="el" href="structParameters_1_1Lagrangian_1_1BCDEM.html#a4b37e73972fe3df76c519cdb28f6e56c">Parameters::Lagrangian::BCDEM</a>, <a class="el" href="structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#a122faf3ffaa4549d1508b9aa7ca5e975">Parameters::Lagrangian::LagrangianPhysicalProperties</a></li>
+<li>initialize_containers()&#160;:&#160;<a class="el" href="structParameters_1_1Lagrangian_1_1BCDEM.html#a4b37e73972fe3df76c519cdb28f6e56c">Parameters::Lagrangian::BCDEM</a>, <a class="el" href="structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#a992569a23bd1d691fdf714abe3882b0d">Parameters::Lagrangian::LagrangianPhysicalProperties</a></li>
 <li>initialize_dem_parameters()&#160;:&#160;<a class="el" href="classCFDDEMMatrixFree.html#a0a0ccf70e2a6fffc33a8a582770bcce9">CFDDEMMatrixFree&lt; dim &gt;</a>, <a class="el" href="classCFDDEMSolver.html#adcdc56eef545bb81d6359211782fd85b">CFDDEMSolver&lt; dim &gt;</a></li>
 <li>initialize_distance()&#160;:&#160;<a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a6270aa485b1857d5769f691b266715c2">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;</a></li>
 <li>initialize_dof_vector()&#160;:&#160;<a class="el" href="classNavierStokesOperatorBase.html#ac8897ffe280ad2d9c7fc0193191e1219">NavierStokesOperatorBase&lt; dim, number &gt;</a></li>
 <li>initialize_GMG()&#160;:&#160;<a class="el" href="classFluidDynamicsMatrixFree.html#a0a5851a571798217680e13a127e074e5">FluidDynamicsMatrixFree&lt; dim &gt;</a>, <a class="el" href="classFluidDynamicsVANSMatrixFree.html#a057a90a8ff9caa259574b2645f07beb3">FluidDynamicsVANSMatrixFree&lt; dim &gt;</a></li>
 <li>initialize_previous_solution()&#160;:&#160;<a class="el" href="classIBParticle.html#a9a552b1c7085a2ec4ff00f87fe17e517">IBParticle&lt; dim &gt;</a></li>
 <li>initialize_shape()&#160;:&#160;<a class="el" href="classIBParticle.html#ac08c903a2045505a9059850bf274b6ac">IBParticle&lt; dim &gt;</a></li>
-<li>initialize_subequations()&#160;:&#160;<a class="el" href="classVOFSubequationsInterface.html#a9e6cbc252a835b80b208e751f059cacb">VOFSubequationsInterface&lt; dim &gt;</a></li>
+<li>initialize_subequations()&#160;:&#160;<a class="el" href="classCLSSubequationsInterface.html#a6f75bde19b1cd17b84e549f7a15f4b25">CLSSubequationsInterface&lt; dim &gt;</a></li>
 <li>initialize_time_stepping_data()&#160;:&#160;<a class="el" href="classNavierStokesOperatorBase.html#a8d55fd4d0df8b72260f0d06947267eef">NavierStokesOperatorBase&lt; dim, number &gt;</a></li>
 <li>initialize_vectors()&#160;:&#160;<a class="el" href="classAverageScalar.html#aae4d0f6711714d977190ebe8133304b5">AverageScalar&lt; dim &gt;</a>, <a class="el" href="classAverageVelocities.html#a915abd4f4b0a5206367825a4c3d0a9b8">AverageVelocities&lt; dim, VectorType, DofsType &gt;</a></li>
 <li>initialize_void_fraction()&#160;:&#160;<a class="el" href="classParticleProjector.html#a98a596ad780a33bde2098e4b57995677">ParticleProjector&lt; dim &gt;</a></li>
 <li>inlet_boundary_id&#160;:&#160;<a class="el" href="structParameters_1_1PostProcessing.html#ae2551d81581291954da5b54d2feccce1">Parameters::PostProcessing</a></li>
-<li>inner_face_assembler&#160;:&#160;<a class="el" href="classTracer.html#abefd11428a340613811b3f1ee78cf4e4">Tracer&lt; dim &gt;</a>, <a class="el" href="classVolumeOfFluid.html#ae02828b46ae35cb79bcab9a91b1ff97f">VolumeOfFluid&lt; dim &gt;</a></li>
+<li>inlet_offset&#160;:&#160;<a class="el" href="classBirminghamFluidizedBedGrid.html#a5bc71ba9a42ed9b73f104a87791f1fc3">BirminghamFluidizedBedGrid&lt; dim, spacedim &gt;</a></li>
+<li>inner_face_assembler&#160;:&#160;<a class="el" href="classConservativeLevelSet.html#a55afa5859297e43a71c970658b280064">ConservativeLevelSet&lt; dim &gt;</a>, <a class="el" href="classTracer.html#abefd11428a340613811b3f1ee78cf4e4">Tracer&lt; dim &gt;</a></li>
+<li>inner_radius&#160;:&#160;<a class="el" href="classUniformChannelWithMeshedCylinderGrid.html#aa754b029b89464c21ad58445e48a90a7">UniformChannelWithMeshedCylinderGrid&lt; dim, spacedim &gt;</a></li>
 <li>insert()&#160;:&#160;<a class="el" href="classInsertion.html#acc31a2b8a42ff47cd608039dd3c6e063">Insertion&lt; dim, PropertiesIndex &gt;</a>, <a class="el" href="classInsertionFile.html#a9119c1d3df20886f39e08e05e308a800">InsertionFile&lt; dim, PropertiesIndex &gt;</a>, <a class="el" href="classInsertionList.html#a584654a6d8248de47952a54f108ce3cc">InsertionList&lt; dim, PropertiesIndex &gt;</a>, <a class="el" href="classInsertionPlane.html#a2469402fa35fc64fcab55de0c912abc3">InsertionPlane&lt; dim, PropertiesIndex &gt;</a>, <a class="el" href="classInsertionVolume.html#a12609a7cc12989130958282d234394e9">InsertionVolume&lt; dim, PropertiesIndex &gt;</a></li>
 <li>insert_particles()&#160;:&#160;<a class="el" href="classCFDDEMMatrixFree.html#a1a018d750fbc1d32cf41759963a4a0d1">CFDDEMMatrixFree&lt; dim &gt;</a>, <a class="el" href="classCFDDEMSolver.html#aa7dfa7ce54bc40f9848d708cd5875b9a">CFDDEMSolver&lt; dim &gt;</a>, <a class="el" href="classDEMSolver.html#aa6ee657dda36d8535ef8a828b1b25d42">DEMSolver&lt; dim, PropertiesIndex &gt;</a></li>
 <li>insert_particles_and_photons()&#160;:&#160;<a class="el" href="classRayTracingSolver.html#ade9a3ca9beea05852bbd75931b846666">RayTracingSolver&lt; dim &gt;</a></li>
@@ -164,7 +172,6 @@ $(function() {
 <li>InsertionMethod&#160;:&#160;<a class="el" href="classParameters_1_1Lagrangian_1_1InsertionInfo.html#a8935f71b97c7cce069b63a2e28949a4b">Parameters::Lagrangian::InsertionInfo&lt; dim &gt;</a></li>
 <li>InsertionPlane()&#160;:&#160;<a class="el" href="classInsertionPlane.html#a1cbc40f95d567ff5e717d4acfd562ca8">InsertionPlane&lt; dim, PropertiesIndex &gt;</a></li>
 <li>InsertionVolume()&#160;:&#160;<a class="el" href="classInsertionVolume.html#aecc1435c892f914865b2f7ae5ca9307e">InsertionVolume&lt; dim, PropertiesIndex &gt;</a></li>
-<li>inside_radius&#160;:&#160;<a class="el" href="classParameters_1_1IBParticles.html#a8eeceaf0e70185780e21a3c9ebeec826">Parameters::IBParticles&lt; dim &gt;</a></li>
 <li>inspect_multiphysics_models_dependencies()&#160;:&#160;<a class="el" href="classMultiphysicsInterface.html#aaada3e3716bfe0c453d4f1e101b3bd60">MultiphysicsInterface&lt; dim &gt;</a></li>
 <li>instance&#160;:&#160;<a class="el" href="classDEMActionManager.html#aac5081d95eda43a409d30d646cc0cf20">DEMActionManager</a></li>
 <li>integrate()&#160;:&#160;<a class="el" href="classExplicitEulerIntegrator.html#ab41594af98c7126ec13f3f736e1159fe">ExplicitEulerIntegrator&lt; dim, PropertiesIndex &gt;</a>, <a class="el" href="classIntegrator.html#ab2e9a98de375547a9c0dbd0334b1c93a">Integrator&lt; dim, PropertiesIndex &gt;</a>, <a class="el" href="classSimulationControl.html#a67aa726e7105dd0af92f47dac688e001">SimulationControl</a>, <a class="el" href="classSimulationControlRayTracing.html#ae87a76cfa8ca3b1a4dba2c5b01ff4e76">SimulationControlRayTracing</a>, <a class="el" href="classSimulationControlSteady.html#a1a841b038955ea6ba6b6d8a938d442f9">SimulationControlSteady</a>, <a class="el" href="classSimulationControlTransient.html#a9323f75f9c5d9ab8463f1340c83fa539">SimulationControlTransient</a>, <a class="el" href="classVelocityVerletIntegrator.html#a6777fd5216fe0b789e1d3e06c0bd0372">VelocityVerletIntegrator&lt; dim, PropertiesIndex &gt;</a></li>
@@ -180,13 +187,16 @@ $(function() {
 <li>integrator_object&#160;:&#160;<a class="el" href="classCFDDEMMatrixFree.html#aa76a901fbe8b77cfe0206afd9787d1cc">CFDDEMMatrixFree&lt; dim &gt;</a>, <a class="el" href="classCFDDEMSolver.html#a45ad3e5a9e30bbba2e93542404c3e0dd">CFDDEMSolver&lt; dim &gt;</a>, <a class="el" href="classDEMSolver.html#a75d225aeb3d8b96433cb2b9c2ac1b577">DEMSolver&lt; dim, PropertiesIndex &gt;</a></li>
 <li>interface_reconstruction_cells&#160;:&#160;<a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#ac410b576e193871cdb3b50f0f0f4155e">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;</a></li>
 <li>interface_reconstruction_vertices&#160;:&#160;<a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a2ede15f699eea63e89881e12e1e34220">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;</a></li>
-<li>interface_sharpness&#160;:&#160;<a class="el" href="structParameters_1_1VOF__InterfaceSharpening.html#aa53a042f1019ec5e47f1234ada2715fd">Parameters::VOF_InterfaceSharpening</a></li>
+<li>interface_sharpness&#160;:&#160;<a class="el" href="structParameters_1_1CLS__InterfaceSharpening.html#a7168cc88265ade555bde6cec5665cf13">Parameters::CLS_InterfaceSharpening</a></li>
+<li>interface_type&#160;:&#160;<a class="el" href="structParameters_1_1Mortar.html#ac5c4e93a8149627f5e4135bebc920c8f">Parameters::Mortar&lt; dim &gt;</a></li>
 <li>InterfacePropertyModel()&#160;:&#160;<a class="el" href="classInterfacePropertyModel.html#ad5a30d304ce21abf3baf295b20b81598">InterfacePropertyModel</a></li>
 <li>InterfaceReconstructionDataOut()&#160;:&#160;<a class="el" href="classInterfaceTools_1_1InterfaceReconstructionDataOut.html#aaea4526ce21c257aabccf652054dec6e">InterfaceTools::InterfaceReconstructionDataOut&lt; dim &gt;</a></li>
+<li>InterfaceType&#160;:&#160;<a class="el" href="structParameters_1_1Mortar.html#ad44086027b128bdfa523528aa17807df">Parameters::Mortar&lt; dim &gt;</a></li>
 <li>intermediate_a&#160;:&#160;<a class="el" href="classDeathStar.html#a79f4fadd868318bd267e452abb9448ee">DeathStar&lt; dim &gt;</a></li>
 <li>intermediate_b&#160;:&#160;<a class="el" href="classDeathStar.html#a5cbb82f946e2fe5bc7ba0458562a5a81">DeathStar&lt; dim &gt;</a></li>
 <li>intermediate_q&#160;:&#160;<a class="el" href="classCone.html#a033e5523eaa5f7128916247c54525476">Cone&lt; dim &gt;</a></li>
 <li>intermediate_w&#160;:&#160;<a class="el" href="classCutHollowSphere.html#af3fe8274ea33e5b7efb5385ec6ca1f65">CutHollowSphere&lt; dim &gt;</a></li>
+<li>interpolate_diameter_values&#160;:&#160;<a class="el" href="classCustomDistribution.html#abaa9437ea013aec5d906ebde9f13f41e">CustomDistribution</a></li>
 <li>interpolate_to_mg()&#160;:&#160;<a class="el" href="classMGTransferMatrixFreeWrapper.html#a90d55b99eca92bc845bb6ea644627253">MGTransferMatrixFreeWrapper&lt; dim, Number &gt;</a></li>
 <li>interpolated_void_fraction&#160;:&#160;<a class="el" href="classNavierStokesScratchData.html#a50e47e5746c3b8e513d798318938235b">NavierStokesScratchData&lt; dim &gt;</a>, <a class="el" href="structParameters_1_1CFDDEM.html#a825c5406d8255e37eda65c67a14f2a14">Parameters::CFDDEM</a></li>
 <li>intersected_dofs&#160;:&#160;<a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#ab956e377d8a2e768281be5621dfe8283">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;</a></li>
@@ -197,15 +207,18 @@ $(function() {
 <li>is_at_start()&#160;:&#160;<a class="el" href="classSimulationControl.html#ae603ba619be7c79ea9881e9b9c4456ef">SimulationControl</a></li>
 <li>is_bdf()&#160;:&#160;<a class="el" href="classSimulationControl.html#ad3f2ab3ca4e4bdb1a5b86eaaca662944">SimulationControl</a>, <a class="el" href="structTimeSteppingData.html#a8869428fc476ef6f174f02000a406180">TimeSteppingData</a></li>
 <li>is_boundary_cell&#160;:&#160;<a class="el" href="classCahnHilliardScratchData.html#a9906da998707620bc0b5891c2a77b9be">CahnHilliardScratchData&lt; dim &gt;</a>, <a class="el" href="classHeatTransferScratchData.html#ab8ebb90c5f68c6dbe3c0463a06ca456c">HeatTransferScratchData&lt; dim &gt;</a>, <a class="el" href="classNavierStokesScratchData.html#a26944c6375322a4ad03b51b959f5b3f6">NavierStokesScratchData&lt; dim &gt;</a></li>
+<li>is_boundary_excluded()&#160;:&#160;<a class="el" href="classIBParticlesDEM.html#a1b88dcd02684c344040ebad98c8d9f23">IBParticlesDEM&lt; dim &gt;</a></li>
 <li>is_boundary_face&#160;:&#160;<a class="el" href="classCahnHilliardScratchData.html#a01c7a824d8b0a2bd8b55918310618b13">CahnHilliardScratchData&lt; dim &gt;</a>, <a class="el" href="classHeatTransferScratchData.html#a7ea6d4a438c3a5081c15daeb81f70ffc">HeatTransferScratchData&lt; dim &gt;</a>, <a class="el" href="classNavierStokesScratchData.html#a85c0cf98990e2f944e1043a13577d78b">NavierStokesScratchData&lt; dim &gt;</a></li>
 <li>is_boundary_refinement_fixed&#160;:&#160;<a class="el" href="structParameters_1_1MeshAdaptation.html#a12be65d75af9ded0dc4fe3bb72fdcd4b">Parameters::MeshAdaptation</a></li>
 <li>is_checkpoint_time_step()&#160;:&#160;<a class="el" href="classCheckpointControl.html#a56549d77379632aebbb4244f9563fb62">CheckpointControl</a></li>
 <li>is_constant_density_model()&#160;:&#160;<a class="el" href="classDensityModel.html#a017b43e273de5fb394cb4584ca891364">DensityModel</a></li>
 <li>is_constant_surface_tension_model()&#160;:&#160;<a class="el" href="classSimulationParameters.html#a5e2d0090334f506244a3e59da16edb4d">SimulationParameters&lt; dim &gt;</a>, <a class="el" href="classSurfaceTensionModel.html#afcd2a7c106293dd029f1996f87db440f">SurfaceTensionModel</a></li>
 <li>is_first_assembly()&#160;:&#160;<a class="el" href="classSimulationControl.html#a1db26e3807f434640a574d8d164fb276">SimulationControl</a></li>
+<li>is_first_iteration()&#160;:&#160;<a class="el" href="classSubSimulationControlDEM.html#a66da59ae1fdde25bc6b56332854c0965">SubSimulationControlDEM</a></li>
 <li>is_in_collision()&#160;:&#160;<a class="el" href="classOngoingCollisionLog.html#a070724f484a703e0140e0773a9b10836">OngoingCollisionLog&lt; dim &gt;</a></li>
 <li>is_initialized&#160;:&#160;<a class="el" href="classPhysicalPropertiesManager.html#afc4e73a191dc9caf317aa013218dc198">PhysicalPropertiesManager</a></li>
 <li>is_inside_crown()&#160;:&#160;<a class="el" href="classIBParticle.html#a344004d747375230e0d6b10ca98fbe50">IBParticle&lt; dim &gt;</a></li>
+<li>is_last_iteration()&#160;:&#160;<a class="el" href="classSubSimulationControlDEM.html#ae787d0fe449ac2fd98311026544a0871">SubSimulationControlDEM</a></li>
 <li>is_mesh_aligned()&#160;:&#160;<a class="el" href="classMortarManagerBase.html#a482a54cd6e2e39b2427004381a4f39a1">MortarManagerBase&lt; dim &gt;</a></li>
 <li>is_non_newtonian()&#160;:&#160;<a class="el" href="classPhysicalPropertiesManager.html#a62c83e5e2c38c581718752435b46e0f1">PhysicalPropertiesManager</a></li>
 <li>is_non_newtonian_rheological_model()&#160;:&#160;<a class="el" href="classRheologicalModel.html#a8a9f7f56f2c0437d4a6360040dc17f38">RheologicalModel</a></li>
@@ -218,14 +231,43 @@ $(function() {
 <li>iso_level&#160;:&#160;<a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a970cc939a88a8563391f2f374697fb31">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;</a></li>
 <li>isothermal_ideal_gas_density_parameters&#160;:&#160;<a class="el" href="classParameters_1_1Material.html#a379e486438f4cfa6fe09698826074bbc">Parameters::Material</a></li>
 <li>iterable_nodes&#160;:&#160;<a class="el" href="classRBFShape.html#a0c93189216143c45549d01818ace16a1">RBFShape&lt; dim &gt;</a></li>
-<li>iterate()&#160;:&#160;<a class="el" href="classFluidDynamicsVANS.html#af5702dddac75fa2e12d67391c95b0ccd">FluidDynamicsVANS&lt; dim &gt;</a>, <a class="el" href="classNavierStokesBase.html#a98a7f846709b83df0ea64c361fee192c">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a></li>
+<li>iterate()&#160;:&#160;<a class="el" href="classFluidDynamicsVANS.html#af5702dddac75fa2e12d67391c95b0ccd">FluidDynamicsVANS&lt; dim &gt;</a>, <a class="el" href="classNavierStokesBase.html#a98a7f846709b83df0ea64c361fee192c">NavierStokesBase&lt; dim, VectorType, DofsType &gt;</a>, <a class="el" href="classSubSimulationControlDEM.html#aeeda439fa3dbb380d8e4e13ca811d5cf">SubSimulationControlDEM</a></li>
 <li>iteration_check_function&#160;:&#160;<a class="el" href="classLagrangianLoadBalancing.html#aa45b9e32d705899fbdd9a1d584752c08">LagrangianLoadBalancing&lt; dim, PropertiesIndex &gt;</a></li>
-<li>iteration_number&#160;:&#160;<a class="el" href="classSimulationControl.html#a4ab5fb4679cef5aeca745bf0e76cc6e5">SimulationControl</a></li>
+<li>iteration_logic&#160;:&#160;<a class="el" href="classSubSimulationControlDEM.html#a1ddde614f266ae1e5b0453d85f98b817">SubSimulationControlDEM</a></li>
+<li>iteration_number&#160;:&#160;<a class="el" href="classSimulationControl.html#a4ab5fb4679cef5aeca745bf0e76cc6e5">SimulationControl</a>, <a class="el" href="classSubSimulationControlDEM.html#a1b1ae5421b8d2543e4f00d8c66d67396">SubSimulationControlDEM</a></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

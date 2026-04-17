@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -131,7 +135,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int dim&gt;<br />
 struct Parameters::Lagrangian::ParticleRayTracing&lt; dim &gt;</div><p>Defines parameters used to construct particle ray tracing class. </p>
 
-<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l00659">659</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l01021">1021</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a33f2a09fc5f1d91b3d2592e95fc815b8" name="a33f2a09fc5f1d91b3d2592e95fc815b8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a33f2a09fc5f1d91b3d2592e95fc815b8">&#9670;&#160;</a></span>declare_parameters()</h2>
@@ -159,7 +163,15 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8cc_source.html#l01834">1834</a> of file <a class="el" href="parameters__lagrangian_8cc_source.html">parameters_lagrangian.cc</a>.</p>
+<p>Declare the parameters in the parameter handler. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">prm</td><td>The parameter handler. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8cc_source.html#l01902">1902</a> of file <a class="el" href="parameters__lagrangian_8cc_source.html">parameters_lagrangian.cc</a>.</p>
 
 </div>
 </div>
@@ -181,7 +193,15 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8cc_source.html#l01913">1913</a> of file <a class="el" href="parameters__lagrangian_8cc_source.html">parameters_lagrangian.cc</a>.</p>
+<p>Parse the parameters from the parameter handler. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">prm</td><td>The parameter handler. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8cc_source.html#l01981">1981</a> of file <a class="el" href="parameters__lagrangian_8cc_source.html">parameters_lagrangian.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="tensors__and__points__dimension__manipulation_8h_source.html#l00069">point_nd_to_3d()</a>, and <a class="el" href="tensors__and__points__dimension__manipulation_8h_source.html#l00024">tensor_nd_to_3d()</a>.</p>
 
@@ -201,8 +221,9 @@ template&lt;int dim&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Unit direction vectors along which photons are inserted relative to the starting point. </p>
 
-<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l00666">666</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l01028">1028</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
 
 </div>
 </div>
@@ -220,7 +241,9 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l00683">683</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
+<p>Maximum angular offset applied to the photon displacement direction. </p>
+
+<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l01047">1047</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
 
 </div>
 </div>
@@ -238,7 +261,9 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l00679">679</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
+<p>Maximum random offset applied to the photon insertion position. </p>
+
+<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l01041">1041</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
 
 </div>
 </div>
@@ -256,7 +281,9 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l00669">669</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
+<p>Number of photons to insert along each direction. </p>
+
+<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l01031">1031</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
 
 </div>
 </div>
@@ -274,7 +301,9 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l00684">684</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
+<p>Random seed for photon displacement angular offset. </p>
+
+<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l01050">1050</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
 
 </div>
 </div>
@@ -292,7 +321,9 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l00680">680</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
+<p>Random seed for photon insertion position offset. </p>
+
+<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l01044">1044</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
 
 </div>
 </div>
@@ -310,7 +341,9 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l00676">676</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
+<p>Reference unit tensor defining the photon displacement direction. </p>
+
+<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l01038">1038</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
 
 </div>
 </div>
@@ -328,7 +361,9 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l00662">662</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
+<p>Location of the first photon to be inserted. </p>
+
+<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l01024">1024</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
 
 </div>
 </div>
@@ -345,8 +380,9 @@ template&lt;int dim&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Spacing between consecutive photons along each direction (at zero offset). </p>
 
-<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l00673">673</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters__lagrangian_8h_source.html#l01035">1035</a> of file <a class="el" href="parameters__lagrangian_8h_source.html">parameters_lagrangian.h</a>.</p>
 
 </div>
 </div>
@@ -355,9 +391,37 @@ template&lt;int dim&gt; </div>
 <li>/home/runner/work/lethe/lethe/source/core/<a class="el" href="parameters__lagrangian_8cc_source.html">parameters_lagrangian.cc</a></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -86,13 +90,15 @@ $(function() {
 <h3><a id="index_m" name="index_m"></a>- m -</h3><ul>
 <li>m()&#160;:&#160;<a class="el" href="classNavierStokesOperatorBase.html#a6f68d00a0e053fad9f4a7fd79690f759">NavierStokesOperatorBase&lt; dim, number &gt;</a></li>
 <li>main_flow_controller()&#160;:&#160;<a class="el" href="classFlowControl.html#a3f8d388638224072acc18b94f0c11f9e">FlowControl&lt; dim &gt;</a></li>
-<li>make_grid()&#160;:&#160;<a class="el" href="classPeriodicHillsGrid.html#ab4b24f516396fc735795fabc8eee7ddd">PeriodicHillsGrid&lt; dim, spacedim &gt;</a></li>
+<li>make_grid()&#160;:&#160;<a class="el" href="classBirminghamFluidizedBedGrid.html#a854ae12cc1c8549a10519f8d65b6b3d2">BirminghamFluidizedBedGrid&lt; dim, spacedim &gt;</a>, <a class="el" href="classFicheraOvenGrid.html#a779bfd4c2249eab68f2b8a9f6e4bf632">FicheraOvenGrid&lt; dim, spacedim &gt;</a>, <a class="el" href="classPeriodicHillsGrid.html#ab4b24f516396fc735795fabc8eee7ddd">PeriodicHillsGrid&lt; dim, spacedim &gt;</a>, <a class="el" href="classUniformChannelWithMeshedCylinderGrid.html#a9551a6c3c7bbb5c3fcd7ea0c7094d0ac">UniformChannelWithMeshedCylinderGrid&lt; dim, spacedim &gt;</a></li>
+<li>map_H12()&#160;:&#160;<a class="el" href="classTimeHarmonicMaxwell.html#ac086b0fd56b6b1516a35ad97ba83747a">TimeHarmonicMaxwell&lt; dim &gt;</a></li>
 <li>map_periodic_cells()&#160;:&#160;<a class="el" href="classPeriodicBoundariesManipulator.html#a7f9ac1843d0beb0dea34a5beadd4120a">PeriodicBoundariesManipulator&lt; dim &gt;</a></li>
 <li>map_periodic_nodes()&#160;:&#160;<a class="el" href="classAdaptiveSparseContacts.html#a9ce26d29fd4cef20e2d5509c5fc99113">AdaptiveSparseContacts&lt; dim, PropertiesIndex &gt;</a></li>
 <li>map_solid_in_background_triangulation()&#160;:&#160;<a class="el" href="classSerialSolid.html#ab8ad4d1cd9fc4e30cb6559111919e4c4">SerialSolid&lt; dim, spacedim &gt;</a></li>
 <li>mass_flux()&#160;:&#160;<a class="el" href="classEvaporationModel.html#a160196770f256f261bd931fca4015033">EvaporationModel</a>, <a class="el" href="classEvaporationModelConstant.html#a10e193fa9f226c23481d47a2813045fd">EvaporationModelConstant</a>, <a class="el" href="classEvaporationModelTemperature.html#a379a35bfc98a45e24f35d0f363cca9e6">EvaporationModelTemperature</a></li>
 <li>Material()&#160;:&#160;<a class="el" href="classParameters_1_1Material.html#aa1d9b34328251b96c389ab4d2a46cd37">Parameters::Material</a></li>
 <li>MaterialInteractions()&#160;:&#160;<a class="el" href="classParameters_1_1MaterialInteractions.html#a0cad25788da479c0a50b0d1bb04a0318">Parameters::MaterialInteractions</a></li>
+<li>mesh_adapt_ib()&#160;:&#160;<a class="el" href="classFluidDynamicsSharp.html#a3fb81c428c7d4a5d9fab0fd6c698dadc">FluidDynamicsSharp&lt; dim &gt;</a></li>
 <li>MeshController()&#160;:&#160;<a class="el" href="classMeshController.html#afbb8483bd84686121f2d50f4d68613c7">MeshController</a></li>
 <li>MFNavierStokesPreconditionGMG()&#160;:&#160;<a class="el" href="classMFNavierStokesPreconditionGMG.html#aad65e8f5702b114fc7fc81a59fec7342">MFNavierStokesPreconditionGMG&lt; dim &gt;</a></li>
 <li>MFNavierStokesPreconditionGMGBase()&#160;:&#160;<a class="el" href="classMFNavierStokesPreconditionGMGBase.html#a83d349e2b298663ffed4f24b732a4235">MFNavierStokesPreconditionGMGBase&lt; dim &gt;</a></li>
@@ -101,15 +107,18 @@ $(function() {
 <li>MGTransferMatrixFreeWrapper()&#160;:&#160;<a class="el" href="classMGTransferMatrixFreeWrapper.html#a536c29fcef0ca543ed4a4fe80b7f21bb">MGTransferMatrixFreeWrapper&lt; dim, Number &gt;</a></li>
 <li>MobilityCahnHilliardModelConstant()&#160;:&#160;<a class="el" href="classMobilityCahnHilliardModelConstant.html#a1c62f5726a5504455e9e452d959e4d2a">MobilityCahnHilliardModelConstant</a></li>
 <li>MobilityCahnHilliardModelQuartic()&#160;:&#160;<a class="el" href="classMobilityCahnHilliardModelQuartic.html#aae92ef430e8e9513c177546f4a339d8c">MobilityCahnHilliardModelQuartic</a></li>
-<li>model_cast()&#160;:&#160;<a class="el" href="classCahnHilliardFilterBase.html#a3768b77608aa7e5f45fe38efdc5827f4">CahnHilliardFilterBase</a>, <a class="el" href="classDensityModel.html#a678019a0aa3a358b943c1221834ae4d8">DensityModel</a>, <a class="el" href="classEvaporationModel.html#a8584ac33f510a3999d15d1367132c1e5">EvaporationModel</a>, <a class="el" href="classMobilityCahnHilliardModel.html#a713a42a537b676607a2b5158414d2ec9">MobilityCahnHilliardModel</a>, <a class="el" href="classRheologicalModel.html#a8dc1c9a77886e59ee701ce27749c0505">RheologicalModel</a>, <a class="el" href="classSignedDistanceTransformationBase.html#a6641c1164376eae934df66a2c4e0567b">SignedDistanceTransformationBase</a>, <a class="el" href="classSpecificHeatModel.html#ac17fb0fd329a03eaf11fbfeec367c72d">SpecificHeatModel</a>, <a class="el" href="classSurfaceTensionModel.html#a13db76b578d57071867904b85163e158">SurfaceTensionModel</a>, <a class="el" href="classThermalConductivityModel.html#a141c4d482c3fd0e0e0bff222d264aa7e">ThermalConductivityModel</a>, <a class="el" href="classThermalExpansionModel.html#a89104a8c0ce44d483737ca6281004079">ThermalExpansionModel</a>, <a class="el" href="classTracerDiffusivityModel.html#ac95429cb2e3de075247691ad5870bfa0">TracerDiffusivityModel</a>, <a class="el" href="classTracerReactionPrefactorModel.html#aa6d54852d7d7feb40d03fe3390346cbb">TracerReactionPrefactorModel</a>, <a class="el" href="classVolumeOfFluidFilterBase.html#a87286b158579e34a40627510e9824536">VolumeOfFluidFilterBase</a></li>
-<li>modify_solution()&#160;:&#160;<a class="el" href="classAuxiliaryPhysics.html#ace42d65b732019925cb4824e9af89f52">AuxiliaryPhysics&lt; dim, VectorType &gt;</a>, <a class="el" href="classCahnHilliard.html#a66eb728bcf77d15809adb397558f0681">CahnHilliard&lt; dim &gt;</a>, <a class="el" href="classTracer.html#a896e2a2c869162a258cf3258aabdb4a9">Tracer&lt; dim &gt;</a>, <a class="el" href="classVolumeOfFluid.html#a29ca82046f032548ac60d4ad4f8c5c4c">VolumeOfFluid&lt; dim &gt;</a></li>
+<li>model_cast()&#160;:&#160;<a class="el" href="classCahnHilliardFilterBase.html#a3768b77608aa7e5f45fe38efdc5827f4">CahnHilliardFilterBase</a>, <a class="el" href="classConservativeLevelSetFilterBase.html#a5d4cc9e48c488da03e63317691c16e44">ConservativeLevelSetFilterBase</a>, <a class="el" href="classDensityModel.html#a678019a0aa3a358b943c1221834ae4d8">DensityModel</a>, <a class="el" href="classElectricConductivityModel.html#a6bbb8688e674efaf6e727e2663ca761b">ElectricConductivityModel</a>, <a class="el" href="classEvaporationModel.html#a8584ac33f510a3999d15d1367132c1e5">EvaporationModel</a>, <a class="el" href="classMobilityCahnHilliardModel.html#a713a42a537b676607a2b5158414d2ec9">MobilityCahnHilliardModel</a>, <a class="el" href="classRheologicalModel.html#a8dc1c9a77886e59ee701ce27749c0505">RheologicalModel</a>, <a class="el" href="classSignedDistanceTransformationBase.html#ac832a674aef703a862e387a1e76488e2">SignedDistanceTransformationBase</a>, <a class="el" href="classSpecificHeatModel.html#ac17fb0fd329a03eaf11fbfeec367c72d">SpecificHeatModel</a>, <a class="el" href="classSurfaceTensionModel.html#a13db76b578d57071867904b85163e158">SurfaceTensionModel</a>, <a class="el" href="classThermalConductivityModel.html#a141c4d482c3fd0e0e0bff222d264aa7e">ThermalConductivityModel</a>, <a class="el" href="classThermalExpansionModel.html#a89104a8c0ce44d483737ca6281004079">ThermalExpansionModel</a>, <a class="el" href="classTracerDiffusivityModel.html#ac95429cb2e3de075247691ad5870bfa0">TracerDiffusivityModel</a>, <a class="el" href="classTracerReactionPrefactorModel.html#aa6d54852d7d7feb40d03fe3390346cbb">TracerReactionPrefactorModel</a></li>
+<li>model_cast_imag()&#160;:&#160;<a class="el" href="classElectricPermittivityModel.html#a6307b2bc37dd02970173c7630bed1564">ElectricPermittivityModel</a>, <a class="el" href="classMagneticPermeabilityModel.html#a44e0d839f7961e039cd36109a59f1645">MagneticPermeabilityModel</a></li>
+<li>model_cast_real()&#160;:&#160;<a class="el" href="classElectricPermittivityModel.html#ad938dd3b9720cda90f49c6962b7b79bc">ElectricPermittivityModel</a>, <a class="el" href="classMagneticPermeabilityModel.html#af6c5630dfddcea83b47472b3f070ee53">MagneticPermeabilityModel</a></li>
+<li>modify_solution()&#160;:&#160;<a class="el" href="classAuxiliaryPhysics.html#ace42d65b732019925cb4824e9af89f52">AuxiliaryPhysics&lt; dim, VectorType &gt;</a>, <a class="el" href="classCahnHilliard.html#a66eb728bcf77d15809adb397558f0681">CahnHilliard&lt; dim &gt;</a>, <a class="el" href="classConservativeLevelSet.html#a38a9189e1b9034343448a965e0ca0585">ConservativeLevelSet&lt; dim &gt;</a>, <a class="el" href="classTimeHarmonicMaxwell.html#acd2a7ad74cdd88844047f901f46fd865">TimeHarmonicMaxwell&lt; dim &gt;</a>, <a class="el" href="classTracer.html#a896e2a2c869162a258cf3258aabdb4a9">Tracer&lt; dim &gt;</a></li>
 <li>momentum_flux()&#160;:&#160;<a class="el" href="classEvaporationModel.html#a47be0272cdef51c598387125bc4d8071">EvaporationModel</a>, <a class="el" href="classEvaporationModelConstant.html#a368945d4af48897e655faacf3ffc0ab9">EvaporationModelConstant</a>, <a class="el" href="classEvaporationModelTemperature.html#a73a548a9bd637c3a03aeb122ae686237">EvaporationModelTemperature</a></li>
-<li>momentum_flux_jacobian()&#160;:&#160;<a class="el" href="classEvaporationModel.html#a6d108efeb02e7c59d9e4d104f0ae1a32">EvaporationModel</a>, <a class="el" href="classEvaporationModelConstant.html#a111e6af8e0229f91e7bd2bd8c42621bb">EvaporationModelConstant</a>, <a class="el" href="classEvaporationModelTemperature.html#a5b83af69b6cf65c934c5f58ae85628b4">EvaporationModelTemperature</a></li>
+<li>momentum_flux_jacobian()&#160;:&#160;<a class="el" href="classEvaporationModel.html#a705a147378cb94842772605a211b2a4f">EvaporationModel</a>, <a class="el" href="classEvaporationModelConstant.html#a111e6af8e0229f91e7bd2bd8c42621bb">EvaporationModelConstant</a>, <a class="el" href="classEvaporationModelTemperature.html#a5b83af69b6cf65c934c5f58ae85628b4">EvaporationModelTemperature</a></li>
 <li>monitor_mass_conservation()&#160;:&#160;<a class="el" href="classFluidDynamicsVANS.html#a6bc8c5994e39df48932dc40084900b8f">FluidDynamicsVANS&lt; dim &gt;</a></li>
 <li>MortarManagerBase()&#160;:&#160;<a class="el" href="classMortarManagerBase.html#a05196984e6607b4cb30d8dccb12274ad">MortarManagerBase&lt; dim &gt;</a></li>
 <li>MortarManagerCircle()&#160;:&#160;<a class="el" href="classMortarManagerCircle.html#a6c1f1c1a467b61ec2e6b3d4bbf1a4995">MortarManagerCircle&lt; dim &gt;</a></li>
+<li>MortarManagerLinear()&#160;:&#160;<a class="el" href="classMortarManagerLinear.html#a0a31ed81c073146a0ad4b7dda59efdff">MortarManagerLinear&lt; dim &gt;</a></li>
 <li>move_grid()&#160;:&#160;<a class="el" href="classGridMotion.html#a265718c0e236abfc51bdcfda1ae8c18e">GridMotion&lt; dim, spacedim &gt;</a></li>
-<li>move_grid_rotational()&#160;:&#160;<a class="el" href="classGridMotion.html#a3a2a2192b5a326fe83827e63a87dab78">GridMotion&lt; dim, spacedim &gt;</a></li>
+<li>move_grid_rotational()&#160;:&#160;<a class="el" href="classGridMotion.html#a9d47495e887736911334770f006891c1">GridMotion&lt; dim, spacedim &gt;</a></li>
 <li>move_grid_translational()&#160;:&#160;<a class="el" href="classGridMotion.html#a29e96f413052a3c7d952f23056359427">GridMotion&lt; dim, spacedim &gt;</a></li>
 <li>move_solid_objects()&#160;:&#160;<a class="el" href="classDEMSolver.html#aba266cd57fa8dd40c741b60713d587d3">DEMSolver&lt; dim, PropertiesIndex &gt;</a></li>
 <li>move_solid_triangulation()&#160;:&#160;<a class="el" href="classSerialSolid.html#a61418fd2272a22899c3fc0bfbe948cd0">SerialSolid&lt; dim, spacedim &gt;</a>, <a class="el" href="classSolidBase.html#a4c767cc5b7c391f820dfe881eec58e28">SolidBase&lt; dim, spacedim &gt;</a></li>
@@ -121,9 +130,37 @@ $(function() {
 <li>MyDiagonalMatrix()&#160;:&#160;<a class="el" href="classMyDiagonalMatrix.html#aedcc09c95544f02717ea78c9314363df">MyDiagonalMatrix&lt; VectorType &gt;</a></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

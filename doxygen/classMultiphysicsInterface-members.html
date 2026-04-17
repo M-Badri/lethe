@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -95,7 +99,7 @@ $(function() {
   <tr class="odd"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#aebc9b720836728f99f2824e876a4084a">block_physics_solutions</a></td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#a3bbb64cd917794e3323b09b3daa29c35">block_physics_solutions_m1</a></td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#a10acdb7560891c1367365f9e5d3836a0">block_physics_time_average_solutions</a></td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#a15cf83b4790297dab4cc6cf32a70e5c6">compute_kelly</a>(const std::pair&lt; const Variable, Parameters::MultipleAdaptationParameters &gt; &amp;ivar, dealii::Vector&lt; float &gt; &amp;estimated_error_per_cell)</td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#a606076021e7be6758fd3780438592634">compute_error_estimate</a>(const std::pair&lt; const Variable, Parameters::MultipleAdaptationParameters &gt; &amp;ivar, dealii::Vector&lt; float &gt; &amp;estimated_error_per_cell)</td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#aaae2db0c237e7348244a5a37caa5f864">finish_simulation</a>()</td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#a02b1ef8ec7a30caa81764aa669a71991">fluid_dynamics_is_block</a>() const</td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#a19405340b6a04044066d103b0bcb475f">gather_output_hook_global_block_vector</a>()</td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
@@ -110,14 +114,14 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#a1ab87bf78a18bb8d7b97a769c62f5e0c">get_filtered_solution</a>(const PhysicsID physics_id)</td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#a80bd632a48bb2f058693459dd6f047c6">get_immersed_solid_shape</a>()</td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#a29eef6b597d37b88d696f43c36f16efb">get_previous_solutions</a>(const PhysicsID physics_id)</td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#ac76eac3059bd87155d3583136b760756">get_projected_phase_fraction_gradient_dof_handler</a>()</td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#aa7b23d559fd4322f3e30723f2bb8874c">get_projected_phase_fraction_gradient_solution</a>()</td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#abf81d5fdb8a66f4c8a4c4260a733c5c2">get_projected_phase_indicator_gradient_dof_handler</a>()</td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#a3293b7019245614036fbde7fcacf9008">get_projected_phase_indicator_gradient_solution</a>()</td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#ae9fdd065251330837764899f4865988e">get_solids</a>(const int number_solids)</td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#a13d942673cbbf1cc2d79bd4ced3f6461">get_solution</a>(const PhysicsID physics_id)</td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#a2c1b105320c21f8b5baef05ba93b7c77">get_time_average_solution</a>(const PhysicsID physics_id)</td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#ae4661fa66dae071e667ec73a2406cd0a">immersed_solid_shape</a></td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#aaada3e3716bfe0c453d4f1e101b3bd60">inspect_multiphysics_models_dependencies</a>(const SimulationParameters&lt; dim &gt; &amp;nsparam)</td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#a77e4650e2e491558b5eace431a2bf365">multiphysics_parameters</a></td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#afda528520ef57748c878e71840866764">multiphysics_parameters</a></td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#a27f42b3d6dfed363f457a8c02721741c">MultiphysicsInterface</a>(const SimulationParameters&lt; dim &gt; &amp;nsparam, std::shared_ptr&lt; parallel::DistributedTriangulationBase&lt; dim &gt; &gt; p_triangulation, std::shared_ptr&lt; SimulationControl &gt; p_simulation_control, ConditionalOStream &amp;p_pcout)</td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#a15df5d739b55edf36d6fbd8687e72a72">pcout</a></td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#a09350f85981d0653a8c526ad97802e97">percolate_time_vectors</a>(const bool fluid_dynamics_has_been_solved)</td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
@@ -155,9 +159,37 @@ $(function() {
   <tr class="odd"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#aea4b7d6af2a1da9e935a4e40e524ab8e">write_checkpoint</a>()</td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classMultiphysicsInterface.html#a5881a82ed5b1d0c2b1d4179ea47a887d">~MultiphysicsInterface</a>()=default</td><td class="entry"><a class="el" href="classMultiphysicsInterface.html">MultiphysicsInterface&lt; dim &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -122,6 +126,7 @@ $(function() {
 <li>cell_cut_by_flat()&#160;:&#160;<a class="el" href="namespaceLetheGridTools.html#ac39192d5fabd9d06ba64a2a7150c5693">LetheGridTools</a></li>
 <li>cell_pierced_by_edge()&#160;:&#160;<a class="el" href="namespaceLetheGridTools.html#a3b96b63d5d902f95225dca467b9c03a4">LetheGridTools</a></li>
 <li>cfd_dem&#160;:&#160;<a class="el" href="namespaceDEM.html#ace9d7c6b123aa13027ca7915f1fa4d16a78ae406074be6be7fab62b1c41b968dd">DEM</a></li>
+<li>CLSInitialConditionType&#160;:&#160;<a class="el" href="namespaceParameters.html#a3afa4d0c12c6c995b8b6978a4e413c3b">Parameters</a></li>
 <li>compute_cell_wise_volume()&#160;:&#160;<a class="el" href="namespaceInterfaceTools.html#a4caaa0b6ff57c488bba9b7d6fd317cc8">InterfaceTools</a></li>
 <li>compute_surface_and_volume()&#160;:&#160;<a class="el" href="namespaceInterfaceTools.html#a9ccc3916532b0c8bb3f6908a5d9b23da">InterfaceTools</a></li>
 <li>constant&#160;:&#160;<a class="el" href="namespaceParameters_1_1Lagrangian.html#ac41aed1853eee7a1933daa560973327ba38c35e06ef81fdd68a9638c144997bda">Parameters::Lagrangian</a></li>
@@ -132,6 +137,7 @@ $(function() {
 <li>dem&#160;:&#160;<a class="el" href="namespaceDEM.html#ace9d7c6b123aa13027ca7915f1fa4d16aea5ce725f8de00f8350574078f10dd6d">DEM</a></li>
 <li>dem_mp&#160;:&#160;<a class="el" href="namespaceDEM.html#ace9d7c6b123aa13027ca7915f1fa4d16a8d58726e06de5bb4b84ce216f2e06b12">DEM</a></li>
 <li>dem_statistic_variable&#160;:&#160;<a class="el" href="namespaceDEM.html#af85feac59e2a3e30010cccde5bda5b2b">DEM</a></li>
+<li>DistributionWeightingType&#160;:&#160;<a class="el" href="namespaceParameters_1_1Lagrangian.html#ab28c126ba6e82486f6016aeb54a29e1c">Parameters::Lagrangian</a></li>
 <li>dp&#160;:&#160;<a class="el" href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fac31564c0282259a90fa3036a0f7993e5">DEM::CFDDEMProperties</a>, <a class="el" href="namespaceDEM_1_1DEMMPProperties.html#aca0676848b97f3864735e524aac253f8a348a2340df4ec7ffcd610b03e80b0703">DEM::DEMMPProperties</a>, <a class="el" href="namespaceDEM_1_1DEMProperties.html#ad4c9c6eeafe6423a5619617d6c8a5987a54a858a84eaf06454e88b8bb5722b64d">DEM::DEMProperties</a></li>
 <li>DragCoupling&#160;:&#160;<a class="el" href="namespaceParameters.html#ab888bbb141fede015eec33a09e2a5e46">Parameters</a></li>
 <li>DragModel&#160;:&#160;<a class="el" href="namespaceParameters.html#a8b408c8f42632c3dd96b69b720ace6f6">Parameters</a></li>
@@ -139,6 +145,7 @@ $(function() {
 
 
 <h3><a id="index_e" name="index_e"></a>- e -</h3><ul>
+<li>ElectromagneticScalingType&#160;:&#160;<a class="el" href="namespaceParameters.html#ae2409eaf7621323659ebf4a3ec3c77d2">Parameters</a></li>
 <li>epsd&#160;:&#160;<a class="el" href="namespaceParameters_1_1Lagrangian.html#ac41aed1853eee7a1933daa560973327ba2a10520ba7c530fa4057aeec5667b794">Parameters::Lagrangian</a></li>
 <li>EpsilonSetMethod&#160;:&#160;<a class="el" href="namespaceParameters.html#aea64bd5414c051b692d8df44e5ccd369">Parameters</a></li>
 <li>EpsilonVerbosity&#160;:&#160;<a class="el" href="namespaceParameters.html#a326d18b20b98632daf31aad2a3119462">Parameters</a></li>
@@ -168,7 +175,7 @@ $(function() {
 <li>find_cells_cut_by_object()&#160;:&#160;<a class="el" href="namespaceLetheGridTools.html#adcc54656da552f633c48fca2b6f172e1">LetheGridTools</a></li>
 <li>find_cells_in_cells()&#160;:&#160;<a class="el" href="namespaceLetheGridTools.html#a07eadfbf819afcb0b7650fba353dadfe">LetheGridTools</a></li>
 <li>find_line_sphere_intersection()&#160;:&#160;<a class="el" href="namespaceLetheGridTools.html#a417dffde43b4b9b6792dfe4a8b9d7066">LetheGridTools</a></li>
-<li>find_particle_triangle_projection()&#160;:&#160;<a class="el" href="namespaceLetheGridTools.html#a89a45669ce22bab640360a3560d27d07">LetheGridTools</a></li>
+<li>find_particle_triangle_projection()&#160;:&#160;<a class="el" href="namespaceLetheGridTools.html#a27fab7ba7182b6475b802f0e98844496">LetheGridTools</a></li>
 <li>find_point_line_distance()&#160;:&#160;<a class="el" href="namespaceLetheGridTools.html#a90583db59423ee4e85fff79df1cb0bf6">LetheGridTools</a></li>
 <li>find_point_triangle_distance()&#160;:&#160;<a class="el" href="namespaceLetheGridTools.html#a0441112a1d2ecc434246a30f9ef098a1">LetheGridTools</a></li>
 <li>FluidDynamicsInitialConditionType&#160;:&#160;<a class="el" href="namespaceParameters.html#a87f2367892b0cda4800d7fac3b21fc12">Parameters</a></li>
@@ -213,6 +220,7 @@ $(function() {
 <li>ParticleParticleContactForceModel&#160;:&#160;<a class="el" href="namespaceParameters_1_1Lagrangian.html#a2d003242b66f27f8c1fae956bd3c958a">Parameters::Lagrangian</a></li>
 <li>ParticleTriangleContactIndicator&#160;:&#160;<a class="el" href="namespaceLetheGridTools.html#aa73fd4047286eeafd3b77323f913b364">LetheGridTools</a></li>
 <li>ParticleWallContactForceModel&#160;:&#160;<a class="el" href="namespaceParameters_1_1Lagrangian.html#ab786c050e9bc6c2ea31d84c6de7d204e">Parameters::Lagrangian</a></li>
+<li>ProbabilityFunctionType&#160;:&#160;<a class="el" href="namespaceParameters_1_1Lagrangian.html#ac10ed8fb97cb27524c9f57a60c60af8e">Parameters::Lagrangian</a></li>
 <li>project_to_d_linear_object()&#160;:&#160;<a class="el" href="namespaceLetheGridTools.html#a8d97c7d2159ec1d7de69ef8127d0aef0">LetheGridTools</a></li>
 <li>PropertiesIndex&#160;:&#160;<a class="el" href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2f">DEM::CFDDEMProperties</a>, <a class="el" href="namespaceDEM_1_1DEMMPProperties.html#aca0676848b97f3864735e524aac253f8">DEM::DEMMPProperties</a>, <a class="el" href="namespaceDEM_1_1DEMProperties.html#ad4c9c6eeafe6423a5619617d6c8a5987">DEM::DEMProperties</a></li>
 </ul>
@@ -221,7 +229,7 @@ $(function() {
 <h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
 <li>reconstruct_interface()&#160;:&#160;<a class="el" href="namespaceInterfaceTools.html#a7b8f20a8d1cc30650de3b1a02ffe59b7">InterfaceTools</a></li>
 <li>RedistanciationTransformationType&#160;:&#160;<a class="el" href="namespaceParameters.html#a34edd9cb3faad925234f73958172eb84">Parameters</a></li>
-<li>RegularizationMethodType&#160;:&#160;<a class="el" href="namespaceParameters.html#a4b8b20935ce059c0194e32df6a2c76e7">Parameters</a></li>
+<li>ReinitializationMethodType&#160;:&#160;<a class="el" href="namespaceParameters.html#aa2e0fb6073129a03752879571fee0f3f">Parameters</a></li>
 <li>RollingResistanceMethod&#160;:&#160;<a class="el" href="namespaceParameters_1_1Lagrangian.html#ac41aed1853eee7a1933daa560973327b">Parameters::Lagrangian</a></li>
 <li>rotate_mapping()&#160;:&#160;<a class="el" href="namespaceLetheGridTools.html#a8a4c084733495bbef55826c11d3efb50">LetheGridTools</a></li>
 </ul>
@@ -238,6 +246,7 @@ $(function() {
 <h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
 <li>T&#160;:&#160;<a class="el" href="namespaceDEM_1_1DEMMPProperties.html#aca0676848b97f3864735e524aac253f8a32891fa53aeae88db39ab9887c6b3cd9">DEM::DEMMPProperties</a></li>
 <li>ThermalBoundaryType&#160;:&#160;<a class="el" href="namespaceParameters.html#a4ececd73effa2abc7b6af12a2a10c960">Parameters</a></li>
+<li>TimeHarmonicMaxwellCouplingStrategy&#160;:&#160;<a class="el" href="namespaceParameters.html#aa00157f43a0189c3afc66a469b3e7aae">Parameters</a></li>
 <li>type&#160;:&#160;<a class="el" href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fa7fc645e13bf44ab2563c252a213563a6">DEM::CFDDEMProperties</a>, <a class="el" href="namespaceDEM_1_1DEMMPProperties.html#aca0676848b97f3864735e524aac253f8a0aec2d7eb09eb670d3d9affc8767ba56">DEM::DEMMPProperties</a>, <a class="el" href="namespaceDEM_1_1DEMProperties.html#ad4c9c6eeafe6423a5619617d6c8a5987adf822353601a59b25120daec88de9ee3">DEM::DEMProperties</a></li>
 </ul>
 
@@ -251,15 +260,47 @@ $(function() {
 <li>vertices_cell_mapping()&#160;:&#160;<a class="el" href="namespaceLetheGridTools.html#a0fbba5f34121cc30bc7a4432f49b8ff4">LetheGridTools</a></li>
 <li>vertices_cell_mapping_with_periodic_boundaries()&#160;:&#160;<a class="el" href="namespaceLetheGridTools.html#a401a70d91df8702b067cd42f6fe38a60">LetheGridTools</a></li>
 <li>viscous&#160;:&#160;<a class="el" href="namespaceParameters_1_1Lagrangian.html#ac41aed1853eee7a1933daa560973327ba3159b09e4fa4feb4c94e9012ee881714">Parameters::Lagrangian</a></li>
-<li>VOFInitialConditionType&#160;:&#160;<a class="el" href="namespaceParameters.html#aca60e44f749baf07d4d93e3751eb1d8c">Parameters</a></li>
 <li>VoidFractionMode&#160;:&#160;<a class="el" href="namespaceParameters.html#a59bccd897a552f378b3da967e9fa803f">Parameters</a></li>
 <li>VoidFractionQuadratureRule&#160;:&#160;<a class="el" href="namespaceParameters.html#a3c3b515caf96bc00d4181a1085dfdb84">Parameters</a></li>
 <li>volumetric_contribution&#160;:&#160;<a class="el" href="namespaceDEM_1_1CFDDEMProperties.html#ae9734b9d29480269e4764c5092d87b2fa3906bf6786ff134ebbc0d81bd7f84cee">DEM::CFDDEMProperties</a></li>
 </ul>
+
+
+<h3><a id="index_w" name="index_w"></a>- w -</h3><ul>
+<li>WaveguideMode&#160;:&#160;<a class="el" href="namespaceParameters.html#a3c6eda968f919b83f3e2e3fc92c54a08">Parameters</a></li>
+</ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

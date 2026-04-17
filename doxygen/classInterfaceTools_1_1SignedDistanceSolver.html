@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -103,11 +107,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac8a5f16e3b1f378fb28d61d27006e951"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a2f538e72870490a75dfd1ea4c32612" id="r_a7a2f538e72870490a75dfd1ea4c32612"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a7a2f538e72870490a75dfd1ea4c32612">setup_dofs</a> ()</td></tr>
 <tr class="separator:a7a2f538e72870490a75dfd1ea4c32612"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0dd249772c4781c042e3b63360245859" id="r_a0dd249772c4781c042e3b63360245859"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a0dd249772c4781c042e3b63360245859">set_level_set_from_background_mesh</a> (const DoFHandler&lt; dim &gt; &amp;background_dof_handler, const VectorType &amp;background_level_set_vector)</td></tr>
+<tr class="memitem:a0dd249772c4781c042e3b63360245859" id="r_a0dd249772c4781c042e3b63360245859"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a0dd249772c4781c042e3b63360245859">set_level_set_from_background_mesh</a> (const DoFHandler&lt; dim &gt; &amp;background_dof_handler, const <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &amp;background_level_set_vector)</td></tr>
 <tr class="separator:a0dd249772c4781c042e3b63360245859"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abce98711e1cff455a529175f0b62c9cd" id="r_abce98711e1cff455a529175f0b62c9cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#abce98711e1cff455a529175f0b62c9cd">solve</a> ()</td></tr>
 <tr class="separator:abce98711e1cff455a529175f0b62c9cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b41dc84b1bc98b1c955a9fd7723a8ee" id="r_a9b41dc84b1bc98b1c955a9fd7723a8ee"><td class="memItemLeft" align="right" valign="top">VectorType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a9b41dc84b1bc98b1c955a9fd7723a8ee">get_signed_distance</a> ()</td></tr>
+<tr class="memitem:a9b41dc84b1bc98b1c955a9fd7723a8ee" id="r_a9b41dc84b1bc98b1c955a9fd7723a8ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a9b41dc84b1bc98b1c955a9fd7723a8ee">get_signed_distance</a> ()</td></tr>
 <tr class="separator:a9b41dc84b1bc98b1c955a9fd7723a8ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1eb453375d031aac483356cb638e7af" id="r_aa1eb453375d031aac483356cb638e7af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#aa1eb453375d031aac483356cb638e7af">output_interface_reconstruction</a> (const std::string &amp;output_name, const std::string &amp;output_path, const double time, const unsigned int it)</td></tr>
 <tr class="separator:aa1eb453375d031aac483356cb638e7af"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,20 +149,24 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:ab66b5812b8f001c40e3001a41784cac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af97f0d53fcf547f88fe33537a7f93a02" id="r_af97f0d53fcf547f88fe33537a7f93a02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#af97f0d53fcf547f88fe33537a7f93a02">set_face_opposite_dofs_map</a> ()</td></tr>
 <tr class="separator:af97f0d53fcf547f88fe33537a7f93a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa3f2e6bd94e7d575d4bbdfc70775842" id="r_aaa3f2e6bd94e7d575d4bbdfc70775842"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#aaa3f2e6bd94e7d575d4bbdfc70775842">set_face_dofs_map</a> ()</td></tr>
+<tr class="separator:aaa3f2e6bd94e7d575d4bbdfc70775842"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04349a3c2ae119be1d9b078b2014f06c" id="r_a04349a3c2ae119be1d9b078b2014f06c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a04349a3c2ae119be1d9b078b2014f06c">get_face_opposite_dofs</a> (unsigned int local_face_id, std::vector&lt; unsigned int &gt; &amp;local_opposite_dofs)</td></tr>
 <tr class="separator:a04349a3c2ae119be1d9b078b2014f06c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f21d3cea84ad0329be4e22b6cb1b58d" id="r_a2f21d3cea84ad0329be4e22b6cb1b58d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a2f21d3cea84ad0329be4e22b6cb1b58d">get_face_transformation_jacobian</a> (const DerivativeForm&lt; 1, dim, dim &gt; &amp;cell_transformation_jac, const unsigned int local_face_id, DerivativeForm&lt; 1, dim - 1, dim &gt; &amp;face_transformation_jac)</td></tr>
-<tr class="separator:a2f21d3cea84ad0329be4e22b6cb1b58d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9163e541f7b97a301c9b8cbaf141fac" id="r_ae9163e541f7b97a301c9b8cbaf141fac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#ae9163e541f7b97a301c9b8cbaf141fac">get_face_local_dofs</a> (unsigned int local_face_id, std::vector&lt; unsigned int &gt; &amp;local_dofs)</td></tr>
+<tr class="separator:ae9163e541f7b97a301c9b8cbaf141fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1728aa855167ae3f1f67693139befb8f" id="r_a1728aa855167ae3f1f67693139befb8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a1728aa855167ae3f1f67693139befb8f">get_face_transformation_jacobian</a> (const DerivativeForm&lt; 1, dim, dim &gt; &amp;cell_transformation_jac, const unsigned int local_face_id, LAPACKFullMatrix&lt; double &gt; &amp;face_transformation_jac)</td></tr>
+<tr class="separator:a1728aa855167ae3f1f67693139befb8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a990037f6737a88ff53820c7f36fe3dde" id="r_a990037f6737a88ff53820c7f36fe3dde"><td class="memItemLeft" align="right" valign="top">Point&lt; dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a990037f6737a88ff53820c7f36fe3dde">transform_ref_face_point_to_ref_cell</a> (const Point&lt; dim - 1 &gt; &amp;x_ref_face, const unsigned int local_face_id)</td></tr>
 <tr class="separator:a990037f6737a88ff53820c7f36fe3dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad598739c1d9201c98fb216ca0323763e" id="r_ad598739c1d9201c98fb216ca0323763e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#ad598739c1d9201c98fb216ca0323763e">compute_residual</a> (const Tensor&lt; 1, dim &gt; &amp;x_n_to_x_I_real, const Tensor&lt; 1, dim &gt; &amp;distance_gradient, const DerivativeForm&lt; 1, dim - 1, dim &gt; &amp;transformation_jac, Tensor&lt; 1, dim - 1 &gt; &amp;residual_ref)</td></tr>
-<tr class="separator:ad598739c1d9201c98fb216ca0323763e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4cf939159e55c8b1417f053000069e7" id="r_ae4cf939159e55c8b1417f053000069e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#ae4cf939159e55c8b1417f053000069e7">compute_residual</a> (const Tensor&lt; 1, dim &gt; &amp;x_n_to_x_I_real, const Tensor&lt; 1, dim &gt; &amp;distance_gradient, const LAPACKFullMatrix&lt; double &gt; &amp;transformation_jac, Tensor&lt; 1, dim - 1 &gt; &amp;residual_ref)</td></tr>
+<tr class="separator:ae4cf939159e55c8b1417f053000069e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31467261e35a5c038ecce13c22250226" id="r_a31467261e35a5c038ecce13c22250226"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a31467261e35a5c038ecce13c22250226">compute_numerical_jacobian_stencil</a> (const Point&lt; dim &gt; x_ref, const unsigned int local_face_id, const double perturbation, std::vector&lt; Point&lt; dim &gt; &gt; &amp;stencil)</td></tr>
 <tr class="separator:a31467261e35a5c038ecce13c22250226"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a291569be3e0b2564b81a318d9ee3f6e6" id="r_a291569be3e0b2564b81a318d9ee3f6e6"><td class="memItemLeft" align="right" valign="top">Tensor&lt; 1, dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a291569be3e0b2564b81a318d9ee3f6e6">transform_ref_face_correction_to_ref_cell</a> (const Vector&lt; double &gt; &amp;correction_ref_face, const unsigned int local_face_id)</td></tr>
 <tr class="separator:a291569be3e0b2564b81a318d9ee3f6e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a552aee87e6b924ca48446700fd3349c3" id="r_a552aee87e6b924ca48446700fd3349c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a552aee87e6b924ca48446700fd3349c3">compute_numerical_jacobian</a> (const std::vector&lt; Point&lt; dim &gt; &gt; &amp;stencil_real, const Point&lt; dim &gt; &amp;x_I_real, const std::vector&lt; Tensor&lt; 1, dim &gt; &gt; &amp;distance_gradients, const std::vector&lt; DerivativeForm&lt; 1, dim - 1, dim &gt; &gt; &amp;transformation_jacobians, const double perturbation, LAPACKFullMatrix&lt; double &gt; &amp;jacobian_matrix)</td></tr>
-<tr class="separator:a552aee87e6b924ca48446700fd3349c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b2dbfcc1b03e1fae13c706b7e0ea078" id="r_a3b2dbfcc1b03e1fae13c706b7e0ea078"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a3b2dbfcc1b03e1fae13c706b7e0ea078">compute_analytical_jacobian</a> (const Tensor&lt; 1, dim &gt; &amp;x_n_to_x_I_real_p1, const LAPACKFullMatrix&lt; double &gt; &amp;transformation_jacobian, const std::vector&lt; double &gt; &amp;face_local_dof_values, LAPACKFullMatrix&lt; double &gt; &amp;jacobian_matrix)</td></tr>
+<tr class="separator:a3b2dbfcc1b03e1fae13c706b7e0ea078"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5836481307520346efb8d1738e66325d" id="r_a5836481307520346efb8d1738e66325d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a5836481307520346efb8d1738e66325d">compute_distance</a> (const Tensor&lt; 1, dim &gt; &amp;x_n_to_x_I_real, const double <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a51b13f1ca5c198bec5ac1f2e24d8e711">distance</a>)</td></tr>
 <tr class="separator:a5836481307520346efb8d1738e66325d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -166,8 +174,8 @@ Private Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a83c4f1de90a30d77496917c23f5f9cb7" id="r_a83c4f1de90a30d77496917c23f5f9cb7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; FiniteElement&lt; dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a83c4f1de90a30d77496917c23f5f9cb7">fe</a></td></tr>
 <tr class="separator:a83c4f1de90a30d77496917c23f5f9cb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adef598f53c47d2a20441e1f98ab520e4" id="r_adef598f53c47d2a20441e1f98ab520e4"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; Mapping&lt; dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#adef598f53c47d2a20441e1f98ab520e4">mapping</a></td></tr>
-<tr class="separator:adef598f53c47d2a20441e1f98ab520e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec864697988710962daaa7bcf91c4890" id="r_aec864697988710962daaa7bcf91c4890"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; MappingQ&lt; dim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#aec864697988710962daaa7bcf91c4890">mapping</a></td></tr>
+<tr class="separator:aec864697988710962daaa7bcf91c4890"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50d5e1eaa04503c480ac94a59dca042c" id="r_a50d5e1eaa04503c480ac94a59dca042c"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a50d5e1eaa04503c480ac94a59dca042c">max_distance</a></td></tr>
 <tr class="separator:a50d5e1eaa04503c480ac94a59dca042c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a970cc939a88a8563391f2f374697fb31" id="r_a970cc939a88a8563391f2f374697fb31"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a970cc939a88a8563391f2f374697fb31">iso_level</a></td></tr>
@@ -184,7 +192,7 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a75de39002236f8a0d32e4a7154be7b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a847fdf450e5c8e8f19f72eafe3737365" id="r_a847fdf450e5c8e8f19f72eafe3737365"><td class="memItemLeft" align="right" valign="top">IndexSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a847fdf450e5c8e8f19f72eafe3737365">locally_active_dofs</a></td></tr>
 <tr class="separator:a847fdf450e5c8e8f19f72eafe3737365"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53672191443f586430a8b17296740a0d" id="r_a53672191443f586430a8b17296740a0d"><td class="memItemLeft" align="right" valign="top">VectorType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a53672191443f586430a8b17296740a0d">level_set</a></td></tr>
+<tr class="memitem:a53672191443f586430a8b17296740a0d" id="r_a53672191443f586430a8b17296740a0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a53672191443f586430a8b17296740a0d">level_set</a></td></tr>
 <tr class="separator:a53672191443f586430a8b17296740a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d5678c373d01150cd2ac4548b53ad33" id="r_a9d5678c373d01150cd2ac4548b53ad33"><td class="memItemLeft" align="right" valign="top">LinearAlgebra::distributed::Vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a9d5678c373d01150cd2ac4548b53ad33">signed_distance</a></td></tr>
 <tr class="separator:a9d5678c373d01150cd2ac4548b53ad33"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -212,9 +220,15 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a3742aee48ae45e322bef4c31d8b071cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d3bdfd32806ede6556a7d755dad1529" id="r_a0d3bdfd32806ede6556a7d755dad1529"><td class="memItemLeft" align="right" valign="top">std::map&lt; unsigned int, std::vector&lt; unsigned int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a0d3bdfd32806ede6556a7d755dad1529">face_opposite_dofs_map</a></td></tr>
 <tr class="separator:a0d3bdfd32806ede6556a7d755dad1529"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f5a6ef89c95af8d3cae2cea8b2a8d95" id="r_a5f5a6ef89c95af8d3cae2cea8b2a8d95"><td class="memItemLeft" align="right" valign="top">std::map&lt; unsigned int, std::vector&lt; unsigned int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#a5f5a6ef89c95af8d3cae2cea8b2a8d95">face_dofs_map</a></td></tr>
+<tr class="separator:a5f5a6ef89c95af8d3cae2cea8b2a8d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af521620b08068be6e9f9bbd22b69ca5f" id="r_af521620b08068be6e9f9bbd22b69ca5f"><td class="memItemLeft" align="right" valign="top">LAPACKFullMatrix&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#af521620b08068be6e9f9bbd22b69ca5f">hessian_matrix</a></td></tr>
+<tr class="separator:af521620b08068be6e9f9bbd22b69ca5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf849265d7590cb68a125b7d7ec6ddf8" id="r_aaf849265d7590cb68a125b7d7ec6ddf8"><td class="memItemLeft" align="right" valign="top">LAPACKFullMatrix&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html#aaf849265d7590cb68a125b7d7ec6ddf8">H_x_transformation_jacobian</a></td></tr>
+<tr class="separator:aaf849265d7590cb68a125b7d7ec6ddf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;int dim, typename VectorType&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a>&gt;<br />
 class InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;</div><p>Solver to compute the signed distance from a given level of a level-set field. It is based on the method proposed in the following article: Ausas, R.F., Dari, E.A. and Buscaglia, G.C. (2011), A geometric mass-preserving redistancing scheme for the level set function. Int. J. Numer. Meth. Fluids, 65: 989-1010. <a href="https://doi.org/10.1002/fld.2227">https://doi.org/10.1002/fld.2227</a>. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -232,13 +246,13 @@ class InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;</div><p>Solv
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::SignedDistanceSolver </td>
+          <td class="memname"><a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::SignedDistanceSolver </td>
           <td>(</td>
           <td class="paramtype">std::shared_ptr&lt; parallel::DistributedTriangulationBase&lt; dim &gt; &gt;&#160;</td>
           <td class="paramname"><em>background_triangulation</em>, </td>
@@ -301,24 +315,88 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00406">406</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
-<p class="reference">References <a class="el" href="interface__tools_8h_source.html#l00915">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;::mapping</a>, and <a class="el" href="interface__tools_8h_source.html#l00606">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;::set_face_opposite_dofs_map()</a>.</p>
+<p class="reference">References <a class="el" href="interface__tools_8h_source.html#l00983">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;::fe</a>, <a class="el" href="interface__tools_8h_source.html#l01064">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;::H_x_transformation_jacobian</a>, <a class="el" href="interface__tools_8h_source.html#l01063">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;::hessian_matrix</a>, <a class="el" href="interface__tools_8h_source.html#l00986">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;::mapping</a>, <a class="el" href="interface__tools_8h_source.html#l00640">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;::set_face_dofs_map()</a>, and <a class="el" href="interface__tools_8h_source.html#l00615">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;::set_face_opposite_dofs_map()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3b2dbfcc1b03e1fae13c706b7e0ea078" name="a3b2dbfcc1b03e1fae13c706b7e0ea078"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b2dbfcc1b03e1fae13c706b7e0ea078">&#9670;&#160;</a></span>compute_analytical_jacobian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::compute_analytical_jacobian </td>
+          <td>(</td>
+          <td class="paramtype">const Tensor&lt; 1, dim &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x_n_to_x_I_real_p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const LAPACKFullMatrix&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>transformation_jacobian</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>face_local_dof_values</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LAPACKFullMatrix&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>jacobian_matrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute the analytical jacobian at the point x_n of the distance minimization problem for the DoF x_I in the reference face space (dim - 1): J_R = J^T*H*J, where J is the face transformation jacobian, and H is the Hessian matrix in the real space (H = H(d) + H(||x_I - x_n||)). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">transformation_jacobian</td><td>face transformation jacobian</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">face_local_dof_values</td><td>values of the DoFs of the face</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">jacobian_matrix</td><td>jacobian matrix of the minimization problem </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00891">891</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+
+<p class="reference">References <a class="el" href="interface__tools_8h_source.html#l01064">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;::H_x_transformation_jacobian</a>, and <a class="el" href="interface__tools_8h_source.html#l01063">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;::hessian_matrix</a>.</p>
+
+</div>
+</div>
 <a id="a24a40307604f63e92e19dcab391839b1" name="a24a40307604f63e92e19dcab391839b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a24a40307604f63e92e19dcab391839b1">&#9670;&#160;</a></span>compute_cell_wise_volume_correction()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::compute_cell_wise_volume_correction </td>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::compute_cell_wise_volume_correction </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -333,7 +411,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p>Compute the cell-wise volume correction to match the volume englobed by the given level of the level_set field in each element. </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8cc_source.html#l01018">1018</a> of file <a class="el" href="interface__tools_8cc_source.html">interface_tools.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8cc_source.html#l00992">992</a> of file <a class="el" href="interface__tools_8cc_source.html">interface_tools.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="interface__tools_8cc_source.html#l00018">InterfaceTools::compute_cell_wise_volume()</a>.</p>
 
@@ -345,13 +423,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::compute_distance </td>
+          <td class="memname">double <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::compute_distance </td>
           <td>(</td>
           <td class="paramtype">const Tensor&lt; 1, dim &gt; &amp;&#160;</td>
           <td class="paramname"><em>x_n_to_x_I_real</em>, </td>
@@ -385,9 +463,9 @@ template&lt;int dim, typename VectorType &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>distance between x_I and the interface </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00905">905</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00976">976</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
-<p class="reference">References <a class="el" href="interface__tools_8h_source.html#l00956">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;::distance</a>.</p>
+<p class="reference">References <a class="el" href="interface__tools_8h_source.html#l01027">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;::distance</a>.</p>
 
 </div>
 </div>
@@ -397,13 +475,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::compute_first_neighbors_distance </td>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::compute_first_neighbors_distance </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -420,86 +498,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="interface__tools_8cc_source.html#l00477">477</a> of file <a class="el" href="interface__tools_8cc_source.html">interface_tools.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lethe__grid__tools_8cc_source.html#l01558">LetheGridTools::find_point_triangle_distance()</a>.</p>
-
-</div>
-</div>
-<a id="a552aee87e6b924ca48446700fd3349c3" name="a552aee87e6b924ca48446700fd3349c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a552aee87e6b924ca48446700fd3349c3">&#9670;&#160;</a></span>compute_numerical_jacobian()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::compute_numerical_jacobian </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; Point&lt; dim &gt; &gt; &amp;&#160;</td>
-          <td class="paramname"><em>stencil_real</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Point&lt; dim &gt; &amp;&#160;</td>
-          <td class="paramname"><em>x_I_real</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; Tensor&lt; 1, dim &gt; &gt; &amp;&#160;</td>
-          <td class="paramname"><em>distance_gradients</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; DerivativeForm&lt; 1, dim - 1, dim &gt; &gt; &amp;&#160;</td>
-          <td class="paramname"><em>transformation_jacobians</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>perturbation</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">LAPACKFullMatrix&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>jacobian_matrix</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Compute the numerical jacobian at the point x_n of the distance minimization problem for the DoF x_I in the reference face space (dim - 1). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">stencil_real</td><td>stencil in the real space. The evaluation point x_n corresponds to the first entry.</td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">x_I_real</td><td>coordinate of the DoF x_I in the real space</td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">distance_gradients</td><td>vector storing the distance gradients at each stencil points</td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">transformation_jacobians</td><td>vector storing the face transformation jacobians at each stencil points</td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">perturbation</td><td>value of the perturbation use for the numerical jacobian computation</td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">jacobian_matrix</td><td>jacobian matrix of the minimization problem </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00855">855</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
-
-<p class="reference">References <a class="el" href="interface__tools_8h_source.html#l00726">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;::compute_residual()</a>.</p>
+<p class="reference">References <a class="el" href="lethe__grid__tools_8cc_source.html#l01516">LetheGridTools::find_point_triangle_distance()</a>.</p>
 
 </div>
 </div>
@@ -509,13 +508,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::compute_numerical_jacobian_stencil </td>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::compute_numerical_jacobian_stencil </td>
           <td>(</td>
           <td class="paramtype">const Point&lt; dim &gt;&#160;</td>
           <td class="paramname"><em>x_ref</em>, </td>
@@ -564,23 +563,23 @@ template&lt;int dim, typename VectorType &gt; </div>
 <p>1 0 2 </p><pre class="fragment"> 3
 </pre><p> The entry 0 is the current evaluation point x_ref </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00766">766</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00811">811</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
-<a id="ad598739c1d9201c98fb216ca0323763e" name="ad598739c1d9201c98fb216ca0323763e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad598739c1d9201c98fb216ca0323763e">&#9670;&#160;</a></span>compute_residual()</h2>
+<a id="ae4cf939159e55c8b1417f053000069e7" name="ae4cf939159e55c8b1417f053000069e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4cf939159e55c8b1417f053000069e7">&#9670;&#160;</a></span>compute_residual()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::compute_residual </td>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::compute_residual </td>
           <td>(</td>
           <td class="paramtype">const Tensor&lt; 1, dim &gt; &amp;&#160;</td>
           <td class="paramname"><em>x_n_to_x_I_real</em>, </td>
@@ -594,7 +593,7 @@ template&lt;int dim, typename VectorType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const DerivativeForm&lt; 1, dim - 1, dim &gt; &amp;&#160;</td>
+          <td class="paramtype">const LAPACKFullMatrix&lt; double &gt; &amp;&#160;</td>
           <td class="paramname"><em>transformation_jac</em>, </td>
         </tr>
         <tr>
@@ -627,7 +626,7 @@ template&lt;int dim, typename VectorType &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00726">726</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00775">775</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -637,13 +636,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::compute_second_neighbors_distance </td>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::compute_second_neighbors_distance </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -670,13 +669,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::compute_signed_distance_from_distance </td>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::compute_signed_distance_from_distance </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -691,9 +690,9 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p>Compute the signed_distance from the distance vector and the sign of the signed_distance vector entries. </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8cc_source.html#l00987">987</a> of file <a class="el" href="interface__tools_8cc_source.html">interface_tools.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8cc_source.html#l00961">961</a> of file <a class="el" href="interface__tools_8cc_source.html">interface_tools.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="utilities_8h_source.html#l00334">sgn()</a>.</p>
+<p class="reference">References <a class="el" href="core_2utilities_8h_source.html#l00334">sgn()</a>.</p>
 
 </div>
 </div>
@@ -703,13 +702,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::conserve_global_volume </td>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::conserve_global_volume </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -724,7 +723,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p>Correct the global volume to match the volume englobed by the given level of the level_set field. </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8cc_source.html#l01194">1194</a> of file <a class="el" href="interface__tools_8cc_source.html">interface_tools.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8cc_source.html#l01168">1168</a> of file <a class="el" href="interface__tools_8cc_source.html">interface_tools.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="interface__tools_8cc_source.html#l00068">InterfaceTools::compute_surface_and_volume()</a>, and <a class="el" href="namespaceParameters.html#a91f1943180a615249347b911b0ed3919a556966c7830465dc4623d62e32cec31d">Parameters::quiet</a>.</p>
 
@@ -736,13 +735,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::exchange_distance </td>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::exchange_distance </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -767,10 +766,10 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="output__struct_8h.html#a24c1f4e015db04387ac9c28a58ee7378">OutputStruct</a>&lt; dim, <a class="el" href="vector_8h.html#a4ea4005d75c88e60bee47d4e79a13a39">GlobalVectorType</a> &gt; &gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::gather_output_hook </td>
+          <td class="memname">std::vector&lt; <a class="el" href="output__struct_8h.html#a24c1f4e015db04387ac9c28a58ee7378">OutputStruct</a>&lt; dim, <a class="el" href="vector_8h.html#a4ea4005d75c88e60bee47d4e79a13a39">GlobalVectorType</a> &gt; &gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::gather_output_hook </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -781,7 +780,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 <p>Gather and return vector of output structs that are particular to some applications. </p>
 <dl class="section return"><dt>Returns</dt><dd>Vector of OutputStructs that will be used to write the output results as VTU files. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8cc_source.html#l01393">1393</a> of file <a class="el" href="interface__tools_8cc_source.html">interface_tools.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8cc_source.html#l01367">1367</a> of file <a class="el" href="interface__tools_8cc_source.html">interface_tools.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="vector_8h_source.html#l00035">convert_vector_dealii_to_trilinos()</a>.</p>
 
@@ -793,13 +792,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::get_dof_opposite_faces </td>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::get_dof_opposite_faces </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>local_dof_id</em>, </td>
@@ -832,7 +831,58 @@ template&lt;int dim, typename VectorType &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00589">589</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00598">598</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+
+</div>
+</div>
+<a id="ae9163e541f7b97a301c9b8cbaf141fac" name="ae9163e541f7b97a301c9b8cbaf141fac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9163e541f7b97a301c9b8cbaf141fac">&#9670;&#160;</a></span>get_face_local_dofs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::get_face_local_dofs </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>local_face_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; unsigned int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>local_dofs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the local id of the face DoFs (works for quad only). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">local_face_id</td><td>Local id of the face in the cell</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">local_dofs</td><td>The vector containing the id of the local DoFs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00686">686</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+
+<p class="reference">References <a class="el" href="interface__tools_8h_source.html#l01061">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;::face_dofs_map</a>.</p>
 
 </div>
 </div>
@@ -842,13 +892,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::get_face_opposite_dofs </td>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::get_face_opposite_dofs </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>local_face_id</em>, </td>
@@ -876,30 +926,30 @@ template&lt;int dim, typename VectorType &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">local_face_id</td><td>Local id of the face in the cell</td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">local_opposite_dofs</td><td>The vector containing the id of the opposite faces </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">local_opposite_dofs</td><td>The vector containing the id of the opposite DoFs </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00637">637</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00671">671</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
-<p class="reference">References <a class="el" href="interface__tools_8h_source.html#l00988">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;::face_opposite_dofs_map</a>.</p>
+<p class="reference">References <a class="el" href="interface__tools_8h_source.html#l01059">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;::face_opposite_dofs_map</a>.</p>
 
 </div>
 </div>
-<a id="a2f21d3cea84ad0329be4e22b6cb1b58d" name="a2f21d3cea84ad0329be4e22b6cb1b58d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f21d3cea84ad0329be4e22b6cb1b58d">&#9670;&#160;</a></span>get_face_transformation_jacobian()</h2>
+<a id="a1728aa855167ae3f1f67693139befb8f" name="a1728aa855167ae3f1f67693139befb8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1728aa855167ae3f1f67693139befb8f">&#9670;&#160;</a></span>get_face_transformation_jacobian()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::get_face_transformation_jacobian </td>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::get_face_transformation_jacobian </td>
           <td>(</td>
           <td class="paramtype">const DerivativeForm&lt; 1, dim, dim &gt; &amp;&#160;</td>
           <td class="paramname"><em>cell_transformation_jac</em>, </td>
@@ -913,7 +963,7 @@ template&lt;int dim, typename VectorType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">DerivativeForm&lt; 1, dim - 1, dim &gt; &amp;&#160;</td>
+          <td class="paramtype">LAPACKFullMatrix&lt; double &gt; &amp;&#160;</td>
           <td class="paramname"><em>face_transformation_jac</em>&#160;</td>
         </tr>
         <tr>
@@ -939,7 +989,7 @@ template&lt;int dim, typename VectorType &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00657">657</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00706">706</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -949,10 +999,10 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">VectorType &amp; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::get_signed_distance </td>
+          <td class="memname"><a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &amp; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::get_signed_distance </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -973,13 +1023,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::initialize_distance </td>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::initialize_distance </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -996,7 +1046,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="interface__tools_8cc_source.html#l00381">381</a> of file <a class="el" href="interface__tools_8cc_source.html">interface_tools.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="utilities_8h_source.html#l00334">sgn()</a>.</p>
+<p class="reference">References <a class="el" href="core_2utilities_8h_source.html#l00334">sgn()</a>.</p>
 
 </div>
 </div>
@@ -1006,10 +1056,10 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::output_interface_reconstruction </td>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::output_interface_reconstruction </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>output_name</em>, </td>
@@ -1052,7 +1102,7 @@ template&lt;int dim, typename VectorType &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8cc_source.html#l01344">1344</a> of file <a class="el" href="interface__tools_8cc_source.html">interface_tools.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8cc_source.html#l01318">1318</a> of file <a class="el" href="interface__tools_8cc_source.html">interface_tools.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="interface__tools_8h_source.html#l00358">InterfaceTools::InterfaceReconstructionDataOut&lt; dim &gt;::build_patches()</a>, and <a class="el" href="solutions__output_8cc_source.html#l00017">write_vtu_and_pvd()</a>.</p>
 
@@ -1064,10 +1114,10 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::output_signed_distance </td>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::output_signed_distance </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>output_name</em>, </td>
@@ -1110,9 +1160,42 @@ template&lt;int dim, typename VectorType &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8cc_source.html#l01367">1367</a> of file <a class="el" href="interface__tools_8cc_source.html">interface_tools.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8cc_source.html#l01341">1341</a> of file <a class="el" href="interface__tools_8cc_source.html">interface_tools.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="solutions__output_8cc_source.html#l00017">write_vtu_and_pvd()</a>.</p>
+
+</div>
+</div>
+<a id="aaa3f2e6bd94e7d575d4bbdfc70775842" name="aaa3f2e6bd94e7d575d4bbdfc70775842"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa3f2e6bd94e7d575d4bbdfc70775842">&#9670;&#160;</a></span>set_face_dofs_map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::set_face_dofs_map </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the map of local id of the face DoFs (works for quad only). </p>
+
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00640">640</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+
+<p class="reference">References <a class="el" href="interface__tools_8h_source.html#l01061">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;::face_dofs_map</a>.</p>
 
 </div>
 </div>
@@ -1122,13 +1205,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::set_face_opposite_dofs_map </td>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::set_face_opposite_dofs_map </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1143,9 +1226,9 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p>Set the map of local id of the opposite DoFs to the given face (works for quad only). </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00606">606</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00615">615</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
-<p class="reference">References <a class="el" href="interface__tools_8h_source.html#l00988">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;::face_opposite_dofs_map</a>.</p>
+<p class="reference">References <a class="el" href="interface__tools_8h_source.html#l01059">InterfaceTools::SignedDistanceSolver&lt; dim, VectorType &gt;::face_opposite_dofs_map</a>.</p>
 
 </div>
 </div>
@@ -1155,10 +1238,10 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::set_level_set_from_background_mesh </td>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::set_level_set_from_background_mesh </td>
           <td>(</td>
           <td class="paramtype">const DoFHandler&lt; dim &gt; &amp;&#160;</td>
           <td class="paramname"><em>background_dof_handler</em>, </td>
@@ -1166,7 +1249,7 @@ template&lt;int dim, typename VectorType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const VectorType &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &amp;&#160;</td>
           <td class="paramname"><em>background_level_set_vector</em>&#160;</td>
         </tr>
         <tr>
@@ -1178,7 +1261,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 </div><div class="memdoc">
 
 <p>Set the level-set field from the background mesh solver. </p>
-<p>This function transfers the level-set field from the main solver to the signed distance solver. For example, when using geometric redistanciation of the VOF phase fraction, the level-set field comes from the VOF solver.</p>
+<p>This function transfers the level-set field from the main solver to the signed distance solver. For example, when using geometric redistanciation of the CLS phase indicator, the level-set field comes from the CLS solver.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">background_dof_handler</td><td>DoFHandler corresponding to the level-set field solver. </td></tr>
@@ -1197,10 +1280,10 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::setup_dofs </td>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::setup_dofs </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1221,10 +1304,10 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::solve </td>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::solve </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1237,7 +1320,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="interface__tools_8cc_source.html#l00330">330</a> of file <a class="el" href="interface__tools_8cc_source.html">interface_tools.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="utilities_8h_source.html#l00468">announce_string()</a>, <a class="el" href="namespaceParameters.html#a91f1943180a615249347b911b0ed3919a556966c7830465dc4623d62e32cec31d">Parameters::quiet</a>, and <a class="el" href="interface__tools_8cc_source.html#l00161">InterfaceTools::reconstruct_interface()</a>.</p>
+<p class="reference">References <a class="el" href="core_2utilities_8h_source.html#l00468">announce_string()</a>, <a class="el" href="namespaceParameters.html#a91f1943180a615249347b911b0ed3919a556966c7830465dc4623d62e32cec31d">Parameters::quiet</a>, and <a class="el" href="interface__tools_8cc_source.html#l00161">InterfaceTools::reconstruct_interface()</a>.</p>
 
 </div>
 </div>
@@ -1247,13 +1330,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Tensor&lt; 1, dim &gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::transform_ref_face_correction_to_ref_cell </td>
+          <td class="memname">Tensor&lt; 1, dim &gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::transform_ref_face_correction_to_ref_cell </td>
           <td>(</td>
           <td class="paramtype">const Vector&lt; double &gt; &amp;&#160;</td>
           <td class="paramname"><em>correction_ref_face</em>, </td>
@@ -1287,7 +1370,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>tensor dim in the reference cell </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00811">811</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00856">856</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -1297,13 +1380,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Point&lt; dim &gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::transform_ref_face_point_to_ref_cell </td>
+          <td class="memname">Point&lt; dim &gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::transform_ref_face_point_to_ref_cell </td>
           <td>(</td>
           <td class="paramtype">const Point&lt; dim - 1 &gt; &amp;&#160;</td>
           <td class="paramname"><em>x_ref_face</em>, </td>
@@ -1337,7 +1420,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Point dim in the reference cell </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00690">690</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00739">739</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -1347,13 +1430,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::update_ghost_values </td>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::update_ghost_values </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1378,13 +1461,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::zero_out_ghost_values </td>
+          <td class="memname">void <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::zero_out_ghost_values </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1410,13 +1493,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">AffineConstraints&lt;double&gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::constraints</td>
+          <td class="memname">AffineConstraints&lt;double&gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::constraints</td>
         </tr>
       </table>
   </td>
@@ -1428,7 +1511,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p>Hanging node constraints. </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00967">967</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l01038">1038</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -1438,13 +1521,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">LinearAlgebra::distributed::Vector&lt;double&gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::distance</td>
+          <td class="memname">LinearAlgebra::distributed::Vector&lt;double&gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::distance</td>
         </tr>
       </table>
   </td>
@@ -1456,7 +1539,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p>Solution vector of the distance (write only) </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00956">956</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l01027">1027</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -1466,13 +1549,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">LinearAlgebra::distributed::Vector&lt;double&gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::distance_with_ghost</td>
+          <td class="memname">LinearAlgebra::distributed::Vector&lt;double&gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::distance_with_ghost</td>
         </tr>
       </table>
   </td>
@@ -1483,7 +1566,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 </div><div class="memdoc">
 <p>Solution vector of the distance with ghost values (read-only version of distance) </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00960">960</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l01031">1031</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -1493,33 +1576,33 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">DoFHandler&lt;dim&gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::dof_handler</td>
+          <td class="memname">DoFHandler&lt;dim&gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::dof_handler</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>DoFHandler describing the problem. </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00514">514</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00523">523</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
-<a id="a0d3bdfd32806ede6556a7d755dad1529" name="a0d3bdfd32806ede6556a7d755dad1529"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d3bdfd32806ede6556a7d755dad1529">&#9670;&#160;</a></span>face_opposite_dofs_map</h2>
+<a id="a5f5a6ef89c95af8d3cae2cea8b2a8d95" name="a5f5a6ef89c95af8d3cae2cea8b2a8d95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f5a6ef89c95af8d3cae2cea8b2a8d95">&#9670;&#160;</a></span>face_dofs_map</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::map&lt;unsigned int, std::vector&lt;unsigned int&gt; &gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::face_opposite_dofs_map</td>
+          <td class="memname">std::map&lt;unsigned int, std::vector&lt;unsigned int&gt; &gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::face_dofs_map</td>
         </tr>
       </table>
   </td>
@@ -1529,7 +1612,33 @@ template&lt;int dim, typename VectorType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00988">988</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l01061">1061</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+
+</div>
+</div>
+<a id="a0d3bdfd32806ede6556a7d755dad1529" name="a0d3bdfd32806ede6556a7d755dad1529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d3bdfd32806ede6556a7d755dad1529">&#9670;&#160;</a></span>face_opposite_dofs_map</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;unsigned int, std::vector&lt;unsigned int&gt; &gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::face_opposite_dofs_map</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l01059">1059</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -1539,13 +1648,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt;FiniteElement&lt;dim&gt; &gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::fe</td>
+          <td class="memname">std::shared_ptr&lt;FiniteElement&lt;dim&gt; &gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::fe</td>
         </tr>
       </table>
   </td>
@@ -1557,7 +1666,59 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p>Finite element discretizing the problem. </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00912">912</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00983">983</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+
+</div>
+</div>
+<a id="aaf849265d7590cb68a125b7d7ec6ddf8" name="aaf849265d7590cb68a125b7d7ec6ddf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf849265d7590cb68a125b7d7ec6ddf8">&#9670;&#160;</a></span>H_x_transformation_jacobian</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LAPACKFullMatrix&lt;double&gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::H_x_transformation_jacobian</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l01064">1064</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+
+</div>
+</div>
+<a id="af521620b08068be6e9f9bbd22b69ca5f" name="af521620b08068be6e9f9bbd22b69ca5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af521620b08068be6e9f9bbd22b69ca5f">&#9670;&#160;</a></span>hessian_matrix</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LAPACKFullMatrix&lt;double&gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::hessian_matrix</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l01063">1063</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -1567,13 +1728,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::map&lt;types::global_cell_index, std::vector&lt;CellData&lt;dim - 1&gt; &gt; &gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::interface_reconstruction_cells</td>
+          <td class="memname">std::map&lt;types::global_cell_index, std::vector&lt;CellData&lt;dim - 1&gt; &gt; &gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::interface_reconstruction_cells</td>
         </tr>
       </table>
   </td>
@@ -1584,7 +1745,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 </div><div class="memdoc">
 <p>Surface cells of the interface reconstruction stored in a cell-wise map (volume cell) </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00977">977</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l01048">1048</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -1594,13 +1755,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::map&lt;types::global_cell_index, std::vector&lt;Point&lt;dim&gt; &gt; &gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::interface_reconstruction_vertices</td>
+          <td class="memname">std::map&lt;types::global_cell_index, std::vector&lt;Point&lt;dim&gt; &gt; &gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::interface_reconstruction_vertices</td>
         </tr>
       </table>
   </td>
@@ -1611,7 +1772,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 </div><div class="memdoc">
 <p>Surface vertices of the interface reconstruction stored in a cell-wise map (volume cell) </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00972">972</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l01043">1043</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -1621,13 +1782,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::set&lt;types::global_dof_index&gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::intersected_dofs</td>
+          <td class="memname">std::set&lt;types::global_dof_index&gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::intersected_dofs</td>
         </tr>
       </table>
   </td>
@@ -1639,7 +1800,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p>Set of DoFs belonging to intersected cells. </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00980">980</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l01051">1051</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -1649,13 +1810,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const double <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::iso_level</td>
+          <td class="memname">const double <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::iso_level</td>
         </tr>
       </table>
   </td>
@@ -1666,7 +1827,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 </div><div class="memdoc">
 <p>Iso-level describing the interface from which the signed distance is computed (after scaling!!) </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00922">922</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00993">993</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -1676,13 +1837,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">VectorType <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::level_set</td>
+          <td class="memname"><a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::level_set</td>
         </tr>
       </table>
   </td>
@@ -1694,7 +1855,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p>Level-set field coming from the main solver. </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00943">943</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l01014">1014</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -1704,13 +1865,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">IndexSet <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::locally_active_dofs</td>
+          <td class="memname">IndexSet <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::locally_active_dofs</td>
         </tr>
       </table>
   </td>
@@ -1722,7 +1883,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p>Set of locally active DoFs. </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00940">940</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l01011">1011</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -1732,13 +1893,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">IndexSet <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::locally_owned_dofs</td>
+          <td class="memname">IndexSet <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::locally_owned_dofs</td>
         </tr>
       </table>
   </td>
@@ -1750,7 +1911,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p>Set of locally owned DoFs. </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00934">934</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l01005">1005</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -1760,13 +1921,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">IndexSet <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::locally_relevant_dofs</td>
+          <td class="memname">IndexSet <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::locally_relevant_dofs</td>
         </tr>
       </table>
   </td>
@@ -1778,23 +1939,23 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p>Set of locally relevant DoFs. </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00937">937</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l01008">1008</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
-<a id="adef598f53c47d2a20441e1f98ab520e4" name="adef598f53c47d2a20441e1f98ab520e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adef598f53c47d2a20441e1f98ab520e4">&#9670;&#160;</a></span>mapping</h2>
+<a id="aec864697988710962daaa7bcf91c4890" name="aec864697988710962daaa7bcf91c4890"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec864697988710962daaa7bcf91c4890">&#9670;&#160;</a></span>mapping</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt;Mapping&lt;dim&gt; &gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::mapping</td>
+          <td class="memname">std::shared_ptr&lt;MappingQ&lt;dim&gt; &gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::mapping</td>
         </tr>
       </table>
   </td>
@@ -1806,7 +1967,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p>Mapping between the real and reference space. </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00915">915</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00986">986</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -1816,13 +1977,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const double <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::max_distance</td>
+          <td class="memname">const double <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::max_distance</td>
         </tr>
       </table>
   </td>
@@ -1834,7 +1995,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p>Maximum redistanciation distance. </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00918">918</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00989">989</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -1844,13 +2005,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ConditionalOStream <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::pcout</td>
+          <td class="memname">ConditionalOStream <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::pcout</td>
         </tr>
       </table>
   </td>
@@ -1862,7 +2023,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p>Parallel output stream. </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00931">931</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l01002">1002</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -1872,13 +2033,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPVDHandler.html">PVDHandler</a> <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::pvd_handler_reconstruction</td>
+          <td class="memname"><a class="el" href="classPVDHandler.html">PVDHandler</a> <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::pvd_handler_reconstruction</td>
         </tr>
       </table>
   </td>
@@ -1890,7 +2051,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p><a class="el" href="classPVDHandler.html" title="The PVDHandler class manages the storage of the information required to write pvd file....">PVDHandler</a> for interface reconstruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00983">983</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l01054">1054</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -1900,13 +2061,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPVDHandler.html">PVDHandler</a> <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::pvd_handler_signed_distance</td>
+          <td class="memname"><a class="el" href="classPVDHandler.html">PVDHandler</a> <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::pvd_handler_signed_distance</td>
         </tr>
       </table>
   </td>
@@ -1918,7 +2079,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p><a class="el" href="classPVDHandler.html" title="The PVDHandler class manages the storage of the information required to write pvd file....">PVDHandler</a> for signed distance. </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00986">986</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l01057">1057</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -1928,13 +2089,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const double <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::scaling</td>
+          <td class="memname">const double <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::scaling</td>
         </tr>
       </table>
   </td>
@@ -1946,7 +2107,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p>Scaling factor to apply to the input level-set field. </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00925">925</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00996">996</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -1956,13 +2117,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">LinearAlgebra::distributed::Vector&lt;double&gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::signed_distance</td>
+          <td class="memname">LinearAlgebra::distributed::Vector&lt;double&gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::signed_distance</td>
         </tr>
       </table>
   </td>
@@ -1974,7 +2135,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p>Solution vector of the signed distance (write only) </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00946">946</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l01017">1017</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -1984,13 +2145,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="vector_8h.html#a4ea4005d75c88e60bee47d4e79a13a39">GlobalVectorType</a> <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::signed_distance_output</td>
+          <td class="memname"><a class="el" href="vector_8h.html#a4ea4005d75c88e60bee47d4e79a13a39">GlobalVectorType</a> <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::signed_distance_output</td>
         </tr>
       </table>
   </td>
@@ -2002,7 +2163,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p>Solution vector of the signed distance as used for output only. </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00949">949</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l01020">1020</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -2012,13 +2173,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">LinearAlgebra::distributed::Vector&lt;double&gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::signed_distance_with_ghost</td>
+          <td class="memname">LinearAlgebra::distributed::Vector&lt;double&gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::signed_distance_with_ghost</td>
         </tr>
       </table>
   </td>
@@ -2029,7 +2190,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 </div><div class="memdoc">
 <p>Solution vector of the signed distance with ghost values (read-only version of signed_distance) </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00953">953</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l01024">1024</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -2039,13 +2200,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespaceParameters.html#a91f1943180a615249347b911b0ed3919">Parameters::Verbosity</a> <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::verbosity</td>
+          <td class="memname">const <a class="el" href="namespaceParameters.html#a91f1943180a615249347b911b0ed3919">Parameters::Verbosity</a> <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::verbosity</td>
         </tr>
       </table>
   </td>
@@ -2057,7 +2218,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 
 <p>Verbosity level. </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00928">928</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00999">999</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -2067,13 +2228,13 @@ template&lt;int dim, typename VectorType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int dim, typename VectorType &gt; </div>
+template&lt;int dim, typename <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">LinearAlgebra::distributed::Vector&lt;double&gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, VectorType &gt;::volume_correction</td>
+          <td class="memname">LinearAlgebra::distributed::Vector&lt;double&gt; <a class="el" href="classInterfaceTools_1_1SignedDistanceSolver.html">InterfaceTools::SignedDistanceSolver</a>&lt; dim, <a class="el" href="time__harmonic__maxwell_8h.html#a5114f84176ad5081553f88d2b5d2525e">VectorType</a> &gt;::volume_correction</td>
         </tr>
       </table>
   </td>
@@ -2084,7 +2245,7 @@ template&lt;int dim, typename VectorType &gt; </div>
 </div><div class="memdoc">
 <p>Value of the correction to apply to the signed_distance to match the cell-wise volume encompassed by the level 0 of level_set </p>
 
-<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l00964">964</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interface__tools_8h_source.html#l01035">1035</a> of file <a class="el" href="interface__tools_8h_source.html">interface_tools.h</a>.</p>
 
 </div>
 </div>
@@ -2093,9 +2254,37 @@ template&lt;int dim, typename VectorType &gt; </div>
 <li>/home/runner/work/lethe/lethe/source/core/<a class="el" href="interface__tools_8cc_source.html">interface_tools.cc</a></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

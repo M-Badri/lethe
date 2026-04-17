@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -93,12 +97,7 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for VANSAssemblerKochHill&lt; dim &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="classVANSAssemblerKochHill__inherit__graph.png" border="0" usemap="#aVANSAssemblerKochHill_3_01dim_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="aVANSAssemblerKochHill_3_01dim_01_4_inherit__map" id="aVANSAssemblerKochHill_3_01dim_01_4_inherit__map">
-<area shape="rect" title="Class that assembles the drag force using the Koch and Hill drag model for the VANS equations where t..." alt="" coords="17,93,197,133"/>
-<area shape="rect" href="classParticleFluidAssemblerBase.html" title="A pure virtual class that serves as an interface for all of the assemblers for the particle_fluid int..." alt="" coords="5,5,208,45"/>
-<area shape="poly" title=" " alt="" coords="109,59,109,93,104,93,104,59"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classVANSAssemblerKochHill__inherit__graph.svg" width="214" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -118,15 +117,44 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int dim&gt;<br />
-class VANSAssemblerKochHill&lt; dim &gt;</div><p>Class that assembles the drag force using the Koch and Hill drag model for the VANS equations where the momentum exchange coefficient beta = ((18 * mu * cell_void_fraction^2 * (1 - cell_void_fraction)) / pow(dp, 2)) * (f0 + 0.5 * f3 * cell_void_fraction * re) * Vp /(1 - cell_void_fraction) where f0 and f3 are functions given by: if ((1 - cell_void_fraction) &lt; 0.4) { f0 = (1 + 3 * sqrt((1 - cell_void_fraction) / 2) + (135.0 / 64) * (1 - cell_void_fraction) * log(1 - cell_void_fraction) + 16.14 * (1 - cell_void_fraction)) / (1 + 0.681 * (1 - cell_void_fraction) - 8.48 * (1 - cell_void_fraction)^2 + 8.14 * (1 - cell_void_fraction)^3); } else if ((1 - cell_void_fraction) &gt;= 0.4) { f0 = 10 * (1 - cell_void_fraction) / cell_void_fraction^3; } f3 = 0.0673 + 0.212 * (1 - cell_void_fraction) + 0.0232 / pow(cell_void_fraction, 5);. </p>
+class VANSAssemblerKochHill&lt; dim &gt;</div><p>Assembler for the drag force using the Koch and Hill drag model. </p>
+<p>The momentum exchange coefficient is computed as:  </p><p class="formulaDsp">
+\[
+\beta = \frac{18 \mu \varepsilon^2 (1 - \varepsilon)}{d_p^2}
+        \left(F_0 + \frac{1}{2} F_3 \varepsilon \text{Re}_p\right)
+        \frac{V_p}{1 - \varepsilon}
+\]
+</p>
+<p>where \( F_0 \) and \( F_3 \) are defined as:</p>
+<p>For \( (1 - \varepsilon) &lt; 0.4 \):  </p><p class="formulaDsp">
+\[
+F_0 = \frac{1 + 3\sqrt{(1-\varepsilon)/2}
+       + \frac{135}{64}(1-\varepsilon)\ln(1-\varepsilon)
+       + 16.14(1-\varepsilon)}
+      {1 + 0.681(1-\varepsilon)
+       - 8.48(1-\varepsilon)^2
+       + 8.14(1-\varepsilon)^3}
+\]
+</p>
+<p>For \( (1 - \varepsilon) \geq 0.4 \):  </p><p class="formulaDsp">
+\[
+F_0 = \frac{10(1-\varepsilon)}{\varepsilon^3}
+\]
+</p>
+<p>and:  </p><p class="formulaDsp">
+\[
+F_3 = 0.0673 + 0.212(1-\varepsilon) + \frac{0.0232}{\varepsilon^5}
+\]
+</p>
+<p>where \( \varepsilon \) is the cell void fraction, \( \mu \) is the dynamic viscosity, \( d_p \) is the particle diameter, \( V_p \) is the particle volume, and \( \text{Re}_p \) is the particle Reynolds number.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">dim</td><td>An integer that denotes the number of spatial dimensions </td></tr>
+    <tr><td class="paramname">dim</td><td>An integer that denotes the number of spatial dimensions. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vans__assemblers_8h_source.html#l00313">313</a> of file <a class="el" href="vans__assemblers_8h_source.html">vans_assemblers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vans__assemblers_8h_source.html#l00429">429</a> of file <a class="el" href="vans__assemblers_8h_source.html">vans_assemblers.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a07bdde0208d8c07e08fd924ce43040d4" name="a07bdde0208d8c07e08fd924ce43040d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a07bdde0208d8c07e08fd924ce43040d4">&#9670;&#160;</a></span>VANSAssemblerKochHill()</h2>
@@ -154,7 +182,15 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vans__assemblers_8h_source.html#l00316">316</a> of file <a class="el" href="vans__assemblers_8h_source.html">vans_assemblers.h</a>.</p>
+<p>Construct a <a class="el" href="classVANSAssemblerKochHill.html" title="Assembler for the drag force using the Koch and Hill drag model.">VANSAssemblerKochHill</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cfd_dem</td><td>CFD-DEM simulation parameters. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="vans__assemblers_8h_source.html#l00437">437</a> of file <a class="el" href="vans__assemblers_8h_source.html">vans_assemblers.h</a>.</p>
 
 </div>
 </div>
@@ -185,7 +221,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>calculate_particle_fluid_interactions calculates the solid-fluid interaction of the Koch-Hill drag model. </p>
+<p>Calculate the particle-fluid interactions resulting from drag, using the Koch-Hill model. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">scratch_data</td><td>(see base class) </td></tr>
@@ -195,9 +231,9 @@ template&lt;int dim&gt; </div>
 
 <p>Implements <a class="el" href="classParticleFluidAssemblerBase.html#a273a79d7265d8eaf8af65287186f4fea">ParticleFluidAssemblerBase&lt; dim &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="vans__assemblers_8cc_source.html#l01186">1186</a> of file <a class="el" href="vans__assemblers_8cc_source.html">vans_assemblers.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vans__assemblers_8cc_source.html#l01242">1242</a> of file <a class="el" href="vans__assemblers_8cc_source.html">vans_assemblers.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01538">NavierStokesScratchData&lt; dim &gt;::beta_drag</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01531">NavierStokesScratchData&lt; dim &gt;::cell_void_fraction</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01537">NavierStokesScratchData&lt; dim &gt;::cell_volume</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01405">NavierStokesScratchData&lt; dim &gt;::density_at_particle_location</a>, <a class="el" href="physical__properties__manager_8h_source.html#l00278">PhysicalPropertiesManager::density_is_constant()</a>, <a class="el" href="dem__properties_8h_source.html#l00061">DEM::CFDDEMProperties::dp</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01539">NavierStokesScratchData&lt; dim &gt;::explicit_particle_volumetric_acceleration_on_fluid</a>, <a class="el" href="dem__properties_8h_source.html#l00079">DEM::CFDDEMProperties::fem_drag_x</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01523">NavierStokesScratchData&lt; dim &gt;::fluid_particle_relative_velocity_at_particle_location</a>, <a class="el" href="namespaceParameters.html#ab888bbb141fede015eec33a09e2a5e46a555ede1f7c02f9ecb183480feb7ae143">Parameters::fully_implicit</a>, <a class="el" href="physical__properties__manager_8h_source.html#l00266">PhysicalPropertiesManager::is_non_newtonian()</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01417">NavierStokesScratchData&lt; dim &gt;::kinematic_viscosity_at_particle_location</a>, <a class="el" href="dem__properties_8h_source.html#l00086">DEM::CFDDEMProperties::momentum_transfer_coefficient</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01535">NavierStokesScratchData&lt; dim &gt;::pic</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01374">NavierStokesScratchData&lt; dim &gt;::properties_manager</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01532">NavierStokesScratchData&lt; dim &gt;::Re_particle</a>, and <a class="el" href="namespaceParameters.html#ab888bbb141fede015eec33a09e2a5e46a39bb015dfcfb544585920f86387836b7">Parameters::semi_implicit</a>.</p>
+<p class="reference">References <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01629">NavierStokesScratchData&lt; dim &gt;::beta_drag</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01622">NavierStokesScratchData&lt; dim &gt;::cell_void_fraction</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01628">NavierStokesScratchData&lt; dim &gt;::cell_volume</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01484">NavierStokesScratchData&lt; dim &gt;::density_at_particle_location</a>, <a class="el" href="physical__properties__manager_8h_source.html#l00410">PhysicalPropertiesManager::density_is_constant()</a>, <a class="el" href="dem__properties_8h_source.html#l00094">DEM::CFDDEMProperties::dp</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01630">NavierStokesScratchData&lt; dim &gt;::explicit_particle_volumetric_acceleration_on_fluid</a>, <a class="el" href="dem__properties_8h_source.html#l00122">DEM::CFDDEMProperties::fem_drag_x</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01609">NavierStokesScratchData&lt; dim &gt;::fluid_particle_relative_velocity_at_particle_location</a>, <a class="el" href="namespaceParameters.html#ab888bbb141fede015eec33a09e2a5e46a555ede1f7c02f9ecb183480feb7ae143">Parameters::fully_implicit</a>, <a class="el" href="physical__properties__manager_8h_source.html#l00398">PhysicalPropertiesManager::is_non_newtonian()</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01496">NavierStokesScratchData&lt; dim &gt;::kinematic_viscosity_at_particle_location</a>, <a class="el" href="dem__properties_8h_source.html#l00136">DEM::CFDDEMProperties::momentum_transfer_coefficient</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01626">NavierStokesScratchData&lt; dim &gt;::pic</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01452">NavierStokesScratchData&lt; dim &gt;::properties_manager</a>, <a class="el" href="navier__stokes__scratch__data_8h_source.html#l01623">NavierStokesScratchData&lt; dim &gt;::Re_particle</a>, and <a class="el" href="namespaceParameters.html#ab888bbb141fede015eec33a09e2a5e46a39bb015dfcfb544585920f86387836b7">Parameters::semi_implicit</a>.</p>
 
 </div>
 </div>
@@ -216,7 +252,9 @@ template&lt;int dim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vans__assemblers_8h_source.html#l00330">330</a> of file <a class="el" href="vans__assemblers_8h_source.html">vans_assemblers.h</a>.</p>
+<p>CFD-DEM simulation parameters. </p>
+
+<p class="definition">Definition at line <a class="el" href="vans__assemblers_8h_source.html#l00452">452</a> of file <a class="el" href="vans__assemblers_8h_source.html">vans_assemblers.h</a>.</p>
 
 </div>
 </div>
@@ -225,9 +263,37 @@ template&lt;int dim&gt; </div>
 <li>/home/runner/work/lethe/lethe/source/fem-dem/<a class="el" href="vans__assemblers_8cc_source.html">vans_assemblers.cc</a></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

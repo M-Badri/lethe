@@ -176,6 +176,7 @@
 <li class="toctree-l3"><a class="reference internal" href="parameters/cfd/boundary_conditions_multiphysics.html">Boundary Conditions - Multiphysics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="parameters/cfd/box_refinement.html">Box Refinement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="parameters/cfd/cahn_hilliard.html">Cahn-Hilliard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/cfd/conservative_level_set.html">Conservative Level-Set (Multiphase Flow)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="parameters/cfd/constrain_stasis.html">Constrain Stasis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="parameters/cfd/dimensionality.html">Dimensionality</a></li>
 <li class="toctree-l3"><a class="reference internal" href="parameters/cfd/dynamic_flow_control.html">Dynamic Flow Control</a></li>
@@ -200,7 +201,6 @@
 <li class="toctree-l3"><a class="reference internal" href="parameters/cfd/timer.html">Timer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="parameters/cfd/tracer_drift_velocity.html">Tracer Drift Velocity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="parameters/cfd/velocity_source.html">Velocity Source</a></li>
-<li class="toctree-l3"><a class="reference internal" href="parameters/cfd/volume_of_fluid.html">Volume of Fluid (Multiphase Flow)</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="parameters/dem/dem.html">Discrete Element Method (DEM)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Discrete Element Method (DEM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -238,6 +238,7 @@
 <li class="toctree-l3"><a class="reference internal" href="examples/incompressible-flow/2d-naca0012-low-reynolds/2d-naca0012-low-reynolds.html">Flow around NACA0012 at Low Reynolds Number</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">Taylor-Couette Flow Using Nitsche Immersed Boundary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/incompressible-flow/2d-sudden-expansion-flow/2d-sudden-expansion-flow.html">Sudden-Expansion Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/incompressible-flow/2d-paddle-mixer-mortar/2d-paddle-mixer-mortar.html">Paddle Mixer Using the Mortar Method</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">Flow around a Sphere</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/incompressible-flow/3d-taylor-green-vortex/3d-taylor-green-vortex.html">Taylor-Green Vortex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/incompressible-flow/3d-turbulent-taylor-couette/3d-turbulent-taylor-couette.html">Turbulent Taylor-Couette Flow</a></li>
@@ -248,7 +249,7 @@
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="examples/multiphysics/multiphysics.html">Multiphysics</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Multiphysics</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3 has-children"><a class="reference internal" href="examples/multiphysics/vof.html">VOF</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of VOF</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="examples/multiphysics/cls.html">CLS</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of CLS</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="examples/multiphysics/dam-break/dam-break.html">Dam-Break</a></li>
 <li class="toctree-l4"><a class="reference internal" href="examples/multiphysics/rayleigh-taylor-instability/rayleigh-taylor-instability.html">Rayleigh-Taylor Instability</a></li>
 <li class="toctree-l4"><a class="reference internal" href="examples/multiphysics/static-bubble/static-bubble.html">Static Bubble</a></li>
@@ -310,7 +311,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="examples/unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="examples/unresolved-cfd-dem/single-particle-sedimentation/single-particle-sedimentation.html">Single Particle Sedimentation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/unresolved-cfd-dem/cylindrical-packed-bed/cylindrical-packed-bed.html">Cylindrical Packed Bed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/unresolved-cfd-dem/gas-solid-fluidized-bed/gas-solid-fluidized-bed.html">Gas-Solid Fluidized Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/unresolved-cfd-dem/gas-solid-fluidized-cylinder-bed/gas-solid-fluidized-cylinder-bed.html">Gas-Solid Fluidized Cylinder Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/unresolved-cfd-dem/pseudo-2d-gas-solid-fluidized-bed/pseudo-2d-gas-solid-fluidized-bed.html">Pseudo-2D Gas-Solid Fluidized Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/unresolved-cfd-dem/gas-solid-spouted-rectangular-bed/gas-solid-spouted-rectangular-bed.html">Gas-Solid Spouted Rectangular Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/unresolved-cfd-dem/liquid-solid-fluidized-bed/liquid-solid-fluidized-bed.html">Liquid-Solid Fluidized Bed</a></li>
@@ -375,7 +376,7 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="theory/multiphase/multiphase.html">Multiphase</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle navigation of Multiphase</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3 has-children"><a class="reference internal" href="theory/multiphase/cfd/cfd.html">Fluid-Fluid Flows - Interface Capturing Models</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle navigation of Fluid-Fluid Flows - Interface Capturing Models</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="theory/multiphase/cfd/vof.html">The Volume of Fluid (VOF) Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="theory/multiphase/cfd/cls.html">The Conservative Level-Set (CLS) Method</a></li>
 <li class="toctree-l4"><a class="reference internal" href="theory/multiphase/cfd/cahn-hilliard.html">Cahn-Hilliard Method</a></li>
 </ul>
 </li>
@@ -445,10 +446,25 @@
           <section id="publications">
 <h1>Publications<a class="headerlink" href="#publications" title="Link to this heading">#</a></h1>
 <p>This section regroups the peer-reviewed journal articles that <strong>describe</strong> core functionalities of Lethe or that <strong>use</strong> Lethe. The publications are grouped by the year of the publications and displayed in the IEEE format.</p>
-<section id="id1">
-<h2>2025<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<section id="preprints">
+<h2>Preprints<a class="headerlink" href="#preprints" title="Link to this heading">#</a></h2>
+<p>This section regroups preprints of journal articles already submitted, but which are still under review.</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://doi.org/10.1016/j.cpc.2025.109880">A. Alphonius, L. Barbeau, B. Blais, O. Gaboriault, O. Guévremont, J. Lamouche, P. Laurentin, O. Marquis, P. Munch, V. Oliveira Ferreira, H. Papillon-Laroche, P. A. Patience, L. Prieto Saavedra, M. Vaillant, Lethe 1.0: An Open-Source High-Performance and High-Order Computational Fluid Dynamics Software for Single and Multiphase Flows. Computer Physics Communications 109880.</a></p></li>
+<li><p><a class="reference external" href="https://doi.org/10.48550/arXiv.2602.00275">H. Papillon-Laroche, A. Alphonius, M. Schreter-Fleischhacker, J.-P. Harvey, and B. Blais. “Geometric Reinitialization for Capillary Flows: a Comparative Study with State-of-the-Art Conservative Level-Set Methods,” arXiv preprint arXiv:2602.00275, 2026.</a>.</p></li>
+<li><p><a class="reference external" href="https://doi.org/10.48550/arXiv.2604.03514">O. Guévremont, O. Gazil, F. Galli, N. Virgilio, and B Blais. “Surface-access limitation in catalytic porous monoliths: Performance diagnosis using pore-resolved CFD,” arXiv preprint arXiv:2604.03514, 2026.</a>.</p></li>
+</ul>
+</section>
+<section id="id1">
+<h2>2026<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://doi.org/10.1016/j.powtec.2026.122460">O. Gaboriault, A. Timercan, R. Pelletier, L.-P. Lefebvre, D. Melancon, B. Blais, “Increase in packing density during multi-layer powder spreading: An experimental and numerical study”, Powder Technology, pp. 122460, 2026</a>.</p></li>
+<li><p><a class="reference external" href="https://doi.org/10.1016/j.icheatmasstransfer.2026.111046">M. Vaillant, V. Oliveira Ferreira, W. Mainville, J.-M. Lamarre, V. Raymond, M. Chioua, B. Blais, “Surrogate model for heat transfer prediction in impinging jet arrays using dynamic inlet/outlet and flow rate control”, International Communications in Heat and Mass Transfer, vol. 175, pp. 111046, 2026</a>.</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>2025<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://doi.org/10.1016/j.cpc.2025.109880">A. Alphonius, L. Barbeau, B. Blais, O. Gaboriault, O. Guévremont, J. Lamouche, P. Laurentin, O. Marquis, P. Munch, V. Oliveira Ferreira, H. Papillon-Laroche, P. A. Patience, L. Prieto Saavedra, M. Vaillant, “Lethe 1.0: An Open-Source High-Performance and High-Order Computational Fluid Dynamics Software for Single and Multiphase Flows,” Computer Physics Communications 109880.</a>.</p></li>
 <li><p><a class="reference external" href="https://doi.org/10.1016/j.ces.2025.122173">G. Mirakhori, J. Doucet, S. Chidami, B. Blais, and J. Chaouki, “AI-enhanced radioactive particle tracking: A practical methodology for accelerating industrial process development”, Chemical Engineering Science, 2025</a>.</p></li>
 <li><p><a class="reference external" href="http://dx.doi.org/10.1080/14685248.2025.2524336">L. Prieto Saavedra, J. Archambault, P. Munch, and B. Blais, “An implicit large-eddy simulation study of the turbulent Taylor-Couette flow with an inner rotating cylinder”, Journal of Turbulence, 2025</a>.</p></li>
 <li><p><a class="reference external" href="https://doi.org/10.1016/j.jcp.2025.114186">L. Prieto Saavedra, P. Munch, and B. Blais, “A Matrix-Free Stabilized Solver for the Incompressible Navier-Stokes Equations”, Journal of Computational Physics, p. 114186, 2025</a>.</p></li>
@@ -456,16 +472,16 @@
 <li><p><a class="reference external" href="https://doi.org/10.1016/j.cej.2024.158577">O. Guévremont, L. Barbeau, V. Moreau, F. Galli, N. Virgilio, and B. Blais, “Robust pore-resolved CFD through porous monoliths reconstructed by micro-computed tomography: From digitization to flow prediction,” Chemical Engineering Journal, pp. 158577–158577, 2025</a>.</p></li>
 </ul>
 </section>
-<section id="id2">
-<h2>2024<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h2>2024<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://doi.org/10.1016/j.compfluid.2024.106390">L. Prieto Saavedra, C. E. N. Radburn, A. Collard-Daigneault, and B. Blais, “An implicit large-Eddy simulation perspective on the flow over periodic hills,” Computers &amp; Fluids, p. 106390, 2024</a>.</p></li>
 <li><p><a class="reference external" href="https://doi.org/10.1016/j.ijmultiphaseflow.2024.104882">L. Barbeau, S. Étienne, C. Béguin et B. Blais, “Solid-fluid force modeling: Insights from comparing a reduced order model for a pair of particles with resolved CFD-DEM”, International Journal of Multiphase Flow, p. 104882, 2024</a>.</p></li>
 <li><p><a class="reference external" href="https://doi.org/10.1016/j.compfluid.2023.106094">L. Barbeau, S. Golshan, J. Deng, S. Étienne, C. Béguin, and B. Blais, “High-order moving immersed boundary and its application to a resolved cfd-dem model”, Computers &amp; Fluids, vol. 268, p. 106094, 2024</a>.</p></li>
 </ul>
 </section>
-<section id="id3">
-<h2>2023<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<section id="id4">
+<h2>2023<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://doi.org/10.1016/j.apm.2023.07.034">M. Fazli, M. Rudman, S. Kuang and A. Chryss, “Application of Immersed Boundary Methods to Non-Newtonian Yield-Pseudoplastic Flows”, Applied Mathematical Modelling, 2023</a>.</p></li>
 <li><p><a class="reference external" href="https://doi.org/10.1016/j.jcp.2023.112189">J. Joachim, C.-A. Daunais, V. Bibeau, L. Heltai and B. Blais, “A Parallel and Adaptative Nitsche Immersed Boundary Method to Simulate Viscous Mixing”, Journal of Computational Physics, 2023</a>.</p></li>
@@ -478,25 +494,18 @@
 <li><p><a class="reference external" href="https://doi.org/10.1016/j.nima.2023.168504">G. Mirakhori, A. Collard-Daigneault, A. Alphonius, J. Doucet, B. Blais, and J. Chaouki, “An improved position reconstruction method for radioactive particle tracking”, Nucl. Instrum. Methods Phys. Res. Sect. Accel. Spectrometers Detect. Assoc. Equip., vol. 1055, p. 168504, 2023</a>.</p></li>
 </ul>
 </section>
-<section id="id4">
-<h2>2022<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<section id="id5">
+<h2>2022<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0045793022000780?via%3Dihub">L. Barbeau, S. Étienne, C. Béguin, and B. Blais, “Development of a high-order continuous Galerkin sharp-interface immersed boundary method and its application to incompressible flow problems”, Computers &amp; Fluids, 239, 105415, 2022</a>.</p></li>
 <li><p><a class="reference external" href="https://link.springer.com/article/10.1007/s40571-022-00478-6">S. Golshan, P. Munch, R. Gassmoller, M. Kronbichler, and B. Blais, “Lethe-Dem: An open-source parallel discrete element solver with load balancing - computational particle mechanics”, Comp. Part. Mech., 2022</a>.</p></li>
 <li><p><a class="reference external" href="https://www.mdpi.com/2227-9717/10/1/79">S. Golshan and B. Blais, “Load-balancing strategies in discrete element method simulations”, Processes, 10, 1, 2022</a>.</p></li>
 </ul>
 </section>
-<section id="id5">
-<h2>2020<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<section id="id6">
+<h2>2020<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S2352711020302922?via%3Dihub">B. Blais, L. Barbeau, V. Bibeau, S. Gauvin, T. E. Geitani, S. Golshan, R. Kamble, G. Mirakhori, and J. Chaouki, “Lethe: An open-source parallel high-order adaptative CFD solver for Incompressible flows”, SoftwareX, 12, 100579, 2020</a>.</p></li>
-</ul>
-</section>
-<section id="preprints">
-<h2>Preprints<a class="headerlink" href="#preprints" title="Link to this heading">#</a></h2>
-<p>This section regroups preprints of journal articles already submitted, but which are still under review.</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://arxiv.org/abs/2509.26402">O. Gaboriault, A. Timercan, R. Pelletier, L.-P. Lefebvre, D. Melançon, and B. Blais, “Increase in packing density during multi-layer powder spreading: An experimental and numerical study,” arXiv preprint arXiv:2509.26402, 2025.</a></p></li>
 </ul>
 </section>
 </section>
@@ -557,12 +566,13 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Publications</a><ul>
-<li><a class="reference internal" href="#id1">2025</a></li>
-<li><a class="reference internal" href="#id2">2024</a></li>
-<li><a class="reference internal" href="#id3">2023</a></li>
-<li><a class="reference internal" href="#id4">2022</a></li>
-<li><a class="reference internal" href="#id5">2020</a></li>
 <li><a class="reference internal" href="#preprints">Preprints</a></li>
+<li><a class="reference internal" href="#id1">2026</a></li>
+<li><a class="reference internal" href="#id2">2025</a></li>
+<li><a class="reference internal" href="#id3">2024</a></li>
+<li><a class="reference internal" href="#id4">2023</a></li>
+<li><a class="reference internal" href="#id5">2022</a></li>
+<li><a class="reference internal" href="#id6">2020</a></li>
 </ul>
 </li>
 </ul>

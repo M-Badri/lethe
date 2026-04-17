@@ -43,7 +43,8 @@ var menudata={children:[
 {text:"r",url:"namespacemembers.html#index_r"},
 {text:"s",url:"namespacemembers.html#index_s"},
 {text:"t",url:"namespacemembers.html#index_t"},
-{text:"v",url:"namespacemembers.html#index_v"}]},
+{text:"v",url:"namespacemembers.html#index_v"},
+{text:"w",url:"namespacemembers.html#index_w"}]},
 {text:"Functions",url:"namespacemembers_func.html",children:[
 {text:"c",url:"namespacemembers_func.html#index_c"},
 {text:"f",url:"namespacemembers_func.html#index_f"},
@@ -53,7 +54,18 @@ var menudata={children:[
 {text:"r",url:"namespacemembers_func.html#index_r"},
 {text:"v",url:"namespacemembers_func.html#index_v"}]},
 {text:"Typedefs",url:"namespacemembers_type.html"},
-{text:"Enumerations",url:"namespacemembers_enum.html"},
+{text:"Enumerations",url:"namespacemembers_enum.html",children:[
+{text:"b",url:"namespacemembers_enum.html#index_b"},
+{text:"c",url:"namespacemembers_enum.html#index_c"},
+{text:"d",url:"namespacemembers_enum.html#index_d"},
+{text:"e",url:"namespacemembers_enum.html#index_e"},
+{text:"f",url:"namespacemembers_enum.html#index_f"},
+{text:"p",url:"namespacemembers_enum.html#index_p"},
+{text:"r",url:"namespacemembers_enum.html#index_r"},
+{text:"s",url:"namespacemembers_enum.html#index_s"},
+{text:"t",url:"namespacemembers_enum.html#index_t"},
+{text:"v",url:"namespacemembers_enum.html#index_v"},
+{text:"w",url:"namespacemembers_enum.html#index_w"}]},
 {text:"Enumerator",url:"namespacemembers_eval.html",children:[
 {text:"a",url:"namespacemembers_eval.html#index_a"},
 {text:"c",url:"namespacemembers_eval.html#index_c"},
@@ -235,4 +247,5 @@ var menudata={children:[
 {text:"Enumerations",url:"globals_enum.html"},
 {text:"Enumerator",url:"globals_eval.html"},
 {text:"Macros",url:"globals_defs.html"}]}]},
-{text:"Lethe GitHub",url:"^https://github.com/chaos-polymtl/lethe"}]}
+{text:"Lethe Project",url:"^https://chaos-polymtl.github.io/lethe/index.html"},
+{text:"About CHAOS Laboratory",url:"^https://www.chaos-lab.ca/"}]}

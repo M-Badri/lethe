@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -93,7 +97,7 @@ $(document).ready(function() { init_codefold(0); });
   <div class="headertitle"><div class="title">evaporation_model.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="evaporation__model_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// SPDX-FileCopyrightText: Copyright (c) 2023-2025 The Lethe Authors</span></div>
+<a href="evaporation__model_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// SPDX-FileCopyrightText: Copyright (c) 2023-2026 The Lethe Authors</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#ifndef lethe_evaporation_model_h</span></div>
@@ -116,8 +120,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> * The EvaporativeModel is the parent class, and its children are specific</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> * types of evaporative models, e.g., constant, temperature dependent. The</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> * selected model is instantiated in the assemblers&#39; constructor</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> * (NavierStokesVOFAssemblerEvaporation and/or</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> * HeatTransferAssemblerVOFEvaporation), using the model_cast method according</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> * (NavierStokesCLSAssemblerEvaporation and/or</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> * HeatTransferAssemblerCLSEvaporation), using the model_cast method according</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> * to the evaporation model parameters.</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> * The assemblers call the required method of the EvaporationModel for either</span></div>
@@ -949,11 +953,39 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aphysical__property__model_8h_html_a0b2c854385812ebfac83689a5c3ead58"><div class="ttname"><a href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58">field</a></div><div class="ttdeci">field</div><div class="ttdef"><b>Definition</b> <a href="physical__property__model_8h_source.html#l00037">physical_property_model.h:38</a></div></div>
 <div class="ttc" id="aphysical__property__model_8h_html_a0b2c854385812ebfac83689a5c3ead58a8e7f8389b914e827058d694b31468b3a"><div class="ttname"><a href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58a8e7f8389b914e827058d694b31468b3a">pressure</a></div><div class="ttdeci">@ pressure</div><div class="ttdef"><b>Definition</b> <a href="physical__property__model_8h_source.html#l00043">physical_property_model.h:43</a></div></div>
 <div class="ttc" id="aphysical__property__model_8h_html_a0b2c854385812ebfac83689a5c3ead58a9922a43d37bee3212593f77ce4ec82f3"><div class="ttname"><a href="physical__property__model_8h.html#a0b2c854385812ebfac83689a5c3ead58a9922a43d37bee3212593f77ce4ec82f3">temperature</a></div><div class="ttdeci">@ temperature</div><div class="ttdef"><b>Definition</b> <a href="physical__property__model_8h_source.html#l00040">physical_property_model.h:40</a></div></div>
-<div class="ttc" id="astructParameters_1_1Evaporation_html"><div class="ttname"><a href="structParameters_1_1Evaporation.html">Parameters::Evaporation</a></div><div class="ttdoc">Evaporation - Defines the subparameters for the evaporation cooling and recoil pressure at the free s...</div><div class="ttdef"><b>Definition</b> <a href="parameters_8h_source.html#l01802">parameters.h:1803</a></div></div>
+<div class="ttc" id="astructParameters_1_1Evaporation_html"><div class="ttname"><a href="structParameters_1_1Evaporation.html">Parameters::Evaporation</a></div><div class="ttdoc">Evaporation - Defines the subparameters for the evaporation cooling and recoil pressure at the free s...</div><div class="ttdef"><b>Definition</b> <a href="parameters_8h_source.html#l01915">parameters.h:1916</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

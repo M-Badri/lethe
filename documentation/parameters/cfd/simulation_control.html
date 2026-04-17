@@ -176,6 +176,7 @@
 <li class="toctree-l3"><a class="reference internal" href="boundary_conditions_multiphysics.html">Boundary Conditions - Multiphysics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="box_refinement.html">Box Refinement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cahn_hilliard.html">Cahn-Hilliard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conservative_level_set.html">Conservative Level-Set (Multiphase Flow)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="constrain_stasis.html">Constrain Stasis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dimensionality.html">Dimensionality</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dynamic_flow_control.html">Dynamic Flow Control</a></li>
@@ -200,7 +201,6 @@
 <li class="toctree-l3"><a class="reference internal" href="timer.html">Timer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tracer_drift_velocity.html">Tracer Drift Velocity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="velocity_source.html">Velocity Source</a></li>
-<li class="toctree-l3"><a class="reference internal" href="volume_of_fluid.html">Volume of Fluid (Multiphase Flow)</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../dem/dem.html">Discrete Element Method (DEM)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Discrete Element Method (DEM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -238,6 +238,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-naca0012-low-reynolds/2d-naca0012-low-reynolds.html">Flow around NACA0012 at Low Reynolds Number</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">Taylor-Couette Flow Using Nitsche Immersed Boundary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-sudden-expansion-flow/2d-sudden-expansion-flow.html">Sudden-Expansion Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-paddle-mixer-mortar/2d-paddle-mixer-mortar.html">Paddle Mixer Using the Mortar Method</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">Flow around a Sphere</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-taylor-green-vortex/3d-taylor-green-vortex.html">Taylor-Green Vortex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-turbulent-taylor-couette/3d-turbulent-taylor-couette.html">Turbulent Taylor-Couette Flow</a></li>
@@ -248,7 +249,7 @@
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/multiphysics/multiphysics.html">Multiphysics</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Multiphysics</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../examples/multiphysics/vof.html">VOF</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of VOF</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../examples/multiphysics/cls.html">CLS</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of CLS</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/dam-break/dam-break.html">Dam-Break</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/rayleigh-taylor-instability/rayleigh-taylor-instability.html">Rayleigh-Taylor Instability</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/static-bubble/static-bubble.html">Static Bubble</a></li>
@@ -310,7 +311,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/single-particle-sedimentation/single-particle-sedimentation.html">Single Particle Sedimentation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/cylindrical-packed-bed/cylindrical-packed-bed.html">Cylindrical Packed Bed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-fluidized-bed/gas-solid-fluidized-bed.html">Gas-Solid Fluidized Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-fluidized-cylinder-bed/gas-solid-fluidized-cylinder-bed.html">Gas-Solid Fluidized Cylinder Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/pseudo-2d-gas-solid-fluidized-bed/pseudo-2d-gas-solid-fluidized-bed.html">Pseudo-2D Gas-Solid Fluidized Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-spouted-rectangular-bed/gas-solid-spouted-rectangular-bed.html">Gas-Solid Spouted Rectangular Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/liquid-solid-fluidized-bed/liquid-solid-fluidized-bed.html">Liquid-Solid Fluidized Bed</a></li>
@@ -375,7 +376,7 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../theory/multiphase/multiphase.html">Multiphase</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle navigation of Multiphase</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../theory/multiphase/cfd/cfd.html">Fluid-Fluid Flows - Interface Capturing Models</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle navigation of Fluid-Fluid Flows - Interface Capturing Models</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../theory/multiphase/cfd/vof.html">The Volume of Fluid (VOF) Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../theory/multiphase/cfd/cls.html">The Conservative Level-Set (CLS) Method</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../theory/multiphase/cfd/cahn-hilliard.html">Cahn-Hilliard Method</a></li>
 </ul>
 </li>
@@ -480,10 +481,10 @@
   # Time step value
   set time step = 1
 
-  # Adaptative time-stepping
-  set adapt = false
+  # Adaptive time-stepping with an imposed max CFL
+  set adapt time step to respect CFL = false
 
-  # True if the time-step should be overriden upon restart
+  # True if the time step should be overridden upon restart
   set override time step on restart = false
 
   # Maximum CFL value
@@ -539,6 +540,15 @@
 
   # Subdivision of mesh cell in postprocessing
   set subdivision = 1
+
+  #---------------------------------------------------
+  # Explicit coupling constraint parameters
+  #---------------------------------------------------
+  # Set time step to respect the imposed capillary time-step ratio
+  set adapt time step to respect CTR = false
+
+  # Set targeted maximum capillary time-step ratio (Δt/Δt_σ)
+  set max capillary time-step ratio = 1.0
 end
 </pre></div>
 </div>
@@ -591,17 +601,23 @@ end
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">end</span></code>: value of the time at which the simulation ends.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">step</span></code>: value of the time step.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">adapt</span></code>: controls if adaptive time-stepping is enabled. If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the time-step will evolve to ensure that the <code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">cfl</span></code> value is reached.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">override</span> <span class="pre">time</span> <span class="pre">step</span> <span class="pre">on</span> <span class="pre">restart</span></code>: controls if the time step should be overridden by the set value upon restart. If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the time-step will be set to the value of <code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">step</span></code> and the time-step value recorded at the last checkpoint will be overridden at the start of the simulation.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">cfl</span></code>: maximum value of the <span class="math notranslate nohighlight">\(\text{CFL}\)</span> condition number that can be reached during the simulation. This parameter is only used when <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">adapt</span> <span class="pre">=</span> <span class="pre">true</span></code>. The <span class="math notranslate nohighlight">\(N_{\mathrm{CFL}}\)</span> is calculated as:</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">adapt</span> <span class="pre">time</span> <span class="pre">step</span> <span class="pre">to</span> <span class="pre">respect</span> <span class="pre">CFL</span></code>: If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the time step will evolve to ensure that the <code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">cfl</span></code> value is respected. The time step is updated with the minimum value between <code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">step</span></code>, <code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">time</span> <span class="pre">step</span></code> and the computed time step with <code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">cfl</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">override</span> <span class="pre">time</span> <span class="pre">step</span> <span class="pre">on</span> <span class="pre">restart</span></code>: controls if the time step should be overridden by the set value upon restart. If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the time step will be set to the value of <code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">step</span></code> and the time-step value recorded at the last checkpoint will be overridden at the start of the simulation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">cfl</span></code>: maximum value of the <span class="math notranslate nohighlight">\(\text{CFL}\)</span> condition number that can be reached during the simulation. This parameter is only used when <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">adapt</span> <span class="pre">time</span> <span class="pre">step</span> <span class="pre">to</span> <span class="pre">respect</span> <span class="pre">CFL</span> <span class="pre">=</span> <span class="pre">true</span></code>. The <span class="math notranslate nohighlight">\(N_{\mathrm{CFL}}\)</span> is calculated as:</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
 \[N_{\mathrm{CFL}} = \max_q \frac{|\mathbf{u}_q| \Delta t} {h}\]</div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(q\)</span> the Gauss points and <span class="math notranslate nohighlight">\(|\mathbf{u}_q|\)</span> is the velocity at the Gauss points. Essentially, the maximum CFL is the max of the CFL evaluated at every Gauss point in the mesh.</p>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">time</span> <span class="pre">step</span></code>: maximum time step value that can be reached during the simulation. This parameter is only used when <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">adapt</span> <span class="pre">=</span> <span class="pre">true</span></code>. It is useful when the problem of interest has an additional time step constraint such as the capillary time step limit described in <a class="reference internal" href="../../examples/multiphysics/capillary-wave/capillary-wave.html"><span class="doc">Capillary Wave</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">time</span> <span class="pre">step</span></code>: maximum time step value that can be reached during the simulation. It is useful when the problem of interest has an additional time-step constraint.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">adaptative</span> <span class="pre">time</span> <span class="pre">step</span> <span class="pre">scaling</span></code>: rate of increase of the time step value. The new time step value is fixed by <code class="docutils literal notranslate"><span class="pre">adaptative</span> <span class="pre">time</span> <span class="pre">step</span> <span class="pre">scaling</span></code> * <code class="docutils literal notranslate"><span class="pre">previous</span> <span class="pre">value</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">time</span> <span class="pre">step</span></code>.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">time</span> <span class="pre">step</span></code> and <code class="docutils literal notranslate"><span class="pre">adaptative</span> <span class="pre">time</span> <span class="pre">step</span> <span class="pre">scaling</span></code> are only used when either <code class="docutils literal notranslate"><span class="pre">adapt</span> <span class="pre">time</span> <span class="pre">step</span> <span class="pre">to</span> <span class="pre">respect</span> <span class="pre">CFL</span></code> or <code class="docutils literal notranslate"><span class="pre">adapt</span> <span class="pre">time</span> <span class="pre">step</span> <span class="pre">to</span> <span class="pre">respect</span> <span class="pre">CTR</span></code> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code> (adaptive time-stepping enabled). <code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">time</span> <span class="pre">step</span></code> enforces a strict upper bound to the time step, while <code class="docutils literal notranslate"><span class="pre">adaptative</span> <span class="pre">time</span> <span class="pre">step</span> <span class="pre">scaling</span></code> controls the adaptive time-stepping, by limiting the time-step variation from one time iteration to the following.</p>
+</div>
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">step</span> <span class="pre">independent</span> <span class="pre">of</span> <span class="pre">end</span> <span class="pre">time</span></code>: this variable ensures that the time step of the simulation is always consistent at the end of the simulation. If one uses a time step that eventually leads exactly to the end time of the simulation this variable does not do anything. However, if adaptive time stepping is used or the end time is not exactly reached when using certain fixed time step, this flag ensures that the simulation does not change the last time step to reach the end time. For example, if your end time is 20, and you have a time step that leads to a last iteration until 20.1, all your results will be outputted until 20.1. If you wish to have exactly 20, you need to set this flag to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </section>
@@ -620,6 +636,11 @@ end
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Lethe saves the simulation results in the Paraview format. For every iteration, one or more <code class="docutils literal notranslate"><span class="pre">.vtu</span></code> are produced, which are indexed by a single <code class="docutils literal notranslate"><span class="pre">.pvtu</span></code> file. A single <code class="docutils literal notranslate"><span class="pre">.pvd</span></code> file linking all iterations together is also generated. Use the open-source software <a class="reference external" href="https://www.paraview.org/">Paraview</a> to visualize them.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>One of the components in the output files is the velocity gradient. Note that the 9 gradient components are numbered in a way that the following correspondence is valid:
+0 = <span class="math notranslate nohighlight">\(xx\)</span>, 1 = <span class="math notranslate nohighlight">\(xy\)</span>, 2 = <span class="math notranslate nohighlight">\(xz\)</span>, 3 = <span class="math notranslate nohighlight">\(yx\)</span>, 4 = <span class="math notranslate nohighlight">\(yy\)</span>, 5 = <span class="math notranslate nohighlight">\(yz\)</span>, 6 = <span class="math notranslate nohighlight">\(zx\)</span>, 7 = <span class="math notranslate nohighlight">\(zy\)</span>, 8 = <span class="math notranslate nohighlight">\(zz\)</span></p>
 </div>
 </li>
 <li><dl class="simple">
@@ -668,6 +689,60 @@ end
 </div>
 </li>
 </ul>
+</section>
+<section id="explicit-coupling-constraint-parameters">
+<h2>Explicit coupling constraint parameters<a class="headerlink" href="#explicit-coupling-constraint-parameters" title="Link to this heading">#</a></h2>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">adapt</span> <span class="pre">time</span> <span class="pre">step</span> <span class="pre">to</span> <span class="pre">respect</span> <span class="pre">CTR</span></code>: computes the capillary time-step constraint <a class="footnote-reference brackets" href="#denner2022" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>:</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Delta t_\sigma = \min_{x \in \Omega}\left(\sqrt{\frac{(\rho_0 + \rho_1) h^3}{2 \pi \sigma}}\right)\]</div>
+</div>
+<dl class="simple">
+<dt>where</dt><dd><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\sigma\)</span> is the surface tension coefficient;</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho_0\)</span> and <span class="math notranslate nohighlight">\(\rho_1\)</span> are respectively the densities of fluid <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(1\)</span>, and;</p></li>
+<li><p><span class="math notranslate nohighlight">\(h\)</span> is the cell size.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here, we define the cell size <span class="math notranslate nohighlight">\((h)\)</span> as being the diameter of:</p>
+<ul class="simple">
+<li><p>a disk with equivalent area in 2D, and;</p></li>
+<li><p>a sphere with equivalent volume in 3D.</p></li>
+</ul>
+</div>
+<p>and replaces the time step with the capillary time step <span class="math notranslate nohighlight">\(\left(\Delta t_\text{CTR} = N_\text{CTR, max} \times \Delta t_\sigma\right)\)</span> if the later is smaller than the current <code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">step</span></code> and <code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">time</span> <span class="pre">step</span></code>. <span class="math notranslate nohighlight">\(N_\text{CTR, max}\)</span> is the user-defined <code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">capillary</span> <span class="pre">time-step</span> <span class="pre">ratio</span></code>.</p>
+<p>This is used in the coupling of the <a class="reference internal" href="../../theory/multiphysics/fluid_dynamics/navier-stokes.html"><span class="doc">Navier-Stokes equations</span></a> with the <a class="reference internal" href="../../theory/multiphase/cfd/cls.html"><span class="doc">CLS</span></a> method to simulate multiphase flows with surface tension.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When <code class="docutils literal notranslate"><span class="pre">adapt</span> <span class="pre">time</span> <span class="pre">step</span> <span class="pre">to</span> <span class="pre">respect</span> <span class="pre">CFL</span></code> is also enabled, the simulation time step takes the minimum value between <code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">step</span></code>, <code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">time</span> <span class="pre">step</span></code>, the time step computed with <code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">cfl</span></code> (<span class="math notranslate nohighlight">\(\Delta t_\text{CFL}\)</span>) and the imposed capillary time step.</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Delta t_\text{new} = \min{\left(\Delta t, \Delta t_\text{max}, \Delta t_\text{CTR}, \Delta t_\text{CFL}\right)}\]</div>
+</div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span> <span class="pre">capillary</span> <span class="pre">time-step</span> <span class="pre">ratio</span></code>: corresponds to the aimed ratio of the simulation time step over the capillary time-step constraint <span class="math notranslate nohighlight">\(\left(\frac{\Delta t}{\Delta t_\sigma} \right)\)</span>. The time step is updated such that:</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Delta t_\text{new} \leq N_\text{CTR, max} \, \Delta t_\sigma\]</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(N_\text{CTR, max}\)</span> is the maximum capillary time-step ratio.</p>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="denner2022" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>F. Denner, F. Evrard, and B. van Wachem, “Breaching the capillary time-step constraint using a coupled VOF method with implicit surface tension,” <em>J. Comput. Phys.</em>, vol. 459, p. 111128, Jun. 2022, doi: <a class="reference external" href="https://doi.org/10.1016/j.jcp.2022.111128">10.1016/j.jcp.2022.111128</a>.</p>
+</aside>
+</aside>
 </section>
 </section>
 
@@ -732,6 +807,8 @@ end
 <li><a class="reference internal" href="#transient-simulations-parameters">Transient simulations parameters</a></li>
 <li><a class="reference internal" href="#log-file-parameters">Log file parameters</a></li>
 <li><a class="reference internal" href="#paraview-output-file-parameters">Paraview output file parameters</a></li>
+<li><a class="reference internal" href="#explicit-coupling-constraint-parameters">Explicit coupling constraint parameters</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
 </ul>
 </li>
 </ul>

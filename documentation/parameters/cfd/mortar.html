@@ -176,6 +176,7 @@
 <li class="toctree-l3"><a class="reference internal" href="boundary_conditions_multiphysics.html">Boundary Conditions - Multiphysics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="box_refinement.html">Box Refinement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cahn_hilliard.html">Cahn-Hilliard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conservative_level_set.html">Conservative Level-Set (Multiphase Flow)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="constrain_stasis.html">Constrain Stasis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dimensionality.html">Dimensionality</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dynamic_flow_control.html">Dynamic Flow Control</a></li>
@@ -200,7 +201,6 @@
 <li class="toctree-l3"><a class="reference internal" href="timer.html">Timer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tracer_drift_velocity.html">Tracer Drift Velocity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="velocity_source.html">Velocity Source</a></li>
-<li class="toctree-l3"><a class="reference internal" href="volume_of_fluid.html">Volume of Fluid (Multiphase Flow)</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../dem/dem.html">Discrete Element Method (DEM)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Discrete Element Method (DEM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -238,6 +238,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-naca0012-low-reynolds/2d-naca0012-low-reynolds.html">Flow around NACA0012 at Low Reynolds Number</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">Taylor-Couette Flow Using Nitsche Immersed Boundary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-sudden-expansion-flow/2d-sudden-expansion-flow.html">Sudden-Expansion Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-paddle-mixer-mortar/2d-paddle-mixer-mortar.html">Paddle Mixer Using the Mortar Method</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">Flow around a Sphere</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-taylor-green-vortex/3d-taylor-green-vortex.html">Taylor-Green Vortex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-turbulent-taylor-couette/3d-turbulent-taylor-couette.html">Turbulent Taylor-Couette Flow</a></li>
@@ -248,7 +249,7 @@
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/multiphysics/multiphysics.html">Multiphysics</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Multiphysics</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../examples/multiphysics/vof.html">VOF</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of VOF</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../examples/multiphysics/cls.html">CLS</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of CLS</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/dam-break/dam-break.html">Dam-Break</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/rayleigh-taylor-instability/rayleigh-taylor-instability.html">Rayleigh-Taylor Instability</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/static-bubble/static-bubble.html">Static Bubble</a></li>
@@ -310,7 +311,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/single-particle-sedimentation/single-particle-sedimentation.html">Single Particle Sedimentation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/cylindrical-packed-bed/cylindrical-packed-bed.html">Cylindrical Packed Bed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-fluidized-bed/gas-solid-fluidized-bed.html">Gas-Solid Fluidized Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-fluidized-cylinder-bed/gas-solid-fluidized-cylinder-bed.html">Gas-Solid Fluidized Cylinder Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/pseudo-2d-gas-solid-fluidized-bed/pseudo-2d-gas-solid-fluidized-bed.html">Pseudo-2D Gas-Solid Fluidized Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-spouted-rectangular-bed/gas-solid-spouted-rectangular-bed.html">Gas-Solid Spouted Rectangular Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/liquid-solid-fluidized-bed/liquid-solid-fluidized-bed.html">Liquid-Solid Fluidized Bed</a></li>
@@ -375,7 +376,7 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../theory/multiphase/multiphase.html">Multiphase</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle navigation of Multiphase</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../theory/multiphase/cfd/cfd.html">Fluid-Fluid Flows - Interface Capturing Models</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle navigation of Fluid-Fluid Flows - Interface Capturing Models</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../theory/multiphase/cfd/vof.html">The Volume of Fluid (VOF) Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../theory/multiphase/cfd/cls.html">The Conservative Level-Set (CLS) Method</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../theory/multiphase/cfd/cahn-hilliard.html">Cahn-Hilliard Method</a></li>
 </ul>
 </li>
@@ -446,7 +447,8 @@
 <h1>Mortar<a class="headerlink" href="#mortar" title="Link to this heading">#</a></h1>
 <p>The mortar section is used when simulating rotor-stator geometries, in which the rotor mesh is attached to the stator by mortar elements.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection mortar
-  set enable = true
+  set enable          = true
+  set interface type  = circular
   subsection mesh
     set type                   = dealii
     set grid type              = subdivided_hyper_rectangle
@@ -465,9 +467,18 @@
   end
   set penalty factor      = 1.0
   set oversampling factor = 2
-  set verbosity           = verbose
+  set radius tolerance    = 1e-8
+  set cell weight         = 1000
+  set verbosity           = quiet
 end
 </pre></div>
+</div>
+<ul class="simple">
+<li><p>The available options for the mortar <code class="docutils literal notranslate"><span class="pre">interface</span> <span class="pre">type</span></code> are <code class="docutils literal notranslate"><span class="pre">circular</span></code> and <code class="docutils literal notranslate"><span class="pre">linear</span></code>.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">linear</span></code> interface type supports only two-dimensional problems. It assumes that the domain is rectangular, and that the mortar interface is parallel to the y axis.</p>
 </div>
 <ul class="simple">
 <li><p>The mesh parameters in the <a class="reference internal" href="mesh.html"><span class="doc">Mesh</span></a> subsection refer to the stator domain. The <code class="docutils literal notranslate"><span class="pre">mesh</span></code> subsection herein mentioned contains the parameters of the rotor domain; nonetheless, the input format is the same as in <a class="reference internal" href="mesh.html"><span class="doc">Mesh</span></a>.</p></li>
@@ -497,8 +508,35 @@ To circumvent this, the rotor boundary IDs are shifted. The <code class="docutil
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">penalty</span> <span class="pre">factor</span></code> is used for the weak imposition of the mortar coupling at the interface. This parameter is akin to the symmetric interior penalty factor in SIPG (Symmetric Interior penalty Galerkin Method) <a class="footnote-reference brackets" href="#larson2013" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">oversampling</span> <span class="pre">factor</span></code> is used to increase the number of quadrature points. This feature is used to better approximate the weak imposition of the interface coupling.</p></li>
-<li><p>When enabling <code class="docutils literal notranslate"><span class="pre">verbosity</span></code> (<code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">verbosity</span> <span class="pre">=</span> <span class="pre">verbose</span></code>), the rotor rotation information is printed at every iteration.</p></li>
+<li><p>When computing the rotor-stator interface radius, the radial distance of every node at both rotor and stator boundaries to the <code class="docutils literal notranslate"><span class="pre">center</span> <span class="pre">of</span> <span class="pre">rotation</span></code> is computed, and the following check is performed:</p></li>
 </ul>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[|r_{max} - r_{min}| &lt; tol\]</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(r_{max}\)</span>, <span class="math notranslate nohighlight">\(r_{min}\)</span> are the maximum and minimum values obtained, respectively, and  <span class="math notranslate nohighlight">\(tol\)</span> is the prescribed <code class="docutils literal notranslate"><span class="pre">radius</span> <span class="pre">tolerance</span></code> parameter.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default value for <code class="docutils literal notranslate"><span class="pre">radius</span> <span class="pre">tolerance</span></code> is <span class="math notranslate nohighlight">\(10^{-8}\)</span>, which should cover the precision range of deal.II-generated grids. The tolerance might need to be increased for some <code class="docutils literal notranslate"><span class="pre">gmsh</span></code> mesh type cases or for large simulations running in multiple cores, when the above verification fails even if the mesh discretization is coherent.</p>
+</div>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">cell</span> <span class="pre">weight</span></code> allows the imposition of a higher cell weight for the cells located at the mortar interface, which is then accounted for in the workload balancing between processors. The default value of <code class="docutils literal notranslate"><span class="pre">1000</span></code> assumes that mortar cells have the same weight as other cells.</p></li>
+<li><p>When enabling <code class="docutils literal notranslate"><span class="pre">verbosity</span></code> (<code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">verbosity</span> <span class="pre">=</span> <span class="pre">verbose</span></code>), the rotor rotation information is printed at every iteration. The option <code class="docutils literal notranslate"><span class="pre">extra</span> <span class="pre">verbose</span></code> also prints the workload imbalance of mortar cells. We consider that an ideal work imbalance is given by:</p></li>
+</ul>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\text{ideal} = \dfrac{\sum_i^{n_{proc}} cells_{(i)}}{n_{proc}}\]</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(n_{proc}\)</span> is the total number of processes and <span class="math notranslate nohighlight">\(cells_{(i)}\)</span> is the number of cells at each process <span class="math notranslate nohighlight">\(i\)</span>. The actual workload imbalance is given by the ratio between the maximum number of cells in a processor, <span class="math notranslate nohighlight">\(cells_{(max)}\)</span>, and the ideal workload:</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\text{workload} = \dfrac{cells_{(max)}}{\text{ideal}}\]</div>
+</div>
+<p>Ideally, this parallel distribution imbalance is equal to 1; values greater than 1 indicate a slowdown compared to a perfectly distributed scenario in which all processes would contain the same number of mortar cells.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The workload imbalance computation used here follows the same idea as the deal.II <code class="docutils literal notranslate"><span class="pre">workload_imbalance()</span></code> function used in the <a class="reference external" href="https://dealii.org/current/doxygen/deal.II/namespaceMGTools.html">geometric multigrid setup</a>, enabled in the <a class="reference internal" href="linear_solver_control.html"><span class="doc">Linear Solver</span></a> when <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">preconditioner</span> <span class="pre">=</span> <span class="pre">gcmg</span></code> and <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">mg</span> <span class="pre">verbosity</span> <span class="pre">=</span> <span class="pre">extra</span> <span class="pre">verbose</span></code>.</p>
+</div>
 <section id="reference">
 <h2>Reference<a class="headerlink" href="#reference" title="Link to this heading">#</a></h2>
 <aside class="footnote-list brackets">
@@ -584,5 +622,6 @@ To circumvent this, the rotor boundary IDs are shifted. The <code class="docutil
     <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=7cec7674"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </body>
 </html>

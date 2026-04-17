@@ -21,8 +21,12 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="lethe_favicon.ico"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript"> DoxygenAwesomeDarkModeToggle.init() </script>
+<script type="text/javascript" src="doxygen-github-widget.js"></script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -32,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -96,12 +100,7 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for FluidDynamicsSharp&lt; dim &gt;::Visualization_IB:</div>
 <div class="dyncontent">
-<div class="center"><img src="structFluidDynamicsSharp_1_1Visualization__IB__inherit__graph.png" border="0" usemap="#aFluidDynamicsSharp_3_01dim_01_4_1_1Visualization__IB_inherit__map" alt="Inheritance graph"/></div>
-<map name="aFluidDynamicsSharp_3_01dim_01_4_1_1Visualization__IB_inherit__map" id="aFluidDynamicsSharp_3_01dim_01_4_1_1Visualization__IB_inherit__map">
-<area shape="rect" title="Defines a struct with methods that allow the generation of a visualisation of the IB_particles...." alt="" coords="5,93,195,133"/>
-<area shape="rect" title=" " alt="" coords="11,5,189,45"/>
-<area shape="poly" title=" " alt="" coords="103,59,103,93,97,93,97,59"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="structFluidDynamicsSharp_1_1Visualization__IB__inherit__graph.svg" width="200" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -135,7 +134,7 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int dim&gt;<br />
 struct FluidDynamicsSharp&lt; dim &gt;::Visualization_IB</div><p>Defines a struct with methods that allow the generation of a visualisation of the IB_particles. This is equivalent to the corresponding class in the <a class="el" href="namespaceDEM.html" title="This namespace defines all the data containers and required operations on these containers for the DE...">DEM</a> solver. </p>
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__sharp_8h_source.html#l00487">487</a> of file <a class="el" href="fluid__dynamics__sharp_8h_source.html">fluid_dynamics_sharp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__sharp_8h_source.html#l00557">557</a> of file <a class="el" href="fluid__dynamics__sharp_8h_source.html">fluid_dynamics_sharp.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa476a8539973609314a0ef57a08e614e" name="aa476a8539973609314a0ef57a08e614e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa476a8539973609314a0ef57a08e614e">&#9670;&#160;</a></span>~Visualization_IB()</h2>
@@ -190,9 +189,9 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__sharp_8cc_source.html#l02668">2668</a> of file <a class="el" href="fluid__dynamics__sharp_8cc_source.html">fluid_dynamics_sharp.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__sharp_8cc_source.html#l02707">2707</a> of file <a class="el" href="fluid__dynamics__sharp_8cc_source.html">fluid_dynamics_sharp.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="fluid__dynamics__sharp_8h_source.html#l00533">FluidDynamicsSharp&lt; dim &gt;::Visualization_IB::dataset_names</a>, <a class="el" href="fluid__dynamics__sharp_8h_source.html#l00619">FluidDynamicsSharp&lt; dim &gt;::particles</a>, <a class="el" href="fluid__dynamics__sharp_8h_source.html#l00528">FluidDynamicsSharp&lt; dim &gt;::Visualization_IB::patches</a>, <a class="el" href="fluid__dynamics__sharp_8h_source.html#l00550">FluidDynamicsSharp&lt; dim &gt;::Visualization_IB::properties_to_write</a>, and <a class="el" href="fluid__dynamics__sharp_8h_source.html#l00544">FluidDynamicsSharp&lt; dim &gt;::Visualization_IB::vector_datasets</a>.</p>
+<p class="reference">References <a class="el" href="fluid__dynamics__sharp_8h_source.html#l00603">FluidDynamicsSharp&lt; dim &gt;::Visualization_IB::dataset_names</a>, <a class="el" href="fluid__dynamics__sharp_8h_source.html#l00691">FluidDynamicsSharp&lt; dim &gt;::particles</a>, <a class="el" href="fluid__dynamics__sharp_8h_source.html#l00598">FluidDynamicsSharp&lt; dim &gt;::Visualization_IB::patches</a>, <a class="el" href="fluid__dynamics__sharp_8h_source.html#l00620">FluidDynamicsSharp&lt; dim &gt;::Visualization_IB::properties_to_write</a>, and <a class="el" href="fluid__dynamics__sharp_8h_source.html#l00614">FluidDynamicsSharp&lt; dim &gt;::Visualization_IB::vector_datasets</a>.</p>
 
 </div>
 </div>
@@ -222,7 +221,7 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 <p>Implementation of the corresponding function of the base class. </p>
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__sharp_8cc_source.html#l02732">2732</a> of file <a class="el" href="fluid__dynamics__sharp_8cc_source.html">fluid_dynamics_sharp.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__sharp_8cc_source.html#l02771">2771</a> of file <a class="el" href="fluid__dynamics__sharp_8cc_source.html">fluid_dynamics_sharp.cc</a>.</p>
 
 </div>
 </div>
@@ -251,7 +250,7 @@ template&lt;int dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__sharp_8cc_source.html#l02743">2743</a> of file <a class="el" href="fluid__dynamics__sharp_8cc_source.html">fluid_dynamics_sharp.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__sharp_8cc_source.html#l02782">2782</a> of file <a class="el" href="fluid__dynamics__sharp_8cc_source.html">fluid_dynamics_sharp.cc</a>.</p>
 
 </div>
 </div>
@@ -281,7 +280,7 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 <p>Implementation of the corresponding function of the base class. </p>
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__sharp_8cc_source.html#l02725">2725</a> of file <a class="el" href="fluid__dynamics__sharp_8cc_source.html">fluid_dynamics_sharp.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__sharp_8cc_source.html#l02764">2764</a> of file <a class="el" href="fluid__dynamics__sharp_8cc_source.html">fluid_dynamics_sharp.cc</a>.</p>
 
 </div>
 </div>
@@ -309,7 +308,7 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 <p>A list of field names for all data components stored in patches. </p>
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__sharp_8h_source.html#l00533">533</a> of file <a class="el" href="fluid__dynamics__sharp_8h_source.html">fluid_dynamics_sharp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__sharp_8h_source.html#l00603">603</a> of file <a class="el" href="fluid__dynamics__sharp_8h_source.html">fluid_dynamics_sharp.h</a>.</p>
 
 </div>
 </div>
@@ -336,7 +335,7 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 <p>Output information that is filled by <a class="el" href="structFluidDynamicsSharp_1_1Visualization__IB.html#a5f9d51b970b73a7f4fe82da9fe14f979">build_patches()</a> and written by the write function of the base class. </p>
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__sharp_8h_source.html#l00528">528</a> of file <a class="el" href="fluid__dynamics__sharp_8h_source.html">fluid_dynamics_sharp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__sharp_8h_source.html#l00598">598</a> of file <a class="el" href="fluid__dynamics__sharp_8h_source.html">fluid_dynamics_sharp.h</a>.</p>
 
 </div>
 </div>
@@ -363,7 +362,7 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 <p>Particle properties that are written in output files </p>
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__sharp_8h_source.html#l00550">550</a> of file <a class="el" href="fluid__dynamics__sharp_8h_source.html">fluid_dynamics_sharp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__sharp_8h_source.html#l00620">620</a> of file <a class="el" href="fluid__dynamics__sharp_8h_source.html">fluid_dynamics_sharp.h</a>.</p>
 
 </div>
 </div>
@@ -390,7 +389,7 @@ template&lt;int dim&gt; </div>
 </div><div class="memdoc">
 <p>Store which of the data fields are vectors. </p>
 
-<p class="definition">Definition at line <a class="el" href="fluid__dynamics__sharp_8h_source.html#l00544">544</a> of file <a class="el" href="fluid__dynamics__sharp_8h_source.html">fluid_dynamics_sharp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fluid__dynamics__sharp_8h_source.html#l00614">614</a> of file <a class="el" href="fluid__dynamics__sharp_8h_source.html">fluid_dynamics_sharp.h</a>.</p>
 
 </div>
 </div>
@@ -399,9 +398,37 @@ template&lt;int dim&gt; </div>
 <li>/home/runner/work/lethe/lethe/source/fem-dem/<a class="el" href="fluid__dynamics__sharp_8cc_source.html">fluid_dynamics_sharp.cc</a></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 The Lethe Authors
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception OR LGPL-2.1-or-later
+-->
+<!-- HTML footer for doxygen 1.9.8-->
+<!-- Start footer part -->
+<hr class="footer"/>
+<address class="footer"><small>
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://www.chaos-lab.ca/" target="_blank" rel="noopener noreferrer">
+        <img class="chaos-logo chaos-logo-light" src="chaos_logo_black_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+        <img class="chaos-logo chaos-logo-dark" src="chaos_logo_white_without_bkg.png" alt="CHAOS Laboratory" style="height: 40px;"/>
+      </a>
+      <span style="display: flex; align-items: center; height: 40px;" class="chaos-copyright"></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      Generated by &#160;<a href="https://www.doxygen.org/index.html">
+      <img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/>
+    </a> 1.9.8
+    </div>
+  </div>
 </small></address>
+  <!-- Update copyright year automatically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyrightSpan = document.querySelector('.chaos-copyright');
+      if (copyrightSpan) {
+        copyrightSpan.textContent = `© 2019-${new Date().getFullYear()}, CHAOS Laboratory`;
+      }
+    });
+  </script>
 </body>
 </html>

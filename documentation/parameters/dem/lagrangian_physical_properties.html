@@ -176,6 +176,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../cfd/boundary_conditions_multiphysics.html">Boundary Conditions - Multiphysics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/box_refinement.html">Box Refinement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/cahn_hilliard.html">Cahn-Hilliard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cfd/conservative_level_set.html">Conservative Level-Set (Multiphase Flow)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/constrain_stasis.html">Constrain Stasis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/dimensionality.html">Dimensionality</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/dynamic_flow_control.html">Dynamic Flow Control</a></li>
@@ -200,7 +201,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../cfd/timer.html">Timer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/tracer_drift_velocity.html">Tracer Drift Velocity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/velocity_source.html">Velocity Source</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../cfd/volume_of_fluid.html">Volume of Fluid (Multiphase Flow)</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current has-children"><a class="reference internal" href="dem.html">Discrete Element Method (DEM)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Discrete Element Method (DEM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
@@ -238,6 +238,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-naca0012-low-reynolds/2d-naca0012-low-reynolds.html">Flow around NACA0012 at Low Reynolds Number</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">Taylor-Couette Flow Using Nitsche Immersed Boundary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-sudden-expansion-flow/2d-sudden-expansion-flow.html">Sudden-Expansion Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-paddle-mixer-mortar/2d-paddle-mixer-mortar.html">Paddle Mixer Using the Mortar Method</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">Flow around a Sphere</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-taylor-green-vortex/3d-taylor-green-vortex.html">Taylor-Green Vortex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-turbulent-taylor-couette/3d-turbulent-taylor-couette.html">Turbulent Taylor-Couette Flow</a></li>
@@ -248,7 +249,7 @@
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/multiphysics/multiphysics.html">Multiphysics</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Multiphysics</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../examples/multiphysics/vof.html">VOF</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of VOF</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../examples/multiphysics/cls.html">CLS</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of CLS</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/dam-break/dam-break.html">Dam-Break</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/rayleigh-taylor-instability/rayleigh-taylor-instability.html">Rayleigh-Taylor Instability</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/static-bubble/static-bubble.html">Static Bubble</a></li>
@@ -310,7 +311,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/single-particle-sedimentation/single-particle-sedimentation.html">Single Particle Sedimentation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/cylindrical-packed-bed/cylindrical-packed-bed.html">Cylindrical Packed Bed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-fluidized-bed/gas-solid-fluidized-bed.html">Gas-Solid Fluidized Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-fluidized-cylinder-bed/gas-solid-fluidized-cylinder-bed.html">Gas-Solid Fluidized Cylinder Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/pseudo-2d-gas-solid-fluidized-bed/pseudo-2d-gas-solid-fluidized-bed.html">Pseudo-2D Gas-Solid Fluidized Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-spouted-rectangular-bed/gas-solid-spouted-rectangular-bed.html">Gas-Solid Spouted Rectangular Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/liquid-solid-fluidized-bed/liquid-solid-fluidized-bed.html">Liquid-Solid Fluidized Bed</a></li>
@@ -375,7 +376,7 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../theory/multiphase/multiphase.html">Multiphase</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle navigation of Multiphase</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../theory/multiphase/cfd/cfd.html">Fluid-Fluid Flows - Interface Capturing Models</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle navigation of Fluid-Fluid Flows - Interface Capturing Models</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../theory/multiphase/cfd/vof.html">The Volume of Fluid (VOF) Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../theory/multiphase/cfd/cls.html">The Conservative Level-Set (CLS) Method</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../theory/multiphase/cfd/cahn-hilliard.html">Cahn-Hilliard Method</a></li>
 </ul>
 </li>
@@ -461,18 +462,21 @@
     # If distribution type = uniform
     set diameter                          = 0.001
 
-    # If distribution type = custom
-    set custom diameters                  = 0.001 , 0.0005
-    set custom volume fractions           = 0.6   , 0.4
-
     # If distribution type = normal or lognormal
     set average diameter                  = 0.001
     set standard deviation                = 0.0
-    set minimum diameter cutoff           = -1.
-    set maximum diameter cutoff           = -1.
+
+    # If distribution type = custom
+    set custom distribution probability function type = PDF
+    set custom distribution interpolation             = false
+    set custom distribution diameters values          = 0.001, 0.0005
+    set custom distribution diameters probabilities   = 0.6  , 1.0
 
     # If distribution type = normal, lognormal or custom
+    set distribution weighting basis      = number
     set distribution prn seed             = 1
+    set minimum diameter cutoff           = -1.
+    set maximum diameter cutoff           = -1.
 
     # For every distribution types
     set number of particles               = 0
@@ -526,49 +530,70 @@ end
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If the particles in a simulation are monodispersed and have the same physical properties, the <code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">of</span> <span class="pre">particle</span> <span class="pre">types</span></code> should be equal to zero. For polydispersed systems, the <code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">of</span> <span class="pre">particle</span> <span class="pre">types</span></code> is selected equal to the number of particles types in the simulation. For each particle type, a separate subsection <code class="docutils literal notranslate"><span class="pre">particle</span> <span class="pre">type</span> <span class="pre">n</span></code> should be defined (n starts from zero to <code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">of</span> <span class="pre">particle</span> <span class="pre">types</span></code> - 1) which contains all the physical properties related to that particle type.</p>
+<p>For each particle type, a separate subsection <code class="docutils literal notranslate"><span class="pre">particle</span> <span class="pre">type</span> <span class="pre">n</span></code> should be defined (n starts from zero to <code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">of</span> <span class="pre">particle</span> <span class="pre">types</span></code> - 1) which contains all the physical properties related to that particle type.</p>
 </div>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">size</span> <span class="pre">distribution</span> <span class="pre">type</span></code> parameter specifies the size distribution for each particle type. For each particle type, four <code class="docutils literal notranslate"><span class="pre">size</span> <span class="pre">distribution</span> <span class="pre">type</span></code> can be defined: <code class="docutils literal notranslate"><span class="pre">uniform</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">lognormal</span></code> and <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p>
 <ul>
 <li><p>For the <code class="docutils literal notranslate"><span class="pre">uniform</span></code> size distribution, the diameter of the particles is constant.</p></li>
 <li><p>For the <code class="docutils literal notranslate"><span class="pre">normal</span></code> size distribution, the particle diameters are randomly sampled from a normal distribution with an average diameter and a standard deviation.</p></li>
-<li><p>For the <code class="docutils literal notranslate"><span class="pre">lognormal</span></code> size distribution, the particle diameters are randomly sampled from a lognormal distribution with an average diameter and a standard deviation.</p></li>
+<li><p>For the <code class="docutils literal notranslate"><span class="pre">lognormal</span></code> size distribution, the particle diameters are randomly sampled from a lognormal distribution with an arithmetic average diameter and a standard deviation.</p></li>
 <li><p>For the <code class="docutils literal notranslate"><span class="pre">custom</span></code> size distribution, particle diameters are sampled from a list of diameters with a corresponding list of probabilities.</p></li>
 </ul>
 </li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In the <code class="docutils literal notranslate"><span class="pre">custom</span></code> size distribution, the probability values are based on the volume fraction taken by all the particles of the associated diameter, not to the total number of particles. For example, if a probability is equal to <code class="docutils literal notranslate"><span class="pre">0.5</span></code> , this means that half of the total volume of inserted particles will be occupied by particle with the associated diameter value.</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">custom</span></code> size distribution, the probability values represent the fraction of the total particle volume occupied by each diameter, rather than the fraction of particles by number. For example, if a probability is 0.5 for a particular diameter, this means that, as the total number of inserted particles becomes very large, approximately half of the total particle volume will consist of particles with that diameter.</p>
 </div>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">diameter</span></code> parameter defines the diameter of the particles in a <code class="docutils literal notranslate"><span class="pre">uniform</span></code> distribution.</p></li>
-<li><p>For a <code class="docutils literal notranslate"><span class="pre">normal</span></code> distribution, the <code class="docutils literal notranslate"><span class="pre">average</span> <span class="pre">diameter</span></code> and the <code class="docutils literal notranslate"><span class="pre">standard</span> <span class="pre">deviation</span></code> parameters defines the average (<span class="math notranslate nohighlight">\({\mu_d}\)</span>) and the standard deviation (<span class="math notranslate nohighlight">\({\sigma_d}\)</span>) of the particle size distribution <em>weighted by number</em>. The <code class="docutils literal notranslate"><span class="pre">minimum</span> <span class="pre">cutoff</span></code> and <code class="docutils literal notranslate"><span class="pre">maximum</span> <span class="pre">cutoff</span></code> parameters can be used to limit the lower and upper value of the diameter sampled from the distribution. If set to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, those two bounds are set to <span class="math notranslate nohighlight">\(\mu_d \pm2.5 \sigma_d\)</span>. The number-weighted probability density function (<span class="math notranslate nohighlight">\(f_{x}^{N}(d)\)</span>)  of a normal distribution is defined as:</p></li>
+<li><p>For a <code class="docutils literal notranslate"><span class="pre">normal</span></code> distribution, the <code class="docutils literal notranslate"><span class="pre">average</span> <span class="pre">diameter</span></code> and the <code class="docutils literal notranslate"><span class="pre">standard</span> <span class="pre">deviation</span></code> parameters define the average (<span class="math notranslate nohighlight">\({\mu_d}\)</span>) and the standard deviation (<span class="math notranslate nohighlight">\({\sigma_d}\)</span>) of the particle size distribution. The <code class="docutils literal notranslate"><span class="pre">minimum</span> <span class="pre">cutoff</span></code> and <code class="docutils literal notranslate"><span class="pre">maximum</span> <span class="pre">cutoff</span></code> parameters can be used to limit the lower and upper value of the diameter sampled from the distribution. If set to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, those two bounds are set to <span class="math notranslate nohighlight">\(\mu_d \pm2.5 \sigma_d\)</span>. The number-weighted probability density function (<span class="math notranslate nohighlight">\(f_{x}^{N}(d)\)</span>)  of a normal distribution is defined as:</p></li>
 </ul>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
 \[f_{x}^{N}(d)=\frac{1}{\sigma_d\sqrt{2\pi}}\exp\left(-\frac{(d-\mu_d)^2}{2\sigma_{d}^2}\right).\]</div>
 </div>
 <ul class="simple">
-<li><p>For a <code class="docutils literal notranslate"><span class="pre">lognormal</span></code> distribution, the <code class="docutils literal notranslate"><span class="pre">average</span> <span class="pre">diameter</span></code> and the <code class="docutils literal notranslate"><span class="pre">standard</span> <span class="pre">deviation</span></code> parameters defines the average (<span class="math notranslate nohighlight">\({\mu_d}\)</span>) and the standard deviation (<span class="math notranslate nohighlight">\({\sigma_d}\)</span>) of the particle size distribution <em>weighted by number</em>. The <code class="docutils literal notranslate"><span class="pre">minimum</span> <span class="pre">cutoff</span></code> and <code class="docutils literal notranslate"><span class="pre">maximum</span> <span class="pre">cutoff</span></code> parameters can be used to limit the lower and upper value of the diameter sampled from the distribution. If set to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, those two bounds are set to <span class="math notranslate nohighlight">\(\exp(\mu \pm2.5 \sigma)\)</span>. The number-weighted probability density function (<span class="math notranslate nohighlight">\(f_{x}^{N}(d)\)</span>)  of a lognormal distribution is defined as:</p></li>
+<li><p>For a <code class="docutils literal notranslate"><span class="pre">lognormal</span></code> distribution, the <code class="docutils literal notranslate"><span class="pre">average</span> <span class="pre">diameter</span></code> and the <code class="docutils literal notranslate"><span class="pre">standard</span> <span class="pre">deviation</span></code> parameters defines the arithmetic average (<span class="math notranslate nohighlight">\({\mu_d}\)</span>) and the arithmetic standard deviation (<span class="math notranslate nohighlight">\({\sigma_d}\)</span>) of the particle size distribution. The <code class="docutils literal notranslate"><span class="pre">minimum</span> <span class="pre">cutoff</span></code> and <code class="docutils literal notranslate"><span class="pre">maximum</span> <span class="pre">cutoff</span></code> parameters can be used to limit the lower and upper value of the diameter sampled from the distribution. If set to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, those two bounds are set to <span class="math notranslate nohighlight">\(\exp(\mu \pm2.5 \sigma)\)</span>. The number-weighted probability density function (<span class="math notranslate nohighlight">\(f_{x}^{N}(d)\)</span>)  of a lognormal distribution is defined as:</p></li>
 </ul>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
-\[f_{x}^{N}(d)=\frac{1}{\sigma\sqrt{2\pi}}\exp\left(-\frac{(d-\mu)^2}{2\sigma^2}\right).\]</div>
+\[f_{x}^{N}(d)=\frac{1}{\sigma_n\sqrt{2\pi}}\exp\left(-\frac{(d-\mu_n)^2}{2\sigma^2}\right).\]</div>
 </div>
-<p>where <span class="math notranslate nohighlight">\({\mu}\)</span> and <span class="math notranslate nohighlight">\({\sigma}\)</span> are the mean and standard deviation of the underlying normal distribution which can be computed using:</p>
+<p>where <span class="math notranslate nohighlight">\({\mu_n}\)</span> and <span class="math notranslate nohighlight">\({\sigma_n}\)</span> are the are the number-weighted mean and standard deviation of the underlying normal distribution which can be computed using :</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
-\[\sigma = \sqrt{\ln \left(1 + \left(\frac{\sigma_d}{\mu_d}\right)^2\right)},\]</div>
+\[\sigma_n = \sqrt{\ln \left(1 + \left(\frac{\sigma_d}{\mu_d}\right)^2\right)},\]</div>
 </div>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
-\[\mu = \ln(\mu_d) - 0.5 \sigma^2.\]</div>
+\[\mu_n = \ln(\mu_d) - 0.5 \sigma_n^2.\]</div>
 </div>
 <ul class="simple">
-<li><p>For a <code class="docutils literal notranslate"><span class="pre">custom</span></code> distribution, the <code class="docutils literal notranslate"><span class="pre">custom</span> <span class="pre">diameters</span></code> parameter defines the different diameter values used when generating particles. The <code class="docutils literal notranslate"><span class="pre">custom</span> <span class="pre">volume</span> <span class="pre">fractions</span></code> parameter defines the probabilities corresponding to each diameter value previously declared based on volume fraction. Both list must have the same length.</p></li>
-<li><p>For a <code class="docutils literal notranslate"><span class="pre">normal</span></code> or a <code class="docutils literal notranslate"><span class="pre">custom</span></code> distribution, the <code class="docutils literal notranslate"><span class="pre">distribution</span> <span class="pre">prn</span> <span class="pre">seed</span></code> parameter defines the pseudo-random number (PRN) generator with which the diameters values are getting generated.</p></li>
+<li><p>For a <code class="docutils literal notranslate"><span class="pre">custom</span></code> distribution, the particle size sampling is performed following a user-defined probability density function (PDF) or cumulative density function (CDF) which can be number- or volume-weighted depending on the <code class="docutils literal notranslate"><span class="pre">distribution</span> <span class="pre">weighting</span> <span class="pre">basis</span></code> parameter. The density function used for sampling is defined by the user through a list of diameter values (<code class="docutils literal notranslate"><span class="pre">custom</span> <span class="pre">distribution</span> <span class="pre">diameters</span> <span class="pre">values</span></code>) and a corresponding list of probability values (<code class="docutils literal notranslate"><span class="pre">custom</span> <span class="pre">distribution</span> <span class="pre">diameters</span> <span class="pre">probabilities</span></code>). Linear interpolation between defined diameter values can be used by setting the <code class="docutils literal notranslate"><span class="pre">custom</span> <span class="pre">distribution</span> <span class="pre">interpolation</span></code> parameter to <code class="docutils literal notranslate"><span class="pre">true</span></code>. If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, sampling is performed by respecting the associated CDF of the distribution (even when a PDF is defined by the user), and only the diameters values defined in the list will be present in the simulation.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">distribution</span> <span class="pre">weighting</span> <span class="pre">basis</span></code> parameter defines the basis of the distribution. This parameter can be defined as <code class="docutils literal notranslate"><span class="pre">volume</span></code> or <code class="docutils literal notranslate"><span class="pre">number</span></code>. A number-weighted cumulative density function (CDF) (<span class="math notranslate nohighlight">\({Q_0(d)}\)</span>) can be interpreted as the number of particle that have a diameter smaller then  <span class="math notranslate nohighlight">\({d}\)</span> divided by the total number of particles. A volume-weighted CDF (<span class="math notranslate nohighlight">\({Q_3(d)}\)</span>) can be interpreted as the sum of the volume occupied by the particles that have a diameter smaller then  <span class="math notranslate nohighlight">\({d}\)</span> divided by the total volume of particles. As such, number- and volume-weighted distributions a of given particle sample are not the same, but it is possible to correlate these two definitions. For a <code class="docutils literal notranslate"><span class="pre">normal</span></code> distribution, the relation between the number-weighted mean (<span class="math notranslate nohighlight">\({\mu_n}\)</span>) and standard deviation (<span class="math notranslate nohighlight">\({\sigma_n}\)</span>) and the volume-weighted mean (<span class="math notranslate nohighlight">\({\mu_v}\)</span>) and standard deviation (<span class="math notranslate nohighlight">\({\sigma_v}\)</span>) is given by:</p></li>
+</ul>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mu_v = \frac{3 \sigma_n ^4 + 6 \sigma_n^2\mu_n^2 + \mu_n^4 }{3. \sigma_n \mu_n + \mu_n^3}\]</div>
+</div>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\sigma_v = \frac{3 \sigma_n ^4 \left( 3 \mu_n + 2 b \right) + \sigma_n^2 \left( \mu_n^3 + 6 \mu_n^2 b + 3 \mu_n b^2 \right) + \mu_n3 b^2}{3. \sigma_n \mu_n + \mu_n^3 }\]</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\({b = \mu_n - \mu_v}\)</span>. For a lognormal distribution, the corresponding relations are defined as:</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\sigma_v = \sigma_n\]</div>
+</div>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mu_v = \mu_n + 3 \sigma_v^2\]</div>
+</div>
+<ul class="simple">
+<li><p>For <code class="docutils literal notranslate"><span class="pre">normal</span></code>,  <code class="docutils literal notranslate"><span class="pre">lognormal</span></code> or a <code class="docutils literal notranslate"><span class="pre">custom</span></code> distributions, the <code class="docutils literal notranslate"><span class="pre">distribution</span> <span class="pre">prn</span> <span class="pre">seed</span></code> parameter defines the pseudo-random number (PRN) generator with which the diameters values are getting generated. When running a simulation in parallel, each MPI process will have its own PRN in increments of one starting from the defined seed. This means that launching the same simulation with a different number of MPI processes will lead to different initial particle configurations. The increment is done to ensure that no noticeable and repeatable patterns appear in the initial particle configuration when running in parallel.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">minimum</span> <span class="pre">diameter</span> <span class="pre">cutoff</span></code> and <code class="docutils literal notranslate"><span class="pre">maximum</span> <span class="pre">diameter</span> <span class="pre">cutoff</span></code> parameters define the lower and upper bounds of the diameter sampled from the distribution. If set to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, those two bounds are set to <span class="math notranslate nohighlight">\(\mu_d \pm3 \sigma_d\)</span> for a <code class="docutils literal notranslate"><span class="pre">normal</span></code> distribution, to <span class="math notranslate nohighlight">\(\exp(\mu \pm 3 \sigma)\)</span> for a <code class="docutils literal notranslate"><span class="pre">lognormal</span></code> distribution and to the lowest and highest values defined in the <code class="docutils literal notranslate"><span class="pre">custom</span> <span class="pre">distribution</span> <span class="pre">diameters</span> <span class="pre">values</span></code> list for a <code class="docutils literal notranslate"><span class="pre">custom</span></code> distribution. Each diameter values is re-sampled until it falls within the defined cutoff bounds.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">of</span> <span class="pre">particles</span></code> parameter defines the number of particles for each type.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">density</span> <span class="pre">particles</span></code> defines the density of particles for each type.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">young</span> <span class="pre">modulus</span> <span class="pre">particles</span></code> defines the Young’s modulus for particles in each type.</p></li>
@@ -599,7 +624,7 @@ end
 <li><p>The <code class="docutils literal notranslate"><span class="pre">surface</span> <span class="pre">slope</span> <span class="pre">particles</span></code> defines the surface slope of particles for each type. It is a non-dimensional parameter related to roughness and more precisely to the angle of the asperities on the surface. A higher surface slope entails a smaller microcontact resistance, as there are more microcontacts.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">surface</span> <span class="pre">roughness</span> <span class="pre">particles</span></code> defines the surface roughness of particles for each type.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">thermal</span> <span class="pre">accommodation</span> <span class="pre">particles</span></code> defines the thermal accommodation coefficient of particles for each type. The thermal accommodation coefficient characterizes the quality of thermal energy exchange between gas molecules and a solid surface.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">real</span> <span class="pre">young</span> <span class="pre">modulus</span> <span class="pre">particles</span></code> defines the real Young’s modulus of particles for each type. It is used in multiphysic DEM to correct the thermal contact radius. This is useful when the Young’s modulus in the simulation is lowered to increase the time-step. An artificially low Young’s modulus would lead to an overestimated thermal contact radius. The real Young’s modulus can only be given a value that is higher than the Young’s modulus. Otherwise, the regular Young’s modulus will be used in the calculations.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">real</span> <span class="pre">young</span> <span class="pre">modulus</span> <span class="pre">particles</span></code> defines the real Young’s modulus of particles for each type. It is used in multiphysics DEM to correct the thermal contact radius. This is useful when the Young’s modulus in the simulation is lowered to increase the time step. An artificially low Young’s modulus would lead to an overestimated thermal contact radius. The real Young’s modulus can only be given a value that is higher than the Young’s modulus. Otherwise, the regular Young’s modulus will be used in the calculations.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">thermal</span> <span class="pre">conductivity</span> <span class="pre">gas</span></code> defines the thermal conductivity of the interstitial gas.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">specific</span> <span class="pre">heat</span> <span class="pre">gas</span></code> defines the specific heat capacity of the interstitial gas.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">dynamic</span> <span class="pre">viscosity</span> <span class="pre">gas</span></code> defines the dynamic viscosity of the interstitial gas.</p></li>
