@@ -36,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.2.0</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -97,17 +97,20 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="parameters_8h_source.html">core/parameters.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="periodic__boundary_8h_source.html">core/periodic_boundary.h</a>&gt;</code><br />
 <code>#include &lt;deal.II/base/parameter_handler.h&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for parameters_lagrangian.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parameters__lagrangian_8h__incl.svg" width="2995" height="579"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="parameters__lagrangian_8h__incl.svg" width="3860" height="579"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parameters__lagrangian_8h__dep__incl.svg" width="4228" height="931"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="parameters__lagrangian_8h__dep__incl.svg" width="4656" height="931"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="parameters__lagrangian_8h_source.html">Go to the source code of this file.</a></p>
@@ -152,13 +155,18 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="namespaceParameters_1_1Lagrangian.html#a2d003242b66f27f8c1fae956bd3c958aa638c14a20811366fc71cab494ea05c3b">Parameters::Lagrangian::hertz_JKR</a>
 , <a class="el" href="namespaceParameters_1_1Lagrangian.html#a2d003242b66f27f8c1fae956bd3c958aad42cf92d868a495517abc2d26231a523">Parameters::Lagrangian::DMT</a>
+, <a class="el" href="namespaceParameters_1_1Lagrangian.html#a2d003242b66f27f8c1fae956bd3c958aa2ab64f4ee279e5baf7ab7059b15e6d12">Parameters::Lagrangian::shift</a>
 <br />
  }</td></tr>
 <tr class="separator:a2d003242b66f27f8c1fae956bd3c958a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab786c050e9bc6c2ea31d84c6de7d204e" id="r_ab786c050e9bc6c2ea31d84c6de7d204e"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceParameters_1_1Lagrangian.html#ab786c050e9bc6c2ea31d84c6de7d204e">Parameters::Lagrangian::ParticleWallContactForceModel</a> : std::uint8_t { <a class="el" href="namespaceParameters_1_1Lagrangian.html#ab786c050e9bc6c2ea31d84c6de7d204ea9a932b3cb396238423eb2f33ec17d6aa">Parameters::Lagrangian::linear</a>
+<tr class="memitem:ab786c050e9bc6c2ea31d84c6de7d204e" id="r_ab786c050e9bc6c2ea31d84c6de7d204e"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceParameters_1_1Lagrangian.html#ab786c050e9bc6c2ea31d84c6de7d204e">Parameters::Lagrangian::ParticleWallContactForceModel</a> : std::uint8_t { <br />
+&#160;&#160;<a class="el" href="namespaceParameters_1_1Lagrangian.html#ab786c050e9bc6c2ea31d84c6de7d204ea9a932b3cb396238423eb2f33ec17d6aa">Parameters::Lagrangian::linear</a>
 , <a class="el" href="namespaceParameters_1_1Lagrangian.html#ab786c050e9bc6c2ea31d84c6de7d204ea06de001201911c5c9361c398bd7e9a79">Parameters::Lagrangian::nonlinear</a>
 , <a class="el" href="namespaceParameters_1_1Lagrangian.html#ab786c050e9bc6c2ea31d84c6de7d204ea7dfcd2d872a1f653ce346e9fbddf698f">Parameters::Lagrangian::JKR</a>
 , <a class="el" href="namespaceParameters_1_1Lagrangian.html#ab786c050e9bc6c2ea31d84c6de7d204ead42cf92d868a495517abc2d26231a523">Parameters::Lagrangian::DMT</a>
+, <br />
+&#160;&#160;<a class="el" href="namespaceParameters_1_1Lagrangian.html#ab786c050e9bc6c2ea31d84c6de7d204ea2ab64f4ee279e5baf7ab7059b15e6d12">Parameters::Lagrangian::shift</a>
+<br />
  }</td></tr>
 <tr class="separator:ab786c050e9bc6c2ea31d84c6de7d204e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac41aed1853eee7a1933daa560973327b" id="r_ac41aed1853eee7a1933daa560973327b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceParameters_1_1Lagrangian.html#ac41aed1853eee7a1933daa560973327b">Parameters::Lagrangian::RollingResistanceMethod</a> : std::uint8_t { <a class="el" href="namespaceParameters_1_1Lagrangian.html#ac41aed1853eee7a1933daa560973327baca9757952f02d2b82fbdc55cdb5f63e7">Parameters::Lagrangian::none</a>

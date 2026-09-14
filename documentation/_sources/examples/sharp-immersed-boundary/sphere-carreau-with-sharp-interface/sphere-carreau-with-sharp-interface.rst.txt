@@ -191,7 +191,7 @@ In this case, we want to define a spherical boundary of radius :math:`0.5`, with
       set number of particles                     = 1
       set assemble Navier-Stokes inside particles = false
       subsection extrapolation function
-        set stencil order = 2
+        set stencil degree = 2
         set length ratio  = 1
       end
       subsection local mesh refinement
@@ -271,7 +271,7 @@ We can notice that the kinematic viscosity rapidly reaches a plateau at :math:`\
 .. image:: images/carreau.png
     :align: center
 
-We get the following torques and forces applied on the particle for each of the mesh refinements. The drag force applied on the particle is the effective force in the same direction fo the flow, which is in the :math:`x` direction in this case.
+We get the following torques and forces applied on the particle for each of the mesh refinements. The drag force applied on the particle is the effective force in the same direction as the flow, which is in the :math:`x` direction in this case.
 
 .. code-block:: text
 

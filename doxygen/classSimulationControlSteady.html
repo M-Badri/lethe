@@ -36,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.2.0</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -128,6 +128,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a106da443da26004eca4875cee8060207 inherit pub_methods_classSimulationControl"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a096e10bf3a464ae70f3e77c33e7f027d inherit pub_methods_classSimulationControl" id="r_a096e10bf3a464ae70f3e77c33e7f027d"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSimulationControl.html#a096e10bf3a464ae70f3e77c33e7f027d">calculate_time_step</a> ()</td></tr>
 <tr class="separator:a096e10bf3a464ae70f3e77c33e7f027d inherit pub_methods_classSimulationControl"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27da5a4ba94690b63404c50a2ec188b5 inherit pub_methods_classSimulationControl" id="r_a27da5a4ba94690b63404c50a2ec188b5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSimulationControl.html#a27da5a4ba94690b63404c50a2ec188b5">is_refinement_step</a> (const <a class="el" href="structParameters_1_1MeshAdaptation.html">Parameters::MeshAdaptation</a> &amp;mesh_adaptation)</td></tr>
+<tr class="separator:a27da5a4ba94690b63404c50a2ec188b5 inherit pub_methods_classSimulationControl"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3322c6b5a41b5418901963b6477ba5d8 inherit pub_methods_classSimulationControl" id="r_a3322c6b5a41b5418901963b6477ba5d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSimulationControl.html#a3322c6b5a41b5418901963b6477ba5d8">output_enabled</a> () const</td></tr>
 <tr class="separator:a3322c6b5a41b5418901963b6477ba5d8 inherit pub_methods_classSimulationControl"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a037f676d4e45242bb481e0a4a71e2dc9 inherit pub_methods_classSimulationControl" id="r_a037f676d4e45242bb481e0a4a71e2dc9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSimulationControl.html#a037f676d4e45242bb481e0a4a71e2dc9">is_output_iteration</a> ()</td></tr>
@@ -174,8 +176,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af613e9cd4a87cf129de92f57685a15fa inherit pub_methods_classSimulationControl"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2b966daa8ae1bc4395cfa86ffd05939 inherit pub_methods_classSimulationControl" id="r_af2b966daa8ae1bc4395cfa86ffd05939"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSimulationControl.html#af2b966daa8ae1bc4395cfa86ffd05939">get_current_capillary_time_step_ratio</a> () const</td></tr>
 <tr class="separator:af2b966daa8ae1bc4395cfa86ffd05939 inherit pub_methods_classSimulationControl"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62b6eb797cd39c75989300f8af3070f0 inherit pub_methods_classSimulationControl" id="r_a62b6eb797cd39c75989300f8af3070f0"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSimulationControl.html#a62b6eb797cd39c75989300f8af3070f0">get_step_number</a> () const</td></tr>
-<tr class="separator:a62b6eb797cd39c75989300f8af3070f0 inherit pub_methods_classSimulationControl"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50dfc7e2c4ff070a952d33c24ecf246e inherit pub_methods_classSimulationControl" id="r_a50dfc7e2c4ff070a952d33c24ecf246e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSimulationControl.html#a50dfc7e2c4ff070a952d33c24ecf246e">get_number_subdivision</a> () const</td></tr>
 <tr class="separator:a50dfc7e2c4ff070a952d33c24ecf246e inherit pub_methods_classSimulationControl"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82927e23a33ff258410b0d3ce50dbd07 inherit pub_methods_classSimulationControl" id="r_a82927e23a33ff258410b0d3ce50dbd07"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSimulationControl.html#a82927e23a33ff258410b0d3ce50dbd07">get_log_frequency</a> () const</td></tr>
@@ -226,6 +226,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:af8d2314e48124b0a3b90523ae1561f91 inherit pro_attribs_classSimulationControl"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ab5fb4679cef5aeca745bf0e76cc6e5 inherit pro_attribs_classSimulationControl" id="r_a4ab5fb4679cef5aeca745bf0e76cc6e5"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSimulationControl.html#a4ab5fb4679cef5aeca745bf0e76cc6e5">iteration_number</a></td></tr>
 <tr class="separator:a4ab5fb4679cef5aeca745bf0e76cc6e5 inherit pro_attribs_classSimulationControl"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec805fc116d68e6a35323f01781f016a inherit pro_attribs_classSimulationControl" id="r_aec805fc116d68e6a35323f01781f016a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSimulationControl.html#aec805fc116d68e6a35323f01781f016a">end_iteration</a></td></tr>
+<tr class="separator:aec805fc116d68e6a35323f01781f016a inherit pro_attribs_classSimulationControl"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5969a5ad321536ea68ab238330510648 inherit pro_attribs_classSimulationControl" id="r_a5969a5ad321536ea68ab238330510648"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSimulationControl.html#a5969a5ad321536ea68ab238330510648">number_mesh_adapt</a></td></tr>
 <tr class="separator:a5969a5ad321536ea68ab238330510648 inherit pro_attribs_classSimulationControl"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b3cc016a68348146112de04c7820020 inherit pro_attribs_classSimulationControl" id="r_a3b3cc016a68348146112de04c7820020"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSimulationControl.html#a3b3cc016a68348146112de04c7820020">CFL</a></td></tr>
@@ -277,7 +279,7 @@ Additional Inherited Members</h2></td></tr>
 <p>This class handles steady-state simulations where time integration is not required. The simulation progresses through iterations until the specified number of mesh adaptations is reached or the maximum number of iterations is completed.</p>
 <dl class="section note"><dt>Note</dt><dd>Steady-state simulations do not use adaptive time stepping. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="simulation__control_8h_source.html#l01109">1109</a> of file <a class="el" href="simulation__control_8h_source.html">simulation_control.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulation__control_8h_source.html#l01111">1111</a> of file <a class="el" href="simulation__control_8h_source.html">simulation_control.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a32cdcb209c18cccde4871a5b798c2a24" name="a32cdcb209c18cccde4871a5b798c2a24"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a32cdcb209c18cccde4871a5b798c2a24">&#9670;&#160;</a></span>SimulationControlSteady()</h2>
@@ -303,7 +305,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="simulation__control_8cc_source.html#l00575">575</a> of file <a class="el" href="simulation__control_8cc_source.html">simulation_control.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulation__control_8cc_source.html#l00602">602</a> of file <a class="el" href="simulation__control_8cc_source.html">simulation_control.cc</a>.</p>
 
 </div>
 </div>
@@ -337,9 +339,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classSimulationControl.html#a67aa726e7105dd0af92f47dac688e001">SimulationControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="simulation__control_8cc_source.html#l00581">581</a> of file <a class="el" href="simulation__control_8cc_source.html">simulation_control.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulation__control_8cc_source.html#l00608">608</a> of file <a class="el" href="simulation__control_8cc_source.html">simulation_control.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="simulation__control_8h_source.html#l00059">SimulationControl::current_time</a>, <a class="el" href="simulation__control_8cc_source.html#l00615">is_at_end()</a>, <a class="el" href="simulation__control_8h_source.html#l00097">SimulationControl::iteration_number</a>, and <a class="el" href="simulation__control_8h_source.html#l00062">SimulationControl::previous_time</a>.</p>
+<p class="reference">References <a class="el" href="simulation__control_8h_source.html#l00059">SimulationControl::current_time</a>, <a class="el" href="simulation__control_8cc_source.html#l00642">is_at_end()</a>, <a class="el" href="simulation__control_8h_source.html#l00097">SimulationControl::iteration_number</a>, and <a class="el" href="simulation__control_8h_source.html#l00062">SimulationControl::previous_time</a>.</p>
 
 </div>
 </div>
@@ -371,7 +373,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classSimulationControl.html#a08bd0100d59a88e4aaf607f70f803aba">SimulationControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="simulation__control_8h_source.html#l01134">1134</a> of file <a class="el" href="simulation__control_8h_source.html">simulation_control.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulation__control_8h_source.html#l01136">1136</a> of file <a class="el" href="simulation__control_8h_source.html">simulation_control.h</a>.</p>
 
 </div>
 </div>
@@ -403,9 +405,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classSimulationControl.html#ace7a05ca520659fb2178d26a536b07f4">SimulationControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="simulation__control_8cc_source.html#l00615">615</a> of file <a class="el" href="simulation__control_8cc_source.html">simulation_control.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulation__control_8cc_source.html#l00642">642</a> of file <a class="el" href="simulation__control_8cc_source.html">simulation_control.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="simulation__control_8h_source.html#l00097">SimulationControl::iteration_number</a>, and <a class="el" href="simulation__control_8h_source.html#l00100">SimulationControl::number_mesh_adapt</a>.</p>
+<p class="reference">References <a class="el" href="simulation__control_8h_source.html#l00097">SimulationControl::iteration_number</a>, and <a class="el" href="simulation__control_8h_source.html#l00103">SimulationControl::number_mesh_adapt</a>.</p>
 
 </div>
 </div>
@@ -443,9 +445,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classSimulationControl.html#aad36188d4b8b60828b33284ca0858211">SimulationControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="simulation__control_8cc_source.html#l00598">598</a> of file <a class="el" href="simulation__control_8cc_source.html">simulation_control.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simulation__control_8cc_source.html#l00625">625</a> of file <a class="el" href="simulation__control_8cc_source.html">simulation_control.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="core_2utilities_8h_source.html#l00468">announce_string()</a>, <a class="el" href="simulation__control_8cc_source.html#l00185">SimulationControl::is_verbose_iteration()</a>, <a class="el" href="simulation__control_8h_source.html#l00097">SimulationControl::iteration_number</a>, and <a class="el" href="simulation__control_8h_source.html#l00100">SimulationControl::number_mesh_adapt</a>.</p>
+<p class="reference">References <a class="el" href="core_2utilities_8h_source.html#l00469">announce_string()</a>, <a class="el" href="simulation__control_8cc_source.html#l00201">SimulationControl::is_verbose_iteration()</a>, <a class="el" href="simulation__control_8h_source.html#l00097">SimulationControl::iteration_number</a>, and <a class="el" href="simulation__control_8h_source.html#l00103">SimulationControl::number_mesh_adapt</a>.</p>
 
 </div>
 </div>

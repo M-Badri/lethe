@@ -36,7 +36,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="lethe-logo-with-bkgd.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.0.3</span>
+   <div id="projectname">Lethe Open-Source Library<span id="projectnumber">&#160;version 1.2.0</span>
    </div>
    <div id="projectbrief">Developer Guide</div>
   </td>
@@ -88,6 +88,7 @@ $(function() {
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Parameters Namespace Reference</div></div>
@@ -161,7 +162,7 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParameters_1_1MaterialInteractions.html">MaterialInteractions</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParameters_1_1Mesh.html">Mesh</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParameters_1_1Mesh.html">Mesh</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParameters_1_1MeshAdaptation.html">MeshAdaptation</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,6 +183,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParameters_1_1NonLinearSolver.html">NonLinearSolver</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParameters_1_1NonNewtonian.html">NonNewtonian</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParameters_1_1PeriodicBoundary.html">PeriodicBoundary</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParameters_1_1PhaseChange.html">PhaseChange</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -222,6 +225,11 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParameters_1_1VoidFractionParameters.html">VoidFractionParameters</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a381317ade54e7ed0b8001db41419b5f7" id="r_a381317ade54e7ed0b8001db41419b5f7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceParameters.html#a381317ade54e7ed0b8001db41419b5f7">PeriodicBoundaries</a> = std::map&lt; dealii::types::boundary_id, <a class="el" href="structParameters_1_1PeriodicBoundary.html">PeriodicBoundary</a> &gt;</td></tr>
+<tr class="separator:a381317ade54e7ed0b8001db41419b5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:a91f1943180a615249347b911b0ed3919" id="r_a91f1943180a615249347b911b0ed3919"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceParameters.html#a91f1943180a615249347b911b0ed3919">Verbosity</a> : std::uint8_t { <a class="el" href="namespaceParameters.html#a91f1943180a615249347b911b0ed3919a556966c7830465dc4623d62e32cec31d">quiet</a>
@@ -240,6 +248,10 @@ Enumerations</h2></td></tr>
 , <a class="el" href="namespaceParameters.html#a59bccd897a552f378b3da967e9fa803fa51762626b4f785729159fd35eea74deb">spm</a>
  }</td></tr>
 <tr class="separator:a59bccd897a552f378b3da967e9fa803f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b2ee398829a9f3d25a3ce471a53b101" id="r_a7b2ee398829a9f3d25a3ce471a53b101"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceParameters.html#a7b2ee398829a9f3d25a3ce471a53b101">QCMFilterType</a> { <a class="el" href="namespaceParameters.html#a7b2ee398829a9f3d25a3ce471a53b101a6683a3be9c0472d8c680cc93a424c198">spherical</a>
+, <a class="el" href="namespaceParameters.html#a7b2ee398829a9f3d25a3ce471a53b101a304e2a3b544f6b9f267a151e1bcee487">gaussian</a>
+ }</td></tr>
+<tr class="separator:a7b2ee398829a9f3d25a3ce471a53b101"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c3b515caf96bc00d4181a1085dfdb84" id="r_a3c3b515caf96bc00d4181a1085dfdb84"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceParameters.html#a3c3b515caf96bc00d4181a1085dfdb84">VoidFractionQuadratureRule</a> { <a class="el" href="namespaceParameters.html#a3c3b515caf96bc00d4181a1085dfdb84a710a4950250286365cf841f765a790f1">gauss</a>
 , <a class="el" href="namespaceParameters.html#a3c3b515caf96bc00d4181a1085dfdb84a9a8a1f8739356c62c5da46aef8be53fb">gauss_lobatto</a>
  }</td></tr>
@@ -330,12 +342,32 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:abf9a3d883f67a19bea80ba4d93ad1c1c" id="r_abf9a3d883f67a19bea80ba4d93ad1c1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structParameters_1_1SizeOfSubsections.html">SizeOfSubsections</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceParameters.html#abf9a3d883f67a19bea80ba4d93ad1c1c">get_size_of_subsections</a> (const std::string &amp;file_name)</td></tr>
-<tr class="separator:abf9a3d883f67a19bea80ba4d93ad1c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadc75cfb32da341b9f4ead7b2846b351" id="r_aadc75cfb32da341b9f4ead7b2846b351"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structParameters_1_1SizeOfSubsections.html">SizeOfSubsections</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceParameters.html#aadc75cfb32da341b9f4ead7b2846b351">get_size_of_subsections</a> (const std::string &amp;file_name, const bool require_subsection_size=true)</td></tr>
+<tr class="separator:aadc75cfb32da341b9f4ead7b2846b351"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Drift velocity that is added to the tracer velocity to account for simplified multiphase simulations using drift-flux modeling. </p>
-</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a id="a381317ade54e7ed0b8001db41419b5f7" name="a381317ade54e7ed0b8001db41419b5f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a381317ade54e7ed0b8001db41419b5f7">&#9670;&#160;</a></span>PeriodicBoundaries</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespaceParameters.html#a381317ade54e7ed0b8001db41419b5f7">Parameters::PeriodicBoundaries</a> = typedef std::map&lt;dealii::types::boundary_id, <a class="el" href="structParameters_1_1PeriodicBoundary.html">PeriodicBoundary</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The periodic boundary pairs of a simulation, keyed by the principal (first) boundary id of each pair. </p>
+<p>CFD and <a class="el" href="namespaceDEM.html" title="This namespace defines all the data containers and required operations on these containers for the DE...">DEM</a> simulations declare their boundary conditions through different parameter classes (<a class="el" href="classBoundaryConditions_1_1BoundaryConditions.html" title="This class is the base class for all boundary conditions. It stores the general information that all ...">BoundaryConditions::BoundaryConditions</a> and <a class="el" href="structParameters_1_1Lagrangian_1_1BCDEM.html" title="Boundary conditions for DEM simulations.">Parameters::Lagrangian::BCDEM</a> respectively), but both describe periodicity with this container, so that a single routine, <a class="el" href="grids_8h.html#a1e8fefbdbf5ca4f3a0e95354da101185" title="Modifies the triangulation to set up its periodic boundary conditions.">setup_periodic_boundary_conditions()</a>, sets up the periodicity of the triangulation for either solver. </p>
+
+<p class="definition">Definition at line <a class="el" href="periodic__boundary_8h_source.html#l00036">36</a> of file <a class="el" href="periodic__boundary_8h_source.html">periodic_boundary.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a3afa4d0c12c6c995b8b6978a4e413c3b" name="a3afa4d0c12c6c995b8b6978a4e413c3b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3afa4d0c12c6c995b8b6978a4e413c3b">&#9670;&#160;</a></span>CLSInitialConditionType</h2>
 
@@ -401,7 +433,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="parameters__cfd__dem_8h_source.html#l00105">105</a> of file <a class="el" href="parameters__cfd__dem_8h_source.html">parameters_cfd_dem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters__cfd__dem_8h_source.html#l00127">127</a> of file <a class="el" href="parameters__cfd__dem_8h_source.html">parameters_cfd_dem.h</a>.</p>
 
 </div>
 </div>
@@ -441,7 +473,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="parameters__cfd__dem_8h_source.html#l00054">54</a> of file <a class="el" href="parameters__cfd__dem_8h_source.html">parameters_cfd_dem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters__cfd__dem_8h_source.html#l00076">76</a> of file <a class="el" href="parameters__cfd__dem_8h_source.html">parameters_cfd_dem.h</a>.</p>
 
 </div>
 </div>
@@ -630,19 +662,53 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Class to account for different fluid indicator: </p>
-<ul>
-<li>fluid0: fluid 0 only,</li>
-<li>fluid1: fluid 1 only,</li>
-<li>both: both fluids This is used for multiphase simulations, in <a class="el" href="structParameters_1_1PostProcessing.html" title="Postprocessing - Defines the parameters for the post-processing. In Lethe, post-processing implies th...">PostProcessing</a> and in <a class="el" href="structParameters_1_1CLS.html" title="CLS - Defines the parameters for free surface simulations using the CLS method. Has to be declared be...">CLS</a> (see parameter_multiphysics.h) </li>
-</ul>
+<p>Class to account for different fluid indicators. This is used for multiphase simulations in <a class="el" href="structParameters_1_1PostProcessing.html" title="Postprocessing - Defines the parameters for the post-processing. In Lethe, post-processing implies th...">PostProcessing</a>, in <a class="el" href="structParameters_1_1CLS.html" title="CLS - Defines the parameters for free surface simulations using the CLS method. Has to be declared be...">CLS</a> (see parameter_multiphysics.h), and in <a class="el" href="structParameters_1_1VelocitySource.html" title="VelocitySource - Adds velocity-dependent source term to the Navier-Stokes equations with the appropri...">VelocitySource</a> (phase change Carman-Kozeny permeability model). </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af7808f8635a6a7dc05ee8c1487118f2fa1e86df18a83727e4a5dc8dc2859a097c" name="af7808f8635a6a7dc05ee8c1487118f2fa1e86df18a83727e4a5dc8dc2859a097c"></a>fluid0&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af7808f8635a6a7dc05ee8c1487118f2fa1e04d9b58aa70e6fb6501fde7608fd13" name="af7808f8635a6a7dc05ee8c1487118f2fa1e04d9b58aa70e6fb6501fde7608fd13"></a>fluid1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af7808f8635a6a7dc05ee8c1487118f2faf6cb3e816496528d4187db53bc66567f" name="af7808f8635a6a7dc05ee8c1487118f2faf6cb3e816496528d4187db53bc66567f"></a>both&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af7808f8635a6a7dc05ee8c1487118f2fa1e86df18a83727e4a5dc8dc2859a097c" name="af7808f8635a6a7dc05ee8c1487118f2fa1e86df18a83727e4a5dc8dc2859a097c"></a>fluid0&#160;</td><td class="fielddoc"><p>fluid 0 only </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af7808f8635a6a7dc05ee8c1487118f2fa1e04d9b58aa70e6fb6501fde7608fd13" name="af7808f8635a6a7dc05ee8c1487118f2fa1e04d9b58aa70e6fb6501fde7608fd13"></a>fluid1&#160;</td><td class="fielddoc"><p>fluid 1 only </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af7808f8635a6a7dc05ee8c1487118f2faf6cb3e816496528d4187db53bc66567f" name="af7808f8635a6a7dc05ee8c1487118f2faf6cb3e816496528d4187db53bc66567f"></a>both&#160;</td><td class="fielddoc"><p>both fluids </p>
+</td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l00059">59</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l00072">72</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+
+</div>
+</div>
+<a id="a7b2ee398829a9f3d25a3ce471a53b101" name="a7b2ee398829a9f3d25a3ce471a53b101"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b2ee398829a9f3d25a3ce471a53b101">&#9670;&#160;</a></span>QCMFilterType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="namespaceParameters.html#a7b2ee398829a9f3d25a3ce471a53b101">Parameters::QCMFilterType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Filter kernel used by the Quadrature-Centered Method (QCM) to weigh particle contributions onto the mesh. </p>
+<p>The characteristic length of the filter is taken from <a class="el" href="classParameters_1_1VoidFractionParameters.html#a8c4f0e8d4e3b79114e7e3e0dcd19b2d6">VoidFractionParameters::qcm_smoothing_length</a> and <a class="el" href="classParameters_1_1VoidFractionParameters.html#ad98c6364af35dac3ebc7196abf9c7b34" title="Use a sphere volume equal to the cell volume in QCM.">VoidFractionParameters::qcm_sphere_equal_cell_volume</a>, with the interpretation depending on the filter:</p><ul>
+<li>spherical: half of qcm_smoothing_length is the averaging-sphere radius.</li>
+<li>gaussian: half of qcm_smoothing_length is the Gaussian standard deviation sigma. Note that the Gaussian has non-compact support; sigma should be small relative to the QCM neighbor-cell stencil reach to avoid silent truncation bias. </li>
+</ul>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7b2ee398829a9f3d25a3ce471a53b101a6683a3be9c0472d8c680cc93a424c198" name="a7b2ee398829a9f3d25a3ce471a53b101a6683a3be9c0472d8c680cc93a424c198"></a>spherical&#160;</td><td class="fielddoc"><p>Spherical indicator (heaviside) filter (default, original QCM). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7b2ee398829a9f3d25a3ce471a53b101a304e2a3b544f6b9f267a151e1bcee487" name="a7b2ee398829a9f3d25a3ce471a53b101a304e2a3b544f6b9f267a151e1bcee487"></a>gaussian&#160;</td><td class="fielddoc"><p>Gaussian filter parametrised by a standard deviation sigma. </p>
+</td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="parameters__cfd__dem_8h_source.html#l00054">54</a> of file <a class="el" href="parameters__cfd__dem_8h_source.html">parameters_cfd_dem.h</a>.</p>
 
 </div>
 </div>
@@ -806,7 +872,7 @@ Functions</h2></td></tr>
 <li>iteration: the time-harmonic Maxwell solver will be solved every N time iterations, where N is given by the user input parameter "coupling
 iteration".</li>
 <li>time: the time-harmonic Maxwell solver will be solved when crossing a time multiple, e.g. every T seconds, where the time multiple is given by the user input parameter "coupling time".</li>
-<li>threshold: the time-harmonic Maxwell solver will be solved when the maximum change in the material properties of the problem change beyond a certain threshold, where the threshold value is given by the user input parameter "coupling threshold". <b>This is not implemented yet.</b> </li>
+<li>threshold: the time-harmonic Maxwell solver will be solved when the maximum change in the material properties of the problem change beyond a certain threshold, where the threshold value is given by the user input parameter "coupling threshold". </li>
 </ul>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa00157f43a0189c3afc66a469b3e7aaea334c4a4c42fdb79d7ebc3e73b517e6f8" name="aa00157f43a0189c3afc66a469b3e7aaea334c4a4c42fdb79d7ebc3e73b517e6f8"></a>none&#160;</td><td class="fielddoc"></td></tr>
@@ -847,7 +913,7 @@ iteration".</li>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="parameters__cfd__dem_8h_source.html#l00119">119</a> of file <a class="el" href="parameters__cfd__dem_8h_source.html">parameters_cfd_dem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters__cfd__dem_8h_source.html#l00141">141</a> of file <a class="el" href="parameters__cfd__dem_8h_source.html">parameters_cfd_dem.h</a>.</p>
 
 </div>
 </div>
@@ -876,7 +942,7 @@ iteration".</li>
 <tr><td class="fieldname"><a id="a91f1943180a615249347b911b0ed3919ae5cbb8171b496f26a4488b9e15a0fe52" name="a91f1943180a615249347b911b0ed3919ae5cbb8171b496f26a4488b9e15a0fe52"></a>extra_verbose&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l00045">45</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l00059">59</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
 
 </div>
 </div>
@@ -944,7 +1010,7 @@ iteration".</li>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="parameters__cfd__dem_8h_source.html#l00043">43</a> of file <a class="el" href="parameters__cfd__dem_8h_source.html">parameters_cfd_dem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters__cfd__dem_8h_source.html#l00065">65</a> of file <a class="el" href="parameters__cfd__dem_8h_source.html">parameters_cfd_dem.h</a>.</p>
 
 </div>
 </div>
@@ -985,8 +1051,8 @@ iteration".</li>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="abf9a3d883f67a19bea80ba4d93ad1c1c" name="abf9a3d883f67a19bea80ba4d93ad1c1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf9a3d883f67a19bea80ba4d93ad1c1c">&#9670;&#160;</a></span>get_size_of_subsections()</h2>
+<a id="aadc75cfb32da341b9f4ead7b2846b351" name="aadc75cfb32da341b9f4ead7b2846b351"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadc75cfb32da341b9f4ead7b2846b351">&#9670;&#160;</a></span>get_size_of_subsections()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -995,8 +1061,18 @@ iteration".</li>
           <td class="memname"><a class="el" href="structParameters_1_1SizeOfSubsections.html">SizeOfSubsections</a> Parameters::get_size_of_subsections </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>file_name</em></td><td>)</td>
+          <td class="paramname"><em>file_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>require_subsection_size</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1004,14 +1080,18 @@ iteration".</li>
 <p>Extract the maximum number of all variable size sections within the parameter file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">file_name</td><td>Name of the parameter file from which the size are parsed </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_name</td><td>Name of the parameter file from which the sizes are parsed</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">require_subsection_size</td><td>If true, the parameter file must indicate the size of at least one variable size subsection, which is the case for every solver for which a "boundary conditions" subsection is mandatory. The <a class="el" href="namespaceDEM.html" title="This namespace defines all the data containers and required operations on these containers for the DE...">DEM</a> solvers, whose boundary conditions are declared in a "DEM boundary conditions" subsection with a "number of boundary
+conditions" entry, set this to false and consequently obtain a size of zero for parameter files that do not declare any manifold.</td></tr>
   </table>
   </dd>
 </dl>
+<p>//TODO make the size of the <a class="el" href="namespaceDEM.html" title="This namespace defines all the data containers and required operations on these containers for the DE...">DEM</a> boundary conditions parsed instead.</p>
+<dl class="section return"><dt>Returns</dt><dd>The size of the variable size subsections of the parameter file. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="parameters_8cc_source.html#l00070">70</a> of file <a class="el" href="parameters_8cc_source.html">parameters.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8cc_source.html#l00090">90</a> of file <a class="el" href="parameters_8cc_source.html">parameters.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="parameters_8h_source.html#l00032">Parameters::SizeOfSubsections::boundary_conditions</a>, <a class="el" href="utilities_8cc_source.html#l00708">get_max_subsection_size()</a>, and <a class="el" href="parameters_8h_source.html#l00033">Parameters::SizeOfSubsections::manifolds</a>.</p>
+<p class="reference">References <a class="el" href="parameters_8h_source.html#l00032">Parameters::SizeOfSubsections::boundary_conditions</a>, <a class="el" href="utilities_8cc_source.html#l00702">get_max_subsection_size()</a>, and <a class="el" href="parameters_8h_source.html#l00033">Parameters::SizeOfSubsections::manifolds</a>.</p>
 
 </div>
 </div>

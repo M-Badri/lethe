@@ -70,7 +70,7 @@ We can compile ``dealii`` in the ``$HOME/dealii/build`` folder, by defining the 
 .. code-block:: text
   :class: copy-button
 
-  cmake ../dealii -DDEAL_II_WITH_MPI=ON -DDEAL_II_WITH_TRILINOS=ON   -DTRILINOS_DIR=$EBROOTTRILINOS  -DDEAL_II_WITH_P4EST=ON  -DDEAL_II_WITH_METIS=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$HOME/dealii/inst/ -DDEAL_II_COMPONENT_EXAMPLES=OFF  -DCMAKE_CXX_FLAGS="-march=native" -G Ninja
+  cmake ../dealii -DDEAL_II_WITH_MPI=ON -DDEAL_II_WITH_TRILINOS=ON   -DTRILINOS_DIR=$EBROOTTRILINOS  -DDEAL_II_WITH_P4EST=ON  -DDEAL_II_WITH_METIS=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$HOME/dealii/inst/ -DDEAL_II_COMPONENT_EXAMPLES=OFF  -DCMAKE_CXX_FLAGS="-march=native" -DDEAL_II_WITH_HDF5=OFF -G Ninja
 
 .. tip::
 
@@ -135,10 +135,10 @@ Simulations are sent to the scheduler via batch scripts. Visit the Digital Resea
   #SBATCH --mem=120G #memory usage per node. See cluster specification for maximal amount.
   #SBATCH --job-name=$yourjobname
   #SBATCH --mail-type=ALL
-  #SBATCH --mail-user=$your.email.adress@email.provider
+  #SBATCH --mail-user=$your.email.address@email.provider
 
   source $HOME/.dealii
-  mpirun $HOME/lethe/inst/bin/$lethe_application_name_wanted $parameter_file_name.prm
+  mpirun lethe_application_name_wanted parameter_file_name.prm
 
 
 .. tip::

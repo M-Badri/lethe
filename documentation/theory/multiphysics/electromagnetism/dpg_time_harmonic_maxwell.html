@@ -1,0 +1,1071 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="Multiphase" href="../../multiphase/multiphase.html" /><link rel="prev" title="Finite Element Method for Time-Harmonic Maxwell’s Equations" href="time_harmonic_weak_form.html" />
+
+    <link rel="shortcut icon" href="../../../_static/lethe_favicon.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+        <title>DPG formulation for time-harmonic Maxwell problems - Lethe documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/style.css?v=dba6e9e0" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../index.html"><div class="brand">Lethe  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
+  
+  
+  <span class="sidebar-brand-text">Lethe  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../installation/installation.html">Installation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Installation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation/regular_installation.html">Regular Installation on Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation/windows_wsl.html">Windows with WSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation/apple_arm.html">Installation on Apple ARM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation/docker.html">Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation/digital_alliance.html">Running Lethe on Digital Research Alliance of Canada Clusters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../applications.html">Applications Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../structure.html">Folder Structure of Lethe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../first_simulation.html">Launching Your First Simulation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../parameters/parameters.html">Parameters Guide</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Parameters Guide</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../parameters/cfd/cfd.html">General, CFD and Multiphysics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of General, CFD and Multiphysics</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/ale.html">Arbitrary Lagrangian-Eulerian</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/analytical_solution.html">Analytical Solution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/boundary_conditions_cfd.html">Boundary Conditions - CFD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/boundary_conditions_multiphysics.html">Boundary Conditions - Multiphysics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/box_refinement.html">Box Refinement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/cahn_hilliard.html">Cahn-Hilliard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/conservative_level_set.html">Conservative Level-Set (Multiphase Flow)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/constrain_stasis.html">Constrain Stasis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/dimensionality.html">Dimensionality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/dynamic_flow_control.html">Dynamic Flow Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/fem.html">Finite Element Interpolation (FEM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/force_and_torque.html">Force and Torque Calculation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/initial_conditions.html">Initial Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/laser_heat_source.html">Laser Heat Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/linear_solver_control.html">Linear Solver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/manifolds.html">Manifolds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/mesh.html">Mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/mesh_adaptation_control.html">Mesh Adaptation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/mortar.html">Mortar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/multiphysics.html">Multiphysics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/nitsche.html">Nitsche Immersed Boundary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/non-linear_solver_control.html">Non-linear Solver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/physical_properties.html">Physical Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/post_processing.html">Post-processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/restart.html">Restart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/simulation_control.html">Simulation Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/source_term.html">Source Term</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/stabilization.html">Stabilization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/timer.html">Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/time_harmonic_maxwell.html">Time-Harmonic Maxwell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/tracer_drift_velocity.html">Tracer Drift Velocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/velocity_source.html">Velocity Source</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../parameters/dem/dem.html">Discrete Element Method (DEM)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Discrete Element Method (DEM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/simulation_control.html">Simulation Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/test.html">Test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/timer.html">Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/model_parameters.html">Model Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/lagrangian_physical_properties.html">Lagrangian Physical Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/mesh.html">Mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/insertion_info.html">Insertion Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/floating_wall.html">Floating Wall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/solid_objects.html">Solid Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/boundary_conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/post-processing.html">Post-processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/particle_ray_tracing.html">Particle Ray Tracing</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../parameters/unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/unresolved-cfd-dem/cfd-dem.html">CFD-DEM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/unresolved-cfd-dem/void-fraction.html">Void Fraction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../parameters/sharp-immersed-boundary/sharp-immersed-boundary.html">Sharp-Immersed-Boundary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../examples/examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../examples/incompressible-flow/incompressible-flow.html">Incompressible Flow</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Incompressible Flow</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/2d-lid-driven-cavity-flow/lid-driven-cavity-flow.html">Lid-Driven Cavity Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/2d-flow-around-cylinder/2d-flow-around-cylinder.html">Flow around a Cylinder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/2d-taylor-couette-flow/2d-taylor-couette-flow.html">Taylor-Couette Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/2d-mms/2d-mms.html">Method of Manufactured Solutions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/2d-backward-facing-step/2d-backward-facing-step.html">Flow past a Backward-Facing Step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/2d-transient-flow-around-ahmed-body/2d-transient-flow-around-ahmed-body.html">Transient Flow around an Ahmed Body</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/2d-transient-flow-around-cylinder/2d-transient-flow-around-cylinder.html">Transient Flow around a Cylinder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/2d-naca0012-low-reynolds/2d-naca0012-low-reynolds.html">Flow around NACA0012 at Low Reynolds Number</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">Taylor-Couette Flow Using Nitsche Immersed Boundary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/2d-sudden-expansion-flow/2d-sudden-expansion-flow.html">Sudden-Expansion Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/2d-paddle-mixer-mortar/2d-paddle-mixer-mortar.html">Paddle Mixer Using the Mortar Method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">Flow around a Sphere</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/3d-taylor-green-vortex/3d-taylor-green-vortex.html">Taylor-Green Vortex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/3d-turbulent-taylor-couette/3d-turbulent-taylor-couette.html">Turbulent Taylor-Couette Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/3d-flow-over-periodic-hills/3d-flow-over-periodic-hills.html">Flow over Periodic Hills</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/3d-turbulent-flow-around-cylinder/3d-turbulent-flow-around-cylinder.html">Turbulent Flow Around a Cylinder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/3d-mixer-using-single-rotating-frame/3d-mixer-using-single-rotating-frame.html">Ribbon Mixer Using a Single Rotating Reference Frame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/incompressible-flow/3d-nitsche-mixer-with-pbt-impeller/nitsche-mixer-with-pbt-impeller.html">Mixer with Pitched-Blade Turbine Impeller Using Nitsche Immersed Boundary</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../examples/multiphysics/multiphysics.html">Multiphysics</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Multiphysics</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../examples/multiphysics/cls.html">CLS</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of CLS</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/dam-break/dam-break.html">Dam-Break</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/rayleigh-taylor-instability/rayleigh-taylor-instability.html">Rayleigh-Taylor Instability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/static-bubble/static-bubble.html">Static Bubble</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/rising-bubble/rising-bubble.html">Rising Bubble</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/sloshing-in-rectangular-tank/sloshing-in-rectangular-tank.html">Sloshing in a Rectangular Tank</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/capillary-wave/capillary-wave.html">Capillary Wave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/rayleigh-plateau-instability/rayleigh-plateau-instability.html">Rayleigh-Plateau Instability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/3d-dam-break/3d-dam-break.html">3D Dam-Break with an Obstacle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/water-injection-in-a-closed-cell/water-injection-in-a-closed-cell.html">Water Injection in a Closed Cell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/air-bubble-compression/air-bubble-compression.html">Air Bubble Compression</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../examples/multiphysics/heat-transfer.html">Heat Transfer</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Heat Transfer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/cooling-fin/cooling-fin.html">Cooling Fin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/rayleigh-benard-convection/rayleigh-benard-convection.html">Rayleigh-Bénard Convection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/stefan-problem/stefan-problem.html">Stefan Problem: Melting of a Solid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/warming-up-a-viscous-fluid/warming-up-a-viscous-fluid.html">Warming up a Viscous Fluid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/melting-cavity/melting-cavity.html">Melting Cavity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/static-irradiation/static-irradiation.html">Static Irradiation of a Bare Plate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/concentric-heat-exchanger/concentric-heat-exchanger.html">Concentric Heat Exchanger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/cylinder-cooling/cylinder-cooling.html">Cooling of a Cylinder</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../examples/multiphysics/tracer.html">Tracer</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Tracer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/tracer-in-static-mixer/tracer-in-static-mixer.html">Tracer in Static Mixer</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../examples/multiphysics/chns.html">CHNS</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of CHNS</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/jurins-law/jurins-law.html">Jurin’s Law</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/bubble-detachment-shear-flow/bubble-detachment-shear-flow.html">Bubble detachment in shear flow</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../examples/multiphysics/electromagnetism.html">Electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Electromagnetism</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/waveguide/waveguide.html">Waveguide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/multiphysics/fichera-oven/fichera-oven.html">Fichera Oven</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../examples/dem/dem.html">Discrete Element Method (DEM)</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Discrete Element Method (DEM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/bouncing-particle/bouncing-particle.html">Bouncing Particle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/oblique-wall-impact/oblique-wall-impact.html">Oblique Wall Impact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/packing-in-circle/packing-in-circle.html">Packing in Circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/packing-in-ball/packing-in-ball.html">Packing in Ball</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/small-scale-rotating-drum/small-scale-rotating-drum.html">Small Scale Rotating Drum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/small-scale-rotating-drum-postprocessing/small-scale-rotating-drum-postprocessing.html">Small Scale Rotating Drum Postprocessing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/rotating-drum/rotating-drum.html">Rotating Drum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/rotation-of-box/rotation-of-box.html">Rotation of Box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/sandpile-formation/sandpile-formation.html">Sandpile Formation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/silo/silo.html">Silo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/rectangular-hopper/rectangular-hopper.html">Rectangular Hopper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/granular-dam-break/granular-dam-break.html">Granular Dam-Break</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/plate-discharge/plate-discharge.html">Plate Discharge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/bunny-drill/bunny-drill.html">Bunny Drill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/granular-mixer/granular-mixer.html">Granular Mixer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/dem/granuheap/granuheap.html">Granuheap</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../examples/dem-mp/dem-mp.html">DEM-Multiphysics</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of DEM-Multiphysics</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/dem-mp/heat-transfer-in-aligned-particles/heat-transfer-in-aligned-particles.html">Heat Transfer in Aligned Particles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/dem-mp/heated-packed-bed/heated-packed-bed.html">Heated Packed Bed</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../examples/unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Unresolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/unresolved-cfd-dem/single-particle-sedimentation/single-particle-sedimentation.html">Single Particle Sedimentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/unresolved-cfd-dem/cylindrical-packed-bed/cylindrical-packed-bed.html">Cylindrical Packed Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/unresolved-cfd-dem/gas-solid-fluidized-cylinder-bed/gas-solid-fluidized-cylinder-bed.html">Gas-Solid Fluidized Cylinder Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/unresolved-cfd-dem/pseudo-2d-gas-solid-fluidized-bed/pseudo-2d-gas-solid-fluidized-bed.html">Pseudo-2D Gas-Solid Fluidized Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/unresolved-cfd-dem/gas-solid-spouted-rectangular-bed/gas-solid-spouted-rectangular-bed.html">Gas-Solid Spouted Rectangular Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/unresolved-cfd-dem/liquid-solid-fluidized-bed/liquid-solid-fluidized-bed.html">Liquid-Solid Fluidized Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/unresolved-cfd-dem/boycott-effect/boycott-effect.html">Boycott Effect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/unresolved-cfd-dem/gas-solid-spouted-cylinder-bed/gas-solid-spouted-cylinder-bed.html">Gas-Solid Spouted Cylinder Bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/unresolved-cfd-dem/dense-pneumatic-conveying/dense-pneumatic-conveying.html">Dense Pneumatic Conveying</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../examples/sharp-immersed-boundary/sharp-immersed-boundary.html">Sharp Immersed Boundary Solver</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of Sharp Immersed Boundary Solver</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../examples/sharp-immersed-boundary/resolved-cfd-dem.html">Resolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle navigation of Resolved CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/sharp-immersed-boundary/sedimentation-1-particle/sedimentation-1-particle.html">Sedimentation of One Particle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/sharp-immersed-boundary/sedimentation-64-particles/sedimentation-64-particles.html">Sedimentation of 64 Particles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/sharp-immersed-boundary/sedimentation-1-cuboid/sedimentation-1-cuboid.html">Sedimentation of One Cuboid Particle</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../examples/sharp-immersed-boundary/incompressible-flow.html">Incompressible Flow</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle navigation of Incompressible Flow</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/sharp-immersed-boundary/cylinder-with-sharp-interface/cylinder-with-sharp-interface.html">Flow around a Cylinder Using the Sharp Interface Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/sharp-immersed-boundary/sphere-carreau-with-sharp-interface/sphere-carreau-with-sharp-interface.html">Non-Newtonian Flow past a Sphere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/sharp-immersed-boundary/3d-composite-mixer-with-pbt-impeller/3d-composite-mixer-with-pbt-impeller.html">3D Mixer with Pitched-Blade Turbine Impeller Using Composite Sharp-Immersed Boundary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/sharp-immersed-boundary/3d-opencascade-mixer-with-pbt-impeller/3d-opencascade-mixer-with-pbt-impeller.html">3D Mixer with Pitched-Blade Turbine Impeller Using OpenCascade Sharp-Immersed Boundary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/sharp-immersed-boundary/inclined-3d-composite-mixer-with-pbt-impeller/inclined-3d-composite-mixer-with-pbt-impeller.html">Inclined 3D Mixer with Pitched-Blade Turbine Impeller Using Composite Sharp-Immersed Boundary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/sharp-immersed-boundary/3d-rbf-static-mixer/3d-rbf-static-mixer.html">3D Static Mixer Using RBF Sharp Immersed Boundary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/sharp-immersed-boundary/cylindrical-particle-drag-evaluation-with-sharp-interface/cylindrical-particle-drag-evaluation-with-sharp-interface.html">Flow around a Finite Cylindrical Particle Using the Sharp Interface Method</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../examples/sharp-immersed-boundary/geometry-definition.html">Geometry Definition</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle navigation of Geometry Definition</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../examples/sharp-immersed-boundary/simple-plane-model-from-composite/simple-plane-model-from-composite.html">Simple Plane Model From Composite</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../../theory.html">Theory</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle navigation of Theory</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../notation.html">Notation</a></li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../multiphysics.html">Multiphysics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle navigation of Multiphysics</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3 has-children"><a class="reference internal" href="../fluid_dynamics/fluid_dynamics.html">Fluid Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle navigation of Fluid Dynamics</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../fluid_dynamics/navier-stokes.html">The Incompressible Navier-Stokes Equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../fluid_dynamics/fem_formulation.html">Origin of the Finite Element Formulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../fluid_dynamics/stabilization.html">On the Need for Stabilization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../fluid_dynamics/linear_solvers.html">Linear Solvers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../fluid_dynamics/rheology.html">Rheology and Non-Newtonian Fluids</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../heat_transfer/heat_transfer.html">Heat Transfer</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle navigation of Heat Transfer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../heat_transfer/heat_equation.html">Heat Transfer Equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../heat_transfer/heat_equation.html#finite-element-formulation">Finite Element Formulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../heat_transfer/heat_equation.html#stabilization-techniques">Stabilization Techniques</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../passive_tracer/passive_tracer.html">Passive Tracer</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle navigation of Passive Tracer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../passive_tracer/passive_tracer_equations.html">Passive Tracer Equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../passive_tracer/passive_tracer_equations.html#stabilization-techniques">Stabilization Techniques</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current has-children"><a class="reference internal" href="electromagnetism.html">Electromagnetism</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle navigation of Electromagnetism</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="time_harmonic.html">Time Harmonic Maxwell’s Equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="time_harmonic_weak_form.html">Finite Element Method for Time-Harmonic Maxwell’s Equations</a></li>
+<li class="toctree-l4 current current-page"><a class="current reference internal" href="#">DPG formulation for time-harmonic Maxwell problems</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../multiphase/multiphase.html">Multiphase</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle navigation of Multiphase</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../multiphase/cfd/cfd.html">Fluid-Fluid Flows - Interface Capturing Models</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle navigation of Fluid-Fluid Flows - Interface Capturing Models</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../multiphase/cfd/cls.html">The Conservative Level-Set (CLS) Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../multiphase/cfd/cahn-hilliard.html">Cahn-Hilliard Method</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../multiphase/dem/dem.html">Granular Flows - Discrete Element Method (DEM)</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../multiphase/cfd_dem/cfd_dem.html">Particle-laden Flows - CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" role="switch" type="checkbox"/><label for="toctree-checkbox-29"><div class="visually-hidden">Toggle navigation of Particle-laden Flows - CFD-DEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../multiphase/cfd_dem/resolved_cfd-dem.html">Resolved CFD-DEM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../multiphase/cfd_dem/unresolved_cfd-dem.html">Unresolved CFD-DEM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../tools/tools.html">Tools</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" role="switch" type="checkbox"/><label for="toctree-checkbox-30"><div class="visually-hidden">Toggle navigation of Tools</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/automatic_launch/automatic_launch.html">How to Automatically Create and Launch Lethe Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/command-line-interface-options.html">Command-line Interface Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/gmsh/gmsh.html">Introduction on How to Use GMSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/inlet_profile_generator/inlet_profile_generator.html">Inlet profile generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/pointwise/pointwise.html">Introduction on How to Use Pointwise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/postprocessing/postprocessing_paraview.html">Remote Data Visualization on ParaView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/postprocessing/postprocessing_pyvista.html">Post-processing Lethe with PyVista</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/updating-test-results.html">Updating Test Results</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../referencing.html">Referencing Lethe</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../contributing/contributing.html">Contributing</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" role="switch" type="checkbox"/><label for="toctree-checkbox-31"><div class="visually-hidden">Toggle navigation of Contributing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/pull-requests.html">Pull Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/documentation.html">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/animation-videos.html">Animation Videos</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="dpg-formulation-for-time-harmonic-maxwell-problems">
+<h1>DPG formulation for time-harmonic Maxwell problems<a class="headerlink" href="#dpg-formulation-for-time-harmonic-maxwell-problems" title="Link to this heading">#</a></h1>
+<p>The discontinuous Petrov-Galerkin (DPG) method is a residual-minimizing finite
+element strategy that is particularly effective for wave propagation and
+high-frequency electromagnetic problems. Rather than using the same space for
+trial and test functions, DPG uses different spaces and seeks the discrete
+solution by minimizing the residual of the PDE in a norm induced by the test
+space. For a review of the DPG method, see the following <a class="reference external" href="https://pdxscholar.library.pdx.edu/mth_fac/426/">review article</a> written by the original authors of the method, <a class="reference external" href="https://users.oden.utexas.edu/~leszek/">Demkowicz</a> and <a class="reference external" href="https://web.pdx.edu/~gjay/">Gopalakrishnan</a>.</p>
+<section id="a-brief-introduction-to-dpg">
+<h2>A Brief Introduction to DPG<a class="headerlink" href="#a-brief-introduction-to-dpg" title="Link to this heading">#</a></h2>
+<p>The Discontinuous Petrov–Galerkin (DPG) method is a class of discontinuous finite
+element methods that reformulates the standard variational problem as a minimum
+residual problem. Given the abstract problem</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{Find } u \in U \text{ such that } \\
+b(v,u)=l(v), \qquad \forall v \in V,
+\end{aligned}\end{split}\]</div>
+</div>
+<p>the DPG method seeks an approximation in a finite-dimensional trial space
+<span class="math notranslate nohighlight">\(U_h \subset U\)</span> that solves the minimum residual problem</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[u_h = \arg\min_{w_h \in U_h} J(w_h), \qquad
+J(w_h) = \frac{1}{2}\|l-Bw_h\|_{V'}^2,\]</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(B : U \rightarrow V'\)</span> is the operator satisfying</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[b(v,u)=\langle v, Bu \rangle_{V \times V'}.\]</div>
+</div>
+<p>The operator <span class="math notranslate nohighlight">\(B\)</span> maps a trial function to its corresponding residual
+functional. Here, <span class="math notranslate nohighlight">\(\langle \cdot,\cdot \rangle_{V \times V'}\)</span> denotes the
+duality pairing between the test space and its dual.</p>
+<p>Since minimizing the residual directly in the dual norm <span class="math notranslate nohighlight">\(\|\cdot\|_{V'}\)</span> is
+generally impractical, the DPG method introduces the Riesz operator</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\langle v, R_V w \rangle_{V \times V'}
+=
+(v,w)_V,
+\qquad
+\forall v,w \in V,\]</div>
+</div>
+<p>whose inverse maps functionals in <span class="math notranslate nohighlight">\(V'\)</span> back into the test space
+<span class="math notranslate nohighlight">\(V\)</span>. The functional <span class="math notranslate nohighlight">\(J\)</span> can then be rewritten as</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[J(w_h)
+=
+\frac{1}{2}
+\|R_V^{-1}(l-Bw_h)\|_V^2
+=
+\frac{1}{2}
+\left(
+R_V^{-1}(l-Bw_h),
+R_V^{-1}(l-Bw_h)
+\right)_V.\]</div>
+</div>
+<p>Taking the Gâteaux derivative of <span class="math notranslate nohighlight">\(J\)</span> and setting it equal to zero yields</p>
+<div class="math-wrapper docutils container" id="equation-minimization-problem">
+<div class="math notranslate nohighlight" id="equation-minimization-problem">
+<span class="eqno">(1)<a class="headerlink" href="#equation-minimization-problem" title="Link to this equation">#</a></span>\[(R_V^{-1}(l-Bu_h),
+R_V^{-1}B\delta u_h)_V
+=0,
+\qquad
+\forall \delta u_h \in U_h.\]</div>
+</div>
+<p>This naturally introduces the <strong>error representation function</strong></p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Psi = R_V^{-1}(l-Bu_h),\]</div>
+</div>
+<p>which belongs to the test space <span class="math notranslate nohighlight">\(V\)</span>. Its norm is equal to the residual
+measured in the dual norm,</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\|l-Bu_h\|_{V'}
+=
+\|\Psi\|_V,\]</div>
+</div>
+<p>making it a natural a posteriori error estimator.</p>
+<p>The error representation function also satisfies</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[(v,\Psi)_V
+=
+l(v)-b(v,u_h),
+\qquad
+\forall v \in V,\]</div>
+</div>
+<p>which, together with Equation <a class="reference internal" href="#equation-minimization-problem">(1)</a>, leads to the mixed DPG
+formulation</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+   &amp; \text{Find } u_h \in U_h \text{ and } \Psi \in V \text{ such that }     \\
+   &amp; (v,\Psi)_V + b(v,u_h) = l(v), \quad \forall v \in V,                    \\
+   &amp; (R_V^{-1} B w_h, \Psi)_V = b(w_h, \Psi) = 0, \quad \forall w_h \in U_h.
+\end{cases}\end{split}\]</div>
+</div>
+<p>In practice, computing the exact optimal test functions would require inverting
+the Riesz operator over the infinite-dimensional space <span class="math notranslate nohighlight">\(V\)</span>, which is not
+feasible. Instead, the test space is approximated by an enriched finite-dimensional
+space <span class="math notranslate nohighlight">\(V_r \subset V\)</span>. The polynomial order of <span class="math notranslate nohighlight">\(V_r\)</span> is chosen higher
+than that of the trial space <span class="math notranslate nohighlight">\(U_h\)</span>.</p>
+<p>Furthermore, the test space is chosen to be <strong>broken</strong>, meaning that its basis
+functions are supported independently on each mesh element. This localization
+makes the Riesz operator block diagonal, allowing the local problems defining the
+optimal test functions to be solved independently on each element.</p>
+<p>Breaking the test space introduces additional trace unknowns
+<span class="math notranslate nohighlight">\(\hat{u}_h \in \hat{U}_h\)</span>, defined on the mesh skeleton, to recover
+inter-element conformity. The bilinear form becomes</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[b(v,(u_h,\hat{u}_h))
+=
+b(v,u_h)
++
+\langle v,\hat{u}_h \rangle,\]</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(\langle\cdot,\cdot\rangle\)</span> denotes the duality pairing between the
+trace unknowns and the test functions.</p>
+<p>The practical DPG formulation on a discretized domain
+<span class="math notranslate nohighlight">\(\Omega_h\)</span> is therefore</p>
+<div class="math-wrapper docutils container" id="equation-final-dpg-formulation">
+<div class="math notranslate nohighlight" id="equation-final-dpg-formulation">
+<span class="eqno">(2)<a class="headerlink" href="#equation-final-dpg-formulation" title="Link to this equation">#</a></span>\[\begin{split}\begin{cases}
+   &amp; \text{Find } u_h \in U_h, \hat{u}_h \in \hat{U}_h \text{ and } \Psi \in V_r(\Omega_h) \text{ such that } \\
+   &amp; (v,\Psi)_V + b(v,u_h) + \langle v, \hat{u}_h \rangle = l(v), \quad \forall v \in V_r(\Omega_h),          \\
+   &amp; b(w_h, \Psi) = 0, \quad \forall w_h \in U_h,                                                             \\
+   &amp; \langle \hat{w}_h, \Psi \rangle = 0, \quad \forall \hat{w}_h \in \hat{U}_h.
+\end{cases}\end{split}\]</div>
+</div>
+<p>This is the formulation implemented in Lethe. The use of an enriched broken test
+space allows the optimal test functions to be computed locally, while the trace
+unknowns ensure global continuity through the mesh skeleton.</p>
+</section>
+<section id="numerical-implementation-and-discretization">
+<h2>Numerical implementation and discretization<a class="headerlink" href="#numerical-implementation-and-discretization" title="Link to this heading">#</a></h2>
+<p>To take advantage of the extensive support for real-valued finite element
+problems available in deal.II, all complex-valued fields are decomposed into
+their real and imaginary components. Consequently, the entire linear system is
+assembled and solved using standard double-precision floating-point arithmetic.</p>
+<section id="discrete-spaces">
+<h3>Discrete spaces<a class="headerlink" href="#discrete-spaces" title="Link to this heading">#</a></h3>
+<p>The discrete trial, trace, and test spaces are defined as</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+U_h
+&amp;=
+\mathbf{E}_{\mathrm{re}}
+\times
+\mathbf{E}_{\mathrm{im}}
+\times
+\mathbf{H}_{\mathrm{re}}
+\times
+\mathbf{H}_{\mathrm{im}}, \\
+\hat{U}_h
+&amp;=
+\hat{\mathbf{E}}_{\mathrm{re}}
+\times
+\hat{\mathbf{E}}_{\mathrm{im}}
+\times
+\hat{\mathbf{H}}_{\mathrm{re}}
+\times
+\hat{\mathbf{H}}_{\mathrm{im}}, \\
+V_r
+&amp;=
+\mathbf{F}_{\mathrm{re}}
+\times
+\mathbf{F}_{\mathrm{im}}
+\times
+\mathbf{I}_{\mathrm{re}}
+\times
+\mathbf{I}_{\mathrm{im}}.
+\end{aligned}\end{split}\]</div>
+</div>
+<p>Each component of the interior trial space is discretized using discontinuous
+tensor-product Lagrange finite elements
+<span class="math notranslate nohighlight">\((\mathcal{Q}^{-}_{p}\Lambda^3)\)</span>, providing an approximation of
+<span class="math notranslate nohighlight">\(L^2(\Omega_h)\)</span>.</p>
+<p>The trace unknowns are discretized using first-kind Nédélec elements
+<span class="math notranslate nohighlight">\((\mathcal{Q}^{-}_{p}\Lambda^1)\)</span>. The tangential trace operator
+<span class="math notranslate nohighlight">\(\mathrm{tr}_{\mathrm{curl},\top}\)</span> is applied, and the interior degrees
+of freedom are discarded so that the resulting finite element space
+approximates <span class="math notranslate nohighlight">\(H^{-1/2}(\mathrm{curl},\Omega_h)\)</span>.</p>
+<p>The enriched test space is also constructed from first-kind Nédélec elements,
+but without applying the trace operator, making it conforming in
+<span class="math notranslate nohighlight">\(H(\mathrm{curl},\Omega_h)\)</span>. As required by the DPG method, the test space
+uses a higher polynomial degree than the trial space,</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[p_{\mathrm{test}} = p + \Delta p,\]</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(\Delta p\)</span> is the enrichment parameter. Throughout this
+implementation,</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Delta p \geq 1.\]</div>
+</div>
+<p>The discrete fields are expanded in terms of their respective basis functions,</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+u_h^{(k)}(\mathbf{x})
+&amp;=
+\sum_i
+\mathbf{w}^{(k)}_i
+\boldsymbol{\phi}_i(\mathbf{x}), \\
+\hat{u}_h^{(k)}(\mathbf{x})
+&amp;=
+\sum_i
+\hat{\mathbf{w}}^{(k)}_i
+\hat{\boldsymbol{\phi}}_i(\mathbf{x}), \\
+v^{(k)}(\mathbf{x})
+&amp;=
+\sum_i
+\mathbf{q}^{(k)}_i
+\boldsymbol{\psi}_i(\mathbf{x}),
+\end{aligned}\end{split}\]</div>
+</div>
+<p>where</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\boldsymbol{\phi}_i\)</span> are the interior trial basis functions,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{\boldsymbol{\phi}}_i\)</span> are the trace basis functions,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\boldsymbol{\psi}_i\)</span> are the test basis functions,</p></li>
+</ul>
+<p>and <span class="math notranslate nohighlight">\(\mathbf{w}_i\)</span>, <span class="math notranslate nohighlight">\(\hat{\mathbf{w}}_i\)</span>, and
+<span class="math notranslate nohighlight">\(\mathbf{q}_i\)</span> denote their corresponding coefficients. The superscript
+<span class="math notranslate nohighlight">\(k \in \{1,2,3,4\}\)</span> identifies the field component
+(<span class="math notranslate nohighlight">\(\mathbf{E}_{\mathrm{re}}\)</span>,
+<span class="math notranslate nohighlight">\(\mathbf{E}_{\mathrm{im}}\)</span>,
+<span class="math notranslate nohighlight">\(\mathbf{H}_{\mathrm{re}}\)</span>,
+<span class="math notranslate nohighlight">\(\mathbf{H}_{\mathrm{im}}\)</span>).</p>
+</section>
+<section id="discrete-linear-system">
+<h3>Discrete linear system<a class="headerlink" href="#discrete-linear-system" title="Link to this heading">#</a></h3>
+<p>Combining the finite element discretization with the practical DPG formulation
+<a class="reference internal" href="#equation-final-dpg-formulation">(2)</a> yields the block system</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+G &amp; B &amp; \hat{B} \\
+B^\dagger &amp; 0 &amp; 0 \\
+\hat{B}^\dagger &amp; 0 &amp; 0
+\end{bmatrix}
+\begin{bmatrix}
+\Psi^r \\
+u_h \\
+\hat{u}_h
+\end{bmatrix}
+=
+\begin{bmatrix}
+l \\
+0 \\
+0
+\end{bmatrix}.\end{split}\]</div>
+</div>
+<p>The matrices are defined as</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+G_{(i,k),(j,l)}
+&amp;= (\psi_i^{(k)},\psi_j^{(l)})_V, \\
+B_{(i,k),(j,l)}
+&amp;= b(\psi_i^{(k)},\phi_j^{(l)}), \\
+\hat{B}_{(i,k),(j,l)}
+&amp;= \langle
+\psi_i^{(k)},
+\hat{\phi}_j^{(l)}
+\rangle,
+\end{aligned}\end{split}\]</div>
+</div>
+<p>while the load vector is</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[l_{(i,k)} = l(\psi_i^{(k)}).\]</div>
+</div>
+<p>The indices <span class="math notranslate nohighlight">\((i,k)\)</span> combine the finite element basis index with the field
+component.</p>
+</section>
+<section id="static-condensation">
+<h3>Static condensation<a class="headerlink" href="#static-condensation" title="Link to this heading">#</a></h3>
+<p>Because the test space is broken, the Gram matrix <span class="math notranslate nohighlight">\(G\)</span> is block diagonal,
+allowing the error representation function to be eliminated locally. This
+produces the condensed system</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+B^\dagger G^{-1}B &amp;
+B^\dagger G^{-1}\hat{B} \\
+\hat{B}^\dagger G^{-1}B &amp;
+\hat{B}^\dagger G^{-1}\hat{B}
+\end{bmatrix}
+\begin{bmatrix}
+u_h \\
+\hat{u}_h
+\end{bmatrix}
+=
+\begin{bmatrix}
+B^\dagger G^{-1}l \\
+\hat{B}^\dagger G^{-1}l
+\end{bmatrix}.\end{split}\]</div>
+</div>
+<p>A second static condensation is also performed since interior elements are discontinuous, which eliminates the interior unknowns from the linear system. Defining</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+M_1 &amp;= B^\dagger G^{-1}B, \\
+M_2 &amp;= B^\dagger G^{-1}\hat{B}, \\
+M_3 &amp;= \hat{B}^\dagger G^{-1}\hat{B}, \\
+M_4 &amp;= B^\dagger G^{-1}, \\
+M_5 &amp;= \hat{B}^\dagger G^{-1},
+\end{aligned}\end{split}\]</div>
+</div>
+<p>the final system becomes</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[(M_3-M_2^\dagger M_1^{-1}M_2)\hat{u}_h
+=
+(M_5-M_2^\dagger M_1^{-1}M_4)l.\]</div>
+</div>
+<p>This Schur complement system is the one solved by Lethe’s DPG solver.</p>
+</section>
+<section id="recovery-of-local-fields">
+<h3>Recovery of local fields<a class="headerlink" href="#recovery-of-local-fields" title="Link to this heading">#</a></h3>
+<p>Once the trace unknowns have been computed, the interior fields and the error
+representation function are recovered independently on each element,</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[u_h
+=
+M_1^{-1}(M_4l-M_2\hat{u}_h),\]</div>
+</div>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Psi^r
+=
+G^{-1}(l-Bu_h-\hat{B}\hat{u}_h).\]</div>
+</div>
+<p>The local residual norm,</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\|\Psi^r\|_V
+=
+\sqrt{(\Psi^r)^\dagger G\Psi^r},\]</div>
+</div>
+<p>provides the DPG a posteriori error estimator used for adaptive mesh
+refinement.</p>
+</section>
+</section>
+<section id="polynomial-spaces">
+<h2>Polynomial spaces<a class="headerlink" href="#polynomial-spaces" title="Link to this heading">#</a></h2>
+<p>The DPG method relies on several Sobolev, broken, and trace spaces. Their
+precise definition is important when selecting compatible finite element
+spaces for the trial, test, and trace unknowns. This page summarizes the spaces used by the implementation mentioned above.</p>
+<section id="sobolev-spaces">
+<h3>Sobolev spaces<a class="headerlink" href="#sobolev-spaces" title="Link to this heading">#</a></h3>
+<p>The implementation is based on the standard Sobolev spaces defined over the domain <span class="math notranslate nohighlight">\(\Omega\)</span>.</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+H^1(\Omega)
+&amp;=
+\left\{
+u :
+\Omega \rightarrow \mathbb{R}
+\text{ (or } \mathbb{C}\text{)}
+\;:\;
+u,\nabla u \in (L^2(\Omega))^d
+\right\},\\
+H(\mathrm{curl},\Omega)
+&amp;=
+\left\{
+\mathbf{E}
+:
+\Omega \rightarrow \mathbb{R}^d
+\text{ (or } \mathbb{C}^d\text{)}
+\;:\;
+\mathbf{E},
+\nabla\times\mathbf{E}
+\in (L^2(\Omega))^d
+\right\},\\
+H(\mathrm{div},\Omega)
+&amp;=
+\left\{
+\boldsymbol{\sigma}
+:
+\Omega \rightarrow \mathbb{R}^d
+\text{ (or } \mathbb{C}^d\text{)}
+\;:\;
+\boldsymbol{\sigma}
+\in (L^2(\Omega))^d,
+\;
+\nabla\cdot\boldsymbol{\sigma}
+\in L^2(\Omega)
+\right\},\\
+L^2(\Omega)
+&amp;=
+\left\{
+q :
+\Omega \rightarrow \mathbb{R}
+\text{ (or } \mathbb{C}\text{)}
+\;:\;
+\|q\|_{L^2(\Omega)} &lt; \infty
+\right\}.
+\end{aligned}\end{split}\]</div>
+</div>
+</section>
+<section id="broken-spaces">
+<h3>Broken spaces<a class="headerlink" href="#broken-spaces" title="Link to this heading">#</a></h3>
+<p>The current implementation supports three-dimensional problems only.
+Accordingly, the broken spaces are defined over the mesh
+<span class="math notranslate nohighlight">\(\Omega_h\)</span> as</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+H^1(\Omega_h)
+&amp;=
+\prod_{K\in\Omega_h}H^1(K),\\
+H(\mathrm{curl},\Omega_h)
+&amp;=
+\prod_{K\in\Omega_h}
+H(\mathrm{curl},K),\\
+H(\mathrm{div},\Omega_h)
+&amp;=
+\prod_{K\in\Omega_h}
+H(\mathrm{div},K).
+\end{aligned}\end{split}\]</div>
+</div>
+<p>The product <span class="math notranslate nohighlight">\(\prod_{K\in\Omega_h}\)</span> denotes the Cartesian product over all mesh elements, while <span class="math notranslate nohighlight">\(u|_K\)</span> denotes the restriction of a function to a single element. Unlike the previous spaces,</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[L^2(\Omega_h)
+\equiv
+L^2(\Omega),\]</div>
+</div>
+<p>since <span class="math notranslate nohighlight">\(L^2\)</span> functions do not require continuity between neighboring
+elements.</p>
+</section>
+<section id="trace-operators">
+<h3>Trace operators<a class="headerlink" href="#trace-operators" title="Link to this heading">#</a></h3>
+<p>The trace spaces are defined using the standard trace operators acting on the
+mesh skeleton <span class="math notranslate nohighlight">\(\partial\Omega_h\)</span>.</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\mathrm{tr}_{\mathrm{grad}}
+&amp;: H^1(\Omega_h)
+\rightarrow
+\prod_{K\in\Omega_h} H^{1/2}(\partial K),
+&amp;
+\mathrm{tr}_{\mathrm{grad}}^K(u)
+&amp;= u|_{\partial K},
+\\[0.8em]
+\mathrm{tr}_{\mathrm{curl},\top}
+&amp;: H(\mathrm{curl},\Omega_h)
+\rightarrow
+\prod_{K\in\Omega_h}
+H^{-1/2}(\mathrm{curl},\partial K),
+&amp;
+\mathrm{tr}_{\mathrm{curl},\top}^K(\mathbf{E})
+&amp;= ((\mathbf{n}\times\mathbf{E})\times\mathbf{n})|_{\partial K},
+\\[0.8em]
+\mathrm{tr}_{\mathrm{curl},\dashv}
+&amp;: H(\mathrm{curl},\Omega_h)
+\rightarrow
+\prod_{K\in\Omega_h}
+H^{-1/2}(\mathrm{div},\partial K),
+&amp;
+\mathrm{tr}_{\mathrm{curl},\dashv}^K(\mathbf{E})
+&amp;= (\mathbf{n}\times\mathbf{E})|_{\partial K},
+\\[0.8em]
+\mathrm{tr}_{\mathrm{div}}
+&amp;: H(\mathrm{div},\Omega_h)
+\rightarrow
+\prod_{K\in\Omega_h}
+H^{-1/2}(\partial K),
+&amp;
+\mathrm{tr}_{\mathrm{div}}^K(\boldsymbol{\sigma})
+&amp;= (\mathbf{n}\cdot\boldsymbol{\sigma})|_{\partial K}.
+\end{aligned}\end{split}\]</div>
+</div>
+<p>Here, <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> denotes the outward unit normal vector on the boundary
+of each mesh element.</p>
+</section>
+<section id="trace-spaces">
+<h3>Trace spaces<a class="headerlink" href="#trace-spaces" title="Link to this heading">#</a></h3>
+<p>The trace operators define the interface spaces used by the DPG formulation,</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+H^{1/2}(\partial\Omega_h)
+&amp;=
+\mathrm{tr}_{\mathrm{grad}}
+\left(
+H^1(\Omega)
+\right),\\
+H^{-1/2}(\mathrm{curl},\partial\Omega_h)
+&amp;=
+\mathrm{tr}_{\mathrm{curl},\top}
+\left(
+H(\mathrm{curl},\Omega)
+\right),\\
+H^{-1/2}(\mathrm{div},\partial\Omega_h)
+&amp;=
+\mathrm{tr}_{\mathrm{curl},\dashv}
+\left(
+H(\mathrm{curl},\Omega)
+\right),\\
+H^{-1/2}(\partial\Omega_h)
+&amp;=
+\mathrm{tr}_{\mathrm{div}}
+\left(
+H(\mathrm{div},\Omega)
+\right).
+\end{aligned}\end{split}\]</div>
+</div>
+<p>These interface spaces provide the mathematical foundation for the trace
+unknowns introduced by the practical DPG formulation.</p>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../../multiphase/multiphase.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Multiphase</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="time_harmonic_weak_form.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Finite Element Method for Time-Harmonic Maxwell’s Equations</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2021-2026, Lethe
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">DPG formulation for time-harmonic Maxwell problems</a><ul>
+<li><a class="reference internal" href="#a-brief-introduction-to-dpg">A Brief Introduction to DPG</a></li>
+<li><a class="reference internal" href="#numerical-implementation-and-discretization">Numerical implementation and discretization</a><ul>
+<li><a class="reference internal" href="#discrete-spaces">Discrete spaces</a></li>
+<li><a class="reference internal" href="#discrete-linear-system">Discrete linear system</a></li>
+<li><a class="reference internal" href="#static-condensation">Static condensation</a></li>
+<li><a class="reference internal" href="#recovery-of-local-fields">Recovery of local fields</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#polynomial-spaces">Polynomial spaces</a><ul>
+<li><a class="reference internal" href="#sobolev-spaces">Sobolev spaces</a></li>
+<li><a class="reference internal" href="#broken-spaces">Broken spaces</a></li>
+<li><a class="reference internal" href="#trace-operators">Trace operators</a></li>
+<li><a class="reference internal" href="#trace-spaces">Trace spaces</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=7cec7674"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </body>
+</html>
