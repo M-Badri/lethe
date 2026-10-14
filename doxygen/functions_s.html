@@ -119,7 +119,6 @@ $(function() {
 <li>set_capillary_time_step_constraint()&#160;:&#160;<a class="el" href="classSimulationControl.html#ae2cf0118151205dcd68985fcb8e651b4">SimulationControl</a></li>
 <li>set_CFL()&#160;:&#160;<a class="el" href="classSimulationControl.html#a1e331c2c77dae4d02e9e749f980124fc">SimulationControl</a></li>
 <li>set_cls_solution_and_dof_handler()&#160;:&#160;<a class="el" href="classCLSSubequationsInterface.html#a2fd19b9b9ca00db9e963b85a03c73af5">CLSSubequationsInterface&lt; dim &gt;</a></li>
-<li>set_combined_periodic_offsets()&#160;:&#160;<a class="el" href="classDEMContactManager.html#acedcdfb1eecd37e5b5e01abb8818fac7">DEMContactManager&lt; dim, PropertiesIndex &gt;</a>, <a class="el" href="classParticleParticleContactForceBase.html#af7704824f6741583a46f7fedc922b885">ParticleParticleContactForceBase&lt; dim, PropertiesIndex &gt;</a></li>
 <li>set_contact_search_iteration_function()&#160;:&#160;<a class="el" href="classDEMSolver.html#a5df4da460de0048539c4495f5de7a703">DEMSolver&lt; dim, PropertiesIndex &gt;</a></li>
 <li>set_current_capillary_time_step_ratio()&#160;:&#160;<a class="el" href="classSimulationControl.html#ab6c70f983f6ab81ded3b944894b5bb7e">SimulationControl</a></li>
 <li>set_current_time_step()&#160;:&#160;<a class="el" href="classSimulationControl.html#aa0eca88ca928d9f463b2051c394ad0c2">SimulationControl</a></li>
@@ -152,6 +151,7 @@ $(function() {
 <li>set_periodic_boundaries_enabled()&#160;:&#160;<a class="el" href="classDEMActionManager.html#aabc812aa959238fb3463303573ae2a9a">DEMActionManager</a></li>
 <li>set_periodic_boundaries_information()&#160;:&#160;<a class="el" href="classPeriodicBoundariesManipulator.html#ab768ce77c68a3c3d340d61e4b9619c32">PeriodicBoundariesManipulator&lt; dim &gt;</a></li>
 <li>set_periodic_offset()&#160;:&#160;<a class="el" href="classParticleParticleContactForceBase.html#ab614ad1e21931660b8fbbf5c083d2bac">ParticleParticleContactForceBase&lt; dim, PropertiesIndex &gt;</a></li>
+<li>set_periodic_offset_per_direction()&#160;:&#160;<a class="el" href="classDEMContactManager.html#a230ad9f45f653108a3641f33a2904660">DEMContactManager&lt; dim, PropertiesIndex &gt;</a></li>
 <li>set_phase_coefficient()&#160;:&#160;<a class="el" href="classHeatTransfer.html#a7e8fb30a42d3432218b9ecf7d49b2475">HeatTransfer&lt; dim &gt;</a></li>
 <li>set_position()&#160;:&#160;<a class="el" href="classIBParticle.html#aa98eab44ccaac1bb391d2c8ea9ab1475">IBParticle&lt; dim &gt;</a>, <a class="el" href="classOpenCascadeShape.html#a552e8985bec2f9ad893235502c350b62">OpenCascadeShape&lt; dim &gt;</a>, <a class="el" href="classShape.html#a81b71bed82c812367cc9bb77b74c0318">Shape&lt; dim &gt;</a>, <a class="el" href="classSphere.html#a7a62ccd8adb5caf255b60f066e4a4059">Sphere&lt; dim &gt;</a></li>
 <li>set_previous_solutions()&#160;:&#160;<a class="el" href="classMultiphysicsInterface.html#a9f10c6494fee2885dc980032101b5a16">MultiphysicsInterface&lt; dim &gt;</a></li>
@@ -241,6 +241,7 @@ $(function() {
 <li>SmootherPreconditionerType&#160;:&#160;<a class="el" href="classMFNavierStokesPreconditionGMGBase.html#a7b3203e280f8d5dfa56f1a573a96eb97">MFNavierStokesPreconditionGMGBase&lt; dim &gt;</a></li>
 <li>SmootherType&#160;:&#160;<a class="el" href="classMFNavierStokesPreconditionGMGBase.html#a2590c8291bb1077a78669394cffa8e5c">MFNavierStokesPreconditionGMGBase&lt; dim &gt;</a></li>
 <li>solid_cell_mask&#160;:&#160;<a class="el" href="classNavierStokesOperatorBase.html#a9848560b4a1d0bc7e3fea7ebb71f091f">NavierStokesOperatorBase&lt; dim, number &gt;</a></li>
+<li>solid_contact_records&#160;:&#160;<a class="el" href="classParticleWallContactForce.html#a1cd25e6c614b260a481586d4395d0749">ParticleWallContactForce&lt; dim, PropertiesIndex, contact_model, rolling_friction_model &gt;</a></li>
 <li>solid_dh&#160;:&#160;<a class="el" href="classSolidBase.html#a19cb2d218c173e9a2b5271f9265c76d4">SolidBase&lt; dim, spacedim &gt;</a></li>
 <li>solid_forces_table&#160;:&#160;<a class="el" href="classFluidDynamicsNitsche.html#aa71737d19a026c5b7533769ef220e190">FluidDynamicsNitsche&lt; dim, spacedim &gt;</a></li>
 <li>solid_fraction_threshold&#160;:&#160;<a class="el" href="classAdaptiveSparseContacts.html#a01c64cb410f2f617b495b89b345816e4">AdaptiveSparseContacts&lt; dim, PropertiesIndex &gt;</a>, <a class="el" href="classParameters_1_1Lagrangian_1_1ModelParameters.html#ae9bfa11f0b38ae41feac96d433d6037e">Parameters::Lagrangian::ModelParameters&lt; dim &gt;</a></li>
@@ -312,7 +313,6 @@ $(function() {
 <li>specific_heat_scaling&#160;:&#160;<a class="el" href="classParameters_1_1Dimensionality.html#a1240b4f88b9058e5b5fc3ae8cf28cbb7">Parameters::Dimensionality</a></li>
 <li>specific_heats_ratio_gas&#160;:&#160;<a class="el" href="structParameters_1_1Lagrangian_1_1LagrangianPhysicalProperties.html#a1312a1592dd2e698109e2422c0c855a5">Parameters::Lagrangian::LagrangianPhysicalProperties</a></li>
 <li>SpecificHeatModel&#160;:&#160;<a class="el" href="classParameters_1_1Material.html#a5d7278c8988f690439744f0b9404e95f">Parameters::Material</a></li>
-<li>sphere&#160;:&#160;<a class="el" href="classShape.html#a394819ce751267dc955abe4ad18ebdebaa9f2d0e0ebfe9aaa1e10b43015fa3710">Shape&lt; dim &gt;</a></li>
 <li>Sphere()&#160;:&#160;<a class="el" href="classSphere.html#a7773cf5d7d1316f1bdc33b00f1682a5f">Sphere&lt; dim &gt;</a></li>
 <li>sphere_function&#160;:&#160;<a class="el" href="classSphere.html#a9114f9f8a22542f721378a1a222d08d4">Sphere&lt; dim &gt;</a></li>
 <li>spheres_distance&#160;:&#160;<a class="el" href="classDeathStar.html#ab5ee866340ad03baff8f4ec808faad4a">DeathStar&lt; dim &gt;</a></li>

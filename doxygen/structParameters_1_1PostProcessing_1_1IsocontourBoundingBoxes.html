@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceParameters.html">Parameters</a></li><li class="navelem"><a class="el" href="structParameters_1_1PostProcessing.html">PostProcessing</a></li><li class="navelem"><a class="el" href="structParameters_1_1PostProcessing_1_1IsocontourBoundingBoxes.html">IsocontourBoundingBoxes</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceParameters.html">Parameters</a></li><li class="navelem"><a class="el" href="classParameters_1_1PostProcessing.html">PostProcessing</a></li><li class="navelem"><a class="el" href="structParameters_1_1PostProcessing_1_1IsocontourBoundingBoxes.html">IsocontourBoundingBoxes</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -114,7 +114,7 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a30838efcd77e842d3eab0b62423d2679" id="r_a30838efcd77e842d3eab0b62423d2679"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParameters_1_1PostProcessing_1_1IsocontourBoundingBoxes.html#a30838efcd77e842d3eab0b62423d2679">number_of_isocontour_bounding_boxes</a></td></tr>
+<tr class="memitem:a30838efcd77e842d3eab0b62423d2679" id="r_a30838efcd77e842d3eab0b62423d2679"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParameters_1_1PostProcessing_1_1IsocontourBoundingBoxes.html#a30838efcd77e842d3eab0b62423d2679">number_of_isocontour_bounding_boxes</a> = 0</td></tr>
 <tr class="separator:a30838efcd77e842d3eab0b62423d2679"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa68b576923d068fa9ced4d6b2035efa6" id="r_aa68b576923d068fa9ced4d6b2035efa6"><td class="memItemLeft" align="right" valign="top">std::multimap&lt; <a class="el" href="multiphysics_8h.html#a2cbb04ef215561a69b48772159577fdd">Variable</a>, std::pair&lt; unsigned int, <a class="el" href="structParameters_1_1PostProcessing_1_1IsocontourBoundingBoxes_1_1Isocontour.html">Isocontour</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParameters_1_1PostProcessing_1_1IsocontourBoundingBoxes.html#aa68b576923d068fa9ced4d6b2035efa6">ids_and_isocontours_per_variable</a></td></tr>
 <tr class="separator:aa68b576923d068fa9ced4d6b2035efa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,7 +124,7 @@ Public Attributes</h2></td></tr>
 struct Parameters::PostProcessing&lt; dim &gt;::IsocontourBoundingBoxes</div><p><a class="el" href="structParameters_1_1PostProcessing_1_1IsocontourBoundingBoxes_1_1Isocontour.html">Isocontour</a> bounding box parameters. This is used to get the evolution of the bounding values (In 2D: \(x_\mathrm{min}\), \(x_\mathrm{max}\), \(y_\mathrm{min}\), and \(y_\mathrm{max}\); In 3D: \(x_\mathrm{min}\), \(x_\mathrm{max}\), \(y_\mathrm{min}\), \(y_\mathrm{max}\), \(z_\mathrm{min}\), and \(z_\mathrm{max}\)) of one or many specified isocontours. The data of each isocontour is written in a separate file. </p>
 <dl class="section remark"><dt>Remarks</dt><dd>At the moment, this is only implemented for the variables 'temperature' and 'phase' (<a class="el" href="structParameters_1_1CLS.html" title="CLS - Defines the parameters for free surface simulations using the CLS method. Has to be declared be...">CLS</a> phase indicator). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01096">1096</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01097">1097</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1e9f2a9762b3c460f5889d72a84941ee" name="a1e9f2a9762b3c460f5889d72a84941ee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1e9f2a9762b3c460f5889d72a84941ee">&#9670;&#160;</a></span>declare_parameters()</h2>
@@ -135,7 +135,7 @@ struct Parameters::PostProcessing&lt; dim &gt;::IsocontourBoundingBoxes</div><p>
 template&lt;int dim&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="structParameters_1_1PostProcessing.html">Parameters::PostProcessing</a>&lt; dim &gt;::IsocontourBoundingBoxes::declare_parameters </td>
+          <td class="memname">void <a class="el" href="classParameters_1_1PostProcessing.html">Parameters::PostProcessing</a>&lt; dim &gt;::IsocontourBoundingBoxes::declare_parameters </td>
           <td>(</td>
           <td class="paramtype">ParameterHandler &amp;&#160;</td>
           <td class="paramname"><em>prm</em></td><td>)</td>
@@ -152,7 +152,9 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="parameters_8cc_source.html#l02360">2360</a> of file <a class="el" href="parameters_8cc_source.html">parameters.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8cc_source.html#l02318">2318</a> of file <a class="el" href="parameters_8cc_source.html">parameters.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="core_2utilities_8h_source.html#l00705">enum_to_string()</a>, <a class="el" href="parameters_8h_source.html#l01115">Parameters::PostProcessing&lt; dim &gt;::IsocontourBoundingBoxes::number_of_isocontour_bounding_boxes</a>, and <a class="el" href="multiphysics_8h.html#a2cbb04ef215561a69b48772159577fddaeef438f7e448aa48c1f8db568d27b591">temperature</a>.</p>
 
 </div>
 </div>
@@ -165,7 +167,7 @@ template&lt;int dim&gt; </div>
 template&lt;int dim&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="structParameters_1_1PostProcessing.html">Parameters::PostProcessing</a>&lt; dim &gt;::IsocontourBoundingBoxes::parse_parameters </td>
+          <td class="memname">void <a class="el" href="classParameters_1_1PostProcessing.html">Parameters::PostProcessing</a>&lt; dim &gt;::IsocontourBoundingBoxes::parse_parameters </td>
           <td>(</td>
           <td class="paramtype">ParameterHandler &amp;&#160;</td>
           <td class="paramname"><em>prm</em></td><td>)</td>
@@ -182,9 +184,9 @@ template&lt;int dim&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="parameters_8cc_source.html#l02401">2401</a> of file <a class="el" href="parameters_8cc_source.html">parameters.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8cc_source.html#l02361">2361</a> of file <a class="el" href="parameters_8cc_source.html">parameters.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="parameters_8h_source.html#l01107">Parameters::PostProcessing&lt; dim &gt;::IsocontourBoundingBoxes::Isocontour::isovalue</a>, <a class="el" href="parameters_8h_source.html#l01110">Parameters::PostProcessing&lt; dim &gt;::IsocontourBoundingBoxes::Isocontour::output_name</a>, <a class="el" href="multiphysics_8h.html#a2cbb04ef215561a69b48772159577fdda7ee7184c970537ea83afe7f9bae4c61f">phase</a>, and <a class="el" href="multiphysics_8h.html#a2cbb04ef215561a69b48772159577fddaeef438f7e448aa48c1f8db568d27b591">temperature</a>.</p>
+<p class="reference">References <a class="el" href="parameters_8h_source.html#l01108">Parameters::PostProcessing&lt; dim &gt;::IsocontourBoundingBoxes::Isocontour::isovalue</a>, and <a class="el" href="parameters_8h_source.html#l01111">Parameters::PostProcessing&lt; dim &gt;::IsocontourBoundingBoxes::Isocontour::output_name</a>.</p>
 
 </div>
 </div>
@@ -198,13 +200,13 @@ template&lt;int dim&gt; </div>
 template&lt;int dim&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::multimap&lt;<a class="el" href="multiphysics_8h.html#a2cbb04ef215561a69b48772159577fdd">Variable</a>, std::pair&lt;unsigned int, <a class="el" href="structParameters_1_1PostProcessing_1_1IsocontourBoundingBoxes_1_1Isocontour.html">Isocontour</a>&gt; &gt; <a class="el" href="structParameters_1_1PostProcessing.html">Parameters::PostProcessing</a>&lt; dim &gt;::IsocontourBoundingBoxes::ids_and_isocontours_per_variable</td>
+          <td class="memname">std::multimap&lt;<a class="el" href="multiphysics_8h.html#a2cbb04ef215561a69b48772159577fdd">Variable</a>, std::pair&lt;unsigned int, <a class="el" href="structParameters_1_1PostProcessing_1_1IsocontourBoundingBoxes_1_1Isocontour.html">Isocontour</a>&gt; &gt; <a class="el" href="classParameters_1_1PostProcessing.html">Parameters::PostProcessing</a>&lt; dim &gt;::IsocontourBoundingBoxes::ids_and_isocontours_per_variable</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Map that regroups all isocontours of a same variable under the same variable key </p>
 
-<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01119">1119</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01120">1120</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
 
 </div>
 </div>
@@ -217,14 +219,14 @@ template&lt;int dim&gt; </div>
 template&lt;int dim&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int <a class="el" href="structParameters_1_1PostProcessing.html">Parameters::PostProcessing</a>&lt; dim &gt;::IsocontourBoundingBoxes::number_of_isocontour_bounding_boxes</td>
+          <td class="memname">unsigned int <a class="el" href="classParameters_1_1PostProcessing.html">Parameters::PostProcessing</a>&lt; dim &gt;::IsocontourBoundingBoxes::number_of_isocontour_bounding_boxes = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Number of monitored isocontours. </p>
 
-<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01114">1114</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parameters_8h_source.html#l01115">1115</a> of file <a class="el" href="parameters_8h_source.html">parameters.h</a>.</p>
 
 </div>
 </div>
