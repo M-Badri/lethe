@@ -287,6 +287,7 @@
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../multiphysics/electromagnetism.html">Electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Electromagnetism</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../multiphysics/waveguide/waveguide.html">Waveguide</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../multiphysics/fichera-oven/fichera-oven.html">Fichera Oven</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../multiphysics/microwave-heating/microwave-heating.html">Microwave Heating</a></li>
 </ul>
 </li>
 </ul>
@@ -342,6 +343,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../sharp-immersed-boundary/inclined-3d-composite-mixer-with-pbt-impeller/inclined-3d-composite-mixer-with-pbt-impeller.html">Inclined 3D Mixer with Pitched-Blade Turbine Impeller Using Composite Sharp-Immersed Boundary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../sharp-immersed-boundary/3d-rbf-static-mixer/3d-rbf-static-mixer.html">3D Static Mixer Using RBF Sharp Immersed Boundary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../sharp-immersed-boundary/cylindrical-particle-drag-evaluation-with-sharp-interface/cylindrical-particle-drag-evaluation-with-sharp-interface.html">Flow around a Finite Cylindrical Particle Using the Sharp Interface Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../sharp-immersed-boundary/couette-2d-3d/couette-2d-3d.html">Couette Flow with Immersed Particles</a></li>
 </ul>
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../sharp-immersed-boundary/geometry-definition.html">Geometry Definition</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle navigation of Geometry Definition</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -469,7 +471,7 @@
 <p>All files are located in the example’s folder (<code class="docutils literal notranslate"><span class="pre">examples/incompressible-flow/2d-mms</span></code>). The files used for the quadrilateral mesh can be found in the <code class="docutils literal notranslate"><span class="pre">mms_quad</span></code> folder, while those for the triangular mesh are
 grouped in the <code class="docutils literal notranslate"><span class="pre">mms_simplex</span></code> folder.</p>
 <ul class="simple">
-<li><p>Base case parameter file in each folder: <code class="docutils literal notranslate"><span class="pre">mms_quad/mms_2d_steady.prm</span></code> and <code class="docutils literal notranslate"><span class="pre">mms_simplex/mms_2d_steady.prm</span></code></p></li>
+<li><p>Parameter file template for case generation in each folder: <code class="docutils literal notranslate"><span class="pre">mms_quad/mms_2d_steady.tpl</span></code> and <code class="docutils literal notranslate"><span class="pre">mms_simplex/mms_2d_steady.tpl</span></code></p></li>
 <li><p>Python script to compute the source terms for the analytical solution used in this example: <code class="docutils literal notranslate"><span class="pre">mms_source_term.py</span></code></p></li>
 <li><p>Files to generate the parameter files at the different conditions: <code class="docutils literal notranslate"><span class="pre">mms_quad/generate_cases.py</span></code> and <code class="docutils literal notranslate"><span class="pre">mms_simplex/generate_cases.py</span></code></p></li>
 <li><p>Files to run the different simulations: <code class="docutils literal notranslate"><span class="pre">mms_quad/launch_cases.py</span></code> and <code class="docutils literal notranslate"><span class="pre">mms_simplex/launch_cases.py</span></code> or <code class="docutils literal notranslate"><span class="pre">mms_quad/launch_cases.sh</span></code> and <code class="docutils literal notranslate"><span class="pre">mms_simplex/launch_cases.sh</span></code></p></li>

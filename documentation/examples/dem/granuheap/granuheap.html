@@ -287,6 +287,7 @@
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../multiphysics/electromagnetism.html">Electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Electromagnetism</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../multiphysics/waveguide/waveguide.html">Waveguide</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../multiphysics/fichera-oven/fichera-oven.html">Fichera Oven</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../multiphysics/microwave-heating/microwave-heating.html">Microwave Heating</a></li>
 </ul>
 </li>
 </ul>
@@ -342,6 +343,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../sharp-immersed-boundary/inclined-3d-composite-mixer-with-pbt-impeller/inclined-3d-composite-mixer-with-pbt-impeller.html">Inclined 3D Mixer with Pitched-Blade Turbine Impeller Using Composite Sharp-Immersed Boundary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../sharp-immersed-boundary/3d-rbf-static-mixer/3d-rbf-static-mixer.html">3D Static Mixer Using RBF Sharp Immersed Boundary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../sharp-immersed-boundary/cylindrical-particle-drag-evaluation-with-sharp-interface/cylindrical-particle-drag-evaluation-with-sharp-interface.html">Flow around a Finite Cylindrical Particle Using the Sharp Interface Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../sharp-immersed-boundary/couette-2d-3d/couette-2d-3d.html">Couette Flow with Immersed Particles</a></li>
 </ul>
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../sharp-immersed-boundary/geometry-definition.html">Geometry Definition</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle navigation of Geometry Definition</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -470,8 +472,9 @@
 <ul class="simple">
 <li><p>Mesh file: <code class="docutils literal notranslate"><span class="pre">cylinder.msh</span></code> and <code class="docutils literal notranslate"><span class="pre">support.msh</span></code></p></li>
 <li><p>Python file to generate mesh files: <code class="docutils literal notranslate"><span class="pre">generate_meshes.py</span></code></p></li>
-<li><p>Parameters files for the problem: <code class="docutils literal notranslate"><span class="pre">granuheap.prm</span></code> and <code class="docutils literal notranslate"><span class="pre">granuheap_multicase.prm</span></code></p></li>
-<li><p>Post-processing python files: <code class="docutils literal notranslate"><span class="pre">post_processing.py</span></code>, <code class="docutils literal notranslate"><span class="pre">post_processing_multicase.prm</span></code> and <code class="docutils literal notranslate"><span class="pre">post_processing_functions.py</span></code>.</p></li>
+<li><p>Parameter file for the problem: <code class="docutils literal notranslate"><span class="pre">granuheap.prm</span></code></p></li>
+<li><p>Parameter file for case generation: <code class="docutils literal notranslate"><span class="pre">granuheap_multicase.tpl</span></code></p></li>
+<li><p>Post-processing python files: <code class="docutils literal notranslate"><span class="pre">post_processing.py</span></code>, <code class="docutils literal notranslate"><span class="pre">post_processing_multicase.py</span></code> and <code class="docutils literal notranslate"><span class="pre">post_processing_functions.py</span></code>.</p></li>
 </ul>
 </section>
 <section id="description-of-the-case">
@@ -669,7 +672,7 @@ end
 </section>
 <section id="running-multiple-cases">
 <h3>Running multiple cases<a class="headerlink" href="#running-multiple-cases" title="Link to this heading">#</a></h3>
-<p>Three files are needed to create and launch multiple simulations; <code class="docutils literal notranslate"><span class="pre">generate_cases_locally.py</span></code>, <code class="docutils literal notranslate"><span class="pre">granuheap_multicase.prm</span></code> and <code class="docutils literal notranslate"><span class="pre">launch_lethe_locally.py</span></code>. For more information, visit <a class="reference external" href="../../../tools/automatic_launch/automatic_launch.html">How to Automatically Create and Launch Lethe Simulations</a></p>
+<p>Three files are needed to create and launch multiple simulations; <code class="docutils literal notranslate"><span class="pre">generate_cases_locally.py</span></code>, <code class="docutils literal notranslate"><span class="pre">granuheap_multicase.tpl</span></code> and <code class="docutils literal notranslate"><span class="pre">launch_lethe_locally.py</span></code>. For more information, visit <a class="reference external" href="../../../tools/automatic_launch/automatic_launch.html">How to Automatically Create and Launch Lethe Simulations</a></p>
 <p>In this case, we run 3 different values of <code class="docutils literal notranslate"><span class="pre">rolling</span> <span class="pre">friction</span></code> and 4 different values of <code class="docutils literal notranslate"><span class="pre">surface</span> <span class="pre">energy</span></code>, for a total of 12 simulations.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>number_of_cases = 4
 

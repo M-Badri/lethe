@@ -287,6 +287,7 @@
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../multiphysics/electromagnetism.html">Electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Electromagnetism</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../multiphysics/waveguide/waveguide.html">Waveguide</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../multiphysics/fichera-oven/fichera-oven.html">Fichera Oven</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../multiphysics/microwave-heating/microwave-heating.html">Microwave Heating</a></li>
 </ul>
 </li>
 </ul>
@@ -342,6 +343,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../sharp-immersed-boundary/inclined-3d-composite-mixer-with-pbt-impeller/inclined-3d-composite-mixer-with-pbt-impeller.html">Inclined 3D Mixer with Pitched-Blade Turbine Impeller Using Composite Sharp-Immersed Boundary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../sharp-immersed-boundary/3d-rbf-static-mixer/3d-rbf-static-mixer.html">3D Static Mixer Using RBF Sharp Immersed Boundary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../sharp-immersed-boundary/cylindrical-particle-drag-evaluation-with-sharp-interface/cylindrical-particle-drag-evaluation-with-sharp-interface.html">Flow around a Finite Cylindrical Particle Using the Sharp Interface Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../sharp-immersed-boundary/couette-2d-3d/couette-2d-3d.html">Couette Flow with Immersed Particles</a></li>
 </ul>
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../sharp-immersed-boundary/geometry-definition.html">Geometry Definition</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle navigation of Geometry Definition</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -473,10 +475,11 @@ now using immersed boundaries to represent the inner cylinder. This example demo
 </section>
 <section id="files-used-in-this-example">
 <h2>Files Used in This Example<a class="headerlink" href="#files-used-in-this-example" title="Link to this heading">#</a></h2>
-<p>Both files mentioned below are located in the example’s folder (<code class="docutils literal notranslate"><span class="pre">examples/incompressible-flow/2d-taylor-couette-nitsche</span></code>).</p>
+<p>All files mentioned below are located in the example’s folder (<code class="docutils literal notranslate"><span class="pre">examples/incompressible-flow/2d-taylor-couette-nitsche</span></code>).</p>
 <ul class="simple">
 <li><p>Parameter file with uniform mesh refinement: <code class="docutils literal notranslate"><span class="pre">uniform-taylor-couette-nitsche.prm</span></code></p></li>
 <li><p>Parameter file with adaptive mesh refinement: <code class="docutils literal notranslate"><span class="pre">adaptive-taylor-couette-nitsche.prm</span></code></p></li>
+<li><p>Postprocessing Python script: <code class="docutils literal notranslate"><span class="pre">postprocess_taylor_couette_nitsche.py</span></code></p></li>
 </ul>
 </section>
 <section id="description-of-the-case">
@@ -731,6 +734,10 @@ Running the simulation with finer meshes lead to this results.</p>
 </pre></div>
 </div>
 <p>We see that even for a small number of cells (~18k), the error on the torque is less than 0.5%.</p>
+<p>The torques on both cylinders and the L2 error of the velocity can be plotted against the number of cells, along with the analytical torque, by launching the following command in the folder of the simulation:</p>
+<div class="copy-button highlight-text notranslate"><div class="highlight"><pre><span></span>python3 postprocess_taylor_couette_nitsche.py
+</pre></div>
+</div>
 </section>
 </section>
 <section id="possibilities-for-extension">
